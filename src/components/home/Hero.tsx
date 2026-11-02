@@ -28,11 +28,8 @@ export function Hero({ locale, dict, image }: Props) {
     return () => clearInterval(id)
   }, [dict.rotating.length])
 
-  const enter = (delay: number) => ({
-    initial: { opacity: 0, y: 18 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.9, ease, delay },
-  })
+  // CSS entrance (see `--animate-rise`): visible on first paint, before hydration.
+  const delay = (s: number) => ({ animationDelay: `${s}s` })
 
   return (
     <section ref={ref} className="relative isolate overflow-hidden bg-maroon-950 pt-32 pb-16 text-pearl-50 lg:pt-48 lg:pb-24">
@@ -41,12 +38,12 @@ export function Hero({ locale, dict, image }: Props) {
 
       <div className="container-page grid items-center gap-16 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
-          <motion.p {...enter(0)} className="eyebrow text-gold-400">
+          <p className="eyebrow animate-rise text-gold-400">
             <Khatam className="h-3.5 w-3.5" />
             {dict.eyebrow}
-          </motion.p>
+          </p>
 
-          <motion.h1 {...enter(0.1)} className="display mt-8 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
+          <h1 style={delay(0.1)} className="display animate-rise mt-8 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
             <span className="block">{dict.titleLead}</span>
             {/* Every phrase is stacked invisibly in one grid cell so the box always fits the longest one. */}
             <span className="relative mt-1 grid" aria-live="polite">
@@ -68,22 +65,22 @@ export function Hero({ locale, dict, image }: Props) {
                 </motion.span>
               </AnimatePresence>
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.p {...enter(0.2)} className="mt-8 max-w-xl text-lg leading-relaxed text-pearl-200/75 sm:text-xl">
+          <p style={delay(0.2)} className="animate-rise mt-8 max-w-xl text-lg leading-relaxed text-pearl-200/75 sm:text-xl">
             {dict.subtitle}
-          </motion.p>
+          </p>
 
-          <motion.div {...enter(0.3)} className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div style={delay(0.3)} className="animate-rise mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href={href(locale, 'products')} className="btn-gold">
               {dict.ctaPrimary}
             </Link>
             <Link href={href(locale, 'request-quote')} className="btn-outline-light">
               {dict.ctaSecondary}
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.dl {...enter(0.45)} className="mt-14 grid grid-cols-3 border-t border-gold-500/25 pt-8">
+          <dl style={delay(0.45)} className="animate-rise mt-14 grid grid-cols-3 border-t border-gold-500/25 pt-8">
             {dict.stats.map((stat, i) => (
               <div key={stat.label} className={`flex flex-col-reverse gap-2 ${i ? 'border-s border-gold-500/20 ps-5 sm:ps-8' : ''}`}>
                 <dt className="text-xs text-pearl-200/70 sm:text-sm">{stat.label}</dt>
@@ -92,15 +89,12 @@ export function Hero({ locale, dict, image }: Props) {
                 </dd>
               </div>
             ))}
-          </motion.dl>
+          </dl>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease, delay: 0.2 }}
-          style={{ y }}
-          className="relative mx-auto hidden w-full max-w-md lg:col-span-5 lg:block"
+          style={{ y, ...delay(0.2) }}
+          className="animate-rise relative mx-auto hidden w-full max-w-md lg:col-span-5 lg:block"
           aria-hidden="true"
         >
           <Frame shape="arch" className="aspect-[4/5]">

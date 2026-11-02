@@ -9,6 +9,13 @@
   Cross-Origin-Opener-Policy: same-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com; img-src 'self' data: blob: https://cdn.sanity.io https://*.google.com https://*.googleapis.com https://*.gstatic.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://hcaptcha.com https://*.hcaptcha.com https://cloudflareinsights.com; frame-src https://www.google.com https://maps.google.com https://hcaptcha.com https://*.hcaptcha.com; form-action 'self' https://api.web3forms.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 
+# Keep Google on the real domain: the *.pages.dev copies are not indexed.
+https://nasrallah-website.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.nasrallah-website.pages.dev/*
+  X-Robots-Tag: noindex
+
 # The embedded Sanity Studio talks to *.sanity.io over HTTPS/WebSockets and
 # loads its own assets, so it gets no CSP (it is login-protected by Sanity).
 /studio/*

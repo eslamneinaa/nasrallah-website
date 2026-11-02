@@ -8,7 +8,8 @@ import type { Locale } from '@/lib/types'
 type Props = {
   locale: Locale
   label: string
-  ariaLabel: string
+  /** Tooltip; the visible label stays the accessible name (WCAG 2.5.3). */
+  hint: string
   className?: string
 }
 
@@ -17,7 +18,7 @@ type Props = {
  * query string (e.g. ?product=...) and hash. A full navigation is used on
  * purpose: <html lang/dir> and fonts belong to the locale's root layout.
  */
-export function LanguageToggle({ locale, label, ariaLabel, className = '' }: Props) {
+export function LanguageToggle({ locale, label, hint, className = '' }: Props) {
   const pathname = usePathname() || `/${locale}/`
   const target = otherLocale(locale)
   const targetPath = pathname.replace(/^\/(ar|en)(?=\/|$)/, `/${target}`)
@@ -35,7 +36,7 @@ export function LanguageToggle({ locale, label, ariaLabel, className = '' }: Pro
       href={targetPath}
       hrefLang={target}
       lang={target}
-      aria-label={ariaLabel}
+      title={hint}
       onClick={onClick}
       className={`inline-flex h-11 items-center border px-4 transition ${
         target === 'ar'

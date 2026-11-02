@@ -131,7 +131,7 @@ export function Header({ locale, nav }: Props) {
             <LanguageToggle
               locale={locale}
               label={nav.switchLabel}
-              ariaLabel={nav.switchAria}
+              hint={nav.switchAria}
               className={solid ? 'border-maroon-800/20 text-maroon-900 hover:border-maroon-800/60' : 'border-pearl-50/25 text-pearl-50 hover:border-gold-300'}
             />
             <Link

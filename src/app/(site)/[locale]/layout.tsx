@@ -26,13 +26,14 @@ export const viewport: Viewport = {
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
+  // pageMetadata() returns `title: undefined`, so it is spread first and the
+  // title (default + template for every child page) set after it.
   return {
+    ...pageMetadata({ locale, description: dict.meta.description }),
     metadataBase: new URL(siteConfig.url),
     title: { default: dict.meta.title, template: `%s | ${siteConfig.name[locale]}` },
-    description: dict.meta.description,
     applicationName: siteConfig.name[locale],
     formatDetection: { telephone: false },
-    ...pageMetadata({ locale, description: dict.meta.description }),
   }
 }
 

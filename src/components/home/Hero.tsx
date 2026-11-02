@@ -4,21 +4,20 @@ import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
-import { siteConfig, telHref } from '@/config/site'
 import { href } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
-import type { Locale, ProductImage } from '@/lib/types'
+import type { Locale } from '@/lib/types'
 import { Frame, Khatam } from '../ornaments'
 
 type Props = {
   locale: Locale
   dict: Dictionary['hero']
-  images: ProductImage[]
+  image: { url: string; alt: string }
 }
 
 const ease = [0.22, 1, 0.36, 1] as const
 
-export function Hero({ locale, dict, images }: Props) {
+export function Hero({ locale, dict, image }: Props) {
   const [index, setIndex] = useState(0)
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
@@ -29,7 +28,6 @@ export function Hero({ locale, dict, images }: Props) {
     return () => clearInterval(id)
   }, [dict.rotating.length])
 
-  const [main] = images
   const enter = (delay: number) => ({
     initial: { opacity: 0, y: 18 },
     animate: { opacity: 1, y: 0 },
@@ -85,30 +83,15 @@ export function Hero({ locale, dict, images }: Props) {
             </Link>
           </motion.div>
 
-          <motion.dl {...enter(0.45)} className="mt-14 grid gap-6 border-t border-gold-500/25 pt-8 sm:grid-cols-3 sm:gap-8">
-            <div>
-              <dt className="text-xs text-gold-400">{dict.facts.showroom}</dt>
-              <dd className="mt-2 leading-snug text-pearl-100">{siteConfig.addressShort[locale]}</dd>
-            </div>
-            <div>
-              <dt className="text-xs text-gold-400">{dict.facts.hours}</dt>
-              <dd className="mt-2 leading-snug text-pearl-100">
-                {siteConfig.hours.days[locale]}
-                <span className="block text-sm text-pearl-200/65">
-                  {siteConfig.hours.shifts.map((s) => s.time[locale]).join(' · ')}
-                </span>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs text-gold-400">{dict.facts.call}</dt>
-              <dd className="mt-2 flex flex-col leading-snug text-pearl-100">
-                {siteConfig.phones.map((p) => (
-                  <a key={p.tel} href={telHref(p.tel)} className="transition hover:text-gold-300">
-                    <span dir="ltr">{p.display}</span>
-                  </a>
-                ))}
-              </dd>
-            </div>
+          <motion.dl {...enter(0.45)} className="mt-14 grid grid-cols-3 border-t border-gold-500/25 pt-8">
+            {dict.stats.map((stat, i) => (
+              <div key={stat.label} className={`flex flex-col-reverse gap-2 ${i ? 'border-s border-gold-500/20 ps-5 sm:ps-8' : ''}`}>
+                <dt className="text-xs text-pearl-200/70 sm:text-sm">{stat.label}</dt>
+                <dd className="display text-[2rem] leading-none text-gold-300 sm:text-[2.6rem]">
+                  <span dir="ltr">{stat.value}</span>
+                </dd>
+              </div>
+            ))}
           </motion.dl>
         </div>
 
@@ -121,7 +104,7 @@ export function Hero({ locale, dict, images }: Props) {
           aria-hidden="true"
         >
           <Frame shape="arch" className="aspect-[4/5]">
-            {main && <Image src={main.url} alt="" fill priority sizes="(min-width: 1024px) 34vw, 0px" className="object-cover" />}
+            <Image src={image.url} alt={image.alt} fill priority sizes="(min-width: 1024px) 34vw, 0px" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-maroon-950/70 via-transparent to-transparent" />
           </Frame>
           <div className="absolute inset-x-10 -bottom-6 flex items-center justify-center gap-3 border border-gold-500/50 bg-maroon-950 px-5 py-3 text-sm text-gold-200">

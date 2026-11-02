@@ -30,7 +30,8 @@ export function Footer({ locale, dict, categories }: Props) {
       <div className="container-page relative">
         <div className="flex flex-col items-center border-b border-gold-500/20 py-16 text-center">
           <Logo locale={locale} tone="light" />
-          <p className="mt-6 max-w-xl leading-relaxed text-pearl-200/70">{dict.footer.tagline}</p>
+          <p className="display mt-8 text-2xl text-gold-300 ltr:italic">{dict.footer.slogan}</p>
+          <p className="mt-4 max-w-xl leading-relaxed text-pearl-200/70">{dict.footer.tagline}</p>
           <OrnamentRule className="mt-8" width="w-20" />
         </div>
 

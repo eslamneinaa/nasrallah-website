@@ -1,5 +1,5 @@
 import { cache } from 'react'
-import { sampleCategories, sampleClients, sampleProducts } from '@/lib/sample-data'
+import { sampleCategories, sampleProducts } from '@/lib/sample-data'
 import type { Catalog, ClientLogo, Product } from '@/lib/types'
 import { client } from './client'
 import { CATEGORIES_QUERY, CLIENT_LOGOS_QUERY, PRODUCTS_QUERY } from './queries'
@@ -38,7 +38,7 @@ async function loadCatalog(): Promise<Catalog> {
   ])
 
   if (!products?.length) {
-    console.warn('[sanity] No products published yet — using demo catalog (src/lib/sample-data.ts).')
+    console.warn('[sanity] No products published yet — using the bundled showroom catalog (src/lib/sample-data.ts).')
     return { products: sampleProducts, categories: sampleCategories, isSample: true }
   }
 
@@ -69,14 +69,7 @@ export async function getRelatedProducts(product: Product, limit = 3) {
   return [...sameCategory, ...others.filter((p) => !sameCategory.includes(p))].slice(0, limit)
 }
 
-/** Client logos. Demo wordmarks are shown only alongside the demo catalog. */
+/** Client logos published in Sanity (none are bundled). */
 export const getClientLogos = cache(() =>
-  buildOnce('clients', async (): Promise<ClientLogo[]> => {
-    const [logos, catalog] = await Promise.all([
-      safeFetch<ClientLogo[]>(CLIENT_LOGOS_QUERY, 'client logos'),
-      getCatalog(),
-    ])
-    if (logos?.length) return logos
-    return catalog.isSample ? sampleClients : []
-  }),
+  buildOnce('clients', async (): Promise<ClientLogo[]> => (await safeFetch<ClientLogo[]>(CLIENT_LOGOS_QUERY, 'client logos')) ?? []),
 )

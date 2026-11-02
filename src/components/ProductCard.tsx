@@ -17,7 +17,8 @@ export function ProductCard({ product, locale, cta, priority }: Props) {
       href={href(locale, `products/${product.slug}`)}
       className="group flex h-full flex-col border border-pearl-300/80 bg-pearl-50 p-3 transition duration-500 hover:border-gold-500/70 hover:shadow-lift"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-maroon-900">
+      {/* Product photography is shot on white, so it is shown whole rather than cropped. */}
+      <div className="relative aspect-square overflow-hidden bg-white">
         {image && (
           <Image
             src={image.url}
@@ -27,10 +28,10 @@ export function ProductCard({ product, locale, cta, priority }: Props) {
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             placeholder={image.lqip ? 'blur' : 'empty'}
             blurDataURL={image.lqip || undefined}
-            className="object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
+            className="object-contain p-4 transition duration-[1200ms] ease-out group-hover:scale-[1.04]"
           />
         )}
-        <div className="pointer-events-none absolute inset-3 border border-pearl-50/0 transition duration-500 group-hover:border-pearl-50/40" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-3 border border-gold-500/0 transition duration-500 group-hover:border-gold-500/40" aria-hidden="true" />
       </div>
       <div className="flex flex-1 flex-col px-3 pt-6 pb-3">
         {category && <p className="eyebrow text-[0.65rem] text-gold-600 rtl:text-[0.85rem]">{category}</p>}

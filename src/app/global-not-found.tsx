@@ -30,7 +30,7 @@ export default function GlobalNotFound() {
 
           <div className="mx-auto w-full max-w-4xl text-center">
             <a href="/" className="inline-block" aria-label="Nasrallah Trading Est">
-              <LogoMark className="mx-auto h-16 w-16" />
+              <LogoMark className="mx-auto h-20 text-gold-300" />
             </a>
             <p className="mt-8 font-[family-name:var(--font-bodoni)] text-[7rem] leading-none text-gold-300 italic sm:text-[9rem]">404</p>
             <OrnamentRule className="mt-6" />

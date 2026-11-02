@@ -1,36 +1,32 @@
+import type { CSSProperties } from 'react'
 import type { Locale } from '@/lib/types'
 
 type Props = { locale: Locale; tone?: 'light' | 'dark'; className?: string }
 
-/** Brass khatam star framing the monogram. */
-export function LogoMark({ className = 'h-12 w-12', letter = 'ن' }: { className?: string; letter?: string }) {
-  return (
-    <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-      <g fill="none" stroke="#c2a06a" strokeWidth="1.1">
-        <rect x="10" y="10" width="28" height="28" />
-        <rect x="10" y="10" width="28" height="28" transform="rotate(45 24 24)" />
-        <circle cx="24" cy="24" r="11.5" strokeOpacity=".55" />
-      </g>
-      <text
-        x="24"
-        y={letter === 'ن' ? 27.5 : 29}
-        textAnchor="middle"
-        fill="#d2b582"
-        fontSize={letter === 'ن' ? 17 : 15}
-        style={{ fontFamily: letter === 'ن' ? 'var(--font-amiri), serif' : 'var(--font-bodoni), serif' }}
-      >
-        {letter}
-      </text>
-    </svg>
-  )
+/** The calligraphy mark is a single-colour mask, so it takes the text colour. */
+const markMask: CSSProperties = {
+  maskImage: 'url(/brand/mark.svg)',
+  WebkitMaskImage: 'url(/brand/mark.svg)',
+  maskSize: 'contain',
+  WebkitMaskSize: 'contain',
+  maskRepeat: 'no-repeat',
+  WebkitMaskRepeat: 'no-repeat',
+  maskPosition: 'center',
+  WebkitMaskPosition: 'center',
+}
+
+/** The Nasrallah calligraphy mark (without the NASRALLAH arc lettering). */
+export function LogoMark({ className = 'h-12 text-brand' }: { className?: string }) {
+  return <span aria-hidden="true" className={`inline-block aspect-[220/280] shrink-0 bg-current ${className}`} style={markMask} />
 }
 
 export function Logo({ locale, tone = 'dark', className = '' }: Props) {
   const isAr = locale === 'ar'
-  const main = tone === 'light' ? 'text-pearl-50' : 'text-maroon-900'
+  const light = tone === 'light'
+  const main = light ? 'text-pearl-50' : 'text-maroon-900'
   return (
     <span className={`inline-flex items-center gap-3 ${className}`}>
-      <LogoMark letter={isAr ? 'ن' : 'N'} />
+      <LogoMark className={`h-12 transition-colors duration-500 ${light ? 'text-gold-300' : 'text-brand'}`} />
       {isAr ? (
         <span className="flex flex-col leading-none">
           <span className={`font-[family-name:var(--font-amiri)] text-[1.4rem] font-bold ${main}`}>مؤسسة نصر الله</span>

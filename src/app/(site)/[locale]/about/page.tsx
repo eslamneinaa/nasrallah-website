@@ -1,4 +1,4 @@
-import { Gem, Handshake, ShieldCheck, Timer } from 'lucide-react'
+import { Gem, Handshake, Hourglass, ShieldCheck } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CtaBand } from '@/components/CtaBand'
@@ -8,10 +8,10 @@ import { PageHero } from '@/components/PageHero'
 import { SectionHeading } from '@/components/SectionHeading'
 import { siteConfig } from '@/config/site'
 import { getDictionary, href } from '@/i18n'
-import { getFeaturedProducts } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
 
-const valueIcons = [ShieldCheck, Gem, Timer, Handshake]
+/** Quality, trust, heritage, service — in the order of `about.values.items`. */
+const valueIcons = [Gem, ShieldCheck, Hourglass, Handshake]
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params)
@@ -23,7 +23,6 @@ export default async function AboutPage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.about
-  const images = (await getFeaturedProducts(3)).map((p) => p.images[0]).filter(Boolean)
 
   return (
     <>
@@ -43,10 +42,10 @@ export default async function AboutPage({ params }: LocaleParams) {
             </Reveal>
           </div>
           <Reveal delay={0.15} className="px-3 lg:col-span-5">
-            <Frame shape="arch" className="mx-auto aspect-[4/5] max-w-md bg-maroon-900">
-              {images[0] && <Image src={images[0].url} alt="" fill sizes="(min-width: 1024px) 34vw, 90vw" className="object-cover" />}
+            <Frame className="mx-auto aspect-[3/2] max-w-xl bg-maroon-900">
+              <Image src="/showroom/showroom-day.webp" alt={t.story.imageAlt} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
             </Frame>
-            <div className="relative mx-auto -mt-16 max-w-sm border border-gold-500/50 bg-maroon-950 p-7 text-pearl-100 shadow-lift">
+            <div className="relative mx-auto -mt-6 max-w-sm border border-gold-500/50 bg-maroon-950 p-7 text-pearl-100 shadow-lift">
               <p className="eyebrow text-gold-400">
                 <Khatam className="h-3.5 w-3.5" />
                 {t.story.showroom}
@@ -56,6 +55,21 @@ export default async function AboutPage({ params }: LocaleParams) {
             </div>
           </Reveal>
         </div>
+      </section>
+
+      {/* In numbers */}
+      <section className="relative isolate overflow-hidden bg-maroon-950 py-16 text-pearl-50 sm:py-20">
+        <div className="bg-khatam pointer-events-none absolute inset-0 -z-10 opacity-60" aria-hidden="true" />
+        <Stagger className="container-page grid gap-10 text-center sm:grid-cols-3 sm:gap-0">
+          {dict.hero.stats.map((stat, i) => (
+            <StaggerItem key={stat.label} className={i ? 'sm:border-s sm:border-gold-500/25' : ''}>
+              <p className="display text-5xl leading-none text-gold-300 sm:text-6xl">
+                <span dir="ltr">{stat.value}</span>
+              </p>
+              <p className="mt-4 text-pearl-200/75">{stat.label}</p>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </section>
 
       {/* Vision & mission */}

@@ -22,7 +22,7 @@ type PageMeta = {
 }
 
 /** Canonical URL, hreflang alternates and Open Graph for a localized page. */
-export function pageMetadata({ locale, path = '/', title, description, image }: PageMeta): Metadata {
+export function pageMetadata({ locale, path = '/', title, description, image = '/og.jpg' }: PageMeta): Metadata {
   const languages = Object.fromEntries(locales.map((l) => [l, href(l, path)]))
   return {
     title,

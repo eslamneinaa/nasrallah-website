@@ -31,7 +31,7 @@ npm run build
 npm run preview              # serves ./out on http://localhost:3000
 ```
 
-> **Demo content.** While the Sanity dataset has no published products, the site shows a bundled demo catalogue (`src/lib/sample-data.ts`) and a notice on the Products page. It disappears automatically as soon as you publish your first product and rebuild.
+> **Bundled showroom catalogue.** While the Sanity dataset has no published products, the site shows the showroom catalogue bundled in `src/lib/sample-data.ts` (UCHIDA safes, filing cabinets and jewellery & watch interiors, photographed in `public/products`). Publishing your first product in Sanity and rebuilding replaces it with the Sanity catalogue.
 
 ---
 
@@ -176,7 +176,7 @@ src/
   components/               UI (Header, Footer, forms, product explorer, gallery…)
   config/site.ts            Phones, fax, address, map, hours, WhatsApp ← edit me
   i18n/dictionaries/        en.ts / ar.ts — all interface copy
-  lib/sanity/               Client, GROQ queries, data access with demo fallback
+  lib/sanity/               Client, GROQ queries, data access with bundled-catalogue fallback
   sanity/schemaTypes/       Product, Category, Client logo schemas
 scripts/flatten-segment-files.mjs   Windows-only post-build fix for local preview
 ```

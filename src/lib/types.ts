@@ -47,6 +47,6 @@ export type ClientLogo = {
 export type Catalog = {
   products: Product[]
   categories: Category[]
-  /** true when the CMS has no products yet and bundled demo content is shown */
+  /** true when the CMS has no products yet and the bundled showroom catalog is shown */
   isSample: boolean
 }

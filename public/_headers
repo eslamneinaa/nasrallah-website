@@ -20,5 +20,11 @@
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
 
-/samples/*
-  Cache-Control: public, max-age=86400
+/products/*
+  Cache-Control: public, max-age=604800
+
+/showroom/*
+  Cache-Control: public, max-age=604800
+
+/brand/*
+  Cache-Control: public, max-age=604800

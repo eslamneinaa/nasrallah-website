@@ -36,7 +36,7 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
   return (
     <div className="flex flex-col gap-4" onKeyDown={onKeyDown}>
       <div
-        className="relative aspect-[4/3] overflow-hidden bg-maroon-900 outline outline-1 outline-offset-[10px] outline-gold-500/40"
+        className="relative aspect-square overflow-hidden bg-white outline outline-1 outline-offset-[10px] outline-gold-500/40"
         role="region"
         aria-roledescription="carousel"
         aria-label={name}
@@ -59,7 +59,7 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
               sizes="(min-width: 1024px) 50vw, 100vw"
               placeholder={current.lqip ? 'blur' : 'empty'}
               blurDataURL={current.lqip || undefined}
-              className="object-cover"
+              className="object-contain p-6"
             />
           </motion.div>
         </AnimatePresence>
@@ -103,11 +103,11 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
                 }}
                 aria-label={fill(labels.imageOf, { n: i + 1, total: count })}
                 aria-current={i === active}
-                className={`relative block aspect-square w-full overflow-hidden border transition ${
+                className={`relative block aspect-square w-full overflow-hidden border bg-white transition ${
                   i === active ? 'border-gold-500' : 'border-transparent opacity-60 hover:opacity-100'
                 }`}
               >
-                <Image src={image.url} alt="" fill sizes="120px" className="object-cover" />
+                <Image src={image.url} alt="" fill sizes="120px" className="object-contain p-1" />
               </button>
             </li>
           ))}

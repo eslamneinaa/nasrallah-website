@@ -1,39 +1,45 @@
-import { ArrowUpRight, BadgeDollarSign, FileCheck2, Globe2, ShieldCheck, Truck, Wrench } from 'lucide-react'
+import { ArrowUpRight, Gem, Handshake, Hourglass, ShieldCheck } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CtaBand } from '@/components/CtaBand'
 import { ClientMarquee } from '@/components/home/ClientMarquee'
 import { Hero } from '@/components/home/Hero'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
-import { Diamond, Frame } from '@/components/ornaments'
+import { Diamond, Frame, Khatam } from '@/components/ornaments'
 import { ProductCard } from '@/components/ProductCard'
 import { SectionHeading } from '@/components/SectionHeading'
 import { getDictionary, href } from '@/i18n'
 import { getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
 import { resolveLocale, type LocaleParams } from '@/lib/seo'
 
-const whyIcons = [ShieldCheck, Truck, BadgeDollarSign, Wrench, Globe2, FileCheck2]
+/** Heritage, trust, quality, service — in the order of `dict.why.items`. */
+const whyIcons = [Hourglass, ShieldCheck, Gem, Handshake]
+
+const interiorImages = [
+  { src: '/products/interior-watch-rolls.webp', className: 'row-span-2' },
+  { src: '/products/interior-necklace.webp', className: 'aspect-[1341/1173]' },
+  { src: '/products/interior-rings.webp', className: 'aspect-[1348/1167]' },
+]
 
 export default async function HomePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const [featured, clients] = await Promise.all([getFeaturedProducts(6), getClientLogos()])
-  const heroImages = featured.map((p) => p.images[0]).filter(Boolean).slice(0, 2)
 
   return (
     <>
-      <Hero locale={locale} dict={dict.hero} images={heroImages} />
+      <Hero locale={locale} dict={dict.hero} image={{ url: '/products/interior-oak-drawers.webp', alt: dict.hero.imageAlt }} />
 
       {/* Intro */}
       <section id="intro" className="bg-khatam-light scroll-mt-20 py-24 sm:py-32">
         <div className="container-page grid items-center gap-20 lg:grid-cols-12">
-          <Reveal className="order-last px-3 lg:order-first lg:col-span-5">
-            <Frame shape="arch" className="mx-auto aspect-[4/5] max-w-md bg-maroon-900">
-              {heroImages[1] && <Image src={heroImages[1].url} alt="" fill sizes="(min-width: 1024px) 34vw, 90vw" className="object-cover" />}
+          <Reveal className="order-last px-3 lg:order-first lg:col-span-6">
+            <Frame className="mx-auto aspect-[3/2] max-w-2xl bg-maroon-900">
+              <Image src="/showroom/storefront-night.webp" alt={dict.intro.imageAlt} fill sizes="(min-width: 1024px) 45vw, 90vw" className="object-cover" />
             </Frame>
           </Reveal>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <SectionHeading eyebrow={dict.intro.eyebrow} title={dict.intro.title} />
             <Reveal delay={0.1}>
               {dict.intro.body.map((p) => (
@@ -80,12 +86,53 @@ export default async function HomePage({ params }: LocaleParams) {
         </div>
       </section>
 
+      {/* Jewellery & watch interiors */}
+      <section className="relative isolate overflow-hidden bg-maroon-950 py-24 text-pearl-50 sm:py-32">
+        <div className="bg-khatam pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_20%_50%,black,transparent_65%)]" aria-hidden="true" />
+        <div className="container-page grid items-center gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <SectionHeading eyebrow={dict.interiors.eyebrow} title={dict.interiors.title} tone="light" />
+            <Reveal delay={0.1}>
+              <p className="mt-6 max-w-xl text-lg leading-loose text-pearl-200/75">{dict.interiors.body}</p>
+              <Link href={`${href(locale, 'products')}?category=jewellery-watch-interiors`} className="btn-gold mt-10">
+                {dict.interiors.cta}
+              </Link>
+            </Reveal>
+          </div>
+          <Stagger className="grid grid-cols-2 gap-4 sm:gap-5 lg:col-span-7">
+            {interiorImages.map((item, i) => (
+              <StaggerItem key={item.src} className={`relative overflow-hidden border border-gold-500/40 bg-white ${item.className}`}>
+                <Image src={item.src} alt={dict.interiors.images[i]} fill sizes="(min-width: 1024px) 28vw, 50vw" className="object-cover" />
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* Brands */}
+      <section className="py-24 sm:py-32">
+        <div className="container-page">
+          <SectionHeading eyebrow={dict.brands.eyebrow} title={dict.brands.title} align="center" />
+          <Stagger className="mx-auto mt-16 grid max-w-5xl gap-px border border-gold-500/30 bg-gold-500/30 md:grid-cols-2">
+            {dict.brands.items.map((item) => (
+              <StaggerItem key={item.name} className="bg-pearl-50 px-8 py-14 text-center sm:px-12">
+                <p dir="ltr" className="font-[family-name:var(--font-bodoni)] text-4xl tracking-[0.28em] text-maroon-900 sm:text-5xl">
+                  {item.name}
+                </p>
+                <Khatam className="mx-auto mt-6 h-4 w-4 text-gold-500" />
+                <p className="mx-auto mt-6 max-w-sm leading-relaxed text-ink-500">{item.desc}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       {/* Why choose us */}
       <section className="relative isolate overflow-hidden bg-maroon-900 py-24 text-pearl-50 sm:py-32">
         <div className="bg-khatam pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" aria-hidden="true" />
         <div className="container-page">
           <SectionHeading eyebrow={dict.why.eyebrow} title={dict.why.title} subtitle={dict.why.subtitle} align="center" tone="light" />
-          <Stagger className="mt-16 grid gap-px border border-gold-500/25 bg-gold-500/25 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="mt-16 grid gap-px border border-gold-500/25 bg-gold-500/25 sm:grid-cols-2 lg:grid-cols-4">
             {dict.why.items.map((item, i) => {
               const Icon = whyIcons[i % whyIcons.length]
               return (
@@ -103,17 +150,32 @@ export default async function HomePage({ params }: LocaleParams) {
         </div>
       </section>
 
-      {/* Clients */}
-      {clients.length > 0 && (
-        <section className="py-24 sm:py-28">
-          <div className="container-page">
-            <SectionHeading eyebrow={dict.clients.eyebrow} title={dict.clients.title} align="center" />
-          </div>
-          <Reveal className="mt-14">
-            <ClientMarquee clients={clients} />
+      {/* Who we serve */}
+      <section className="py-24 sm:py-28">
+        <div className="container-page">
+          <SectionHeading eyebrow={dict.sectors.eyebrow} title={dict.sectors.title} align="center" />
+          <Reveal className="mt-14 border-y border-gold-500/25 py-8">
+            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 sm:gap-x-10">
+              {dict.sectors.items.map((sector, i) => (
+                <li key={sector} className="flex items-center gap-6 sm:gap-10">
+                  {i > 0 && <Khatam className="h-3 w-3 text-gold-500/70" />}
+                  <span className="display text-xl text-maroon-900 sm:text-2xl">{sector}</span>
+                </li>
+              ))}
+            </ul>
           </Reveal>
-        </section>
-      )}
+        </div>
+        {clients.length > 0 && (
+          <>
+            <div className="container-page mt-20">
+              <SectionHeading eyebrow={dict.clients.eyebrow} title={dict.clients.title} align="center" />
+            </div>
+            <Reveal className="mt-14">
+              <ClientMarquee clients={clients} />
+            </Reveal>
+          </>
+        )}
+      </section>
 
       <CtaBand locale={locale} dict={dict.ctaBand} />
     </>

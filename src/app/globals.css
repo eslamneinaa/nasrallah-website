@@ -8,6 +8,8 @@
 @theme {
   /* Qatari maroon — the brand ground */
   --color-maroon-950: #1f060e;
+  /* Red of the Nasrallah calligraphy logo (sampled from the original artwork). */
+  --color-brand: #b01319;
   --color-maroon-900: #2e0915;
   --color-maroon-800: #440d20;
   --color-maroon-700: #5c122b;

@@ -1,11 +1,11 @@
 /**
- * Demo catalog shown ONLY while the Sanity dataset has no products, so the
- * site can be previewed and deployed before content is entered. As soon as
- * the first product is published in Sanity (and the site rebuilds), this
- * file is no longer used.
+ * The showroom catalog bundled with the site, built from the company's own
+ * product photography (public/products). It is shown while the Sanity dataset
+ * has no products; as soon as the first product is published in Sanity (and
+ * the site rebuilds), the Sanity catalog replaces it.
  */
 import type { PortableTextBlock } from 'next-sanity'
-import type { Category, ClientLogo, Product, SpecRow } from './types'
+import type { Category, Product, SpecRow } from './types'
 
 const para = (text: string, key: string): PortableTextBlock => ({
   _type: 'block',
@@ -15,9 +15,15 @@ const para = (text: string, key: string): PortableTextBlock => ({
   children: [{ _type: 'span', _key: `${key}s`, text, marks: [] }],
 })
 
-const desc = (en: string[], ar: string[]) => ({
-  en: en.map((t, i) => para(t, `en${i}`)),
-  ar: ar.map((t, i) => para(t, `ar${i}`)),
+const showroomNote = {
+  en: 'Visit our showroom in Souq Al Ein, Salwa Road, to see it in person, or request a quotation and our team will advise on the size and configuration that suit you.',
+  ar: 'تفضلوا بزيارة معرضنا في سوق العين على طريق سلوى للمعاينة، أو اطلبوا عرض سعر ليرشدكم فريقنا إلى المقاس والتجهيز الأنسب لكم.',
+}
+
+/** One lead paragraph per language, followed by the shared showroom note. */
+const desc = (en: string, ar: string) => ({
+  en: [para(en, 'en0'), para(showroomNote.en, 'en1')],
+  ar: [para(ar, 'ar0'), para(showroomNote.ar, 'ar1')],
 })
 
 const spec = (label_en: string, label_ar: string, value_en: string, value_ar: string): SpecRow => ({
@@ -25,196 +31,185 @@ const spec = (label_en: string, label_ar: string, value_en: string, value_ar: st
   value: { en: value_en, ar: value_ar },
 })
 
-const img = (name: string, alt: string) => ({ url: `/samples/${name}.svg`, alt, width: 1200, height: 900 })
+const brand = spec('Brand', 'العلامة التجارية', 'UCHIDA', 'UCHIDA')
+
+const img = (name: string, width: number, height: number, alt: string) => ({ url: `/products/${name}.webp`, alt, width, height })
 
 export const sampleCategories: Category[] = [
-  { _id: 'cat-industrial', slug: 'industrial-equipment', title: { en: 'Industrial Equipment', ar: 'المعدات الصناعية' } },
-  { _id: 'cat-building', slug: 'building-materials', title: { en: 'Building Materials', ar: 'مواد البناء' } },
-  { _id: 'cat-electrical', slug: 'electrical-supplies', title: { en: 'Electrical Supplies', ar: 'المستلزمات الكهربائية' } },
-  { _id: 'cat-safety', slug: 'safety-equipment', title: { en: 'Safety Equipment', ar: 'معدات السلامة' } },
+  { _id: 'cat-fire', slug: 'fire-resistant-safes', title: { en: 'Fire-Resistant Safes', ar: 'الخزائن المقاومة للحريق' } },
+  { _id: 'cat-filing', slug: 'filing-cabinets', title: { en: 'Filing Cabinets', ar: 'خزائن الملفات' } },
+  { _id: 'cat-luxury', slug: 'luxury-safes', title: { en: 'Luxury Safes', ar: 'الخزائن الفاخرة' } },
+  { _id: 'cat-interiors', slug: 'jewellery-watch-interiors', title: { en: 'Jewellery & Watch Interiors', ar: 'تجهيزات المجوهرات والساعات' } },
 ]
 
-const [industrial, building, electrical, safety] = sampleCategories
-
-const commonDesc = desc(
-  [
-    'Sourced from certified manufacturers and inspected by our quality team before dispatch. Every shipment is delivered with full documentation, including certificates of origin and conformity.',
-    'Our technical team can help you select the right specification for your application and arrange scheduled deliveries for large projects.',
-  ],
-  [
-    'يتم توريده من مصنعين معتمدين ويخضع لفحص فريق الجودة لدينا قبل الشحن. تُسلَّم كل شحنة مع كامل المستندات، بما في ذلك شهادات المنشأ والمطابقة.',
-    'يساعدك فريقنا الفني في اختيار المواصفات المناسبة لتطبيقك، ويمكننا ترتيب توريدات مجدولة للمشروعات الكبرى.',
-  ],
-)
+const [fire, filing, luxury, interiors] = sampleCategories
 
 export const sampleProducts: Product[] = [
   {
     _id: 'p1',
-    slug: 'industrial-centrifugal-pump',
-    name: { en: 'Industrial Centrifugal Pump', ar: 'مضخة طرد مركزي صناعية' },
-    category: industrial,
+    slug: 'uchida-ubo-145e-fire-resistant-safe',
+    name: { en: 'UCHIDA UBO-145E Fire-Resistant Safe', ar: 'خزنة UCHIDA المقاومة للحريق UBO-145E' },
+    category: fire,
     shortDesc: {
-      en: 'High-efficiency end-suction pump for water supply, HVAC and process applications.',
-      ar: 'مضخة عالية الكفاءة لتطبيقات إمداد المياه والتكييف والعمليات الصناعية.',
+      en: 'A full-height UCHIDA safe with an electronic keypad, key override and three heavy-duty hinges, for offices, banks and institutions.',
+      ar: 'خزنة UCHIDA بارتفاع كامل، بقفل إلكتروني رقمي مع مفتاح احتياطي وثلاث مفصلات متينة، للمكاتب والبنوك والمؤسسات.',
     },
-    fullDesc: commonDesc,
-    images: [img('industrial', 'Industrial centrifugal pump'), img('detail-a', 'Pump detail'), img('detail-b', 'Pump nameplate')],
+    fullDesc: desc(
+      'The UBO-145E is a full-height UCHIDA safe built to protect cash, records and valuables against fire and unauthorised access. Its electronic keypad is backed by a mechanical key, and the door is carried on three heavy-duty external hinges.',
+      'خزنة UBO-145E من UCHIDA بارتفاع كامل، صُمّمت لحماية النقد والسجلات والمقتنيات الثمينة من الحريق والوصول غير المصرّح به. يعمل قفلها الإلكتروني الرقمي مع مفتاح ميكانيكي احتياطي، ويُحمل بابها على ثلاث مفصلات خارجية متينة.',
+    ),
+    images: [img('uchida-digital-safe', 1086, 1448, 'UCHIDA UBO-145E fire-resistant safe in light grey with an electronic keypad')],
     specTable: [
-      spec('Flow rate', 'معدل التدفق', 'Up to 250 m³/h', 'حتى 250 م³/ساعة'),
-      spec('Head', 'الضاغط', 'Up to 90 m', 'حتى 90 م'),
-      spec('Motor power', 'قدرة المحرك', '5.5 – 75 kW', '5.5 – 75 كيلوواط'),
-      spec('Casing material', 'مادة الغلاف', 'Cast iron / Stainless steel', 'حديد زهر / صلب مقاوم للصدأ'),
-      spec('Standard', 'المعيار', 'ISO 2858', 'ISO 2858'),
+      brand,
+      spec('Model', 'الطراز', 'UBO-145E', 'UBO-145E'),
+      spec('Lock', 'القفل', 'Electronic keypad with key override', 'قفل إلكتروني رقمي مع مفتاح احتياطي'),
+      spec('Hinges', 'المفصلات', '3 heavy-duty external hinges', '3 مفصلات خارجية متينة'),
+      spec('Finish', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: true,
     order: 1,
   },
   {
     _id: 'p2',
-    slug: 'ductile-iron-gate-valve',
-    name: { en: 'Ductile Iron Gate Valve', ar: 'محبس بوابة من الحديد المرن' },
-    category: industrial,
+    slug: 'uchida-four-drawer-filing-cabinet',
+    name: { en: 'UCHIDA Four-Drawer Filing Cabinet', ar: 'خزانة ملفات UCHIDA بأربعة أدراج' },
+    category: filing,
     shortDesc: {
-      en: 'Resilient-seated gate valves for potable water and wastewater networks.',
-      ar: 'محابس بوابة بمقعد مرن لشبكات مياه الشرب والصرف الصحي.',
+      en: 'Four individually locking drawers in a black steel body, for the secure storage of files and documents.',
+      ar: 'أربعة أدراج بأقفال مستقلة في هيكل فولاذي أسود، لحفظ الملفات والمستندات بأمان.',
     },
-    fullDesc: commonDesc,
-    images: [img('detail-a', 'Gate valve'), img('industrial', 'Valve installation')],
+    fullDesc: desc(
+      'A four-drawer UCHIDA filing cabinet for ministries, banks and companies that keep important records on paper. Each drawer has its own key lock and a label holder, so files stay organised and protected.',
+      'خزانة ملفات من UCHIDA بأربعة أدراج، للوزارات والبنوك والشركات التي تحتفظ بسجلاتها الورقية المهمة. لكل درج قفل مستقل بمفتاح وحامل لبطاقة التعريف، لتبقى الملفات منظّمة ومحمية.',
+    ),
+    images: [img('uchida-filing-cabinet', 1024, 1536, 'UCHIDA four-drawer filing cabinet in black steel')],
     specTable: [
-      spec('Size range', 'نطاق المقاسات', 'DN50 – DN600', 'DN50 – DN600'),
-      spec('Pressure rating', 'تصنيف الضغط', 'PN10 / PN16', 'PN10 / PN16'),
-      spec('Body', 'الجسم', 'Ductile iron GGG50', 'حديد مرن GGG50'),
-      spec('Coating', 'الطلاء', 'Fusion-bonded epoxy', 'إيبوكسي مدمج حرارياً'),
+      brand,
+      spec('Drawers', 'الأدراج', '4, each with its own key lock', '4 أدراج، لكل منها قفل مستقل'),
+      spec('Finish', 'اللون', 'Black textured steel', 'فولاذ أسود محبّب'),
+      spec('For', 'الاستخدام', 'Files and documents', 'الملفات والمستندات'),
     ],
     isFeatured: true,
     order: 2,
   },
   {
     _id: 'p3',
-    slug: 'seamless-steel-pipes',
-    name: { en: 'Seamless Steel Pipes', ar: 'مواسير صلب غير ملحومة' },
-    category: building,
+    slug: 'uchida-fluted-safe',
+    name: { en: 'UCHIDA Fluted Safe', ar: 'خزنة UCHIDA ذات الواجهة المضلّعة' },
+    category: luxury,
     shortDesc: {
-      en: 'API 5L and ASTM A106 seamless pipes for structural and pressure applications.',
-      ar: 'مواسير غير ملحومة وفق API 5L و ASTM A106 للتطبيقات الإنشائية وتطبيقات الضغط.',
+      en: 'A contemporary charcoal safe with a fluted front and the Nasrallah brass plate, made for the home or the executive office.',
+      ar: 'خزنة عصرية بلون فحمي وواجهة مضلّعة تحمل لوحة نصر الله النحاسية، تليق بالمنزل ومكاتب الإدارة العليا.',
     },
-    fullDesc: commonDesc,
-    images: [img('building', 'Seamless steel pipes'), img('detail-b', 'Pipe ends')],
+    fullDesc: desc(
+      'Security does not have to look industrial. This UCHIDA safe pairs a fluted charcoal front with the Nasrallah brass plate, so it sits as comfortably in a majlis or an executive office as it does in a dressing room.',
+      'الأمان لا يعني مظهرًا صناعيًا. تجمع هذه الخزنة من UCHIDA بين واجهة مضلّعة بلون فحمي ولوحة نصر الله النحاسية، فتنسجم في المجلس ومكتب الإدارة وغرفة الملابس على حدّ سواء.',
+    ),
+    images: [img('uchida-fluted-safe', 1254, 1254, 'UCHIDA safe with a fluted charcoal front and a brass Nasrallah plate')],
     specTable: [
-      spec('Outside diameter', 'القطر الخارجي', '21.3 – 610 mm', '21.3 – 610 مم'),
-      spec('Wall thickness', 'سمك الجدار', 'SCH 10 – XXS', 'SCH 10 – XXS'),
-      spec('Grade', 'الدرجة', 'API 5L Gr.B / X42 – X70', 'API 5L Gr.B / X42 – X70'),
-      spec('Length', 'الطول', '6 m / 12 m', '6 م / 12 م'),
+      brand,
+      spec('Front', 'الواجهة', 'Fluted charcoal panel', 'واجهة مضلّعة بلون فحمي'),
+      spec('Detail', 'التفاصيل', 'Nasrallah brass plate', 'لوحة نصر الله النحاسية'),
     ],
     isFeatured: true,
     order: 3,
   },
   {
     _id: 'p4',
-    slug: 'portland-cement-42-5',
-    name: { en: 'Portland Cement 42.5N', ar: 'أسمنت بورتلاندي 42.5N' },
-    category: building,
+    slug: 'uchida-walnut-finish-safe',
+    name: { en: 'UCHIDA Walnut-Finish Safe', ar: 'خزنة UCHIDA بلمسة خشب الجوز' },
+    category: luxury,
     shortDesc: {
-      en: 'General-purpose CEM I cement in 50 kg bags or bulk for ready-mix and precast.',
-      ar: 'أسمنت CEM I متعدد الاستخدامات في أكياس 50 كجم أو سائب للخرسانة الجاهزة والمسبقة الصب.',
+      en: 'A black steel safe with a rich walnut-grain door, for homes and offices where the safe is part of the décor.',
+      ar: 'خزنة بهيكل فولاذي أسود وباب بنقشة خشب الجوز، للمنازل والمكاتب التي تكون فيها الخزنة جزءًا من الديكور.',
     },
-    fullDesc: commonDesc,
-    images: [img('building', 'Cement bags'), img('detail-a', 'Cement texture')],
+    fullDesc: desc(
+      'Finished in a warm walnut grain and framed in black steel, this UCHIDA safe brings the look of fine furniture to serious protection. The door carries the UCHIDA and Nasrallah plates.',
+      'بباب بنقشة خشب الجوز الدافئة وإطار من الفولاذ الأسود، تمنح هذه الخزنة من UCHIDA الحماية الجادة مظهر الأثاث الراقي، ويحمل بابها لوحتي UCHIDA ونصر الله.',
+    ),
+    images: [img('uchida-walnut-safe', 1254, 1254, 'UCHIDA safe with a walnut wood-grain door and black steel frame')],
     specTable: [
-      spec('Strength class', 'فئة المقاومة', '42.5 N', '42.5 N'),
-      spec('Standard', 'المعيار', 'EN 197-1', 'EN 197-1'),
-      spec('Packaging', 'التعبئة', '50 kg bags / Bulk', 'أكياس 50 كجم / سائب'),
+      brand,
+      spec('Door', 'الباب', 'Walnut wood grain', 'نقشة خشب الجوز'),
+      spec('Frame', 'الإطار', 'Black steel', 'فولاذ أسود'),
     ],
-    isFeatured: false,
+    isFeatured: true,
     order: 4,
   },
   {
     _id: 'p5',
-    slug: 'xlpe-power-cable',
-    name: { en: 'XLPE Insulated Power Cable', ar: 'كابل قوى معزول XLPE' },
-    category: electrical,
+    slug: 'jewellery-display-drawers',
+    name: { en: 'Jewellery Display Drawers', ar: 'أدراج عرض المجوهرات' },
+    category: interiors,
     shortDesc: {
-      en: 'Low and medium-voltage copper and aluminium cables for distribution networks.',
-      ar: 'كابلات نحاس وألومنيوم للجهد المنخفض والمتوسط لشبكات التوزيع.',
+      en: 'Velvet-lined drawers with a necklace bust, bangle stand and ring rolls, so every piece has its place.',
+      ar: 'أدراج مبطّنة بالمخمل مع مجسّم للعقود وحامل للأساور وبكرات للخواتم، ليكون لكل قطعة مكانها.',
     },
-    fullDesc: commonDesc,
-    images: [img('electrical', 'XLPE power cable'), img('detail-b', 'Cable cross-section')],
+    fullDesc: desc(
+      'Fine jewellery deserves more than a box. These drawers are lined in deep blue velvet and fitted with a necklace bust, a bangle stand, ring rolls and compartments for earrings, keeping each piece protected, separated and easy to see.',
+      'المجوهرات الثمينة تستحق أكثر من علبة. هذه الأدراج مبطّنة بمخمل أزرق داكن ومجهّزة بمجسّم للعقود وحامل للأساور وبكرات للخواتم وخانات للأقراط، لتبقى كل قطعة محمية ومنفصلة وسهلة الرؤية.',
+    ),
+    images: [
+      img('interior-necklace', 1341, 1173, 'Jewellery drawer with a velvet necklace bust and bangle stand'),
+      img('interior-rings', 1348, 1167, 'Ring drawer with velvet ring rolls and earring compartments'),
+    ],
     specTable: [
-      spec('Voltage', 'الجهد', '0.6/1 kV – 18/30 kV', '0.6/1 ك.ف – 18/30 ك.ف'),
-      spec('Conductor', 'الموصل', 'Copper / Aluminium', 'نحاس / ألومنيوم'),
-      spec('Cores', 'عدد الأقطاب', '1 – 4 + E', '1 – 4 + أرضي'),
-      spec('Standard', 'المعيار', 'IEC 60502', 'IEC 60502'),
+      spec('Lining', 'البطانة', 'Blue velvet', 'مخمل أزرق'),
+      spec('Fittings', 'التجهيزات', 'Necklace bust, bangle stand, ring rolls, earring compartments', 'مجسّم عقود، حامل أساور، بكرات خواتم، خانات أقراط'),
+      spec('Front', 'الواجهة', 'Wood-grain finish', 'نقشة خشبية'),
     ],
     isFeatured: true,
     order: 5,
   },
   {
     _id: 'p6',
-    slug: 'main-distribution-board',
-    name: { en: 'Main Distribution Board', ar: 'لوحة توزيع رئيسية' },
-    category: electrical,
+    slug: 'watch-drawers',
+    name: { en: 'Watch Drawers', ar: 'أدراج الساعات' },
+    category: interiors,
     shortDesc: {
-      en: 'Type-tested LV switchboards built to project specifications.',
-      ar: 'لوحات جهد منخفض مختبرة النوع ومصنّعة وفق مواصفات المشروع.',
+      en: 'Velvet watch rolls and cushions in fitted drawers, keeping a collection protected and on display.',
+      ar: 'بكرات ووسائد مخملية للساعات في أدراج مجهّزة، تحفظ مجموعتكم وتعرضها بأناقة.',
     },
-    fullDesc: commonDesc,
-    images: [img('electrical', 'Distribution board'), img('detail-a', 'Breakers')],
+    fullDesc: desc(
+      'Built for collectors, these drawers hold each watch on its own velvet roll or cushion, in blue or black lining, behind wood-finish fronts with brass handles.',
+      'صُمّمت لهواة اقتناء الساعات، إذ تحمل كل ساعة على بكرة أو وسادة مخملية خاصة بها، ببطانة زرقاء أو سوداء، خلف واجهات بنقشة خشبية ومقابض نحاسية.',
+    ),
+    images: [
+      img('interior-watch-rolls', 1127, 1396, 'Watch drawer with nine blue velvet rolls and brass handles'),
+      img('interior-watch-pillows', 1086, 1448, 'Beech drawer with black velvet watch cushions'),
+    ],
     specTable: [
-      spec('Rated current', 'التيار المقنن', 'Up to 4000 A', 'حتى 4000 أمبير'),
-      spec('Short-circuit rating', 'تحمل القصر', '50 kA / 1 s', '50 ك.أ / 1 ث'),
-      spec('Protection', 'درجة الحماية', 'IP42 – IP54', 'IP42 – IP54'),
-      spec('Standard', 'المعيار', 'IEC 61439', 'IEC 61439'),
+      spec('Holders', 'الحوامل', 'Velvet rolls or cushions', 'بكرات أو وسائد مخملية'),
+      spec('Lining', 'البطانة', 'Blue or black velvet', 'مخمل أزرق أو أسود'),
+      spec('Handles', 'المقابض', 'Brass', 'نحاس'),
     ],
     isFeatured: true,
     order: 6,
   },
   {
     _id: 'p7',
-    slug: 'industrial-safety-helmet',
-    name: { en: 'Industrial Safety Helmet', ar: 'خوذة سلامة صناعية' },
-    category: safety,
+    slug: 'wood-and-brass-drawer-interior',
+    name: { en: 'Wood & Brass Drawer Interior', ar: 'تجهيز داخلي بأدراج خشبية ومقابض نحاسية' },
+    category: interiors,
     shortDesc: {
-      en: 'Vented HDPE helmets with 6-point ratchet suspension, available in site colours.',
-      ar: 'خوذ HDPE مهوّاة بنظام تعليق سداسي النقاط، متوفرة بألوان المواقع.',
+      en: 'Fitted drawer stacks in oak or beech with brushed-brass handles, turning the inside of a safe into an organised vault.',
+      ar: 'أدراج مجهّزة من خشب البلوط أو الزان بمقابض نحاسية مصقولة، تحوّل داخل الخزنة إلى خزينة منظّمة.',
     },
-    fullDesc: commonDesc,
-    images: [img('safety', 'Safety helmet'), img('detail-b', 'Helmet suspension')],
-    specTable: [
-      spec('Shell', 'الغلاف', 'HDPE, UV-stabilised', 'HDPE مقاوم للأشعة فوق البنفسجية'),
-      spec('Suspension', 'نظام التعليق', '6-point ratchet', 'سداسي النقاط بمقبض'),
-      spec('Standard', 'المعيار', 'EN 397', 'EN 397'),
+    fullDesc: desc(
+      'Inside the door, the safe becomes furniture. Our fitted interiors stack wood-finish drawers with brushed-brass handles on smooth full-extension runners, with velvet-lined trays and a lockable lower compartment available.',
+      'خلف الباب تتحوّل الخزنة إلى قطعة أثاث. تضمّ تجهيزاتنا الداخلية أدراجًا بلمسة خشبية ومقابض نحاسية مصقولة تنزلق بسلاسة على مجارٍ ممتدة بالكامل، مع صوانٍ مبطّنة بالمخمل ودرج سفلي بقفل عند الطلب.',
+    ),
+    images: [
+      img('interior-oak-drawers', 1120, 1404, 'Seven oak drawers with brass handles inside a black safe'),
+      img('interior-beech-velvet', 1086, 1448, 'Beech drawer with black velvet dividers on full-extension runners'),
     ],
-    isFeatured: true,
-    order: 7,
-  },
-  {
-    _id: 'p8',
-    slug: 'high-visibility-workwear',
-    name: { en: 'High-Visibility Workwear', ar: 'ملابس عمل عالية الوضوح' },
-    category: safety,
-    shortDesc: {
-      en: 'Class 2 and Class 3 reflective vests, jackets and coveralls.',
-      ar: 'سترات وجاكيتات وأفرولات عاكسة من الفئة 2 والفئة 3.',
-    },
-    fullDesc: commonDesc,
-    images: [img('safety', 'High-visibility vest'), img('detail-a', 'Reflective tape')],
     specTable: [
-      spec('Class', 'الفئة', 'Class 2 / Class 3', 'الفئة 2 / الفئة 3'),
-      spec('Sizes', 'المقاسات', 'S – 4XL', 'S – 4XL'),
-      spec('Standard', 'المعيار', 'EN ISO 20471', 'EN ISO 20471'),
+      spec('Finish', 'التشطيب', 'Oak or beech wood grain', 'نقشة خشب البلوط أو الزان'),
+      spec('Handles', 'المقابض', 'Brushed brass', 'نحاس مصقول'),
+      spec('Runners', 'المجاري', 'Full-extension ball-bearing slides', 'مجارٍ كروية ممتدة بالكامل'),
+      spec('Lining', 'البطانة', 'Black or blue velvet', 'مخمل أسود أو أزرق'),
     ],
     isFeatured: false,
-    order: 8,
+    order: 7,
   },
 ]
-
-export const sampleClients: ClientLogo[] = [
-  'Delta Construction',
-  'Nile Industries',
-  'Horizon Energy',
-  'Atlas Engineering',
-  'Pyramid Contracting',
-  'Gulf Petro Services',
-  'Cedar Facilities',
-  'Orion Logistics',
-].map((name, i) => ({ _id: `c${i}`, name }))

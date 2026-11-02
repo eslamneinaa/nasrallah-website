@@ -9,7 +9,6 @@ export const siteConfig = {
   domain: 'nasrallahtrading.com',
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://nasrallahtrading.com').replace(/\/$/, ''),
   email: 'info@nasrallahtrading.com',
-  quoteEmail: 'quotes@nasrallahtrading.com',
   phones: [
     { display: '4458 3211', tel: '+97444583211' },
     { display: '4458 3759', tel: '+97444583759' },

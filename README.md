@@ -7,7 +7,7 @@ Bilingual (Arabic RTL / English LTR) corporate site for **nasrallahtrading.com**
 | Framework | Next.js 16 (App Router, TypeScript), fully **static export** |
 | Styling / motion | Tailwind CSS v4, Framer Motion |
 | CMS | Sanity (project `dfj16ucm`, dataset `production`), Studio embedded at **/studio** |
-| Forms | Web3Forms (contact → info@, quotes → quotes@) with honeypot, timing trap and optional hCaptcha |
+| Forms | Web3Forms (both forms → info@) with honeypot, timing trap and optional hCaptcha |
 | Hosting | Cloudflare Pages (`out/` directory, `_headers` + `_redirects`) |
 
 ---
@@ -78,8 +78,8 @@ If you ever make the dataset **private**, create a read token (Viewer) and set `
 
 ## 3. Web3Forms (contact + quote forms)
 
-1. Go to https://web3forms.com and create an access key for **info@nasrallahtrading.com** → this is `NEXT_PUBLIC_WEB3FORMS_CONTACT_KEY`.
-2. Create a second key for **quotes@nasrallahtrading.com** → `NEXT_PUBLIC_WEB3FORMS_QUOTE_KEY`.
+1. Go to https://web3forms.com and create an access key for **info@nasrallahtrading.com** (the key is emailed to that inbox, and every submission is delivered there).
+2. Use that same key for both `NEXT_PUBLIC_WEB3FORMS_CONTACT_KEY` and `NEXT_PUBLIC_WEB3FORMS_QUOTE_KEY`.
 3. Put both in `.env.local` (local) and in Cloudflare Pages environment variables (production).
 
 Spam protection, all built in:

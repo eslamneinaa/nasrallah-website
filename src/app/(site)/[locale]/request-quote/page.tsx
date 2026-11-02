@@ -87,9 +87,9 @@ export default async function RequestQuotePage({ params }: LocaleParams) {
                   </li>
                 )}
                 <li>
-                  <a href={`mailto:${siteConfig.quoteEmail}`} className={`${item} break-all`}>
+                  <a href={`mailto:${siteConfig.email}`} className={`${item} break-all`}>
                     <Mail className={icon} strokeWidth={1.5} aria-hidden="true" />
-                    {siteConfig.quoteEmail}
+                    {siteConfig.email}
                   </a>
                 </li>
               </ul>

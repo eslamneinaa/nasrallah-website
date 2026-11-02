@@ -34,7 +34,7 @@ export function Field({ name, label, error, optionalLabel, className = '', multi
     <div className={className}>
       <label htmlFor={id} className="field-label">
         {label}
-        {optionalLabel && <span className="ms-1 font-normal text-navy-400">({optionalLabel})</span>}
+        {optionalLabel && <span className="ms-1 text-ink-400">({optionalLabel})</span>}
       </label>
       {multiline ? (
         <textarea rows={5} {...common} {...(rest as TextareaHTMLAttributes<HTMLTextAreaElement>)} />
@@ -48,7 +48,7 @@ export function Field({ name, label, error, optionalLabel, className = '', multi
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="mt-1.5 text-sm font-medium text-red-600"
+            className="mt-1.5 text-sm text-red-800"
           >
             {error}
           </motion.p>
@@ -89,7 +89,7 @@ export function Captcha({ locale, onToken, resetKey }: { locale: Locale; onToken
 export function FormAlert({ message }: { message: string }) {
   if (!message) return null
   return (
-    <div role="alert" className="flex items-start gap-3 rounded-2xl bg-red-50 p-4 text-sm text-red-700 ring-1 ring-red-100">
+    <div role="alert" className="flex items-start gap-3 border border-red-800/25 bg-red-50/60 p-4 text-sm text-red-900">
       <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
       <p>{message}</p>
     </div>
@@ -98,8 +98,8 @@ export function FormAlert({ message }: { message: string }) {
 
 export function SubmitButton({ sending, label, sendingLabel }: { sending: boolean; label: string; sendingLabel: string }) {
   return (
-    <button type="submit" disabled={sending} className="btn-gold w-full py-4 text-base sm:w-auto sm:px-10">
-      {sending ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" /> : <Send className="h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />}
+    <button type="submit" disabled={sending} className="btn-maroon w-full shrink-0 py-4 whitespace-nowrap sm:w-auto sm:px-10">
+      {sending ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" /> : <Send className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />}
       {sending ? sendingLabel : label}
     </button>
   )
@@ -117,12 +117,12 @@ export function SuccessState({ title, text, action }: { title: string; text: str
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 16, delay: 0.1 }}
-        className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-8 ring-emerald-50/50"
+        className="flex h-20 w-20 items-center justify-center border border-gold-500/60 text-gold-600"
       >
-        <CheckCircle2 className="h-10 w-10" aria-hidden="true" />
+        <CheckCircle2 className="h-9 w-9" strokeWidth={1.2} aria-hidden="true" />
       </motion.span>
-      <h3 className="mt-6 text-2xl font-extrabold text-navy-950">{title}</h3>
-      <p className="mt-3 max-w-md leading-relaxed text-navy-600">{text}</p>
+      <h3 className="display mt-6 text-3xl text-maroon-900">{title}</h3>
+      <p className="mt-3 max-w-md leading-relaxed text-ink-500">{text}</p>
       <div className="mt-8">{action}</div>
     </motion.div>
   )

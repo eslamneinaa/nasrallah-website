@@ -1,11 +1,11 @@
-import { Clock, Mail, MapPin, Navigation, Phone } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { ContactForm } from '@/components/forms/ContactForm'
-import { WhatsAppIcon } from '@/components/icons'
-import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
+import { Reveal } from '@/components/motion/Reveal'
+import { Khatam } from '@/components/ornaments'
 import { PageHero } from '@/components/PageHero'
-import { siteConfig, whatsappLink } from '@/config/site'
+import { mapEmbedSrc, siteConfig, telHref, whatsappLink } from '@/config/site'
 import { getDictionary, href } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
 
@@ -19,34 +19,68 @@ export default async function ContactPage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.contact
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(siteConfig.mapQuery)}&hl=${locale}&z=15&output=embed`
-  const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(siteConfig.mapQuery)}`
+  const whatsapp = whatsappLink()
+  const linkClass = 'transition hover:text-gold-300'
 
-  const cards: { icon: ReactNode; label: string; value: ReactNode; href?: string; external?: boolean; accent?: boolean }[] = [
+  const rows: { label: string; value: ReactNode }[] = [
     {
-      icon: <Phone className="h-5 w-5" aria-hidden="true" />,
       label: t.phone,
-      value: <span dir="ltr">{siteConfig.phone.display}</span>,
-      href: `tel:${siteConfig.phone.tel}`,
+      value: (
+        <span className="flex flex-wrap gap-x-5 gap-y-1">
+          {siteConfig.phones.map((p) => (
+            <a key={p.tel} href={telHref(p.tel)} className={linkClass}>
+              <span dir="ltr">
+                {siteConfig.dialCode} {p.display}
+              </span>
+            </a>
+          ))}
+        </span>
+      ),
     },
     {
-      icon: <WhatsAppIcon className="h-5 w-5" />,
-      label: t.whatsapp,
-      value: t.whatsappCta,
-      href: whatsappLink(),
-      external: true,
-      accent: true,
+      label: t.fax,
+      value: (
+        <span dir="ltr">
+          {siteConfig.dialCode} {siteConfig.fax.display}
+        </span>
+      ),
     },
     {
-      icon: <Mail className="h-5 w-5" aria-hidden="true" />,
       label: t.email,
-      value: siteConfig.email,
-      href: `mailto:${siteConfig.email}`,
+      value: (
+        <a href={`mailto:${siteConfig.email}`} className={`${linkClass} break-words`}>
+          {siteConfig.email}
+        </a>
+      ),
     },
+    ...(whatsapp
+      ? [
+          {
+            label: t.whatsapp,
+            value: (
+              <a href={whatsapp} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                <span dir="ltr">
+                  {siteConfig.dialCode} {siteConfig.whatsappDisplay}
+                </span>
+              </a>
+            ),
+          },
+        ]
+      : []),
+    { label: t.address, value: <address className="not-italic">{siteConfig.address[locale]}</address> },
     {
-      icon: <Clock className="h-5 w-5" aria-hidden="true" />,
       label: t.hours,
-      value: siteConfig.hours[locale],
+      value: (
+        <span className="block">
+          {siteConfig.hours.days[locale]}
+          {siteConfig.hours.shifts.map((s) => (
+            <span key={s.label.en} className="mt-1 block text-pearl-200/70">
+              {s.label[locale]}: <span className="whitespace-nowrap tabular-nums">{s.time[locale]}</span>
+            </span>
+          ))}
+          <span className="mt-1 block text-pearl-200/50">{siteConfig.hours.closed[locale]}</span>
+        </span>
+      ),
     },
   ]
 
@@ -54,71 +88,48 @@ export default async function ContactPage({ params }: LocaleParams) {
     <>
       <PageHero title={t.title} subtitle={t.subtitle} crumbs={[{ label: dict.nav.home, href: href(locale) }, { label: dict.nav.contact }]} />
 
-      <section className="py-14 sm:py-20">
-        <div className="container-page">
-          <Stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {cards.map((card) => {
-              const inner = (
-                <>
-                  <span
-                    className={`flex h-12 w-12 items-center justify-center rounded-2xl transition ${
-                      card.accent ? 'bg-[#25d366] text-white' : 'bg-navy-950 text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-950'
-                    }`}
-                  >
-                    {card.icon}
-                  </span>
-                  <span className="mt-5 block text-sm font-semibold text-navy-500">{card.label}</span>
-                  <span className="mt-1 block font-bold break-words text-navy-950">{card.value}</span>
-                </>
-              )
-              const className =
-                'group block h-full rounded-[1.75rem] bg-white p-6 shadow-card ring-1 ring-navy-100 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:ring-gold-300'
-              return (
-                <StaggerItem key={card.label}>
-                  {card.href ? (
-                    <a href={card.href} className={className} {...(card.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-                      {inner}
-                    </a>
-                  ) : (
-                    <div className={className}>{inner}</div>
-                  )}
-                </StaggerItem>
-              )
-            })}
-          </Stagger>
-
-          <div className="mt-10 grid gap-10 lg:grid-cols-12">
-            <Reveal className="rounded-[2rem] bg-white p-6 shadow-lift ring-1 ring-navy-100 sm:p-10 lg:col-span-7">
-              <h2 className="mb-8 font-display text-2xl font-extrabold text-navy-950">{t.formTitle}</h2>
-              <ContactForm locale={locale} dict={dict.form} />
-            </Reveal>
-
-            <Reveal delay={0.1} className="flex flex-col overflow-hidden rounded-[2rem] bg-navy-950 text-white lg:col-span-5">
-              <div className="p-8">
-                <div className="flex gap-4">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gold-500 text-navy-950">
-                    <MapPin className="h-5 w-5" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <h2 className="text-sm font-semibold text-navy-300">{t.address}</h2>
-                    <p className="mt-1 font-bold">{siteConfig.address[locale]}</p>
-                  </div>
+      <section className="bg-khatam-light py-16 sm:py-24">
+        <div className="container-page grid gap-10 lg:grid-cols-12">
+          <Reveal className="relative isolate overflow-hidden bg-maroon-950 p-8 text-pearl-100 sm:p-10 lg:col-span-5">
+            <div className="bg-khatam pointer-events-none absolute inset-0 -z-10 opacity-50" aria-hidden="true" />
+            <div className="pointer-events-none absolute inset-3 border border-gold-500/30" aria-hidden="true" />
+            <p className="eyebrow text-gold-400">
+              <Khatam className="h-3.5 w-3.5" />
+              {t.directoryTitle}
+            </p>
+            <dl className="mt-8 divide-y divide-gold-500/20 border-y border-gold-500/20">
+              {rows.map((row) => (
+                <div key={row.label} className="grid gap-1.5 py-5">
+                  <dt className="text-sm text-gold-400">{row.label}</dt>
+                  <dd className="min-w-0 leading-relaxed">{row.value}</dd>
                 </div>
-                <a href={directions} target="_blank" rel="noopener noreferrer" className="btn-ghost-light mt-6 py-2.5">
-                  <Navigation className="h-4 w-4" aria-hidden="true" />
-                  {t.directions}
-                </a>
-              </div>
-              <iframe
-                title={t.mapTitle}
-                src={mapSrc}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="min-h-80 w-full flex-1 border-0 grayscale-[30%]"
-                allowFullScreen
-              />
-            </Reveal>
-          </div>
+              ))}
+            </dl>
+            <a href={siteConfig.map.link} target="_blank" rel="noopener noreferrer" className="btn-outline-light mt-8 w-full">
+              {t.directions}
+              <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+            </a>
+          </Reveal>
+
+          <Reveal delay={0.1} className="border border-pearl-300 bg-pearl-50 p-6 shadow-card sm:p-10 lg:col-span-7">
+            <h2 className="display text-3xl text-maroon-900">{t.formTitle}</h2>
+            <p className="mt-3 mb-10 text-ink-500">{t.formSubtitle}</p>
+            <ContactForm locale={locale} dict={dict.form} />
+          </Reveal>
+        </div>
+
+        <div className="container-page mt-16">
+          <Reveal className="relative p-3">
+            <div className="pointer-events-none absolute inset-0 border border-gold-500/45" aria-hidden="true" />
+            <iframe
+              title={t.mapTitle}
+              src={mapEmbedSrc(locale)}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block h-[26rem] w-full border-0 sepia-[.25]"
+              allowFullScreen
+            />
+          </Reveal>
         </div>
       </section>
     </>

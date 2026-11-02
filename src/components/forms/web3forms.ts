@@ -98,7 +98,7 @@ export function useWeb3Form({ accessKey, schema, messages, subject, extra }: Opt
           body: JSON.stringify({
             access_key: accessKey,
             subject: subject(values),
-            from_name: 'Nasrallah Trading Website',
+            from_name: 'Nasrallah Trading Est Website',
             ...fields,
             ...extra,
             page: window.location.href,

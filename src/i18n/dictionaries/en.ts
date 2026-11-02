@@ -1,8 +1,8 @@
 const en = {
   meta: {
-    title: 'Nasrallah Trading — Industrial & Construction Supplies',
+    title: 'Nasrallah Trading Est — Industrial & Construction Supplies, Doha',
     description:
-      'Nasrallah Trading supplies certified industrial equipment, building materials, electrical and safety products to contractors and manufacturers — on time, to specification.',
+      'Nasrallah Trading Est supplies industrial equipment, building materials, electrical and safety products from its showroom in Souq Al Ein, Salwa Road, Doha, Qatar.',
   },
   nav: {
     home: 'Home',
@@ -17,29 +17,24 @@ const en = {
     skip: 'Skip to content',
   },
   hero: {
-    eyebrow: 'Trusted supply partner since 2005',
-    titleLead: 'Reliable supply of',
-    rotating: ['industrial equipment', 'building materials', 'electrical supplies', 'safety solutions'],
+    eyebrow: 'Souq Al Ein · Salwa Road · Doha',
+    titleLead: 'Your trusted source for',
+    rotating: ['industrial equipment', 'building materials', 'electrical supplies', 'safety products'],
     subtitle:
-      'We source, inspect and deliver certified products from leading manufacturers — so your projects stay on schedule and on specification.',
+      'Certified products from established manufacturers, supplied to contractors, factories and businesses across Qatar with care, documentation and dependable service.',
     ctaPrimary: 'Explore products',
     ctaSecondary: 'Request a quote',
-    stats: [
-      { value: '20+', label: 'Years of experience' },
-      { value: '500+', label: 'Clients served' },
-      { value: '3,000+', label: 'Products available' },
-      { value: '15', label: 'Partner countries' },
-    ],
-    scroll: 'Scroll',
+    facts: { showroom: 'Showroom', hours: 'Opening hours', call: 'Telephone' },
+    plate: 'Showroom #6 · Souq Al Ein',
   },
   intro: {
     eyebrow: 'Who we are',
-    title: 'A trading house built on precision, integrity and speed',
+    title: 'A Doha trading house built on trust and precision',
     body: [
-      'Nasrallah Trading connects contractors, factories and government projects with a carefully curated portfolio of industrial and construction products.',
-      'From a single specialised component to full project packages, our team handles sourcing, quality control, documentation and logistics — giving you one accountable partner.',
+      'Nasrallah Trading Est serves contractors, factories and businesses across Qatar with a carefully selected range of industrial and construction products.',
+      'From a single specialised item to a full project order, we handle sourcing, quality checks, documentation and delivery, so you deal with one accountable partner.',
     ],
-    highlights: ['Certified, traceable products', 'Dedicated account managers', 'Competitive project pricing', 'Nationwide delivery'],
+    highlights: ['Certified, traceable products', 'Personal service from our team', 'Competitive project pricing', 'Delivery across Qatar'],
     cta: 'Discover our story',
   },
   featured: {
@@ -67,28 +62,28 @@ const en = {
   },
   ctaBand: {
     title: 'Have a project in mind?',
-    subtitle: 'Send us your requirements and receive a detailed quotation within one business day.',
+    subtitle: 'Send us your requirements and receive a detailed quotation, or call our showroom directly.',
     primary: 'Request a quote',
     secondary: 'Talk to our team',
   },
   about: {
     metaTitle: 'About Us',
-    metaDescription: 'The story, vision, mission and values behind Nasrallah Trading.',
-    title: 'About Nasrallah Trading',
-    subtitle: 'Two decades of supplying the products that build industry.',
+    metaDescription: 'The story, vision, mission and values of Nasrallah Trading Est, Doha, Qatar.',
+    title: 'About Nasrallah Trading Est',
+    subtitle: 'A Qatari trading establishment supplying the products that build industry.',
     story: {
       eyebrow: 'Our story',
-      title: 'From a family business to a regional supply partner',
+      title: 'A trading house in the heart of Doha',
       paragraphs: [
-        'Nasrallah Trading was founded in 2005 with a simple promise: supply the right product, at the right quality, at the right time. What began as a small family business serving local workshops has grown into a trusted partner for contractors, factories and infrastructure projects.',
-        'Over the years we have built long-term relationships with manufacturers across Europe, Asia and the Middle East. Combined with our in-house quality and logistics teams, this lets us deliver dependable supply for projects of every size.',
-        'Today our team of specialists continues to grow — but our promise remains the same.',
+        'Nasrallah Trading Est serves contractors, factories and businesses across Qatar from our showroom in Souq Al Ein on Salwa Road, Doha.',
+        'We supply industrial equipment, building materials, electrical supplies and safety products from established manufacturers, and we stand behind every item we sell with clear documentation and dependable follow-up.',
+        'Our showroom is open six days a week. Visit us to see products in person and discuss your requirements with our team.',
       ],
-      badge: 'Years of trusted supply',
+      showroom: 'Visit our showroom',
     },
     vision: {
       title: 'Our vision',
-      text: 'To be the most trusted trading partner in the region for industrial and construction supplies — recognised for quality, transparency and service.',
+      text: 'To be the most trusted trading partner in Qatar for industrial and construction supplies, recognised for quality, transparency and service.',
     },
     mission: {
       title: 'Our mission',
@@ -132,6 +127,7 @@ const en = {
     requestQuote: 'Request a quote',
     whatsapp: 'Ask on WhatsApp',
     whatsappText: 'Hello, I would like more information about: {product}',
+    call: 'Call the showroom',
     related: 'Related products',
     backToProducts: 'Back to products',
     imageOf: 'Image {n} of {total}',
@@ -155,18 +151,21 @@ const en = {
   },
   contact: {
     metaTitle: 'Contact Us',
-    metaDescription: 'Get in touch with Nasrallah Trading by phone, WhatsApp, email or visit our office.',
+    metaDescription: 'Contact Nasrallah Trading Est by telephone, fax or email, or visit our showroom in Souq Al Ein, Salwa Road, Doha.',
     title: 'Contact us',
     subtitle: 'Our team is here to help with product questions, orders and partnerships.',
-    phone: 'Phone',
+    directoryTitle: 'Showroom directory',
+    phone: 'Telephone',
+    fax: 'Fax',
     whatsapp: 'WhatsApp',
     whatsappCta: 'Chat on WhatsApp',
     email: 'Email',
-    address: 'Office address',
-    hours: 'Working hours',
+    address: 'Showroom',
+    hours: 'Opening hours',
     formTitle: 'Send us a message',
-    mapTitle: 'Our location on the map',
-    directions: 'Get directions',
+    formSubtitle: 'We reply to every message during opening hours.',
+    mapTitle: 'Nasrallah Trading Est on the map',
+    directions: 'Open in Google Maps',
   },
   form: {
     name: 'Full name',
@@ -189,7 +188,7 @@ const en = {
     successQuote: 'Your quote request has been received. Our sales team will contact you within one business day.',
     successContact: 'Your message has been sent. We will get back to you shortly.',
     sendAnother: 'Send another request',
-    error: 'Something went wrong. Please try again or contact us by phone or WhatsApp.',
+    error: 'Something went wrong. Please try again or call our showroom.',
     notConfigured: 'The form is not configured yet. Please contact us by email.',
     required: 'This field is required',
     invalidEmail: 'Please enter a valid email address',
@@ -199,11 +198,11 @@ const en = {
   },
   privacy: {
     metaTitle: 'Privacy Policy',
-    metaDescription: 'How Nasrallah Trading collects, uses and protects your information.',
+    metaDescription: 'How Nasrallah Trading Est collects, uses and protects your information.',
     title: 'Privacy policy',
     updated: 'Last updated: November 2026',
     intro:
-      'Nasrallah Trading (“we”, “us”) respects your privacy. This policy explains what information we collect through nasrallahtrading.com, how we use it, and the choices you have.',
+      'Nasrallah Trading Est (“we”, “us”) respects your privacy. This policy explains what information we collect through nasrallahtrading.com, how we use it, and the choices you have.',
     sections: [
       {
         title: 'Information we collect',
@@ -223,7 +222,7 @@ const en = {
       {
         title: 'Third-party services',
         body: [
-          'Form submissions are delivered to our inbox through Web3Forms. The site is hosted on Cloudflare, product content is managed with Sanity, and our office map is provided by Google Maps. Each provider processes data under its own privacy policy.',
+          'Form submissions are delivered to our inbox through Web3Forms. The site is hosted on Cloudflare, product content is managed with Sanity, and our showroom map is provided by Google Maps. Each provider processes data under its own privacy policy.',
         ],
       },
       {
@@ -251,9 +250,10 @@ const en = {
     products: 'Browse products',
   },
   footer: {
-    tagline: 'Certified industrial and construction supplies, delivered with integrity since 2005.',
+    tagline: 'Industrial and construction supplies for contractors and businesses across Qatar, from our showroom in Souq Al Ein, Salwa Road, Doha.',
     explore: 'Explore',
     contact: 'Get in touch',
+    visit: 'Visit the showroom',
     rights: 'All rights reserved.',
     privacy: 'Privacy policy',
     categories: 'Categories',

@@ -13,7 +13,7 @@ import { structure } from './src/sanity/structure'
 
 export default defineConfig({
   name: 'nasrallah-trading',
-  title: 'Nasrallah Trading',
+  title: 'Nasrallah Trading Est',
   basePath: '/studio',
   projectId,
   dataset,

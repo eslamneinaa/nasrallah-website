@@ -1,8 +1,9 @@
-import { Eye, Handshake, Gem, Rocket, ShieldCheck, Timer } from 'lucide-react'
+import { Gem, Handshake, ShieldCheck, Timer } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CtaBand } from '@/components/CtaBand'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
+import { Frame, Khatam } from '@/components/ornaments'
 import { PageHero } from '@/components/PageHero'
 import { SectionHeading } from '@/components/SectionHeading'
 import { siteConfig } from '@/config/site'
@@ -23,90 +24,73 @@ export default async function AboutPage({ params }: LocaleParams) {
   const dict = getDictionary(locale)
   const t = dict.about
   const images = (await getFeaturedProducts(3)).map((p) => p.images[0]).filter(Boolean)
-  const years = new Date().getFullYear() - siteConfig.foundedYear
 
   return (
     <>
-      <PageHero
-        title={t.title}
-        subtitle={t.subtitle}
-        crumbs={[{ label: dict.nav.home, href: href(locale) }, { label: dict.nav.about }]}
-      />
+      <PageHero title={t.title} subtitle={t.subtitle} crumbs={[{ label: dict.nav.home, href: href(locale) }, { label: dict.nav.about }]} />
 
       {/* Story */}
-      <section className="py-24 sm:py-32">
-        <div className="container-page grid gap-16 lg:grid-cols-12 lg:gap-20">
-          <div className="lg:col-span-6">
+      <section className="bg-khatam-light py-24 sm:py-32">
+        <div className="container-page grid items-center gap-20 lg:grid-cols-12">
+          <div className="lg:col-span-7">
             <SectionHeading eyebrow={t.story.eyebrow} title={t.story.title} />
-            <Reveal delay={0.1} className="mt-8 space-y-5">
+            <Reveal delay={0.1} className="mt-8 max-w-2xl space-y-6">
               {t.story.paragraphs.map((p) => (
-                <p key={p} className="text-lg leading-relaxed text-navy-600">
+                <p key={p} className="text-lg leading-loose text-ink-500">
                   {p}
                 </p>
               ))}
             </Reveal>
           </div>
-          <Reveal delay={0.15} className="lg:col-span-6">
-            <div className="grid grid-cols-2 gap-4">
-              {images[0] && (
-                <div className="relative col-span-2 aspect-[16/9] overflow-hidden rounded-[2rem] shadow-lift">
-                  <Image src={images[0].url} alt="" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
-                </div>
-              )}
-              <div className="flex flex-col justify-center rounded-[2rem] bg-navy-950 p-8 text-white">
-                <p className="font-display text-5xl font-extrabold text-gold-400">{years}+</p>
-                <p className="mt-2 text-sm text-navy-200">{t.story.badge}</p>
-              </div>
-              {images[1] && (
-                <div className="relative aspect-square overflow-hidden rounded-[2rem] shadow-card">
-                  <Image src={images[1].url} alt="" fill sizes="(min-width: 1024px) 22vw, 50vw" className="object-cover" />
-                </div>
-              )}
+          <Reveal delay={0.15} className="px-3 lg:col-span-5">
+            <Frame shape="arch" className="mx-auto aspect-[4/5] max-w-md bg-maroon-900">
+              {images[0] && <Image src={images[0].url} alt="" fill sizes="(min-width: 1024px) 34vw, 90vw" className="object-cover" />}
+            </Frame>
+            <div className="relative mx-auto -mt-16 max-w-sm border border-gold-500/50 bg-maroon-950 p-7 text-pearl-100 shadow-lift">
+              <p className="eyebrow text-gold-400">
+                <Khatam className="h-3.5 w-3.5" />
+                {t.story.showroom}
+              </p>
+              <p className="mt-4 leading-relaxed">{siteConfig.address[locale]}</p>
+              <p className="mt-3 text-sm text-pearl-200/65">{siteConfig.hours.compact[locale]}</p>
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* Vision & mission */}
-      <section className="bg-navy-50/60 py-24 sm:py-32">
-        <Stagger className="container-page grid gap-6 md:grid-cols-2">
-          {[
-            { ...t.vision, Icon: Eye },
-            { ...t.mission, Icon: Rocket },
-          ].map(({ title, text, Icon }, i) => (
-            <StaggerItem
-              key={title}
-              className={`relative overflow-hidden rounded-[2rem] p-10 sm:p-12 ${
-                i === 0 ? 'bg-navy-950 text-white' : 'bg-white shadow-card ring-1 ring-navy-100'
-              }`}
-            >
-              <div className="pointer-events-none absolute -end-10 -top-10 h-40 w-40 rounded-full bg-gold-500/15 blur-2xl" aria-hidden="true" />
-              <span className={`flex h-14 w-14 items-center justify-center rounded-2xl ${i === 0 ? 'bg-gold-500 text-navy-950' : 'bg-gold-100 text-gold-700'}`}>
-                <Icon className="h-6 w-6" aria-hidden="true" />
-              </span>
-              <h2 className={`mt-8 font-display text-3xl font-extrabold ${i === 0 ? 'text-white' : 'text-navy-950'}`}>{title}</h2>
-              <p className={`mt-4 text-lg leading-relaxed ${i === 0 ? 'text-navy-200' : 'text-navy-600'}`}>{text}</p>
-            </StaggerItem>
-          ))}
-        </Stagger>
+      <section className="bg-pearl-100 py-24 sm:py-32">
+        <div className="container-page">
+          <Stagger className="relative grid gap-16 md:grid-cols-2 md:gap-0">
+            <span className="absolute inset-y-0 start-1/2 hidden w-px bg-gold-500/35 md:block" aria-hidden="true" />
+            <span className="absolute top-1/2 start-1/2 hidden h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-pearl-100 text-gold-500 md:flex rtl:translate-x-1/2" aria-hidden="true">
+              <Khatam className="h-6 w-6" strokeWidth={1} />
+            </span>
+            {[t.vision, t.mission].map(({ title, text }) => (
+              <StaggerItem key={title} className="text-center md:px-14">
+                <p className="eyebrow">{title}</p>
+                <p className="display mt-6 text-2xl leading-[1.6] text-maroon-900 sm:text-[1.75rem]">{text}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </section>
 
       {/* Values */}
       <section className="py-24 sm:py-32">
         <div className="container-page">
           <SectionHeading eyebrow={t.values.eyebrow} title={t.values.title} align="center" />
-          <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-16 grid gap-px border border-gold-500/30 bg-gold-500/30 sm:grid-cols-2 lg:grid-cols-4">
             {t.values.items.map((value, i) => {
               const Icon = valueIcons[i % valueIcons.length]
               return (
-                <StaggerItem
-                  key={value.title}
-                  className="group rounded-[2rem] border border-navy-100 p-8 transition duration-500 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lift"
-                >
-                  <span className="font-display text-sm font-bold text-gold-600">0{i + 1}</span>
-                  <Icon className="mt-6 h-8 w-8 text-navy-900 transition group-hover:text-gold-600" aria-hidden="true" />
-                  <h3 className="mt-5 text-xl font-bold text-navy-950">{value.title}</h3>
-                  <p className="mt-3 leading-relaxed text-navy-600">{value.desc}</p>
+                <StaggerItem key={value.title} className="bg-pearl-50 px-6 py-12 text-center">
+                  <span className="relative mx-auto flex h-14 w-14 items-center justify-center text-maroon-700">
+                    <span className="absolute inset-1.5 rotate-45 border border-gold-500/60" aria-hidden="true" />
+                    <Icon className="relative h-5 w-5" strokeWidth={1.3} aria-hidden="true" />
+                  </span>
+                  <h3 className="display mt-6 text-[1.4rem] text-maroon-900">{value.title}</h3>
+                  <p className="mt-3 leading-relaxed text-ink-500">{value.desc}</p>
                 </StaggerItem>
               )
             })}

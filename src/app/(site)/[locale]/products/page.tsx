@@ -24,21 +24,15 @@ export default async function ProductsPage({ params }: LocaleParams) {
         subtitle={dict.products.subtitle}
         crumbs={[{ label: dict.nav.home, href: href(locale) }, { label: dict.nav.products }]}
       />
-      <section className="py-12 sm:py-16">
+      <section className="bg-pearl-100 py-12 sm:py-16">
         <div className="container-page">
           {isSample && (
-            <p className="mb-8 flex items-center gap-2 rounded-2xl bg-gold-50 px-4 py-3 text-sm font-medium text-gold-700 ring-1 ring-gold-200">
-              <Info className="h-4 w-4 shrink-0" aria-hidden="true" />
+            <p className="mb-8 flex items-center gap-3 border border-gold-500/40 bg-gold-50 px-4 py-3 text-sm text-gold-700">
+              <Info className="h-4 w-4 shrink-0" strokeWidth={1.5} aria-hidden="true" />
               {dict.common.sampleNotice}
             </p>
           )}
-          <ProductsExplorer
-            locale={locale}
-            products={products}
-            categories={categories}
-            dict={dict.products}
-            cardCta={dict.common.viewDetails}
-          />
+          <ProductsExplorer locale={locale} products={products} categories={categories} dict={dict.products} cardCta={dict.common.viewDetails} />
         </div>
       </section>
     </>

@@ -5,8 +5,8 @@ import { motion, type HTMLMotionProps, type Variants } from 'framer-motion'
 const ease = [0.22, 1, 0.36, 1] as const
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.9, ease } },
 }
 
 type RevealProps = HTMLMotionProps<'div'> & { delay?: number }
@@ -20,7 +20,7 @@ export function Reveal({ delay = 0, children, ...rest }: RevealProps) {
       viewport={{ once: true, margin: '0px 0px -80px 0px' }}
       variants={{
         hidden: fadeUp.hidden,
-        show: { opacity: 1, y: 0, transition: { duration: 0.7, ease, delay } },
+        show: { opacity: 1, y: 0, transition: { duration: 0.9, ease, delay } },
       }}
       {...rest}
     >

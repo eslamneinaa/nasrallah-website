@@ -25,8 +25,8 @@ export default function RootPage() {
       <noscript>
         <meta httpEquiv="refresh" content="0; url=/ar/" />
       </noscript>
-      <p style={{ fontFamily: 'system-ui, sans-serif', color: '#c3d0e6', textAlign: 'center', paddingTop: '40vh' }}>
-        <a href="/ar/" style={{ color: '#d8b45d' }}>العربية</a> · <a href="/en/" style={{ color: '#d8b45d' }}>English</a>
+      <p style={{ fontFamily: 'system-ui, sans-serif', color: '#ece3d7', textAlign: 'center', paddingTop: '40vh' }}>
+        <a href="/ar/" style={{ color: '#d2b582' }}>العربية</a> · <a href="/en/" style={{ color: '#d2b582' }}>English</a>
       </p>
     </>
   )

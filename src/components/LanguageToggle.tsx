@@ -1,6 +1,5 @@
 'use client'
 
-import { Languages } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import type { MouseEvent } from 'react'
 import { otherLocale } from '@/i18n/config'
@@ -38,12 +37,13 @@ export function LanguageToggle({ locale, label, ariaLabel, className = '' }: Pro
       lang={target}
       aria-label={ariaLabel}
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-sm font-semibold transition ${className}`}
+      className={`inline-flex h-11 items-center border px-4 transition ${
+        target === 'ar'
+          ? 'font-[family-name:var(--font-amiri)] text-[1.05rem] font-bold'
+          : 'font-[family-name:var(--font-jost)] text-[0.72rem] font-medium tracking-[0.22em] uppercase'
+      } ${className}`}
     >
-      <Languages className="h-4 w-4" aria-hidden="true" />
-      <span className={target === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-manrope)]'}>
-        {label}
-      </span>
+      {label}
     </a>
   )
 }

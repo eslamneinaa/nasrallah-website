@@ -1,4 +1,4 @@
-# Nasrallah Trading — corporate website
+# Nasrallah Trading Est — corporate website
 
 Bilingual (Arabic RTL / English LTR) corporate site for **nasrallahtrading.com**.
 
@@ -148,7 +148,7 @@ Each publish now redeploys the site in about a minute.
 - `public/_redirects` rewrites `/studio/*` deep links to the Studio app.
 - Every page is pre-rendered HTML served from Cloudflare's edge, with no server or database calls at request time.
 - Images: product photos are resized and served as WebP/AVIF by Sanity's image CDN through a custom `next/image` loader (`src/lib/image-loader.ts`).
-- Fonts (Cairo for Arabic, Manrope for English) are self-hosted at build time via `next/font`.
+- Fonts (Amiri + IBM Plex Sans Arabic for Arabic, Bodoni Moda + Jost for English) are self-hosted at build time via `next/font`.
 - Animations respect the visitor's "reduce motion" setting.
 - SEO: per-page titles/descriptions, canonical + `hreflang` alternates, Open Graph, JSON-LD (Organization, Product), `sitemap.xml`, `robots.txt`.
 
@@ -168,13 +168,13 @@ src/
       about/                About Us
       products/             Products list + [slug] details
       request-quote/        Quote form (?product= pre-fill)
-      contact/              Contact form, WhatsApp, map
+      contact/              Showroom directory, contact form, map
       privacy-policy/
     (studio)/studio/        Embedded Sanity Studio
     global-not-found.tsx    Bilingual custom 404 (out/404.html)
     sitemap.ts, robots.ts
   components/               UI (Header, Footer, forms, product explorer, gallery…)
-  config/site.ts            Phone, WhatsApp, address, map, hours ← edit me
+  config/site.ts            Phones, fax, address, map, hours, WhatsApp ← edit me
   i18n/dictionaries/        en.ts / ar.ts — all interface copy
   lib/sanity/               Client, GROQ queries, data access with demo fallback
   sanity/schemaTypes/       Product, Category, Client logo schemas
@@ -185,7 +185,7 @@ scripts/flatten-segment-files.mjs   Windows-only post-build fix for local previe
 
 ## 7. Before go-live checklist
 
-- [ ] Update phone, WhatsApp number, address, map query and working hours in `src/config/site.ts`
+- [ ] Add a WhatsApp number in `src/config/site.ts` (WhatsApp buttons stay hidden while it is empty)
 - [ ] Review the company story, stats and values copy in `src/i18n/dictionaries/{en,ar}.ts`
 - [ ] Add CORS origins in Sanity (§2) and publish real categories, products and client logos
 - [ ] Create both Web3Forms keys and add them to Cloudflare env vars (§3)

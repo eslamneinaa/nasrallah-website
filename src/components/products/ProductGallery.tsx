@@ -36,7 +36,7 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
   return (
     <div className="flex flex-col gap-4" onKeyDown={onKeyDown}>
       <div
-        className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-navy-900 shadow-lift ring-1 ring-navy-100"
+        className="relative aspect-[4/3] overflow-hidden bg-maroon-900 outline outline-1 outline-offset-[10px] outline-gold-500/40"
         role="region"
         aria-roledescription="carousel"
         aria-label={name}
@@ -71,20 +71,20 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
                 type="button"
                 onClick={() => go(-1)}
                 aria-label={labels.prev}
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-navy-900 shadow-lg backdrop-blur transition hover:scale-105 hover:bg-white"
+                className="flex h-11 w-11 items-center justify-center border border-gold-400/60 bg-maroon-950/70 text-gold-200 backdrop-blur transition hover:bg-maroon-950"
               >
-                <ChevronLeft className="h-5 w-5 rtl:-scale-x-100" />
+                <ChevronLeft className="h-5 w-5 rtl:-scale-x-100" strokeWidth={1.4} />
               </button>
               <button
                 type="button"
                 onClick={() => go(1)}
                 aria-label={labels.next}
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-navy-900 shadow-lg backdrop-blur transition hover:scale-105 hover:bg-white"
+                className="flex h-11 w-11 items-center justify-center border border-gold-400/60 bg-maroon-950/70 text-gold-200 backdrop-blur transition hover:bg-maroon-950"
               >
-                <ChevronRight className="h-5 w-5 rtl:-scale-x-100" />
+                <ChevronRight className="h-5 w-5 rtl:-scale-x-100" strokeWidth={1.4} />
               </button>
             </div>
-            <p className="absolute end-4 bottom-4 rounded-full bg-navy-950/70 px-3 py-1 text-xs font-semibold text-white backdrop-blur" aria-live="polite">
+            <p className="absolute end-4 bottom-4 bg-maroon-950/75 px-3 py-1 text-xs text-gold-200 tabular-nums backdrop-blur" aria-live="polite">
               {fill(labels.imageOf, { n: active + 1, total: count })}
             </p>
           </>
@@ -92,7 +92,7 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
       </div>
 
       {count > 1 && (
-        <ul className="grid grid-cols-4 gap-3 sm:grid-cols-5">
+        <ul className="mt-4 grid grid-cols-4 gap-3 sm:grid-cols-5">
           {images.map((image, i) => (
             <li key={image.url + i}>
               <button
@@ -103,8 +103,8 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
                 }}
                 aria-label={fill(labels.imageOf, { n: i + 1, total: count })}
                 aria-current={i === active}
-                className={`relative block aspect-square w-full overflow-hidden rounded-2xl ring-2 transition ${
-                  i === active ? 'ring-gold-500' : 'opacity-70 ring-transparent hover:opacity-100'
+                className={`relative block aspect-square w-full overflow-hidden border transition ${
+                  i === active ? 'border-gold-500' : 'border-transparent opacity-60 hover:opacity-100'
                 }`}
               >
                 <Image src={image.url} alt="" fill sizes="120px" className="object-cover" />

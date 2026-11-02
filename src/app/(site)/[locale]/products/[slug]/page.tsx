@@ -1,15 +1,16 @@
-import { ArrowUpRight, CheckCircle2, FileDown } from 'lucide-react'
+import { ArrowUpRight, FileDown, Phone } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { WhatsAppIcon } from '@/components/icons'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
+import { Diamond } from '@/components/ornaments'
 import { PageHero } from '@/components/PageHero'
 import { ProductCard } from '@/components/ProductCard'
 import { ProductGallery } from '@/components/products/ProductGallery'
 import { RichText } from '@/components/RichText'
 import { SectionHeading } from '@/components/SectionHeading'
-import { siteConfig, whatsappLink } from '@/config/site'
+import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, pick } from '@/i18n'
 import { getCatalog, getProduct, getRelatedProducts } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
@@ -50,6 +51,7 @@ export default async function ProductPage({ params }: Props) {
   const category = pick(product.category?.title, locale)
   const related = await getRelatedProducts(product)
   const quoteHref = `${href(locale, 'request-quote')}?product=${encodeURIComponent(name)}`
+  const whatsapp = whatsappLink(fill(t.whatsappText, { product: name }))
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -70,64 +72,62 @@ export default async function ProductPage({ params }: Props) {
         crumbs={[
           { label: t.home, href: href(locale) },
           { label: t.products, href: href(locale, 'products') },
-          ...(category && product.category
-            ? [{ label: category, href: `${href(locale, 'products')}?category=${product.category.slug}` }]
-            : []),
+          ...(category && product.category ? [{ label: category, href: `${href(locale, 'products')}?category=${product.category.slug}` }] : []),
           { label: name },
         ]}
       />
 
-      <section className="py-14 sm:py-20">
-        <div className="container-page grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <section className="bg-khatam-light py-16 sm:py-24">
+        <div className="container-page grid gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <Reveal>
               <ProductGallery images={product.images} name={name} labels={t} rtl={locale === 'ar'} />
             </Reveal>
 
             {pick(product.fullDesc, locale)?.length ? (
-              <Reveal className="mt-14">
-                <h2 className="mb-6 font-display text-2xl font-extrabold text-navy-950">{t.description}</h2>
-                <RichText value={pick(product.fullDesc, locale)} />
+              <Reveal className="mt-16">
+                <p className="eyebrow">{t.description}</p>
+                <div className="mt-6 border-t border-gold-500/30 pt-8">
+                  <RichText value={pick(product.fullDesc, locale)} />
+                </div>
               </Reveal>
             ) : null}
           </div>
 
           <aside className="lg:col-span-5">
-            <div className="space-y-6 lg:sticky lg:top-28">
-              <Reveal delay={0.1} className="rounded-[2rem] bg-white p-7 shadow-card ring-1 ring-navy-100 sm:p-8">
-                {category && (
-                  <span className="inline-flex rounded-full bg-gold-50 px-3 py-1 text-xs font-bold text-gold-700 ring-1 ring-gold-200">
-                    {category}
-                  </span>
-                )}
-                <p className="mt-4 text-2xl font-extrabold text-navy-950">{name}</p>
+            <div className="space-y-8 lg:sticky lg:top-28">
+              <Reveal delay={0.1} className="border border-gold-500/40 bg-pearl-50 p-7 shadow-card sm:p-9">
+                {category && <p className="eyebrow">{category}</p>}
+                <p className="display mt-3 text-3xl leading-snug text-maroon-900">{name}</p>
 
-                <div className="mt-6 flex flex-col gap-3">
-                  <Link href={quoteHref} className="btn-gold w-full py-4 text-base">
+                <div className="mt-8 flex flex-col gap-3">
+                  <Link href={quoteHref} className="btn-maroon w-full py-4">
                     {t.requestQuote}
-                    <ArrowUpRight className="h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
+                    <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
                   </Link>
                   {product.pdfUrl && (
-                    <a href={`${product.pdfUrl}?dl=`} download className="btn-navy w-full py-4 text-base" rel="noopener">
-                      <FileDown className="h-5 w-5" aria-hidden="true" />
+                    <a href={`${product.pdfUrl}?dl=`} download className="btn-gold w-full py-4" rel="noopener">
+                      <FileDown className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                       {t.downloadPdf}
                     </a>
                   )}
-                  <a
-                    href={whatsappLink(fill(t.whatsappText, { product: name }))}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-ghost w-full py-4 text-base"
-                  >
-                    <WhatsAppIcon className="h-5 w-5 text-[#25d366]" />
-                    {t.whatsapp}
-                  </a>
+                  {whatsapp ? (
+                    <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn-outline w-full py-4">
+                      <WhatsAppIcon className="h-4 w-4" />
+                      {t.whatsapp}
+                    </a>
+                  ) : (
+                    <a href={telHref(siteConfig.phones[0].tel)} className="btn-outline w-full py-4">
+                      <Phone className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+                      {t.call}
+                    </a>
+                  )}
                 </div>
 
-                <ul className="mt-6 grid gap-2 border-t border-navy-100 pt-6 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                <ul className="mt-8 grid gap-3 border-t border-pearl-300 pt-6">
                   {t.assurances.map((a) => (
-                    <li key={a} className="flex items-center gap-2 text-sm font-semibold text-navy-700">
-                      <CheckCircle2 className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                    <li key={a} className="flex items-center gap-3 text-sm text-ink-700">
+                      <Diamond />
                       {a}
                     </li>
                   ))}
@@ -135,9 +135,9 @@ export default async function ProductPage({ params }: Props) {
               </Reveal>
 
               {product.specTable.length > 0 && (
-                <Reveal delay={0.2} className="overflow-hidden rounded-[2rem] ring-1 ring-navy-100">
-                  <h2 className="bg-navy-950 px-7 py-5 text-lg font-bold text-white">{t.specs}</h2>
-                  <table className="w-full text-start text-sm">
+                <Reveal delay={0.2}>
+                  <h2 className="eyebrow">{t.specs}</h2>
+                  <table className="mt-5 w-full border-t border-gold-500/40 text-start">
                     <thead className="sr-only">
                       <tr>
                         <th scope="col">{t.specLabel}</th>
@@ -146,11 +146,11 @@ export default async function ProductPage({ params }: Props) {
                     </thead>
                     <tbody>
                       {product.specTable.map((row, i) => (
-                        <tr key={i} className="border-b border-navy-100 last:border-0 odd:bg-navy-50/50">
-                          <th scope="row" className="w-2/5 px-7 py-4 text-start align-top font-semibold text-navy-500">
+                        <tr key={i} className="border-b border-pearl-300">
+                          <th scope="row" className="w-2/5 py-4 pe-4 text-start align-top text-sm font-normal text-ink-500">
                             {pick(row.label, locale)}
                           </th>
-                          <td className="px-7 py-4 font-semibold text-navy-950">{pick(row.value, locale)}</td>
+                          <td className="py-4 text-ink-900">{pick(row.value, locale)}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -163,13 +163,12 @@ export default async function ProductPage({ params }: Props) {
       </section>
 
       {related.length > 0 && (
-        <section className="bg-navy-50/60 py-20 sm:py-28">
+        <section className="bg-pearl-100 py-20 sm:py-28">
           <div className="container-page">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
               <SectionHeading title={t.related} />
-              <Link href={href(locale, 'products')} className="inline-flex items-center gap-2 font-bold text-navy-900 hover:text-gold-700">
+              <Link href={href(locale, 'products')} className="btn-outline shrink-0">
                 {t.backToProducts}
-                <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
               </Link>
             </div>
             <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -2,7 +2,7 @@
   "name": "nasrallah-trading",
   "version": "1.0.0",
   "private": true,
-  "description": "Corporate website for Nasrallah Trading — Next.js + Sanity, deployed on Cloudflare Pages",
+  "description": "Corporate website for Nasrallah Trading Est — Next.js + Sanity, deployed on Cloudflare Pages",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

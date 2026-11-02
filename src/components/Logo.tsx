@@ -2,35 +2,53 @@ import type { Locale } from '@/lib/types'
 
 type Props = { locale: Locale; tone?: 'light' | 'dark'; className?: string }
 
-export function LogoMark({ className = 'h-10 w-10' }: { className?: string }) {
+/** Brass khatam star framing the monogram. */
+export function LogoMark({ className = 'h-12 w-12', letter = 'ن' }: { className?: string; letter?: string }) {
   return (
     <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-      <defs>
-        <linearGradient id="nt-gold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#e2c477" />
-          <stop offset="1" stopColor="#a9823a" />
-        </linearGradient>
-      </defs>
-      <rect x="4" y="4" width="40" height="40" rx="11" fill="#0b1c38" />
-      <rect x="4.75" y="4.75" width="38.5" height="38.5" rx="10.25" fill="none" stroke="url(#nt-gold)" strokeOpacity=".55" strokeWidth="1.5" />
-      <path d="M15 34V14h3.2l11.6 14.6V14H33v20h-3.2L18.2 19.4V34z" fill="url(#nt-gold)" />
+      <g fill="none" stroke="#c2a06a" strokeWidth="1.1">
+        <rect x="10" y="10" width="28" height="28" />
+        <rect x="10" y="10" width="28" height="28" transform="rotate(45 24 24)" />
+        <circle cx="24" cy="24" r="11.5" strokeOpacity=".55" />
+      </g>
+      <text
+        x="24"
+        y={letter === 'ن' ? 27.5 : 29}
+        textAnchor="middle"
+        fill="#d2b582"
+        fontSize={letter === 'ن' ? 17 : 15}
+        style={{ fontFamily: letter === 'ن' ? 'var(--font-amiri), serif' : 'var(--font-bodoni), serif' }}
+      >
+        {letter}
+      </text>
     </svg>
   )
 }
 
 export function Logo({ locale, tone = 'dark', className = '' }: Props) {
   const isAr = locale === 'ar'
+  const main = tone === 'light' ? 'text-pearl-50' : 'text-maroon-900'
   return (
     <span className={`inline-flex items-center gap-3 ${className}`}>
-      <LogoMark />
-      <span className="flex flex-col leading-none">
-        <span className={`text-lg font-extrabold tracking-tight ${tone === 'light' ? 'text-white' : 'text-navy-900'}`}>
-          {isAr ? 'نصر الله' : 'NASRALLAH'}
+      <LogoMark letter={isAr ? 'ن' : 'N'} />
+      {isAr ? (
+        <span className="flex flex-col leading-none">
+          <span className={`font-[family-name:var(--font-amiri)] text-[1.4rem] font-bold ${main}`}>مؤسسة نصر الله</span>
+          <span className="mt-1 flex items-center gap-2 font-[family-name:var(--font-amiri)] text-[0.95rem] text-gold-400">
+            <span className="h-px w-4 bg-gold-500/60" aria-hidden="true" />
+            التجارية
+            <span className="h-px w-4 bg-gold-500/60" aria-hidden="true" />
+          </span>
         </span>
-        <span className={`mt-1 text-[0.68rem] font-semibold ${isAr ? '' : 'tracking-[0.32em]'} text-gold-500`}>
-          {isAr ? 'للتجارة' : 'TRADING'}
+      ) : (
+        <span className="flex flex-col leading-none">
+          <span className={`font-[family-name:var(--font-bodoni)] text-[1.3rem] font-medium tracking-[0.14em] ${main}`}>NASRALLAH</span>
+          <span className="mt-1.5 flex items-center gap-2 font-[family-name:var(--font-jost)] text-[0.6rem] font-medium tracking-[0.42em] text-gold-400">
+            <span className="h-px w-3 bg-gold-500/60" aria-hidden="true" />
+            TRADING EST
+          </span>
         </span>
-      </span>
+      )}
     </span>
   )
 }

@@ -1,34 +1,48 @@
 @import 'tailwindcss';
 
+/*
+ * Nasrallah Trading Est — "Royal Qatari" identity.
+ * Layout: symmetrical, framed compositions; arch windows; hairline brass rules;
+ * the eight-point khatam star as the single recurring ornament.
+ */
 @theme {
-  --color-navy-50: #f2f5fa;
-  --color-navy-100: #e1e8f3;
-  --color-navy-200: #c3d0e6;
-  --color-navy-300: #94abd0;
-  --color-navy-400: #5f7fb3;
-  --color-navy-500: #3d5f96;
-  --color-navy-600: #2a4a7d;
-  --color-navy-700: #1b3664;
-  --color-navy-800: #12284d;
-  --color-navy-900: #0b1c38;
-  --color-navy-950: #061227;
+  /* Qatari maroon — the brand ground */
+  --color-maroon-950: #1f060e;
+  --color-maroon-900: #2e0915;
+  --color-maroon-800: #440d20;
+  --color-maroon-700: #5c122b;
+  --color-maroon-600: #761836;
+  --color-maroon-500: #8a1538;
 
-  --color-gold-50: #fbf7ec;
-  --color-gold-100: #f5ebcf;
-  --color-gold-200: #ecd8a2;
-  --color-gold-300: #e2c477;
-  --color-gold-400: #d8b45d;
-  --color-gold-500: #c9a04a;
-  --color-gold-600: #a9823a;
-  --color-gold-700: #86642f;
+  /* Antique brass — accents, rules, ornament */
+  --color-gold-50: #faf5ea;
+  --color-gold-100: #f1e6cf;
+  --color-gold-200: #e3cfa6;
+  --color-gold-300: #d2b582;
+  --color-gold-400: #c2a06a;
+  --color-gold-500: #ae8a52;
+  --color-gold-600: #8f6f3d;
+  --color-gold-700: #6f552e;
+
+  /* Pearl — light grounds (a nod to Qatar's pearling heritage) */
+  --color-pearl-50: #fcfaf7;
+  --color-pearl-100: #f6f1ea;
+  --color-pearl-200: #ece3d7;
+  --color-pearl-300: #dccdbb;
+
+  /* Ink — warm text tones biased toward the maroon */
+  --color-ink-900: #261519;
+  --color-ink-700: #4b3a3f;
+  --color-ink-500: #76666a;
+  --color-ink-400: #9a8b8d;
 
   --font-sans: var(--app-font);
   --font-display: var(--app-display-font);
 
-  --shadow-card: 0 1px 2px rgb(6 18 39 / 0.04), 0 8px 24px -12px rgb(6 18 39 / 0.12);
-  --shadow-lift: 0 2px 4px rgb(6 18 39 / 0.05), 0 24px 48px -16px rgb(6 18 39 / 0.22);
+  --shadow-card: 0 1px 0 rgb(31 6 14 / 0.04), 0 18px 40px -28px rgb(31 6 14 / 0.35);
+  --shadow-lift: 0 1px 0 rgb(31 6 14 / 0.05), 0 30px 60px -30px rgb(31 6 14 / 0.45);
 
-  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee: marquee 50s linear infinite;
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -36,13 +50,13 @@
 }
 
 :root {
-  --app-font: var(--font-manrope), var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
-  --app-display-font: var(--font-manrope), var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  --app-font: var(--font-jost), var(--font-plex-ar), ui-sans-serif, system-ui, sans-serif;
+  --app-display-font: var(--font-bodoni), var(--font-amiri), 'Times New Roman', serif;
 }
 
 html[lang='ar'] {
-  --app-font: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
-  --app-display-font: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  --app-font: var(--font-plex-ar), var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --app-display-font: var(--font-amiri), var(--font-bodoni), 'Times New Roman', serif;
 }
 
 @layer base {
@@ -51,14 +65,20 @@ html[lang='ar'] {
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply bg-white font-sans text-navy-900 antialiased;
+    @apply bg-pearl-50 font-sans text-ink-900 antialiased;
     text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern', 'liga';
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
   }
   ::selection {
-    @apply bg-gold-200 text-navy-950;
+    @apply bg-gold-200 text-maroon-950;
   }
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-gold-500;
+    @apply outline-1 outline-offset-4 outline-gold-500;
   }
   @media (prefers-reduced-motion: reduce) {
     html {
@@ -69,69 +89,88 @@ html[lang='ar'] {
     *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
   }
 }
 
 @utility container-page {
-  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
 }
 
-@utility bg-grid {
-  background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
+/* Khatam (eight-point star) lattice — on dark grounds */
+@utility bg-khatam {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23C2A06A' stroke-opacity='.16' stroke-width='.8'%3E%3Crect x='22' y='22' width='28' height='28'/%3E%3Crect x='22' y='22' width='28' height='28' transform='rotate(45 36 36)'/%3E%3Ccircle cx='36' cy='36' r='5'/%3E%3Cpath d='M0 0L22 22M72 0L50 22M0 72L22 50M72 72L50 50'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 72px 72px;
+}
+/* Same lattice for light grounds */
+@utility bg-khatam-light {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23761836' stroke-opacity='.07' stroke-width='.8'%3E%3Crect x='22' y='22' width='28' height='28'/%3E%3Crect x='22' y='22' width='28' height='28' transform='rotate(45 36 36)'/%3E%3Ccircle cx='36' cy='36' r='5'/%3E%3Cpath d='M0 0L22 22M72 0L50 22M0 72L22 50M72 72L50 50'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 72px 72px;
+}
+
+/* Arch window — the silhouette of Gulf architecture */
+@utility arch {
+  border-radius: 999px 999px 0 0;
 }
 
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 select-none disabled:cursor-not-allowed disabled:opacity-60;
+  @apply inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-[0.95rem] font-medium transition-all duration-300 select-none disabled:cursor-not-allowed disabled:opacity-60;
+  @apply ltr:text-[0.78rem] ltr:tracking-[0.18em] ltr:uppercase;
 }
 @utility btn-gold {
-  @apply btn bg-gold-500 text-navy-950 shadow-[0_8px_24px_-8px_rgb(201_160_74/0.6)] hover:-translate-y-0.5 hover:bg-gold-400;
+  @apply btn bg-gold-500 text-maroon-950 hover:bg-gold-400;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.18);
 }
-@utility btn-navy {
-  @apply btn bg-navy-900 text-white hover:-translate-y-0.5 hover:bg-navy-800;
+@utility btn-maroon {
+  @apply btn bg-maroon-800 text-pearl-50 hover:bg-maroon-700;
+  box-shadow: inset 0 0 0 1px rgb(194 160 106 / 0.35);
 }
-@utility btn-ghost-light {
-  @apply btn border border-white/25 text-white backdrop-blur hover:border-white/60 hover:bg-white/10;
+@utility btn-outline-light {
+  @apply btn border border-gold-400/50 text-pearl-50 hover:border-gold-300 hover:bg-gold-400/10;
 }
-@utility btn-ghost {
-  @apply btn border border-navy-200 text-navy-900 hover:border-navy-900 hover:bg-navy-50;
+@utility btn-outline {
+  @apply btn border border-maroon-800/25 text-maroon-900 hover:border-maroon-800 hover:bg-maroon-800/[0.03];
 }
 
 @layer components {
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-gold-600 uppercase;
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-medium tracking-[0.28em] text-gold-600 uppercase;
   }
   html[lang='ar'] .eyebrow {
-    @apply tracking-normal text-sm;
+    @apply text-[0.95rem] font-medium tracking-normal;
+  }
+  .display {
+    @apply font-display font-medium;
+  }
+  html[lang='ar'] .display {
+    @apply font-bold;
   }
   .field-label {
-    @apply mb-1.5 block text-sm font-semibold text-navy-800;
+    @apply mb-2 block text-[0.8rem] font-medium tracking-wide text-ink-700;
   }
   .field-input {
-    @apply block w-full rounded-xl border border-navy-100 bg-white px-4 py-3 text-navy-900 shadow-sm transition placeholder:text-navy-300 focus:border-gold-500 focus:ring-4 focus:ring-gold-500/15 focus:outline-none aria-invalid:border-red-400 aria-invalid:ring-red-100;
+    @apply block w-full border border-pearl-300 bg-pearl-50 px-4 py-3.5 text-ink-900 transition placeholder:text-ink-400 focus:border-gold-500 focus:bg-white focus:outline-none aria-invalid:border-red-700/60;
   }
   .prose-rich p {
-    @apply mb-4 leading-relaxed text-navy-700;
+    @apply mb-5 text-[1.05rem] leading-loose text-ink-700;
   }
   .prose-rich h3 {
-    @apply mt-8 mb-3 text-xl font-bold text-navy-900;
+    @apply mt-10 mb-3 font-display text-2xl text-maroon-900;
   }
   .prose-rich h4 {
-    @apply mt-6 mb-2 text-lg font-bold text-navy-900;
+    @apply mt-8 mb-2 text-lg font-semibold text-maroon-900;
   }
   .prose-rich ul {
-    @apply mb-4 list-disc space-y-1.5 ps-6 text-navy-700;
+    @apply mb-5 list-[square] space-y-2 ps-6 text-ink-700 marker:text-gold-500;
   }
   .prose-rich ol {
-    @apply mb-4 list-decimal space-y-1.5 ps-6 text-navy-700;
+    @apply mb-5 list-decimal space-y-2 ps-6 text-ink-700 marker:text-gold-600;
   }
   .prose-rich blockquote {
-    @apply my-6 border-s-4 border-gold-500 ps-4 text-navy-800 italic;
+    @apply my-8 border-s border-gold-500 ps-6 font-display text-xl text-maroon-800;
   }
   .prose-rich a {
-    @apply font-semibold text-gold-700 underline underline-offset-4;
+    @apply text-maroon-700 underline decoration-gold-400 underline-offset-4;
   }
 }

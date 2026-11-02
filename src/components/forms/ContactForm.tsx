@@ -29,7 +29,7 @@ export function ContactForm({ locale, dict }: Props) {
         title={dict.successTitle}
         text={dict.successContact}
         action={
-          <button type="button" onClick={reset} className="btn-ghost">
+          <button type="button" onClick={reset} className="btn-outline">
             {dict.sendAnother}
           </button>
         }
@@ -57,7 +57,7 @@ export function ContactForm({ locale, dict }: Props) {
         <Captcha locale={locale} onToken={setCaptchaToken} resetKey={captchaKey} />
         <FormAlert message={formError} />
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-navy-500">{dict.privacyNote}</p>
+          <p className="text-sm text-ink-500">{dict.privacyNote}</p>
           <SubmitButton sending={status === 'sending'} label={dict.submitContact} sendingLabel={dict.sending} />
         </div>
       </div>

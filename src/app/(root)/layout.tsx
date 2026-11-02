@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 export default function RootRedirectLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ar" dir="rtl">
-      <body style={{ margin: 0, background: '#061227' }}>{children}</body>
+      <body style={{ margin: 0, background: '#1f060e' }}>{children}</body>
     </html>
   )
 }

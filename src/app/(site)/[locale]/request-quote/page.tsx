@@ -1,11 +1,12 @@
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Phone, Printer } from 'lucide-react'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { QuoteForm, QuoteFormWithParams } from '@/components/forms/QuoteForm'
 import { WhatsAppIcon } from '@/components/icons'
 import { Reveal } from '@/components/motion/Reveal'
+import { Khatam } from '@/components/ornaments'
 import { PageHero } from '@/components/PageHero'
-import { siteConfig, whatsappLink } from '@/config/site'
+import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { getDictionary, href } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
 
@@ -19,15 +20,18 @@ export default async function RequestQuotePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.quote
+  const whatsapp = whatsappLink()
+  const item = 'flex items-center gap-3 text-ink-900 transition hover:text-maroon-700'
+  const icon = 'h-4 w-4 shrink-0 text-gold-600'
 
   return (
     <>
       <PageHero title={t.title} subtitle={t.subtitle} crumbs={[{ label: dict.nav.home, href: href(locale) }, { label: dict.nav.quote }]} />
 
-      <section className="py-14 sm:py-20">
+      <section className="bg-khatam-light py-16 sm:py-24">
         <div className="container-page grid gap-10 lg:grid-cols-12">
-          <Reveal className="rounded-[2rem] bg-white p-6 shadow-lift ring-1 ring-navy-100 sm:p-10 lg:col-span-8">
-            <h2 className="mb-8 font-display text-2xl font-extrabold text-navy-950">{t.formTitle}</h2>
+          <Reveal className="border border-pearl-300 bg-pearl-50 p-6 shadow-card sm:p-10 lg:col-span-8">
+            <h2 className="display mb-10 text-3xl text-maroon-900">{t.formTitle}</h2>
             {/* The fallback renders the same form (without pre-fill) during static generation. */}
             <Suspense fallback={<QuoteForm locale={locale} dict={dict.form} />}>
               <QuoteFormWithParams locale={locale} dict={dict.form} />
@@ -35,44 +39,56 @@ export default async function RequestQuotePage({ params }: LocaleParams) {
           </Reveal>
 
           <Reveal delay={0.1} className="space-y-6 lg:col-span-4">
-            <div className="rounded-[2rem] bg-navy-950 p-8 text-white">
-              <h2 className="text-xl font-bold">{t.sideTitle}</h2>
+            <div className="relative isolate overflow-hidden bg-maroon-950 p-8 text-pearl-100">
+              <div className="bg-khatam pointer-events-none absolute inset-0 -z-10 opacity-50" aria-hidden="true" />
+              <div className="pointer-events-none absolute inset-3 border border-gold-500/30" aria-hidden="true" />
+              <p className="eyebrow text-gold-400">
+                <Khatam className="h-3.5 w-3.5" />
+                {t.sideTitle}
+              </p>
               <ol className="mt-8 space-y-7">
                 {t.steps.map((step, i) => (
-                  <li key={step.title} className="relative flex gap-4">
-                    {i < t.steps.length - 1 && (
-                      <span className="absolute start-5 top-11 h-[calc(100%-1rem)] w-px bg-white/15" aria-hidden="true" />
-                    )}
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500 font-bold text-navy-950">
-                      {i + 1}
-                    </span>
+                  <li key={step.title} className="flex gap-5">
+                    <span className="display w-6 shrink-0 text-3xl leading-none text-gold-400">{i + 1}</span>
                     <div>
-                      <h3 className="font-bold">{step.title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-navy-300">{step.desc}</p>
+                      <h3 className="font-medium text-pearl-50">{step.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-pearl-200/65">{step.desc}</p>
                     </div>
                   </li>
                 ))}
               </ol>
             </div>
 
-            <div className="rounded-[2rem] p-8 ring-1 ring-navy-100">
-              <h2 className="font-bold text-navy-950">{t.preferDirect}</h2>
-              <ul className="mt-5 space-y-4">
-                <li>
-                  <a href={`tel:${siteConfig.phone.tel}`} className="flex items-center gap-3 font-semibold text-navy-800 hover:text-gold-700">
-                    <Phone className="h-5 w-5 text-gold-500" aria-hidden="true" />
-                    <span dir="ltr">{siteConfig.phone.display}</span>
-                  </a>
+            <div className="border border-gold-500/40 bg-pearl-50 p-8">
+              <h2 className="display text-xl text-maroon-900">{t.preferDirect}</h2>
+              <ul className="mt-6 space-y-4">
+                {siteConfig.phones.map((p) => (
+                  <li key={p.tel}>
+                    <a href={telHref(p.tel)} className={item}>
+                      <Phone className={icon} strokeWidth={1.5} aria-hidden="true" />
+                      <span dir="ltr">
+                        {siteConfig.dialCode} {p.display}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+                <li className="flex items-center gap-3 text-ink-700">
+                  <Printer className={icon} strokeWidth={1.5} aria-hidden="true" />
+                  <span>
+                    {dict.contact.fax}: <span dir="ltr">{siteConfig.fax.display}</span>
+                  </span>
                 </li>
+                {whatsapp && (
+                  <li>
+                    <a href={whatsapp} target="_blank" rel="noopener noreferrer" className={item}>
+                      <WhatsAppIcon className={icon} />
+                      {dict.contact.whatsappCta}
+                    </a>
+                  </li>
+                )}
                 <li>
-                  <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-semibold text-navy-800 hover:text-gold-700">
-                    <WhatsAppIcon className="h-5 w-5 text-[#25d366]" />
-                    {dict.contact.whatsappCta}
-                  </a>
-                </li>
-                <li>
-                  <a href={`mailto:${siteConfig.quoteEmail}`} className="flex items-center gap-3 font-semibold break-all text-navy-800 hover:text-gold-700">
-                    <Mail className="h-5 w-5 shrink-0 text-gold-500" aria-hidden="true" />
+                  <a href={`mailto:${siteConfig.quoteEmail}`} className={`${item} break-all`}>
+                    <Mail className={icon} strokeWidth={1.5} aria-hidden="true" />
                     {siteConfig.quoteEmail}
                   </a>
                 </li>

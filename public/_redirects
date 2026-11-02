@@ -1,0 +1,9 @@
+# Cloudflare Pages redirects — https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Sanity Studio is a single-page app: serve /studio/ for every deep link
+# (e.g. /studio/structure/product). 200 = rewrite, the URL stays the same.
+/studio/*   /studio/   200
+
+# Friendly shortcuts
+/quote      /ar/request-quote/   301
+/admin      /studio/             301

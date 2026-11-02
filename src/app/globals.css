@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-navy-50: #f2f5fa;
+  --color-navy-100: #e1e8f3;
+  --color-navy-200: #c3d0e6;
+  --color-navy-300: #94abd0;
+  --color-navy-400: #5f7fb3;
+  --color-navy-500: #3d5f96;
+  --color-navy-600: #2a4a7d;
+  --color-navy-700: #1b3664;
+  --color-navy-800: #12284d;
+  --color-navy-900: #0b1c38;
+  --color-navy-950: #061227;
+
+  --color-gold-50: #fbf7ec;
+  --color-gold-100: #f5ebcf;
+  --color-gold-200: #ecd8a2;
+  --color-gold-300: #e2c477;
+  --color-gold-400: #d8b45d;
+  --color-gold-500: #c9a04a;
+  --color-gold-600: #a9823a;
+  --color-gold-700: #86642f;
+
+  --font-sans: var(--app-font);
+  --font-display: var(--app-display-font);
+
+  --shadow-card: 0 1px 2px rgb(6 18 39 / 0.04), 0 8px 24px -12px rgb(6 18 39 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(6 18 39 / 0.05), 0 24px 48px -16px rgb(6 18 39 / 0.22);
+
+  --animate-marquee: marquee 40s linear infinite;
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+:root {
+  --app-font: var(--font-manrope), var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  --app-display-font: var(--font-manrope), var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+}
+
+html[lang='ar'] {
+  --app-font: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  --app-display-font: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-white font-sans text-navy-900 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    @apply bg-gold-200 text-navy-950;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold-500;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 select-none disabled:cursor-not-allowed disabled:opacity-60;
+}
+@utility btn-gold {
+  @apply btn bg-gold-500 text-navy-950 shadow-[0_8px_24px_-8px_rgb(201_160_74/0.6)] hover:-translate-y-0.5 hover:bg-gold-400;
+}
+@utility btn-navy {
+  @apply btn bg-navy-900 text-white hover:-translate-y-0.5 hover:bg-navy-800;
+}
+@utility btn-ghost-light {
+  @apply btn border border-white/25 text-white backdrop-blur hover:border-white/60 hover:bg-white/10;
+}
+@utility btn-ghost {
+  @apply btn border border-navy-200 text-navy-900 hover:border-navy-900 hover:bg-navy-50;
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-gold-600 uppercase;
+  }
+  html[lang='ar'] .eyebrow {
+    @apply tracking-normal text-sm;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-navy-800;
+  }
+  .field-input {
+    @apply block w-full rounded-xl border border-navy-100 bg-white px-4 py-3 text-navy-900 shadow-sm transition placeholder:text-navy-300 focus:border-gold-500 focus:ring-4 focus:ring-gold-500/15 focus:outline-none aria-invalid:border-red-400 aria-invalid:ring-red-100;
+  }
+  .prose-rich p {
+    @apply mb-4 leading-relaxed text-navy-700;
+  }
+  .prose-rich h3 {
+    @apply mt-8 mb-3 text-xl font-bold text-navy-900;
+  }
+  .prose-rich h4 {
+    @apply mt-6 mb-2 text-lg font-bold text-navy-900;
+  }
+  .prose-rich ul {
+    @apply mb-4 list-disc space-y-1.5 ps-6 text-navy-700;
+  }
+  .prose-rich ol {
+    @apply mb-4 list-decimal space-y-1.5 ps-6 text-navy-700;
+  }
+  .prose-rich blockquote {
+    @apply my-6 border-s-4 border-gold-500 ps-4 text-navy-800 italic;
+  }
+  .prose-rich a {
+    @apply font-semibold text-gold-700 underline underline-offset-4;
+  }
+}

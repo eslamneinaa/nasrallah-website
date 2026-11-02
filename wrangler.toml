@@ -1,0 +1,5 @@
+# Used by `npx wrangler pages deploy` (direct upload). Not needed when the
+# project is connected to Git in the Cloudflare dashboard.
+name = "nasrallah-trading"
+pages_build_output_dir = "out"
+compatibility_date = "2026-10-01"

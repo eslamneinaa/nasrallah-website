@@ -10,6 +10,29 @@ export function Khatam({ className = 'h-4 w-4', strokeWidth = 1.2 }: { className
   )
 }
 
+/**
+ * The `bg-khatam` lattice as inline SVG, for above-the-fold heroes: a CSS
+ * background image there becomes the page's LCP element, an inline SVG
+ * pattern does not. One per page (fixed pattern id).
+ */
+export function KhatamLattice({ className = '' }: { className?: string }) {
+  return (
+    <svg className={`pointer-events-none absolute inset-0 -z-10 h-full w-full ${className}`} aria-hidden="true">
+      <defs>
+        <pattern id="khatam-lattice" width="72" height="72" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="#C2A06A" strokeOpacity=".16" strokeWidth=".8">
+            <rect x="22" y="22" width="28" height="28" />
+            <rect x="22" y="22" width="28" height="28" transform="rotate(45 36 36)" />
+            <circle cx="36" cy="36" r="5" />
+            <path d="M0 0L22 22M72 0L50 22M0 72L22 50M72 72L50 50" />
+          </g>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#khatam-lattice)" />
+    </svg>
+  )
+}
+
 /** Hairline — star — hairline. */
 export function OrnamentRule({ className = '', width = 'w-16' }: { className?: string; width?: string }) {
   return (

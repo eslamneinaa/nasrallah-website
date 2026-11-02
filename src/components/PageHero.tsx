@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { Reveal } from './motion/Reveal'
-import { Diamond, OrnamentRule } from './ornaments'
+import { Diamond, KhatamLattice, OrnamentRule } from './ornaments'
 
 type Crumb = { label: string; href?: string }
 
@@ -16,10 +15,11 @@ type Props = {
 export function PageHero({ title, subtitle, crumbs, children }: Props) {
   return (
     <section className="relative isolate overflow-hidden bg-maroon-900 pt-36 pb-16 text-pearl-50 sm:pb-20 lg:pt-48">
-      <div className="bg-khatam pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_75%)]" aria-hidden="true" />
+      <KhatamLattice className="[mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_75%)]" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgb(138_21_56/0.55),transparent_60%)]" aria-hidden="true" />
       <div className="container-page text-center">
-        <Reveal>
+        {/* CSS entrance (not <Reveal>) so the title paints before hydration. */}
+        <div className="animate-rise">
           {crumbs && (
             <nav aria-label="Breadcrumb" className="mb-8">
               <ol className="flex flex-wrap items-center justify-center gap-3 text-sm text-pearl-200/70">
@@ -44,7 +44,7 @@ export function PageHero({ title, subtitle, crumbs, children }: Props) {
           <OrnamentRule className="mt-7" />
           {subtitle && <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pearl-200/75">{subtitle}</p>}
           {children}
-        </Reveal>
+        </div>
       </div>
     </section>
   )

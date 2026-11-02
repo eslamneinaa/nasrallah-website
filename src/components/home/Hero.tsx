@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 import { href } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Locale } from '@/lib/types'
-import { Frame, Khatam } from '../ornaments'
+import { Frame, Khatam, KhatamLattice } from '../ornaments'
 
 type Props = {
   locale: Locale
@@ -33,7 +33,7 @@ export function Hero({ locale, dict, image }: Props) {
 
   return (
     <section ref={ref} className="relative isolate overflow-hidden bg-maroon-950 pt-32 pb-16 text-pearl-50 lg:pt-48 lg:pb-24">
-      <div className="bg-khatam pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_70%_40%,black_5%,transparent_70%)]" aria-hidden="true" />
+      <KhatamLattice className="[mask-image:radial-gradient(ellipse_at_70%_40%,black_5%,transparent_70%)]" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_20%,rgb(138_21_56/0.5),transparent_55%)]" aria-hidden="true" />
 
       <div className="container-page grid items-center gap-16 lg:grid-cols-12 lg:gap-10">

@@ -54,15 +54,30 @@ export default async function ProductPage({ params }: Props) {
   const quoteHref = `${href(locale, 'request-quote')}?product=${encodeURIComponent(name)}`
   const whatsapp = whatsappLink(fill(t.whatsappText, { product: name }))
 
+  // The maker (UCHIDA, SAKURA…) comes from the product's own "Brand" spec row.
+  const brandName = product.specTable.find((row) => row.label.en === 'Brand')?.value.en
+  const pageUrl = siteConfig.url + href(locale, `products/${slug}`)
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name,
-    description: pick(product.shortDesc, locale),
-    image: product.images.map((i) => (i.url.startsWith('http') ? i.url : siteConfig.url + i.url)),
-    category,
-    brand: { '@type': 'Brand', name: siteConfig.name[locale] },
-    url: siteConfig.url + href(locale, `products/${slug}`),
+    '@graph': [
+      {
+        '@type': 'Product',
+        name,
+        description: pick(product.shortDesc, locale),
+        image: product.images.map((i) => (i.url.startsWith('http') ? i.url : siteConfig.url + i.url)),
+        category,
+        ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
+        url: pageUrl,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { name: t.home, item: siteConfig.url + href(locale) },
+          { name: t.products, item: siteConfig.url + href(locale, 'products') },
+          { name, item: pageUrl },
+        ].map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, ...crumb })),
+      },
+    ],
   }
 
   return (

@@ -43,16 +43,20 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
   const { categories } = await getCatalog()
 
   const business = {
-    '@context': 'https://schema.org',
     '@type': 'Store',
+    '@id': `${siteConfig.url}/#business`,
     name: siteConfig.name.en,
     alternateName: siteConfig.name.ar,
     url: siteConfig.url,
+    description: dict.meta.description,
     logo: `${siteConfig.url}/brand/logo.svg`,
     image: `${siteConfig.url}/og.jpg`,
     slogan: getDictionary('en').footer.slogan,
     foundingDate: String(siteConfig.foundedYear),
     brand: siteConfig.brands.map((name) => ({ '@type': 'Brand', name })),
+    knowsAbout: ['Fire-resistant safes', 'Filing cabinets', 'Luxury safes', 'Jewellery safes', 'Watch and jewellery safe interiors'],
+    areaServed: { '@type': 'Country', name: 'Qatar' },
+    ...(siteConfig.social.length ? { sameAs: siteConfig.social } : {}),
     email: siteConfig.email,
     telephone: siteConfig.phones.map((p) => p.tel),
     faxNumber: siteConfig.fax.tel,
@@ -74,6 +78,23 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
     })),
   }
 
+  // WebSite gives Google the site name shown in results; Store describes the business.
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${siteConfig.url}/#website`,
+        url: siteConfig.url,
+        name: siteConfig.name[locale],
+        alternateName: siteConfig.name[locale === 'ar' ? 'en' : 'ar'],
+        inLanguage: locale,
+        publisher: { '@id': `${siteConfig.url}/#business` },
+      },
+      business,
+    ],
+  }
+
   return (
     <html lang={locale} dir={dirOf(locale)} className={fontVariables}>
       <body>
@@ -83,7 +104,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
           <Footer locale={locale} dict={dict} categories={categories} />
           <WhatsAppFloat label={dict.common.whatsappFloat} />
         </MotionProvider>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(business) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </body>
     </html>
   )

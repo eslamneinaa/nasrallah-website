@@ -1,4 +1,4 @@
-import { ArrowUpRight, Gem, Handshake, Hourglass, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight, Gem, Handshake, Hourglass, Plus, ShieldCheck } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CtaBand } from '@/components/CtaBand'
@@ -9,7 +9,8 @@ import { Diamond, Frame, Khatam } from '@/components/ornaments'
 import { ProductCard } from '@/components/ProductCard'
 import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
-import { getDictionary, href } from '@/i18n'
+import { siteConfig } from '@/config/site'
+import { fill, getDictionary, href } from '@/i18n'
 import { getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
 import { resolveLocale, type LocaleParams } from '@/lib/seo'
 
@@ -25,6 +26,20 @@ export default async function HomePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const [featured, clients] = await Promise.all([getFeaturedProducts(6), getClientLogos()])
+
+  const faq = dict.faq.items.map(({ q, a }) => ({
+    q,
+    a: fill(a, {
+      address: siteConfig.address[locale],
+      hours: siteConfig.hours.compact[locale],
+      phone: `${siteConfig.dialCode} ${siteConfig.phones[0].display}`,
+    }),
+  }))
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+  }
 
   return (
     <>
@@ -184,6 +199,25 @@ export default async function HomePage({ params }: LocaleParams) {
             </Reveal>
           </>
         )}
+      </section>
+
+      {/* FAQ — plain <details>, so every answer is in the HTML for search engines and AI assistants */}
+      <section className="bg-pearl-100 py-24 sm:py-32">
+        <div className="container-page max-w-4xl">
+          <SectionHeading eyebrow={dict.faq.eyebrow} title={dict.faq.title} align="center" />
+          <Reveal className="mt-14 border-t border-gold-500/30">
+            {faq.map(({ q, a }) => (
+              <details key={q} className="group border-b border-gold-500/30">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-start [&::-webkit-details-marker]:hidden">
+                  <h3 className="display text-xl text-maroon-900 sm:text-[1.4rem]">{q}</h3>
+                  <Plus className="h-5 w-5 shrink-0 text-gold-600 transition duration-300 group-open:rotate-45" strokeWidth={1.4} aria-hidden="true" />
+                </summary>
+                <p className="max-w-3xl pb-7 leading-loose text-ink-500">{a}</p>
+              </details>
+            ))}
+          </Reveal>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       </section>
 
       <CtaBand locale={locale} dict={dict.ctaBand} />

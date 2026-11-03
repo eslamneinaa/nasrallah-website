@@ -6,6 +6,10 @@ export const siteConfig = {
   name: { en: 'Nasrallah Trading Est', ar: 'مؤسسة نصر الله التجارية' },
   foundedYear: 1906,
   brands: ['UCHIDA', 'SAKURA'],
+  // Official profiles (Instagram, Facebook, Google Maps listing, LinkedIn…).
+  // Listed in the structured data so search engines and AI assistants can
+  // tie them to this business.
+  social: [] as string[],
   domain: 'nasrallahtrading.com',
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://nasrallahtrading.com').replace(/\/$/, ''),
   email: 'info@nasrallahtrading.com',

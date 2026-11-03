@@ -91,6 +91,41 @@ const en = {
     eyebrow: 'Our clients',
     title: 'Some of the names that trust us',
   },
+  faq: {
+    eyebrow: 'Questions & answers',
+    title: 'Before you visit',
+    // {address}, {hours} and {phone} are filled in from the site settings.
+    items: [
+      {
+        q: 'Where is the Nasrallah showroom?',
+        a: 'Our showroom is at {address}. We are open {hours}, and closed on Fridays.',
+      },
+      {
+        q: 'Which brands of safes do you sell?',
+        a: 'We supply safes from UCHIDA and SAKURA: fire-resistant safes, filing cabinets and luxury safes, along with fitted jewellery and watch interiors.',
+      },
+      {
+        q: 'Do you sell fire-resistant safes in Qatar?',
+        a: 'Yes. We offer UCHIDA fire-resistant safes for documents, cash and valuables, in several sizes. Visit the showroom or request a quote and we will help you choose the right size and lock.',
+      },
+      {
+        q: 'Do you supply ministries, banks and companies?',
+        a: 'Yes. More than 1,000 clients have trusted us, including ministries, private institutions, banks, companies and individuals across Qatar.',
+      },
+      {
+        q: 'Can a safe be fitted out for jewellery and watches?',
+        a: 'Yes. We fit safes with velvet-lined drawers, necklace busts, ring rolls and watch cushions, with wood finishes and brass handles, so every piece has its place.',
+      },
+      {
+        q: 'How do I get a price?',
+        a: 'Send us a quote request through the website or on WhatsApp, or call the showroom on {phone}. Tell us what you want to store and we will recommend the right safe.',
+      },
+      {
+        q: 'How long has Nasrallah Trading Est been in business?',
+        a: 'Nasrallah Trading Est was founded in 1906. For more than a century, our name has stood for keeping what people value safe.',
+      },
+    ],
+  },
   ctaBand: {
     title: 'Protect what matters most',
     subtitle: 'Tell us what you need to protect and we will recommend the right safe, or visit our showroom to see the range in person.',

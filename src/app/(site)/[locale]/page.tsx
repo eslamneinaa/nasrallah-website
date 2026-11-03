@@ -215,6 +215,10 @@ export default async function HomePage({ params }: LocaleParams) {
                 <p className="max-w-3xl pb-7 leading-loose text-ink-500">{a}</p>
               </details>
             ))}
+            <Link href={href(locale, 'safe-buying-guide')} className="mt-10 inline-flex items-center gap-2 text-maroon-800 underline decoration-gold-400 underline-offset-4 transition hover:text-maroon-600">
+              {dict.guide.faqLink}
+              <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+            </Link>
           </Reveal>
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />

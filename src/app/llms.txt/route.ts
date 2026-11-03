@@ -39,6 +39,7 @@ ${siteConfig.name.en} was founded in ${siteConfig.foundedYear} and sells ${siteC
 
 - [About us](${url('about')}): history since ${siteConfig.foundedYear}, values and showroom
 - [Products](${url('products')}): the full catalogue
+- [Safe buying guide for Qatar](${url('safe-buying-guide')}): choosing cash, jewellery and document safes, what sets the price, and where to buy
 - [Request a quote](${url('request-quote')})
 - [Contact](${url('contact')})
 

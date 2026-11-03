@@ -5,7 +5,7 @@ import { getCatalog } from '@/lib/sanity/api'
 
 export const dynamic = 'force-static'
 
-const staticPaths = ['/', 'about', 'products', 'request-quote', 'contact', 'privacy-policy']
+const staticPaths = ['/', 'about', 'products', 'request-quote', 'contact', 'safe-buying-guide', 'privacy-policy']
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { products } = await getCatalog()

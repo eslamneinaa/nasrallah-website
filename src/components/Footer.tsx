@@ -17,6 +17,7 @@ export function Footer({ locale, dict, categories }: Props) {
     { href: href(locale), label: dict.nav.home },
     { href: href(locale, 'about'), label: dict.nav.about },
     { href: href(locale, 'products'), label: dict.nav.products },
+    { href: href(locale, 'safe-buying-guide'), label: dict.nav.guide },
     { href: href(locale, 'request-quote'), label: dict.nav.quote },
     { href: href(locale, 'contact'), label: dict.nav.contact },
   ]

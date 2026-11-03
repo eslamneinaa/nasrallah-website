@@ -10,6 +10,7 @@ const en = {
     products: 'Products',
     quote: 'Request a Quote',
     contact: 'Contact',
+    guide: 'Safe buying guide',
     menu: 'Open menu',
     close: 'Close menu',
     switchLabel: 'العربية',
@@ -101,6 +102,10 @@ const en = {
         a: 'At the Nasrallah Trading Est showroom, {address}. We are open {hours} and closed on Fridays. You can also order through the website or on WhatsApp, with free delivery.',
       },
       {
+        q: 'Is a tajouri the same as a safe?',
+        a: 'Yes. “Tajouri” (تجوري) is the name commonly used in Qatar and the Gulf for a safe: a sealed steel box for cash, jewellery, documents and valuables. “Khazna” (خزنة) is the standard Arabic word.',
+      },
+      {
         q: 'Which brands of safes do you sell?',
         a: 'We supply safes from UCHIDA and SAKURA: fire-resistant safes, filing cabinets and luxury safes, along with fitted jewellery and watch interiors.',
       },
@@ -111,6 +116,10 @@ const en = {
       {
         q: 'Do you sell fire-resistant safes in Qatar?',
         a: 'Yes. We offer UCHIDA fire-resistant safes for documents, cash and valuables, in several sizes. Visit the showroom or request a quote and we will help you choose the right size and lock.',
+      },
+      {
+        q: 'Which safe is right for documents, records and files?',
+        a: 'For important documents choose a fire-resistant safe; for large numbers of files and archives, UCHIDA drawer filing cabinets. Visit us and we will recommend the right size.',
       },
       {
         q: 'Do you supply ministries, banks and companies?',
@@ -137,6 +146,66 @@ const en = {
         a: 'Nasrallah Trading Est was founded in 1906. For more than a century, our name has stood for keeping what people value safe.',
       },
     ],
+  },
+  guide: {
+    metaTitle: 'Safe Buying Guide for Qatar: How to Choose the Best Safe',
+    metaDescription:
+      'A practical guide to choosing and buying a safe in Qatar: cash safes, jewellery safes, safes for documents and valuables, what sets the price, and how to choose where to buy.',
+    title: 'Safe buying guide for Qatar',
+    subtitle: 'How to choose the right safe, and where to buy it.',
+    intro:
+      'Whether you need a cash safe for a shop, a jewellery safe at home or document safes for an organisation, choosing the right safe starts with one question: what do you want to keep? This guide brings together more than a century of selling safes in Qatar.',
+    sections: [
+      {
+        title: 'Safe, khazna or tajouri?',
+        body: [
+          'They are all the same thing: a sealed steel box for cash, jewellery, documents and valuables. In Qatar and the Gulf a safe is often called a “tajouri” (تجوري), while “khazna” (خزنة) is the standard Arabic word.',
+        ],
+      },
+      {
+        title: 'Cash safes',
+        body: [
+          'For shops, offices and homes that keep cash. Look for an electronic keypad with a backup key and a solid door on strong hinges, and ask whether the safe can be anchored to the floor or wall so it cannot be carried away.',
+        ],
+      },
+      {
+        title: 'Jewellery and watch safes',
+        body: [
+          'Jewellery needs more than protection: velvet-lined drawers, necklace busts, ring rolls and watch cushions keep pieces apart and free of scratches. Choose a safe whose interior can be fitted to your collection.',
+        ],
+      },
+      {
+        title: 'Safes for documents, records and files',
+        body: [
+          'Contracts, title deeds, passports and records need protection from fire above all, so choose a fire-resistant safe and ask how long it has been tested to resist fire. For large archives in companies and government bodies, drawer filing cabinets are the better fit.',
+        ],
+      },
+      {
+        title: 'Safekeeping for organisations',
+        body: [
+          'Ministries, banks and companies need larger safes and locks that control who can open them. Tell us how many people will use the safe and what you keep in it, and we will recommend the right solution.',
+        ],
+      },
+      {
+        title: 'What sets the price of a safe?',
+        body: [
+          'The price of a safe depends on its size, level of fire resistance, type of lock, exterior finish and interior fittings.',
+          'The cheapest safe is not always the best value: a safe that fails in a fire or a break-in can cost far more than it saved. Ask for a quotation comparing more than one size to find the right fit for your budget.',
+        ],
+      },
+      {
+        title: 'How to choose the best place to buy a safe in Qatar',
+        body: [
+          'Buy from a showroom where you can see the safe and open it yourself, make sure the brand is genuine, and ask about delivery and after-sales service.',
+          'That is what Nasrallah Trading Est has offered since 1906: genuine UCHIDA and SAKURA safes, a showroom in Souq Al Ein on Salwa Road in Doha, free delivery, a locked-safe opening service once the Ministry of Interior’s requirements are met, and more than 1,000 clients among ministries, banks, companies and individuals.',
+        ],
+      },
+    ],
+    ctaTitle: 'Ready to choose your safe?',
+    ctaBody: 'Browse the safes we carry, or tell us what you want to keep and we will recommend the right safe.',
+    ctaProducts: 'Browse safes',
+    ctaQuote: 'Request a quote',
+    faqLink: 'Read the safe buying guide for Qatar',
   },
   ctaBand: {
     title: 'Protect what matters most',

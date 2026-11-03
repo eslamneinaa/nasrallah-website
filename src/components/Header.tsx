@@ -178,6 +178,11 @@ export function Header({ locale, nav }: Props) {
             className="bg-khatam-light overflow-y-auto bg-pearl-50 lg:hidden"
           >
             <nav aria-label="Mobile" className="container-page flex h-full flex-col py-8">
+              {siteConfig.showNationalDay && (
+                <div className="mb-8 flex justify-center">
+                  <NationalDayBadge tone="dark" variant="menu" label={nav.nationalDay} />
+                </div>
+              )}
               <ul className="divide-y divide-gold-500/20 border-y border-gold-500/20">
                 {links.map((link, i) => (
                   <motion.li

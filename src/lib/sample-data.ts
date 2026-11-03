@@ -37,15 +37,14 @@ const steel = spec('Material', 'الخامة', 'Steel', 'حديد (صلب)')
 
 const img = (name: string, width: number, height: number, alt: string) => ({ url: `/products/${name}.webp`, alt, width, height })
 
-const fire: Category = { _id: 'cat-fire', slug: 'fire-resistant-safes', title: { en: 'Fire-Resistant Safes', ar: 'الخزائن المقاومة للحريق' } }
-const cash: Category = { _id: 'cat-cash', slug: 'cash-safes', title: { en: 'Cash & Security Safes', ar: 'خزائن النقود والأمان' } }
+const fire: Category = { _id: 'cat-fire', slug: 'fire-resistant-safes', title: { en: 'Fire-Resistant & Cash Safes', ar: 'خزائن النقود والمقاومة للحريق' } }
 const filing: Category = { _id: 'cat-filing', slug: 'filing-cabinets', title: { en: 'Filing Cabinets', ar: 'خزائن الملفات' } }
 const cupboards: Category = { _id: 'cat-steel', slug: 'steel-cupboards', title: { en: 'Steel & Office Cupboards', ar: 'الخزائن الحديدية والمكتبية' } }
 const lockers: Category = { _id: 'cat-lockers', slug: 'steel-lockers', title: { en: 'Steel Lockers', ar: 'اللوكرات الحديدية' } }
 const luxury: Category = { _id: 'cat-luxury', slug: 'luxury-safes', title: { en: 'Luxury Safes', ar: 'الخزائن الفاخرة' } }
 const interiors: Category = { _id: 'cat-interiors', slug: 'jewellery-watch-interiors', title: { en: 'Jewellery & Watch Interiors', ar: 'تجهيزات المجوهرات والساعات' } }
 
-export const sampleCategories: Category[] = [fire, cash, filing, cupboards, lockers, luxury, interiors]
+export const sampleCategories: Category[] = [fire, filing, cupboards, lockers, luxury, interiors]
 
 export const sampleProducts: Product[] = [
   {
@@ -235,7 +234,7 @@ export const sampleProducts: Product[] = [
     _id: 'p8',
     slug: 'sakura-multi-lock-safe',
     name: { en: 'SAKURA Multi-Lock Safe', ar: 'خزنة SAKURA متعددة الأقفال' },
-    category: cash,
+    category: fire,
     shortDesc: {
       en: 'A SAKURA steel safe combining a fingerprint scanner, a digital keypad and a key lock, for cash and valuables at home or in the office.',
       ar: 'خزنة حديدية من SAKURA تجمع بين قارئ بصمة ولوحة أرقام وقفل بمفتاح، لحفظ النقود والمقتنيات الثمينة في البيت أو المكتب.',
@@ -261,7 +260,7 @@ export const sampleProducts: Product[] = [
     _id: 'p24',
     slug: 'sakura-ons-fe-fingerprint-safe',
     name: { en: 'SAKURA ONS-FE Fingerprint Safe', ar: 'خزنة SAKURA بالبصمة ONS-FE' },
-    category: cash,
+    category: fire,
     shortDesc: {
       en: 'A black SAKURA steel safe with a vertical handle that combines a digital keypad and a fingerprint scanner.',
       ar: 'خزنة حديدية سوداء من SAKURA بمقبض عمودي يجمع بين لوحة أرقام رقمية وقارئ بصمة.',

@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { MotionProvider } from '@/components/motion/MotionProvider'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
-import { siteConfig } from '@/config/site'
+import { siteConfig, socialProfiles } from '@/config/site'
 import { dirOf, getDictionary, locales } from '@/i18n'
 import { fontVariables } from '@/lib/fonts'
 import { getCatalog } from '@/lib/sanity/api'
@@ -46,7 +46,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
     '@type': 'Store',
     '@id': `${siteConfig.url}/#business`,
     name: siteConfig.name.en,
-    alternateName: siteConfig.name.ar,
+    alternateName: [siteConfig.name.ar, ...siteConfig.alternateNames],
     url: siteConfig.url,
     description: dict.meta.description,
     logo: `${siteConfig.url}/brand/logo.svg`,
@@ -56,7 +56,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
     brand: siteConfig.brands.map((name) => ({ '@type': 'Brand', name })),
     knowsAbout: ['Fire-resistant safes', 'Filing cabinets', 'Luxury safes', 'Jewellery safes', 'Watch and jewellery safe interiors'],
     areaServed: { '@type': 'Country', name: 'Qatar' },
-    ...(siteConfig.social.length ? { sameAs: siteConfig.social } : {}),
+    sameAs: socialProfiles,
     email: siteConfig.email,
     telephone: siteConfig.phones.map((p) => p.tel),
     faxNumber: siteConfig.fax.tel,

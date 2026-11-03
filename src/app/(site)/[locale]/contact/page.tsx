@@ -67,6 +67,14 @@ export default async function ContactPage({ params }: LocaleParams) {
           },
         ]
       : []),
+    {
+      label: t.instagram,
+      value: (
+        <a href={siteConfig.instagram.url} target="_blank" rel="noopener noreferrer me" className={linkClass}>
+          <span dir="ltr">{siteConfig.instagram.handle}</span>
+        </a>
+      ),
+    },
     { label: t.address, value: <address className="not-italic">{siteConfig.address[locale]}</address> },
     {
       label: t.hours,

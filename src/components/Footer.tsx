@@ -99,6 +99,14 @@ export function Footer({ locale, dict, categories }: Props) {
                   </a>
                 </dd>
               </div>
+              <div>
+                <dt className="text-xs text-gold-500/90">{c.instagram}</dt>
+                <dd className="mt-1">
+                  <a href={siteConfig.instagram.url} target="_blank" rel="noopener noreferrer me" className={link}>
+                    <span dir="ltr">{siteConfig.instagram.handle}</span>
+                  </a>
+                </dd>
+              </div>
             </dl>
           </div>
 

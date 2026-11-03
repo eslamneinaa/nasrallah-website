@@ -32,6 +32,8 @@ ${siteConfig.name.en} was founded in ${siteConfig.foundedYear} and sells ${siteC
 - Phone: ${phones}
 - WhatsApp: ${siteConfig.dialCode} ${siteConfig.whatsappDisplay}
 - Email: ${siteConfig.email}
+- Instagram: ${siteConfig.instagram.url}
+- Google Business Profile: ${siteConfig.googleProfile}
 
 ## Pages
 

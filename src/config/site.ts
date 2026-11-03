@@ -6,10 +6,11 @@ export const siteConfig = {
   name: { en: 'Nasrallah Trading Est', ar: 'مؤسسة نصر الله التجارية' },
   foundedYear: 1906,
   brands: ['UCHIDA', 'SAKURA'],
-  // Official profiles (Instagram, Facebook, Google Maps listing, LinkedIn…).
-  // Listed in the structured data so search engines and AI assistants can
-  // tie them to this business.
-  social: [] as string[],
+  // Other names the business is listed under (the Google Business Profile).
+  alternateNames: ['Nasrallah Trading Establishment'],
+  instagram: { url: 'https://www.instagram.com/nasrallah.trading/', handle: '@nasrallah.trading' },
+  // Google Business Profile, by its Knowledge Graph id (from its share link).
+  googleProfile: 'https://www.google.com/search?kgmid=/g/1tf5j36n',
   domain: 'nasrallahtrading.com',
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://nasrallahtrading.com').replace(/\/$/, ''),
   email: 'info@nasrallahtrading.com',
@@ -47,6 +48,10 @@ export const siteConfig = {
     compact: { en: 'Sat – Thu · 8 AM – 12 PM · 4 PM – 9 PM', ar: 'السبت – الخميس · 8 – 12 ص · 4 – 9 م' },
   },
 } as const
+
+/** Official profiles, listed as `sameAs` in the structured data so search
+ *  engines and AI assistants can tie them to this business. */
+export const socialProfiles = [siteConfig.instagram.url, siteConfig.googleProfile]
 
 export const telHref = (tel: string) => `tel:${tel}`
 

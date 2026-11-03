@@ -231,6 +231,7 @@ const ar: Dictionary = {
     fax: 'فاكس',
     whatsapp: 'واتساب',
     whatsappCta: 'تحدث عبر واتساب',
+    instagram: 'إنستغرام',
     email: 'البريد الإلكتروني',
     address: 'المعرض',
     hours: 'مواعيد العمل',

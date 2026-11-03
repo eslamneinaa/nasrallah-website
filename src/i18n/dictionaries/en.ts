@@ -229,6 +229,7 @@ const en = {
     fax: 'Fax',
     whatsapp: 'WhatsApp',
     whatsappCta: 'Chat on WhatsApp',
+    instagram: 'Instagram',
     email: 'Email',
     address: 'Showroom',
     hours: 'Opening hours',

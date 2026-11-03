@@ -12,7 +12,7 @@ type Props = { locale: Locale; dict: Dictionary; categories: Category[] }
 export function Footer({ locale, dict, categories }: Props) {
   const year = new Date().getFullYear()
   const c = dict.contact
-  const whatsapp = whatsappLink()
+  const whatsapp = whatsappLink(dict.common.whatsappText)
   const explore = [
     { href: href(locale), label: dict.nav.home },
     { href: href(locale, 'about'), label: dict.nav.about },

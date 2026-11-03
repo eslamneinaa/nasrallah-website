@@ -20,7 +20,7 @@ export default async function RequestQuotePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.quote
-  const whatsapp = whatsappLink()
+  const whatsapp = whatsappLink(dict.common.whatsappText)
   const item = 'flex items-center gap-3 text-ink-900 transition hover:text-maroon-700'
   const icon = 'h-4 w-4 shrink-0 text-gold-600'
 

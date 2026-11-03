@@ -54,7 +54,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
     slogan: getDictionary('en').footer.slogan,
     foundingDate: String(siteConfig.foundedYear),
     brand: siteConfig.brands.map((name) => ({ '@type': 'Brand', name })),
-    knowsAbout: ['Fire-resistant safes', 'Filing cabinets', 'Luxury safes', 'Jewellery safes', 'Watch and jewellery safe interiors'],
+    knowsAbout: ['Safes', 'Cash safes', 'Jewellery safes', 'Fire-resistant safes', 'Filing cabinets', 'Luxury safes', 'Safe opening', 'خزائن', 'خزائن نقود', 'خزائن مجوهرات', 'تجوري'],
     areaServed: { '@type': 'Country', name: 'Qatar' },
     sameAs: socialProfiles,
     email: siteConfig.email,
@@ -102,7 +102,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
           <Header locale={locale} nav={dict.nav} />
           <main id="main">{children}</main>
           <Footer locale={locale} dict={dict} categories={categories} />
-          <WhatsAppFloat label={dict.common.whatsappFloat} />
+          <WhatsAppFloat label={dict.common.whatsappFloat} text={dict.common.whatsappText} />
         </MotionProvider>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </body>

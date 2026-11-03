@@ -1,8 +1,8 @@
 const en = {
   meta: {
-    title: 'Nasrallah Trading Est — Safes & Filing Cabinets in Doha since 1906',
+    title: 'Safes for Sale in Qatar — Cash, Jewellery & Fire-Resistant Safes | Nasrallah Trading Est, since 1906',
     description:
-      'Since 1906. UCHIDA and SAKURA fire-resistant safes, filing cabinets, luxury safes and jewellery & watch interiors at our showroom in Souq Al Ein, Salwa Road, Doha, Qatar.',
+      'Safes for sale in Qatar since 1906: cash safes, jewellery safes, fire-resistant safes and filing cabinets from UCHIDA and SAKURA, with free delivery. Visit our showroom in Souq Al Ein, Salwa Road, Doha.',
   },
   nav: {
     home: 'Home',
@@ -21,7 +21,7 @@ const en = {
     titleLead: 'For over a century, safeguarding',
     rotating: ['what you treasure', 'vital documents', 'jewellery & watches', 'institutional records'],
     subtitle:
-      'Since 1906, Nasrallah Trading Est has protected what matters most. Today we bring fire-resistant safes, filing cabinets and luxury safes from UCHIDA and SAKURA to ministries, banks, companies and private clients across Qatar.',
+      'Since 1906, Nasrallah Trading Est has protected what matters most. Today we bring cash safes, jewellery safes, fire-resistant safes and filing cabinets from UCHIDA and SAKURA to ministries, banks, companies and private clients across Qatar.',
     ctaPrimary: 'Explore the collection',
     ctaSecondary: 'Request a quote',
     stats: [
@@ -64,7 +64,7 @@ const en = {
     ],
   },
   interiors: {
-    eyebrow: 'Bespoke interiors',
+    eyebrow: 'Jewellery safes',
     title: 'Where the safe becomes a jewellery box',
     body: 'Velvet-lined drawers for necklaces, rings and watches, wood finishes and brass handles: our interiors turn a safe into a private vault for your finest pieces.',
     video: 'Video: a grey-oak jewellery safe in our showroom, its blue velvet drawers holding bangles, watches, rings and a diamond set',
@@ -97,12 +97,16 @@ const en = {
     // {address}, {hours} and {phone} are filled in from the site settings.
     items: [
       {
-        q: 'Where is the Nasrallah showroom?',
-        a: 'Our showroom is at {address}. We are open {hours}, and closed on Fridays.',
+        q: 'Where can I buy a safe in Qatar?',
+        a: 'At the Nasrallah Trading Est showroom, {address}. We are open {hours} and closed on Fridays. You can also order through the website or on WhatsApp, with free delivery.',
       },
       {
         q: 'Which brands of safes do you sell?',
         a: 'We supply safes from UCHIDA and SAKURA: fire-resistant safes, filing cabinets and luxury safes, along with fitted jewellery and watch interiors.',
+      },
+      {
+        q: 'Do you have cash safes for shops, offices and homes?',
+        a: 'Yes. We offer UCHIDA cash safes with electronic keypads and a backup key, including fire-resistant models, in several sizes for shops, offices and homes.',
       },
       {
         q: 'Do you sell fire-resistant safes in Qatar?',
@@ -113,8 +117,16 @@ const en = {
         a: 'Yes. More than 1,000 clients have trusted us, including ministries, private institutions, banks, companies and individuals across Qatar.',
       },
       {
-        q: 'Can a safe be fitted out for jewellery and watches?',
-        a: 'Yes. We fit safes with velvet-lined drawers, necklace busts, ring rolls and watch cushions, with wood finishes and brass handles, so every piece has its place.',
+        q: 'Do you have jewellery and watch safes?',
+        a: 'Yes. We fit our jewellery safes with velvet-lined drawers, necklace busts, ring rolls and watch cushions, with wood finishes and brass handles, so every piece has its place.',
+      },
+      {
+        q: 'Is delivery free?',
+        a: 'Yes, delivery is free. Contact us to arrange a delivery time.',
+      },
+      {
+        q: 'Do you open locked safes?',
+        a: 'Yes. We offer a locked-safe opening service once the requirements set by the Ministry of Interior are met. Contact us for details.',
       },
       {
         q: 'How do I get a price?',
@@ -168,9 +180,9 @@ const en = {
     },
   },
   products: {
-    metaTitle: 'Products',
-    metaDescription: 'UCHIDA and SAKURA fire-resistant safes, filing cabinets, luxury safes and jewellery & watch interiors in Doha, Qatar.',
-    title: 'Our products',
+    metaTitle: 'Safes for Sale in Qatar',
+    metaDescription: 'Safes for sale in Qatar: cash safes, jewellery safes, fire-resistant safes and filing cabinets from UCHIDA and SAKURA, with free delivery from our Doha showroom.',
+    title: 'Safes for sale in Qatar',
     subtitle: 'Safes, filing cabinets and fitted interiors from our showroom. Need a size or finish you don’t see? Ask us.',
     searchPlaceholder: 'Search products…',
     searchLabel: 'Search products',
@@ -335,6 +347,8 @@ const en = {
     viewDetails: 'View details',
     learnMore: 'Learn more',
     whatsappFloat: 'Chat with us on WhatsApp',
+    // Pre-filled in the WhatsApp chat (product pages use product.whatsappText).
+    whatsappText: 'Hello Nasrallah Trading, I would like to ask about your safes.',
     video: { play: 'Play video', pause: 'Pause video', soundOn: 'Turn sound on', soundOff: 'Turn sound off' },
   },
 }

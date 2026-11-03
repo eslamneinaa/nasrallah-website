@@ -19,7 +19,7 @@ export default async function ContactPage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.contact
-  const whatsapp = whatsappLink()
+  const whatsapp = whatsappLink(dict.common.whatsappText)
   const linkClass = 'transition hover:text-gold-300'
 
   const rows: { label: string; value: ReactNode }[] = [

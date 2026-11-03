@@ -5,8 +5,8 @@ import { whatsappLink } from '@/config/site'
 import { WhatsAppIcon } from './icons'
 
 /** Renders nothing until a WhatsApp number is set in src/config/site.ts. */
-export function WhatsAppFloat({ label }: { label: string }) {
-  const link = whatsappLink()
+export function WhatsAppFloat({ label, text }: { label: string; text: string }) {
+  const link = whatsappLink(text)
   if (!link) return null
   return (
     <motion.a

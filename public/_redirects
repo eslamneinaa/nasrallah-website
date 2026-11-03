@@ -11,3 +11,7 @@
 # Products renamed after launch
 /ar/products/uchida-multi-lock-safe/*   /ar/products/sakura-multi-lock-safe/   301
 /en/products/uchida-multi-lock-safe/*   /en/products/sakura-multi-lock-safe/   301
+/ar/products/sakura-single-steel-locker/*   /ar/products/godrej-single-steel-locker/   301
+/ar/products/sakura-six-door-steel-locker/*   /ar/products/godrej-six-door-steel-locker/   301
+/en/products/sakura-single-steel-locker/*   /en/products/godrej-single-steel-locker/   301
+/en/products/sakura-six-door-steel-locker/*   /en/products/godrej-six-door-steel-locker/   301

@@ -61,7 +61,7 @@ const en = {
       },
       {
         name: 'SAKURA',
-        desc: 'A trusted name in safes and steel lockers, for homes, offices and institutions.',
+        desc: 'A trusted name in safes, with modern fingerprint and keypad locks, for homes, offices and institutions.',
       },
       {
         name: 'GODREJ',
@@ -120,7 +120,7 @@ const en = {
       },
       {
         q: 'Do you sell steel safes and steel cabinets?',
-        a: 'Yes. Steel safes are the heart of our business, and we also carry steel office cupboards with one, two or glass doors, filing cabinets and steel lockers from GODREJ and SAKURA for offices, schools and institutions.',
+        a: 'Yes. Steel safes are the heart of our business, and we also carry steel office cupboards with one, two or glass doors, filing cabinets and steel lockers from GODREJ for offices, schools and institutions.',
       },
       {
         q: 'Do you sell fire-resistant safes in Qatar?',

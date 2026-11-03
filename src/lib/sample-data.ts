@@ -245,7 +245,7 @@ export const sampleProducts: Product[] = [
       'تجمع خزنة SAKURA متعددة الأقفال ثلاث وسائل للقفل في لوحة تحكم واحدة: قارئ بصمة، ولوحة أرقام رقمية، ومفتاح ميكانيكي. ويُحمل بابها المتين على مفصلتين خارجيتين، وتقف الخزنة على قاعدة مرتفعة.',
     ),
     images: [
-      img('sakura-multi-lock-safe', 1024, 1536, 'Grey SAKURA multi-lock steel safe with a fingerprint and keypad panel'),
+      img('sakura-multi-lock-safe', 1086, 1448, 'Grey SAKURA multi-lock steel safe with a fingerprint and keypad panel'),
       img('sakura-multi-lock-safe-lock', 1536, 1024, 'Close-up of the fingerprint scanner, keypad and key lock'),
     ],
     specTable: [
@@ -256,6 +256,29 @@ export const sampleProducts: Product[] = [
     ],
     isFeatured: false,
     order: 8,
+  },
+  {
+    _id: 'p24',
+    slug: 'sakura-ons-fe-fingerprint-safe',
+    name: { en: 'SAKURA ONS-FE Fingerprint Safe', ar: 'خزنة SAKURA بالبصمة ONS-FE' },
+    category: cash,
+    shortDesc: {
+      en: 'A black SAKURA steel safe with a vertical handle that combines a digital keypad and a fingerprint scanner.',
+      ar: 'خزنة حديدية سوداء من SAKURA بمقبض عمودي يجمع بين لوحة أرقام رقمية وقارئ بصمة.',
+    },
+    fullDesc: desc(
+      'The ONS-FE puts a digital keypad and a fingerprint scanner into one vertical handle on a clean black door, so the safe opens quickly for the people you trust and stays shut for everyone else.',
+      'تجمع خزنة ONS-FE لوحة أرقام رقمية وقارئ بصمة في مقبض عمودي واحد على باب أسود أنيق، فتُفتح بسرعة لمن تثقون بهم وتبقى مغلقة أمام غيرهم.',
+    ),
+    images: [img('sakura-ons-fe-safe', 1086, 1448, 'Black SAKURA ONS-FE steel safe with a vertical keypad and fingerprint handle')],
+    specTable: [
+      brandSpec('SAKURA'),
+      spec('Model', 'الطراز', 'ONS-FE', 'ONS-FE'),
+      spec('Lock', 'القفل', 'Digital keypad and fingerprint scanner', 'لوحة أرقام رقمية وقارئ بصمة'),
+      spec('Finish', 'اللون', 'Black', 'أسود'),
+    ],
+    isFeatured: false,
+    order: 9,
   },
   {
     _id: 'p9',
@@ -282,7 +305,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'White, beige', 'أبيض، بيج'),
     ],
     isFeatured: false,
-    order: 9,
+    order: 10,
   },
   {
     _id: 'p10',
@@ -306,7 +329,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Beige', 'بيج'),
     ],
     isFeatured: false,
-    order: 10,
+    order: 11,
   },
   {
     _id: 'p11',
@@ -330,7 +353,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 11,
+    order: 12,
   },
   {
     _id: 'p12',
@@ -357,7 +380,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Grey, beige', 'رمادي، بيج'),
     ],
     isFeatured: false,
-    order: 12,
+    order: 13,
   },
   {
     _id: 'p13',
@@ -381,7 +404,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'White', 'أبيض'),
     ],
     isFeatured: false,
-    order: 13,
+    order: 14,
   },
   {
     _id: 'p14',
@@ -404,7 +427,7 @@ export const sampleProducts: Product[] = [
       spec('Handles', 'المقابض', 'Chrome', 'كروم'),
     ],
     isFeatured: false,
-    order: 14,
+    order: 15,
   },
   {
     _id: 'p15',
@@ -428,7 +451,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 15,
+    order: 16,
   },
   {
     _id: 'p16',
@@ -452,7 +475,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 16,
+    order: 17,
   },
   {
     _id: 'p17',
@@ -476,7 +499,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Cream', 'كريمي'),
     ],
     isFeatured: false,
-    order: 17,
+    order: 18,
   },
   {
     _id: 'p18',
@@ -484,27 +507,30 @@ export const sampleProducts: Product[] = [
     name: { en: 'GODREJ Six-Door Steel Locker', ar: 'لوكر حديدي بستة أبواب GODREJ' },
     category: lockers,
     shortDesc: {
-      en: 'A beige six-door steel locker column, for keeping personal belongings apart in busy workplaces.',
-      ar: 'عمود لوكر حديدي بيج بستة أبواب، لفصل المتعلقات الشخصية في أماكن العمل المزدحمة.',
+      en: 'A six-door steel locker column in beige or off-white, for keeping personal belongings apart in busy workplaces.',
+      ar: 'عمود لوكر حديدي بستة أبواب باللون البيج أو الأبيض العاجي، لفصل المتعلقات الشخصية في أماكن العمل المزدحمة.',
     },
     fullDesc: desc(
       'Six compartments, each behind its own door with a pull handle, fit in the footprint of a single cupboard.',
       'ست خانات، لكل منها باب بمقبض، في مساحة خزانة واحدة.',
     ),
-    images: [img('godrej-six-door-locker', 1024, 1536, 'Beige six-door GODREJ steel locker column')],
+    images: [
+      img('godrej-six-door-locker', 1024, 1536, 'Beige six-door GODREJ steel locker column'),
+      img('godrej-six-door-locker-off-white', 1024, 1536, 'Off-white six-door GODREJ steel locker column'),
+    ],
     specTable: [
       brandSpec('GODREJ'),
       steel,
       spec('Compartments', 'الخانات', 'Six', 'ست خانات'),
-      spec('Colour', 'اللون', 'Beige', 'بيج'),
+      spec('Colours', 'الألوان', 'Beige, off-white', 'بيج، أبيض عاجي'),
     ],
     isFeatured: false,
-    order: 18,
+    order: 19,
   },
   {
     _id: 'p19',
-    slug: 'sakura-single-steel-locker',
-    name: { en: 'SAKURA Single Steel Locker', ar: 'لوكر حديدي بباب واحد SAKURA' },
+    slug: 'godrej-single-steel-locker',
+    name: { en: 'GODREJ Single Steel Locker', ar: 'لوكر حديدي بباب واحد GODREJ' },
     category: lockers,
     shortDesc: {
       en: 'A full-height single steel locker with a louvred charcoal door on a cream frame.',
@@ -514,36 +540,13 @@ export const sampleProducts: Product[] = [
       'One tall compartment with room for clothes and bags, ventilated through louvres at the top of the door.',
       'خانة واحدة طويلة تتسع للملابس والحقائب، مع فتحات تهوية أعلى الباب.',
     ),
-    images: [img('sakura-single-locker', 1024, 1536, 'Single SAKURA steel locker with a louvred charcoal door')],
+    images: [img('godrej-single-locker', 1024, 1536, 'Single GODREJ steel locker with a louvred charcoal door')],
     specTable: [
-      brandSpec('SAKURA'),
+      brandSpec('GODREJ'),
       steel,
       spec('Compartments', 'الخانات', 'One, full height', 'خانة واحدة بارتفاع كامل'),
       spec('Ventilation', 'التهوية', 'Louvred door', 'فتحات تهوية في الباب'),
       spec('Colours', 'الألوان', 'Charcoal door, cream frame', 'باب فحمي، إطار كريمي'),
-    ],
-    isFeatured: false,
-    order: 19,
-  },
-  {
-    _id: 'p20',
-    slug: 'sakura-six-door-steel-locker',
-    name: { en: 'SAKURA Six-Door Steel Locker', ar: 'لوكر حديدي بستة أبواب SAKURA' },
-    category: lockers,
-    shortDesc: {
-      en: 'An off-white six-door steel locker column with a pull handle on every door.',
-      ar: 'عمود لوكر حديدي أبيض مائل للعاجي بستة أبواب ومقبض لكل باب.',
-    },
-    fullDesc: desc(
-      'Six stacked compartments give each person their own space for keys, phones and personal items.',
-      'ست خانات متراصّة تمنح كل شخص مكانًا خاصًا لمفاتيحه وهاتفه وأغراضه الشخصية.',
-    ),
-    images: [img('sakura-six-door-locker', 1024, 1536, 'Off-white six-door SAKURA steel locker column')],
-    specTable: [
-      brandSpec('SAKURA'),
-      steel,
-      spec('Compartments', 'الخانات', 'Six', 'ست خانات'),
-      spec('Colour', 'اللون', 'Off-white', 'أبيض عاجي'),
     ],
     isFeatured: false,
     order: 20,
@@ -570,7 +573,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 21,
+    order: 22,
   },
   {
     _id: 'p22',
@@ -594,7 +597,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 22,
+    order: 23,
   },
   {
     _id: 'p23',
@@ -621,6 +624,6 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Light grey, black', 'رمادي فاتح، أسود'),
     ],
     isFeatured: false,
-    order: 23,
+    order: 24,
   },
 ]

@@ -12,6 +12,8 @@ export const siteConfig = {
   // Google Business Profile, by its Knowledge Graph id (from its share link).
   googleProfile: 'https://www.google.com/search?kgmid=/g/1tf5j36n',
   domain: 'nasrallahtrading.com',
+  // Qatar National Day emblem beside the logo in the header; set false after the season.
+  showNationalDay: true,
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://nasrallahtrading.com').replace(/\/$/, ''),
   email: 'info@nasrallahtrading.com',
   phones: [

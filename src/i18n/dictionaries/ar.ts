@@ -18,6 +18,7 @@ const ar: Dictionary = {
     switchLabel: 'English',
     switchAria: 'التبديل إلى الإنجليزية',
     skip: 'تخطَّ إلى المحتوى',
+    nationalDay: 'اليوم الوطني لدولة قطر، 18 ديسمبر: أنتم ذخر الوطن، حمد بن خليفة',
   },
   hero: {
     eyebrow: 'منذ 1906 · الدوحة، قطر',

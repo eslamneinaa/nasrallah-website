@@ -11,6 +11,7 @@ import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Locale } from '@/lib/types'
 import { LanguageToggle } from './LanguageToggle'
 import { Logo } from './Logo'
+import { NationalDayBadge } from './NationalDayBadge'
 import { Khatam } from './ornaments'
 
 type Props = { locale: Locale; nav: Dictionary['nav'] }
@@ -95,9 +96,19 @@ export function Header({ locale, nav }: Props) {
         }`}
       >
         <div className={`container-page flex items-center justify-between transition-[height] duration-500 ${solid ? 'h-18' : 'h-22'}`}>
-          <Link href={href(locale)} aria-label={siteConfig.name[locale]} className="shrink-0">
-            <Logo locale={locale} tone={solid ? 'dark' : 'light'} />
-          </Link>
+          <div className="flex min-w-0 items-center gap-4 xl:gap-5">
+            <Link href={href(locale)} aria-label={siteConfig.name[locale]} className="shrink-0">
+              <Logo locale={locale} tone={solid ? 'dark' : 'light'} />
+            </Link>
+            {siteConfig.showNationalDay && (
+              <>
+                <span className={`hidden h-10 w-px sm:block ${solid ? 'bg-gold-500/40' : 'bg-gold-400/35'}`} aria-hidden="true" />
+                <span className="hidden sm:block">
+                  <NationalDayBadge tone={solid ? 'dark' : 'light'} label={nav.nationalDay} />
+                </span>
+              </>
+            )}
+          </div>
 
           <nav aria-label="Main" className="hidden lg:block">
             <ul className="flex items-center gap-2">

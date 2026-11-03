@@ -16,6 +16,7 @@ const en = {
     switchLabel: 'العربية',
     switchAria: 'Switch to Arabic',
     skip: 'Skip to content',
+    nationalDay: 'Qatar National Day, 18 December: “You are the treasure of the nation”, Hamad bin Khalifa',
   },
   hero: {
     eyebrow: 'Since 1906 · Doha, Qatar',

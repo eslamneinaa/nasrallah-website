@@ -10,6 +10,7 @@
   --color-maroon-950: #1f060e;
   /* Red of the Nasrallah calligraphy logo (sampled from the original artwork). */
   --color-brand: #b01319;
+  --color-qatar: #8a1538; /* Qatar maroon (flag, National Day badge) */
   --color-maroon-900: #2e0915;
   --color-maroon-800: #440d20;
   --color-maroon-700: #5c122b;
@@ -182,5 +183,41 @@ html[lang='ar'] {
   }
   .prose-rich a {
     @apply text-maroon-700 underline decoration-gold-400 underline-offset-4;
+  }
+}
+
+/* Qatar National Day badge (NationalDayBadge.tsx): the flag waves from its
+   hoist, and the slogan and signature take turns stepping forward. */
+.nd-flag {
+  transform-origin: 58% 22%;
+  animation: nd-wave 2.6s ease-in-out infinite alternate;
+}
+@keyframes nd-wave {
+  from { transform: skewY(-5deg) scaleX(0.92); }
+  to { transform: skewY(4deg) scaleX(1.04); }
+}
+.nd-slogan,
+.nd-signature {
+  opacity: 0;
+  animation: nd-step 8s cubic-bezier(0.22, 1, 0.36, 1) infinite both;
+}
+.nd-signature {
+  animation-delay: 4s;
+}
+@keyframes nd-step {
+  0% { opacity: 0; transform: scale(0.6); }
+  9% { opacity: 1; transform: scale(1.08); }
+  15% { transform: scale(1); }
+  44% { opacity: 1; transform: scale(1); }
+  50%, 100% { opacity: 0; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nd-flag,
+  .nd-slogan,
+  .nd-signature {
+    animation: none !important;
+  }
+  .nd-slogan {
+    opacity: 1;
   }
 }

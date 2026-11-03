@@ -7,3 +7,7 @@
 # Friendly shortcuts
 /quote      /ar/request-quote/   301
 /admin      /studio/             301
+
+# Products renamed after launch
+/ar/products/uchida-multi-lock-safe/*   /ar/products/sakura-multi-lock-safe/   301
+/en/products/uchida-multi-lock-safe/*   /en/products/sakura-multi-lock-safe/   301

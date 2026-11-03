@@ -233,23 +233,23 @@ export const sampleProducts: Product[] = [
   },
   {
     _id: 'p8',
-    slug: 'uchida-multi-lock-safe',
-    name: { en: 'UCHIDA Multi-Lock Safe', ar: 'خزنة UCHIDA متعددة الأقفال' },
+    slug: 'sakura-multi-lock-safe',
+    name: { en: 'SAKURA Multi-Lock Safe', ar: 'خزنة SAKURA متعددة الأقفال' },
     category: cash,
     shortDesc: {
-      en: 'An UCHIDA steel safe combining a fingerprint scanner, a digital keypad and a key lock, for cash and valuables at home or in the office.',
-      ar: 'خزنة حديدية من UCHIDA تجمع بين قارئ بصمة ولوحة أرقام وقفل بمفتاح، لحفظ النقود والمقتنيات الثمينة في البيت أو المكتب.',
+      en: 'A SAKURA steel safe combining a fingerprint scanner, a digital keypad and a key lock, for cash and valuables at home or in the office.',
+      ar: 'خزنة حديدية من SAKURA تجمع بين قارئ بصمة ولوحة أرقام وقفل بمفتاح، لحفظ النقود والمقتنيات الثمينة في البيت أو المكتب.',
     },
     fullDesc: desc(
-      'The UCHIDA Multi-Lock Safe brings three ways of locking together on one control panel: a fingerprint scanner, a digital keypad and a mechanical key. Its heavy door hangs on two external hinges, and the safe stands on a raised base.',
-      'تجمع خزنة UCHIDA متعددة الأقفال ثلاث وسائل للقفل في لوحة تحكم واحدة: قارئ بصمة، ولوحة أرقام رقمية، ومفتاح ميكانيكي. ويُحمل بابها المتين على مفصلتين خارجيتين، وتقف الخزنة على قاعدة مرتفعة.',
+      'The SAKURA Multi-Lock Safe brings three ways of locking together on one control panel: a fingerprint scanner, a digital keypad and a mechanical key. Its heavy door hangs on two external hinges, and the safe stands on a raised base.',
+      'تجمع خزنة SAKURA متعددة الأقفال ثلاث وسائل للقفل في لوحة تحكم واحدة: قارئ بصمة، ولوحة أرقام رقمية، ومفتاح ميكانيكي. ويُحمل بابها المتين على مفصلتين خارجيتين، وتقف الخزنة على قاعدة مرتفعة.',
     ),
     images: [
-      img('uchida-multi-lock-safe', 1024, 1536, 'Grey UCHIDA multi-lock steel safe with a fingerprint and keypad panel'),
-      img('uchida-multi-lock-safe-lock', 1536, 1024, 'Close-up of the fingerprint scanner, keypad and key lock'),
+      img('sakura-multi-lock-safe', 1024, 1536, 'Grey SAKURA multi-lock steel safe with a fingerprint and keypad panel'),
+      img('sakura-multi-lock-safe-lock', 1536, 1024, 'Close-up of the fingerprint scanner, keypad and key lock'),
     ],
     specTable: [
-      brand,
+      brandSpec('SAKURA'),
       spec('Lock', 'القفل', 'Fingerprint scanner, digital keypad and key', 'قارئ بصمة ولوحة أرقام ومفتاح'),
       spec('Hinges', 'المفصلات', 'Two external hinges', 'مفصلتان خارجيتان'),
       spec('Finish', 'اللون', 'Grey', 'رمادي'),

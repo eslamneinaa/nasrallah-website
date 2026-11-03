@@ -67,7 +67,8 @@ const en = {
     eyebrow: 'Bespoke interiors',
     title: 'Where the safe becomes a jewellery box',
     body: 'Velvet-lined drawers for necklaces, rings and watches, wood finishes and brass handles: our interiors turn a safe into a private vault for your finest pieces.',
-    images: ['Necklace and bangle drawer lined in blue velvet', 'Watch drawer with nine velvet rolls', 'Ring drawer lined in blue velvet'],
+    video: 'Video: a grey-oak jewellery safe in our showroom, its blue velvet drawers holding bangles, watches, rings and a diamond set',
+    images: ['Necklace and bangle drawer lined in blue velvet', 'Ring drawer lined in blue velvet'],
     cta: 'Explore the interiors',
   },
   why: {
@@ -164,6 +165,9 @@ const en = {
     imageOf: 'Image {n} of {total}',
     prev: 'Previous image',
     next: 'Next image',
+    videoEyebrow: 'In the showroom',
+    videoTitle: 'See it up close',
+    videoBody: 'A short film from our showroom. Visit us in Souq Al Ein to open the drawers yourself.',
     assurances: ['Original UCHIDA & SAKURA', 'Trusted since 1920', 'Personal showroom advice'],
   },
   quote: {
@@ -295,6 +299,7 @@ const en = {
     viewDetails: 'View details',
     learnMore: 'Learn more',
     whatsappFloat: 'Chat with us on WhatsApp',
+    video: { play: 'Play video', pause: 'Pause video', soundOn: 'Turn sound on', soundOff: 'Turn sound off' },
   },
 }
 

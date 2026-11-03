@@ -153,6 +153,14 @@ export const sampleProducts: Product[] = [
       img('interior-necklace', 1341, 1173, 'Jewellery drawer with a velvet necklace bust and bangle stand'),
       img('interior-rings', 1348, 1167, 'Ring drawer with velvet ring rolls and earring compartments'),
     ],
+    video: {
+      url: '/videos/jewellery-safe-green.mp4',
+      poster: '/videos/jewellery-safe-green.webp',
+      label: {
+        en: 'Video: an UCHIDA safe opened with key and code, revealing green leather drawers with a necklace bust, watches, bangles and rings',
+        ar: 'فيديو: خزنة UCHIDA تُفتح بالمفتاح والرقم السري، وبداخلها أدراج من الجلد الأخضر تضم مجسّم عقد وساعات وأساور وخواتم',
+      },
+    },
     specTable: [
       spec('Lining', 'البطانة', 'Blue velvet', 'مخمل أزرق'),
       spec('Fittings', 'التجهيزات', 'Necklace bust, bangle stand, ring rolls, earring compartments', 'مجسّم عقود، حامل أساور، بكرات خواتم، خانات أقراط'),
@@ -203,6 +211,14 @@ export const sampleProducts: Product[] = [
       img('interior-oak-drawers', 1120, 1404, 'Seven oak drawers with brass handles inside a black safe'),
       img('interior-beech-velvet', 1086, 1448, 'Beech drawer with black velvet dividers on full-extension runners'),
     ],
+    video: {
+      url: '/videos/jewellery-safe-oak.mp4',
+      poster: '/videos/jewellery-safe-oak.webp',
+      label: {
+        en: 'Video: grey-oak drawers with brass handles opening to blue velvet trays of bangles, watches, rings and a diamond set',
+        ar: 'فيديو: أدراج من خشب البلوط الرمادي بمقابض نحاسية تنفتح على صوانٍ من المخمل الأزرق بها أساور وساعات وخواتم وطقم ألماس',
+      },
+    },
     specTable: [
       spec('Finish', 'التشطيب', 'Oak or beech wood grain', 'نقشة خشب البلوط أو الزان'),
       spec('Handles', 'المقابض', 'Brushed brass', 'نحاس مصقول'),

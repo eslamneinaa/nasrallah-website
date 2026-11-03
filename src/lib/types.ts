@@ -23,6 +23,12 @@ export type SpecRow = {
   value: Localized
 }
 
+export type ProductVideo = {
+  url: string
+  poster: string
+  label: Localized
+}
+
 export type Product = {
   _id: string
   slug: string
@@ -31,6 +37,8 @@ export type Product = {
   shortDesc?: Localized | null
   fullDesc?: Localized<PortableTextBlock[]> | null
   images: ProductImage[]
+  /** Optional vertical showroom clip (bundled catalogue only) */
+  video?: ProductVideo | null
   specTable: SpecRow[]
   pdfUrl?: string | null
   isFeatured?: boolean | null

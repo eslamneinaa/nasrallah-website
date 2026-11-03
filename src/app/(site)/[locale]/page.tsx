@@ -8,6 +8,7 @@ import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
 import { Diamond, Frame, Khatam } from '@/components/ornaments'
 import { ProductCard } from '@/components/ProductCard'
 import { SectionHeading } from '@/components/SectionHeading'
+import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { getDictionary, href } from '@/i18n'
 import { getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
 import { resolveLocale, type LocaleParams } from '@/lib/seo'
@@ -16,7 +17,6 @@ import { resolveLocale, type LocaleParams } from '@/lib/seo'
 const whyIcons = [Hourglass, ShieldCheck, Gem, Handshake]
 
 const interiorImages = [
-  { src: '/products/interior-watch-rolls.webp', className: 'row-span-2' },
   { src: '/products/interior-necklace.webp', className: 'aspect-[1341/1173]' },
   { src: '/products/interior-rings.webp', className: 'aspect-[1348/1167]' },
 ]
@@ -100,6 +100,15 @@ export default async function HomePage({ params }: LocaleParams) {
             </Reveal>
           </div>
           <Stagger className="grid grid-cols-2 gap-4 sm:gap-5 lg:col-span-7">
+            <StaggerItem className="row-span-2 border border-gold-500/40">
+              <ShowcaseVideo
+                src="/videos/jewellery-safe-oak.mp4"
+                poster="/videos/jewellery-safe-oak.webp"
+                label={dict.interiors.video}
+                labels={dict.common.video}
+                className="h-full min-h-full"
+              />
+            </StaggerItem>
             {interiorImages.map((item, i) => (
               <StaggerItem key={item.src} className={`relative overflow-hidden border border-gold-500/40 bg-white ${item.className}`}>
                 <Image src={item.src} alt={dict.interiors.images[i]} fill sizes="(min-width: 1024px) 28vw, 50vw" className="object-cover" />

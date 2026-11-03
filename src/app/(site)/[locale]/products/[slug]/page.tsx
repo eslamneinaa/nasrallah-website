@@ -10,6 +10,7 @@ import { ProductCard } from '@/components/ProductCard'
 import { ProductGallery } from '@/components/products/ProductGallery'
 import { RichText } from '@/components/RichText'
 import { SectionHeading } from '@/components/SectionHeading'
+import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, pick } from '@/i18n'
 import { getCatalog, getProduct, getRelatedProducts } from '@/lib/sanity/api'
@@ -83,6 +84,23 @@ export default async function ProductPage({ params }: Props) {
             <Reveal>
               <ProductGallery images={product.images} name={name} labels={t} rtl={locale === 'ar'} />
             </Reveal>
+
+            {product.video && (
+              <Reveal className="mt-16 grid items-center gap-8 sm:grid-cols-[minmax(0,16rem)_1fr] sm:gap-10">
+                <ShowcaseVideo
+                  src={product.video.url}
+                  poster={product.video.poster}
+                  label={pick(product.video.label, locale) || name}
+                  labels={dict.common.video}
+                  className="mx-auto aspect-[9/16] w-full max-w-64 outline outline-1 outline-offset-[10px] outline-gold-500/40"
+                />
+                <div>
+                  <p className="eyebrow">{t.videoEyebrow}</p>
+                  <h2 className="display mt-4 text-3xl text-maroon-900">{t.videoTitle}</h2>
+                  <p className="mt-4 leading-relaxed text-ink-500">{t.videoBody}</p>
+                </div>
+              </Reveal>
+            )}
 
             {pick(product.fullDesc, locale)?.length ? (
               <Reveal className="mt-16">

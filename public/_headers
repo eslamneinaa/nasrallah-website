@@ -33,5 +33,8 @@ https://:version.nasrallah-website.pages.dev/*
 /showroom/*
   Cache-Control: public, max-age=604800
 
+/videos/*
+  Cache-Control: public, max-age=604800
+
 /brand/*
   Cache-Control: public, max-age=604800

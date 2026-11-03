@@ -53,7 +53,7 @@ export function Footer({ locale, dict, categories }: Props) {
           <div className="lg:col-span-3">
             <h2 className={heading}>{dict.footer.categories}</h2>
             <ul className="mt-6 space-y-3">
-              {categories.slice(0, 6).map((category) => (
+              {categories.map((category) => (
                 <li key={category._id}>
                   <Link href={`${href(locale, 'products')}?category=${category.slug}`} className={link}>
                     {pick(category.title, locale)}

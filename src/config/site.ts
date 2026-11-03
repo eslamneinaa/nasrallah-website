@@ -5,7 +5,7 @@
 export const siteConfig = {
   name: { en: 'Nasrallah Trading Est', ar: 'مؤسسة نصر الله التجارية' },
   foundedYear: 1906,
-  brands: ['UCHIDA', 'SAKURA'],
+  brands: ['UCHIDA', 'SAKURA', 'GODREJ'],
   // Other names the business is listed under (the Google Business Profile).
   alternateNames: ['Nasrallah Trading Establishment'],
   instagram: { url: 'https://www.instagram.com/nasrallah.trading/', handle: '@nasrallah.trading' },

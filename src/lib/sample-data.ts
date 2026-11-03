@@ -31,18 +31,21 @@ const spec = (label_en: string, label_ar: string, value_en: string, value_ar: st
   value: { en: value_en, ar: value_ar },
 })
 
-const brand = spec('Brand', 'العلامة التجارية', 'UCHIDA', 'UCHIDA')
+const brandSpec = (name: string) => spec('Brand', 'العلامة التجارية', name, name)
+const brand = brandSpec('UCHIDA')
+const steel = spec('Material', 'الخامة', 'Steel', 'حديد (صلب)')
 
 const img = (name: string, width: number, height: number, alt: string) => ({ url: `/products/${name}.webp`, alt, width, height })
 
-export const sampleCategories: Category[] = [
-  { _id: 'cat-fire', slug: 'fire-resistant-safes', title: { en: 'Fire-Resistant Safes', ar: 'الخزائن المقاومة للحريق' } },
-  { _id: 'cat-filing', slug: 'filing-cabinets', title: { en: 'Filing Cabinets', ar: 'خزائن الملفات' } },
-  { _id: 'cat-luxury', slug: 'luxury-safes', title: { en: 'Luxury Safes', ar: 'الخزائن الفاخرة' } },
-  { _id: 'cat-interiors', slug: 'jewellery-watch-interiors', title: { en: 'Jewellery & Watch Interiors', ar: 'تجهيزات المجوهرات والساعات' } },
-]
+const fire: Category = { _id: 'cat-fire', slug: 'fire-resistant-safes', title: { en: 'Fire-Resistant Safes', ar: 'الخزائن المقاومة للحريق' } }
+const cash: Category = { _id: 'cat-cash', slug: 'cash-safes', title: { en: 'Cash & Security Safes', ar: 'خزائن النقود والأمان' } }
+const filing: Category = { _id: 'cat-filing', slug: 'filing-cabinets', title: { en: 'Filing Cabinets', ar: 'خزائن الملفات' } }
+const cupboards: Category = { _id: 'cat-steel', slug: 'steel-cupboards', title: { en: 'Steel & Office Cupboards', ar: 'الخزائن الحديدية والمكتبية' } }
+const lockers: Category = { _id: 'cat-lockers', slug: 'steel-lockers', title: { en: 'Steel Lockers', ar: 'اللوكرات الحديدية' } }
+const luxury: Category = { _id: 'cat-luxury', slug: 'luxury-safes', title: { en: 'Luxury Safes', ar: 'الخزائن الفاخرة' } }
+const interiors: Category = { _id: 'cat-interiors', slug: 'jewellery-watch-interiors', title: { en: 'Jewellery & Watch Interiors', ar: 'تجهيزات المجوهرات والساعات' } }
 
-const [fire, filing, luxury, interiors] = sampleCategories
+export const sampleCategories: Category[] = [fire, cash, filing, cupboards, lockers, luxury, interiors]
 
 export const sampleProducts: Product[] = [
   {
@@ -227,5 +230,397 @@ export const sampleProducts: Product[] = [
     ],
     isFeatured: false,
     order: 7,
+  },
+  {
+    _id: 'p8',
+    slug: 'uchida-multi-lock-safe',
+    name: { en: 'UCHIDA Multi-Lock Safe', ar: 'خزنة UCHIDA متعددة الأقفال' },
+    category: cash,
+    shortDesc: {
+      en: 'An UCHIDA steel safe combining a fingerprint scanner, a digital keypad and a key lock, for cash and valuables at home or in the office.',
+      ar: 'خزنة حديدية من UCHIDA تجمع بين قارئ بصمة ولوحة أرقام وقفل بمفتاح، لحفظ النقود والمقتنيات الثمينة في البيت أو المكتب.',
+    },
+    fullDesc: desc(
+      'The UCHIDA Multi-Lock Safe brings three ways of locking together on one control panel: a fingerprint scanner, a digital keypad and a mechanical key. Its heavy door hangs on two external hinges, and the safe stands on a raised base.',
+      'تجمع خزنة UCHIDA متعددة الأقفال ثلاث وسائل للقفل في لوحة تحكم واحدة: قارئ بصمة، ولوحة أرقام رقمية، ومفتاح ميكانيكي. ويُحمل بابها المتين على مفصلتين خارجيتين، وتقف الخزنة على قاعدة مرتفعة.',
+    ),
+    images: [
+      img('uchida-multi-lock-safe', 1024, 1536, 'Grey UCHIDA multi-lock steel safe with a fingerprint and keypad panel'),
+      img('uchida-multi-lock-safe-lock', 1536, 1024, 'Close-up of the fingerprint scanner, keypad and key lock'),
+    ],
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Fingerprint scanner, digital keypad and key', 'قارئ بصمة ولوحة أرقام ومفتاح'),
+      spec('Hinges', 'المفصلات', 'Two external hinges', 'مفصلتان خارجيتان'),
+      spec('Finish', 'اللون', 'Grey', 'رمادي'),
+    ],
+    isFeatured: false,
+    order: 8,
+  },
+  {
+    _id: 'p9',
+    slug: 'godrej-two-door-steel-cupboard',
+    name: { en: 'GODREJ Two-Door Steel Cupboard', ar: 'خزانة حديدية ببابين GODREJ' },
+    category: cupboards,
+    shortDesc: {
+      en: 'A full-height two-door steel cupboard with a recessed lock, for files, stationery and records in offices and homes.',
+      ar: 'خزانة حديدية بارتفاع كامل وبابين وقفل غاطس، لحفظ الملفات والقرطاسية والسجلات في المكاتب والبيوت.',
+    },
+    fullDesc: desc(
+      'This GODREJ steel cupboard pairs two full-height doors with a flush, recessed lock, keeping the front clean and the contents secure. Available in white and beige.',
+      'تجمع هذه الخزانة الحديدية من GODREJ بين بابين بارتفاع كامل وقفل غاطس مستوٍ مع الواجهة، لواجهة أنيقة ومحتويات آمنة. متوفرة باللونين الأبيض والبيج.',
+    ),
+    images: [
+      img('godrej-two-door-cupboard-white', 1024, 1536, 'White two-door GODREJ steel cupboard with a recessed lock'),
+      img('godrej-two-door-cupboard-beige', 1024, 1536, 'Beige two-door GODREJ steel cupboard with a white frame'),
+    ],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Doors', 'الأبواب', 'Two, full height', 'بابان بارتفاع كامل'),
+      spec('Lock', 'القفل', 'Recessed lock', 'قفل غاطس'),
+      spec('Colours', 'الألوان', 'White, beige', 'أبيض، بيج'),
+    ],
+    isFeatured: false,
+    order: 9,
+  },
+  {
+    _id: 'p10',
+    slug: 'godrej-two-door-steel-cupboard-with-handle',
+    name: { en: 'GODREJ Two-Door Steel Cupboard with Handle', ar: 'خزانة حديدية ببابين ومقبض GODREJ' },
+    category: cupboards,
+    shortDesc: {
+      en: 'A tall two-door steel cupboard in warm beige with a chrome handle, for orderly storage in offices.',
+      ar: 'خزانة حديدية طويلة ببابين بلون بيج دافئ ومقبض كروم، لتخزين منظّم في المكاتب.',
+    },
+    fullDesc: desc(
+      'Two full-height steel doors open on a chrome handle, giving easy everyday access to files, supplies and equipment.',
+      'بابان حديديان بارتفاع كامل يُفتحان بمقبض من الكروم، لوصول يومي سهل إلى الملفات والمستلزمات والأدوات.',
+    ),
+    images: [img('godrej-two-door-cupboard-handle-beige', 1024, 1536, 'Beige two-door GODREJ steel cupboard with a chrome handle')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Doors', 'الأبواب', 'Two, full height', 'بابان بارتفاع كامل'),
+      spec('Handle', 'المقبض', 'Chrome', 'كروم'),
+      spec('Colour', 'اللون', 'Beige', 'بيج'),
+    ],
+    isFeatured: false,
+    order: 10,
+  },
+  {
+    _id: 'p11',
+    slug: 'godrej-panelled-steel-cupboard',
+    name: { en: 'GODREJ Panelled Steel Cupboard', ar: 'خزانة حديدية بأبواب مزخرفة GODREJ' },
+    category: cupboards,
+    shortDesc: {
+      en: 'A light-grey two-door steel cupboard with raised panel doors and a recessed lock.',
+      ar: 'خزانة حديدية رمادية فاتحة ببابين ذوي ألواح بارزة وقفل غاطس.',
+    },
+    fullDesc: desc(
+      'Raised panels give the doors of this GODREJ steel cupboard extra stiffness and a tailored look, with a recessed lock set between them.',
+      'تمنح الألواح البارزة بابَي هذه الخزانة الحديدية من GODREJ متانة إضافية ومظهرًا أنيقًا، مع قفل غاطس بينهما.',
+    ),
+    images: [img('godrej-panelled-cupboard-grey', 1024, 1536, 'Light-grey GODREJ steel cupboard with two panelled doors')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Doors', 'الأبواب', 'Two, panelled', 'بابان بألواح بارزة'),
+      spec('Lock', 'القفل', 'Recessed lock', 'قفل غاطس'),
+      spec('Colour', 'اللون', 'Light grey', 'رمادي فاتح'),
+    ],
+    isFeatured: false,
+    order: 11,
+  },
+  {
+    _id: 'p12',
+    slug: 'godrej-single-door-steel-cupboard',
+    name: { en: 'GODREJ Single-Door Steel Cupboard', ar: 'خزانة حديدية بباب واحد GODREJ' },
+    category: cupboards,
+    shortDesc: {
+      en: 'A slim full-height steel cupboard with one door and a recessed lock, for tight spaces.',
+      ar: 'خزانة حديدية نحيفة بارتفاع كامل وباب واحد وقفل غاطس، للمساحات الضيقة.',
+    },
+    fullDesc: desc(
+      'Where floor space is short, this single-door GODREJ steel cupboard gives full-height lockable storage. Available in grey and beige.',
+      'حين تضيق المساحة، توفّر هذه الخزانة الحديدية من GODREJ بباب واحد تخزينًا بارتفاع كامل بقفل. متوفرة باللونين الرمادي والبيج.',
+    ),
+    images: [
+      img('godrej-single-door-cupboard-grey', 1024, 1536, 'Grey single-door GODREJ steel cupboard'),
+      img('godrej-single-door-cupboard-beige', 1024, 1536, 'Beige single-door GODREJ steel cupboard'),
+    ],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Doors', 'الأبواب', 'One, full height', 'باب واحد بارتفاع كامل'),
+      spec('Lock', 'القفل', 'Recessed lock', 'قفل غاطس'),
+      spec('Colours', 'الألوان', 'Grey, beige', 'رمادي، بيج'),
+    ],
+    isFeatured: false,
+    order: 12,
+  },
+  {
+    _id: 'p13',
+    slug: 'godrej-glass-door-steel-cabinet',
+    name: { en: 'GODREJ Glass-Door Steel Cabinet', ar: 'خزانة حديدية بأبواب زجاجية GODREJ' },
+    category: cupboards,
+    shortDesc: {
+      en: 'A white steel cabinet with two glass doors and shelves, so files and books stay visible and protected.',
+      ar: 'خزانة حديدية بيضاء ببابين زجاجيين ورفوف، لتبقى الملفات والكتب ظاهرة ومحمية.',
+    },
+    fullDesc: desc(
+      'Glass-panelled doors set in a white steel frame show what is on the shelves while keeping dust out, with a lock between the doors.',
+      'أبواب بألواح زجاجية في إطار حديدي أبيض تُظهر ما على الرفوف وتحميه من الغبار، مع قفل بين البابين.',
+    ),
+    images: [img('godrej-glass-door-cabinet', 1024, 1536, 'White GODREJ steel cabinet with two glass doors and shelves')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Doors', 'الأبواب', 'Two, glass panelled', 'بابان بألواح زجاجية'),
+      spec('Interior', 'الداخل', 'Shelves', 'رفوف'),
+      spec('Colour', 'اللون', 'White', 'أبيض'),
+    ],
+    isFeatured: false,
+    order: 13,
+  },
+  {
+    _id: 'p14',
+    slug: 'godrej-wood-and-glass-storage-cabinet',
+    name: { en: 'GODREJ Wood & Glass Storage Cabinet', ar: 'خزانة مكتبية خشبية بواجهة زجاجية GODREJ' },
+    category: cupboards,
+    shortDesc: {
+      en: 'An office storage cabinet in honey oak, with glass doors above and two closed doors below.',
+      ar: 'خزانة تخزين مكتبية بلون خشب البلوط العسلي، بأبواب زجاجية في الأعلى وبابين مغلقين في الأسفل.',
+    },
+    fullDesc: desc(
+      'Display what you want to show behind the upper glass doors and keep the rest out of sight below. The honey-oak finish and chrome handles suit managers’ offices and meeting rooms.',
+      'اعرضوا ما تريدون إظهاره خلف الأبواب الزجاجية العلوية، واحفظوا الباقي بعيدًا عن الأنظار في الأسفل. يناسب لون البلوط العسلي والمقابض الكروم مكاتب المديرين وغرف الاجتماعات.',
+    ),
+    images: [img('godrej-wood-glass-cabinet', 1024, 1536, 'Honey-oak GODREJ storage cabinet with glass doors above and wooden doors below')],
+    specTable: [
+      brandSpec('GODREJ'),
+      spec('Finish', 'التشطيب', 'Honey oak', 'خشب بلوط عسلي'),
+      spec('Doors', 'الأبواب', 'Two glass doors above, two wooden doors below', 'بابان زجاجيان في الأعلى وبابان خشبيان في الأسفل'),
+      spec('Handles', 'المقابض', 'Chrome', 'كروم'),
+    ],
+    isFeatured: false,
+    order: 14,
+  },
+  {
+    _id: 'p15',
+    slug: 'godrej-two-tier-steel-locker',
+    name: { en: 'GODREJ Two-Tier Steel Locker', ar: 'لوكر حديدي بطابقين GODREJ' },
+    category: lockers,
+    shortDesc: {
+      en: 'A two-door steel locker with ventilation louvres, for staff changing rooms, schools and gyms.',
+      ar: 'لوكر حديدي ببابين وفتحات تهوية، لغرف تبديل الموظفين والمدارس والنوادي الرياضية.',
+    },
+    fullDesc: desc(
+      'Two lockable compartments stacked in one column, each with ventilation louvres, in charcoal doors on a cream frame.',
+      'خانتان بقفل في عمود واحد، لكل منهما فتحات تهوية، بأبواب فحمية اللون على إطار كريمي.',
+    ),
+    images: [img('godrej-two-tier-locker', 1024, 1536, 'Two-tier GODREJ steel locker with charcoal doors and a cream frame')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Compartments', 'الخانات', 'Two, each with its own lock', 'خانتان، لكل منهما قفل'),
+      spec('Ventilation', 'التهوية', 'Louvred doors', 'فتحات تهوية في الأبواب'),
+      spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
+    ],
+    isFeatured: false,
+    order: 15,
+  },
+  {
+    _id: 'p16',
+    slug: 'godrej-four-tier-steel-locker',
+    name: { en: 'GODREJ Four-Tier Steel Locker', ar: 'لوكر حديدي بأربعة أبواب GODREJ' },
+    category: lockers,
+    shortDesc: {
+      en: 'A four-door steel locker with ventilation louvres, giving four people their own space in one column.',
+      ar: 'لوكر حديدي بأربعة أبواب وفتحات تهوية، يمنح أربعة أشخاص خانة خاصة لكل منهم في عمود واحد.',
+    },
+    fullDesc: desc(
+      'Four lockable compartments in a single column make the most of floor space in changing rooms and staff areas.',
+      'أربع خانات بقفل في عمود واحد تستفيد من المساحة إلى أقصى حد في غرف التبديل ومناطق الموظفين.',
+    ),
+    images: [img('godrej-four-tier-locker', 1024, 1536, 'Four-tier GODREJ steel locker with charcoal doors and a cream frame')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Compartments', 'الخانات', 'Four, each with its own lock', 'أربع خانات، لكل منها قفل'),
+      spec('Ventilation', 'التهوية', 'Louvred doors', 'فتحات تهوية في الأبواب'),
+      spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
+    ],
+    isFeatured: false,
+    order: 16,
+  },
+  {
+    _id: 'p17',
+    slug: 'godrej-three-door-steel-locker',
+    name: { en: 'GODREJ Three-Door Steel Locker', ar: 'لوكر حديدي بثلاثة أبواب GODREJ' },
+    category: lockers,
+    shortDesc: {
+      en: 'A cream three-door steel locker with ventilation louvres and a key lock on every door.',
+      ar: 'لوكر حديدي كريمي بثلاثة أبواب وفتحات تهوية وقفل بمفتاح لكل باب.',
+    },
+    fullDesc: desc(
+      'Three generous compartments, each behind its own louvred door with a key lock, for offices, schools and clinics.',
+      'ثلاث خانات واسعة، لكل منها باب بفتحات تهوية وقفل بمفتاح، للمكاتب والمدارس والعيادات.',
+    ),
+    images: [img('godrej-three-door-locker', 1024, 1536, 'Cream three-door GODREJ steel locker')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Compartments', 'الخانات', 'Three', 'ثلاث خانات'),
+      spec('Lock', 'القفل', 'Key lock on each door', 'قفل بمفتاح لكل باب'),
+      spec('Colour', 'اللون', 'Cream', 'كريمي'),
+    ],
+    isFeatured: false,
+    order: 17,
+  },
+  {
+    _id: 'p18',
+    slug: 'godrej-six-door-steel-locker',
+    name: { en: 'GODREJ Six-Door Steel Locker', ar: 'لوكر حديدي بستة أبواب GODREJ' },
+    category: lockers,
+    shortDesc: {
+      en: 'A beige six-door steel locker column, for keeping personal belongings apart in busy workplaces.',
+      ar: 'عمود لوكر حديدي بيج بستة أبواب، لفصل المتعلقات الشخصية في أماكن العمل المزدحمة.',
+    },
+    fullDesc: desc(
+      'Six compartments, each behind its own door with a pull handle, fit in the footprint of a single cupboard.',
+      'ست خانات، لكل منها باب بمقبض، في مساحة خزانة واحدة.',
+    ),
+    images: [img('godrej-six-door-locker', 1024, 1536, 'Beige six-door GODREJ steel locker column')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Compartments', 'الخانات', 'Six', 'ست خانات'),
+      spec('Colour', 'اللون', 'Beige', 'بيج'),
+    ],
+    isFeatured: false,
+    order: 18,
+  },
+  {
+    _id: 'p19',
+    slug: 'sakura-single-steel-locker',
+    name: { en: 'SAKURA Single Steel Locker', ar: 'لوكر حديدي بباب واحد SAKURA' },
+    category: lockers,
+    shortDesc: {
+      en: 'A full-height single steel locker with a louvred charcoal door on a cream frame.',
+      ar: 'لوكر حديدي بباب واحد بارتفاع كامل، بباب فحمي بفتحات تهوية على إطار كريمي.',
+    },
+    fullDesc: desc(
+      'One tall compartment with room for clothes and bags, ventilated through louvres at the top of the door.',
+      'خانة واحدة طويلة تتسع للملابس والحقائب، مع فتحات تهوية أعلى الباب.',
+    ),
+    images: [img('sakura-single-locker', 1024, 1536, 'Single SAKURA steel locker with a louvred charcoal door')],
+    specTable: [
+      brandSpec('SAKURA'),
+      steel,
+      spec('Compartments', 'الخانات', 'One, full height', 'خانة واحدة بارتفاع كامل'),
+      spec('Ventilation', 'التهوية', 'Louvred door', 'فتحات تهوية في الباب'),
+      spec('Colours', 'الألوان', 'Charcoal door, cream frame', 'باب فحمي، إطار كريمي'),
+    ],
+    isFeatured: false,
+    order: 19,
+  },
+  {
+    _id: 'p20',
+    slug: 'sakura-six-door-steel-locker',
+    name: { en: 'SAKURA Six-Door Steel Locker', ar: 'لوكر حديدي بستة أبواب SAKURA' },
+    category: lockers,
+    shortDesc: {
+      en: 'An off-white six-door steel locker column with a pull handle on every door.',
+      ar: 'عمود لوكر حديدي أبيض مائل للعاجي بستة أبواب ومقبض لكل باب.',
+    },
+    fullDesc: desc(
+      'Six stacked compartments give each person their own space for keys, phones and personal items.',
+      'ست خانات متراصّة تمنح كل شخص مكانًا خاصًا لمفاتيحه وهاتفه وأغراضه الشخصية.',
+    ),
+    images: [img('sakura-six-door-locker', 1024, 1536, 'Off-white six-door SAKURA steel locker column')],
+    specTable: [
+      brandSpec('SAKURA'),
+      steel,
+      spec('Compartments', 'الخانات', 'Six', 'ست خانات'),
+      spec('Colour', 'اللون', 'Off-white', 'أبيض عاجي'),
+    ],
+    isFeatured: false,
+    order: 20,
+  },
+  {
+    _id: 'p21',
+    slug: 'godrej-two-drawer-filing-cabinet',
+    name: { en: 'GODREJ Two-Drawer Filing Cabinet', ar: 'خزانة ملفات بدرجين GODREJ' },
+    category: filing,
+    shortDesc: {
+      en: 'A low two-drawer steel filing cabinet with a lock, for hanging files beside a desk.',
+      ar: 'خزانة ملفات حديدية منخفضة بدرجين وقفل، للملفات المعلّقة بجانب المكتب.',
+    },
+    fullDesc: desc(
+      'Two deep drawers in cream sit in a light-grey steel frame, with a lock at the top to secure both.',
+      'درجان عميقان باللون الكريمي في إطار حديدي رمادي فاتح، مع قفل في الأعلى يؤمّن الدرجين معًا.',
+    ),
+    images: [img('godrej-two-drawer-filing-cabinet', 1162, 1354, 'Two-drawer GODREJ steel filing cabinet with cream drawers')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Drawers', 'الأدراج', 'Two', 'درجان'),
+      spec('Lock', 'القفل', 'Top lock', 'قفل علوي'),
+      spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
+    ],
+    isFeatured: false,
+    order: 21,
+  },
+  {
+    _id: 'p22',
+    slug: 'godrej-three-drawer-filing-cabinet',
+    name: { en: 'GODREJ Three-Drawer Filing Cabinet', ar: 'خزانة ملفات بثلاثة أدراج GODREJ' },
+    category: filing,
+    shortDesc: {
+      en: 'A three-drawer steel filing cabinet with a lock, for department files and records.',
+      ar: 'خزانة ملفات حديدية بثلاثة أدراج وقفل، لملفات الأقسام والسجلات.',
+    },
+    fullDesc: desc(
+      'Three full-width drawers in cream, set in a light-grey steel frame and secured by a lock at the top.',
+      'ثلاثة أدراج بعرض كامل باللون الكريمي في إطار حديدي رمادي فاتح، يؤمّنها قفل في الأعلى.',
+    ),
+    images: [img('godrej-three-drawer-filing-cabinet', 1024, 1536, 'Three-drawer GODREJ steel filing cabinet with cream drawers')],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Drawers', 'الأدراج', 'Three', 'ثلاثة أدراج'),
+      spec('Lock', 'القفل', 'Top lock', 'قفل علوي'),
+      spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
+    ],
+    isFeatured: false,
+    order: 22,
+  },
+  {
+    _id: 'p23',
+    slug: 'godrej-five-drawer-filing-cabinet',
+    name: { en: 'GODREJ Five-Drawer Filing Cabinet', ar: 'خزانة ملفات بخمسة أدراج GODREJ' },
+    category: filing,
+    shortDesc: {
+      en: 'A tall five-drawer steel filing cabinet with a lock, in grey or black, for large archives.',
+      ar: 'خزانة ملفات حديدية طويلة بخمسة أدراج وقفل، باللون الرمادي أو الأسود، للأرشيف الكبير.',
+    },
+    fullDesc: desc(
+      'Five drawers in one tall steel cabinet hold a department’s archive in the footprint of a single cupboard, secured by a lock at the top.',
+      'خمسة أدراج في خزانة حديدية واحدة طويلة تستوعب أرشيف قسم كامل في مساحة خزانة واحدة، ويؤمّنها قفل في الأعلى.',
+    ),
+    images: [
+      img('godrej-five-drawer-filing-cabinet-grey', 1024, 1536, 'Light-grey five-drawer GODREJ steel filing cabinet'),
+      img('godrej-five-drawer-filing-cabinet-black', 1024, 1536, 'Black five-drawer GODREJ steel filing cabinet'),
+    ],
+    specTable: [
+      brandSpec('GODREJ'),
+      steel,
+      spec('Drawers', 'الأدراج', 'Five', 'خمسة أدراج'),
+      spec('Lock', 'القفل', 'Top lock', 'قفل علوي'),
+      spec('Colours', 'الألوان', 'Light grey, black', 'رمادي فاتح، أسود'),
+    ],
+    isFeatured: false,
+    order: 23,
   },
 ]

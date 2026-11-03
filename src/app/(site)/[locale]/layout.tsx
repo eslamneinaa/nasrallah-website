@@ -54,7 +54,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
     slogan: getDictionary('en').footer.slogan,
     foundingDate: String(siteConfig.foundedYear),
     brand: siteConfig.brands.map((name) => ({ '@type': 'Brand', name })),
-    knowsAbout: ['Safes', 'Cash safes', 'Jewellery safes', 'Fire-resistant safes', 'Filing cabinets', 'Luxury safes', 'Safe opening', 'خزائن', 'خزائن نقود', 'خزائن مجوهرات', 'تجوري'],
+    knowsAbout: ['Safes', 'Cash safes', 'Jewellery safes', 'Fire-resistant safes', 'Filing cabinets', 'Luxury safes', 'Safe opening', 'Steel safes', 'Steel cabinets', 'Steel lockers', 'خزائن', 'خزائن نقود', 'خزائن مجوهرات', 'تجوري', 'خزنة حديدية', 'خزانة حديدية', 'تجوري حديد'],
     areaServed: { '@type': 'Country', name: 'Qatar' },
     sameAs: socialProfiles,
     email: siteConfig.email,

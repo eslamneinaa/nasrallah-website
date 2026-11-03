@@ -4,7 +4,7 @@
  */
 export const siteConfig = {
   name: { en: 'Nasrallah Trading Est', ar: 'مؤسسة نصر الله التجارية' },
-  foundedYear: 1920,
+  foundedYear: 1906,
   brands: ['UCHIDA', 'SAKURA'],
   domain: 'nasrallahtrading.com',
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://nasrallahtrading.com').replace(/\/$/, ''),

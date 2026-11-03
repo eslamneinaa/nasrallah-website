@@ -1,8 +1,8 @@
 const en = {
   meta: {
-    title: 'Nasrallah Trading Est — Safes & Filing Cabinets in Doha since 1920',
+    title: 'Nasrallah Trading Est — Safes & Filing Cabinets in Doha since 1906',
     description:
-      'Since 1920. UCHIDA and SAKURA fire-resistant safes, filing cabinets, luxury safes and jewellery & watch interiors at our showroom in Souq Al Ein, Salwa Road, Doha, Qatar.',
+      'Since 1906. UCHIDA and SAKURA fire-resistant safes, filing cabinets, luxury safes and jewellery & watch interiors at our showroom in Souq Al Ein, Salwa Road, Doha, Qatar.',
   },
   nav: {
     home: 'Home',
@@ -17,15 +17,15 @@ const en = {
     skip: 'Skip to content',
   },
   hero: {
-    eyebrow: 'Since 1920 · Doha, Qatar',
+    eyebrow: 'Since 1906 · Doha, Qatar',
     titleLead: 'For over a century, safeguarding',
     rotating: ['what you treasure', 'vital documents', 'jewellery & watches', 'institutional records'],
     subtitle:
-      'Since 1920, Nasrallah Trading Est has protected what matters most. Today we bring fire-resistant safes, filing cabinets and luxury safes from UCHIDA and SAKURA to ministries, banks, companies and private clients across Qatar.',
+      'Since 1906, Nasrallah Trading Est has protected what matters most. Today we bring fire-resistant safes, filing cabinets and luxury safes from UCHIDA and SAKURA to ministries, banks, companies and private clients across Qatar.',
     ctaPrimary: 'Explore the collection',
     ctaSecondary: 'Request a quote',
     stats: [
-      { value: '1920', label: 'Founded' },
+      { value: '1906', label: 'Founded' },
       { value: '100+', label: 'Years of trust' },
       { value: '1,000+', label: 'Clients' },
     ],
@@ -33,13 +33,13 @@ const en = {
     plate: 'A Century of Safekeeping',
   },
   intro: {
-    eyebrow: 'Since 1920',
+    eyebrow: 'Since 1906',
     title: 'A name trusted for more than a century',
     body: [
-      'Founded in 1920, Nasrallah Trading Est is one of the most established names in safes and secure storage. From our showroom in Souq Al Ein on Salwa Road, we supply fire-resistant safes, filing cabinets and luxury safes to ministries, banks, companies and private clients.',
+      'Founded in 1906, Nasrallah Trading Est is one of the most established names in safes and secure storage. From our showroom in Souq Al Ein on Salwa Road, we supply fire-resistant safes, filing cabinets and luxury safes to ministries, banks, companies and private clients.',
       'We carry UCHIDA and SAKURA, and we help every client choose the right protection for what they keep: documents, cash, jewellery or a lifetime’s collection.',
     ],
-    highlights: ['Founded in 1920', 'More than 1,000 clients', 'UCHIDA & SAKURA', 'Personal showroom service'],
+    highlights: ['Founded in 1906', 'More than 1,000 clients', 'UCHIDA & SAKURA', 'Personal showroom service'],
     imageAlt: 'The Nasrallah Trading Est showroom on Salwa Road at night',
     cta: 'Discover our story',
   },
@@ -76,7 +76,7 @@ const en = {
     title: 'The oldest. The most trusted. The finest.',
     subtitle: 'Four reasons our clients have returned to us for generations.',
     items: [
-      { title: 'Heritage', desc: 'Founded in 1920, we bring more than a century of experience in safekeeping to every recommendation.' },
+      { title: 'Heritage', desc: 'Founded in 1906, we bring more than a century of experience in safekeeping to every recommendation.' },
       { title: 'Trust', desc: 'Ministries, banks, companies and families: more than 1,000 clients have placed their trust in us.' },
       { title: 'Quality', desc: 'We carry UCHIDA and SAKURA, names chosen for their build quality and lasting protection.' },
       { title: 'Service', desc: 'Personal advice in our showroom and attentive follow-up long after the sale.' },
@@ -99,14 +99,14 @@ const en = {
   },
   about: {
     metaTitle: 'About Us',
-    metaDescription: 'The story of Nasrallah Trading Est: safes and secure storage since 1920, from Souq Al Ein, Salwa Road, Doha.',
+    metaDescription: 'The story of Nasrallah Trading Est: safes and secure storage since 1906, from Souq Al Ein, Salwa Road, Doha.',
     title: 'About Nasrallah Trading Est',
     subtitle: 'More than a century of safekeeping.',
     story: {
       eyebrow: 'Our story',
       title: 'A century built on trust',
       paragraphs: [
-        'Nasrallah Trading Est was founded in 1920. For more than a hundred years, the name has stood for one thing: keeping what people value safe.',
+        'Nasrallah Trading Est was founded in 1906. For more than a hundred years, the name has stood for one thing: keeping what people value safe.',
         'Today our showroom in Souq Al Ein, on Salwa Road in Doha, presents fire-resistant safes, filing cabinets and luxury safes from UCHIDA and SAKURA, together with fitted interiors for jewellery and watches.',
         'Ministries, private institutions, banks, companies and individuals, more than 1,000 clients in all, rely on us for quality products, honest advice and service that continues long after the sale.',
       ],
@@ -123,7 +123,7 @@ const en = {
     },
     values: {
       eyebrow: 'Our values',
-      title: 'The principles we have kept since 1920',
+      title: 'The principles we have kept since 1906',
       items: [
         { title: 'Quality', desc: 'Only products we would trust with our own valuables.' },
         { title: 'Trust', desc: 'Honest advice and fair prices, earned over generations.' },
@@ -168,7 +168,7 @@ const en = {
     videoEyebrow: 'In the showroom',
     videoTitle: 'See it up close',
     videoBody: 'A short film from our showroom. Visit us in Souq Al Ein to open the drawers yourself.',
-    assurances: ['Original UCHIDA & SAKURA', 'Trusted since 1920', 'Personal showroom advice'],
+    assurances: ['Original UCHIDA & SAKURA', 'Trusted since 1906', 'Personal showroom advice'],
   },
   quote: {
     metaTitle: 'Request a Quote',
@@ -287,7 +287,7 @@ const en = {
   footer: {
     slogan: 'A Century of Safekeeping',
     tagline:
-      'Safes and secure storage since 1920: fire-resistant safes, filing cabinets and luxury safes from UCHIDA and SAKURA, at our showroom in Souq Al Ein, Salwa Road, Doha.',
+      'Safes and secure storage since 1906: fire-resistant safes, filing cabinets and luxury safes from UCHIDA and SAKURA, at our showroom in Souq Al Ein, Salwa Road, Doha.',
     explore: 'Explore',
     contact: 'Get in touch',
     visit: 'Visit the showroom',

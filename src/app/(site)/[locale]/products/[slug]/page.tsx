@@ -12,7 +12,7 @@ import { RichText } from '@/components/RichText'
 import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
-import { fill, getDictionary, href, pick } from '@/i18n'
+import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
 import { getCatalog, getProduct, getRelatedProducts } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 
@@ -52,7 +52,9 @@ export default async function ProductPage({ params }: Props) {
   const category = pick(product.category?.title, locale)
   const related = await getRelatedProducts(product)
   const quoteHref = `${href(locale, 'request-quote')}?product=${encodeURIComponent(name)}`
-  const whatsapp = whatsappLink(fill(t.whatsappText, { product: name }))
+  const whatsapp = whatsappLink(
+    inBothLanguages(locale, (d, lang) => fill(d.product.whatsappText, { product: pick(product.name, lang) || name })),
+  )
 
   // The maker (UCHIDA, SAKURA…) comes from the product's own "Brand" spec row.
   const brandName = product.specTable.find((row) => row.label.en === 'Brand')?.value.en

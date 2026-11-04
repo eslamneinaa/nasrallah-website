@@ -7,7 +7,7 @@ import { Reveal } from '@/components/motion/Reveal'
 import { Khatam } from '@/components/ornaments'
 import { PageHero } from '@/components/PageHero'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
-import { getDictionary, href } from '@/i18n'
+import { getDictionary, href, inBothLanguages } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
@@ -20,7 +20,7 @@ export default async function RequestQuotePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.quote
-  const whatsapp = whatsappLink(dict.common.whatsappText)
+  const whatsapp = whatsappLink(inBothLanguages(locale, (d) => d.common.whatsappText))
   const item = 'flex items-center gap-3 text-ink-900 transition hover:text-maroon-700'
   const icon = 'h-4 w-4 shrink-0 text-gold-600'
 

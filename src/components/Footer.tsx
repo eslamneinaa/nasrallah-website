@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
+import { inBothLanguages } from '@/i18n'
 import { href, pick } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Category, Locale } from '@/lib/types'
@@ -12,7 +13,7 @@ type Props = { locale: Locale; dict: Dictionary; categories: Category[] }
 export function Footer({ locale, dict, categories }: Props) {
   const year = new Date().getFullYear()
   const c = dict.contact
-  const whatsapp = whatsappLink(dict.common.whatsappText)
+  const whatsapp = whatsappLink(inBothLanguages(locale, (d) => d.common.whatsappText))
   const explore = [
     { href: href(locale), label: dict.nav.home },
     { href: href(locale, 'about'), label: dict.nav.about },

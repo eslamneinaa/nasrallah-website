@@ -6,7 +6,7 @@ import { Header } from '@/components/Header'
 import { MotionProvider } from '@/components/motion/MotionProvider'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
 import { siteConfig, socialProfiles } from '@/config/site'
-import { dirOf, getDictionary, locales } from '@/i18n'
+import { dirOf, getDictionary, inBothLanguages, locales } from '@/i18n'
 import { fontVariables } from '@/lib/fonts'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
@@ -102,7 +102,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
           <Header locale={locale} nav={dict.nav} />
           <main id="main">{children}</main>
           <Footer locale={locale} dict={dict} categories={categories} />
-          <WhatsAppFloat label={dict.common.whatsappFloat} text={dict.common.whatsappText} />
+          <WhatsAppFloat label={dict.common.whatsappFloat} text={inBothLanguages(locale, (d) => d.common.whatsappText)} />
         </MotionProvider>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </body>

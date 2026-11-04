@@ -6,7 +6,7 @@ import { Reveal } from '@/components/motion/Reveal'
 import { Khatam } from '@/components/ornaments'
 import { PageHero } from '@/components/PageHero'
 import { mapEmbedSrc, siteConfig, telHref, whatsappLink } from '@/config/site'
-import { getDictionary, href } from '@/i18n'
+import { getDictionary, href, inBothLanguages } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
@@ -19,7 +19,7 @@ export default async function ContactPage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.contact
-  const whatsapp = whatsappLink(dict.common.whatsappText)
+  const whatsapp = whatsappLink(inBothLanguages(locale, (d) => d.common.whatsappText))
   const linkClass = 'transition hover:text-gold-300'
 
   const rows: { label: string; value: ReactNode }[] = [

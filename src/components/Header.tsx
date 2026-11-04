@@ -41,6 +41,7 @@ export function Header({ locale, nav }: Props) {
     { href: href(locale), label: nav.home, exact: true },
     { href: href(locale, 'about'), label: nav.about },
     { href: href(locale, 'products'), label: nav.products },
+    { href: href(locale, 'articles'), label: nav.articles },
     { href: href(locale, 'contact'), label: nav.contact },
   ]
   const isActive = (link: (typeof links)[number]) =>

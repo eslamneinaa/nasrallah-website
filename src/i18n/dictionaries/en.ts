@@ -11,6 +11,7 @@ const en = {
     quote: 'Request a Quote',
     contact: 'Contact',
     guide: 'Safe buying guide',
+    articles: 'Articles',
     menu: 'Open menu',
     close: 'Close menu',
     switchLabel: 'العربية',
@@ -221,6 +222,24 @@ const en = {
     ctaProducts: 'Browse safes',
     ctaQuote: 'Request a quote',
     faqLink: 'Read the safe buying guide for Qatar',
+  },
+  articles: {
+    metaTitle: 'Articles and Advice on Safes in Qatar',
+    metaDescription:
+      'Practical advice on choosing, placing and caring for safes in Qatar: home, cash, jewellery and fire-resistant safes, locks, filing cabinets and lockers, from Nasrallah Trading Est.',
+    title: 'Articles and advice',
+    subtitle: 'Practical answers to the questions our customers ask in the showroom.',
+    readMore: 'Read the article',
+    published: 'Published',
+    allArticles: 'All articles',
+    relatedProducts: 'Products mentioned in this article',
+    relatedLinks: 'Read next',
+    ctaTitle: 'Have a question about your safe?',
+    ctaBody:
+      'Visit our showroom at Souq Al Ein on Salwa Road, Doha (Showroom 6), Saturday to Thursday, 8 AM to 12 PM and 4 PM to 9 PM, or message us on WhatsApp. Delivery is free.',
+    ctaQuote: 'Request a quote',
+    whatsapp: 'Ask on WhatsApp',
+    whatsappText: 'Hello, I read your article “{article}” and would like to ask about it.',
   },
   ctaBand: {
     title: 'Protect what matters most',

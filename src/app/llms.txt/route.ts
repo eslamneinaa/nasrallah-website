@@ -1,5 +1,6 @@
 import { siteConfig } from '@/config/site'
 import { fill, getDictionary, href, pick } from '@/i18n'
+import { getArticles } from '@/lib/articles'
 import { getCatalog } from '@/lib/sanity/api'
 
 export const dynamic = 'force-static'
@@ -11,6 +12,7 @@ export const dynamic = 'force-static'
  */
 export async function GET() {
   const { products, categories } = await getCatalog()
+  const articles = getArticles()
   const en = getDictionary('en')
   const url = (path?: string) => siteConfig.url + href('en', path)
   const phones = siteConfig.phones.map((p) => `${siteConfig.dialCode} ${p.display}`).join(', ')
@@ -40,6 +42,7 @@ ${siteConfig.name.en} was founded in ${siteConfig.foundedYear} and sells ${siteC
 - [About us](${url('about')}): history since ${siteConfig.foundedYear}, values and showroom
 - [Products](${url('products')}): the full catalogue
 - [Safe buying guide for Qatar](${url('safe-buying-guide')}): choosing cash, jewellery and document safes, what sets the price, and where to buy
+- [Articles](${url('articles')}): practical advice on choosing, placing and caring for safes
 - [Request a quote](${url('request-quote')})
 - [Contact](${url('contact')})
 
@@ -50,6 +53,10 @@ ${categories.map((c) => `- [${pick(c.title, 'en')}](${url('products')}?category=
 ## Products
 
 ${products.map((p) => `- [${pick(p.name, 'en')}](${url(`products/${p.slug}`)}): ${pick(p.shortDesc, 'en') ?? ''}`).join('\n')}
+
+## Articles
+
+${articles.map((a) => `- [${a.title.en}](${url(`articles/${a.slug}`)}) (${a.date}): ${a.description.en}`).join('\n')}
 
 ## Frequently asked questions
 

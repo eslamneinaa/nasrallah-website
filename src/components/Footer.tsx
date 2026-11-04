@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Star } from 'lucide-react'
 import Link from 'next/link'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { inBothLanguages } from '@/i18n'
@@ -133,6 +133,15 @@ export function Footer({ locale, dict, categories }: Props) {
             >
               {c.directions}
               <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+            </a>
+            <a
+              href={siteConfig.googleReview}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex w-fit items-center gap-2 text-sm text-gold-300 transition hover:text-gold-200"
+            >
+              <Star className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+              {c.review}
             </a>
           </div>
         </div>

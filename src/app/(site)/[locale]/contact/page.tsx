@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Star } from 'lucide-react'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { ContactForm } from '@/components/forms/ContactForm'
@@ -116,6 +116,10 @@ export default async function ContactPage({ params }: LocaleParams) {
             <a href={siteConfig.map.link} target="_blank" rel="noopener noreferrer" className="btn-outline-light mt-8 w-full">
               {t.directions}
               <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+            </a>
+            <a href={siteConfig.googleReview} target="_blank" rel="noopener noreferrer" className="btn-gold mt-3 w-full">
+              <Star className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+              {t.review}
             </a>
           </Reveal>
 

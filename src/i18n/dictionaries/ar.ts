@@ -354,6 +354,7 @@ const ar: Dictionary = {
     formSubtitle: 'نرد على جميع الرسائل خلال مواعيد العمل.',
     mapTitle: 'موقع مؤسسة نصر الله التجارية على الخريطة',
     directions: 'افتح الموقع في خرائط Google',
+    review: 'قيّمونا على جوجل',
   },
   form: {
     name: 'الاسم الكامل',

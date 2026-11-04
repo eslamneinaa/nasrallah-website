@@ -11,6 +11,8 @@ export const siteConfig = {
   instagram: { url: 'https://www.instagram.com/nasrallah.trading/', handle: '@nasrallah.trading' },
   // Google Business Profile, by its Knowledge Graph id (from its share link).
   googleProfile: 'https://www.google.com/search?kgmid=/g/1tf5j36n',
+  // Opens Google's "write a review" box for the same profile (place id from the Maps link).
+  googleReview: 'https://search.google.com/local/writereview?placeid=ChIJcRMrAH_aRT4RJ-4WWXDDMBo',
   domain: 'nasrallahtrading.com',
   // Qatar National Day emblem beside the logo in the header; set false after the season.
   showNationalDay: true,

@@ -352,6 +352,7 @@ const en = {
     formSubtitle: 'We reply to every message during opening hours.',
     mapTitle: 'Nasrallah Trading Est on the map',
     directions: 'Open in Google Maps',
+    review: 'Review us on Google',
   },
   form: {
     name: 'Full name',

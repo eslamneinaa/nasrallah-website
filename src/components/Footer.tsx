@@ -4,6 +4,7 @@ import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { inBothLanguages } from '@/i18n'
 import { href, pick } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
+import { categoryHref } from '@/lib/category-content'
 import type { Category, Locale } from '@/lib/types'
 import { Logo } from './Logo'
 import { OrnamentRule } from './ornaments'
@@ -57,7 +58,7 @@ export function Footer({ locale, dict, categories }: Props) {
             <ul className="mt-6 space-y-3">
               {categories.map((category) => (
                 <li key={category._id}>
-                  <Link href={`${href(locale, 'products')}?category=${category.slug}`} className={link}>
+                  <Link href={categoryHref(locale, category.slug)} className={link}>
                     {pick(category.title, locale)}
                   </Link>
                 </li>

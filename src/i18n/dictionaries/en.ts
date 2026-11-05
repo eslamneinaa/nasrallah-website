@@ -249,6 +249,10 @@ const en = {
     whatsapp: 'Ask on WhatsApp',
     whatsappText: 'Hello, I read your article “{article}” and would like to ask about it.',
   },
+  categoryPage: {
+    other: 'Other categories',
+    all: 'All products',
+  },
   ctaBand: {
     title: 'Protect what matters most',
     subtitle: 'Tell us what you need to protect and we will recommend the right safe, or visit our showroom to see the range in person.',

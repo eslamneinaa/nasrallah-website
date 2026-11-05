@@ -13,6 +13,7 @@ import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
+import { categoryHref } from '@/lib/category-content'
 import { getCatalog, getProduct, getRelatedProducts } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 
@@ -90,7 +91,7 @@ export default async function ProductPage({ params }: Props) {
         crumbs={[
           { label: t.home, href: href(locale) },
           { label: t.products, href: href(locale, 'products') },
-          ...(category && product.category ? [{ label: category, href: `${href(locale, 'products')}?category=${product.category.slug}` }] : []),
+          ...(category && product.category ? [{ label: category, href: categoryHref(locale, product.category.slug) }] : []),
           { label: name },
         ]}
       />

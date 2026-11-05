@@ -11,6 +11,7 @@ import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { siteConfig } from '@/config/site'
 import { fill, getDictionary, href } from '@/i18n'
+import { categoryHref } from '@/lib/category-content'
 import { getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
 import { resolveLocale, type LocaleParams } from '@/lib/seo'
 
@@ -109,7 +110,7 @@ export default async function HomePage({ params }: LocaleParams) {
             <SectionHeading eyebrow={dict.interiors.eyebrow} title={dict.interiors.title} tone="light" />
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl text-lg leading-loose text-pearl-200/75">{dict.interiors.body}</p>
-              <Link href={`${href(locale, 'products')}?category=jewellery-watch-interiors`} className="btn-gold mt-10">
+              <Link href={categoryHref(locale, 'jewellery-watch-interiors')} className="btn-gold mt-10">
                 {dict.interiors.cta}
               </Link>
             </Reveal>

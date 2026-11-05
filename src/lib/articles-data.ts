@@ -948,4 +948,119 @@ export const articleSources: ArticleSource[] = [
     products: [],
     links: [{ article: 'opening-a-locked-safe-in-qatar' }, { page: 'contact' }],
   },
+  {
+    slug: 'travel-jewellery-cases-for-weddings-and-travel',
+    date: '2026-12-22',
+    title: {
+      ar: 'شنط المجوهرات للسفر والأعراس: كيف تحملون مجوهراتكم بأمان خارج البيت؟',
+      en: 'Travel Jewellery Cases: How to Carry Your Jewellery Safely to Weddings and Abroad',
+    },
+    description: {
+      ar: 'كيف تحملون مجوهراتكم وساعاتكم بأمان في السفر والفنادق والحفلات والأعراس؟ شنط المجوهرات المقسّمة من الداخل من مؤسسة نصر الله التجارية، تصميم خاص لا تجدونه في مكان آخر في قطر.',
+      en: 'How to carry your jewellery and watches safely when travelling, in hotels, to parties and to weddings, with the divided travel jewellery cases from Nasrallah Trading Est, a special design you will not find anywhere else in Qatar.',
+    },
+    keywords: {
+      ar: 'شنطة مجوهرات للسفر، حقيبة مجوهرات، شنطة ذهب للأعراس، حفظ المجوهرات في الفندق',
+      en: 'travel jewellery case, jewellery case Qatar, wedding jewellery case, jewellery storage for travel',
+    },
+    body: {
+      ar: [
+        {
+          p: 'الخزنة تحمي مجوهراتكم في البيت، لكن ماذا عن الأيام التي تخرج فيها المجوهرات معكم؟ السفر، والإقامة في فندق، وحفلات الأعراس والمناسبات، كلها مواقف تُحمل فيها أثمن القطع في علب متفرقة أو أكياس صغيرة، فتتلامس وتُخدش وتتشابك، ويسهل أن تضيع قطعة دون أن تنتبهوا.',
+        },
+        { h: 'لماذا لا تكفي علبة المجوهرات العادية؟' },
+        {
+          ul: [
+            'العلب الصغيرة المتفرقة يصعب تتبّعها، وتضيع بسهولة بين الأغراض.',
+            'الأكياس القماشية لا تفصل القطع، فتتشابك السلاسل وتُخدش الأحجار.',
+            'الساعات تحتاج إلى وسائد تحفظ شكل السوار، لا إلى درج مزدحم.',
+          ],
+        },
+        { h: 'ما الذي يميّز شنط المجوهرات لدينا؟' },
+        {
+          p: 'صمّمت مؤسسة نصر الله التجارية شنطًا مقسّمة من الداخل تحمل طقمًا كاملًا في مكان واحد، وهي تصميم خاص لا تجدونه في مكان آخر في قطر:',
+        },
+        {
+          ul: [
+            'خانات مخصّصة للعقود والأساور والخواتم والأقراط.',
+            'وسائد للساعات تحفظ كل ساعة في مكانها.',
+            'بطانة ناعمة تمنع تلامس القطع.',
+            'أقفال ذهبية محكمة ومقبض متين للحمل.',
+            'تشطيب أسود بملمس جلد التمساح، أو لون رمادي فاتح.',
+          ],
+        },
+        { h: 'متى تحتاجون إليها؟' },
+        {
+          ul: [
+            'السفر: تبقى المجوهرات معكم في مكان واحد بدل أن تتوزع بين الحقائب.',
+            'الفنادق: ترتيب واضح يخبركم فورًا إن كانت قطعة ناقصة.',
+            'الحفلات والأعراس: تحمل العروس وأهلها أطقم الذهب والألماس إلى قاعة الحفل وصالون التجميل في شنطة واحدة مرتّبة.',
+            'الهدايا: شنطة مجوهرات مرتّبة هدية تليق بالعروس أو بمن يحب المجوهرات.',
+          ],
+        },
+        { h: 'نصائح لحمل المجوهرات خارج البيت' },
+        {
+          ul: [
+            'احملوا شنطة المجوهرات معكم في حقيبة اليد، ولا تضعوها في الحقائب المشحونة.',
+            'في الفندق، احفظوها في خزنة الغرفة أو خزنة الاستقبال حين تخرجون.',
+            'صوّروا الأطقم قبل السفر، ليسهل التأكد من وجود كل قطعة عند العودة.',
+            'أعيدوا كل قطعة إلى خانتها فور خلعها.',
+          ],
+        },
+        { p: 'شاهدوا شنط المجوهرات في معرضنا، أو اسألونا عنها على واتساب.' },
+      ],
+      en: [
+        {
+          p: 'A safe protects your jewellery at home, but what about the days your jewellery goes out with you? Travelling, staying in a hotel, weddings and celebrations are all times when the most precious pieces are carried in assorted boxes or small pouches, where they touch, scratch and tangle, and a piece can go missing without you noticing.',
+        },
+        { h: 'Why is an ordinary jewellery box not enough?' },
+        {
+          ul: [
+            'Small separate boxes are hard to keep track of and easily lost among your things.',
+            'Fabric pouches do not keep pieces apart, so chains tangle and stones get scratched.',
+            'Watches need cushions that keep the strap’s shape, not a crowded drawer.',
+          ],
+        },
+        { h: 'What makes our jewellery cases different?' },
+        {
+          p: 'Nasrallah Trading Est designed cases divided inside to carry a whole set in one place, a special design you will not find anywhere else in Qatar:',
+        },
+        {
+          ul: [
+            'Dedicated compartments for necklaces, bangles, rings and earrings.',
+            'Watch cushions that hold each watch in its place.',
+            'Soft linings that keep pieces from touching.',
+            'Secure gold-tone clasps and a sturdy carry handle.',
+            'A black crocodile-texture finish, or light grey.',
+          ],
+        },
+        { h: 'When do you need one?' },
+        {
+          ul: [
+            'Travelling: your jewellery stays together in one place instead of spread across bags.',
+            'Hotels: a clear layout tells you at once if a piece is missing.',
+            'Parties and weddings: the bride and her family carry their gold and diamond sets to the wedding hall and the salon in one tidy case.',
+            'Gifts: a well-arranged jewellery case is a gift worthy of a bride or anyone who loves jewellery.',
+          ],
+        },
+        { h: 'Tips for carrying jewellery away from home' },
+        {
+          ul: [
+            'Keep the jewellery case with you in your hand luggage, never in checked bags.',
+            'At the hotel, lock it in the room safe or the front-desk safe when you go out.',
+            'Photograph your sets before you travel, so it is easy to check every piece on your return.',
+            'Put each piece back in its compartment as soon as you take it off.',
+          ],
+        },
+        { p: 'See the jewellery cases in our showroom, or ask us about them on WhatsApp.' },
+      ],
+    },
+    products: [
+      'travel-jewellery-cases',
+      'jewellery-display-drawers',
+      'watch-winder-safe',
+      'marble-interior-jewellery-safe',
+    ],
+    links: [{ category: 'jewellery-watch-interiors' }, { article: 'jewellery-and-watch-safes' }],
+  },
 ]

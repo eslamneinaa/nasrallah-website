@@ -50,7 +50,7 @@ export default async function HomePage({ params }: LocaleParams) {
         <div className="container-page grid items-center gap-20 lg:grid-cols-12">
           <Reveal className="order-last px-3 lg:order-first lg:col-span-6">
             <Frame className="mx-auto aspect-[3/2] max-w-2xl bg-maroon-900">
-              <Image src="/showroom/storefront-night.webp" alt={dict.intro.imageAlt} fill sizes="(min-width: 1024px) 45vw, 90vw" className="object-cover" />
+              <Image src="/showroom/nasrallah-storefront-night.webp" alt={dict.intro.imageAlt} fill sizes="(min-width: 1024px) 45vw, 90vw" className="object-cover" />
             </Frame>
           </Reveal>
 

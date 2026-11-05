@@ -140,6 +140,10 @@ const en = {
         a: 'Yes. We fit our jewellery safes with velvet-lined drawers, necklace busts, ring rolls and watch cushions, with wood finishes and brass handles, so every piece has its place.',
       },
       {
+        q: 'Do you have cases for carrying jewellery when travelling or to weddings?',
+        a: 'Yes. Our travel jewellery cases are divided inside, with compartments for necklaces, bangles, rings and earrings and cushions for watches, so you can carry your jewellery safely when travelling, in hotels, to parties and to weddings. They are a special design you will not find anywhere else in Qatar.',
+      },
+      {
         q: 'Is delivery free?',
         a: 'Yes, delivery is free. Contact us to arrange a delivery time.',
       },

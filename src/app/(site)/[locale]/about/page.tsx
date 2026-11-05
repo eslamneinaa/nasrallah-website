@@ -43,7 +43,7 @@ export default async function AboutPage({ params }: LocaleParams) {
           </div>
           <Reveal delay={0.15} className="px-3 lg:col-span-5">
             <Frame className="mx-auto aspect-[3/2] max-w-xl bg-maroon-900">
-              <Image src="/showroom/showroom-day.webp" alt={t.story.imageAlt} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+              <Image src="/showroom/nasrallah-storefront-day.webp" alt={t.story.imageAlt} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
             </Frame>
             <div className="relative mx-auto -mt-6 max-w-sm border border-gold-500/50 bg-maroon-950 p-7 text-pearl-100 shadow-lift">
               <p className="eyebrow text-gold-400">

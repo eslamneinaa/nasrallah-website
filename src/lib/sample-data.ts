@@ -72,6 +72,58 @@ export const sampleProducts: Product[] = [
     order: 1,
   },
   {
+    _id: 'p25',
+    slug: 'uchida-white-safe-with-wooden-shelves',
+    name: { en: 'UCHIDA White Safe with Wooden Shelves', ar: 'خزنة UCHIDA بيضاء بأرفف خشبية' },
+    category: fire,
+    shortDesc: {
+      en: 'A white UCHIDA steel safe with a digital keypad, opening onto three wooden shelves and a drawer below.',
+      ar: 'خزنة UCHIDA حديدية بيضاء بقفل رقمي، تنفتح على ثلاثة أرفف خشبية ودرج سفلي.',
+    },
+    fullDesc: desc(
+      'Clean white steel outside and warm wood inside: this UCHIDA safe opens with a digital keypad and handle onto three wooden shelves for files, cash and boxes, with a drawer below for smaller valuables. Its heavy door is carried on external hinges.',
+      'فولاذ أبيض أنيق من الخارج وخشب دافئ من الداخل: تُفتح هذه الخزنة من UCHIDA بقفل رقمي ومقبض على ثلاثة أرفف خشبية للملفات والنقود والعلب، ودرج سفلي للمقتنيات الصغيرة، ويُحمل بابها المتين على مفصلات خارجية.',
+    ),
+    images: [
+      img('uchida-white-safe', 1086, 1448, 'White UCHIDA steel safe with a digital keypad and handle'),
+      img('uchida-white-safe-open', 1312, 1199, 'The white UCHIDA safe open, with three wooden shelves and a drawer'),
+    ],
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Digital keypad with handle', 'قفل رقمي بلوحة أرقام ومقبض'),
+      spec('Interior', 'التجهيز الداخلي', 'Three wooden shelves and a drawer', 'ثلاثة أرفف خشبية ودرج'),
+      spec('Finish', 'اللون', 'White', 'أبيض'),
+    ],
+    isFeatured: false,
+    order: 2,
+  },
+  {
+    _id: 'p26',
+    slug: 'uchida-red-safe-with-leather-drawers',
+    name: { en: 'UCHIDA Red Safe with Leather Drawers', ar: 'خزنة UCHIDA حمراء بأدراج جلدية' },
+    category: luxury,
+    shortDesc: {
+      en: 'A bold red UCHIDA safe with a digital keypad and round handle, fitted inside with two leather-lined drawers.',
+      ar: 'خزنة UCHIDA بلون أحمر لافت، بقفل رقمي ومقبض دائري، ومجهّزة من الداخل بدرجين مبطّنين بالجلد.',
+    },
+    fullDesc: desc(
+      'A safe that makes a statement: deep red steel, the UCHIDA and Nasrallah plates, a digital keypad beside a round chrome handle, and inside, two soft leather drawers for jewellery, watches and keepsakes.',
+      'خزنة تلفت الأنظار: فولاذ بلون أحمر عميق يحمل لوحتي UCHIDA ونصر الله، وقفل رقمي بجوار مقبض دائري لامع، وفي الداخل درجان من الجلد الناعم للمجوهرات والساعات والمقتنيات العزيزة.',
+    ),
+    images: [
+      img('uchida-red-safe', 1536, 1024, 'Red UCHIDA safe with a digital keypad and round chrome handle'),
+      img('uchida-red-safe-open', 1536, 1024, 'The red UCHIDA safe open, with two leather-lined drawers'),
+    ],
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Digital keypad with round handle', 'قفل رقمي بلوحة أرقام ومقبض دائري'),
+      spec('Interior', 'التجهيز الداخلي', 'Two leather-lined drawers', 'درجان مبطّنان بالجلد'),
+      spec('Finish', 'اللون', 'Red', 'أحمر'),
+    ],
+    isFeatured: false,
+    order: 3,
+  },
+  {
     _id: 'p2',
     slug: 'uchida-four-drawer-filing-cabinet',
     name: { en: 'UCHIDA Four-Drawer Filing Cabinet', ar: 'خزانة ملفات UCHIDA بأربعة أدراج' },
@@ -92,7 +144,7 @@ export const sampleProducts: Product[] = [
       spec('For', 'الاستخدام', 'Files and documents', 'الملفات والمستندات'),
     ],
     isFeatured: true,
-    order: 2,
+    order: 4,
   },
   {
     _id: 'p3',
@@ -114,7 +166,7 @@ export const sampleProducts: Product[] = [
       spec('Detail', 'التفاصيل', 'Nasrallah brass plate', 'لوحة نصر الله النحاسية'),
     ],
     isFeatured: true,
-    order: 3,
+    order: 5,
   },
   {
     _id: 'p4',
@@ -136,7 +188,57 @@ export const sampleProducts: Product[] = [
       spec('Frame', 'الإطار', 'Black steel', 'فولاذ أسود'),
     ],
     isFeatured: true,
-    order: 4,
+    order: 6,
+  },
+  {
+    _id: 'p27',
+    slug: 'watch-winder-safe',
+    name: { en: 'Safe with Built-In Watch Winder', ar: 'خزنة بدوّار ساعات مدمج' },
+    category: luxury,
+    shortDesc: {
+      en: 'A white safe fitted with a four-watch winder in a wooden frame, keeping automatic watches wound and secure, with a leather drawer above.',
+      ar: 'خزنة بيضاء مجهّزة بدوّار لأربع ساعات في إطار خشبي، يُبقي الساعات الأوتوماتيكية تعمل وهي في أمان، مع درج جلدي في الأعلى.',
+    },
+    fullDesc: desc(
+      'Automatic watches stop when they sit still. This safe keeps four of them turning on a built-in watch winder, set in a wooden frame with leather trim and softly lit rotors, so they are wound, protected and ready to wear. A leather drawer above holds straps and smaller pieces.',
+      'الساعات الأوتوماتيكية تتوقف إذا تُركت دون حركة. تُبقي هذه الخزنة أربع ساعات في دوران مستمر على دوّار ساعات (Watch Winder) مدمج في إطار خشبي بلمسات جلدية وبكرات مضيئة، فتبقى الساعات تعمل ومحمية وجاهزة للبس، ويضم الدرج الجلدي العلوي الأحزمة والقطع الصغيرة.',
+    ),
+    images: [
+      img('watch-winder-safe', 1086, 1448, 'White safe with a four-watch winder lit in blue inside a wooden frame'),
+      img('watch-winder-safe-detail', 1086, 1448, 'The watch winder inside the white safe, holding automatic watches'),
+    ],
+    specTable: [
+      spec('Watch winder', 'دوّار الساعات', 'Four watches', 'أربع ساعات'),
+      spec('Frame', 'الإطار', 'Wood with leather trim', 'خشب بلمسات جلدية'),
+      spec('Extras', 'إضافات', 'Leather drawer above the winder', 'درج جلدي فوق الدوّار'),
+      spec('Finish', 'اللون', 'White', 'أبيض'),
+    ],
+    isFeatured: false,
+    order: 7,
+  },
+  {
+    _id: 'p28',
+    slug: 'marble-interior-jewellery-safe',
+    name: { en: 'Jewellery Safe with Marble-Finish Interior', ar: 'خزنة مجوهرات بتجهيز داخلي بنقشة الرخام' },
+    category: luxury,
+    shortDesc: {
+      en: 'A black steel safe with a white marble-finish interior: necklace busts, display shelves, drawers and an earring board inside the door.',
+      ar: 'خزنة فولاذية سوداء بتجهيز داخلي أبيض بنقشة الرخام: مجسّمات للعقود، ورفوف عرض، وأدراج، ولوحة للأقراط على الوجه الداخلي للباب.',
+    },
+    fullDesc: desc(
+      'Open the black steel door and the whole collection is on display: necklace busts on marble-finish shelves, a column of drawers with brass handles for rings and bracelets, and an earring board on the inside of the door, so every piece is protected and in view.',
+      'افتحوا الباب الفولاذي الأسود لتظهر المجموعة كلها أمامكم: مجسّمات العقود على رفوف بنقشة الرخام، وعمود من الأدراج بمقابض نحاسية للخواتم والأساور، ولوحة للأقراط على الوجه الداخلي للباب، فتبقى كل قطعة محمية وأمام أعينكم.',
+    ),
+    images: [
+      img('marble-jewellery-safe', 1086, 1448, 'Black jewellery safe open, with a white marble-finish interior, necklace busts and drawers'),
+    ],
+    specTable: [
+      spec('Exterior', 'الهيكل', 'Black steel', 'فولاذ أسود'),
+      spec('Interior', 'التجهيز الداخلي', 'White marble finish', 'أبيض بنقشة الرخام'),
+      spec('Fittings', 'التجهيزات', 'Necklace busts, display shelves, drawers, earring board on the door', 'مجسّمات عقود، رفوف عرض، أدراج، لوحة أقراط على الباب'),
+    ],
+    isFeatured: false,
+    order: 8,
   },
   {
     _id: 'p5',
@@ -169,7 +271,7 @@ export const sampleProducts: Product[] = [
       spec('Front', 'الواجهة', 'Wood-grain finish', 'نقشة خشبية'),
     ],
     isFeatured: true,
-    order: 5,
+    order: 9,
   },
   {
     _id: 'p6',
@@ -194,7 +296,7 @@ export const sampleProducts: Product[] = [
       spec('Handles', 'المقابض', 'Brass', 'نحاس'),
     ],
     isFeatured: true,
-    order: 6,
+    order: 10,
   },
   {
     _id: 'p7',
@@ -228,7 +330,32 @@ export const sampleProducts: Product[] = [
       spec('Lining', 'البطانة', 'Black or blue velvet', 'مخمل أسود أو أزرق'),
     ],
     isFeatured: false,
-    order: 7,
+    order: 11,
+  },
+  {
+    _id: 'p29',
+    slug: 'travel-jewellery-cases',
+    name: { en: 'Travel Jewellery Cases', ar: 'شنط المجوهرات للسفر' },
+    category: interiors,
+    shortDesc: {
+      en: 'Cases divided inside for carrying jewellery and watches safely when travelling, in hotels, to parties and to weddings.',
+      ar: 'شنط مقسّمة من الداخل لحمل المجوهرات والساعات بأمان في السفر والفنادق والحفلات والأعراس.',
+    },
+    fullDesc: desc(
+      'A special design from Nasrallah Trading Est that you will not find anywhere else in Qatar. Each case carries a whole set safely: compartments for necklaces, bangles, rings and earrings, cushions for watches, and soft linings that keep pieces from touching, closed with secure gold-tone clasps. Available in a black crocodile-texture finish and in light grey.',
+      'تصميم خاص من مؤسسة نصر الله التجارية لا تجدونه في مكان آخر في قطر. تحمل كل شنطة طقمًا كاملًا بأمان: خانات للعقود والأساور والخواتم والأقراط، ووسائد للساعات، وبطانة ناعمة تمنع تلامس القطع، مع أقفال ذهبية محكمة. متوفرة بتشطيب أسود بملمس جلد التمساح وباللون الرمادي الفاتح.',
+    ),
+    images: [
+      img('travel-jewellery-case-black', 1448, 1086, 'Open black crocodile-texture travel case with compartments holding a necklace, bangles and earrings'),
+      img('travel-jewellery-case-grey', 1086, 1448, 'Open light-grey travel case with watch cushions and ring drawers'),
+    ],
+    specTable: [
+      spec('Use', 'الاستخدام', 'Travel, hotels, parties and weddings', 'السفر والفنادق والحفلات والأعراس'),
+      spec('Compartments', 'الخانات', 'Necklaces, bangles, rings, earrings and watches', 'العقود والأساور والخواتم والأقراط والساعات'),
+      spec('Finishes', 'التشطيبات', 'Black crocodile texture, light grey', 'أسود بملمس جلد التمساح، رمادي فاتح'),
+    ],
+    isFeatured: false,
+    order: 12,
   },
   {
     _id: 'p8',
@@ -254,7 +381,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Grey', 'رمادي'),
     ],
     isFeatured: false,
-    order: 8,
+    order: 13,
   },
   {
     _id: 'p24',
@@ -277,7 +404,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Black', 'أسود'),
     ],
     isFeatured: false,
-    order: 9,
+    order: 14,
   },
   {
     _id: 'p9',
@@ -304,7 +431,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'White, beige', 'أبيض، بيج'),
     ],
     isFeatured: false,
-    order: 10,
+    order: 15,
   },
   {
     _id: 'p10',
@@ -328,7 +455,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Beige', 'بيج'),
     ],
     isFeatured: false,
-    order: 11,
+    order: 16,
   },
   {
     _id: 'p11',
@@ -352,7 +479,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 12,
+    order: 17,
   },
   {
     _id: 'p12',
@@ -379,7 +506,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Grey, beige', 'رمادي، بيج'),
     ],
     isFeatured: false,
-    order: 13,
+    order: 18,
   },
   {
     _id: 'p13',
@@ -403,7 +530,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'White', 'أبيض'),
     ],
     isFeatured: false,
-    order: 14,
+    order: 19,
   },
   {
     _id: 'p14',
@@ -426,7 +553,7 @@ export const sampleProducts: Product[] = [
       spec('Handles', 'المقابض', 'Chrome', 'كروم'),
     ],
     isFeatured: false,
-    order: 15,
+    order: 20,
   },
   {
     _id: 'p15',
@@ -450,7 +577,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 16,
+    order: 21,
   },
   {
     _id: 'p16',
@@ -474,7 +601,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 17,
+    order: 22,
   },
   {
     _id: 'p17',
@@ -498,7 +625,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Cream', 'كريمي'),
     ],
     isFeatured: false,
-    order: 18,
+    order: 23,
   },
   {
     _id: 'p18',
@@ -524,7 +651,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Beige, off-white', 'بيج، أبيض عاجي'),
     ],
     isFeatured: false,
-    order: 19,
+    order: 24,
   },
   {
     _id: 'p19',
@@ -548,7 +675,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal door, cream frame', 'باب فحمي، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 20,
+    order: 25,
   },
   {
     _id: 'p21',
@@ -572,7 +699,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 22,
+    order: 27,
   },
   {
     _id: 'p22',
@@ -596,7 +723,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 23,
+    order: 28,
   },
   {
     _id: 'p23',
@@ -623,6 +750,6 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Light grey, black', 'رمادي فاتح، أسود'),
     ],
     isFeatured: false,
-    order: 24,
+    order: 29,
   },
 ]

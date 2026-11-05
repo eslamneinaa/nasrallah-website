@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { MotionProvider } from '@/components/motion/MotionProvider'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
-import { siteConfig, socialProfiles } from '@/config/site'
+import { siteConfig, socialProfiles, websiteJsonLd } from '@/config/site'
 import { dirOf, getDictionary, inBothLanguages, locales } from '@/i18n'
 import { fontVariables } from '@/lib/fonts'
 import { getCatalog } from '@/lib/sanity/api'
@@ -81,18 +81,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
   // WebSite gives Google the site name shown in results; Store describes the business.
   const structuredData = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'WebSite',
-        '@id': `${siteConfig.url}/#website`,
-        url: siteConfig.url,
-        name: siteConfig.name[locale],
-        alternateName: siteConfig.name[locale === 'ar' ? 'en' : 'ar'],
-        inLanguage: locale,
-        publisher: { '@id': `${siteConfig.url}/#business` },
-      },
-      business,
-    ],
+    '@graph': [{ ...websiteJsonLd, inLanguage: locale }, business],
   }
 
   return (

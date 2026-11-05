@@ -57,6 +57,17 @@ export const siteConfig = {
  *  engines and AI assistants can tie them to this business. */
 export const socialProfiles = [siteConfig.instagram.url, siteConfig.googleProfile]
 
+/** The site name Google shows above results. It is read from the domain's
+ *  home page, so "/" carries it too; one name on every page, Arabic first. */
+export const websiteJsonLd = {
+  '@type': 'WebSite',
+  '@id': `${siteConfig.url}/#website`,
+  url: `${siteConfig.url}/`,
+  name: siteConfig.name.ar,
+  alternateName: [siteConfig.name.en, ...siteConfig.alternateNames],
+  publisher: { '@id': `${siteConfig.url}/#business` },
+}
+
 export const telHref = (tel: string) => `tel:${tel}`
 
 /** Returns a wa.me link, or null when no WhatsApp number is configured. */

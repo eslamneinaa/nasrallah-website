@@ -52,21 +52,22 @@ export const sampleCategories: Category[] = [fire, deposit, luxury, interiors, f
 export const sampleProducts: Product[] = [
   {
     _id: 'p1',
-    slug: 'uchida-ubo-145e-fire-resistant-safe',
-    name: { en: 'UCHIDA UBO-145E Fire-Resistant Safe', ar: 'خزنة UCHIDA المقاومة للحريق UBO-145E' },
+    slug: 'uchida-full-height-fire-resistant-safe',
+    name: { en: 'UCHIDA Full-Height Fire-Resistant Safe', ar: 'خزنة UCHIDA المقاومة للحريق بارتفاع كامل' },
     category: fire,
     shortDesc: {
       en: 'A full-height UCHIDA safe with an electronic keypad, key override and three heavy-duty hinges, for offices, banks and institutions.',
       ar: 'خزنة UCHIDA بارتفاع كامل، بقفل إلكتروني رقمي مع مفتاح احتياطي وثلاث مفصلات متينة، للمكاتب والبنوك والمؤسسات.',
     },
     fullDesc: desc(
-      'The UBO-145E is a full-height UCHIDA safe built to protect cash, records and valuables against fire and unauthorised access. Its electronic keypad is backed by a mechanical key, and the door is carried on three heavy-duty external hinges.',
-      'خزنة UBO-145E من UCHIDA بارتفاع كامل، صُمّمت لحماية النقد والسجلات والمقتنيات الثمينة من الحريق والوصول غير المصرّح به. يعمل قفلها الإلكتروني الرقمي مع مفتاح ميكانيكي احتياطي، ويُحمل بابها على ثلاث مفصلات خارجية متينة.',
+      'This full-height UCHIDA safe is built to protect cash, records and valuables against fire and unauthorised access. Its electronic keypad is backed by a mechanical key, and the door is carried on three heavy-duty external hinges.',
+      'خزنة من UCHIDA بارتفاع كامل، صُمّمت لحماية النقد والسجلات والمقتنيات الثمينة من الحريق والوصول غير المصرّح به. يعمل قفلها الإلكتروني الرقمي مع مفتاح ميكانيكي احتياطي، ويُحمل بابها على ثلاث مفصلات خارجية متينة.',
     ),
-    images: [img('uchida-digital-safe', 1086, 1448, 'UCHIDA UBO-145E fire-resistant safe in light grey with an electronic keypad')],
+    images: [
+      img('uchida-digital-safe', 1086, 1448, 'Full-height UCHIDA fire-resistant safe in light grey with an electronic keypad'),
+    ],
     specTable: [
       brand,
-      spec('Model', 'الطراز', 'UBO-145E', 'UBO-145E'),
       spec('Lock', 'القفل', 'Electronic keypad with key override', 'قفل إلكتروني رقمي مع مفتاح احتياطي'),
       spec('Hinges', 'المفصلات', '3 heavy-duty external hinges', '3 مفصلات خارجية متينة'),
       spec('Finish', 'اللون', 'Light grey', 'رمادي فاتح'),
@@ -106,25 +107,25 @@ export const sampleProducts: Product[] = [
     name: { en: 'UCHIDA Red Safe with Leather Drawers', ar: 'خزنة UCHIDA حمراء بأدراج جلدية' },
     category: luxury,
     shortDesc: {
-      en: 'A bold red UCHIDA safe with a digital keypad and round handle, fitted inside with two leather-lined drawers.',
-      ar: 'خزنة UCHIDA بلون أحمر لافت، بقفل رقمي ومقبض دائري، ومجهّزة من الداخل بدرجين مبطّنين بالجلد.',
+      en: 'A bold red UCHIDA safe with a digital keypad and round handle, fitted inside with four drawers in crocodile-texture leather.',
+      ar: 'خزنة UCHIDA بلون أحمر لافت، بقفل رقمي ومقبض دائري، ومجهّزة من الداخل بأربعة أدراج من الجلد بملمس جلد التمساح.',
     },
     fullDesc: desc(
-      'A safe that makes a statement: deep red steel, the UCHIDA and Nasrallah plates, a digital keypad beside a round chrome handle, and inside, two soft leather drawers for jewellery, watches and keepsakes.',
-      'خزنة تلفت الأنظار: فولاذ بلون أحمر عميق يحمل لوحتي UCHIDA ونصر الله، وقفل رقمي بجوار مقبض دائري لامع، وفي الداخل درجان من الجلد الناعم للمجوهرات والساعات والمقتنيات العزيزة.',
+      'A safe that makes a statement: deep red steel, the UCHIDA and Nasrallah plates, a digital keypad beside a round chrome handle, and inside, four drawers in brown crocodile-texture leather for jewellery, watches and keepsakes.',
+      'خزنة تلفت الأنظار: فولاذ بلون أحمر عميق يحمل لوحتي UCHIDA ونصر الله، وقفل رقمي بجوار مقبض دائري لامع، وفي الداخل أربعة أدراج من الجلد البني بملمس جلد التمساح للمجوهرات والساعات والمقتنيات العزيزة.',
     ),
     images: [
-      img('uchida-red-safe', 1536, 1024, 'Red UCHIDA safe with a digital keypad and round chrome handle'),
-      img('uchida-red-safe-open', 1536, 1024, 'The red UCHIDA safe open, with two leather-lined drawers'),
+      img('uchida-red-safe-front', 1145, 1373, 'Red UCHIDA safe with a digital keypad and round chrome handle'),
+      img('uchida-red-safe-drawers', 1312, 1199, 'The red UCHIDA safe open, with four crocodile-texture leather drawers'),
     ],
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Digital keypad with round handle', 'قفل رقمي بلوحة أرقام ومقبض دائري'),
-      spec('Interior', 'التجهيز الداخلي', 'Two leather-lined drawers', 'درجان مبطّنان بالجلد'),
+      spec('Interior', 'التجهيز الداخلي', 'Four crocodile-texture leather drawers', 'أربعة أدراج جلدية بملمس جلد التمساح'),
       spec('Finish', 'اللون', 'Red', 'أحمر'),
     ],
     isFeatured: false,
-    order: 12,
+    order: 13,
   },
   {
     _id: 'p2',
@@ -147,7 +148,7 @@ export const sampleProducts: Product[] = [
       spec('For', 'الاستخدام', 'Files and documents', 'الملفات والمستندات'),
     ],
     isFeatured: true,
-    order: 22,
+    order: 23,
   },
   {
     _id: 'p3',
@@ -169,7 +170,7 @@ export const sampleProducts: Product[] = [
       spec('Detail', 'التفاصيل', 'Nasrallah brass plate', 'لوحة نصر الله النحاسية'),
     ],
     isFeatured: true,
-    order: 13,
+    order: 14,
   },
   {
     _id: 'p4',
@@ -191,7 +192,7 @@ export const sampleProducts: Product[] = [
       spec('Frame', 'الإطار', 'Black steel', 'فولاذ أسود'),
     ],
     isFeatured: true,
-    order: 14,
+    order: 15,
   },
   {
     _id: 'p27',
@@ -217,7 +218,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'White', 'أبيض'),
     ],
     isFeatured: false,
-    order: 16,
+    order: 17,
   },
   {
     _id: 'p28',
@@ -241,7 +242,7 @@ export const sampleProducts: Product[] = [
       spec('Fittings', 'التجهيزات', 'Necklace busts, display shelves, drawers, earring board on the door', 'مجسّمات عقود، رفوف عرض، أدراج، لوحة أقراط على الباب'),
     ],
     isFeatured: false,
-    order: 17,
+    order: 18,
   },
   {
     _id: 'p5',
@@ -274,7 +275,7 @@ export const sampleProducts: Product[] = [
       spec('Front', 'الواجهة', 'Wood-grain finish', 'نقشة خشبية'),
     ],
     isFeatured: true,
-    order: 18,
+    order: 19,
   },
   {
     _id: 'p6',
@@ -299,7 +300,7 @@ export const sampleProducts: Product[] = [
       spec('Handles', 'المقابض', 'Brass', 'نحاس'),
     ],
     isFeatured: true,
-    order: 19,
+    order: 20,
   },
   {
     _id: 'p7',
@@ -333,7 +334,7 @@ export const sampleProducts: Product[] = [
       spec('Lining', 'البطانة', 'Black or blue velvet', 'مخمل أسود أو أزرق'),
     ],
     isFeatured: false,
-    order: 20,
+    order: 21,
   },
   {
     _id: 'p29',
@@ -358,7 +359,7 @@ export const sampleProducts: Product[] = [
       spec('Finishes', 'التشطيبات', 'Black crocodile texture, light grey', 'أسود بملمس جلد التمساح، رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 21,
+    order: 22,
   },
   {
     _id: 'p8',
@@ -384,30 +385,31 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Grey', 'رمادي'),
     ],
     isFeatured: false,
-    order: 6,
+    order: 7,
   },
   {
     _id: 'p24',
-    slug: 'sakura-ons-fe-fingerprint-safe',
-    name: { en: 'SAKURA ONS-FE Fingerprint Safe', ar: 'خزنة SAKURA بالبصمة ONS-FE' },
+    slug: 'sakura-fingerprint-safe',
+    name: { en: 'SAKURA Black Fingerprint Safe', ar: 'خزنة SAKURA السوداء بالبصمة' },
     category: fire,
     shortDesc: {
       en: 'A black SAKURA steel safe with a vertical handle that combines a digital keypad and a fingerprint scanner.',
       ar: 'خزنة حديدية سوداء من SAKURA بمقبض عمودي يجمع بين لوحة أرقام رقمية وقارئ بصمة.',
     },
     fullDesc: desc(
-      'The ONS-FE puts a digital keypad and a fingerprint scanner into one vertical handle on a clean black door, so the safe opens quickly for the people you trust and stays shut for everyone else.',
-      'تجمع خزنة ONS-FE لوحة أرقام رقمية وقارئ بصمة في مقبض عمودي واحد على باب أسود أنيق، فتُفتح بسرعة لمن تثقون بهم وتبقى مغلقة أمام غيرهم.',
+      'This SAKURA safe puts a digital keypad and a fingerprint scanner into one vertical handle on a clean black door, so it opens quickly for the people you trust and stays shut for everyone else.',
+      'تجمع هذه الخزنة من SAKURA لوحة أرقام رقمية وقارئ بصمة في مقبض عمودي واحد على باب أسود أنيق، فتُفتح بسرعة لمن تثقون بهم وتبقى مغلقة أمام غيرهم.',
     ),
-    images: [img('sakura-ons-fe-safe', 1086, 1448, 'Black SAKURA ONS-FE steel safe with a vertical keypad and fingerprint handle')],
+    images: [
+      img('sakura-fingerprint-safe-black', 1086, 1448, 'Black SAKURA steel safe with a vertical keypad and fingerprint handle'),
+    ],
     specTable: [
       brandSpec('SAKURA'),
-      spec('Model', 'الطراز', 'ONS-FE', 'ONS-FE'),
       spec('Lock', 'القفل', 'Digital keypad and fingerprint scanner', 'لوحة أرقام رقمية وقارئ بصمة'),
       spec('Finish', 'اللون', 'Black', 'أسود'),
     ],
     isFeatured: false,
-    order: 7,
+    order: 8,
   },
   {
     _id: 'p9',
@@ -434,7 +436,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'White, beige', 'أبيض، بيج'),
     ],
     isFeatured: false,
-    order: 33,
+    order: 34,
   },
   {
     _id: 'p10',
@@ -458,7 +460,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Beige', 'بيج'),
     ],
     isFeatured: false,
-    order: 34,
+    order: 35,
   },
   {
     _id: 'p11',
@@ -482,7 +484,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 35,
+    order: 36,
   },
   {
     _id: 'p12',
@@ -509,7 +511,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Grey, beige', 'رمادي، بيج'),
     ],
     isFeatured: false,
-    order: 36,
+    order: 37,
   },
   {
     _id: 'p13',
@@ -533,7 +535,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'White', 'أبيض'),
     ],
     isFeatured: false,
-    order: 37,
+    order: 38,
   },
   {
     _id: 'p14',
@@ -556,7 +558,7 @@ export const sampleProducts: Product[] = [
       spec('Handles', 'المقابض', 'Chrome', 'كروم'),
     ],
     isFeatured: false,
-    order: 38,
+    order: 39,
   },
   {
     _id: 'p15',
@@ -580,7 +582,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 39,
+    order: 40,
   },
   {
     _id: 'p16',
@@ -604,7 +606,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 40,
+    order: 41,
   },
   {
     _id: 'p17',
@@ -628,7 +630,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Cream', 'كريمي'),
     ],
     isFeatured: false,
-    order: 41,
+    order: 42,
   },
   {
     _id: 'p18',
@@ -654,7 +656,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Beige, off-white', 'بيج، أبيض عاجي'),
     ],
     isFeatured: false,
-    order: 42,
+    order: 43,
   },
   {
     _id: 'p19',
@@ -678,7 +680,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal door, cream frame', 'باب فحمي، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 43,
+    order: 44,
   },
   {
     _id: 'p21',
@@ -702,7 +704,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 26,
+    order: 27,
   },
   {
     _id: 'p22',
@@ -726,7 +728,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Cream drawers, light-grey frame', 'أدراج كريمية، إطار رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 27,
+    order: 28,
   },
   {
     _id: 'p23',
@@ -753,7 +755,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Light grey, black', 'رمادي فاتح، أسود'),
     ],
     isFeatured: false,
-    order: 28,
+    order: 29,
   },
   {
     _id: 'p30',
@@ -769,7 +771,7 @@ export const sampleProducts: Product[] = [
       'باب أسود أنيق بلوحة قفل عصرية: قارئ بصمة ولوحة أرقام باللمس بجوار مقبض دوّار متين، فتُفتح الخزنة في لحظة لمن تختارونهم، ويُحمل الباب على مفصلات خارجية متينة.',
     ),
     images: [
-      img('uchida-fingerprint-safe-black', 1448, 1086, 'Black UCHIDA safe with a fingerprint reader and touch keypad'),
+      img('uchida-fingerprint-safe', 1448, 1086, 'Black UCHIDA safe with a fingerprint reader and touch keypad'),
     ],
     specTable: [
       brand,
@@ -778,6 +780,31 @@ export const sampleProducts: Product[] = [
     ],
     isFeatured: false,
     order: 3,
+  },
+  {
+    _id: 'p45',
+    slug: 'uchida-black-digital-safe',
+    name: { en: 'UCHIDA Black Digital Safe', ar: 'خزنة UCHIDA السوداء بقفل رقمي' },
+    category: fire,
+    shortDesc: {
+      en: 'A tall black UCHIDA steel safe with a digital keypad, a key lock and a chrome lever handle, on three external hinges.',
+      ar: 'خزنة UCHIDA حديدية سوداء طويلة، بلوحة أرقام رقمية وقفل بمفتاح ومقبض معدني لامع، على ثلاث مفصلات خارجية.',
+    },
+    fullDesc: desc(
+      'A tall, plain black safe for the office or the home: a digital keypad and a key lock sit beside a chrome lever handle on one panel, and the heavy door swings on three external hinges, with room inside for cash, files and valuables.',
+      'خزنة سوداء طويلة بتصميم بسيط للمكتب أو البيت: لوحة أرقام رقمية وقفل بمفتاح بجوار مقبض معدني لامع على لوحة واحدة، ويدور بابها المتين على ثلاث مفصلات خارجية، مع مساحة داخلية للنقود والملفات والمقتنيات الثمينة.',
+    ),
+    images: [
+      img('uchida-black-digital-safe', 1086, 1448, 'Tall black UCHIDA safe with a digital keypad, key lock and chrome lever handle'),
+    ],
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Digital keypad, key and lever handle', 'لوحة أرقام رقمية ومفتاح ومقبض'),
+      spec('Hinges', 'المفصلات', 'Three external hinges', 'ثلاث مفصلات خارجية'),
+      spec('Finish', 'اللون', 'Black', 'أسود'),
+    ],
+    isFeatured: false,
+    order: 4,
   },
   {
     _id: 'p31',
@@ -802,7 +829,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Black', 'أسود'),
     ],
     isFeatured: false,
-    order: 4,
+    order: 5,
   },
   {
     _id: 'p32',
@@ -827,7 +854,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Grey', 'رمادي'),
     ],
     isFeatured: false,
-    order: 5,
+    order: 6,
   },
   {
     _id: 'p33',
@@ -852,33 +879,32 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Black', 'أسود'),
     ],
     isFeatured: false,
-    order: 8,
+    order: 9,
   },
   {
     _id: 'p34',
-    slug: 'kurogane-wing-safe-sk-12',
-    name: { en: 'KUROGANE Wing Safe SK-12', ar: 'خزنة KUROGANE Wing Safe طراز SK-12' },
+    slug: 'kurogane-compact-wing-safe',
+    name: { en: 'KUROGANE Compact Wing Safe', ar: 'خزنة KUROGANE Wing Safe الصغيرة' },
     category: fire,
     shortDesc: {
-      en: 'A compact beige KUROGANE Wing Safe, model SK-12, made in Japan, with a combination dial and a key lock.',
-      ar: 'خزنة KUROGANE Wing Safe صغيرة بلون بيج، طراز SK-12، صناعة يابانية، بقفل رقمي دوّار وقفل بمفتاح.',
+      en: 'A compact beige KUROGANE Wing Safe, made in Japan, with a combination dial and a key lock.',
+      ar: 'خزنة KUROGANE Wing Safe صغيرة بلون بيج، صناعة يابانية، بقفل رقمي دوّار وقفل بمفتاح.',
     },
     fullDesc: desc(
-      'The SK-12 brings Japanese Wing Safe construction to a compact size: a combination dial and a key lock on a steel panel, in a soft beige finish that sits quietly in a home or office.',
-      'تقدّم SK-12 صناعة Wing Safe اليابانية في حجم صغير: قفل رقمي دوّار وقفل بمفتاح على لوحة فولاذية، بلون بيج هادئ ينسجم في البيت أو المكتب.',
+      'This compact Wing Safe brings Japanese construction to a small size: a combination dial and a key lock on a steel panel, in a soft beige finish that sits quietly in a home or office.',
+      'تقدّم هذه الخزنة صناعة Wing Safe اليابانية في حجم صغير: قفل رقمي دوّار وقفل بمفتاح على لوحة فولاذية، بلون بيج هادئ ينسجم في البيت أو المكتب.',
     ),
     images: [
-      img('kurogane-wing-safe-sk12', 1448, 1086, 'Compact beige KUROGANE Wing Safe SK-12 with a combination dial and key lock'),
+      img('kurogane-wing-safe-beige', 1448, 1086, 'Compact beige KUROGANE Wing Safe with a combination dial and key lock'),
     ],
     specTable: [
       brandSpec('KUROGANE'),
-      spec('Model', 'الطراز', 'SK-12', 'SK-12'),
       spec('Made in', 'بلد الصنع', 'Japan', 'اليابان'),
       spec('Lock', 'القفل', 'Combination dial and key', 'قفل رقمي دوّار ومفتاح'),
       spec('Finish', 'اللون', 'Beige', 'بيج'),
     ],
     isFeatured: false,
-    order: 9,
+    order: 10,
   },
   {
     _id: 'p35',
@@ -904,7 +930,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Grey-green', 'رمادي مخضر'),
     ],
     isFeatured: false,
-    order: 10,
+    order: 11,
   },
   {
     _id: 'p36',
@@ -929,33 +955,32 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Cream', 'كريمي'),
     ],
     isFeatured: false,
-    order: 11,
+    order: 12,
   },
   {
     _id: 'p37',
-    slug: 'sakura-uds-65bf-floral-safe',
-    name: { en: 'SAKURA UDS-65BF Floral Safe', ar: 'خزنة SAKURA المزخرفة بالزهور UDS-65BF' },
+    slug: 'sakura-floral-safe',
+    name: { en: 'SAKURA Floral Safe', ar: 'خزنة SAKURA المزخرفة بالزهور' },
     category: luxury,
     shortDesc: {
       en: 'A SAKURA safe with a floral door, in black or silver mirror, with a wheel handle and a digital lock panel.',
       ar: 'خزنة SAKURA بباب مزخرف بالزهور، باللون الأسود أو بواجهة مرآة فضية، بمقبض دائري ولوحة قفل رقمية.',
     },
     fullDesc: desc(
-      'A safe that looks like a piece of décor: the UDS-65BF door is printed with tall blossoms on black or on a silver mirror finish, set in a cream frame, with a three-spoke wheel handle and a digital lock panel. Made for bedrooms and dressing rooms where the safe stays in view.',
-      'خزنة تبدو قطعة من الديكور: باب UDS-65BF مزيّن بزهور طويلة على خلفية سوداء أو على واجهة مرآة فضية، في إطار كريمي، مع مقبض دائري بثلاثة أذرع ولوحة قفل رقمية. صُمّمت لغرف النوم وغرف الملابس التي تبقى فيها الخزنة ظاهرة.',
+      'A safe that looks like a piece of décor: its door is printed with tall blossoms on black or on a silver mirror finish, set in a cream frame, with a three-spoke wheel handle and a digital lock panel. Made for bedrooms and dressing rooms where the safe stays in view.',
+      'خزنة تبدو قطعة من الديكور: بابها مزيّن بزهور طويلة على خلفية سوداء أو على واجهة مرآة فضية، في إطار كريمي، مع مقبض دائري بثلاثة أذرع ولوحة قفل رقمية. صُمّمت لغرف النوم وغرف الملابس التي تبقى فيها الخزنة ظاهرة.',
     ),
     images: [
-      img('sakura-uds-65bf-black', 1174, 1339, 'SAKURA UDS-65BF safe with a black floral door and a wheel handle'),
-      img('sakura-uds-65bf-silver', 1086, 1448, 'SAKURA UDS-65BF safe with a silver mirror floral door'),
+      img('sakura-floral-safe-black', 1174, 1339, 'SAKURA safe with a black floral door and a wheel handle'),
+      img('sakura-floral-safe-silver', 1086, 1448, 'SAKURA safe with a silver mirror floral door'),
     ],
     specTable: [
       brandSpec('SAKURA'),
-      spec('Model', 'الطراز', 'UDS-65BF', 'UDS-65BF'),
       spec('Lock', 'القفل', 'Digital lock with wheel handle', 'قفل رقمي ومقبض دائري'),
       spec('Finishes', 'التشطيبات', 'Black floral, silver mirror floral', 'أسود بالزهور، مرآة فضية بالزهور'),
     ],
     isFeatured: false,
-    order: 15,
+    order: 16,
   },
   {
     _id: 'p38',
@@ -980,7 +1005,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Cream', 'كريمي'),
     ],
     isFeatured: false,
-    order: 23,
+    order: 24,
   },
   {
     _id: 'p39',
@@ -1005,7 +1030,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Black', 'أسود'),
     ],
     isFeatured: false,
-    order: 24,
+    order: 25,
   },
   {
     _id: 'p40',
@@ -1030,59 +1055,58 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 25,
+    order: 26,
   },
   {
     _id: 'p41',
-    slug: 'uchida-100-key-cabinet',
-    name: { en: 'UCHIDA 100-Key Cabinet', ar: 'خزانة مفاتيح UCHIDA لـ 100 مفتاح' },
+    slug: 'uchida-key-cabinet',
+    name: { en: 'UCHIDA Key Cabinet', ar: 'خزانة مفاتيح UCHIDA' },
     category: keyCabinets,
     shortDesc: {
-      en: 'A slim grey wall-mounted UCHIDA key cabinet with 100 numbered hooks and colour-coded tags, closed with a key lock.',
-      ar: 'خزانة مفاتيح UCHIDA رمادية نحيفة تُعلّق على الجدار، بـ 100 خطاف مرقّم وميداليات ملوّنة، تُقفل بمفتاح.',
+      en: 'A slim grey wall-mounted UCHIDA key cabinet with numbered hooks and colour-coded tags, closed with a key lock.',
+      ar: 'خزانة مفاتيح UCHIDA رمادية نحيفة تُعلّق على الجدار، بخطافات مرقّمة وميداليات ملوّنة، تُقفل بمفتاح.',
     },
     fullDesc: desc(
-      'Every key in its numbered place: one hundred hooks across the cabinet and its door, with yellow and blue tags to sort keys by building, floor or vehicle. Ideal for hotels, compounds, companies, car showrooms and maintenance teams.',
-      'لكل مفتاح مكانه المرقّم: مئة خطاف موزّعة على الخزانة وبابها، مع ميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة. مثالية للفنادق والمجمعات السكنية والشركات ومعارض السيارات وفرق الصيانة.',
+      'Every key in its numbered place: rows of numbered hooks inside the cabinet and on its door, with yellow and blue tags to sort keys by building, floor or vehicle. Ideal for hotels, compounds, companies, car showrooms and maintenance teams.',
+      'لكل مفتاح مكانه المرقّم: صفوف من الخطافات المرقّمة داخل الخزانة وعلى بابها، مع ميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة. مثالية للفنادق والمجمعات السكنية والشركات ومعارض السيارات وفرق الصيانة.',
     ),
     images: [
-      img('uchida-key-cabinet', 1086, 1448, 'Slim grey UCHIDA wall key cabinet, closed'),
-      img('uchida-key-cabinet-open', 1219, 1290, 'The UCHIDA key cabinet open, with 100 numbered hooks and yellow and blue key tags'),
+      img('uchida-key-cabinet-grey', 1086, 1448, 'Grey UCHIDA wall key cabinet, closed'),
+      img('uchida-key-cabinet-grey-open', 1086, 1448, 'The UCHIDA key cabinet open, with numbered hooks and yellow and blue key tags'),
     ],
     specTable: [
       brand,
-      spec('Capacity', 'السعة', '100 keys', '100 مفتاح'),
+      spec('Hooks', 'الخطافات', 'Numbered, inside the cabinet and on its door', 'مرقّمة، داخل الخزانة وعلى بابها'),
       spec('Mounting', 'التركيب', 'Wall-mounted', 'يُعلّق على الجدار'),
       spec('Lock', 'القفل', 'Key', 'مفتاح'),
       spec('Finish', 'اللون', 'Grey', 'رمادي'),
     ],
     isFeatured: false,
-    order: 29,
+    order: 30,
   },
   {
     _id: 'p42',
-    slug: 'bsm-auto-cash-box-c-305',
-    name: { en: 'BSM Auto Cash Box C-305', ar: 'صندوق النقود BSM طراز C-305' },
+    slug: 'bsm-auto-cash-box',
+    name: { en: 'BSM Auto Cash Box with Combination Dials', ar: 'صندوق النقود BSM بقفلين دوّارين' },
     category: cashBoxes,
     shortDesc: {
       en: 'A dark grey BSM auto cash box with two combination dials, a key lock and a front cash drawer, for shop counters and cashiers.',
       ar: 'صندوق نقود BSM بلون رمادي داكن، بقفلين رقميين دوّارين وقفل بمفتاح ودرج نقود أمامي، لكاونترات المحلات والكاشير.',
     },
     fullDesc: desc(
-      'The C-305 keeps the day’s cash at the counter but out of reach: its front drawer opens only after both combination dials and the key are set, and the box can sit under the counter or inside a cabinet.',
-      'يُبقي C-305 نقود اليوم عند الكاونتر وبعيدة عن متناول الآخرين: لا يُفتح درجه الأمامي إلا بعد ضبط القفلين الدوّارين والمفتاح، ويمكن وضعه تحت الكاونتر أو داخل خزانة.',
+      'This cash box keeps the day’s cash at the counter but out of reach: its front drawer opens only after both combination dials and the key are set, and it can sit under the counter or inside a cabinet.',
+      'يُبقي هذا الصندوق نقود اليوم عند الكاونتر وبعيدة عن متناول الآخرين: لا يُفتح درجه الأمامي إلا بعد ضبط القفلين الدوّارين والمفتاح، ويمكن وضعه تحت الكاونتر أو داخل خزانة.',
     ),
     images: [
-      img('bsm-auto-cash-box-c305', 1536, 1024, 'Dark grey BSM auto cash box C-305 with two combination dials and a key lock'),
+      img('bsm-auto-cash-box-dials', 1536, 1024, 'Dark grey BSM auto cash box with two combination dials and a key lock'),
     ],
     specTable: [
       brandSpec('BSM'),
-      spec('Model', 'الطراز', 'C-305', 'C-305'),
       spec('Lock', 'القفل', 'Two combination dials and key', 'قفلان رقميان دوّاران ومفتاح'),
       spec('Finish', 'اللون', 'Dark grey', 'رمادي داكن'),
     ],
     isFeatured: false,
-    order: 30,
+    order: 31,
   },
   {
     _id: 'p43',
@@ -1098,7 +1122,7 @@ export const sampleProducts: Product[] = [
       'أدخلوا الرقم السري فيُفتح الدرج بضغطة زر. تعمل لوحة الأرقام الرقمية مع قفل احتياطي بمفتاح، ويحفظ الدرج الأمامي النحيف الأوراق النقدية مرتّبة طوال يوم العمل.',
     ),
     images: [
-      img('bsm-auto-cash-box-nd350h', 1200, 1310, 'Light-grey BSM digital auto cash box with a keypad and push-button drawer'),
+      img('bsm-auto-cash-box-digital', 1200, 1310, 'Light-grey BSM digital auto cash box with a keypad and push-button drawer'),
     ],
     specTable: [
       brandSpec('BSM'),
@@ -1107,31 +1131,30 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 31,
+    order: 32,
   },
   {
     _id: 'p44',
-    slug: 'bsm-cash-box-c-302',
-    name: { en: 'BSM Cash Box C-302', ar: 'صندوق النقود BSM طراز C-302' },
+    slug: 'bsm-portable-cash-box',
+    name: { en: 'BSM Portable Cash Box', ar: 'صندوق النقود BSM المحمول' },
     category: cashBoxes,
     shortDesc: {
       en: 'A portable light-grey BSM cash box with a carry handle, two combination dials and a key lock.',
       ar: 'صندوق نقود BSM محمول بلون رمادي فاتح، بمقبض للحمل وقفلين رقميين دوّارين وقفل بمفتاح.',
     },
     fullDesc: desc(
-      'Built to be carried: the C-302 has a handle on top and closes with two combination dials and a key, for moving cash between the counter, the office and the bank, or for events and markets.',
-      'صُمّم ليُحمل: لـ C-302 مقبض علوي ويُقفل بقفلين رقميين دوّارين ومفتاح، لنقل النقود بين الكاونتر والمكتب والبنك، أو للمعارض والفعاليات.',
+      'Built to be carried: this cash box has a handle on top and closes with two combination dials and a key, for moving cash between the counter, the office and the bank, or for events and markets.',
+      'صُمّم ليُحمل: لهذا الصندوق مقبض علوي ويُقفل بقفلين رقميين دوّارين ومفتاح، لنقل النقود بين الكاونتر والمكتب والبنك، أو للمعارض والفعاليات.',
     ),
     images: [
-      img('bsm-cash-box-c302', 1448, 1086, 'Portable light-grey BSM cash box C-302 with a handle and two combination dials'),
+      img('bsm-portable-cash-box', 1448, 1086, 'Portable light-grey BSM cash box with a handle and two combination dials'),
     ],
     specTable: [
       brandSpec('BSM'),
-      spec('Model', 'الطراز', 'C-302', 'C-302'),
       spec('Lock', 'القفل', 'Two combination dials and key', 'قفلان رقميان دوّاران ومفتاح'),
       spec('Carrying', 'الحمل', 'Top handle', 'مقبض علوي'),
     ],
     isFeatured: false,
-    order: 32,
+    order: 33,
   },
 ]

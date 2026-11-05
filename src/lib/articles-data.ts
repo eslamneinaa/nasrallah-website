@@ -87,7 +87,7 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
-    products: ['sakura-multi-lock-safe', 'sakura-ons-fe-fingerprint-safe', 'uchida-ubo-145e-fire-resistant-safe'],
+    products: ['sakura-multi-lock-safe', 'sakura-fingerprint-safe', 'uchida-full-height-fire-resistant-safe'],
     links: [{ page: 'safe-buying-guide' }, { category: 'fire-resistant-safes' }],
   },
   {
@@ -124,7 +124,7 @@ export const articleSources: ArticleSource[] = [
         },
         { h: 'لماذا تجمع الخزائن الحديثة أكثر من قفل؟' },
         {
-          p: 'لأن كل قفل يغطي نقطة ضعف الآخر: البصمة سريعة، والرقم مناسب لأكثر من مستخدم، والمفتاح يفتح الخزنة إذا نفدت البطارية. ولهذا تجمع خزنة SAKURA متعددة الأقفال بين البصمة ولوحة الأرقام والمفتاح في لوحة تحكم واحدة، وتجمع خزنة SAKURA ONS-FE البصمة والأرقام في مقبض عمودي واحد.',
+          p: 'لأن كل قفل يغطي نقطة ضعف الآخر: البصمة سريعة، والرقم مناسب لأكثر من مستخدم، والمفتاح يفتح الخزنة إذا نفدت البطارية. ولهذا تجمع خزنة SAKURA متعددة الأقفال بين البصمة ولوحة الأرقام والمفتاح في لوحة تحكم واحدة، وتجمع خزنة SAKURA السوداء البصمة والأرقام في مقبض عمودي واحد.',
         },
         { h: 'نصيحة أخيرة' },
         {
@@ -149,7 +149,7 @@ export const articleSources: ArticleSource[] = [
         },
         { h: 'Why do modern safes combine more than one lock?' },
         {
-          p: 'Because each lock covers the other’s weak point: the fingerprint is fast, the code suits several users, and the key opens the safe if the battery runs out. That is why the SAKURA Multi-Lock Safe brings a fingerprint scanner, a keypad and a key together on one control panel, and the SAKURA ONS-FE combines fingerprint and keypad in one vertical handle.',
+          p: 'Because each lock covers the other’s weak point: the fingerprint is fast, the code suits several users, and the key opens the safe if the battery runs out. That is why the SAKURA Multi-Lock Safe brings a fingerprint scanner, a keypad and a key together on one control panel, and the black SAKURA fingerprint safe combines fingerprint and keypad in one vertical handle.',
         },
         { h: 'A final tip' },
         {
@@ -157,7 +157,7 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
-    products: ['sakura-ons-fe-fingerprint-safe', 'sakura-multi-lock-safe', 'uchida-ubo-145e-fire-resistant-safe'],
+    products: ['sakura-fingerprint-safe', 'sakura-multi-lock-safe', 'uchida-full-height-fire-resistant-safe'],
     links: [{ article: 'choosing-a-home-safe' }],
   },
   {
@@ -239,7 +239,7 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
-    products: ['uchida-ubo-145e-fire-resistant-safe', 'uchida-fluted-safe', 'uchida-walnut-finish-safe'],
+    products: ['uchida-full-height-fire-resistant-safe', 'uchida-fluted-safe', 'uchida-walnut-finish-safe'],
     links: [{ category: 'fire-resistant-safes' }, { category: 'filing-cabinets' }],
   },
   {
@@ -469,7 +469,7 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
-    products: ['uchida-ubo-145e-fire-resistant-safe', 'sakura-multi-lock-safe', 'sakura-ons-fe-fingerprint-safe'],
+    products: ['uchida-full-height-fire-resistant-safe', 'sakura-multi-lock-safe', 'sakura-fingerprint-safe'],
     links: [{ category: 'fire-resistant-safes' }, { page: 'request-quote' }],
   },
   {
@@ -494,11 +494,11 @@ export const articleSources: ArticleSource[] = [
         },
         { h: 'UCHIDA: أوسع تشكيلة لدينا' },
         {
-          p: 'علامة UCHIDA هي الأساس في تشكيلتنا: خزائن مقاومة للحريق بارتفاع كامل مثل UBO-145E، وخزائن ببابين للمؤسسات، وخزائن صغيرة بقفل رقمي، وخزائن بالبصمة. ومنها أيضًا خزائن الإيداع التي يودع فيها الموظفون النقود دون فتح الخزنة، وخزائن سجلات مقاومة للحريق، وخزانة لـ 100 مفتاح، وتصاميم فاخرة بواجهة مضلّعة أو بتشطيب خشب الجوز أو باللون الأحمر.',
+          p: 'علامة UCHIDA هي الأساس في تشكيلتنا: خزائن مقاومة للحريق بارتفاع كامل، وخزائن ببابين للمؤسسات، وخزائن صغيرة بقفل رقمي، وخزائن بالبصمة. ومنها أيضًا خزائن الإيداع التي يودع فيها الموظفون النقود دون فتح الخزنة، وخزائن سجلات مقاومة للحريق، وخزائن المفاتيح، وتصاميم فاخرة بواجهة مضلّعة أو بتشطيب خشب الجوز أو باللون الأحمر.',
         },
         { h: 'SAKURA: أقفال حديثة وتصاميم لافتة' },
         {
-          p: 'تتميّز خزائن SAKURA بأقفالها الحديثة: خزنة متعددة الأقفال تجمع البصمة ولوحة الأرقام والمفتاح، وخزنة ONS-FE التي تجمع البصمة والأرقام في مقبض عمودي. ولمن يريد خزنة تكون جزءًا من الديكور، تأتي خزنة UDS-65BF بباب مزخرف بالزهور على خلفية سوداء أو مرآة فضية. وتقدّم SAKURA أيضًا خزائن ملفات مقاومة للحريق بأربعة أدراج.',
+          p: 'تتميّز خزائن SAKURA بأقفالها الحديثة: خزنة متعددة الأقفال تجمع البصمة ولوحة الأرقام والمفتاح، وخزنة سوداء تجمع البصمة والأرقام في مقبض عمودي. ولمن يريد خزنة تكون جزءًا من الديكور، تأتي خزنة SAKURA بباب مزخرف بالزهور على خلفية سوداء أو مرآة فضية. وتقدّم SAKURA أيضًا خزائن ملفات مقاومة للحريق بأربعة أدراج.',
         },
         { h: 'GODREJ: خبرة هندية منذ عام 1902' },
         {
@@ -525,11 +525,11 @@ export const articleSources: ArticleSource[] = [
         },
         { h: 'UCHIDA: our widest range' },
         {
-          p: 'UCHIDA is the backbone of our range: full-height fire-resistant safes such as the UBO-145E, double-door safes for institutions, compact digital safes and fingerprint safes. It also covers deposit safes that let staff drop cash without opening the safe, fire-resistant records cabinets, a 100-key cabinet, and luxury designs with a fluted front, a walnut finish or a bold red body.',
+          p: 'UCHIDA is the backbone of our range: full-height fire-resistant safes, double-door safes for institutions, compact digital safes and fingerprint safes. It also covers deposit safes that let staff drop cash without opening the safe, fire-resistant records cabinets, key cabinets, and luxury designs with a fluted front, a walnut finish or a bold red body.',
         },
         { h: 'SAKURA: modern locks and eye-catching designs' },
         {
-          p: 'SAKURA safes stand out for their modern locks: a multi-lock safe combining fingerprint, keypad and key, and the ONS-FE that puts fingerprint and keypad into one vertical handle. For a safe that is part of the décor, the UDS-65BF has a floral door on black or on a silver mirror finish. SAKURA also makes fire-resistant four-drawer filing cabinets.',
+          p: 'SAKURA safes stand out for their modern locks: a multi-lock safe combining fingerprint, keypad and key, and a black safe that puts fingerprint and keypad into one vertical handle. For a safe that is part of the décor, the SAKURA floral safe has a floral door on black or on a silver mirror finish. SAKURA also makes fire-resistant four-drawer filing cabinets.',
         },
         { h: 'GODREJ: Indian expertise since 1902' },
         {
@@ -554,8 +554,8 @@ export const articleSources: ArticleSource[] = [
       ],
     },
     products: [
-      'uchida-ubo-145e-fire-resistant-safe',
-      'sakura-uds-65bf-floral-safe',
+      'uchida-full-height-fire-resistant-safe',
+      'sakura-floral-safe',
       'godrej-two-door-steel-cupboard',
       'kurogane-wing-safe',
     ],

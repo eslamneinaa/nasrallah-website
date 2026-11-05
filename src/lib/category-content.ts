@@ -124,22 +124,22 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   'key-cabinets': {
     ar: {
       heading: 'خزائن المفاتيح في قطر',
-      metaTitle: 'خزائن مفاتيح في قطر — خزانة 100 مفتاح للفنادق والشركات والمجمعات',
+      metaTitle: 'خزائن مفاتيح في قطر — خزائن مفاتيح للفنادق والشركات والمجمعات',
       description:
-        'خزائن مفاتيح UCHIDA في قطر تُعلّق على الجدار، بـ 100 خطاف مرقّم وميداليات ملوّنة وقفل بمفتاح، للفنادق والمجمعات السكنية والشركات ومعارض السيارات.',
+        'خزائن مفاتيح UCHIDA في قطر تُعلّق على الجدار، بخطافات مرقّمة وميداليات ملوّنة وقفل بمفتاح، للفنادق والمجمعات السكنية والشركات ومعارض السيارات.',
       intro: [
         'حين تكثر المفاتيح يصبح ترتيبها ضرورة: خزانة المفاتيح تمنح كل مفتاح خطافًا مرقّمًا، وتُقفل بمفتاح حتى لا يصل إليها إلا المسؤول.',
-        'نوفّر خزانة UCHIDA لـ 100 مفتاح مع ميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة، مناسبة للفنادق والمجمعات السكنية والشركات ومعارض السيارات وفرق الصيانة.',
+        'نوفّر خزائن مفاتيح UCHIDA بخطافات مرقّمة وميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة، مناسبة للفنادق والمجمعات السكنية والشركات ومعارض السيارات وفرق الصيانة.',
       ],
     },
     en: {
       heading: 'Key Cabinets in Qatar',
-      metaTitle: 'Key Cabinets in Qatar — 100-Key Cabinet for Hotels, Companies and Compounds',
+      metaTitle: 'Key Cabinets in Qatar — Key Cabinets for Hotels, Companies and Compounds',
       description:
-        'UCHIDA wall-mounted key cabinets in Qatar with 100 numbered hooks, colour-coded tags and a key lock, for hotels, residential compounds, companies and car showrooms.',
+        'UCHIDA wall-mounted key cabinets in Qatar with numbered hooks, colour-coded tags and a key lock, for hotels, residential compounds, companies and car showrooms.',
       intro: [
         'When keys multiply, order becomes essential: a key cabinet gives every key a numbered hook and locks so only the person in charge can reach them.',
-        'We carry the UCHIDA 100-key cabinet with yellow and blue tags to sort keys by building, floor or vehicle, ideal for hotels, compounds, companies, car showrooms and maintenance teams.',
+        'We carry UCHIDA key cabinets with numbered hooks and yellow and blue tags to sort keys by building, floor or vehicle, ideal for hotels, compounds, companies, car showrooms and maintenance teams.',
       ],
     },
   },

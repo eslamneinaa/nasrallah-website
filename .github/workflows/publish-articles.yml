@@ -52,8 +52,14 @@ jobs:
         run: npm run build
 
       - name: Deploy to Cloudflare Pages
+        id: deploy
         if: (steps.due.outputs.due == 'true' || github.event_name == 'workflow_dispatch') && env.CLOUDFLARE_API_TOKEN != '' && env.NEXT_PUBLIC_WEB3FORMS_CONTACT_KEY != ''
         run: npx --yes wrangler@4.157.0 pages deploy out --project-name=nasrallah-website --branch=main --commit-message="Scheduled build $(TZ=Asia/Qatar date +%F)"
+
+      - name: Tell Bing about today's article (IndexNow)
+        if: steps.deploy.outcome == 'success'
+        continue-on-error: true
+        run: node scripts/indexnow.mjs
 
       - name: Warn when a secret is missing
         if: env.CLOUDFLARE_API_TOKEN == '' || env.NEXT_PUBLIC_WEB3FORMS_CONTACT_KEY == ''

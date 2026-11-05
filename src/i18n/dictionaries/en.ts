@@ -2,7 +2,7 @@ const en = {
   meta: {
     title: 'Safes for Sale in Qatar — Cash, Jewellery & Fire-Resistant Safes | Nasrallah Trading Est, since 1906',
     description:
-      'Safes for sale in Qatar since 1906: cash safes, jewellery safes, fire-resistant steel safes, filing cabinets, steel cupboards and lockers from UCHIDA, SAKURA and GODREJ, with free delivery. Visit our showroom in Souq Al Ein, Salwa Road, Doha.',
+      'Safes for sale in Qatar since 1906: cash safes, jewellery safes, fire-resistant steel safes, filing cabinets, steel cupboards and lockers from UCHIDA, SAKURA, GODREJ and KUROGANE, with free delivery. Visit our showroom in Souq Al Ein, Salwa Road, Doha.',
   },
   nav: {
     home: 'Home',
@@ -24,7 +24,7 @@ const en = {
     titleLead: 'For over a century, safeguarding',
     rotating: ['what you treasure', 'vital documents', 'jewellery & watches', 'institutional records'],
     subtitle:
-      'Since 1906, Nasrallah Trading Est has protected what matters most. Today we bring cash safes, jewellery safes, fire-resistant safes, filing cabinets, steel cupboards and lockers from UCHIDA, SAKURA and GODREJ to ministries, banks, companies and private clients across Qatar.',
+      'Since 1906, Nasrallah Trading Est has protected what matters most. Today we bring cash safes, jewellery safes, fire-resistant safes, filing cabinets, steel cupboards and lockers from UCHIDA, SAKURA, GODREJ and KUROGANE to ministries, banks, companies and private clients across Qatar.',
     ctaPrimary: 'Explore the collection',
     ctaSecondary: 'Request a quote',
     stats: [
@@ -40,9 +40,9 @@ const en = {
     title: 'A name trusted for more than a century',
     body: [
       'Founded in 1906, Nasrallah Trading Est is one of the most established names in safes and secure storage. From our showroom in Souq Al Ein on Salwa Road, we supply fire-resistant safes, filing cabinets and luxury safes to ministries, banks, companies and private clients.',
-      'We carry UCHIDA, SAKURA and GODREJ, and we help every client choose the right protection for what they keep: documents, cash, jewellery or a lifetime’s collection.',
+      'We carry UCHIDA, SAKURA, GODREJ and KUROGANE, and we help every client choose the right protection for what they keep: documents, cash, jewellery or a lifetime’s collection.',
     ],
-    highlights: ['Founded in 1906', 'More than 1,000 clients', 'UCHIDA, SAKURA & GODREJ', 'Personal showroom service'],
+    highlights: ['Founded in 1906', 'More than 1,000 clients', 'UCHIDA, SAKURA, GODREJ & KUROGANE', 'Personal showroom service'],
     imageAlt: 'The Nasrallah Trading Est showroom on Salwa Road at night',
     cta: 'Discover our story',
   },
@@ -58,15 +58,19 @@ const en = {
     items: [
       {
         name: 'UCHIDA',
-        desc: 'Fire-resistant, cash and luxury safes and filing cabinets, from classic office models to designer finishes.',
+        desc: 'Our widest range: fire-resistant safes with digital and fingerprint locks, deposit safes, fire-resistant records cabinets, key cabinets, and designer safes in wood finishes and bold colours.',
       },
       {
         name: 'SAKURA',
-        desc: 'A trusted name in safes, with modern fingerprint and keypad locks, for homes, offices and institutions.',
+        desc: 'Safes with modern fingerprint and keypad locks, eye-catching designs such as floral mirror fronts, and fire-resistant filing cabinets, for homes, offices and institutions.',
       },
       {
         name: 'GODREJ',
-        desc: 'Steel cupboards, lockers and filing cabinets for offices, schools and institutions.',
+        desc: 'A name India has trusted for safes since 1902, from Godrej & Boyce of Mumbai: steel cupboards, lockers and filing cabinets for offices, schools and institutions.',
+      },
+      {
+        name: 'KUROGANE',
+        desc: 'Wing Safe fire-resistant safes made in Japan by Kurogane Kosakusho, founded in Osaka in 1927, with a combination dial and key to protect records and valuables against fire and theft.',
       },
     ],
   },
@@ -85,7 +89,7 @@ const en = {
     items: [
       { title: 'Heritage', desc: 'Founded in 1906, we bring more than a century of experience in safekeeping to every recommendation.' },
       { title: 'Trust', desc: 'Ministries, banks, companies and families: more than 1,000 clients have placed their trust in us.' },
-      { title: 'Quality', desc: 'We carry UCHIDA, SAKURA and GODREJ, names chosen for their build quality and lasting protection.' },
+      { title: 'Quality', desc: 'We carry UCHIDA, SAKURA, GODREJ and KUROGANE, names chosen for their build quality and lasting protection.' },
       { title: 'Service', desc: 'Personal advice in our showroom and attentive follow-up long after the sale.' },
     ],
   },
@@ -113,7 +117,7 @@ const en = {
       },
       {
         q: 'Which brands of safes do you sell?',
-        a: 'We supply safes from UCHIDA, SAKURA and GODREJ: fire-resistant safes, filing cabinets and luxury safes, along with fitted jewellery and watch interiors.',
+        a: 'We supply UCHIDA, SAKURA, GODREJ and KUROGANE: fire-resistant and luxury safes, deposit safes, filing cabinets, key cabinets, cash boxes, steel cupboards and lockers, along with fitted jewellery and watch interiors.',
       },
       {
         q: 'Do you have cash safes for shops, offices and homes?',
@@ -217,7 +221,7 @@ const en = {
         title: 'How to choose the best place to buy a safe in Qatar',
         body: [
           'Buy from a showroom where you can see the safe and open it yourself, make sure the brand is genuine, and ask about delivery and after-sales service.',
-          'That is what Nasrallah Trading Est has offered since 1906: genuine UCHIDA, SAKURA and GODREJ safes, a showroom in Souq Al Ein on Salwa Road in Doha, free delivery, a locked-safe opening service once the Ministry of Interior’s requirements are met, and more than 1,000 clients among ministries, banks, companies and individuals.',
+          'That is what Nasrallah Trading Est has offered since 1906: genuine UCHIDA, SAKURA, GODREJ and KUROGANE safes, a showroom in Souq Al Ein on Salwa Road in Doha, free delivery, a locked-safe opening service once the Ministry of Interior’s requirements are met, and more than 1,000 clients among ministries, banks, companies and individuals.',
         ],
       },
     ],
@@ -261,7 +265,7 @@ const en = {
       title: 'A century built on trust',
       paragraphs: [
         'Nasrallah Trading Est was founded in 1906. For more than a hundred years, the name has stood for one thing: keeping what people value safe.',
-        'Today our showroom in Souq Al Ein, on Salwa Road in Doha, presents fire-resistant safes, filing cabinets and luxury safes from UCHIDA, SAKURA and GODREJ, together with fitted interiors for jewellery and watches.',
+        'Today our showroom in Souq Al Ein, on Salwa Road in Doha, presents fire-resistant safes, filing cabinets and luxury safes from UCHIDA, SAKURA, GODREJ and KUROGANE, together with fitted interiors for jewellery and watches.',
         'Ministries, private institutions, banks, companies and individuals, more than 1,000 clients in all, rely on us for quality products, honest advice and service that continues long after the sale.',
       ],
       imageAlt: 'The Nasrallah Trading Est showroom facade in daylight',
@@ -288,7 +292,7 @@ const en = {
   },
   products: {
     metaTitle: 'Safes for Sale in Qatar',
-    metaDescription: 'Safes for sale in Qatar: cash and jewellery safes, fire-resistant steel safes, filing cabinets and steel lockers from UCHIDA, SAKURA and GODREJ, with free delivery from our Doha showroom.',
+    metaDescription: 'Safes for sale in Qatar: cash and jewellery safes, fire-resistant steel safes, filing cabinets and steel lockers from UCHIDA, SAKURA, GODREJ and KUROGANE, with free delivery from our Doha showroom.',
     title: 'Safes for sale in Qatar',
     subtitle: 'Safes, filing cabinets and fitted interiors from our showroom. Need a size or finish you don’t see? Ask us.',
     searchPlaceholder: 'Search products…',
@@ -322,7 +326,7 @@ const en = {
     videoEyebrow: 'In the showroom',
     videoTitle: 'See it up close',
     videoBody: 'A short film from our showroom. Visit us in Souq Al Ein to open the drawers yourself.',
-    assurances: ['Original UCHIDA, SAKURA & GODREJ', 'Trusted since 1906', 'Personal showroom advice'],
+    assurances: ['Original UCHIDA, SAKURA, GODREJ & KUROGANE', 'Trusted since 1906', 'Personal showroom advice'],
   },
   quote: {
     metaTitle: 'Request a Quote',
@@ -443,7 +447,7 @@ const en = {
   footer: {
     slogan: 'A Century of Safekeeping',
     tagline:
-      'Safes and secure storage since 1906: fire-resistant safes, filing cabinets and luxury safes from UCHIDA, SAKURA and GODREJ, at our showroom in Souq Al Ein, Salwa Road, Doha.',
+      'Safes and secure storage since 1906: fire-resistant safes, filing cabinets and luxury safes from UCHIDA, SAKURA, GODREJ and KUROGANE, at our showroom in Souq Al Ein, Salwa Road, Doha.',
     explore: 'Explore',
     contact: 'Get in touch',
     visit: 'Visit the showroom',

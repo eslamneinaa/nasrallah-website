@@ -78,7 +78,7 @@ export function ProductsExplorer({ locale, products, categories, dict, cardCta }
     <div>
       <div className="sticky top-18 z-30 -mx-5 mb-10 border-y border-gold-500/25 bg-pearl-100/95 px-5 py-3 backdrop-blur-md sm:mx-0 sm:border sm:bg-pearl-50/95">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-          <div role="tablist" aria-label={dict.filterLabel} className="-mx-1 flex gap-1 overflow-x-auto px-1 [scrollbar-width:none]">
+          <div role="tablist" aria-label={dict.filterLabel} className="-mx-1 flex gap-1 overflow-x-auto px-1 [scrollbar-width:none] lg:min-w-0 lg:flex-1 lg:flex-wrap lg:overflow-visible">
             {tabs.map((tab) => {
               const active = tab.slug === category
               return (

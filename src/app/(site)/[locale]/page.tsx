@@ -137,10 +137,10 @@ export default async function HomePage({ params }: LocaleParams) {
       <section className="py-24 sm:py-32">
         <div className="container-page">
           <SectionHeading eyebrow={dict.brands.eyebrow} title={dict.brands.title} align="center" />
-          <Stagger className="mx-auto mt-16 grid max-w-6xl gap-px border border-gold-500/30 bg-gold-500/30 md:grid-cols-3">
+          <Stagger className="mx-auto mt-16 grid max-w-6xl gap-px border border-gold-500/30 bg-gold-500/30 sm:grid-cols-2 lg:grid-cols-4">
             {dict.brands.items.map((item) => (
-              <StaggerItem key={item.name} className="bg-pearl-50 px-6 py-14 text-center lg:px-10">
-                <p dir="ltr" className="font-[family-name:var(--font-bodoni)] text-3xl tracking-[0.22em] text-maroon-900 lg:text-4xl">
+              <StaggerItem key={item.name} className="bg-pearl-50 px-6 py-14 text-center">
+                <p dir="ltr" className="font-[family-name:var(--font-bodoni)] text-3xl tracking-[0.2em] text-maroon-900 lg:text-[1.6rem] lg:tracking-[0.14em] xl:text-[1.85rem]">
                   {item.name}
                 </p>
                 <Khatam className="mx-auto mt-6 h-4 w-4 text-gold-500" />

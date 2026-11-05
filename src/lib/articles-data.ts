@@ -476,78 +476,88 @@ export const articleSources: ArticleSource[] = [
     slug: 'uchida-sakura-godrej-compared',
     date: '2026-11-28',
     title: {
-      ar: 'أي علامة خزائن تناسبكم: UCHIDA أم SAKURA أم GODREJ؟',
-      en: 'Which Safe Brand Suits You: UCHIDA, SAKURA or GODREJ?',
+      ar: 'أي علامة خزائن تناسبكم: UCHIDA أم SAKURA أم GODREJ أم KUROGANE؟',
+      en: 'Which Safe Brand Suits You: UCHIDA, SAKURA, GODREJ or KUROGANE?',
     },
     description: {
-      ar: 'تعرّفوا على العلامات التجارية للخزائن في مؤسسة نصر الله التجارية: UCHIDA للخزائن المقاومة للحريق وخزائن الملفات، وSAKURA لأقفال البصمة، وGODREJ للخزائن الحديدية واللوكرات.',
-      en: 'Get to know the safe brands at Nasrallah Trading Est: UCHIDA for fire-resistant safes and filing cabinets, SAKURA for fingerprint locks, and GODREJ for steel cupboards and lockers.',
+      ar: 'تعرّفوا على العلامات التجارية للخزائن في مؤسسة نصر الله التجارية: UCHIDA للخزائن المقاومة للحريق والإيداع، وSAKURA للأقفال الحديثة والتصاميم اللافتة، وGODREJ الهندية منذ 1902، وKUROGANE اليابانية.',
+      en: 'Get to know the safe brands at Nasrallah Trading Est: UCHIDA for fire-resistant and deposit safes, SAKURA for modern locks and striking designs, GODREJ of India since 1902, and KUROGANE of Japan.',
     },
     keywords: {
-      ar: 'خزائن UCHIDA، خزائن SAKURA، خزائن GODREJ في قطر، أفضل ماركة خزائن',
-      en: 'UCHIDA safes, SAKURA safes, GODREJ Qatar, best safe brand',
+      ar: 'خزائن UCHIDA، خزائن SAKURA، خزائن GODREJ في قطر، خزائن KUROGANE اليابانية، أفضل ماركة خزائن',
+      en: 'UCHIDA safes, SAKURA safes, GODREJ Qatar, KUROGANE Japanese safes, best safe brand',
     },
     body: {
       ar: [
         {
-          p: 'يسألنا كثير من العملاء: أي ماركة أفضل؟ والإجابة الصادقة: لكل علامة مجال تتميّز فيه. في مؤسسة نصر الله التجارية نوفّر ثلاث علامات أصلية، وهذا ما نرشّح كل واحدة منها له.',
+          p: 'يسألنا كثير من العملاء: أي ماركة أفضل؟ والإجابة الصادقة: لكل علامة مجال تتميّز فيه. في مؤسسة نصر الله التجارية نوفّر أربع علامات أصلية، وهذا ما نرشّح كل واحدة منها له.',
         },
-        { h: 'UCHIDA: الخزائن المقاومة للحريق وخزائن الملفات' },
+        { h: 'UCHIDA: أوسع تشكيلة لدينا' },
         {
-          p: 'علامة UCHIDA هي الأساس في الخزائن المقاومة للحريق لدينا: خزائن بارتفاع كامل مثل UBO-145E بقفل رقمي مع مفتاح احتياطي، وخزائن بتصاميم فاخرة كالواجهة المضلّعة وتشطيب خشب الجوز، إلى جانب خزائن ملفات بأربعة أدراج.',
+          p: 'علامة UCHIDA هي الأساس في تشكيلتنا: خزائن مقاومة للحريق بارتفاع كامل مثل UBO-145E، وخزائن ببابين للمؤسسات، وخزائن صغيرة بقفل رقمي، وخزائن بالبصمة. ومنها أيضًا خزائن الإيداع التي يودع فيها الموظفون النقود دون فتح الخزنة، وخزائن سجلات مقاومة للحريق، وخزانة لـ 100 مفتاح، وتصاميم فاخرة بواجهة مضلّعة أو بتشطيب خشب الجوز أو باللون الأحمر.',
         },
-        { h: 'SAKURA: أقفال البصمة والأرقام الحديثة' },
+        { h: 'SAKURA: أقفال حديثة وتصاميم لافتة' },
         {
-          p: 'تتميّز خزائن SAKURA بأقفالها الحديثة: خزنة متعددة الأقفال تجمع البصمة ولوحة الأرقام والمفتاح، وخزنة ONS-FE السوداء التي تجمع البصمة والأرقام في مقبض عمودي. مناسبة للبيوت والمكاتب لمن يريد فتحًا سريعًا وآمنًا.',
+          p: 'تتميّز خزائن SAKURA بأقفالها الحديثة: خزنة متعددة الأقفال تجمع البصمة ولوحة الأرقام والمفتاح، وخزنة ONS-FE التي تجمع البصمة والأرقام في مقبض عمودي. ولمن يريد خزنة تكون جزءًا من الديكور، تأتي خزنة UDS-65BF بباب مزخرف بالزهور على خلفية سوداء أو مرآة فضية. وتقدّم SAKURA أيضًا خزائن ملفات مقاومة للحريق بأربعة أدراج.',
         },
-        { h: 'GODREJ: الخزائن الحديدية واللوكرات وخزائن الملفات' },
+        { h: 'GODREJ: خبرة هندية منذ عام 1902' },
         {
-          p: 'علامة GODREJ هي خيارنا للمكاتب والمدارس والمؤسسات: خزائن حديدية بباب واحد أو بابين أو بأبواب زجاجية، ولوكرات حديدية من باب واحد إلى ستة أبواب، وخزائن ملفات بدرجين أو ثلاثة أو خمسة أدراج.',
+          p: 'بدأت شركة Godrej & Boyce في مومباي بصناعة الأقفال عام 1897، ثم صنعت أولى خزائنها عام 1902، ومنذ ذلك الحين صار اسمها من أشهر أسماء الخزائن في الهند. ولدينا من GODREJ ما تحتاج إليه المكاتب والمدارس والمؤسسات: خزائن حديدية بباب واحد أو بابين أو بأبواب زجاجية، ولوكرات من باب واحد إلى ستة أبواب، وخزائن ملفات بدرجين أو ثلاثة أو خمسة أدراج.',
+        },
+        { h: 'KUROGANE: صناعة يابانية' },
+        {
+          p: 'KUROGANE علامة شركة Kurogane Kosakusho اليابانية، التي تأسست في أوساكا عام 1927 وتعمل في صناعة الأثاث المكتبي ومعدات المباني. ومن إنتاجها خزائن Wing Safe المصنوعة في اليابان، بقفل رقمي دوّار وقفل بمفتاح، لحماية السجلات المهمة والمقتنيات الثمينة من الحريق والسرقة.',
         },
         { h: 'كيف تختارون؟' },
         {
           ul: [
-            'لحفظ المستندات والنقد من الحريق: UCHIDA.',
-            'لفتح سريع بالبصمة في البيت أو المكتب: SAKURA.',
+            'لحفظ المستندات والنقد من الحريق، أو لخزائن الإيداع والمفاتيح: UCHIDA.',
+            'لفتح سريع بالبصمة أو لخزنة بتصميم لافت: SAKURA.',
             'لتجهيز مكتب أو مدرسة أو غرفة موظفين: GODREJ.',
+            'لمن يفضّل الصناعة اليابانية والقفل الرقمي الدوّار الكلاسيكي: KUROGANE.',
           ],
         },
-        { p: 'وفي المعرض تجدون العلامات الثلاث جنبًا إلى جنب، فتقارنون بأنفسكم قبل الشراء.' },
+        { p: 'وفي المعرض تجدون العلامات الأربع جنبًا إلى جنب، فتقارنون بأنفسكم قبل الشراء.' },
       ],
       en: [
         {
-          p: 'Many customers ask us which brand is best. The honest answer: each brand has a field where it excels. At Nasrallah Trading Est we carry three genuine brands, and this is what we recommend each one for.',
+          p: 'Many customers ask us which brand is best. The honest answer: each brand has a field where it excels. At Nasrallah Trading Est we carry four genuine brands, and this is what we recommend each one for.',
         },
-        { h: 'UCHIDA: fire-resistant safes and filing cabinets' },
+        { h: 'UCHIDA: our widest range' },
         {
-          p: 'UCHIDA is the backbone of our fire-resistant safes: full-height safes such as the UBO-145E with a digital lock and backup key, luxury designs such as the fluted front and walnut finish, and four-drawer filing cabinets.',
+          p: 'UCHIDA is the backbone of our range: full-height fire-resistant safes such as the UBO-145E, double-door safes for institutions, compact digital safes and fingerprint safes. It also covers deposit safes that let staff drop cash without opening the safe, fire-resistant records cabinets, a 100-key cabinet, and luxury designs with a fluted front, a walnut finish or a bold red body.',
         },
-        { h: 'SAKURA: modern fingerprint and keypad locks' },
+        { h: 'SAKURA: modern locks and eye-catching designs' },
         {
-          p: 'SAKURA safes stand out for their modern locks: a multi-lock safe combining fingerprint, keypad and key, and the black ONS-FE that puts fingerprint and keypad into one vertical handle. They suit homes and offices where quick, secure opening matters.',
+          p: 'SAKURA safes stand out for their modern locks: a multi-lock safe combining fingerprint, keypad and key, and the ONS-FE that puts fingerprint and keypad into one vertical handle. For a safe that is part of the décor, the UDS-65BF has a floral door on black or on a silver mirror finish. SAKURA also makes fire-resistant four-drawer filing cabinets.',
         },
-        { h: 'GODREJ: steel cupboards, lockers and filing cabinets' },
+        { h: 'GODREJ: Indian expertise since 1902' },
         {
-          p: 'GODREJ is our choice for offices, schools and institutions: steel cupboards with one door, two doors or glass doors, steel lockers from one to six doors, and filing cabinets with two, three or five drawers.',
+          p: 'Godrej & Boyce of Mumbai began making locks in 1897 and built its first safes in 1902, and its name has been one of the best known in Indian safes ever since. From GODREJ we carry what offices, schools and institutions need: steel cupboards with one door, two doors or glass doors, lockers from one to six doors, and filing cabinets with two, three or five drawers.',
+        },
+        { h: 'KUROGANE: made in Japan' },
+        {
+          p: 'KUROGANE is the brand of Kurogane Kosakusho, a Japanese company founded in Osaka in 1927 that makes office furniture and building equipment. Its Wing Safe range is made in Japan, with a combination dial and a key lock, to protect important records and valuables against fire and theft.',
         },
         { h: 'How to choose' },
         {
           ul: [
-            'To protect documents and cash from fire: UCHIDA.',
-            'For quick fingerprint opening at home or in the office: SAKURA.',
+            'To protect documents and cash from fire, or for deposit safes and key cabinets: UCHIDA.',
+            'For quick fingerprint opening or a safe with a striking design: SAKURA.',
             'To equip an office, school or staff room: GODREJ.',
+            'If you prefer Japanese manufacture and a classic combination dial: KUROGANE.',
           ],
         },
         {
-          p: 'In the showroom you will find all three brands side by side, so you can compare for yourself before you buy.',
+          p: 'In the showroom you will find all four brands side by side, so you can compare for yourself before you buy.',
         },
       ],
     },
     products: [
       'uchida-ubo-145e-fire-resistant-safe',
-      'sakura-ons-fe-fingerprint-safe',
+      'sakura-uds-65bf-floral-safe',
       'godrej-two-door-steel-cupboard',
-      'godrej-six-door-steel-locker',
+      'kurogane-wing-safe',
     ],
     links: [{ page: 'products' }],
   },

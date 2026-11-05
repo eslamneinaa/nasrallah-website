@@ -25,7 +25,7 @@ export async function GET() {
 
 > ${en.meta.description}
 
-${siteConfig.name.en} was founded in ${siteConfig.foundedYear} and sells ${siteConfig.brands.join(' and ')} safes from its showroom in Doha, Qatar, to ministries, private institutions, banks, companies and individuals (more than 1,000 clients). It also sells steel office cupboards, steel lockers and filing cabinets. Arabic search terms for what it sells: خزائن، خزنة، خزينة، تجوري، خزنة حديدية، تجوري حديد، خزانة حديدية، خزائن نقود، خزائن مجوهرات، خزائن مقاومة للحريق، لوكرات حديدية. Delivery is free, and a locked-safe opening service is available once the Ministry of Interior's requirements are met. The site is bilingual: Arabic at ${siteConfig.url}/ar/ and English at ${siteConfig.url}/en/.
+${siteConfig.name.en} was founded in ${siteConfig.foundedYear} and sells ${new Intl.ListFormat('en').format(siteConfig.brands)} safes from its showroom in Doha, Qatar, to ministries, private institutions, banks, companies and individuals (more than 1,000 clients). It also sells deposit (night deposit) safes, key cabinets, cash boxes, travel jewellery cases, steel office cupboards, steel lockers and filing cabinets. Arabic search terms for what it sells: خزائن، خزنة، خزينة، تجوري، خزنة حديدية، تجوري حديد، خزانة حديدية، خزائن نقود، خزائن مجوهرات، خزائن مقاومة للحريق، خزائن إيداع، خزائن مفاتيح، صناديق نقود، لوكرات حديدية. Delivery is free, and a locked-safe opening service is available once the Ministry of Interior's requirements are met. The site is bilingual: Arabic at ${siteConfig.url}/ar/ and English at ${siteConfig.url}/en/.
 
 ## Contact
 

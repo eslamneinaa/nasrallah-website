@@ -436,7 +436,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'White, beige', 'أبيض، بيج'),
     ],
     isFeatured: false,
-    order: 34,
+    order: 35,
   },
   {
     _id: 'p10',
@@ -460,7 +460,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Beige', 'بيج'),
     ],
     isFeatured: false,
-    order: 35,
+    order: 36,
   },
   {
     _id: 'p11',
@@ -484,7 +484,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 36,
+    order: 37,
   },
   {
     _id: 'p12',
@@ -511,7 +511,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Grey, beige', 'رمادي، بيج'),
     ],
     isFeatured: false,
-    order: 37,
+    order: 38,
   },
   {
     _id: 'p13',
@@ -535,7 +535,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'White', 'أبيض'),
     ],
     isFeatured: false,
-    order: 38,
+    order: 39,
   },
   {
     _id: 'p14',
@@ -558,7 +558,7 @@ export const sampleProducts: Product[] = [
       spec('Handles', 'المقابض', 'Chrome', 'كروم'),
     ],
     isFeatured: false,
-    order: 39,
+    order: 40,
   },
   {
     _id: 'p15',
@@ -582,7 +582,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 40,
+    order: 41,
   },
   {
     _id: 'p16',
@@ -606,7 +606,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal doors, cream frame', 'أبواب فحمية، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 41,
+    order: 42,
   },
   {
     _id: 'p17',
@@ -630,7 +630,7 @@ export const sampleProducts: Product[] = [
       spec('Colour', 'اللون', 'Cream', 'كريمي'),
     ],
     isFeatured: false,
-    order: 42,
+    order: 43,
   },
   {
     _id: 'p18',
@@ -656,7 +656,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Beige, off-white', 'بيج، أبيض عاجي'),
     ],
     isFeatured: false,
-    order: 43,
+    order: 44,
   },
   {
     _id: 'p19',
@@ -680,7 +680,7 @@ export const sampleProducts: Product[] = [
       spec('Colours', 'الألوان', 'Charcoal door, cream frame', 'باب فحمي، إطار كريمي'),
     ],
     isFeatured: false,
-    order: 44,
+    order: 45,
   },
   {
     _id: 'p21',
@@ -1060,18 +1060,18 @@ export const sampleProducts: Product[] = [
   {
     _id: 'p41',
     slug: 'uchida-key-cabinet',
-    name: { en: 'UCHIDA Key Cabinet', ar: 'خزانة مفاتيح UCHIDA' },
+    name: { en: 'UCHIDA Compact Key Cabinet', ar: 'خزانة مفاتيح UCHIDA الصغيرة' },
     category: keyCabinets,
     shortDesc: {
-      en: 'A slim grey wall-mounted UCHIDA key cabinet with numbered hooks and colour-coded tags, closed with a key lock.',
-      ar: 'خزانة مفاتيح UCHIDA رمادية نحيفة تُعلّق على الجدار، بخطافات مرقّمة وميداليات ملوّنة، تُقفل بمفتاح.',
+      en: 'A compact grey wall-mounted UCHIDA key cabinet with a carry handle, numbered hooks and colour-coded tags, closed with a key lock.',
+      ar: 'خزانة مفاتيح UCHIDA رمادية صغيرة تُعلّق على الجدار، بمقبض للحمل وخطافات مرقّمة وميداليات ملوّنة، تُقفل بمفتاح.',
     },
     fullDesc: desc(
       'Every key in its numbered place: rows of numbered hooks inside the cabinet and on its door, with yellow and blue tags to sort keys by building, floor or vehicle. Ideal for hotels, compounds, companies, car showrooms and maintenance teams.',
       'لكل مفتاح مكانه المرقّم: صفوف من الخطافات المرقّمة داخل الخزانة وعلى بابها، مع ميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة. مثالية للفنادق والمجمعات السكنية والشركات ومعارض السيارات وفرق الصيانة.',
     ),
     images: [
-      img('uchida-key-cabinet-grey', 1086, 1448, 'Grey UCHIDA wall key cabinet, closed'),
+      img('uchida-key-cabinet-grey', 1086, 1448, 'Compact grey UCHIDA wall key cabinet, closed'),
       img('uchida-key-cabinet-grey-open', 1086, 1448, 'The UCHIDA key cabinet open, with numbered hooks and yellow and blue key tags'),
     ],
     specTable: [
@@ -1083,6 +1083,33 @@ export const sampleProducts: Product[] = [
     ],
     isFeatured: false,
     order: 30,
+  },
+  {
+    _id: 'p46',
+    slug: 'uchida-tall-key-cabinet',
+    name: { en: 'UCHIDA Tall Key Cabinet', ar: 'خزانة مفاتيح UCHIDA الطويلة' },
+    category: keyCabinets,
+    shortDesc: {
+      en: 'A tall, slim grey wall-mounted UCHIDA key cabinet with more rows of numbered hooks and colour-coded tags, closed with a key lock.',
+      ar: 'خزانة مفاتيح UCHIDA رمادية طويلة ونحيفة تُعلّق على الجدار، بصفوف أكثر من الخطافات المرقّمة والميداليات الملوّنة، تُقفل بمفتاح.',
+    },
+    fullDesc: desc(
+      'For places with a lot of keys: this tall UCHIDA cabinet holds more rows of numbered hooks inside and on its door, with yellow and blue tags to sort keys by building, floor or vehicle, in a slim body that takes little wall space. Ideal for hotels, large compounds, companies and car showrooms.',
+      'للأماكن التي تكثر فيها المفاتيح: تضم هذه الخزانة الطويلة من UCHIDA صفوفًا أكثر من الخطافات المرقّمة داخلها وعلى بابها، مع ميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة، في هيكل نحيف لا يشغل مساحة كبيرة من الجدار. مثالية للفنادق والمجمعات السكنية الكبيرة والشركات ومعارض السيارات.',
+    ),
+    images: [
+      img('uchida-key-cabinet-tall', 1086, 1448, 'Tall slim grey UCHIDA wall key cabinet, closed'),
+      img('uchida-key-cabinet-tall-open', 1219, 1290, 'The tall UCHIDA key cabinet open, with rows of numbered hooks and yellow and blue key tags'),
+    ],
+    specTable: [
+      brand,
+      spec('Hooks', 'الخطافات', 'Numbered, inside the cabinet and on its door', 'مرقّمة، داخل الخزانة وعلى بابها'),
+      spec('Mounting', 'التركيب', 'Wall-mounted', 'يُعلّق على الجدار'),
+      spec('Lock', 'القفل', 'Key', 'مفتاح'),
+      spec('Finish', 'اللون', 'Grey', 'رمادي'),
+    ],
+    isFeatured: false,
+    order: 31,
   },
   {
     _id: 'p42',
@@ -1106,7 +1133,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Dark grey', 'رمادي داكن'),
     ],
     isFeatured: false,
-    order: 31,
+    order: 32,
   },
   {
     _id: 'p43',
@@ -1131,7 +1158,7 @@ export const sampleProducts: Product[] = [
       spec('Finish', 'اللون', 'Light grey', 'رمادي فاتح'),
     ],
     isFeatured: false,
-    order: 32,
+    order: 33,
   },
   {
     _id: 'p44',
@@ -1155,6 +1182,6 @@ export const sampleProducts: Product[] = [
       spec('Carrying', 'الحمل', 'Top handle', 'مقبض علوي'),
     ],
     isFeatured: false,
-    order: 33,
+    order: 34,
   },
 ]

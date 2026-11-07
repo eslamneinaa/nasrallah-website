@@ -41,6 +41,8 @@ export type Product = {
   video?: ProductVideo | null
   specTable: SpecRow[]
   pdfUrl?: string | null
+  /** Price in Qatari riyals. Only priced products are marked up as Product for Google. */
+  price?: number | null
   isFeatured?: boolean | null
   order?: number | null
 }

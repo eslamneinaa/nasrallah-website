@@ -60,18 +60,40 @@ export default async function ProductPage({ params }: Props) {
   // The maker (UCHIDA, SAKURA…) comes from the product's own "Brand" spec row.
   const brandName = product.specTable.find((row) => row.label.en === 'Brand')?.value.en
   const pageUrl = siteConfig.url + href(locale, `products/${slug}`)
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
+  const images = product.images.map((i) => (i.url.startsWith('http') ? i.url : siteConfig.url + i.url))
+  // Google's product snippets need a price (or reviews), so only priced products
+  // are marked up as Product; the rest are described as a plain item page.
+  const item = product.price
+    ? {
         '@type': 'Product',
         name,
         description: pick(product.shortDesc, locale),
-        image: product.images.map((i) => (i.url.startsWith('http') ? i.url : siteConfig.url + i.url)),
+        image: images,
         category,
         ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
         url: pageUrl,
-      },
+        offers: {
+          '@type': 'Offer',
+          price: product.price,
+          priceCurrency: 'QAR',
+          availability: 'https://schema.org/InStock',
+          url: pageUrl,
+          seller: { '@id': `${siteConfig.url}/#business` },
+        },
+      }
+    : {
+        '@type': 'ItemPage',
+        name,
+        description: pick(product.shortDesc, locale),
+        primaryImageOfPage: images[0],
+        url: pageUrl,
+        inLanguage: locale,
+        isPartOf: { '@id': `${siteConfig.url}/#website` },
+      }
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      item,
       {
         '@type': 'BreadcrumbList',
         itemListElement: [

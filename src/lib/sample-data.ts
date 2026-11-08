@@ -340,10 +340,14 @@ export const sampleProducts: Product[] = [
     _id: 'p29',
     slug: 'travel-jewellery-cases',
     name: { en: 'Travel Jewellery Cases', ar: 'شنط المجوهرات للسفر' },
+    seoTitle: {
+      en: 'Travel Jewellery Case in Qatar — Divided Jewellery Cases for Weddings and Hotels',
+      ar: 'شنطة مجوهرات للسفر في قطر — شنط مجوهرات مقسّمة للأعراس والفنادق',
+    },
     category: interiors,
     shortDesc: {
-      en: 'Cases divided inside for carrying jewellery and watches safely when travelling, in hotels, to parties and to weddings.',
-      ar: 'شنط مقسّمة من الداخل لحمل المجوهرات والساعات بأمان في السفر والفنادق والحفلات والأعراس.',
+      en: 'A travel jewellery case divided inside for carrying jewellery and watches safely when travelling, in hotels, to parties and to weddings, with free delivery in Qatar.',
+      ar: 'شنطة مجوهرات للسفر مقسّمة من الداخل لحمل المجوهرات والساعات بأمان في السفر والفنادق والحفلات والأعراس، مع توصيل مجاني داخل قطر.',
     },
     fullDesc: desc(
       'A special design from Nasrallah Trading Est that you will not find anywhere else in Qatar. Each case carries a whole set safely: compartments for necklaces, bangles, rings and earrings, cushions for watches, and soft linings that keep pieces from touching, closed with secure gold-tone clasps. Available in a black crocodile-texture finish and in light grey.',

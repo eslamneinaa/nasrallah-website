@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({
     locale,
     path: `products/${slug}`,
-    title: pick(product.name, locale),
+    title: pick(product.seoTitle, locale) ?? pick(product.name, locale),
     description: pick(product.shortDesc, locale),
     image: image?.startsWith('https://') ? `${image}?w=1200&h=630&fit=crop&auto=format` : undefined,
   })

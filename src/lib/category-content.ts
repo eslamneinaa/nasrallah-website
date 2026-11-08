@@ -58,9 +58,9 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   'luxury-safes': {
     ar: {
       heading: 'الخزائن الفاخرة في قطر',
-      metaTitle: 'خزائن فاخرة في قطر — خزائن بتصاميم خشبية وملونة ودوّار ساعات',
+      metaTitle: 'خزائن وتجوري فاخر في قطر — تصاميم خشبية وملونة وخزائن مجوهرات ودوّار ساعات',
       description:
-        'خزائن فاخرة في قطر بتصاميم تليق بالبيت والمجلس ومكاتب الإدارة: تشطيبات خشب الجوز والواجهات المضلّعة والمزخرفة، وخزائن مجوهرات بنقشة الرخام، وخزائن بدوّار ساعات مدمج.',
+        'خزائن وتجوري فاخر في قطر بتصاميم تليق بالبيت والمجلس ومكاتب الإدارة: تشطيبات خشب الجوز والواجهات المضلّعة والمزخرفة، وخزائن مجوهرات بنقشة الرخام، وخزائن بدوّار ساعات مدمج.',
       intro: [
         'خزائن صُمّمت لتبقى ظاهرة: تشطيبات خشب الجوز، وواجهات مضلّعة، وأبواب مزخرفة بالزهور من SAKURA، وخزنة UCHIDA الحمراء بأدراج جلدية. حماية جادة بمظهر قطعة أثاث راقية.',
         'ومنها خزائن المجوهرات بتجهيز داخلي بنقشة الرخام، وخزائن بدوّار ساعات مدمج يُبقي الساعات الأوتوماتيكية تعمل وهي في أمان.',
@@ -208,6 +208,49 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
         'Tell us how many people need lockers and what each needs to store, and we will recommend the right layout with a full quotation.',
       ],
     },
+  },
+  'home-safes': {
+    ar: {
+      heading: 'خزائن منزلية في قطر',
+      metaTitle: 'خزنة منزلية في قطر — خزائن منزلية صغيرة وخزائن نقود ومجوهرات للبيت',
+      description:
+        'خزائن منزلية في قطر: خزنة منزلية صغيرة لخزانة الملابس، وخزائن نقود منزلية بالبصمة والأرقام، وخزائن مجوهرات للبيت، من UCHIDA وSAKURA وKUROGANE، مع توصيل مجاني.',
+      intro: [
+        'الخزنة المنزلية تحفظ النقود والذهب وجوازات السفر والعقود في مكان واحد آمن داخل البيت. جمعنا هنا الخزائن التي تناسب البيوت: خزائن صغيرة توضع داخل خزانة الملابس، وخزائن نقود بالبصمة والأرقام والمفتاح، وخزائن للمجوهرات والساعات بتجهيز داخلي.',
+        'لاختيار المقاس والقفل المناسبين اقرؤوا دليلنا «كيف تختارون خزنة البيت المناسبة»، أو زورونا في معرضنا بسوق العين لتجربة الأقفال بأنفسكم. التوصيل مجاني داخل قطر.',
+      ],
+    },
+    en: {
+      heading: 'Home Safes in Qatar',
+      metaTitle: 'Home Safes in Qatar — Small Home Safes, Cash and Jewellery Safes for the House',
+      description:
+        'Home safes in Qatar: small safes for a wardrobe, cash safes with fingerprint and keypad locks, and jewellery safes for the house, from UCHIDA, SAKURA and KUROGANE, with free delivery.',
+      intro: [
+        'A home safe keeps cash, gold, passports and contracts together in one secure place at home. Here are the safes that suit a house: compact safes that fit inside a wardrobe, cash safes with fingerprint, keypad and key locks, and jewellery and watch safes with fitted interiors.',
+        'To choose the right size and lock, read our guide on choosing a home safe, or visit our Souq Al Ein showroom to try the locks yourself. Delivery is free across Qatar.',
+      ],
+    },
+  },
+}
+
+/** Landing pages that gather products from several categories, keyed like categoryContent. */
+export const collections: Record<string, { label: Record<Locale, string>; products: string[]; article?: string }> = {
+  'home-safes': {
+    label: { ar: 'الخزائن المنزلية', en: 'Home Safes' },
+    article: 'choosing-a-home-safe',
+    products: [
+      'uchida-compact-digital-safe',
+      'uchida-fingerprint-safe',
+      'sakura-fingerprint-safe',
+      'sakura-multi-lock-safe',
+      'kurogane-compact-wing-safe',
+      'uchida-black-digital-safe',
+      'uchida-white-safe-with-wooden-shelves',
+      'sakura-floral-safe',
+      'uchida-red-safe-with-leather-drawers',
+      'marble-interior-jewellery-safe',
+      'watch-winder-safe',
+    ],
   },
 }
 

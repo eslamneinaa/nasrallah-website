@@ -88,7 +88,7 @@ export const articleSources: ArticleSource[] = [
       ],
     },
     products: ['sakura-multi-lock-safe', 'sakura-fingerprint-safe', 'uchida-full-height-fire-resistant-safe'],
-    links: [{ page: 'safe-buying-guide' }, { category: 'fire-resistant-safes' }],
+    links: [{ category: 'home-safes' }, { page: 'safe-buying-guide' }, { category: 'fire-resistant-safes' }],
   },
   {
     slug: 'fingerprint-vs-keypad-vs-key-safe-lock',

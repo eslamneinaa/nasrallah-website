@@ -33,6 +33,8 @@ export type Product = {
   _id: string
   slug: string
   name: Localized
+  /** Page title for Google when it should differ from the name (phrased as people search). */
+  seoTitle?: Localized | null
   category?: Category | null
   shortDesc?: Localized | null
   fullDesc?: Localized<PortableTextBlock[]> | null

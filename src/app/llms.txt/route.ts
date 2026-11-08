@@ -1,7 +1,7 @@
 import { siteConfig } from '@/config/site'
 import { fill, getDictionary, href, pick } from '@/i18n'
 import { getArticles } from '@/lib/articles'
-import { categoryContent, categoryHref } from '@/lib/category-content'
+import { categoryContent, categoryHref, collections } from '@/lib/category-content'
 import { getCatalog } from '@/lib/sanity/api'
 
 export const dynamic = 'force-static'
@@ -49,6 +49,7 @@ ${siteConfig.name.en} was founded in ${siteConfig.foundedYear} and sells ${new I
 
 ## Product categories
 
+${Object.keys(collections).map((slug) => `- [${collections[slug].label.en}](${siteConfig.url}${categoryHref('en', slug)}) (${collections[slug].label.ar}): ${categoryContent[slug].en.description}`).join('\n')}
 ${categories.map((c) => `- [${pick(c.title, 'en')}](${siteConfig.url}${categoryHref('en', c.slug)}) (${pick(c.title, 'ar')})${categoryContent[c.slug] ? `: ${categoryContent[c.slug].en.description}` : ''}`).join('\n')}
 
 ## Products

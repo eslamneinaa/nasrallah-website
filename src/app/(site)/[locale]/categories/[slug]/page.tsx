@@ -8,7 +8,8 @@ import { PageHero } from '@/components/PageHero'
 import { ProductCard } from '@/components/ProductCard'
 import { siteConfig } from '@/config/site'
 import { getDictionary, href, pick } from '@/i18n'
-import { categoryContent } from '@/lib/category-content'
+import { getArticle } from '@/lib/articles'
+import { categoryContent, collections } from '@/lib/category-content'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 
@@ -18,7 +19,8 @@ export const dynamicParams = false
 
 export async function generateStaticParams() {
   const { categories } = await getCatalog()
-  return categories.filter((c) => categoryContent[c.slug]).map((c) => ({ slug: c.slug }))
+  const slugs = categories.filter((c) => categoryContent[c.slug]).map((c) => c.slug)
+  return [...slugs, ...Object.keys(collections)].map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -29,18 +31,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({ locale, path: `categories/${slug}`, title: copy.metaTitle, description: copy.description })
 }
 
-/** A landing page per product category, so each one can rank for its own searches. */
+/** A landing page per product category or collection, so each one can rank for its own searches. */
 export default async function CategoryPage({ params }: Props) {
   const locale = await resolveLocale(params)
   const { slug } = await params
   const copy = categoryContent[slug]?.[locale]
   const { products, categories } = await getCatalog()
   const category = categories.find((c) => c.slug === slug)
-  if (!copy || !category) notFound()
+  const collection = collections[slug]
+  if (!copy || (!category && !collection)) notFound()
 
   const dict = getDictionary(locale)
-  const items = products.filter((p) => p.category?.slug === slug)
-  const others = categories.filter((c) => c.slug !== slug && categoryContent[c.slug])
+  const label = collection ? collection.label[locale] : (pick(category?.title, locale) ?? '')
+  const article = collection?.article ? getArticle(collection.article) : undefined
+  const items = collection
+    ? collection.products.flatMap((s) => products.find((p) => p.slug === s) ?? [])
+    : products.filter((p) => p.category?.slug === slug)
+  const others = [
+    ...Object.entries(collections).map(([s, c]) => ({ slug: s, label: c.label[locale] })),
+    ...categories.filter((c) => categoryContent[c.slug]).map((c) => ({ slug: c.slug, label: pick(c.title, locale) ?? '' })),
+  ].filter((c) => c.slug !== slug)
   const pageUrl = siteConfig.url + href(locale, `categories/${slug}`)
 
   const jsonLd = {
@@ -68,7 +78,7 @@ export default async function CategoryPage({ params }: Props) {
         itemListElement: [
           { name: dict.nav.home, item: siteConfig.url + href(locale) },
           { name: dict.nav.products, item: siteConfig.url + href(locale, 'products') },
-          { name: pick(category.title, locale), item: pageUrl },
+          { name: label, item: pageUrl },
         ].map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, ...crumb })),
       },
     ],
@@ -81,7 +91,7 @@ export default async function CategoryPage({ params }: Props) {
         crumbs={[
           { label: dict.nav.home, href: href(locale) },
           { label: dict.nav.products, href: href(locale, 'products') },
-          { label: pick(category.title, locale) ?? '' },
+          { label },
         ]}
       />
       <section className="bg-khatam-light py-16 sm:py-24">
@@ -92,6 +102,15 @@ export default async function CategoryPage({ params }: Props) {
                 {p}
               </p>
             ))}
+            {article && (
+              <Link
+                href={href(locale, `articles/${article.slug}`)}
+                className="inline-flex items-center gap-2 font-medium text-maroon-700 underline-offset-4 hover:underline"
+              >
+                {article.title[locale]}
+                <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+              </Link>
+            )}
           </Reveal>
 
           <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -111,7 +130,7 @@ export default async function CategoryPage({ params }: Props) {
                     href={href(locale, `categories/${c.slug}`)}
                     className="inline-block border border-gold-500/40 bg-pearl-50 px-4 py-2 text-sm text-maroon-900 transition hover:border-gold-500 hover:bg-pearl-100"
                   >
-                    {pick(c.title, locale)}
+                    {c.label}
                   </Link>
                 </li>
               ))}

@@ -11,7 +11,7 @@ import { SectionHeading } from '@/components/SectionHeading'
 import { siteConfig, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
 import { formatArticleDate, getArticle, getArticles, type ArticleLink } from '@/lib/articles'
-import { categoryHref } from '@/lib/category-content'
+import { categoryHref, collections } from '@/lib/category-content'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 import type { Locale } from '@/lib/types'
@@ -56,7 +56,9 @@ export default async function ArticlePage({ params }: Props) {
     }
     if ('category' in link) {
       const category = categories.find((c) => c.slug === link.category)
-      return category && { href: categoryHref(l, category.slug), label: pick(category.title, l) ?? '' }
+      if (category) return { href: categoryHref(l, category.slug), label: pick(category.title, l) ?? '' }
+      const collection = collections[link.category]
+      return collection && { href: categoryHref(l, link.category), label: collection.label[l] }
     }
     const other = getArticle(link.article)
     return other && { href: href(l, `articles/${other.slug}`), label: other.title[l] }

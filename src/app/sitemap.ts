@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 import { href, locales } from '@/i18n/config'
 import { getArticles } from '@/lib/articles'
-import { categoryContent } from '@/lib/category-content'
+import { categoryContent, collections } from '@/lib/category-content'
 import { getCatalog } from '@/lib/sanity/api'
 
 export const dynamic = 'force-static'
@@ -15,6 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const paths = [
     ...staticPaths,
     ...categories.filter((c) => categoryContent[c.slug]).map((c) => `categories/${c.slug}`),
+    ...Object.keys(collections).map((slug) => `categories/${slug}`),
     ...products.map((p) => `products/${p.slug}`),
     ...articles.map((a) => `articles/${a.slug}`),
   ]

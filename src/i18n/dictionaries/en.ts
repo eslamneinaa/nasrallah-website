@@ -58,11 +58,11 @@ const en = {
     items: [
       {
         name: 'UCHIDA',
-        desc: 'Our widest range: fire-resistant safes with digital and fingerprint locks, deposit safes, fire-resistant records cabinets, key cabinets, and designer safes in wood finishes and bold colours.',
+        desc: 'Our widest range: fire-resistant safes with digital and fingerprint locks, deposit safes, key-locked hotel safes, fire-resistant records cabinets, key cabinets, and designer safes in wood finishes and bold colours.',
       },
       {
         name: 'SAKURA',
-        desc: 'Safes with modern fingerprint and keypad locks, eye-catching designs such as floral mirror fronts, and fire-resistant filing cabinets, for homes, offices and institutions.',
+        desc: 'Safes with modern fingerprint and keypad locks, digital hotel safes, eye-catching designs such as floral mirror fronts, and fire-resistant filing cabinets, for homes, offices and institutions.',
       },
       {
         name: 'GODREJ',
@@ -117,7 +117,7 @@ const en = {
       },
       {
         q: 'Which brands of safes do you sell?',
-        a: 'We supply UCHIDA, SAKURA, GODREJ and KUROGANE: fire-resistant and luxury safes, deposit safes, filing cabinets, key cabinets, cash boxes, steel cupboards and lockers, along with fitted jewellery and watch interiors.',
+        a: 'We supply UCHIDA, SAKURA, GODREJ and KUROGANE: fire-resistant and luxury safes, deposit safes, hotel safes, filing cabinets, key cabinets, cash boxes, steel cupboards and lockers, along with fitted jewellery and watch interiors.',
       },
       {
         q: 'Do you have cash safes for shops, offices and homes?',

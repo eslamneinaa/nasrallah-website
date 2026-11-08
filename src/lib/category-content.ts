@@ -55,6 +55,28 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       ],
     },
   },
+  'hotel-safes': {
+    ar: {
+      heading: 'خزائن الفنادق في قطر',
+      metaTitle: 'خزائن فندقية في قطر — خزنة غرف الفنادق والشقق الفندقية بقفل رقمي أو مفتاح',
+      description:
+        'خزائن فندقية في قطر من SAKURA وUCHIDA لغرف الفنادق والشقق الفندقية وسكن الموظفين: بقفل رقمي بشاشة أو بمفتاح، بحجم يناسب خزانة الملابس، مع توصيل مجاني وعروض أسعار للكميات.',
+      intro: [
+        'خزنة الغرفة من أول ما يبحث عنه النزيل: مكان صغير آمن لجواز السفر والنقود والهاتف والمجوهرات. نوفّر خزائن فندقية صغيرة توضع داخل خزانة الملابس أو أسفل المكتب، بقفل رقمي بشاشة من SAKURA حاصل على شهادة CE، أو بقفل مفتاح بسيط من UCHIDA بلون أسود أو عاجي.',
+        'وتناسب أيضًا الشقق الفندقية والمجمعات السكنية وسكن الموظفين، والبيوت لمن يريد خزنة صغيرة. نجهّز عروض أسعار للكميات لتجهيز فندق أو مبنى كامل، والتوصيل مجاني داخل قطر.',
+      ],
+    },
+    en: {
+      heading: 'Hotel Safes in Qatar',
+      metaTitle: 'Hotel Safes in Qatar — In-Room Safes for Hotels and Serviced Apartments, Digital or Key',
+      description:
+        'Hotel safes in Qatar from SAKURA and UCHIDA for hotel rooms, serviced apartments and staff housing: a digital lock with a display or a key lock, sized for a wardrobe, with free delivery and quotations for quantities.',
+      intro: [
+        'An in-room safe is one of the first things guests look for: a small, secure place for passports, cash, phones and jewellery. We carry compact hotel safes that sit inside a wardrobe or under a desk, with a CE-approved SAKURA digital lock and display, or a simple UCHIDA key lock in black or ivory.',
+        'They also suit serviced apartments, residential compounds, staff housing and homes that need a small safe. We prepare quotations for quantities to equip a whole hotel or building, and delivery is free across Qatar.',
+      ],
+    },
+  },
   'luxury-safes': {
     ar: {
       heading: 'الخزائن الفاخرة في قطر',
@@ -240,6 +262,7 @@ export const collections: Record<string, { label: Record<Locale, string>; produc
     article: 'choosing-a-home-safe',
     products: [
       'uchida-compact-digital-safe',
+      'sakura-compact-digital-hotel-safe',
       'uchida-fingerprint-safe',
       'sakura-fingerprint-safe',
       'sakura-multi-lock-safe',

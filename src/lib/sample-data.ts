@@ -46,8 +46,9 @@ const interiors: Category = { _id: 'cat-interiors', slug: 'jewellery-watch-inter
 const deposit: Category = { _id: 'cat-deposit', slug: 'deposit-safes', title: { en: 'Deposit Safes', ar: 'خزائن الإيداع' } }
 const keyCabinets: Category = { _id: 'cat-keys', slug: 'key-cabinets', title: { en: 'Key Cabinets', ar: 'خزائن المفاتيح' } }
 const cashBoxes: Category = { _id: 'cat-cash-boxes', slug: 'cash-boxes', title: { en: 'Cash Boxes', ar: 'صناديق النقود' } }
+const hotel: Category = { _id: 'cat-hotel', slug: 'hotel-safes', title: { en: 'Hotel Safes', ar: 'خزائن الفنادق' } }
 
-export const sampleCategories: Category[] = [fire, deposit, luxury, interiors, filing, keyCabinets, cashBoxes, cupboards, lockers]
+export const sampleCategories: Category[] = [fire, deposit, hotel, luxury, interiors, filing, keyCabinets, cashBoxes, cupboards, lockers]
 
 export const sampleProducts: Product[] = [
   {
@@ -960,6 +961,126 @@ export const sampleProducts: Product[] = [
     ],
     isFeatured: false,
     order: 12,
+  },
+  {
+    _id: 'p47',
+    slug: 'sakura-digital-hotel-safe',
+    name: { en: 'SAKURA Digital Hotel Safe', ar: 'خزنة فندقية SAKURA بقفل رقمي' },
+    category: hotel,
+    shortDesc: {
+      en: 'A light-silver SAKURA hotel safe with a CE-approved digital keypad, a display screen and a turning knob, for hotel rooms, serviced apartments and homes.',
+      ar: 'خزنة فندقية SAKURA بلون فضي فاتح، بقفل رقمي حاصل على شهادة CE مع شاشة ولوحة أرقام ومقبض دوّار، لغرف الفنادق والشقق الفندقية والبيوت.',
+    },
+    fullDesc: desc(
+      'The safe guests expect to find in the wardrobe: a digital keypad with a display screen and a turning knob, so passports, cash, phones and jewellery stay locked while they are out. The lock carries CE approval, and the textured steel body is sized to sit inside a wardrobe or under a desk.',
+      'الخزنة التي يتوقع النزيل أن يجدها في خزانة الملابس: لوحة أرقام رقمية مع شاشة ومقبض دوّار، فتبقى جوازات السفر والنقود والهواتف والمجوهرات مقفلة أثناء خروجه. القفل حاصل على شهادة CE، وجسم الخزنة الحديدي المحبّب بحجم يناسب خزانة الملابس أو أسفل المكتب.',
+    ),
+    images: [
+      img(
+        'sakura-hotel-safe',
+        1448,
+        1086,
+        'Light-silver SAKURA hotel safe with a digital keypad, display and turning knob',
+      ),
+    ],
+    specTable: [
+      brandSpec('SAKURA'),
+      spec('Lock', 'القفل', 'Digital keypad with display (CE approved)', 'لوحة أرقام رقمية بشاشة (شهادة CE)'),
+      spec('Use', 'الاستخدام', 'Hotel rooms, serviced apartments and homes', 'غرف الفنادق والشقق الفندقية والبيوت'),
+      spec('Finish', 'اللون', 'Light silver', 'فضي فاتح'),
+    ],
+    isFeatured: false,
+    order: 12.1,
+  },
+  {
+    _id: 'p48',
+    slug: 'sakura-compact-digital-hotel-safe',
+    name: { en: 'SAKURA Compact Digital Hotel Safe', ar: 'خزنة فندقية SAKURA صغيرة بقفل رقمي' },
+    category: hotel,
+    shortDesc: {
+      en: 'A compact silver SAKURA hotel safe with a CE-approved digital keypad, a display screen and a turning knob, for a wardrobe shelf or a bedside cabinet.',
+      ar: 'خزنة فندقية SAKURA صغيرة بلون فضي، بقفل رقمي حاصل على شهادة CE مع شاشة ولوحة أرقام ومقبض دوّار، لرف خزانة الملابس أو الكومودينو.',
+    },
+    fullDesc: desc(
+      'The smaller of our SAKURA hotel safes, for rooms where space is tight: the same digital keypad with a display screen and a turning knob in a lower, wider body that fits on a wardrobe shelf or in a bedside cabinet. A practical choice for hotel rooms, staff housing and homes.',
+      'الأصغر بين خزائن SAKURA الفندقية لدينا، للغرف ضيّقة المساحة: لوحة الأرقام الرقمية نفسها مع الشاشة والمقبض الدوّار، في جسم أقل ارتفاعًا يناسب رف خزانة الملابس أو الكومودينو. خيار عملي لغرف الفنادق وسكن الموظفين والبيوت.',
+    ),
+    images: [
+      img(
+        'sakura-hotel-safe-compact',
+        1448,
+        1086,
+        'Compact silver SAKURA hotel safe with a digital keypad, display and turning knob',
+      ),
+    ],
+    specTable: [
+      brandSpec('SAKURA'),
+      spec('Lock', 'القفل', 'Digital keypad with display (CE approved)', 'لوحة أرقام رقمية بشاشة (شهادة CE)'),
+      spec('Size', 'الحجم', 'Compact', 'صغير'),
+      spec('Finish', 'اللون', 'Silver', 'فضي'),
+    ],
+    isFeatured: false,
+    order: 12.2,
+  },
+  {
+    _id: 'p49',
+    slug: 'uchida-black-hotel-safe',
+    name: { en: 'UCHIDA Black Key Hotel Safe', ar: 'خزنة فندقية UCHIDA سوداء بمفتاح' },
+    category: hotel,
+    shortDesc: {
+      en: 'A low, wide black UCHIDA safe with a chrome key lock on a brushed handle plate and two external hinges, for hotel rooms, wardrobes and desks.',
+      ar: 'خزنة UCHIDA سوداء منخفضة وعريضة، بقفل مفتاح معدني لامع على لوحة مقبض فضية ومفصلتين خارجيتين، لغرف الفنادق وخزائن الملابس والمكاتب.',
+    },
+    fullDesc: desc(
+      'No code to forget: this UCHIDA safe locks with a key, set in a chrome keyhole on a brushed silver handle plate. Its low, wide body slides into a wardrobe or under a desk, and the door swings on two sturdy external hinges, for hotel rooms, offices and homes.',
+      'بلا رقم سري يُنسى: تُقفل هذه الخزنة من UCHIDA بمفتاح في قفل معدني لامع على لوحة مقبض فضية. جسمها المنخفض العريض يدخل في خزانة الملابس أو أسفل المكتب، ويدور بابها على مفصلتين خارجيتين متينتين، لغرف الفنادق والمكاتب والبيوت.',
+    ),
+    images: [
+      img(
+        'uchida-hotel-safe-black',
+        1448,
+        1086,
+        'Low black UCHIDA hotel safe with a chrome key lock and two external hinges',
+      ),
+    ],
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Key', 'مفتاح'),
+      spec('Hinges', 'المفصلات', 'Two external hinges', 'مفصلتان خارجيتان'),
+      spec('Finish', 'اللون', 'Black', 'أسود'),
+    ],
+    isFeatured: false,
+    order: 12.3,
+  },
+  {
+    _id: 'p50',
+    slug: 'uchida-ivory-hotel-safe',
+    name: { en: 'UCHIDA Ivory Key Hotel Safe', ar: 'خزنة فندقية UCHIDA عاجية بمفتاح' },
+    category: hotel,
+    shortDesc: {
+      en: 'A low, wide ivory UCHIDA safe with a chrome key lock on a silver handle plate and two external hinges, to blend with light wardrobes and furniture.',
+      ar: 'خزنة UCHIDA بلون عاجي منخفضة وعريضة، بقفل مفتاح معدني لامع على لوحة مقبض فضية ومفصلتين خارجيتين، تنسجم مع خزائن الملابس والأثاث الفاتح.',
+    },
+    fullDesc: desc(
+      'The same key-locked UCHIDA safe in a soft ivory finish that disappears into light wardrobes and hotel furniture. A chrome keyhole on a silver handle plate and two external hinges keep it simple and dependable, for hotel rooms, serviced apartments and homes.',
+      'خزنة UCHIDA نفسها بقفل المفتاح، بلون عاجي هادئ يذوب في خزائن الملابس والأثاث الفندقي الفاتح. قفل معدني لامع على لوحة مقبض فضية ومفصلتان خارجيتان تجعلها بسيطة يُعتمد عليها، لغرف الفنادق والشقق الفندقية والبيوت.',
+    ),
+    images: [
+      img(
+        'uchida-hotel-safe-ivory',
+        1586,
+        992,
+        'Low ivory UCHIDA hotel safe with a chrome key lock and two external hinges',
+      ),
+    ],
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Key', 'مفتاح'),
+      spec('Hinges', 'المفصلات', 'Two external hinges', 'مفصلتان خارجيتان'),
+      spec('Finish', 'اللون', 'Ivory', 'عاجي'),
+    ],
+    isFeatured: false,
+    order: 12.4,
   },
   {
     _id: 'p37',

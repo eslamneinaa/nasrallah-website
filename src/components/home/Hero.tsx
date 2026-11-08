@@ -43,7 +43,7 @@ export function Hero({ locale, dict, image }: Props) {
             {dict.eyebrow}
           </p>
 
-          <h1 style={delay(0.1)} className="display animate-rise mt-8 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
+          <h1 className="display animate-settle mt-8 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
             <span className="block">{dict.titleLead}</span>
             {/* Every phrase is stacked invisibly in one grid cell so the box always fits the longest one. */}
             <span className="relative mt-1 grid" aria-live="polite">
@@ -67,7 +67,7 @@ export function Hero({ locale, dict, image }: Props) {
             </span>
           </h1>
 
-          <p style={delay(0.2)} className="animate-rise mt-8 max-w-xl text-lg leading-relaxed text-pearl-200/75 sm:text-xl">
+          <p className="animate-settle mt-8 max-w-xl text-lg leading-relaxed text-pearl-200/75 sm:text-xl">
             {dict.subtitle}
           </p>
 

@@ -58,6 +58,13 @@
   @keyframes rise {
     from { opacity: 0; translate: 0 18px; }
   }
+  /* The same lift without the fade, for the headline and lead text: Chrome
+     doesn't count transparent text as painted, so a fade-in pushes back the
+     page's Largest Contentful Paint. */
+  --animate-settle: settle 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  @keyframes settle {
+    from { translate: 0 18px; }
+  }
 }
 
 :root {

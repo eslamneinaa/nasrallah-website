@@ -18,8 +18,8 @@ export function PageHero({ title, subtitle, crumbs, children }: Props) {
       <KhatamLattice className="[mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_75%)]" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgb(138_21_56/0.55),transparent_60%)]" aria-hidden="true" />
       <div className="container-page text-center">
-        {/* CSS entrance (not <Reveal>) so the title paints before hydration. */}
-        <div className="animate-rise">
+        {/* CSS entrance (not <Reveal>) so the title paints before hydration; no fade, so it counts as painted at once. */}
+        <div className="animate-settle">
           {crumbs && (
             <nav aria-label="Breadcrumb" className="mb-8">
               <ol className="flex flex-wrap items-center justify-center gap-3 text-sm text-pearl-200/70">

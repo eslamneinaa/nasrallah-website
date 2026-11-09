@@ -11,9 +11,9 @@ type Props = { locale: Locale; dict: Dictionary['form']; initialProduct?: string
 const schema: Schema = {
   name: ['required'],
   phone: ['required', 'phone'],
-  email: ['required', 'email'],
+  // Phone is enough to reply on WhatsApp or by call, so email and quantity are optional.
+  email: ['email'],
   product: ['required'],
-  quantity: ['required'],
 }
 
 export function QuoteForm({ locale, dict, initialProduct = '' }: Props) {
@@ -45,7 +45,7 @@ export function QuoteForm({ locale, dict, initialProduct = '' }: Props) {
       <Field name="name" label={dict.name} error={errors.name} autoComplete="name" required />
       <Field name="company" label={dict.company} optionalLabel={dict.optional} autoComplete="organization" />
       <Field name="phone" label={dict.phone} error={errors.phone} type="tel" autoComplete="tel" dir="ltr" required />
-      <Field name="email" label={dict.email} error={errors.email} type="email" autoComplete="email" dir="ltr" required />
+      <Field name="email" label={dict.email} error={errors.email} type="email" autoComplete="email" dir="ltr" optionalLabel={dict.optional} />
       <Field
         name="product"
         label={dict.product}
@@ -60,8 +60,8 @@ export function QuoteForm({ locale, dict, initialProduct = '' }: Props) {
         label={dict.quantity}
         error={errors.quantity}
         placeholder={dict.quantityPlaceholder}
+        optionalLabel={dict.optional}
         className="sm:col-span-2"
-        required
       />
       <Field
         multiline

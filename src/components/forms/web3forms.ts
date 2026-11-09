@@ -91,7 +91,9 @@ export function useWeb3Form({ accessKey, schema, messages, subject, extra }: Opt
 
       setStatus('sending')
       try {
-        const { botcheck: _ignored, ...fields } = values
+        const { botcheck: _ignored, ...filled } = values
+        // Optional fields left blank are dropped (an empty "email" would be rejected).
+        const fields = Object.fromEntries(Object.entries(filled).filter(([, v]) => v))
         const res = await fetch(ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },

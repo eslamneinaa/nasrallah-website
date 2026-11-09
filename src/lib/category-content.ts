@@ -239,7 +239,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
         'خزائن منزلية في قطر: خزنة منزلية صغيرة لخزانة الملابس، وخزائن نقود منزلية بالبصمة والأرقام، وخزائن مجوهرات للبيت، من UCHIDA وSAKURA وKUROGANE، مع توصيل مجاني.',
       intro: [
         'الخزنة المنزلية تحفظ النقود والذهب وجوازات السفر والعقود في مكان واحد آمن داخل البيت. جمعنا هنا الخزائن التي تناسب البيوت: خزائن صغيرة توضع داخل خزانة الملابس، وخزائن نقود بالبصمة والأرقام والمفتاح، وخزائن للمجوهرات والساعات بتجهيز داخلي.',
-        'لاختيار المقاس والقفل المناسبين اقرؤوا دليلنا «كيف تختارون خزنة البيت المناسبة»، أو زورونا في معرضنا بسوق العين لتجربة الأقفال بأنفسكم. التوصيل مجاني داخل قطر.',
+        'لا توجد خزنة واحدة هي أفضل خزنة منزلية للجميع: الأفضل هي التي تناسب ما ستحفظونه والمكان الذي ستوضع فيه. لاختيار المقاس والقفل المناسبين اقرؤوا دليلنا «كيف تختارون خزنة البيت المناسبة»، أو زورونا في معرضنا بسوق العين لتجربة الأقفال بأنفسكم. التوصيل مجاني داخل قطر.',
       ],
     },
     en: {
@@ -249,7 +249,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
         'Home safes in Qatar: small safes for a wardrobe, cash safes with fingerprint and keypad locks, and jewellery safes for the house, from UCHIDA, SAKURA and KUROGANE, with free delivery.',
       intro: [
         'A home safe keeps cash, gold, passports and contracts together in one secure place at home. Here are the safes that suit a house: compact safes that fit inside a wardrobe, cash safes with fingerprint, keypad and key locks, and jewellery and watch safes with fitted interiors.',
-        'To choose the right size and lock, read our guide on choosing a home safe, or visit our Souq Al Ein showroom to try the locks yourself. Delivery is free across Qatar.',
+        'There is no single best home safe for everyone: the best one fits what you will keep in it and where it will stand. To choose the right size and lock, read our guide on choosing a home safe, or visit our Souq Al Ein showroom to try the locks yourself. Delivery is free across Qatar.',
       ],
     },
   },

@@ -35,9 +35,21 @@ export default function RootPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', ...websiteJsonLd }) }}
       />
-      <p style={{ fontFamily: 'system-ui, sans-serif', color: '#ece3d7', textAlign: 'center', paddingTop: '40vh' }}>
-        <a href="/ar/" style={{ color: '#d2b582' }}>العربية</a> · <a href="/en/" style={{ color: '#d2b582' }}>English</a>
-      </p>
+      {/* Seen only for an instant (or by crawlers without JS): the name, what we do and the two languages. */}
+      <main style={{ fontFamily: 'system-ui, sans-serif', color: '#ece3d7', textAlign: 'center', paddingTop: '34vh' }}>
+        <h1 style={{ fontSize: '1.5rem', fontWeight: 600, margin: 0 }}>
+          {siteConfig.name.ar} · <span lang="en">{siteConfig.name.en}</span>
+        </h1>
+        <p style={{ margin: '0.75rem 0 1.5rem' }}>
+          خزائن في قطر منذ {siteConfig.foundedYear} · <span lang="en">Safes in Qatar since {siteConfig.foundedYear}</span>
+        </p>
+        <p>
+          <a href="/ar/" style={{ color: '#d2b582' }}>العربية</a> ·{' '}
+          <a href="/en/" lang="en" style={{ color: '#d2b582' }}>
+            English
+          </a>
+        </p>
+      </main>
     </>
   )
 }

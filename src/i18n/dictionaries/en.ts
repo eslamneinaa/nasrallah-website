@@ -1,8 +1,8 @@
 const en = {
   meta: {
-    title: 'Safes for Sale in Qatar — Cash, Jewellery & Fire-Resistant Safes | Nasrallah Trading Est, since 1906',
+    title: 'Safes for Sale in Qatar | Nasrallah Trading Est, since 1906',
     description:
-      'Safes for sale in Qatar since 1906: cash safes, jewellery safes, fire-resistant steel safes, filing cabinets, steel cupboards and lockers from UCHIDA, SAKURA, GODREJ and KUROGANE, with free delivery. Visit our showroom in Souq Al Ein, Salwa Road, Doha.',
+      'Safes for sale in Qatar since 1906: cash, jewellery and fire-resistant safes, filing cabinets and lockers from UCHIDA, SAKURA, GODREJ and KUROGANE.',
   },
   nav: {
     home: 'Home',
@@ -168,7 +168,7 @@ const en = {
   guide: {
     metaTitle: 'Safe Buying Guide for Qatar: How to Choose the Best Safe',
     metaDescription:
-      'A practical guide to choosing and buying a safe in Qatar: cash safes, jewellery safes, safes for documents and valuables, what sets the price, and how to choose where to buy.',
+      'A practical guide to buying a safe in Qatar: cash, jewellery and document safes, what sets the price, and how to choose where to buy.',
     title: 'Safe buying guide for Qatar',
     subtitle: 'How to choose the right safe, and where to buy it.',
     intro:
@@ -234,7 +234,7 @@ const en = {
   articles: {
     metaTitle: 'Articles and Advice on Safes in Qatar',
     metaDescription:
-      'Practical advice on choosing, placing and caring for safes in Qatar: home, cash, jewellery and fire-resistant safes, locks, filing cabinets and lockers, from Nasrallah Trading Est.',
+      'Practical advice on choosing, placing and caring for safes in Qatar: home, cash, jewellery and fire-resistant safes, locks, filing cabinets and lockers.',
     title: 'Articles and advice',
     subtitle: 'Practical answers to the questions our customers ask in the showroom.',
     readMore: 'Read the article',
@@ -296,7 +296,7 @@ const en = {
   },
   products: {
     metaTitle: 'Safes for Sale in Qatar',
-    metaDescription: 'Safes for sale in Qatar: cash and jewellery safes, fire-resistant steel safes, filing cabinets and steel lockers from UCHIDA, SAKURA, GODREJ and KUROGANE, with free delivery from our Doha showroom.',
+    metaDescription: 'Safes for sale in Qatar: cash and jewellery safes, fire-resistant safes, filing cabinets and steel lockers from UCHIDA, SAKURA, GODREJ and KUROGANE.',
     title: 'Safes for sale in Qatar',
     subtitle: 'Safes, filing cabinets and fitted interiors from our showroom. Need a size or finish you don’t see? Ask us.',
     searchPlaceholder: 'Search products…',

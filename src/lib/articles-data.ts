@@ -13,7 +13,7 @@ export const articleSources: ArticleSource[] = [
     },
     description: {
       ar: 'قبل شراء خزنة أو تجوري للبيت في قطر: ماذا ستحفظون، وما المقاس والقفل المناسبان، وأين تضعونها، وهل تحتاج إلى تثبيت. دليل مختصر من مؤسسة نصر الله التجارية.',
-      en: 'Before buying a home safe in Qatar: what you will keep in it, the right size and lock, where it goes and whether to anchor it. A short guide from Nasrallah Trading Est.',
+      en: 'Before buying a home safe in Qatar: what you will keep in it, the right size and lock, where it goes and whether to anchor it.',
     },
     keywords: {
       ar: 'خزنة للبيت، تجوري للبيت في قطر، أفضل خزنة منزلية، خزنة حفظ أمانات',

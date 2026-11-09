@@ -21,11 +21,18 @@ type PageMeta = {
   image?: string
 }
 
+// Google cuts titles at about 60 characters and shows the site name above each
+// result anyway, so the " | site name" suffix is only added when it still fits.
+const TITLE_LIMIT = 60
+
 /** Canonical URL, hreflang alternates and Open Graph for a localized page. */
 export function pageMetadata({ locale, path = '/', title, description, image = '/og.jpg' }: PageMeta): Metadata {
   const languages = Object.fromEntries(locales.map((l) => [l, href(l, path)]))
+  const withName = title ? `${title} | ${siteConfig.name[locale]}` : undefined
+  const fits = !!withName && withName.length <= TITLE_LIMIT
   return {
-    title,
+    // A string goes through the layout's "%s | site name" template; `absolute` skips it.
+    title: title && (fits ? title : { absolute: title }),
     description,
     alternates: {
       canonical: href(locale, path),
@@ -36,7 +43,7 @@ export function pageMetadata({ locale, path = '/', title, description, image = '
       siteName: siteConfig.name[locale],
       locale: locale === 'ar' ? 'ar_AR' : 'en_US',
       url: href(locale, path),
-      title: title ? `${title} | ${siteConfig.name[locale]}` : undefined,
+      title: fits ? withName : title,
       description,
       ...(image ? { images: [{ url: image }] } : {}),
     },

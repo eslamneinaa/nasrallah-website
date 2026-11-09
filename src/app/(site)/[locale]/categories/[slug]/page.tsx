@@ -113,6 +113,8 @@ export default async function CategoryPage({ params }: Props) {
             )}
           </Reveal>
 
+          {/* Keeps the outline H1 → H2 → H3 (product names) for crawlers and screen readers. */}
+          <h2 className="sr-only">{label}</h2>
           <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((p) => (
               <StaggerItem key={p._id}>

@@ -342,12 +342,12 @@ export const sampleProducts: Product[] = [
     slug: 'travel-jewellery-cases',
     name: { en: 'Travel Jewellery Cases', ar: 'شنط المجوهرات للسفر' },
     seoTitle: {
-      en: 'Travel Jewellery Case in Qatar — Divided Jewellery Cases for Weddings and Hotels',
-      ar: 'شنطة مجوهرات للسفر في قطر — شنط مجوهرات مقسّمة للأعراس والفنادق',
+      en: 'Travel Jewellery Case in Qatar — For Weddings and Hotels',
+      ar: 'شنطة مجوهرات للسفر في قطر — شنط مقسّمة للأعراس والفنادق',
     },
     category: interiors,
     shortDesc: {
-      en: 'A travel jewellery case divided inside for carrying jewellery and watches safely when travelling, in hotels, to parties and to weddings, with free delivery in Qatar.',
+      en: 'A travel jewellery case divided inside to carry jewellery and watches safely when travelling, in hotels and to weddings, with free delivery in Qatar.',
       ar: 'شنطة مجوهرات للسفر مقسّمة من الداخل لحمل المجوهرات والساعات بأمان في السفر والفنادق والحفلات والأعراس، مع توصيل مجاني داخل قطر.',
     },
     fullDesc: desc(

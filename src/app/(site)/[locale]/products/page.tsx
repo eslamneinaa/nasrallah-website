@@ -25,6 +25,8 @@ export default async function ProductsPage({ params }: LocaleParams) {
       />
       <section className="bg-pearl-100 py-12 sm:py-16">
         <div className="container-page">
+          {/* Keeps the outline H1 → H2 → H3 (product names) for crawlers and screen readers. */}
+          <h2 className="sr-only">{dict.nav.products}</h2>
           <ProductsExplorer locale={locale} products={products} categories={categories} dict={dict.products} cardCta={dict.common.viewDetails} />
         </div>
       </section>

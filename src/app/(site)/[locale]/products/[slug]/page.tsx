@@ -86,9 +86,15 @@ export default async function ProductPage({ params }: Props) {
         name,
         description: pick(product.shortDesc, locale),
         primaryImageOfPage: images[0],
+        image: images,
         url: pageUrl,
         inLanguage: locale,
         isPartOf: { '@id': `${siteConfig.url}/#website` },
+        // Ties the item to its maker and to the showroom that sells it, without the
+        // Product type (which Google flags as an error when there is no price).
+        sourceOrganization: { '@id': `${siteConfig.url}/#business` },
+        keywords: [category, brandName].filter(Boolean).join(', '),
+        ...(brandName ? { mentions: { '@type': 'Brand', name: brandName } } : {}),
       }
   const jsonLd = {
     '@context': 'https://schema.org',

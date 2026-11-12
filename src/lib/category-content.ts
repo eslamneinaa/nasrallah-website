@@ -271,6 +271,7 @@ export const collections: Record<string, { label: Record<Locale, string>; produc
       'uchida-white-safe-with-wooden-shelves',
       'sakura-floral-safe',
       'uchida-red-safe-with-leather-drawers',
+      'uchida-fire-resistant-jewellery-and-watch-safe',
       'marble-interior-jewellery-safe',
       'watch-winder-safe',
     ],

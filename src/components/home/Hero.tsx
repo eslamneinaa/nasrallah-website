@@ -43,13 +43,18 @@ export function Hero({ locale, dict, image }: Props) {
             {dict.eyebrow}
           </p>
 
-          <h1 className="display animate-settle mt-8 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
-            <span className="block">{dict.titleLead}</span>
-            {/* Every phrase is stacked invisibly in one grid cell so the box always fits the longest one. */}
-            <span className="relative mt-1 grid" aria-live="polite">
+          <div className="display animate-settle mt-8 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
+            {/* The heading search engines and screen readers get is fixed: the lead and the first phrase. */}
+            <h1>
+              <span className="block">{dict.titleLead}</span>
+              <span className="sr-only"> {dict.rotating[0]}</span>
+            </h1>
+            {/* The rotating phrase is decoration only. Every phrase is stacked invisibly in one grid
+                cell so the box always fits the longest one; the trailing spaces keep their text apart. */}
+            <span className="relative mt-1 grid" aria-hidden="true">
               {dict.rotating.map((phrase) => (
-                <span key={phrase} className="invisible col-start-1 row-start-1 ltr:italic" aria-hidden="true">
-                  {phrase}
+                <span key={phrase} className="invisible col-start-1 row-start-1 ltr:italic">
+                  {`${phrase} `}
                 </span>
               ))}
               <AnimatePresence mode="wait" initial={false}>
@@ -61,11 +66,11 @@ export function Hero({ locale, dict, image }: Props) {
                   transition={{ duration: 0.6, ease }}
                   className="col-start-1 row-start-1 text-gold-300 ltr:italic"
                 >
-                  {dict.rotating[index]}
+                  {`${dict.rotating[index]} `}
                 </motion.span>
               </AnimatePresence>
             </span>
-          </h1>
+          </div>
 
           <p className="animate-settle mt-8 max-w-xl text-lg leading-relaxed text-pearl-200/75 sm:text-xl">
             {dict.subtitle}

@@ -33,12 +33,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = await getProduct(slug)
   if (!product) return {}
   const image = product.images[0]?.url
+  // Bundled photos get a 1200×630 JPG share card (scripts/og-images.mjs): WhatsApp
+  // shows it when a product link is shared. Sanity's CDN crops its own.
+  const shareImage = image?.startsWith('https://')
+    ? `${image}?w=1200&h=630&fit=fill&bg=fff&fm=jpg`
+    : image?.match(/^\/products\/([\w-]+)\.webp$/)
+      ? `/og${image.replace(/\.webp$/, '.jpg')}`
+      : undefined
+  // Local searches name the country, so the title does too unless it already does.
+  const base = pick(product.seoTitle, locale) ?? pick(product.name, locale)
+  const title = base && !/قطر|Qatar/.test(base) ? `${base} ${locale === 'ar' ? 'في قطر' : 'in Qatar'}` : base
   return pageMetadata({
     locale,
     path: `products/${slug}`,
-    title: pick(product.seoTitle, locale) ?? pick(product.name, locale),
+    title,
     description: pick(product.shortDesc, locale),
-    image: image?.startsWith('https://') ? `${image}?w=1200&h=630&fit=crop&auto=format` : undefined,
+    image: shareImage,
   })
 }
 

@@ -4,6 +4,10 @@
 # (e.g. /studio/structure/product). 200 = rewrite, the URL stays the same.
 /studio/*   /studio/   200
 
+# The bare domain goes straight to the Arabic home page (English is one tap away
+# in the header). Replaces the JavaScript language picker at "/" for crawlers too.
+/           /ar/                 301
+
 # Friendly shortcuts
 /quote      /ar/request-quote/   301
 /admin      /studio/             301

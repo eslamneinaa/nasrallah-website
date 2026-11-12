@@ -8,6 +8,8 @@ export const siteConfig = {
   brands: ['UCHIDA', 'SAKURA', 'GODREJ', 'KUROGANE'],
   // Other names the business is listed under (the Google Business Profile).
   alternateNames: ['Nasrallah Trading Establishment'],
+  /** Used after a page title when the full name would push it past 60 characters. */
+  shortName: { ar: 'نصر الله', en: 'Nasrallah' },
   instagram: { url: 'https://www.instagram.com/nasrallah.trading/', handle: '@nasrallah.trading' },
   // Google Business Profile, by its Knowledge Graph id (from its share link).
   googleProfile: 'https://www.google.com/search?kgmid=/g/1tf5j36n',

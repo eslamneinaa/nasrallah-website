@@ -29,7 +29,7 @@ export function Logo({ locale, tone = 'dark', className = '' }: Props) {
       <LogoMark className={`h-12 transition-colors duration-500 ${light ? 'text-gold-300' : 'text-brand'}`} />
       {isAr ? (
         <span className="flex flex-col leading-none">
-          <span className={`font-[family-name:var(--font-amiri)] text-[1.4rem] font-bold ${main}`}>مؤسسة نصر الله</span>
+          <span className={`font-[family-name:var(--font-amiri)] text-[1.4rem] font-bold ${main}`}>{'مؤسسة نصر الله '}</span>
           <span className="mt-1 flex items-center gap-2 font-[family-name:var(--font-amiri)] text-[0.95rem] text-gold-400">
             <span className="h-px w-4 bg-gold-500/60" aria-hidden="true" />
             التجارية
@@ -38,7 +38,7 @@ export function Logo({ locale, tone = 'dark', className = '' }: Props) {
         </span>
       ) : (
         <span className="flex flex-col leading-none">
-          <span className={`font-[family-name:var(--font-bodoni)] text-[1.3rem] font-medium tracking-[0.14em] ${main}`}>NASRALLAH</span>
+          <span className={`font-[family-name:var(--font-bodoni)] text-[1.3rem] font-medium tracking-[0.14em] ${main}`}>{'NASRALLAH '}</span>
           <span className="mt-1.5 flex items-center gap-2 font-[family-name:var(--font-jost)] text-[0.6rem] font-medium tracking-[0.42em] text-gold-400">
             <span className="h-px w-3 bg-gold-500/60" aria-hidden="true" />
             TRADING EST

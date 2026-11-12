@@ -84,7 +84,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       description:
         'خزائن وتجوري فاخر في قطر للبيت والمجلس ومكاتب الإدارة: تشطيبات خشب الجوز وواجهات مضلّعة ومزخرفة، وخزائن مجوهرات بنقشة الرخام، وخزائن بدوّار ساعات.',
       intro: [
-        'خزائن صُمّمت لتبقى ظاهرة: تشطيبات خشب الجوز، وواجهات مضلّعة، وأبواب مزخرفة بالزهور من SAKURA، وخزنة UCHIDA الحمراء بأدراج جلدية. حماية جادة بمظهر قطعة أثاث راقية.',
+        'خزائن صُمّمت لتبقى ظاهرة: تشطيبات خشب الجوز، وأبواب بنقشة الرخام الأسود والأبيض، وواجهات مضلّعة، وأبواب مزخرفة بالزهور من SAKURA، وخزنة UCHIDA الحمراء بأدراج جلدية. حماية جادة بمظهر قطعة أثاث راقية.',
         'ومنها خزائن المجوهرات بتجهيز داخلي بنقشة الرخام، وخزائن بدوّار ساعات مدمج يُبقي الساعات الأوتوماتيكية تعمل وهي في أمان.',
       ],
     },
@@ -94,7 +94,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       description:
         'Luxury safes in Qatar for homes, majlis and offices: walnut finishes, fluted and floral fronts, marble-finish jewellery safes and watch winder safes.',
       intro: [
-        'Safes made to be seen: walnut finishes, fluted fronts, SAKURA floral doors and the red UCHIDA safe with leather drawers. Serious protection that looks like fine furniture.',
+        'Safes made to be seen: walnut finishes, black and white marble-effect doors, fluted fronts, SAKURA floral doors and the red UCHIDA safe with leather drawers. Serious protection that looks like fine furniture.',
         'The range includes jewellery safes with marble-finish interiors and safes with a built-in watch winder that keeps automatic watches running while they are locked away.',
       ],
     },

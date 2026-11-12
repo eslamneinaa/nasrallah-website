@@ -196,6 +196,75 @@ export const sampleProducts: Product[] = [
     order: 15,
   },
   {
+    _id: 'p52',
+    slug: 'uchida-black-and-gold-marble-safe',
+    name: { en: 'UCHIDA Black & Gold Marble Safe', ar: 'خزنة UCHIDA بنقشة الرخام الأسود والذهبي' },
+    category: luxury,
+    shortDesc: {
+      en: 'An UCHIDA safe with a black marble-effect door veined in gold and white, a fingerprint reader and touch keypad.',
+      ar: 'خزنة UCHIDA بباب بنقشة الرخام الأسود بعروق ذهبية وبيضاء، مع قارئ بصمة ولوحة أرقام تعمل باللمس.',
+    },
+    fullDesc: desc(
+      'A safe that reads as a statement piece: the door is finished in black marble effect with gold and white veins, framed in charcoal steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel above the door.',
+      'خزنة تبدو كقطعة فنية: بابها بنقشة الرخام الأسود بعروق ذهبية وبيضاء، في إطار من الفولاذ الفحمي، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة أعلى الباب.',
+    ),
+    images: [img('uchida-black-gold-marble-safe', 1176, 1338, 'UCHIDA safe with a black and gold marble-effect door, fingerprint reader and touch keypad')],
+    specTable: [
+      brand,
+      spec('Door', 'الباب', 'Black marble effect with gold and white veins', 'نقشة رخام أسود بعروق ذهبية وبيضاء'),
+      spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
+      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
+    ],
+    isFeatured: false,
+    order: 15.1,
+  },
+  {
+    _id: 'p53',
+    slug: 'uchida-white-marble-safe',
+    name: { en: 'UCHIDA White Marble Safe', ar: 'خزنة UCHIDA بنقشة الرخام الأبيض' },
+    category: luxury,
+    shortDesc: {
+      en: 'An UCHIDA safe with a white marble-effect door veined in grey, a fingerprint reader and touch keypad.',
+      ar: 'خزنة UCHIDA بباب بنقشة الرخام الأبيض بعروق رمادية، مع قارئ بصمة ولوحة أرقام تعمل باللمس.',
+    },
+    fullDesc: desc(
+      'Light and calm, for bright dressing rooms and majlis: the door is finished in white marble effect with soft grey veins, framed in black steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel above the door.',
+      'هادئة ومشرقة، لغرف الملابس والمجالس الفاتحة: بابها بنقشة الرخام الأبيض بعروق رمادية ناعمة، في إطار من الفولاذ الأسود، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة أعلى الباب.',
+    ),
+    images: [img('uchida-white-marble-safe', 1122, 1402, 'UCHIDA safe with a white marble-effect door, fingerprint reader and touch keypad')],
+    specTable: [
+      brand,
+      spec('Door', 'الباب', 'White marble effect with grey veins', 'نقشة رخام أبيض بعروق رمادية'),
+      spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
+      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
+    ],
+    isFeatured: false,
+    order: 15.2,
+  },
+  {
+    _id: 'p54',
+    slug: 'uchida-cream-and-navy-fluted-safe',
+    name: { en: 'UCHIDA Cream & Navy Fluted Safe', ar: 'خزنة UCHIDA مضلّعة بلونين كريمي وكحلي' },
+    category: luxury,
+    shortDesc: {
+      en: 'An UCHIDA safe with a fluted front in two tones, cream above and navy below, a fingerprint reader and touch keypad.',
+      ar: 'خزنة UCHIDA بواجهة مضلّعة بلونين، كريمي في الأعلى وكحلي في الأسفل، مع قارئ بصمة ولوحة أرقام تعمل باللمس.',
+    },
+    fullDesc: desc(
+      'The fluted UCHIDA design in two tones: a cream fluted panel with a slim handle above a navy fluted door, framed in charcoal steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel at the top.',
+      'تصميم UCHIDA المضلّع بلونين: لوحة مضلّعة بلون كريمي بمقبض رفيع فوق باب مضلّع بلون كحلي، في إطار من الفولاذ الفحمي، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة العلوية.',
+    ),
+    images: [img('uchida-two-tone-fluted-safe', 1254, 1254, 'UCHIDA safe with a cream and navy fluted front, fingerprint reader and touch keypad')],
+    specTable: [
+      brand,
+      spec('Front', 'الواجهة', 'Fluted, cream and navy', 'مضلّعة بلونين كريمي وكحلي'),
+      spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
+      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
+    ],
+    isFeatured: false,
+    order: 15.3,
+  },
+  {
     _id: 'p27',
     slug: 'watch-winder-safe',
     name: { en: 'Safe with Built-In Watch Winder', ar: 'خزنة بدوّار ساعات مدمج' },
@@ -266,6 +335,14 @@ export const sampleProducts: Product[] = [
       img('uchida-jewellery-safe-rings', 1086, 1448, 'Beige velvet drawer with ring rolls and eight cushioned compartments for earrings'),
       img('uchida-jewellery-safe-watches', 1086, 1448, 'Beige velvet watch drawer with watch cushions and watch rolls'),
     ],
+    video: {
+      url: '/videos/uchida-jewellery-safe.mp4',
+      poster: '/videos/uchida-jewellery-safe.webp',
+      label: {
+        en: 'Video: the off-white UCHIDA safe opened by keypad, then its beige velvet drawers pulled out to show necklaces, bracelets, rings, earrings and watches',
+        ar: 'فيديو: فتح خزنة UCHIDA البيضاء العاجية بالقفل الرقمي، ثم سحب أدراجها المبطّنة بالمخمل البيج وفيها عقود وأساور وخواتم وأقراط وساعات',
+      },
+    },
     specTable: [
       brand,
       spec('Protection', 'الحماية', 'Fire-resistant', 'مقاومة للحريق'),

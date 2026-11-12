@@ -18,6 +18,14 @@ import { resolveLocale, type LocaleParams } from '@/lib/seo'
 /** Heritage, trust, quality, service — in the order of `dict.why.items`. */
 const whyIcons = [Hourglass, ShieldCheck, Gem, Handshake]
 
+/** Video 4: the whole range, storefront to steel cupboards (16:9, 2 min 11 s). */
+const tourVideo = {
+  url: '/videos/nasrallah-collection-tour.mp4',
+  poster: '/videos/nasrallah-collection-tour.webp',
+  uploadDate: '2026-11-12',
+  duration: 'PT2M11S',
+}
+
 const interiorImages = [
   { src: '/products/interior-necklace.webp', className: 'aspect-[1341/1173]' },
   { src: '/products/interior-rings.webp', className: 'aspect-[1348/1167]' },
@@ -36,6 +44,17 @@ export default async function HomePage({ params }: LocaleParams) {
       phone: `${siteConfig.dialCode} ${siteConfig.phones[0].display}`,
     }),
   }))
+  const tourJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: dict.tour.title,
+    description: dict.tour.body,
+    thumbnailUrl: `${siteConfig.url}${tourVideo.poster}`,
+    contentUrl: `${siteConfig.url}${tourVideo.url}`,
+    uploadDate: tourVideo.uploadDate,
+    duration: tourVideo.duration,
+    publisher: { '@id': `${siteConfig.url}/#business` },
+  }
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -104,6 +123,31 @@ export default async function HomePage({ params }: LocaleParams) {
             ))}
           </Stagger>
         </div>
+      </section>
+
+      {/* Collection tour (video 4): the whole range in one film */}
+      <section className="bg-khatam-light py-24 sm:py-32">
+        <div className="container-page">
+          <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <SectionHeading eyebrow={dict.tour.eyebrow} title={dict.tour.title} subtitle={dict.tour.body} />
+            <Reveal>
+              <Link href={href(locale, 'products')} className="btn-outline shrink-0">
+                {dict.tour.cta}
+                <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+              </Link>
+            </Reveal>
+          </div>
+          <Reveal className="mt-14 px-3">
+            <ShowcaseVideo
+              src={tourVideo.url}
+              poster={tourVideo.poster}
+              label={dict.tour.video}
+              labels={dict.common.video}
+              className="mx-auto aspect-video w-full max-w-5xl outline outline-1 outline-offset-[10px] outline-gold-500/40"
+            />
+          </Reveal>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tourJsonLd) }} />
       </section>
 
       {/* Jewellery & watch interiors */}

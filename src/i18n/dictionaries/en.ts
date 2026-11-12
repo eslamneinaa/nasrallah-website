@@ -75,6 +75,13 @@ const en = {
       },
     ],
   },
+  tour: {
+    eyebrow: 'Showroom tour',
+    title: 'Our whole range in one tour',
+    body: 'From jewellery and watch safes and travel cases to luxury and fire-resistant safes, deposit safes, filing cabinets and steel cupboards: a look at what awaits you at our showroom in Souq Al Ein.',
+    video: 'Video: a tour of the Nasrallah Trading Est range, from the showroom front to jewellery and watch safes and cases, luxury and fire-resistant safes, deposit and filing safes, and steel cupboards',
+    cta: 'Browse products',
+  },
   interiors: {
     eyebrow: 'Jewellery safes',
     title: 'Where the safe becomes a jewellery box',

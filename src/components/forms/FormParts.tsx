@@ -3,7 +3,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { AlertCircle, CheckCircle2, Loader2, Send } from 'lucide-react'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import type { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react'
+import { href } from '@/i18n/config'
 import type { Locale } from '@/lib/types'
 import { captchaEnabled, HCAPTCHA_SITEKEY } from './web3forms'
 
@@ -125,5 +127,19 @@ export function SuccessState({ title, text, action }: { title: string; text: str
       <p className="mt-3 max-w-md leading-relaxed text-ink-500">{text}</p>
       <div className="mt-8">{action}</div>
     </motion.div>
+  )
+}
+
+/** "By submitting, you agree to our {link}." with the privacy policy linked. */
+export function PrivacyNote({ locale, note, link }: { locale: Locale; note: string; link: string }) {
+  const [before, after = ''] = note.split('{link}')
+  return (
+    <p className="text-sm text-ink-500">
+      {before}
+      <Link href={href(locale, 'privacy-policy')} className="text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800">
+        {link}
+      </Link>
+      {after}
+    </p>
   )
 }

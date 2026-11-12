@@ -85,8 +85,12 @@ export default async function HomePage({ params }: LocaleParams) {
         <div className="container-page">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <SectionHeading eyebrow={dict.featured.eyebrow} title={dict.featured.title} subtitle={dict.featured.subtitle} />
-            <Reveal>
-              <Link href={href(locale, 'products')} className="btn-outline shrink-0">
+            <Reveal className="flex shrink-0 flex-wrap gap-3">
+              <Link href={categoryHref(locale, 'home-safes')} className="btn-outline">
+                {dict.featured.homeSafes}
+                <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+              </Link>
+              <Link href={href(locale, 'products')} className="btn-outline">
                 {dict.featured.viewAll}
                 <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
               </Link>

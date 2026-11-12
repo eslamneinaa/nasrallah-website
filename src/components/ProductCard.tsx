@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { href, pick } from '@/i18n/config'
-import type { Locale, Product } from '@/lib/types'
+import { imageAlt, type Locale, type Product } from '@/lib/types'
 
 type Props = { product: Product; locale: Locale; cta: string; priority?: boolean }
 
@@ -22,7 +22,7 @@ export function ProductCard({ product, locale, cta, priority }: Props) {
         {image && (
           <Image
             src={image.url}
-            alt={image.alt || name}
+            alt={imageAlt(image, locale) || name}
             fill
             priority={priority}
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

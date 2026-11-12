@@ -35,7 +35,13 @@ const brandSpec = (name: string) => spec('Brand', 'العلامة التجاري
 const brand = brandSpec('UCHIDA')
 const steel = spec('Material', 'الخامة', 'Steel', 'حديد (صلب)')
 
-const img = (name: string, width: number, height: number, alt: string) => ({ url: `/products/${name}.webp`, alt, width, height })
+const img = (name: string, width: number, height: number, alt: string, altAr: string) => ({
+  url: `/products/${name}.webp`,
+  alt,
+  altAr,
+  width,
+  height,
+})
 
 const fire: Category = { _id: 'cat-fire', slug: 'fire-resistant-safes', title: { en: 'Fire-Resistant & Cash Safes', ar: 'خزائن النقود والمقاومة للحريق' } }
 const filing: Category = { _id: 'cat-filing', slug: 'filing-cabinets', title: { en: 'Filing Cabinets', ar: 'خزائن الملفات' } }
@@ -65,7 +71,7 @@ export const sampleProducts: Product[] = [
       'خزنة من UCHIDA بارتفاع كامل، صُمّمت لحماية النقد والسجلات والمقتنيات الثمينة من الحريق والوصول غير المصرّح به. يعمل قفلها الإلكتروني الرقمي مع مفتاح ميكانيكي احتياطي، ويُحمل بابها على ثلاث مفصلات خارجية متينة.',
     ),
     images: [
-      img('uchida-digital-safe', 1086, 1448, 'Full-height UCHIDA fire-resistant safe in light grey with an electronic keypad'),
+      img('uchida-digital-safe', 1086, 1448, 'Full-height UCHIDA fire-resistant safe in light grey with an electronic keypad', 'خزنة UCHIDA مقاومة للحريق بارتفاع كامل بلون رمادي فاتح وقفل رقمي إلكتروني'),
     ],
     specTable: [
       brand,
@@ -90,8 +96,8 @@ export const sampleProducts: Product[] = [
       'فولاذ أبيض أنيق من الخارج والداخل: تُفتح هذه الخزنة من UCHIDA بقفل رقمي ومقبض على ثلاثة أرفف حديدية للملفات والنقود والعلب، ودرج سفلي للمقتنيات الصغيرة، ويُحمل بابها المتين على مفصلات خارجية.',
     ),
     images: [
-      img('uchida-white-safe', 1086, 1448, 'White UCHIDA steel safe with a digital keypad and handle'),
-      img('uchida-white-safe-open', 1312, 1199, 'The white UCHIDA safe open, with three steel shelves and a drawer'),
+      img('uchida-white-safe', 1086, 1448, 'White UCHIDA steel safe with a digital keypad and handle', 'خزنة UCHIDA فولاذية بيضاء بقفل رقمي ومقبض'),
+      img('uchida-white-safe-open', 1312, 1199, 'The white UCHIDA safe open, with three steel shelves and a drawer', 'خزنة UCHIDA البيضاء مفتوحة، بثلاثة أرفف حديدية ودرج'),
     ],
     specTable: [
       brand,
@@ -116,8 +122,8 @@ export const sampleProducts: Product[] = [
       'خزنة تلفت الأنظار: فولاذ بلون أحمر عميق يحمل لوحتي UCHIDA ونصر الله، وقفل رقمي بجوار مقبض دائري لامع، وفي الداخل أربعة أدراج من الجلد البني بملمس جلد التمساح للمجوهرات والساعات والمقتنيات العزيزة.',
     ),
     images: [
-      img('uchida-red-safe-front', 1145, 1373, 'Red UCHIDA safe with a digital keypad and round chrome handle'),
-      img('uchida-red-safe-drawers', 1312, 1199, 'The red UCHIDA safe open, with four crocodile-texture leather drawers'),
+      img('uchida-red-safe-front', 1145, 1373, 'Red UCHIDA safe with a digital keypad and round chrome handle', 'خزنة UCHIDA حمراء بقفل رقمي ومقبض دائري من الكروم'),
+      img('uchida-red-safe-drawers', 1312, 1199, 'The red UCHIDA safe open, with four crocodile-texture leather drawers', 'خزنة UCHIDA الحمراء مفتوحة، بأربعة أدراج جلدية بملمس جلد التمساح'),
     ],
     specTable: [
       brand,
@@ -141,7 +147,7 @@ export const sampleProducts: Product[] = [
       'A four-drawer UCHIDA filing cabinet for ministries, banks and companies that keep important records on paper. Each drawer has its own key lock and a label holder, so files stay organised and protected.',
       'خزانة ملفات من UCHIDA بأربعة أدراج، للوزارات والبنوك والشركات التي تحتفظ بسجلاتها الورقية المهمة. لكل درج قفل مستقل بمفتاح وحامل لبطاقة التعريف، لتبقى الملفات منظّمة ومحمية.',
     ),
-    images: [img('uchida-filing-cabinet', 1024, 1536, 'UCHIDA four-drawer filing cabinet in black steel')],
+    images: [img('uchida-filing-cabinet', 1024, 1536, 'UCHIDA four-drawer filing cabinet in black steel', 'خزانة ملفات UCHIDA بأربعة أدراج من الفولاذ الأسود')],
     specTable: [
       brand,
       spec('Drawers', 'الأدراج', '4, each with its own key lock', '4 أدراج، لكل منها قفل مستقل'),
@@ -164,7 +170,7 @@ export const sampleProducts: Product[] = [
       'Security does not have to look industrial. This UCHIDA safe pairs a fluted charcoal front with the Nasrallah brass plate, so it sits as comfortably in a majlis or an executive office as it does in a dressing room.',
       'الأمان لا يعني مظهرًا صناعيًا. تجمع هذه الخزنة من UCHIDA بين واجهة مضلّعة بلون فحمي ولوحة نصر الله النحاسية، فتنسجم في المجلس ومكتب الإدارة وغرفة الملابس على حدّ سواء.',
     ),
-    images: [img('uchida-fluted-safe', 1254, 1254, 'UCHIDA safe with a fluted charcoal front and a brass Nasrallah plate')],
+    images: [img('uchida-fluted-safe', 1254, 1254, 'UCHIDA safe with a fluted charcoal front and a brass Nasrallah plate', 'خزنة UCHIDA بواجهة مضلّعة بلون فحمي ولوحة نصر الله النحاسية')],
     specTable: [
       brand,
       spec('Front', 'الواجهة', 'Fluted charcoal panel', 'واجهة مضلّعة بلون فحمي'),
@@ -186,7 +192,7 @@ export const sampleProducts: Product[] = [
       'Finished in a warm walnut grain and framed in black steel, this UCHIDA safe brings the look of fine furniture to serious protection. The door carries the UCHIDA and Nasrallah plates.',
       'بباب بنقشة خشب الجوز الدافئة وإطار من الفولاذ الأسود، تمنح هذه الخزنة من UCHIDA الحماية الجادة مظهر الأثاث الراقي، ويحمل بابها لوحتي UCHIDA ونصر الله.',
     ),
-    images: [img('uchida-walnut-safe', 1254, 1254, 'UCHIDA safe with a walnut wood-grain door and black steel frame')],
+    images: [img('uchida-walnut-safe', 1254, 1254, 'UCHIDA safe with a walnut wood-grain door and black steel frame', 'خزنة UCHIDA بباب بنقشة خشب الجوز وإطار من الفولاذ الأسود')],
     specTable: [
       brand,
       spec('Door', 'الباب', 'Walnut wood grain', 'نقشة خشب الجوز'),
@@ -208,7 +214,7 @@ export const sampleProducts: Product[] = [
       'A safe that reads as a statement piece: the door is finished in black marble effect with gold and white veins, framed in charcoal steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel above the door.',
       'خزنة تبدو كقطعة فنية: بابها بنقشة الرخام الأسود بعروق ذهبية وبيضاء، في إطار من الفولاذ الفحمي، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة أعلى الباب.',
     ),
-    images: [img('uchida-black-gold-marble-safe', 1176, 1338, 'UCHIDA safe with a black and gold marble-effect door, fingerprint reader and touch keypad')],
+    images: [img('uchida-black-gold-marble-safe', 1176, 1338, 'UCHIDA safe with a black and gold marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأسود والذهبي، مع قارئ بصمة ولوحة أرقام باللمس')],
     specTable: [
       brand,
       spec('Door', 'الباب', 'Black marble effect with gold and white veins', 'نقشة رخام أسود بعروق ذهبية وبيضاء'),
@@ -231,7 +237,7 @@ export const sampleProducts: Product[] = [
       'Light and calm, for bright dressing rooms and majlis: the door is finished in white marble effect with soft grey veins, framed in black steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel above the door.',
       'هادئة ومشرقة، لغرف الملابس والمجالس الفاتحة: بابها بنقشة الرخام الأبيض بعروق رمادية ناعمة، في إطار من الفولاذ الأسود، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة أعلى الباب.',
     ),
-    images: [img('uchida-white-marble-safe', 1122, 1402, 'UCHIDA safe with a white marble-effect door, fingerprint reader and touch keypad')],
+    images: [img('uchida-white-marble-safe', 1122, 1402, 'UCHIDA safe with a white marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأبيض، مع قارئ بصمة ولوحة أرقام باللمس')],
     specTable: [
       brand,
       spec('Door', 'الباب', 'White marble effect with grey veins', 'نقشة رخام أبيض بعروق رمادية'),
@@ -254,7 +260,7 @@ export const sampleProducts: Product[] = [
       'The fluted UCHIDA design in two tones: a cream fluted panel with a slim handle above a navy fluted door, framed in charcoal steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel at the top.',
       'تصميم UCHIDA المضلّع بلونين: لوحة مضلّعة بلون كريمي بمقبض رفيع فوق باب مضلّع بلون كحلي، في إطار من الفولاذ الفحمي، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة العلوية.',
     ),
-    images: [img('uchida-two-tone-fluted-safe', 1254, 1254, 'UCHIDA safe with a cream and navy fluted front, fingerprint reader and touch keypad')],
+    images: [img('uchida-two-tone-fluted-safe', 1254, 1254, 'UCHIDA safe with a cream and navy fluted front, fingerprint reader and touch keypad', 'خزنة UCHIDA بواجهة مضلّعة بلونين كريمي وكحلي، مع قارئ بصمة ولوحة أرقام باللمس')],
     specTable: [
       brand,
       spec('Front', 'الواجهة', 'Fluted, cream and navy', 'مضلّعة بلونين كريمي وكحلي'),
@@ -278,8 +284,8 @@ export const sampleProducts: Product[] = [
       'الساعات الأوتوماتيكية تتوقف إذا تُركت دون حركة. تُبقي هذه الخزنة أربع ساعات في دوران مستمر على دوّار ساعات (Watch Winder) مدمج في إطار خشبي بلمسات جلدية وبكرات مضيئة، فتبقى الساعات تعمل ومحمية وجاهزة للبس، ويضم الدرج الجلدي العلوي الأحزمة والقطع الصغيرة.',
     ),
     images: [
-      img('watch-winder-safe', 1086, 1448, 'White safe with a four-watch winder lit in blue inside a wooden frame'),
-      img('watch-winder-safe-detail', 1086, 1448, 'The watch winder inside the white safe, holding automatic watches'),
+      img('watch-winder-safe', 1086, 1448, 'White safe with a four-watch winder lit in blue inside a wooden frame', 'خزنة بيضاء بدوّار لأربع ساعات مضاء بالأزرق داخل إطار خشبي'),
+      img('watch-winder-safe-detail', 1086, 1448, 'The watch winder inside the white safe, holding automatic watches', 'دوّار الساعات داخل الخزنة البيضاء وعليه ساعات أوتوماتيكية'),
     ],
     specTable: [
       spec('Watch winder', 'دوّار الساعات', 'Four watches', 'أربع ساعات'),
@@ -304,7 +310,7 @@ export const sampleProducts: Product[] = [
       'افتحوا الباب الفولاذي الأسود لتظهر المجموعة كلها أمامكم: مجسّمات العقود على رفوف بنقشة الرخام، وعمود من الأدراج بمقابض نحاسية للخواتم والأساور، ولوحة للأقراط على الوجه الداخلي للباب، فتبقى كل قطعة محمية وأمام أعينكم.',
     ),
     images: [
-      img('marble-jewellery-safe', 1086, 1448, 'Black jewellery safe open, with a white marble-finish interior, necklace busts and drawers'),
+      img('marble-jewellery-safe', 1086, 1448, 'Black jewellery safe open, with a white marble-finish interior, necklace busts and drawers', 'خزنة مجوهرات سوداء مفتوحة، بتجهيز داخلي أبيض بنقشة الرخام ومجسّمات للعقود وأدراج'),
     ],
     specTable: [
       spec('Exterior', 'الهيكل', 'Black steel', 'فولاذ أسود'),
@@ -328,12 +334,12 @@ export const sampleProducts: Product[] = [
       'من الخارج خزنة UCHIDA مقاومة للحريق، ومن الداخل صندوق مجوهرات. خلف الباب الفولاذي الأبيض العاجي، الذي يُفتح بقفل رقمي بشاشة وبمفتاح، أدراج بلون خشب السنديان بمقابض نحاسية مطفية وبطانة من المخمل البيج: درج بمجسّمات للعقود وحوامل للأساور، ودرج ببكرات للخواتم وخانات مبطّنة للأقراط، ودرج بوسائد وبكرات للساعات. وتحمل الأرفف الخشبية المفتوحة العلب والمستندات، وفي الأسفل درج فولاذي بقفل مفتاح خاص به. ويُرتَّب توزيع الأدراج والأرفف بحسب مقتنيات كل عميل.',
     ),
     images: [
-      img('uchida-jewellery-safe-open', 1086, 1448, 'Off-white UCHIDA safe open, with four oak-finish drawers, three wooden shelves and a steel drawer below'),
-      img('uchida-jewellery-safe-front', 1086, 1448, 'Off-white UCHIDA fire-resistant safe closed, with a digital keypad, key lock and handle'),
-      img('uchida-jewellery-safe-necklaces', 1086, 1448, 'Oak-finish drawer lined in beige velvet with two necklace busts and bracelet stands'),
-      img('uchida-jewellery-safe-necklace-drawer', 1086, 1448, 'Necklace drawer pulled out below a wooden drawer, with shelves and a steel drawer beneath'),
-      img('uchida-jewellery-safe-rings', 1086, 1448, 'Beige velvet drawer with ring rolls and eight cushioned compartments for earrings'),
-      img('uchida-jewellery-safe-watches', 1086, 1448, 'Beige velvet watch drawer with watch cushions and watch rolls'),
+      img('uchida-jewellery-safe-open', 1086, 1448, 'Off-white UCHIDA safe open, with four oak-finish drawers, three wooden shelves and a steel drawer below', 'خزنة UCHIDA بيضاء عاجية مفتوحة، بأربعة أدراج بلون خشب السنديان وثلاثة أرفف خشبية ودرج فولاذي في الأسفل'),
+      img('uchida-jewellery-safe-front', 1086, 1448, 'Off-white UCHIDA fire-resistant safe closed, with a digital keypad, key lock and handle', 'خزنة UCHIDA بيضاء عاجية مقاومة للحريق مغلقة، بقفل رقمي وقفل مفتاح ومقبض'),
+      img('uchida-jewellery-safe-necklaces', 1086, 1448, 'Oak-finish drawer lined in beige velvet with two necklace busts and bracelet stands', 'درج بلون خشب السنديان مبطّن بالمخمل البيج، فيه مجسّمان للعقود وحوامل للأساور'),
+      img('uchida-jewellery-safe-necklace-drawer', 1086, 1448, 'Necklace drawer pulled out below a wooden drawer, with shelves and a steel drawer beneath', 'درج العقود مسحوب أسفل درج خشبي، وتحته أرفف ودرج فولاذي'),
+      img('uchida-jewellery-safe-rings', 1086, 1448, 'Beige velvet drawer with ring rolls and eight cushioned compartments for earrings', 'درج من المخمل البيج ببكرات للخواتم وثماني خانات مبطّنة للأقراط'),
+      img('uchida-jewellery-safe-watches', 1086, 1448, 'Beige velvet watch drawer with watch cushions and watch rolls', 'درج ساعات من المخمل البيج بوسائد وبكرات للساعات'),
     ],
     video: {
       url: '/videos/uchida-jewellery-safe.mp4',
@@ -369,8 +375,8 @@ export const sampleProducts: Product[] = [
       'المجوهرات الثمينة تستحق أكثر من علبة. هذه الأدراج مبطّنة بمخمل أزرق داكن ومجهّزة بمجسّم للعقود وحامل للأساور وبكرات للخواتم وخانات للأقراط، لتبقى كل قطعة محمية ومنفصلة وسهلة الرؤية.',
     ),
     images: [
-      img('interior-necklace', 1341, 1173, 'Jewellery drawer with a velvet necklace bust and bangle stand'),
-      img('interior-rings', 1348, 1167, 'Ring drawer with velvet ring rolls and earring compartments'),
+      img('interior-necklace', 1341, 1173, 'Jewellery drawer with a velvet necklace bust and bangle stand', 'درج مجوهرات بمجسّم عقد مخملي وحامل للأساور'),
+      img('interior-rings', 1348, 1167, 'Ring drawer with velvet ring rolls and earring compartments', 'درج خواتم ببكرات مخملية وخانات للأقراط'),
     ],
     video: {
       url: '/videos/jewellery-safe-green.mp4',
@@ -402,8 +408,8 @@ export const sampleProducts: Product[] = [
       'صُمّمت لهواة اقتناء الساعات، إذ تحمل كل ساعة على بكرة أو وسادة مخملية خاصة بها، ببطانة زرقاء أو سوداء، خلف واجهات بنقشة خشبية ومقابض نحاسية.',
     ),
     images: [
-      img('interior-watch-rolls', 1127, 1396, 'Watch drawer with nine blue velvet rolls and brass handles'),
-      img('interior-watch-pillows', 1086, 1448, 'Beech drawer with black velvet watch cushions'),
+      img('interior-watch-rolls', 1127, 1396, 'Watch drawer with nine blue velvet rolls and brass handles', 'درج ساعات بتسع بكرات من المخمل الأزرق ومقابض نحاسية'),
+      img('interior-watch-pillows', 1086, 1448, 'Beech drawer with black velvet watch cushions', 'درج من خشب الزان بوسائد ساعات من المخمل الأسود'),
     ],
     specTable: [
       spec('Holders', 'الحوامل', 'Velvet rolls or cushions', 'بكرات أو وسائد مخملية'),
@@ -427,8 +433,8 @@ export const sampleProducts: Product[] = [
       'خلف الباب تتحوّل الخزنة إلى قطعة أثاث. تضمّ تجهيزاتنا الداخلية أدراجًا بلمسة خشبية ومقابض نحاسية مصقولة تنزلق بسلاسة على مجارٍ ممتدة بالكامل، مع صوانٍ مبطّنة بالمخمل ودرج سفلي بقفل عند الطلب.',
     ),
     images: [
-      img('interior-oak-drawers', 1120, 1404, 'Seven oak drawers with brass handles inside a black safe'),
-      img('interior-beech-velvet', 1086, 1448, 'Beech drawer with black velvet dividers on full-extension runners'),
+      img('interior-oak-drawers', 1120, 1404, 'Seven oak drawers with brass handles inside a black safe', 'سبعة أدراج من خشب البلوط بمقابض نحاسية داخل خزنة سوداء'),
+      img('interior-beech-velvet', 1086, 1448, 'Beech drawer with black velvet dividers on full-extension runners', 'درج من خشب الزان بفواصل من المخمل الأسود على مجارٍ تُسحب بالكامل'),
     ],
     video: {
       url: '/videos/jewellery-safe-oak.mp4',
@@ -465,8 +471,8 @@ export const sampleProducts: Product[] = [
       'تصميم خاص من مؤسسة نصر الله التجارية لا تجدونه في مكان آخر في قطر. تحمل كل شنطة طقمًا كاملًا بأمان: خانات للعقود والأساور والخواتم والأقراط، ووسائد للساعات، وبطانة ناعمة تمنع تلامس القطع، مع أقفال ذهبية محكمة. متوفرة بتشطيب أسود بملمس جلد التمساح وباللون الرمادي الفاتح.',
     ),
     images: [
-      img('travel-jewellery-case-black', 1448, 1086, 'Open black crocodile-texture travel case with compartments holding a necklace, bangles and earrings'),
-      img('travel-jewellery-case-grey', 1086, 1448, 'Open light-grey travel case with watch cushions and ring drawers'),
+      img('travel-jewellery-case-black', 1448, 1086, 'Open black crocodile-texture travel case with compartments holding a necklace, bangles and earrings', 'شنطة مجوهرات للسفر سوداء بملمس جلد التمساح مفتوحة، بخانات فيها عقد وأساور وأقراط'),
+      img('travel-jewellery-case-grey', 1086, 1448, 'Open light-grey travel case with watch cushions and ring drawers', 'شنطة مجوهرات للسفر رمادية فاتحة مفتوحة، بوسائد للساعات وأدراج للخواتم'),
     ],
     specTable: [
       spec('Use', 'الاستخدام', 'Travel, hotels, parties and weddings', 'السفر والفنادق والحفلات والأعراس'),
@@ -490,8 +496,8 @@ export const sampleProducts: Product[] = [
       'تجمع خزنة SAKURA متعددة الأقفال ثلاث وسائل للقفل في لوحة تحكم واحدة: قارئ بصمة، ولوحة أرقام رقمية، ومفتاح ميكانيكي. ويُحمل بابها المتين على مفصلتين خارجيتين، وتقف الخزنة على قاعدة مرتفعة.',
     ),
     images: [
-      img('sakura-multi-lock-safe', 1086, 1448, 'Grey SAKURA multi-lock steel safe with a fingerprint and keypad panel'),
-      img('sakura-multi-lock-safe-lock', 1536, 1024, 'Close-up of the fingerprint scanner, keypad and key lock'),
+      img('sakura-multi-lock-safe', 1086, 1448, 'Grey SAKURA multi-lock steel safe with a fingerprint and keypad panel', 'خزنة SAKURA فولاذية رمادية متعددة الأقفال بلوحة بصمة وأرقام'),
+      img('sakura-multi-lock-safe-lock', 1536, 1024, 'Close-up of the fingerprint scanner, keypad and key lock', 'صورة قريبة لقارئ البصمة ولوحة الأرقام وقفل المفتاح'),
     ],
     specTable: [
       brandSpec('SAKURA'),
@@ -516,7 +522,7 @@ export const sampleProducts: Product[] = [
       'تجمع هذه الخزنة من SAKURA لوحة أرقام رقمية وقارئ بصمة في مقبض عمودي واحد على باب أسود أنيق، فتُفتح بسرعة لمن تثقون بهم وتبقى مغلقة أمام غيرهم.',
     ),
     images: [
-      img('sakura-fingerprint-safe-black', 1086, 1448, 'Black SAKURA steel safe with a vertical keypad and fingerprint handle'),
+      img('sakura-fingerprint-safe-black', 1086, 1448, 'Black SAKURA steel safe with a vertical keypad and fingerprint handle', 'خزنة SAKURA فولاذية سوداء بلوحة أرقام عمودية ومقبض بالبصمة'),
     ],
     specTable: [
       brandSpec('SAKURA'),
@@ -540,8 +546,8 @@ export const sampleProducts: Product[] = [
       'تجمع هذه الخزانة الحديدية من GODREJ بين بابين بارتفاع كامل وقفل غاطس مستوٍ مع الواجهة، لواجهة أنيقة ومحتويات آمنة. متوفرة باللونين الأبيض والبيج.',
     ),
     images: [
-      img('godrej-two-door-cupboard-white', 1024, 1536, 'White two-door GODREJ steel cupboard with a recessed lock'),
-      img('godrej-two-door-cupboard-beige', 1024, 1536, 'Beige two-door GODREJ steel cupboard with a white frame'),
+      img('godrej-two-door-cupboard-white', 1024, 1536, 'White two-door GODREJ steel cupboard with a recessed lock', 'دولاب حديدي GODREJ أبيض ببابين وقفل غائر'),
+      img('godrej-two-door-cupboard-beige', 1024, 1536, 'Beige two-door GODREJ steel cupboard with a white frame', 'دولاب حديدي GODREJ بيج ببابين وإطار أبيض'),
     ],
     specTable: [
       brandSpec('GODREJ'),
@@ -566,7 +572,7 @@ export const sampleProducts: Product[] = [
       'Two full-height steel doors open on a chrome handle, giving easy everyday access to files, supplies and equipment.',
       'بابان حديديان بارتفاع كامل يُفتحان بمقبض من الكروم، لوصول يومي سهل إلى الملفات والمستلزمات والأدوات.',
     ),
-    images: [img('godrej-two-door-cupboard-handle-beige', 1024, 1536, 'Beige two-door GODREJ steel cupboard with a chrome handle')],
+    images: [img('godrej-two-door-cupboard-handle-beige', 1024, 1536, 'Beige two-door GODREJ steel cupboard with a chrome handle', 'دولاب حديدي GODREJ بيج ببابين ومقبض من الكروم')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -590,7 +596,7 @@ export const sampleProducts: Product[] = [
       'Raised panels give the doors of this GODREJ steel cupboard extra stiffness and a tailored look, with a recessed lock set between them.',
       'تمنح الألواح البارزة بابَي هذه الخزانة الحديدية من GODREJ متانة إضافية ومظهرًا أنيقًا، مع قفل غاطس بينهما.',
     ),
-    images: [img('godrej-panelled-cupboard-grey', 1024, 1536, 'Light-grey GODREJ steel cupboard with two panelled doors')],
+    images: [img('godrej-panelled-cupboard-grey', 1024, 1536, 'Light-grey GODREJ steel cupboard with two panelled doors', 'دولاب حديدي GODREJ رمادي فاتح ببابين مقسّمين بألواح')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -615,8 +621,8 @@ export const sampleProducts: Product[] = [
       'حين تضيق المساحة، توفّر هذه الخزانة الحديدية من GODREJ بباب واحد تخزينًا بارتفاع كامل بقفل. متوفرة باللونين الرمادي والبيج.',
     ),
     images: [
-      img('godrej-single-door-cupboard-grey', 1024, 1536, 'Grey single-door GODREJ steel cupboard'),
-      img('godrej-single-door-cupboard-beige', 1024, 1536, 'Beige single-door GODREJ steel cupboard'),
+      img('godrej-single-door-cupboard-grey', 1024, 1536, 'Grey single-door GODREJ steel cupboard', 'دولاب حديدي GODREJ رمادي بباب واحد'),
+      img('godrej-single-door-cupboard-beige', 1024, 1536, 'Beige single-door GODREJ steel cupboard', 'دولاب حديدي GODREJ بيج بباب واحد'),
     ],
     specTable: [
       brandSpec('GODREJ'),
@@ -641,7 +647,7 @@ export const sampleProducts: Product[] = [
       'Glass-panelled doors set in a white steel frame show what is on the shelves while keeping dust out, with a lock between the doors.',
       'أبواب بألواح زجاجية في إطار حديدي أبيض تُظهر ما على الرفوف وتحميه من الغبار، مع قفل بين البابين.',
     ),
-    images: [img('godrej-glass-door-cabinet', 1024, 1536, 'White GODREJ steel cabinet with two glass doors and shelves')],
+    images: [img('godrej-glass-door-cabinet', 1024, 1536, 'White GODREJ steel cabinet with two glass doors and shelves', 'خزانة حديدية GODREJ بيضاء ببابين زجاجيين وأرفف')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -665,7 +671,7 @@ export const sampleProducts: Product[] = [
       'Display what you want to show behind the upper glass doors and keep the rest out of sight below. The honey-oak finish and chrome handles suit managers’ offices and meeting rooms.',
       'اعرضوا ما تريدون إظهاره خلف الأبواب الزجاجية العلوية، واحفظوا الباقي بعيدًا عن الأنظار في الأسفل. يناسب لون البلوط العسلي والمقابض الكروم مكاتب المديرين وغرف الاجتماعات.',
     ),
-    images: [img('godrej-wood-glass-cabinet', 1024, 1536, 'Honey-oak GODREJ storage cabinet with glass doors above and wooden doors below')],
+    images: [img('godrej-wood-glass-cabinet', 1024, 1536, 'Honey-oak GODREJ storage cabinet with glass doors above and wooden doors below', 'خزانة تخزين GODREJ بلون خشب البلوط العسلي، بأبواب زجاجية في الأعلى وأبواب خشبية في الأسفل')],
     specTable: [
       brandSpec('GODREJ'),
       spec('Finish', 'التشطيب', 'Honey oak', 'خشب بلوط عسلي'),
@@ -688,7 +694,7 @@ export const sampleProducts: Product[] = [
       'Two lockable compartments stacked in one column, each with ventilation louvres, in charcoal doors on a cream frame.',
       'خانتان بقفل في عمود واحد، لكل منهما فتحات تهوية، بأبواب فحمية اللون على إطار كريمي.',
     ),
-    images: [img('godrej-two-tier-locker', 1024, 1536, 'Two-tier GODREJ steel locker with charcoal doors and a cream frame')],
+    images: [img('godrej-two-tier-locker', 1024, 1536, 'Two-tier GODREJ steel locker with charcoal doors and a cream frame', 'لوكر حديدي GODREJ بطابقين بأبواب فحمية وإطار كريمي')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -712,7 +718,7 @@ export const sampleProducts: Product[] = [
       'Four lockable compartments in a single column make the most of floor space in changing rooms and staff areas.',
       'أربع خانات بقفل في عمود واحد تستفيد من المساحة إلى أقصى حد في غرف التبديل ومناطق الموظفين.',
     ),
-    images: [img('godrej-four-tier-locker', 1024, 1536, 'Four-tier GODREJ steel locker with charcoal doors and a cream frame')],
+    images: [img('godrej-four-tier-locker', 1024, 1536, 'Four-tier GODREJ steel locker with charcoal doors and a cream frame', 'لوكر حديدي GODREJ بأربعة طوابق بأبواب فحمية وإطار كريمي')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -736,7 +742,7 @@ export const sampleProducts: Product[] = [
       'Three generous compartments, each behind its own louvred door with a key lock, for offices, schools and clinics.',
       'ثلاث خانات واسعة، لكل منها باب بفتحات تهوية وقفل بمفتاح، للمكاتب والمدارس والعيادات.',
     ),
-    images: [img('godrej-three-door-locker', 1024, 1536, 'Cream three-door GODREJ steel locker')],
+    images: [img('godrej-three-door-locker', 1024, 1536, 'Cream three-door GODREJ steel locker', 'لوكر حديدي GODREJ كريمي بثلاثة أبواب')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -761,8 +767,8 @@ export const sampleProducts: Product[] = [
       'ست خانات، لكل منها باب بمقبض، في مساحة خزانة واحدة.',
     ),
     images: [
-      img('godrej-six-door-locker', 1024, 1536, 'Beige six-door GODREJ steel locker column'),
-      img('godrej-six-door-locker-off-white', 1024, 1536, 'Off-white six-door GODREJ steel locker column'),
+      img('godrej-six-door-locker', 1024, 1536, 'Beige six-door GODREJ steel locker column', 'عمود لوكر حديدي GODREJ بيج بستة أبواب'),
+      img('godrej-six-door-locker-off-white', 1024, 1536, 'Off-white six-door GODREJ steel locker column', 'عمود لوكر حديدي GODREJ أبيض عاجي بستة أبواب'),
     ],
     specTable: [
       brandSpec('GODREJ'),
@@ -786,7 +792,7 @@ export const sampleProducts: Product[] = [
       'One tall compartment with room for clothes and bags, ventilated through louvres at the top of the door.',
       'خانة واحدة طويلة تتسع للملابس والحقائب، مع فتحات تهوية أعلى الباب.',
     ),
-    images: [img('godrej-single-locker', 1024, 1536, 'Single GODREJ steel locker with a louvred charcoal door')],
+    images: [img('godrej-single-locker', 1024, 1536, 'Single GODREJ steel locker with a louvred charcoal door', 'لوكر حديدي GODREJ فردي بباب فحمي بفتحات تهوية')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -810,7 +816,7 @@ export const sampleProducts: Product[] = [
       'Two deep drawers in cream sit in a light-grey steel frame, with a lock at the top to secure both.',
       'درجان عميقان باللون الكريمي في إطار حديدي رمادي فاتح، مع قفل في الأعلى يؤمّن الدرجين معًا.',
     ),
-    images: [img('godrej-two-drawer-filing-cabinet', 1162, 1354, 'Two-drawer GODREJ steel filing cabinet with cream drawers')],
+    images: [img('godrej-two-drawer-filing-cabinet', 1162, 1354, 'Two-drawer GODREJ steel filing cabinet with cream drawers', 'خزانة ملفات حديدية GODREJ بدرجين بلون كريمي')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -834,7 +840,7 @@ export const sampleProducts: Product[] = [
       'Three full-width drawers in cream, set in a light-grey steel frame and secured by a lock at the top.',
       'ثلاثة أدراج بعرض كامل باللون الكريمي في إطار حديدي رمادي فاتح، يؤمّنها قفل في الأعلى.',
     ),
-    images: [img('godrej-three-drawer-filing-cabinet', 1024, 1536, 'Three-drawer GODREJ steel filing cabinet with cream drawers')],
+    images: [img('godrej-three-drawer-filing-cabinet', 1024, 1536, 'Three-drawer GODREJ steel filing cabinet with cream drawers', 'خزانة ملفات حديدية GODREJ بثلاثة أدراج بلون كريمي')],
     specTable: [
       brandSpec('GODREJ'),
       steel,
@@ -859,8 +865,8 @@ export const sampleProducts: Product[] = [
       'خمسة أدراج في خزانة حديدية واحدة طويلة تستوعب أرشيف قسم كامل في مساحة خزانة واحدة، ويؤمّنها قفل في الأعلى.',
     ),
     images: [
-      img('godrej-five-drawer-filing-cabinet-grey', 1024, 1536, 'Light-grey five-drawer GODREJ steel filing cabinet'),
-      img('godrej-five-drawer-filing-cabinet-black', 1024, 1536, 'Black five-drawer GODREJ steel filing cabinet'),
+      img('godrej-five-drawer-filing-cabinet-grey', 1024, 1536, 'Light-grey five-drawer GODREJ steel filing cabinet', 'خزانة ملفات حديدية GODREJ رمادية فاتحة بخمسة أدراج'),
+      img('godrej-five-drawer-filing-cabinet-black', 1024, 1536, 'Black five-drawer GODREJ steel filing cabinet', 'خزانة ملفات حديدية GODREJ سوداء بخمسة أدراج'),
     ],
     specTable: [
       brandSpec('GODREJ'),
@@ -886,7 +892,7 @@ export const sampleProducts: Product[] = [
       'باب أسود أنيق بلوحة قفل عصرية: قارئ بصمة ولوحة أرقام باللمس بجوار مقبض دوّار متين، فتُفتح الخزنة في لحظة لمن تختارونهم، ويُحمل الباب على مفصلات خارجية متينة.',
     ),
     images: [
-      img('uchida-fingerprint-safe', 1448, 1086, 'Black UCHIDA safe with a fingerprint reader and touch keypad'),
+      img('uchida-fingerprint-safe', 1448, 1086, 'Black UCHIDA safe with a fingerprint reader and touch keypad', 'خزنة UCHIDA سوداء بقارئ بصمة ولوحة أرقام باللمس'),
     ],
     specTable: [
       brand,
@@ -910,7 +916,7 @@ export const sampleProducts: Product[] = [
       'خزنة سوداء طويلة بتصميم بسيط للمكتب أو البيت: لوحة أرقام رقمية وقفل بمفتاح بجوار مقبض معدني لامع على لوحة واحدة، ويدور بابها المتين على ثلاث مفصلات خارجية، مع مساحة داخلية للنقود والملفات والمقتنيات الثمينة.',
     ),
     images: [
-      img('uchida-black-digital-safe', 1086, 1448, 'Tall black UCHIDA safe with a digital keypad, key lock and chrome lever handle'),
+      img('uchida-black-digital-safe', 1086, 1448, 'Tall black UCHIDA safe with a digital keypad, key lock and chrome lever handle', 'خزنة UCHIDA سوداء طويلة بقفل رقمي وقفل مفتاح ومقبض ذراع من الكروم'),
     ],
     specTable: [
       brand,
@@ -935,7 +941,7 @@ export const sampleProducts: Product[] = [
       'صغيرة بما يكفي لتوضع حيث لا تتسع الخزائن الكبيرة، تجمع هذه الخزنة من UCHIDA لوحة أرقام دائرية وقفلًا بمفتاح على لوحة فضية، لحفظ النقود وجوازات السفر والمجوهرات في متناول اليد.',
     ),
     images: [
-      img('uchida-compact-safe', 1536, 1024, 'Compact black UCHIDA safe with a round digital keypad and a key lock'),
+      img('uchida-compact-safe', 1536, 1024, 'Compact black UCHIDA safe with a round digital keypad and a key lock', 'خزنة UCHIDA سوداء صغيرة بلوحة أرقام دائرية وقفل مفتاح'),
     ],
     specTable: [
       brand,
@@ -960,7 +966,7 @@ export const sampleProducts: Product[] = [
       'حين لا يكفي باب واحد: تنفتح هذه الخزنة الكبيرة من UCHIDA على بابين، لكل منهما مفصلاته الخارجية، بقفل رقمي دوّار وقفل بمفتاح على شريط معدني لامع، فتتسع للدفاتر والملفات وصناديق النقود والأرشيف في مكان واحد.',
     ),
     images: [
-      img('uchida-double-door-safe', 1086, 1448, 'Large grey UCHIDA safe with two doors, a combination dial and a key lock'),
+      img('uchida-double-door-safe', 1086, 1448, 'Large grey UCHIDA safe with two doors, a combination dial and a key lock', 'خزنة UCHIDA رمادية كبيرة ببابين وقرص أرقام سري وقفل مفتاح'),
     ],
     specTable: [
       brand,
@@ -985,7 +991,7 @@ export const sampleProducts: Product[] = [
       'صُنعت في اليابان لدى شركة Kurogane Kosakusho التي تأسست في أوساكا عام 1927، وصُمّمت خزنة Wing Safe لحماية السجلات المهمة والمقتنيات الثمينة من الحريق والسرقة. يعمل فيها القفل الرقمي الدوّار مع القفل بالمفتاح على لوحة من الفولاذ المصقول، مع مقبض ومفصلات خارجية متينة.',
     ),
     images: [
-      img('kurogane-wing-safe-black', 1086, 1448, 'Black KUROGANE Wing Safe with a combination dial, key lock and lever handle'),
+      img('kurogane-wing-safe-black', 1086, 1448, 'Black KUROGANE Wing Safe with a combination dial, key lock and lever handle', 'خزنة KUROGANE Wing سوداء بقرص أرقام سري وقفل مفتاح ومقبض ذراع'),
     ],
     specTable: [
       brandSpec('KUROGANE'),
@@ -1010,7 +1016,7 @@ export const sampleProducts: Product[] = [
       'تقدّم هذه الخزنة صناعة Wing Safe اليابانية في حجم صغير: قفل رقمي دوّار وقفل بمفتاح على لوحة فولاذية، بلون بيج هادئ ينسجم في البيت أو المكتب.',
     ),
     images: [
-      img('kurogane-wing-safe-beige', 1448, 1086, 'Compact beige KUROGANE Wing Safe with a combination dial and key lock'),
+      img('kurogane-wing-safe-beige', 1448, 1086, 'Compact beige KUROGANE Wing Safe with a combination dial and key lock', 'خزنة KUROGANE Wing صغيرة بيج بقرص أرقام سري وقفل مفتاح'),
     ],
     specTable: [
       brandSpec('KUROGANE'),
@@ -1035,8 +1041,8 @@ export const sampleProducts: Product[] = [
       'صُمّمت للمحلات والمطاعم ومحطات الوقود التي تستلم النقود طوال اليوم. يتيح الدرج العلوي، بمفتاحه الخاص، إيداع الإيراد دون فتح الباب الرئيسي، بينما تُقفل الخزنة السفلية بلوحة أرقام رقمية ومفتاح، فلا يحتاج موظف الوردية إلى الرقم السري.',
     ),
     images: [
-      img('uchida-deposit-safe-green', 1086, 1448, 'Grey-green UCHIDA deposit safe with a top deposit drawer and a digital keypad'),
-      img('uchida-deposit-safe-green-keys', 1086, 1448, 'The UCHIDA deposit safe with its keys in the lock'),
+      img('uchida-deposit-safe-green', 1086, 1448, 'Grey-green UCHIDA deposit safe with a top deposit drawer and a digital keypad', 'خزنة إيداع UCHIDA رمادية مخضرّة بدرج إيداع علوي وقفل رقمي'),
+      img('uchida-deposit-safe-green-keys', 1086, 1448, 'The UCHIDA deposit safe with its keys in the lock', 'خزنة الإيداع UCHIDA ومفاتيحها في القفل'),
     ],
     specTable: [
       brand,
@@ -1061,7 +1067,7 @@ export const sampleProducts: Product[] = [
       'النقود تدخل ولا تخرج: تُودع الأظرف والإيرادات عبر الدرج العلوي في نهاية الوردية فتسقط داخل جسم الخزنة المقفل، الذي لا يُفتح إلا بالرقم السري والمفتاح. مثالية لإيداع نقود آخر اليوم في المحلات والمكاتب والفروع.',
     ),
     images: [
-      img('uchida-deposit-safe-cream', 1086, 1448, 'Cream UCHIDA night deposit safe with a top drop drawer and a digital keypad'),
+      img('uchida-deposit-safe-cream', 1086, 1448, 'Cream UCHIDA night deposit safe with a top drop drawer and a digital keypad', 'خزنة إيداع ليلي UCHIDA كريمية بدرج إيداع علوي وقفل رقمي'),
     ],
     specTable: [
       brand,
@@ -1091,6 +1097,7 @@ export const sampleProducts: Product[] = [
         1448,
         1086,
         'Light-silver SAKURA hotel safe with a digital keypad, display and turning knob',
+        'خزنة فندقية SAKURA بلون فضي فاتح بقفل رقمي وشاشة ومقبض دوّار',
       ),
     ],
     specTable: [
@@ -1121,6 +1128,7 @@ export const sampleProducts: Product[] = [
         1448,
         1086,
         'Compact silver SAKURA hotel safe with a digital keypad, display and turning knob',
+        'خزنة فندقية SAKURA فضية صغيرة بقفل رقمي وشاشة ومقبض دوّار',
       ),
     ],
     specTable: [
@@ -1151,6 +1159,7 @@ export const sampleProducts: Product[] = [
         1448,
         1086,
         'Low black UCHIDA hotel safe with a chrome key lock and two external hinges',
+        'خزنة فندقية UCHIDA سوداء منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين',
       ),
     ],
     specTable: [
@@ -1181,6 +1190,7 @@ export const sampleProducts: Product[] = [
         1586,
         992,
         'Low ivory UCHIDA hotel safe with a chrome key lock and two external hinges',
+        'خزنة فندقية UCHIDA عاجية منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين',
       ),
     ],
     specTable: [
@@ -1206,8 +1216,8 @@ export const sampleProducts: Product[] = [
       'خزنة تبدو قطعة من الديكور: بابها مزيّن بزهور طويلة على خلفية سوداء أو على واجهة مرآة فضية، في إطار كريمي، مع مقبض دائري بثلاثة أذرع ولوحة قفل رقمية. صُمّمت لغرف النوم وغرف الملابس التي تبقى فيها الخزنة ظاهرة.',
     ),
     images: [
-      img('sakura-floral-safe-black', 1174, 1339, 'SAKURA safe with a black floral door and a wheel handle'),
-      img('sakura-floral-safe-silver', 1086, 1448, 'SAKURA safe with a silver mirror floral door'),
+      img('sakura-floral-safe-black', 1174, 1339, 'SAKURA safe with a black floral door and a wheel handle', 'خزنة SAKURA بباب أسود مزخرف بالزهور ومقبض دائري'),
+      img('sakura-floral-safe-silver', 1086, 1448, 'SAKURA safe with a silver mirror floral door', 'خزنة SAKURA بباب فضي عاكس مزخرف بالزهور'),
     ],
     specTable: [
       brandSpec('SAKURA'),
@@ -1231,7 +1241,7 @@ export const sampleProducts: Product[] = [
       'للملفات التي لا يمكن تعويضها: أربعة أدراج عميقة داخل هيكل مقاوم للحريق، تُقفل بمفتاحين في الأعلى ومفتاح مستقل لكل درج، فتتشارك الأقسام خزانة واحدة وتبقى ملفات كل قسم منفصلة.',
     ),
     images: [
-      img('uchida-records-cabinet-cream', 1024, 1536, 'Cream UCHIDA fire-resistant four-drawer records cabinet with key locks'),
+      img('uchida-records-cabinet-cream', 1024, 1536, 'Cream UCHIDA fire-resistant four-drawer records cabinet with key locks', 'خزانة سجلات UCHIDA كريمية مقاومة للحريق بأربعة أدراج وأقفال بمفاتيح'),
     ],
     specTable: [
       brand,
@@ -1256,7 +1266,7 @@ export const sampleProducts: Product[] = [
       'أربعة أدراج عميقة للعقود والصكوك والسجلات، يحميها هيكل مقاوم للحريق وتُقفل بلوحة أرقام رقمية، فلا مفتاح يضيع.',
     ),
     images: [
-      img('sakura-filing-cabinet-black', 1024, 1536, 'Black SAKURA fire-resistant four-drawer filing cabinet with a digital keypad'),
+      img('sakura-filing-cabinet-black', 1024, 1536, 'Black SAKURA fire-resistant four-drawer filing cabinet with a digital keypad', 'خزانة ملفات SAKURA سوداء مقاومة للحريق بأربعة أدراج وقفل رقمي'),
     ],
     specTable: [
       brandSpec('SAKURA'),
@@ -1281,7 +1291,7 @@ export const sampleProducts: Product[] = [
       'خزانة ملفات مقاومة للحريق بلون فاتح يناسب أي مكتب، بأربعة أدراج عميقة لكل منها قفل بمفتاح.',
     ),
     images: [
-      img('sakura-filing-cabinet-white', 1024, 1536, 'Light-grey SAKURA four-drawer filing cabinet with a key lock on each drawer'),
+      img('sakura-filing-cabinet-white', 1024, 1536, 'Light-grey SAKURA four-drawer filing cabinet with a key lock on each drawer', 'خزانة ملفات SAKURA رمادية فاتحة بأربعة أدراج وقفل مفتاح لكل درج'),
     ],
     specTable: [
       brandSpec('SAKURA'),
@@ -1306,8 +1316,8 @@ export const sampleProducts: Product[] = [
       'لكل مفتاح مكانه المرقّم: صفوف من الخطافات المرقّمة داخل الخزانة وعلى بابها، مع ميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة. مثالية للفنادق والمجمعات السكنية والشركات ومعارض السيارات وفرق الصيانة.',
     ),
     images: [
-      img('uchida-key-cabinet-grey', 1086, 1448, 'Compact grey UCHIDA wall key cabinet, closed'),
-      img('uchida-key-cabinet-grey-open', 1086, 1448, 'The UCHIDA key cabinet open, with numbered hooks and yellow and blue key tags'),
+      img('uchida-key-cabinet-grey', 1086, 1448, 'Compact grey UCHIDA wall key cabinet, closed', 'خزانة مفاتيح UCHIDA جدارية رمادية صغيرة، مغلقة'),
+      img('uchida-key-cabinet-grey-open', 1086, 1448, 'The UCHIDA key cabinet open, with numbered hooks and yellow and blue key tags', 'خزانة مفاتيح UCHIDA مفتوحة، بخطافات مرقّمة وبطاقات مفاتيح صفراء وزرقاء'),
     ],
     specTable: [
       brand,
@@ -1333,8 +1343,8 @@ export const sampleProducts: Product[] = [
       'للأماكن التي تكثر فيها المفاتيح: تضم هذه الخزانة الطويلة من UCHIDA صفوفًا أكثر من الخطافات المرقّمة داخلها وعلى بابها، مع ميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة، في هيكل نحيف لا يشغل مساحة كبيرة من الجدار. مثالية للفنادق والمجمعات السكنية الكبيرة والشركات ومعارض السيارات.',
     ),
     images: [
-      img('uchida-key-cabinet-tall', 1086, 1448, 'Tall slim grey UCHIDA wall key cabinet, closed'),
-      img('uchida-key-cabinet-tall-open', 1219, 1290, 'The tall UCHIDA key cabinet open, with rows of numbered hooks and yellow and blue key tags'),
+      img('uchida-key-cabinet-tall', 1086, 1448, 'Tall slim grey UCHIDA wall key cabinet, closed', 'خزانة مفاتيح UCHIDA جدارية رمادية طويلة ونحيفة، مغلقة'),
+      img('uchida-key-cabinet-tall-open', 1219, 1290, 'The tall UCHIDA key cabinet open, with rows of numbered hooks and yellow and blue key tags', 'خزانة مفاتيح UCHIDA الطويلة مفتوحة، بصفوف من الخطافات المرقّمة وبطاقات مفاتيح صفراء وزرقاء'),
     ],
     specTable: [
       brand,
@@ -1360,7 +1370,7 @@ export const sampleProducts: Product[] = [
       'يُبقي هذا الصندوق نقود اليوم عند الكاونتر وبعيدة عن متناول الآخرين: لا يُفتح درجه الأمامي إلا بعد ضبط القفلين الدوّارين والمفتاح، ويمكن وضعه تحت الكاونتر أو داخل خزانة.',
     ),
     images: [
-      img('bsm-auto-cash-box-dials', 1536, 1024, 'Dark grey BSM auto cash box with two combination dials and a key lock'),
+      img('bsm-auto-cash-box-dials', 1536, 1024, 'Dark grey BSM auto cash box with two combination dials and a key lock', 'صندوق نقود BSM أوتوماتيكي رمادي داكن بقرصين للأرقام السرية وقفل مفتاح'),
     ],
     specTable: [
       brandSpec('BSM'),
@@ -1384,7 +1394,7 @@ export const sampleProducts: Product[] = [
       'أدخلوا الرقم السري فيُفتح الدرج بضغطة زر. تعمل لوحة الأرقام الرقمية مع قفل احتياطي بمفتاح، ويحفظ الدرج الأمامي النحيف الأوراق النقدية مرتّبة طوال يوم العمل.',
     ),
     images: [
-      img('bsm-auto-cash-box-digital', 1200, 1310, 'Light-grey BSM digital auto cash box with a keypad and push-button drawer'),
+      img('bsm-auto-cash-box-digital', 1200, 1310, 'Light-grey BSM digital auto cash box with a keypad and push-button drawer', 'صندوق نقود BSM أوتوماتيكي رقمي رمادي فاتح بلوحة أرقام ودرج يُفتح بزر'),
     ],
     specTable: [
       brandSpec('BSM'),
@@ -1409,7 +1419,7 @@ export const sampleProducts: Product[] = [
       'صُمّم ليُحمل: لهذا الصندوق مقبض علوي ويُقفل بقفلين رقميين دوّارين ومفتاح، لنقل النقود بين الكاونتر والمكتب والبنك، أو للمعارض والفعاليات.',
     ),
     images: [
-      img('bsm-portable-cash-box', 1448, 1086, 'Portable light-grey BSM cash box with a handle and two combination dials'),
+      img('bsm-portable-cash-box', 1448, 1086, 'Portable light-grey BSM cash box with a handle and two combination dials', 'صندوق نقود BSM محمول رمادي فاتح بمقبض وقرصين للأرقام السرية'),
     ],
     specTable: [
       brandSpec('BSM'),

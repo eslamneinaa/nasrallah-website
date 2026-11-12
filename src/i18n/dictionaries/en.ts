@@ -51,6 +51,7 @@ const en = {
     title: 'Safes made to protect, and to impress',
     subtitle: 'A selection from our showroom. Ask us about sizes, locks and finishes.',
     viewAll: 'View all products',
+    homeSafes: 'Home safes',
   },
   brands: {
     eyebrow: 'Our brands',
@@ -309,6 +310,9 @@ const en = {
     emptyHint: 'Try another keyword or category, or ask us about a specific model.',
     clear: 'Clear filters',
     sourceCta: 'Ask about a specific model',
+    suggestions: 'Products close to your search',
+    homeSafesPrompt: 'Looking for a safe for your home?',
+    homeSafesLink: 'Browse home safes',
   },
   product: {
     home: 'Home',
@@ -393,7 +397,8 @@ const en = {
     invalidEmail: 'Please enter a valid email address',
     invalidPhone: 'Please enter a valid phone number',
     captcha: 'Please complete the verification',
-    privacyNote: 'By submitting, you agree to our privacy policy.',
+    privacyNote: 'By submitting, you agree to our {link}.',
+    privacyLink: 'privacy policy',
   },
   privacy: {
     metaTitle: 'Privacy Policy',

@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Locale } from '@/lib/types'
-import { Captcha, Field, FormAlert, Honeypot, SubmitButton, SuccessState } from './FormParts'
+import { Captcha, Field, FormAlert, Honeypot, PrivacyNote, SubmitButton, SuccessState } from './FormParts'
 import { useWeb3Form, type Schema } from './web3forms'
 
 type Props = { locale: Locale; dict: Dictionary['form']; initialProduct?: string }
@@ -75,7 +75,7 @@ export function QuoteForm({ locale, dict, initialProduct = '' }: Props) {
         <Captcha locale={locale} onToken={setCaptchaToken} resetKey={captchaKey} />
         <FormAlert message={formError} />
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-ink-500">{dict.privacyNote}</p>
+          <PrivacyNote locale={locale} note={dict.privacyNote} link={dict.privacyLink} />
           <SubmitButton sending={status === 'sending'} label={dict.submitQuote} sendingLabel={dict.sending} />
         </div>
       </div>

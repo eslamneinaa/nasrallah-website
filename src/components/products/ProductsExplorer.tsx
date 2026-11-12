@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { fill, href, pick } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Category, Locale, Product } from '@/lib/types'
+import { normalize, parseQuery, search } from '@/lib/search'
 import { ProductCard } from '../ProductCard'
 
 type Props = {
@@ -15,20 +16,13 @@ type Props = {
   categories: Category[]
   dict: Dictionary['products']
   cardCta: string
+  /** Extra searchable words per product slug, e.g. the collections it belongs to. */
+  tags?: Record<string, string>
 }
 
-/** Lower-cases and strips Arabic diacritics / letter variants so search is forgiving. */
-const normalize = (text: string) =>
-  text
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[ً-ٰٟـ]/g, '')
-    .replace(/[إأآا]/g, 'ا')
-    .replace(/ى/g, 'ي')
-    .replace(/ة/g, 'ه')
-    .replace(/[̀-ͯ]/g, '')
+const noTags: Record<string, string> = {}
 
-const haystack = (p: Product) =>
+const haystack = (p: Product, extra = '') =>
   normalize(
     [
       p.name.en,
@@ -38,12 +32,13 @@ const haystack = (p: Product) =>
       p.category?.title.en,
       p.category?.title.ar,
       ...p.specTable.flatMap((row) => [row.value.en, row.value.ar]),
+      extra,
     ]
       .filter(Boolean)
       .join(' '),
   )
 
-export function ProductsExplorer({ locale, products, categories, dict, cardCta }: Props) {
+export function ProductsExplorer({ locale, products, categories, dict, cardCta, tags = noTags }: Props) {
   const [query, setQuery] = useState('')
   const [category, setCategory] = useState('all')
 
@@ -61,15 +56,21 @@ export function ProductsExplorer({ locale, products, categories, dict, cardCta }
     window.history.replaceState(null, '', url)
   }
 
-  const index = useMemo(() => products.map((p) => ({ product: p, text: haystack(p) })), [products])
+  const index = useMemo(
+    () => products.map((p) => ({ item: p, text: haystack(p, tags[p.slug]), name: normalize(`${p.name.en} ${p.name.ar}`) })),
+    [products, tags],
+  )
 
-  const results = useMemo(() => {
-    const terms = normalize(query).split(/\s+/).filter(Boolean)
-    return index
-      .filter(({ product }) => category === 'all' || product.category?.slug === category)
-      .filter(({ text }) => terms.every((t) => text.includes(t)))
-      .map(({ product }) => product)
-  }, [index, query, category])
+  const { results, suggestions } = useMemo(() => {
+    const terms = parseQuery(query)
+    const inCategory = index.filter(({ item }) => category === 'all' || item.category?.slug === category)
+    const { exact } = search(inCategory, terms)
+    if (exact.length || !query.trim()) return { results: exact, suggestions: [] }
+    // Nothing matches every word: offer the closest products, else the featured ones.
+    const { exact: anywhere, near } = search(index, terms)
+    const close = anywhere.length ? anywhere : near
+    return { results: exact, suggestions: (close.length ? close : products.filter((p) => p.isFeatured)).slice(0, 6) }
+  }, [index, products, query, category])
 
   const tabs = [{ slug: 'all', label: dict.all }, ...categories.map((c) => ({ slug: c.slug, label: pick(c.title, locale) ?? c.slug }))]
   const filtered = query || category !== 'all'
@@ -176,6 +177,19 @@ export function ProductsExplorer({ locale, products, categories, dict, cardCta }
             </Link>
           </div>
         </motion.div>
+      )}
+
+      {suggestions.length > 0 && (
+        <section className="mt-14">
+          <h2 className="display text-2xl text-maroon-900">{dict.suggestions}</h2>
+          <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {suggestions.map((product) => (
+              <li key={product._id}>
+                <ProductCard product={product} locale={locale} cta={cardCta} />
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
     </div>
   )

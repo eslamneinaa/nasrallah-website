@@ -53,6 +53,7 @@ const ar: Dictionary = {
     title: 'خزائن تحمي… وتليق',
     subtitle: 'مختارات من معرضنا، واسألونا عن المقاسات وأنواع الأقفال والتشطيبات.',
     viewAll: 'عرض جميع المنتجات',
+    homeSafes: 'الخزائن المنزلية',
   },
   brands: {
     eyebrow: 'علاماتنا التجارية',
@@ -311,6 +312,9 @@ const ar: Dictionary = {
     emptyHint: 'جرّب كلمة أو فئة أخرى، أو اسألنا عن طراز محدد.',
     clear: 'مسح عوامل التصفية',
     sourceCta: 'اسأل عن طراز محدد',
+    suggestions: 'منتجات قريبة من بحثكم',
+    homeSafesPrompt: 'تبحثون عن خزنة للبيت؟',
+    homeSafesLink: 'تصفّحوا الخزائن المنزلية',
   },
   product: {
     home: 'الرئيسية',
@@ -395,7 +399,8 @@ const ar: Dictionary = {
     invalidEmail: 'يرجى إدخال بريد إلكتروني صحيح',
     invalidPhone: 'يرجى إدخال رقم هاتف صحيح',
     captcha: 'يرجى إكمال التحقق',
-    privacyNote: 'بالإرسال، فإنك توافق على سياسة الخصوصية الخاصة بنا.',
+    privacyNote: 'بالإرسال، فإنك توافق على {link} الخاصة بنا.',
+    privacyLink: 'سياسة الخصوصية',
   },
   privacy: {
     metaTitle: 'سياسة الخصوصية',

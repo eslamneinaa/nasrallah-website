@@ -7,10 +7,15 @@ export type Localized<T = string> = Partial<Record<Locale, T>>
 export type ProductImage = {
   url: string
   alt?: string | null
+  /** Arabic alt text; the Arabic pages fall back to `alt` without it. */
+  altAr?: string | null
   lqip?: string | null
   width?: number | null
   height?: number | null
 }
+
+/** The image's alt text in the page's language. */
+export const imageAlt = (image: ProductImage, locale: Locale) => (locale === 'ar' && image.altAr) || image.alt
 
 export type Category = {
   _id: string

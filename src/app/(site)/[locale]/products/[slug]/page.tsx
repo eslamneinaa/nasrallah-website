@@ -11,6 +11,7 @@ import { ProductGallery } from '@/components/products/ProductGallery'
 import { RichText } from '@/components/RichText'
 import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
+import { imageAlt } from '@/lib/types'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
 import { categoryHref } from '@/lib/category-content'
@@ -128,7 +129,12 @@ export default async function ProductPage({ params }: Props) {
         <div className="container-page grid gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <Reveal>
-              <ProductGallery images={product.images} name={name} labels={t} rtl={locale === 'ar'} />
+              <ProductGallery
+                images={product.images.map((image) => ({ ...image, alt: imageAlt(image, locale) }))}
+                name={name}
+                labels={t}
+                rtl={locale === 'ar'}
+              />
             </Reveal>
 
             {product.video && (

@@ -49,7 +49,7 @@ export const siteConfig = {
       { label: { en: 'Evening', ar: 'الفترة المسائية' }, time: { en: '4:00 PM – 9:00 PM', ar: '4:00 م – 9:00 م' } },
     ],
     closed: { en: 'Friday: Closed', ar: 'الجمعة: مغلق' },
-    compact: { en: 'Sat – Thu · 8 AM – 12 PM · 4 PM – 9 PM', ar: 'السبت – الخميس · 8 – 12 ص · 4 – 9 م' },
+    compact: { en: 'Sat – Thu · 8 AM – 12 PM · 4 PM – 9 PM', ar: 'السبت – الخميس · 8 ص – 12 ظ · 4 – 9 م' },
   },
 } as const
 

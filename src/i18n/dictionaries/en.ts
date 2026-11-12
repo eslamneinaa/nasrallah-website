@@ -29,7 +29,7 @@ const en = {
     ctaSecondary: 'Request a quote',
     stats: [
       { value: '1906', label: 'Founded' },
-      { value: '100+', label: 'Years of trust' },
+      { value: '{years}', label: 'Years of trust' },
       { value: '1,000+', label: 'Clients' },
     ],
     imageAlt: 'Wood drawers with brass handles fitted inside a black steel safe',
@@ -260,6 +260,7 @@ const en = {
   categoryPage: {
     other: 'Other categories',
     all: 'All products',
+    faq: 'Frequently asked questions',
   },
   ctaBand: {
     title: 'Protect what matters most',

@@ -31,7 +31,7 @@ const ar: Dictionary = {
     ctaSecondary: 'اطلب عرض سعر',
     stats: [
       { value: '1906', label: 'سنة التأسيس' },
-      { value: '100+', label: 'عام من الثقة' },
+      { value: '{years}', label: 'عامًا من الثقة' },
       { value: '1000+', label: 'عميل' },
     ],
     imageAlt: 'أدراج خشبية بمقابض نحاسية داخل خزنة فولاذية سوداء',
@@ -262,6 +262,7 @@ const ar: Dictionary = {
   categoryPage: {
     other: 'أقسام أخرى',
     all: 'كل المنتجات',
+    faq: 'أسئلة شائعة',
   },
   ctaBand: {
     title: 'احفظوا ما تعتزّون به',

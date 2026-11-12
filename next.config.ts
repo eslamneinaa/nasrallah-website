@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
   },
+  // The year the pages were built, identical in the server HTML and the browser
+  // bundle, so the "years of trust" stat hydrates cleanly (see YearsValue).
+  env: {
+    BUILD_YEAR: String(new Date().getFullYear()),
+  },
 }
 
 export default nextConfig

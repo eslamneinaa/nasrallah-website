@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Plus } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -10,6 +10,7 @@ import { siteConfig } from '@/config/site'
 import { getDictionary, href, pick } from '@/i18n'
 import { getArticle } from '@/lib/articles'
 import { categoryContent, collections } from '@/lib/category-content'
+import { categoryGuides } from '@/lib/category-guides'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 
@@ -52,6 +53,7 @@ export default async function CategoryPage({ params }: Props) {
     ...categories.filter((c) => categoryContent[c.slug]).map((c) => ({ slug: c.slug, label: pick(c.title, locale) ?? '' })),
   ].filter((c) => c.slug !== slug)
   const pageUrl = siteConfig.url + href(locale, `categories/${slug}`)
+  const guide = categoryGuides[slug]?.[locale]
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -81,6 +83,14 @@ export default async function CategoryPage({ params }: Props) {
           { name: label, item: pageUrl },
         ].map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, ...crumb })),
       },
+      ...(guide
+        ? [
+            {
+              '@type': 'FAQPage',
+              mainEntity: guide.faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+            },
+          ]
+        : []),
     ],
   }
 
@@ -122,6 +132,34 @@ export default async function CategoryPage({ params }: Props) {
               </StaggerItem>
             ))}
           </Stagger>
+
+          {/* Buying advice and FAQs: plain text and <details>, so every answer is in the HTML. */}
+          {guide && (
+            <div className="mx-auto mt-20 max-w-3xl">
+              <Reveal>
+                <h2 className="display text-[1.75rem] leading-snug text-maroon-900 sm:text-3xl">{guide.title}</h2>
+                {guide.body.map((p) => (
+                  <p key={p} className="mt-5 leading-loose text-ink-500">
+                    {p}
+                  </p>
+                ))}
+              </Reveal>
+              <Reveal className="mt-12">
+                <h2 className="eyebrow">{dict.categoryPage.faq}</h2>
+                <div className="mt-4 border-t border-gold-500/30">
+                  {guide.faq.map(({ q, a }) => (
+                    <details key={q} className="group border-b border-gold-500/30">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-start [&::-webkit-details-marker]:hidden">
+                        <h3 className="display text-lg text-maroon-900 sm:text-xl">{q}</h3>
+                        <Plus className="h-5 w-5 shrink-0 text-gold-600 transition duration-300 group-open:rotate-45" strokeWidth={1.4} aria-hidden="true" />
+                      </summary>
+                      <p className="pb-6 leading-loose text-ink-500">{a}</p>
+                    </details>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          )}
 
           <nav aria-label={dict.categoryPage.other} className="mx-auto mt-16 max-w-4xl text-center">
             <h2 className="eyebrow justify-center">{dict.categoryPage.other}</h2>

@@ -8,6 +8,7 @@ import { href } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Locale } from '@/lib/types'
 import { Frame, Khatam, KhatamLattice } from '../ornaments'
+import { YearsValue } from '../YearsValue'
 
 type Props = {
   locale: Locale
@@ -90,7 +91,9 @@ export function Hero({ locale, dict, image }: Props) {
               <div key={stat.label} className={`flex flex-col-reverse gap-2 ${i ? 'border-s border-gold-500/20 ps-5 sm:ps-8' : ''}`}>
                 <dt className="text-xs text-pearl-200/70 sm:text-sm">{stat.label}</dt>
                 <dd className="display text-[2rem] leading-none text-gold-300 sm:text-[2.6rem]">
-                  <span dir="ltr">{stat.value}</span>
+                  <span dir="ltr">
+                    <YearsValue value={stat.value} />
+                  </span>
                 </dd>
               </div>
             ))}

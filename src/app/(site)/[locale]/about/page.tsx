@@ -6,6 +6,7 @@ import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
 import { Frame, Khatam } from '@/components/ornaments'
 import { PageHero } from '@/components/PageHero'
 import { SectionHeading } from '@/components/SectionHeading'
+import { YearsValue } from '@/components/YearsValue'
 import { siteConfig } from '@/config/site'
 import { getDictionary, href } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
@@ -64,7 +65,9 @@ export default async function AboutPage({ params }: LocaleParams) {
           {dict.hero.stats.map((stat, i) => (
             <StaggerItem key={stat.label} className={i ? 'sm:border-s sm:border-gold-500/25' : ''}>
               <p className="display text-5xl leading-none text-gold-300 sm:text-6xl">
-                <span dir="ltr">{stat.value}</span>
+                <span dir="ltr">
+                  <YearsValue value={stat.value} />
+                </span>
               </p>
               <p className="mt-4 text-pearl-200/75">{stat.label}</p>
             </StaggerItem>

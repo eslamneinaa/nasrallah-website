@@ -140,8 +140,8 @@ const en = {
         a: 'Yes. More than 1,000 clients have trusted us, including ministries, private institutions, banks, companies and individuals across Qatar.',
       },
       {
-        q: 'Do you have jewellery and watch safes?',
-        a: 'Yes. We fit our jewellery safes with velvet-lined drawers, necklace busts, ring rolls and watch cushions, with wood finishes and brass handles, so every piece has its place.',
+        q: 'Where can I buy a jewellery safe in Qatar?',
+        a: 'At our showroom in Souq Al Ein on Salwa Road, Doha, with free delivery anywhere in Qatar. We fit our jewellery safes with velvet-lined drawers, necklace busts, ring rolls and watch cushions, with wood finishes and brass handles, so every piece has its place.',
       },
       {
         q: 'Do you have cases for carrying jewellery when travelling or to weddings?',
@@ -149,7 +149,7 @@ const en = {
       },
       {
         q: 'Is delivery free?',
-        a: 'Yes, delivery is free. Contact us to arrange a delivery time.',
+        a: 'Yes, delivery is free anywhere in Qatar. Contact us to arrange a delivery time.',
       },
       {
         q: 'Do you open locked safes?',

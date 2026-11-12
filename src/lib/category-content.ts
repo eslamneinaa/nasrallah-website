@@ -101,23 +101,25 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'jewellery-watch-interiors': {
     ar: {
-      heading: 'تجهيزات خزائن المجوهرات والساعات وشنط المجوهرات',
-      metaTitle: 'خزائن مجوهرات في قطر — أدراج مخملية وشنط مجوهرات للسفر',
+      heading: 'خزائن المجوهرات والساعات في قطر',
+      metaTitle: 'خزائن مجوهرات للبيع في قطر — خزنة مجوهرات بأدراج مخملية',
       description:
-        'خزائن مجوهرات في قطر بتجهيز داخلي حسب الطلب: أدراج مبطّنة بالمخمل للعقود والخواتم، وأدراج للساعات، وشنط مجوهرات مقسّمة للسفر والأعراس.',
+        'خزائن مجوهرات للبيع في قطر بتجهيز داخلي حسب الطلب: أدراج مبطّنة بالمخمل للعقود والخواتم والساعات، وشنط مجوهرات للسفر، مع توصيل مجاني لكل قطر.',
       intro: [
         'المجوهرات تحتاج إلى أكثر من الحماية: أدراج مبطّنة بالمخمل، ومجسّمات للعقود، وبكرات للخواتم، ووسائد للساعات، حتى لا تتلامس القطع أو تُخدش. نصمّم التجهيز الداخلي لكل عميل بحسب مقتنياته، ولا نبدأ العمل إلا بعد موافقته على التصميم.',
         'ولحمل المجوهرات خارج البيت نقدّم شنط مجوهرات مقسّمة من الداخل للسفر والفنادق والحفلات والأعراس، بتصميم خاص لا تجدونه في مكان آخر في قطر.',
+        'لشراء خزنة مجوهرات في قطر زورونا في معرضنا بسوق العين على طريق سلوى في الدوحة، أو راسلونا على واتساب واطلبوا عرض سعر. التوصيل مجاني إلى كل مناطق قطر: الدوحة والريان والوكرة ولوسيل والخور وأم صلال وغيرها.',
       ],
     },
     en: {
-      heading: 'Jewellery and Watch Safe Interiors and Travel Cases',
-      metaTitle: 'Jewellery Safes in Qatar — Velvet Drawers & Travel Cases',
+      heading: 'Jewellery and Watch Safes in Qatar',
+      metaTitle: 'Jewellery Safes for Sale in Qatar — Velvet-Lined Drawers',
       description:
-        'Jewellery safes in Qatar with made-to-order interiors: velvet-lined drawers for necklaces and rings, watch drawers, and divided travel jewellery cases.',
+        'Jewellery safes for sale in Qatar with made-to-order interiors: velvet-lined drawers for necklaces, rings and watches, travel cases, and free delivery.',
       intro: [
         'Jewellery needs more than protection: velvet-lined drawers, necklace busts, ring rolls and watch cushions keep pieces from touching or scratching. We design each interior around the owner’s collection and start work only once the design is approved.',
         'For taking jewellery out of the house, our travel cases are divided inside for trips, hotels, parties and weddings, a design of our own you will not find anywhere else in Qatar.',
+        'To buy a jewellery safe in Qatar, visit our showroom at Souq Al Ein on Salwa Road, Doha, or message us on WhatsApp for a quotation. Delivery is free anywhere in Qatar, including Doha, Al Rayyan, Al Wakrah, Lusail, Al Khor and Umm Salal.',
       ],
     },
   },

@@ -12,7 +12,7 @@ export const siteConfig = {
   // Google Business Profile, by its Knowledge Graph id (from its share link).
   googleProfile: 'https://www.google.com/search?kgmid=/g/1tf5j36n',
   /** Google Analytics 4 measurement ID (G-…). Public by design: it appears in every page. Empty = no analytics. */
-  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || '',
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || 'G-Z9DFYZ37ZC',
   // Opens Google's "write a review" box for the same profile (place id from the Maps link).
   googleReview: 'https://search.google.com/local/writereview?placeid=ChIJcRMrAH_aRT4RJ-4WWXDDMBo',
   domain: 'nasrallahtrading.com',

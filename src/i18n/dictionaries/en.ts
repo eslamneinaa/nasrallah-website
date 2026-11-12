@@ -413,6 +413,7 @@ const en = {
         body: [
           'Information you provide through our contact and quotation forms: your name, company, phone number, email address and the details of your enquiry.',
           'Basic technical data such as browser type and pages visited, collected in aggregate by our hosting provider to keep the site secure and performant.',
+          'Aggregate usage statistics through Google Analytics: pages viewed, searches on the site, taps on the WhatsApp, call, email and map buttons, and form submissions. Your name, phone number and email address are never sent.',
         ],
       },
       {
@@ -426,12 +427,15 @@ const en = {
       {
         title: 'Third-party services',
         body: [
-          'Form submissions are delivered to our inbox through Web3Forms. The site is hosted on Cloudflare, product content is managed with Sanity, and our showroom map is provided by Google Maps. Each provider processes data under its own privacy policy.',
+          'Form submissions are delivered to our inbox through Web3Forms. The site is hosted on Cloudflare, product content is managed with Sanity, our showroom map is provided by Google Maps, and site usage is measured with Google Analytics. Each provider processes data under its own privacy policy.',
         ],
       },
       {
         title: 'Cookies',
-        body: ['This website does not use advertising or tracking cookies. Embedded services (such as maps or spam protection) may set cookies required for their operation.'],
+        body: [
+          'We use Google Analytics to understand how many people visit and how the site is used; it sets cookies for that purpose only. We do not use advertising cookies. Embedded services (such as maps or spam protection) may set cookies required for their operation.',
+          'You can delete or block cookies in your browser settings, or turn off Google Analytics with Google’s official add-on: tools.google.com/dlpage/gaoptout',
+        ],
       },
       {
         title: 'Data retention & security',

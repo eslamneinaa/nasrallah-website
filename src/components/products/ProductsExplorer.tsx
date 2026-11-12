@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { fill, href, pick } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Category, Locale, Product } from '@/lib/types'
+import { track } from '@/lib/analytics'
 import { normalize, parseQuery, search } from '@/lib/search'
 import { ProductCard } from '../ProductCard'
 
@@ -71,6 +72,18 @@ export function ProductsExplorer({ locale, products, categories, dict, cardCta, 
     const close = anywhere.length ? anywhere : near
     return { results: exact, suggestions: (close.length ? close : products.filter((p) => p.isFeatured)).slice(0, 6) }
   }, [index, products, query, category])
+
+  // Report what visitors search for, and which searches find nothing, once they stop typing.
+  const found = results.length
+  useEffect(() => {
+    const term = query.trim()
+    if (term.length < 2) return
+    const timer = setTimeout(() => {
+      track('search', { search_term: term, results: found })
+      if (!found) track('search_no_results', { search_term: term })
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [query, found])
 
   const tabs = [{ slug: 'all', label: dict.all }, ...categories.map((c) => ({ slug: c.slug, label: pick(c.title, locale) ?? c.slug }))]
   const filtered = query || category !== 'all'

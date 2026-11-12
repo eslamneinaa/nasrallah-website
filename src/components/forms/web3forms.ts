@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
 import type { Dictionary } from '@/i18n/dictionaries/en'
+import { track } from '@/lib/analytics'
 
 const ENDPOINT = 'https://api.web3forms.com/submit'
 /** Submissions faster than this are almost certainly bots. */
@@ -111,6 +112,8 @@ export function useWeb3Form({ accessKey, schema, messages, subject, extra }: Opt
         if (!res.ok || !json.success) throw new Error(json.message || `HTTP ${res.status}`)
         form.reset()
         setStatus('success')
+        // A sent form is the site's main lead; no personal details go to analytics.
+        track('generate_lead', { form_name: extra?.form ?? 'form', product: (values.product ?? '').slice(0, 100) })
       } catch (error) {
         console.error('[web3forms]', error)
         setFormError(messages.error)

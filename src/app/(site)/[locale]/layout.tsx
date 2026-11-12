@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import '../../globals.css'
+import { Analytics } from '@/components/Analytics'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { MotionProvider } from '@/components/motion/MotionProvider'
@@ -94,6 +95,7 @@ export default async function LocaleLayout({ children, params }: LocaleParams & 
           <WhatsAppFloat label={dict.common.whatsappFloat} text={inBothLanguages(locale, (d) => d.common.whatsappText)} />
         </MotionProvider>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <Analytics />
       </body>
     </html>
   )

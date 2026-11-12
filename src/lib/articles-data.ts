@@ -2361,7 +2361,7 @@ export const articleSources: ArticleSource[] = [
             'الواجهة المحزّزة بلون الفحم: للتصاميم العصرية البسيطة.',
             'الأحمر الجريء: لغرفة ملابس تريدون أن تكون الخزنة فيها نقطة جذب.',
             'الواجهة المزخرفة بالزهور بالأسود أو الفضي المرآة: لمن يحب التفاصيل اللافتة.',
-            'الأبيض مع رفوف خشبية: لغرف الملابس الفاتحة.',
+            'الأبيض مع رفوف حديدية: لغرف الملابس الفاتحة.',
           ],
         },
         {
@@ -2406,7 +2406,7 @@ export const articleSources: ArticleSource[] = [
             'A charcoal fluted front: for clean, contemporary interiors.',
             'Bold red: for a dressing room where the safe should be the centrepiece.',
             'A floral front in black or silver mirror: for those who love striking detail.',
-            'White with wooden shelves: for light dressing rooms.',
+            'White with steel shelves: for light dressing rooms.',
           ],
         },
         {

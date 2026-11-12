@@ -268,7 +268,7 @@ export const collections: Record<string, { label: Record<Locale, string>; produc
       'sakura-multi-lock-safe',
       'kurogane-compact-wing-safe',
       'uchida-black-digital-safe',
-      'uchida-white-safe-with-wooden-shelves',
+      'uchida-white-safe-with-steel-shelves',
       'sakura-floral-safe',
       'uchida-red-safe-with-leather-drawers',
       'uchida-fire-resistant-jewellery-and-watch-safe',

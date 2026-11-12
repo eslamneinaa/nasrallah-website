@@ -78,25 +78,25 @@ export const sampleProducts: Product[] = [
   },
   {
     _id: 'p25',
-    slug: 'uchida-white-safe-with-wooden-shelves',
-    name: { en: 'UCHIDA White Safe with Wooden Shelves', ar: 'خزنة UCHIDA بيضاء بأرفف خشبية' },
+    slug: 'uchida-white-safe-with-steel-shelves',
+    name: { en: 'UCHIDA White Safe with Steel Shelves', ar: 'خزنة UCHIDA بيضاء بأرفف حديدية' },
     category: fire,
     shortDesc: {
-      en: 'A white UCHIDA steel safe with a digital keypad, opening onto three wooden shelves and a drawer below.',
-      ar: 'خزنة UCHIDA حديدية بيضاء بقفل رقمي، تنفتح على ثلاثة أرفف خشبية ودرج سفلي.',
+      en: 'A white UCHIDA steel safe with a digital keypad, opening onto three steel shelves and a drawer below.',
+      ar: 'خزنة UCHIDA حديدية بيضاء بقفل رقمي، تنفتح على ثلاثة أرفف حديدية ودرج سفلي.',
     },
     fullDesc: desc(
-      'Clean white steel outside and warm wood inside: this UCHIDA safe opens with a digital keypad and handle onto three wooden shelves for files, cash and boxes, with a drawer below for smaller valuables. Its heavy door is carried on external hinges.',
-      'فولاذ أبيض أنيق من الخارج وخشب دافئ من الداخل: تُفتح هذه الخزنة من UCHIDA بقفل رقمي ومقبض على ثلاثة أرفف خشبية للملفات والنقود والعلب، ودرج سفلي للمقتنيات الصغيرة، ويُحمل بابها المتين على مفصلات خارجية.',
+      'Clean white steel inside and out: this UCHIDA safe opens with a digital keypad and handle onto three steel shelves for files, cash and boxes, with a drawer below for smaller valuables. Its heavy door is carried on external hinges.',
+      'فولاذ أبيض أنيق من الخارج والداخل: تُفتح هذه الخزنة من UCHIDA بقفل رقمي ومقبض على ثلاثة أرفف حديدية للملفات والنقود والعلب، ودرج سفلي للمقتنيات الصغيرة، ويُحمل بابها المتين على مفصلات خارجية.',
     ),
     images: [
       img('uchida-white-safe', 1086, 1448, 'White UCHIDA steel safe with a digital keypad and handle'),
-      img('uchida-white-safe-open', 1312, 1199, 'The white UCHIDA safe open, with three wooden shelves and a drawer'),
+      img('uchida-white-safe-open', 1312, 1199, 'The white UCHIDA safe open, with three steel shelves and a drawer'),
     ],
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Digital keypad with handle', 'قفل رقمي بلوحة أرقام ومقبض'),
-      spec('Interior', 'التجهيز الداخلي', 'Three wooden shelves and a drawer', 'ثلاثة أرفف خشبية ودرج'),
+      spec('Interior', 'التجهيز الداخلي', 'Three steel shelves and a drawer', 'ثلاثة أرفف حديدية ودرج'),
       spec('Finish', 'اللون', 'White', 'أبيض'),
     ],
     isFeatured: false,

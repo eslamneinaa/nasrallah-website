@@ -4,7 +4,7 @@
  * a plain-language summary of the sheet's figures, the meta description with
  * the price, and extra Product structured data.
  */
-import { productDetails } from './product-details'
+import { isHeavy, productDetails } from './product-details'
 import { parseQuery, productIndex, search } from './search'
 import type { Locale, Product } from './types'
 
@@ -81,7 +81,7 @@ export function specSummary(p: Product, locale: Locale): string | null {
       d.country && `صنع في ${countryAr[d.country]}`,
       colours && `متوفرة باللون ${colours.split('، ').join(' أو ')}`,
     ].filter(Boolean)
-    return `${opening}: ${parts.join('، ')}. ${d.price ? `السعر ${price(d.price)} ريال قطري` : 'السعر حسب الطلب'}، والتوصيل مجاني إلى الدوحة وكل مناطق قطر.`
+    return `${opening}: ${parts.join('، ')}. ${d.price ? `السعر ${price(d.price)} ريال قطري` : 'السعر حسب الطلب'}، والتوصيل مجاني داخل دولة قطر${isHeavy(p.slug) ? ' (يخضع للتقييد طبقاً للموقع الداخلي للعميل)' : ''}.`
   }
   const opening = p.name.en
   const parts = [
@@ -92,7 +92,7 @@ export function specSummary(p: Product, locale: Locale): string | null {
     d.country && `made in ${countryEn[d.country]}`,
     colours && `in ${colours.toLowerCase().split(', ').join(' or ')}`,
   ].filter(Boolean)
-  return `${opening}: ${parts.join(', ')}. ${d.price ? `Price: QAR ${price(d.price)}` : 'Price on request'}, with free delivery to Doha and anywhere in Qatar.`
+  return `${opening}: ${parts.join(', ')}. ${d.price ? `Price: QAR ${price(d.price)}` : 'Price on request'}, with free delivery within Qatar${isHeavy(p.slug) ? ", subject to restrictions depending on access at the customer's site" : ''}.`
 }
 
 /** Meta description that leads with what searchers compare: price, fire rating, origin (≤ 160 characters). */
@@ -101,9 +101,12 @@ export function productMetaDescription(p: Product, locale: Locale): string | und
   const ar = locale === 'ar'
   const short = p.shortDesc?.[locale]
   const name = p.name[locale] ?? ''
+  const delivery = isHeavy(p.slug)
+    ? ar ? 'توصيل مجاني في قطر حسب موقع العميل.' : 'free delivery in Qatar, subject to site access.'
+    : ar ? 'توصيل مجاني في قطر.' : 'free delivery in Qatar.'
   const priceText = d.price
-    ? ar ? `السعر ${price(d.price)} ريال قطري، توصيل مجاني في قطر.` : `QAR ${price(d.price)}, free delivery in Qatar.`
-    : ar ? 'السعر حسب الطلب، توصيل مجاني في قطر.' : 'Price on request, free delivery in Qatar.'
+    ? ar ? `السعر ${price(d.price)} ريال قطري، ${delivery}` : `QAR ${price(d.price)}, ${delivery}`
+    : ar ? `السعر حسب الطلب، ${delivery}` : `Price on request, ${delivery}`
   const facts = [
     d.fireHours && (ar ? `مقاومة للحريق ${d.fireHours === 2 ? 'ساعتين' : 'ساعة'}` : `${d.fireHours}-hour fire rating`),
     d.country && (ar ? `صنع في ${countryAr[d.country]}` : `made in ${countryEn[d.country]}`),

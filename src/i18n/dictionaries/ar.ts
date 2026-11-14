@@ -357,6 +357,7 @@ const ar: Dictionary = {
     price: 'السعر',
     priceValue: '{price} ريال قطري',
     priceOnRequest: 'حسب الطلب',
+    heavyDelivery: 'ولأن وزن هذا المنتج يزيد على 50 كجم، يخضع التوصيل للتقييد طبقاً للموقع الداخلي للعميل.',
     atAGlance: 'المواصفات باختصار',
     similar: 'عمليات بحث مشابهة',
     idealFor: 'مناسبة لـ',

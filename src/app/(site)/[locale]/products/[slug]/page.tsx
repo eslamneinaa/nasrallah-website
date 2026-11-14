@@ -11,6 +11,7 @@ import { ProductGallery } from '@/components/products/ProductGallery'
 import { RichText } from '@/components/RichText'
 import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
+import { isHeavy } from '@/lib/product-details'
 import { productGuides } from '@/lib/product-guides'
 import { productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
 import { imageAlt } from '@/lib/types'
@@ -69,7 +70,8 @@ export default async function ProductPage({ params }: Props) {
   const summary = specSummary(product, locale)
   const { products: catalogue } = await getCatalog()
   const similar = similarSearches(product, catalogue, locale)
-  const faqs = guide ? [guide.faq, { q: fill(t.orderFaq.q, { product: name }), a: t.orderFaq.a }] : []
+  const orderAnswer = isHeavy(product.slug) ? `${t.orderFaq.a} ${t.heavyDelivery}` : t.orderFaq.a
+  const faqs = guide ? [guide.faq, { q: fill(t.orderFaq.q, { product: name }), a: orderAnswer }] : []
   const quoteHref = `${href(locale, 'request-quote')}?product=${encodeURIComponent(name)}`
   const whatsapp = whatsappLink(
     inBothLanguages(locale, (d, lang) => fill(d.product.whatsappText, { product: pick(product.name, lang) || name })),

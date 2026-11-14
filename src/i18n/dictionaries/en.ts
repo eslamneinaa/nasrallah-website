@@ -355,6 +355,7 @@ const en = {
     price: 'Price',
     priceValue: 'QAR {price}',
     priceOnRequest: 'On request',
+    heavyDelivery: "As this product weighs over 50 kg, delivery is subject to restrictions depending on access at the customer's site.",
     atAGlance: 'At a glance',
     similar: 'Similar searches',
     idealFor: 'Ideal for',

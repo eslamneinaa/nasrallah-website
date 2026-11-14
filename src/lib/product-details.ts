@@ -113,6 +113,16 @@ const dims = ([w, h, d]: Dims): [string, string] => [
   `العرض ${n(w)} × الارتفاع ${n(h)} × العمق ${n(d)} سم`,
 ]
 
+/** Over 50 kg, delivery depends on access at the customer's site (stairs, doors, lifts). */
+export const HEAVY_KG = 50
+export const isHeavy = (slug: string) => (productDetails[slug]?.weightKg ?? 0) > HEAVY_KG
+
+/** The delivery row: free within Qatar, with the access condition for heavy products (owner's wording). */
+export const deliveryText = (slug: string): [string, string] =>
+  isHeavy(slug)
+    ? ["Free within the State of Qatar (subject to restrictions depending on access at the customer's site)", 'مجاني داخل دولة قطر (يخضع للتقييد طبقاً للموقع الداخلي للعميل)']
+    : ['Free within Qatar', 'مجاني داخل قطر']
+
 /** Spec-table labels the sheet replaces (colour and origin rows written before it). */
 const replaced = (d: ProductDetails) => [...(d.colours ? ['Finish', 'Colour', 'Colours'] : []), ...(d.country ? ['Made in'] : [])]
 
@@ -135,7 +145,7 @@ export function withDetails(slug: string, specTable: SpecRow[]): { specTable: Sp
     ...(d.weightKg ? [row('Weight', 'الوزن', `${n(d.weightKg)} kg`, `${n(d.weightKg)} كجم`)] : []),
     ...(d.country ? [row('Made in', 'بلد الصنع', ...countries[d.country])] : []),
     ...(d.colours ? [row('Colours available', 'الألوان المتوفرة', d.colours.map((c) => colours[c][0]).join(', '), d.colours.map((c) => colours[c][1]).join('، '))] : []),
-    row('Delivery', 'التوصيل', 'Free within Qatar', 'مجاني داخل قطر'),
+    row('Delivery', 'التوصيل', ...deliveryText(slug)),
   ]
   return { specTable: rows, price: d.price }
 }

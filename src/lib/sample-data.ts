@@ -119,8 +119,8 @@ const catalogue: Product[] = [
       ar: 'خزنة UCHIDA بلون أحمر لافت، بقفل رقمي ومقبض دائري، ومجهّزة من الداخل بأربعة أدراج من الجلد بملمس جلد التمساح.',
     },
     fullDesc: desc(
-      'A safe that makes a statement: deep red steel, the UCHIDA and Nasrallah plates, a digital keypad beside a round chrome handle, and inside, four drawers in brown crocodile-texture leather for jewellery, watches and keepsakes.',
-      'خزنة تلفت الأنظار: فولاذ بلون أحمر عميق يحمل لوحتي UCHIDA ونصر الله، وقفل رقمي بجوار مقبض دائري لامع، وفي الداخل أربعة أدراج من الجلد البني بملمس جلد التمساح للمجوهرات والساعات والمقتنيات العزيزة.',
+      'A safe that makes a statement: deep red steel, a digital keypad beside a round chrome handle, and inside, four drawers in brown crocodile-texture leather for jewellery, watches and keepsakes.',
+      'خزنة تلفت الأنظار: فولاذ بلون أحمر عميق، وقفل رقمي بجوار مقبض دائري لامع، وفي الداخل أربعة أدراج من الجلد البني بملمس جلد التمساح للمجوهرات والساعات والمقتنيات العزيزة.',
     ),
     images: [
       img('uchida-red-safe-front', 1145, 1373, 'Red UCHIDA safe with a digital keypad and round chrome handle', 'خزنة UCHIDA حمراء بقفل رقمي ومقبض دائري من الكروم'),
@@ -146,21 +146,20 @@ const catalogue: Product[] = [
       ar: 'خزنة UCHIDA مقاومة للحريق موديل Z/CFP-R بخمسة تصاميم للباب: نقشة خشب الجوز، والرخام الأسود والذهبي، والرخام الأبيض، والواجهة المضلّعة الفحمية، والمضلّعة بلونين كريمي وكحلي.',
     },
     fullDesc: desc(
-      'Security that looks like furniture. The same UCHIDA fire-resistant safe comes with a choice of door: a warm walnut grain in a black steel frame; black marble effect veined in gold and white; white marble effect with soft grey veins; a fluted charcoal front; or a two-tone fluted front, cream above and navy below. Each carries the UCHIDA and Nasrallah plates, with a fingerprint reader and a touch keypad in the panel above the door. Choose the design that suits your majlis, dressing room or executive office.',
-      'أمان بمظهر قطعة أثاث. خزنة UCHIDA نفسها المقاومة للحريق، مع اختيار تصميم الباب: نقشة خشب الجوز الدافئة في إطار من الفولاذ الأسود، أو نقشة الرخام الأسود بعروق ذهبية وبيضاء، أو الرخام الأبيض بعروق رمادية ناعمة، أو الواجهة المضلّعة بلون فحمي، أو المضلّعة بلونين: كريمي في الأعلى وكحلي في الأسفل. ويحمل كل تصميم لوحتي UCHIDA ونصر الله، مع قارئ بصمة ولوحة أرقام تعمل باللمس أعلى الباب. اختاروا التصميم الذي يناسب مجلسكم أو غرفة الملابس أو مكتب الإدارة.',
+      'Security that looks like furniture. The same UCHIDA fire-resistant safe comes with a choice of door: a warm walnut grain in a black steel frame; black marble effect veined in gold and white; white marble effect with soft grey veins; a fluted charcoal front; or a two-tone fluted front, cream above and navy below. Each has a fingerprint reader and a touch keypad in the panel above the door. Choose the design that suits your majlis, dressing room or executive office.',
+      'أمان بمظهر قطعة أثاث. خزنة UCHIDA نفسها المقاومة للحريق، مع اختيار تصميم الباب: نقشة خشب الجوز الدافئة في إطار من الفولاذ الأسود، أو نقشة الرخام الأسود بعروق ذهبية وبيضاء، أو الرخام الأبيض بعروق رمادية ناعمة، أو الواجهة المضلّعة بلون فحمي، أو المضلّعة بلونين: كريمي في الأعلى وكحلي في الأسفل. ولكل تصميم قارئ بصمة ولوحة أرقام تعمل باللمس أعلى الباب. اختاروا التصميم الذي يناسب مجلسكم أو غرفة الملابس أو مكتب الإدارة.',
     ),
     images: [
       img('uchida-black-gold-marble-safe', 1176, 1338, 'UCHIDA safe with a black and gold marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأسود والذهبي، مع قارئ بصمة ولوحة أرقام باللمس'),
       img('uchida-walnut-safe', 1254, 1254, 'UCHIDA safe with a walnut wood-grain door and black steel frame', 'خزنة UCHIDA بباب بنقشة خشب الجوز وإطار من الفولاذ الأسود'),
       img('uchida-white-marble-safe', 1122, 1402, 'UCHIDA safe with a white marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأبيض، مع قارئ بصمة ولوحة أرقام باللمس'),
-      img('uchida-fluted-safe', 1254, 1254, 'UCHIDA safe with a fluted charcoal front and a brass Nasrallah plate', 'خزنة UCHIDA بواجهة مضلّعة بلون فحمي ولوحة نصر الله النحاسية'),
+      img('uchida-fluted-safe', 1254, 1254, 'UCHIDA safe with a fluted charcoal front', 'خزنة UCHIDA بواجهة مضلّعة بلون فحمي'),
       img('uchida-two-tone-fluted-safe', 1254, 1254, 'UCHIDA safe with a cream and navy fluted front, fingerprint reader and touch keypad', 'خزنة UCHIDA بواجهة مضلّعة بلونين كريمي وكحلي، مع قارئ بصمة ولوحة أرقام باللمس'),
     ],
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
       spec('Door designs', 'تصاميم الباب', 'Walnut grain, black & gold marble, white marble, charcoal fluted, cream & navy fluted', 'نقشة خشب الجوز، رخام أسود وذهبي، رخام أبيض، مضلّعة فحمي، مضلّعة كريمي وكحلي'),
-      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
     ],
     isFeatured: true,
     order: 14,

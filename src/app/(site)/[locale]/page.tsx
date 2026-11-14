@@ -144,7 +144,7 @@ export default async function HomePage({ params }: LocaleParams) {
                     )}
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-xs text-gold-600">{pick(p.category?.title, locale)}</span>
+                    <span className="block text-xs text-gold-700">{pick(p.category?.title, locale)}</span>
                     <span className="mt-1 block leading-snug text-maroon-900 group-hover:underline">{pick(p.name, locale)}</span>
                   </span>
                 </Link>

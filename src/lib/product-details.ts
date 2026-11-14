@@ -40,15 +40,16 @@ const filingUB4 = { outside: [54, 153, 68], weightKg: 320, country: 'KOREA', fir
 export const productDetails: Record<string, ProductDetails> = {
   'uchida-full-height-fire-resistant-safe': { model: 'UBO-335E', price: 14600, inside: [53, 114.5, 46], outside: [70, 138.5, 63], weightKg: 335, country: 'KOREA', fireHours: 2, colours: ['GREY', 'BLACK'] },
   'uchida-white-safe-with-steel-shelves': { model: 'PB-103', price: 15600, inside: [57.4, 104.9, 46], outside: [75, 130, 69.2], weightKg: 375, country: 'THAILAND', fireHours: 2, colours: ['BEIGE', 'WHITE', 'BLACK'] },
-  'uchida-red-safe-with-leather-drawers': { model: 'ZC-50', price: 2950, inside: [31.5, 38.6, 32.5], outside: [43.5, 52.9, 46.5], weightKg: 62, country: 'KOREA', fireHours: 1, colours: ['WHITE', 'BLACK', 'RED'] },
+  // Safes with drawers and drawer interiors: price on request (owner, 14 Nov 2026).
+  'uchida-red-safe-with-leather-drawers': { model: 'ZC-50', inside: [31.5, 38.6, 32.5], outside: [43.5, 52.9, 46.5], weightKg: 62, country: 'KOREA', fireHours: 1, colours: ['WHITE', 'BLACK', 'RED'] },
   'uchida-designer-fire-resistant-safe': safeZ,
-  'watch-winder-safe': { model: 'ZC-50', price: 4750, inside: [31.5, 38.6, 32.5], outside: [43.5, 52.9, 46.5], weightKg: 62, country: 'KOREA', fireHours: 1, colours: ['WHITE', 'BLACK', 'RED'] },
-  'marble-interior-jewellery-safe': { model: 'PB-105', price: 33990, inside: [57.4, 149.9, 46], outside: [75, 175, 69.2], weightKg: 493, country: 'THAILAND', fireHours: 2, colours: ['BEIGE', 'WHITE', 'BLACK'] },
-  'uchida-fire-resistant-jewellery-and-watch-safe': { model: 'PB-104', price: 28900, inside: [57.4, 119.7, 46], outside: [75, 144.8, 63.2], weightKg: 407, country: 'THAILAND', fireHours: 2, colours: ['BEIGE', 'WHITE', 'BLACK'] },
-  // Drawer interiors: the price only (owner's decision: they are drawers, not the safe in the sheet's row).
-  'jewellery-display-drawers': { price: 21900 },
+  'watch-winder-safe': { model: 'ZC-50', inside: [31.5, 38.6, 32.5], outside: [43.5, 52.9, 46.5], weightKg: 62, country: 'KOREA', fireHours: 1, colours: ['WHITE', 'BLACK', 'RED'] },
+  'marble-interior-jewellery-safe': { model: 'PB-105', inside: [57.4, 149.9, 46], outside: [75, 175, 69.2], weightKg: 493, country: 'THAILAND', fireHours: 2, colours: ['BEIGE', 'WHITE', 'BLACK'] },
+  'uchida-fire-resistant-jewellery-and-watch-safe': { model: 'PB-104', inside: [57.4, 119.7, 46], outside: [75, 144.8, 63.2], weightKg: 407, country: 'THAILAND', fireHours: 2, colours: ['BEIGE', 'WHITE', 'BLACK'] },
+  // Drawer interiors: no sheet figures, price on request.
+  'jewellery-display-drawers': {},
   'watch-drawers': {},
-  'wood-and-brass-drawer-interior': { price: 21900 },
+  'wood-and-brass-drawer-interior': {},
   'travel-jewellery-cases': { price: 2700, country: 'DUBAI' },
   'sakura-multi-lock-safe': { model: 'EFI703', price: 18650, inside: [57.4, 104.3, 46], outside: [75, 130, 63.2], weightKg: 375, country: 'THAILAND', fireHours: 2, colours: ['BEIGE'] },
   'sakura-fingerprint-safe': { model: 'ONS-FE', price: 4794, inside: [24, 48.5, 32], outside: [33, 60.3, 51.1], weightKg: 67, country: 'THAILAND', fireHours: 1, colours: ['BEIGE', 'BLACK'] },

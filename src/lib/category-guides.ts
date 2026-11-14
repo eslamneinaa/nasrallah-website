@@ -508,3 +508,33 @@ export const categoryGuides: Record<string, Record<Locale, CategoryGuide>> = {
     },
   },
 }
+
+/**
+ * Products named and linked in each category page's intro text, so the most
+ * relevant ones get a contextual link besides the product grid.
+ */
+export const categoryHighlights: Record<string, string[]> = {
+  'fire-resistant-safes': ['uchida-full-height-fire-resistant-safe', 'sakura-multi-lock-safe', 'uchida-fingerprint-safe', 'kurogane-wing-safe'],
+  'deposit-safes': ['uchida-deposit-safe', 'uchida-night-deposit-safe'],
+  'hotel-safes': ['sakura-digital-hotel-safe', 'sakura-compact-digital-hotel-safe', 'uchida-black-hotel-safe'],
+  'luxury-safes': ['uchida-walnut-finish-safe', 'uchida-black-and-gold-marble-safe', 'watch-winder-safe', 'sakura-floral-safe'],
+  'jewellery-watch-interiors': ['uchida-fire-resistant-jewellery-and-watch-safe', 'jewellery-display-drawers', 'watch-drawers', 'travel-jewellery-cases'],
+  'filing-cabinets': ['uchida-fire-resistant-records-cabinet', 'sakura-fire-resistant-filing-cabinet', 'godrej-five-drawer-filing-cabinet'],
+  'key-cabinets': ['uchida-key-cabinet', 'uchida-tall-key-cabinet'],
+  'cash-boxes': ['bsm-digital-auto-cash-box', 'bsm-portable-cash-box', 'bsm-auto-cash-box'],
+  'steel-cupboards': ['godrej-two-door-steel-cupboard', 'godrej-single-door-steel-cupboard', 'godrej-glass-door-steel-cabinet'],
+  'steel-lockers': ['godrej-single-steel-locker', 'godrej-two-tier-steel-locker', 'godrej-six-door-steel-locker'],
+  'home-safes': ['uchida-compact-digital-safe', 'uchida-fingerprint-safe', 'sakura-multi-lock-safe', 'uchida-fire-resistant-jewellery-and-watch-safe'],
+}
+
+/** Eight products across categories for the home page's "popular products" block. */
+export const popularProducts = [
+  'uchida-fingerprint-safe',
+  'uchida-fire-resistant-jewellery-and-watch-safe',
+  'uchida-deposit-safe',
+  'sakura-digital-hotel-safe',
+  'travel-jewellery-cases',
+  'godrej-two-door-steel-cupboard',
+  'godrej-six-door-steel-locker',
+  'bsm-digital-auto-cash-box',
+]

@@ -12,6 +12,7 @@ const en = {
     contact: 'Contact',
     guide: 'Safe buying guide',
     articles: 'Articles',
+    videos: 'Our Collection',
     menu: 'Open menu',
     close: 'Close menu',
     switchLabel: 'العربية',
@@ -75,12 +76,22 @@ const en = {
       },
     ],
   },
+  videos: {
+    metaTitle: 'Explore Our Collection on Video — Safes in Qatar',
+    metaDescription: 'Videos from the Nasrallah Trading Est showroom in Souq Al Ein, Doha: a showroom tour, jewellery and watch safes, and fire-resistant, luxury and deposit safes.',
+    title: 'Explore Our Collection',
+    subtitle: 'Tours and short videos from our Souq Al Ein showroom, so you can see the safes and drawers as they really are.',
+  },
+  popular: {
+    eyebrow: 'Across the range',
+    title: 'Popular products',
+  },
   tour: {
     eyebrow: 'Showroom tour',
     title: 'Our whole range in one tour',
     body: 'From jewellery and watch safes and travel cases to luxury and fire-resistant safes, deposit safes, filing cabinets and steel cupboards: a look at what awaits you at our showroom in Souq Al Ein.',
     video: 'Video: a tour of the Nasrallah Trading Est range, from the showroom front to jewellery and watch safes and cases, luxury and fire-resistant safes, deposit and filing safes, and steel cupboards',
-    cta: 'Browse products',
+    cta: 'Watch all videos',
   },
   interiors: {
     eyebrow: 'Jewellery safes',
@@ -238,6 +249,8 @@ const en = {
     ctaProducts: 'Browse safes',
     ctaQuote: 'Request a quote',
     faqLink: 'Read the safe buying guide for Qatar',
+    browseTitle: 'Browse products by category',
+    browseBody: 'Once you know what you need, here is our range by category; every product has its own page with specs and photos.',
   },
   articles: {
     metaTitle: 'Articles and Advice on Safes in Qatar',
@@ -261,6 +274,7 @@ const en = {
     other: 'Other categories',
     all: 'All products',
     faq: 'Frequently asked questions',
+    highlights: 'Highlights in this range:',
   },
   ctaBand: {
     title: 'Protect what matters most',
@@ -335,6 +349,12 @@ const en = {
     whatsappText: 'Hello, I would like more information about: {product}',
     call: 'Call the showroom',
     related: 'Related products',
+    idealFor: 'Ideal for',
+    faq: 'Frequently asked questions',
+    orderFaq: {
+      q: 'How do I order the {product}, and what does it cost?',
+      a: 'Request a quotation on this page, message us on WhatsApp, or visit our showroom at Souq Al Ein on Salwa Road, Doha. Delivery is free anywhere in Qatar.',
+    },
     backToProducts: 'Back to products',
     imageOf: 'Image {n} of {total}',
     prev: 'Previous image',

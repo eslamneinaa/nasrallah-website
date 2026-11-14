@@ -4,7 +4,9 @@ import Link from 'next/link'
 import { Reveal } from '@/components/motion/Reveal'
 import { PageHero } from '@/components/PageHero'
 import { siteConfig } from '@/config/site'
-import { getDictionary, href } from '@/i18n'
+import { getDictionary, href, pick } from '@/i18n'
+import { categoryContent, categoryHref } from '@/lib/category-content'
+import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
@@ -18,6 +20,11 @@ export default async function SafeBuyingGuidePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.guide
+  // Every product, grouped by category, so the guide links each product page.
+  const { products, categories } = await getCatalog()
+  const groups = categories
+    .map((c) => ({ category: c, items: products.filter((p) => p.category?.slug === c.slug) }))
+    .filter((g) => g.items.length)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -51,6 +58,35 @@ export default async function SafeBuyingGuidePage({ params }: LocaleParams) {
               </section>
             ))}
           </div>
+
+          <section className="mt-14">
+            <h2 className="display text-2xl text-maroon-900">{t.browseTitle}</h2>
+            <p className="mt-4 leading-loose text-ink-500">{t.browseBody}</p>
+            <div className="mt-8 grid gap-8 sm:grid-cols-2">
+              {groups.map(({ category, items }) => (
+                <div key={category.slug}>
+                  <h3 className="font-medium text-maroon-900">
+                    {categoryContent[category.slug] ? (
+                      <Link href={categoryHref(locale, category.slug)} className="underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800">
+                        {pick(category.title, locale)}
+                      </Link>
+                    ) : (
+                      pick(category.title, locale)
+                    )}
+                  </h3>
+                  <ul className="mt-3 space-y-1.5 text-sm">
+                    {items.map((p) => (
+                      <li key={p.slug}>
+                        <Link href={href(locale, `products/${p.slug}`)} className="text-ink-500 transition hover:text-maroon-800">
+                          {pick(p.name, locale)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
 
           <div className="mt-14 border border-gold-500/40 bg-pearl-50 p-8 text-center shadow-card sm:p-10">
             <h2 className="display text-2xl text-maroon-900 sm:text-3xl">{t.ctaTitle}</h2>

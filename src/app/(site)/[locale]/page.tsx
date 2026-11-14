@@ -10,9 +10,10 @@ import { ProductCard } from '@/components/ProductCard'
 import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { siteConfig } from '@/config/site'
-import { fill, getDictionary, href } from '@/i18n'
+import { fill, getDictionary, href, pick } from '@/i18n'
 import { categoryHref } from '@/lib/category-content'
-import { getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
+import { popularProducts } from '@/lib/category-guides'
+import { getCatalog, getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
 import { resolveLocale, type LocaleParams } from '@/lib/seo'
 
 /** Heritage, trust, quality, service — in the order of `dict.why.items`. */
@@ -34,7 +35,8 @@ const interiorImages = [
 export default async function HomePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
-  const [featured, clients] = await Promise.all([getFeaturedProducts(6), getClientLogos()])
+  const [featured, clients, { products }] = await Promise.all([getFeaturedProducts(6), getClientLogos(), getCatalog()])
+  const popular = popularProducts.flatMap((s) => products.find((p) => p.slug === s) ?? [])
 
   const faq = dict.faq.items.map(({ q, a }) => ({
     q,
@@ -125,13 +127,40 @@ export default async function HomePage({ params }: LocaleParams) {
         </div>
       </section>
 
+      {/* Popular products: one compact link to a key product in each category */}
+      <section className="bg-pearl-100 pb-24 sm:pb-32">
+        <div className="container-page">
+          <SectionHeading eyebrow={dict.popular.eyebrow} title={dict.popular.title} />
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {popular.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={href(locale, `products/${p.slug}`)}
+                  className="group flex h-full items-center gap-4 border border-pearl-300/80 bg-pearl-50 p-3 transition hover:border-gold-500/70"
+                >
+                  <span className="relative h-20 w-20 shrink-0 bg-white">
+                    {p.images[0] && (
+                      <Image src={p.images[0].url} alt="" fill sizes="80px" className="object-contain p-1.5" />
+                    )}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-xs text-gold-600">{pick(p.category?.title, locale)}</span>
+                    <span className="mt-1 block leading-snug text-maroon-900 group-hover:underline">{pick(p.name, locale)}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Collection tour (video 4): the whole range in one film */}
       <section className="bg-khatam-light py-24 sm:py-32">
         <div className="container-page">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <SectionHeading eyebrow={dict.tour.eyebrow} title={dict.tour.title} subtitle={dict.tour.body} />
             <Reveal>
-              <Link href={href(locale, 'products')} className="btn-outline shrink-0">
+              <Link href={href(locale, 'videos')} className="btn-outline shrink-0">
                 {dict.tour.cta}
                 <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
               </Link>

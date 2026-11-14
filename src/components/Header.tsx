@@ -41,6 +41,7 @@ export function Header({ locale, nav }: Props) {
     { href: href(locale), label: nav.home, exact: true },
     { href: href(locale, 'about'), label: nav.about },
     { href: href(locale, 'products'), label: nav.products },
+    { href: href(locale, 'videos'), label: nav.videos },
     { href: href(locale, 'articles'), label: nav.articles },
     { href: href(locale, 'contact'), label: nav.contact },
   ]
@@ -111,7 +112,7 @@ export function Header({ locale, nav }: Props) {
             )}
           </div>
 
-          <nav aria-label="Main" className="hidden lg:block">
+          <nav aria-label="Main" className="hidden xl:block">
             <ul className="flex items-center gap-2">
               {links.map((link) => {
                 const active = isActive(link)
@@ -148,7 +149,7 @@ export function Header({ locale, nav }: Props) {
             />
             <Link
               href={href(locale, 'request-quote')}
-              className={`hidden px-5 py-3 md:inline-flex ${solid ? 'btn-maroon' : 'btn-gold'}`}
+              className={`hidden px-5 py-3 whitespace-nowrap md:inline-flex ${solid ? 'btn-maroon' : 'btn-gold'}`}
             >
               {nav.quote}
             </Link>
@@ -158,7 +159,7 @@ export function Header({ locale, nav }: Props) {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? nav.close : nav.menu}
-              className={`inline-flex h-11 w-11 items-center justify-center transition lg:hidden ${
+              className={`inline-flex h-11 w-11 items-center justify-center transition xl:hidden ${
                 solid ? 'text-maroon-900 hover:bg-maroon-800/5' : 'text-pearl-50 hover:bg-white/10'
               }`}
             >
@@ -176,7 +177,7 @@ export function Header({ locale, nav }: Props) {
             animate={{ opacity: 1, height: 'calc(100dvh - 4.5rem)' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-khatam-light overflow-y-auto bg-pearl-50 lg:hidden"
+            className="bg-khatam-light overflow-y-auto bg-pearl-50 xl:hidden"
           >
             <nav aria-label="Mobile" className="container-page flex h-full flex-col py-8">
               {siteConfig.showNationalDay && (

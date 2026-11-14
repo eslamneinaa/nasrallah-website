@@ -1,6 +1,7 @@
 import { ArrowUpRight, Plus } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Fragment } from 'react'
 import { notFound } from 'next/navigation'
 import { CtaBand } from '@/components/CtaBand'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
@@ -10,7 +11,7 @@ import { siteConfig } from '@/config/site'
 import { getDictionary, href, pick } from '@/i18n'
 import { getArticle } from '@/lib/articles'
 import { categoryContent, collections } from '@/lib/category-content'
-import { categoryGuides } from '@/lib/category-guides'
+import { categoryGuides, categoryHighlights } from '@/lib/category-guides'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 
@@ -54,6 +55,8 @@ export default async function CategoryPage({ params }: Props) {
   ].filter((c) => c.slug !== slug)
   const pageUrl = siteConfig.url + href(locale, `categories/${slug}`)
   const guide = categoryGuides[slug]?.[locale]
+  const highlights = (categoryHighlights[slug] ?? []).flatMap((s) => products.find((p) => p.slug === s) ?? [])
+  const join = (i: number) => (i === 0 ? '' : i === highlights.length - 1 ? (locale === 'ar' ? ' و' : ' and ') : locale === 'ar' ? '، ' : ', ')
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -112,6 +115,20 @@ export default async function CategoryPage({ params }: Props) {
                 {p}
               </p>
             ))}
+            {highlights.length > 0 && (
+              <p className="leading-loose text-ink-500">
+                {dict.categoryPage.highlights}{' '}
+                {highlights.map((p, i) => (
+                  <Fragment key={p.slug}>
+                    {join(i)}
+                    <Link href={href(locale, `products/${p.slug}`)} className="text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800">
+                      {pick(p.name, locale)}
+                    </Link>
+                  </Fragment>
+                ))}
+                .
+              </p>
+            )}
             {article && (
               <Link
                 href={href(locale, `articles/${article.slug}`)}

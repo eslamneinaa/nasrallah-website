@@ -62,11 +62,19 @@ export async function getFeaturedProducts(limit = 6) {
   return (featured.length ? featured : products).slice(0, limit)
 }
 
-export async function getRelatedProducts(product: Product, limit = 3) {
+/**
+ * The products that follow this one in its category, wrapping round to the
+ * start, so every product is linked from its neighbours' pages (taking the
+ * first few each time would leave the rest of the category unlinked). Short
+ * categories are topped up the same way from the rest of the catalogue.
+ */
+export async function getRelatedProducts(product: Product, limit = 4) {
   const { products } = await getCatalog()
-  const others = products.filter((p) => p.slug !== product.slug)
-  const sameCategory = others.filter((p) => p.category?.slug === product.category?.slug)
-  return [...sameCategory, ...others.filter((p) => !sameCategory.includes(p))].slice(0, limit)
+  const after = <T,>(list: T[], index: number) => [...list.slice(index + 1), ...list.slice(0, Math.max(index, 0))]
+  const sameCategory = products.filter((p) => p.category?.slug === product.category?.slug)
+  const siblings = after(sameCategory, sameCategory.findIndex((p) => p.slug === product.slug))
+  const rest = after(products, products.findIndex((p) => p.slug === product.slug)).filter((p) => !sameCategory.includes(p))
+  return [...siblings, ...rest].slice(0, limit)
 }
 
 /** Client logos published in Sanity (none are bundled). */

@@ -1,4 +1,4 @@
-import { ArrowUpRight, FileDown, Phone } from 'lucide-react'
+import { ArrowUpRight, FileDown, Phone, Plus } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -11,6 +11,7 @@ import { ProductGallery } from '@/components/products/ProductGallery'
 import { RichText } from '@/components/RichText'
 import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
+import { productGuides } from '@/lib/product-guides'
 import { imageAlt } from '@/lib/types'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
@@ -63,6 +64,8 @@ export default async function ProductPage({ params }: Props) {
   const name = pick(product.name, locale) ?? ''
   const category = pick(product.category?.title, locale)
   const related = await getRelatedProducts(product)
+  const guide = productGuides[product.slug]?.[locale]
+  const faqs = guide ? [guide.faq, { q: fill(t.orderFaq.q, { product: name }), a: t.orderFaq.a }] : []
   const quoteHref = `${href(locale, 'request-quote')}?product=${encodeURIComponent(name)}`
   const whatsapp = whatsappLink(
     inBothLanguages(locale, (d, lang) => fill(d.product.whatsappText, { product: pick(product.name, lang) || name })),
@@ -119,6 +122,14 @@ export default async function ProductPage({ params }: Props) {
           { name, item: pageUrl },
         ].map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, ...crumb })),
       },
+      ...(faqs.length
+        ? [
+            {
+              '@type': 'FAQPage',
+              mainEntity: faqs.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+            },
+          ]
+        : []),
     ],
   }
 
@@ -172,6 +183,36 @@ export default async function ProductPage({ params }: Props) {
                 </div>
               </Reveal>
             ) : null}
+
+            {guide && (
+              <Reveal className="mt-16 grid gap-12 sm:grid-cols-2 sm:gap-10">
+                <div>
+                  <h2 className="eyebrow">{t.idealFor}</h2>
+                  <ul className="mt-6 grid gap-4 border-t border-gold-500/30 pt-6">
+                    {guide.idealFor.map((use) => (
+                      <li key={use} className="flex gap-3 leading-relaxed text-ink-700">
+                        <Diamond className="mt-2 shrink-0" />
+                        {use}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="eyebrow">{t.faq}</h2>
+                  <div className="mt-6 border-t border-gold-500/30">
+                    {faqs.map(({ q, a }) => (
+                      <details key={q} className="group border-b border-gold-500/30">
+                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-start [&::-webkit-details-marker]:hidden">
+                          <h3 className="font-medium text-maroon-900">{q}</h3>
+                          <Plus className="h-4 w-4 shrink-0 text-gold-600 transition duration-300 group-open:rotate-45" strokeWidth={1.4} aria-hidden="true" />
+                        </summary>
+                        <p className="pb-5 leading-relaxed text-ink-500">{a}</p>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            )}
           </div>
 
           <aside className="lg:col-span-5">
@@ -251,7 +292,7 @@ export default async function ProductPage({ params }: Props) {
                 {t.backToProducts}
               </Link>
             </div>
-            <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {related.map((p) => (
                 <StaggerItem key={p._id}>
                   <ProductCard product={p} locale={locale} cta={dict.common.viewDetails} />

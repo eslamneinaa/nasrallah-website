@@ -1453,7 +1453,7 @@ export const articleSources: ArticleSource[] = [
           h: 'ماذا نوفّر؟',
         },
         {
-          p: 'صناديق نقود BSM بدرج أمامي للكاشير، وصندوق رقمي يُفتح درجه بزر، وصندوق محمول بمقبض، إلى جانب خزائن النقود وخزائن الإيداع. أخبرونا بحجم عملكم ونرشّح لكم المزيج المناسب.',
+          p: 'صناديق نقود UCHIDA بدرج أمامي للكاشير، وصندوق رقمي يُفتح درجه بزر، وصندوق محمول بمقبض، إلى جانب خزائن النقود وخزائن الإيداع. أخبرونا بحجم عملكم ونرشّح لكم المزيج المناسب.',
         },
       ],
       en: [
@@ -1493,7 +1493,7 @@ export const articleSources: ArticleSource[] = [
           h: 'What we carry',
         },
         {
-          p: 'BSM cash boxes with a front cashier drawer, a digital box whose drawer opens at the push of a button, and a portable box with a handle, alongside cash safes and deposit safes. Tell us how your business runs and we will recommend the right mix.',
+          p: 'UCHIDA cash boxes with a front cashier drawer, a digital box whose drawer opens at the push of a button, and a portable box with a handle, alongside cash safes and deposit safes. Tell us how your business runs and we will recommend the right mix.',
         },
       ],
     },

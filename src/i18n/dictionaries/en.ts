@@ -349,6 +349,9 @@ const en = {
     whatsappText: 'Hello, I would like more information about: {product}',
     call: 'Call the showroom',
     related: 'Related products',
+    price: 'Price',
+    priceValue: 'QAR {price}',
+    priceOnRequest: 'On request',
     idealFor: 'Ideal for',
     faq: 'Frequently asked questions',
     orderFaq: {

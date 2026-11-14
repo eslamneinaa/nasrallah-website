@@ -14,11 +14,11 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'uchida-full-height-fire-resistant-safe': {
     ar: {
       idealFor: ['المؤسسات والشركات التي تحفظ المستندات الأصلية والنقود في خزنة واحدة', 'مكاتب الإدارة والحسابات التي تحتاج سعة بارتفاع كامل', 'البيوت التي تريد خزنة رئيسية للعقود والذهب والنقود'],
-      faq: { q: 'هل تناسب هذه الخزنة حفظ المستندات والنقود معًا؟', a: 'نعم، صُمّمت لحماية ما بداخلها من الحريق والسرقة، وارتفاعها الكامل يتسع للملفات والنقود معًا. اسألونا عن تصنيف الحريق الموثق لهذا الطراز.' },
+      faq: { q: 'هل تناسب هذه الخزنة حفظ المستندات والنقود معًا؟', a: 'نعم، صُمّمت لحماية ما بداخلها من الحريق والسرقة، وارتفاعها الكامل يتسع للملفات والنقود معًا. وتصنيف مقاومتها للحريق ساعتان.' },
     },
     en: {
       idealFor: ['Institutions and companies keeping original documents and cash in one safe', 'Management and accounts offices that need full-height capacity', 'Homes that want one main safe for contracts, gold and cash'],
-      faq: { q: 'Can this safe hold documents and cash together?', a: 'Yes. It is designed to protect its contents from fire and theft, and its full height takes files and cash together. Ask us for the documented fire rating of this model.' },
+      faq: { q: 'Can this safe hold documents and cash together?', a: 'Yes. It is designed to protect its contents from fire and theft, and its full height takes files and cash together. Its fire rating is 2 hours.' },
     },
   },
   'uchida-white-safe-with-steel-shelves': {
@@ -148,11 +148,11 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'sakura-compact-digital-hotel-safe': {
     ar: {
       idealFor: ['الغرف ذات خزائن الملابس الصغيرة', 'حفظ الجوازات والهواتف والنقود', 'الشقق الفندقية وسكن الموظفين'],
-      faq: { q: 'ما الفرق بينها وبين خزنة SAKURA الفندقية الرقمية؟', a: 'هي النسخة الأصغر بلون فضي، بالقفل الرقمي نفسه بشاشة والحاصل على شهادة CE.' },
+      faq: { q: 'ما الفرق بينها وبين خزنة SAKURA الفندقية الرقمية؟', a: 'هي النسخة الأصغر، بالقفل الرقمي نفسه بشاشة والحاصل على شهادة CE.' },
     },
     en: {
       idealFor: ['Rooms with small wardrobes', 'Passports, phones and cash', 'Serviced apartments and staff housing'],
-      faq: { q: 'How does it differ from the SAKURA Digital Hotel Safe?', a: 'It is the smaller version, in silver, with the same CE-approved digital lock and display.' },
+      faq: { q: 'How does it differ from the SAKURA Digital Hotel Safe?', a: 'It is the smaller version, with the same CE-approved digital lock and display.' },
     },
   },
   'uchida-black-hotel-safe': {
@@ -168,11 +168,11 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'uchida-ivory-hotel-safe': {
     ar: {
       idealFor: ['الغرف والفنادق ذات الأثاث الفاتح', 'سكن الموظفين والشقق المفروشة', 'من يريد خزنة صغيرة بقفل مفتاح بسيط'],
-      faq: { q: 'هل تختلف عن الخزنة الفندقية السوداء؟', a: 'هي الطراز نفسه بقفل مفتاح ومفصلتين خارجيتين، باللون العاجي.' },
+      faq: { q: 'هل تختلف عن الخزنة الفندقية السوداء؟', a: 'هي الطراز نفسه HS-23K1 بقفل مفتاح ومفصلتين خارجيتين، باللون البيج.' },
     },
     en: {
       idealFor: ['Rooms and hotels with light furniture', 'Staff housing and furnished apartments', 'Anyone who wants a small safe with a simple key lock'],
-      faq: { q: 'Is it different from the black hotel safe?', a: 'It is the same model, with a key lock and two external hinges, in ivory.' },
+      faq: { q: 'Is it different from the black hotel safe?', a: 'It is the same model, HS-23K1, with a key lock and two external hinges, in beige.' },
     },
   },
 
@@ -334,21 +334,21 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'uchida-fire-resistant-records-cabinet': {
     ar: {
       idealFor: ['حفظ السجلات والعقود الأصلية', 'الجهات الحكومية والشركات والعيادات', 'الأرشيف الذي يجب حمايته من الحريق'],
-      faq: { q: 'لماذا أختار خزانة سجلات مقاومة للحريق؟', a: 'لأن المستندات الأصلية يصعب تعويضها إذا احترقت. اسألونا عن تصنيف الحريق الموثق لهذا الطراز.' },
+      faq: { q: 'لماذا أختار خزانة سجلات مقاومة للحريق؟', a: 'لأن المستندات الأصلية يصعب تعويضها إذا احترقت، وتصنيف مقاومة هذه الخزانة للحريق ساعتان.' },
     },
     en: {
       idealFor: ['Original records and contracts', 'Government bodies, companies and clinics', 'Archives that must be protected from fire'],
-      faq: { q: 'Why choose a fire-resistant records cabinet?', a: 'Because originals are hard to replace once burnt. Ask us for the documented fire rating of this model.' },
+      faq: { q: 'Why choose a fire-resistant records cabinet?', a: 'Because originals are hard to replace once burnt, and this cabinet is rated for 2 hours of fire.' },
     },
   },
   'sakura-fire-resistant-filing-cabinet': {
     ar: {
       idealFor: ['المكاتب التي تحفظ مستندات أصلية', 'من يفضّل قفلًا رقميًا للخزانة كلها', 'الأرشيف المالي والقانوني'],
-      faq: { q: 'ما الفرق بينها وبين خزانة SAKURA ذات الأربعة أدراج؟', a: 'هذه مقاومة للحريق وتُقفل بلوحة أرقام رقمية، أما الأخرى فلكل درج فيها قفل مفتاح.' },
+      faq: { q: 'ما الفرق بينها وبين خزانة SAKURA ذات الأربعة أدراج؟', a: 'كلتاهما مقاومة للحريق لمدة ساعة واحدة: هذه تُقفل بلوحة أرقام رقمية، والأخرى لكل درج فيها قفل مفتاح.' },
     },
     en: {
       idealFor: ['Offices keeping original documents', 'Anyone who prefers one digital lock for the whole cabinet', 'Financial and legal archives'],
-      faq: { q: 'How does it differ from the SAKURA Four-Drawer Filing Cabinet?', a: 'This one is fire-resistant and locks with a digital keypad; the other has a key lock on each drawer.' },
+      faq: { q: 'How does it differ from the SAKURA Four-Drawer Filing Cabinet?', a: 'Both are rated for 1 hour of fire: this one locks with a digital keypad, the other has a key lock on each drawer.' },
     },
   },
   'sakura-four-drawer-filing-cabinet': {
@@ -364,31 +364,31 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'godrej-two-drawer-filing-cabinet': {
     ar: {
       idealFor: ['المكاتب الصغيرة ومكاتب الاستقبال', 'وضعها بجانب المكتب لملفات العمل اليومية', 'العيادات والمدارس'],
-      faq: { q: 'كيف تُقفل؟', a: 'بقفل علوي، وأدراجها بلون كريمي في هيكل رمادي فاتح.' },
+      faq: { q: 'كيف تُقفل؟', a: 'بقفل علوي، وتتسع لملفات معلّقة.' },
     },
     en: {
       idealFor: ['Small offices and reception desks', 'Beside a desk for everyday files', 'Clinics and schools'],
-      faq: { q: 'How does it lock?', a: 'With a top lock; the drawers are cream in a light-grey frame.' },
+      faq: { q: 'How does it lock?', a: 'With a top lock, and it takes hanging files.' },
     },
   },
   'godrej-three-drawer-filing-cabinet': {
     ar: {
       idealFor: ['المكاتب المتوسطة والأقسام الإدارية', 'المدارس والعيادات', 'من يحتاج سعة أكبر من خزانة الدرجين'],
-      faq: { q: 'ما الفرق بينها وبين خزانة الدرجين؟', a: 'درج إضافي لسعة أكبر، بالقفل العلوي والألوان نفسها: أدراج كريمية في هيكل رمادي فاتح.' },
+      faq: { q: 'ما الفرق بينها وبين خزانة الدرجين؟', a: 'درج إضافي لسعة أكبر، بالقفل العلوي نفسه وللملفات المعلّقة أيضًا.' },
     },
     en: {
       idealFor: ['Mid-sized offices and administrative departments', 'Schools and clinics', 'Anyone who needs more room than the two-drawer cabinet'],
-      faq: { q: 'How does it differ from the two-drawer cabinet?', a: 'One more drawer for more room, with the same top lock and colours: cream drawers in a light-grey frame.' },
+      faq: { q: 'How does it differ from the two-drawer cabinet?', a: 'One more drawer for more room, with the same top lock, also for hanging files.' },
     },
   },
   'godrej-five-drawer-filing-cabinet': {
     ar: {
       idealFor: ['الأرشيف الكبير في الشركات والجهات الحكومية', 'الأقسام التي تحفظ ملفات كثيرة في مساحة أرضية صغيرة', 'المكتبات والمستودعات'],
-      faq: { q: 'ما الألوان المتوفرة؟', a: 'رمادي فاتح أو أسود.' },
+      faq: { q: 'ما الألوان المتوفرة؟', a: 'رمادي أو أسود.' },
     },
     en: {
       idealFor: ['Large archives in companies and government bodies', 'Departments storing many files on a small footprint', 'Libraries and stores'],
-      faq: { q: 'Which colours are available?', a: 'Light grey or black.' },
+      faq: { q: 'Which colours are available?', a: 'Grey or black.' },
     },
   },
 
@@ -406,11 +406,11 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'uchida-tall-key-cabinet': {
     ar: {
       idealFor: ['الفنادق والمجمعات السكنية الكبيرة', 'معارض السيارات وشركات التأجير', 'الشركات التي تدير مفاتيح كثيرة'],
-      faq: { q: 'ما الفرق بينها وبين خزانة المفاتيح الصغيرة؟', a: 'هي النسخة الطويلة النحيفة بصفوف أكثر من الخطافات المرقّمة، وتُعلّق على الجدار بقفل مفتاح.' },
+      faq: { q: 'ما الفرق بينها وبين خزانة المفاتيح الصغيرة؟', a: 'هي النسخة الأطول، تتسع لـ 100 مفتاح بدل 60، بخطافات مرقّمة وتُعلّق على الجدار بقفل مفتاح.' },
     },
     en: {
       idealFor: ['Hotels and large residential compounds', 'Car showrooms and rental companies', 'Companies managing many keys'],
-      faq: { q: 'How does it differ from the compact key cabinet?', a: 'It is the tall, slim version with more rows of numbered hooks, wall-mounted with a key lock.' },
+      faq: { q: 'How does it differ from the compact key cabinet?', a: 'It is the taller version, holding 100 keys instead of 60, with numbered hooks, wall-mounted with a key lock.' },
     },
   },
 
@@ -450,11 +450,11 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'godrej-two-door-steel-cupboard': {
     ar: {
       idealFor: ['المكاتب والمدارس والمستشفيات', 'حفظ الملفات والأدوات والمستلزمات', 'المستودعات وغرف الأرشيف'],
-      faq: { q: 'ما الألوان المتوفرة؟', a: 'أبيض أو بيج، ببابين بارتفاع كامل وقفل غائر.' },
+      faq: { q: 'ما الألوان المتوفرة؟', a: 'بيج أو رمادي أو أبيض، ببابين بارتفاع كامل وقفل غائر و4 أرفف قابلة للتعديل.' },
     },
     en: {
       idealFor: ['Offices, schools and hospitals', 'Files, tools and supplies', 'Stores and archive rooms'],
-      faq: { q: 'Which colours are available?', a: 'White or beige, with two full-height doors and a recessed lock.' },
+      faq: { q: 'Which colours are available?', a: 'Beige, grey or white, with two full-height doors, a recessed lock and 4 adjustable shelves.' },
     },
   },
   'godrej-two-door-steel-cupboard-with-handle': {
@@ -480,11 +480,11 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'godrej-single-door-steel-cupboard': {
     ar: {
       idealFor: ['الممرات والزوايا الضيقة', 'المكاتب الصغيرة والعيادات', 'حفظ أدوات النظافة والمستلزمات'],
-      faq: { q: 'لماذا أختار دولابًا بباب واحد؟', a: 'لأنه يحتاج مساحة أقل لفتح الباب ويناسب الأماكن الضيقة، بالرمادي أو البيج.' },
+      faq: { q: 'لماذا أختار دولابًا بباب واحد؟', a: 'لأنه يحتاج مساحة أقل لفتح الباب ويناسب الأماكن الضيقة، بالبيج أو الرمادي أو الزيتي.' },
     },
     en: {
       idealFor: ['Corridors and narrow corners', 'Small offices and clinics', 'Cleaning tools and supplies'],
-      faq: { q: 'Why choose a single-door cupboard?', a: 'It needs less room for the door to open and suits tight spaces; in grey or beige.' },
+      faq: { q: 'Why choose a single-door cupboard?', a: 'It needs less room for the door to open and suits tight spaces; in beige, grey or olive.' },
     },
   },
   'godrej-glass-door-steel-cabinet': {
@@ -542,11 +542,11 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   'godrej-six-door-steel-locker': {
     ar: {
       idealFor: ['المدارس والأندية', 'حفظ الهواتف والمحافظ والأغراض الصغيرة', 'غرف الموظفين ذات الأعداد الكبيرة'],
-      faq: { q: 'ما الألوان المتوفرة؟', a: 'بيج أو أبيض عاجي.' },
+      faq: { q: 'ما الألوان المتوفرة؟', a: 'بيج أو زيتي.' },
     },
     en: {
       idealFor: ['Schools and clubs', 'Phones, wallets and small items', 'Staff rooms for large teams'],
-      faq: { q: 'Which colours are available?', a: 'Beige or off-white.' },
+      faq: { q: 'Which colours are available?', a: 'Beige or olive.' },
     },
   },
   'godrej-single-steel-locker': {

@@ -62,7 +62,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       description:
         'خزائن فندقية في قطر من SAKURA وUCHIDA لغرف الفنادق والشقق الفندقية وسكن الموظفين: بقفل رقمي بشاشة أو بمفتاح، مع توصيل مجاني وعروض أسعار للكميات.',
       intro: [
-        'خزنة الغرفة من أول ما يبحث عنه النزيل: مكان صغير آمن لجواز السفر والنقود والهاتف والمجوهرات. نوفّر خزائن فندقية صغيرة توضع داخل خزانة الملابس أو أسفل المكتب، بقفل رقمي بشاشة من SAKURA حاصل على شهادة CE، أو بقفل مفتاح بسيط من UCHIDA بلون أسود أو عاجي.',
+        'خزنة الغرفة من أول ما يبحث عنه النزيل: مكان صغير آمن لجواز السفر والنقود والهاتف والمجوهرات. نوفّر خزائن فندقية صغيرة توضع داخل خزانة الملابس أو أسفل المكتب، بقفل رقمي بشاشة من SAKURA حاصل على شهادة CE، أو بقفل مفتاح بسيط من UCHIDA باللون الأسود أو البيج.',
         'وتناسب أيضًا الشقق الفندقية والمجمعات السكنية وسكن الموظفين، والبيوت لمن يريد خزنة صغيرة. نجهّز عروض أسعار للكميات لتجهيز فندق أو مبنى كامل، والتوصيل مجاني داخل قطر.',
       ],
     },
@@ -72,7 +72,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       description:
         'Hotel safes in Qatar from SAKURA and UCHIDA for hotel rooms, serviced apartments and staff housing, with a digital or key lock. Free delivery.',
       intro: [
-        'An in-room safe is one of the first things guests look for: a small, secure place for passports, cash, phones and jewellery. We carry compact hotel safes that sit inside a wardrobe or under a desk, with a CE-approved SAKURA digital lock and display, or a simple UCHIDA key lock in black or ivory.',
+        'An in-room safe is one of the first things guests look for: a small, secure place for passports, cash, phones and jewellery. We carry compact hotel safes that sit inside a wardrobe or under a desk, with a CE-approved SAKURA digital lock and display, or a simple UCHIDA key lock in black or beige.',
         'They also suit serviced apartments, residential compounds, staff housing and homes that need a small safe. We prepare quotations for quantities to equip a whole hotel or building, and delivery is free across Qatar.',
       ],
     },
@@ -172,20 +172,20 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       heading: 'صناديق النقود في قطر',
       metaTitle: 'صناديق نقود في قطر — صندوق كاش للمحلات والكاشير بقفل رقمي',
       description:
-        'صناديق نقود BSM في قطر للمحلات والكاشير: بأقفال رقمية دوّارة أو بلوحة أرقام، ودرج نقود أمامي، ومنها صندوق محمول بمقبض لنقل النقود.',
+        'صناديق نقود UCHIDA في قطر للمحلات والكاشير: بأقفال رقمية دوّارة أو بلوحة أرقام، ودرج نقود أمامي، ومنها صندوق محمول بمقبض لنقل النقود.',
       intro: [
         'لحفظ نقود اليوم عند الكاونتر أو نقلها بأمان. صناديق النقود أصغر من الخزنة وأسرع في الاستخدام، وتُقفل بأقفال رقمية دوّارة أو بلوحة أرقام مع مفتاح احتياطي.',
-        'نوفّر صناديق BSM بدرج أمامي للكاشير، وصندوقًا رقميًا يُفتح درجه بزر، وصندوقًا محمولًا بمقبض لنقل النقود بين المحل والمكتب والبنك.',
+        'نوفّر صناديق UCHIDA بدرج أمامي للكاشير، وصندوقًا رقميًا يُفتح درجه بزر، وصندوقًا محمولًا بمقبض لنقل النقود بين المحل والمكتب والبنك.',
       ],
     },
     en: {
       heading: 'Cash Boxes in Qatar',
       metaTitle: 'Cash Boxes in Qatar — Cashier Boxes, Dial & Digital Locks',
       description:
-        'BSM cash boxes in Qatar for shops and cashiers: combination dials or a digital keypad, a front cash drawer, and a portable box with a handle.',
+        'UCHIDA cash boxes in Qatar for shops and cashiers: combination dials or a digital keypad, a front cash drawer, and a portable box with a handle.',
       intro: [
         'For keeping the day’s cash at the counter or moving it safely. Cash boxes are smaller and quicker to use than a safe, locked by combination dials or a keypad with a backup key.',
-        'We carry BSM cash boxes with a front cashier drawer, a digital box whose drawer opens at the push of a button, and a portable box with a handle for carrying cash between the shop, the office and the bank.',
+        'We carry UCHIDA cash boxes with a front cashier drawer, a digital box whose drawer opens at the push of a button, and a portable box with a handle for carrying cash between the shop, the office and the bank.',
       ],
     },
   },
@@ -216,7 +216,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       heading: 'اللوكرات الحديدية في قطر',
       metaTitle: 'لوكرات حديد في قطر — لوكرات موظفين ومدارس وأندية GODREJ',
       description:
-        'لوكرات حديدية من GODREJ في قطر: من باب واحد إلى ستة أبواب في العمود، للموظفين والمدارس والأندية والمصانع، بألوان الأسود والبيج والأبيض العاجي، مع توصيل مجاني.',
+        'لوكرات حديدية من GODREJ في قطر: من باب واحد إلى ستة أبواب في العمود، للموظفين والمدارس والأندية والمصانع، بلونَي البيج والزيتي، مع توصيل مجاني.',
       intro: [
         'اللوكر يمنح كل موظف أو طالب مكانًا خاصًا بقفل لحفظ أغراضه. نوفّر لوكرات GODREJ الحديدية من باب واحد لتعليق الملابس وزيّ العمل إلى ستة أبواب للهواتف والمحافظ.',
         'أخبرونا بعدد الأشخاص وما يحتاج كل منهم إلى حفظه، ونرشّح لكم التوزيع المناسب مع عرض سعر شامل.',
@@ -226,7 +226,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
       heading: 'Steel Lockers in Qatar',
       metaTitle: 'Steel Lockers in Qatar — Staff & School Lockers by GODREJ',
       description:
-        'GODREJ steel lockers in Qatar: one to six doors per column, for staff, schools, clubs and factories, in black, beige and off-white, with free delivery.',
+        'GODREJ steel lockers in Qatar: one to six doors per column, for staff, schools, clubs and factories, in beige and olive, with free delivery.',
       intro: [
         'A locker gives every employee or student a private, lockable place for their belongings. We carry GODREJ steel lockers from a single door for hanging uniforms to six doors for phones and wallets.',
         'Tell us how many people need lockers and what each needs to store, and we will recommend the right layout with a full quotation.',

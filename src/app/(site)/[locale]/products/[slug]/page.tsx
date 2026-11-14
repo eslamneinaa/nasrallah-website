@@ -220,6 +220,12 @@ export default async function ProductPage({ params }: Props) {
               <Reveal delay={0.1} className="border border-gold-500/40 bg-pearl-50 p-7 shadow-card sm:p-9">
                 {category && <p className="eyebrow">{category}</p>}
                 <p className="display mt-3 text-3xl leading-snug text-maroon-900">{name}</p>
+                <p className="mt-5 flex flex-wrap items-baseline gap-x-3 border-t border-pearl-300 pt-5">
+                  <span className="text-sm text-ink-500">{t.price}</span>
+                  <span className="display text-2xl text-maroon-900">
+                    {product.price ? fill(t.priceValue, { price: new Intl.NumberFormat('en-US').format(product.price) }) : t.priceOnRequest}
+                  </span>
+                </p>
 
                 <div className="mt-8 flex flex-col gap-3">
                   <Link href={quoteHref} className="btn-maroon w-full py-4">

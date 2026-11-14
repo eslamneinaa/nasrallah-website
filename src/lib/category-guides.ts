@@ -346,7 +346,7 @@ export const categoryGuides: Record<string, Record<Locale, CategoryGuide>> = {
         },
         {
           q: 'هل يوجد صندوق لنقل النقود؟',
-          a: 'نعم، صندوق BSM المحمول بمقبض وقفلين دوّارين لنقل النقود بين المحل والمكتب والبنك.',
+          a: 'نعم، صندوق UCHIDA المحمول بمقبض وقفلين دوّارين لنقل النقود بين المحل والمكتب والبنك.',
         },
       ],
     },
@@ -367,7 +367,7 @@ export const categoryGuides: Record<string, Record<Locale, CategoryGuide>> = {
         },
         {
           q: 'Is there a box for carrying cash?',
-          a: 'Yes, the portable BSM cash box with a handle and two combination dials, for carrying cash between the shop, the office and the bank.',
+          a: 'Yes, the portable UCHIDA cash box with a handle and two combination dials, for carrying cash between the shop, the office and the bank.',
         },
       ],
     },
@@ -423,7 +423,7 @@ export const categoryGuides: Record<string, Record<Locale, CategoryGuide>> = {
       title: 'كيف تختارون اللوكر الحديد المناسب؟',
       body: [
         'اللوكرات الحديدية لغرف الموظفين والمدارس والأندية الرياضية والمصانع والمستشفيات في قطر، لتمنح كل شخص مكانًا خاصًا بقفل لأغراضه.',
-        'يحدّد الاختيار ما سيُحفظ في كل خانة: الباب الواحد أو اللوكر بطابقين يناسب تعليق الملابس وزيّ العمل، واللوكر بأربعة أو ستة أبواب يناسب الحقائب الصغيرة والهواتف والمحافظ. احسبوا عدد الأشخاص، ثم وزّعوا الأعمدة حسب المساحة المتاحة، واختاروا اللون الذي يناسب المكان من الأسود والبيج والأبيض العاجي.',
+        'يحدّد الاختيار ما سيُحفظ في كل خانة: الباب الواحد أو اللوكر بطابقين يناسب تعليق الملابس وزيّ العمل، واللوكر بأربعة أو ستة أبواب يناسب الحقائب الصغيرة والهواتف والمحافظ. احسبوا عدد الأشخاص، ثم وزّعوا الأعمدة حسب المساحة المتاحة، واختاروا اللون الذي يناسب المكان من البيج والزيتي.',
       ],
       faq: [
         {
@@ -444,7 +444,7 @@ export const categoryGuides: Record<string, Record<Locale, CategoryGuide>> = {
       title: 'How to choose the right steel locker',
       body: [
         'Steel lockers serve staff rooms, schools, sports clubs, factories and hospitals in Qatar, giving each person a private, lockable place for their things.',
-        'The choice depends on what each compartment will hold: a single door or two-tier locker suits hanging clothes and uniforms, while four or six doors suit small bags, phones and wallets. Count the people, plan the columns for the space you have, and pick the colour that suits the room: black, beige or off-white.',
+        'The choice depends on what each compartment will hold: a single door or two-tier locker suits hanging clothes and uniforms, while four or six doors suit small bags, phones and wallets. Count the people, plan the columns for the space you have, and pick the colour that suits the room: beige or olive.',
       ],
       faq: [
         {

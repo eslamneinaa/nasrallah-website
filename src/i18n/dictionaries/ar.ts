@@ -351,6 +351,9 @@ const ar: Dictionary = {
     whatsappText: 'مرحبًا، أرغب في معرفة المزيد عن: {product}',
     call: 'اتصل بالمعرض',
     related: 'منتجات ذات صلة',
+    price: 'السعر',
+    priceValue: '{price} ريال قطري',
+    priceOnRequest: 'حسب الطلب',
     idealFor: 'مناسبة لـ',
     faq: 'أسئلة شائعة',
     orderFaq: {

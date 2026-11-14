@@ -35,3 +35,21 @@
 /en/products/uchida-100-key-cabinet/*   /en/products/uchida-key-cabinet/   301
 /en/products/bsm-auto-cash-box-c-305/*   /en/products/bsm-auto-cash-box/   301
 /en/products/bsm-cash-box-c-302/*   /en/products/bsm-portable-cash-box/   301
+
+# Products merged into one page per model (14 Nov 2026)
+/ar/products/uchida-four-drawer-filing-cabinet/*   /ar/products/sakura-four-drawer-filing-cabinet/   301
+/en/products/uchida-four-drawer-filing-cabinet/*   /en/products/sakura-four-drawer-filing-cabinet/   301
+/ar/products/uchida-black-hotel-safe/*   /ar/products/uchida-key-hotel-safe/   301
+/en/products/uchida-black-hotel-safe/*   /en/products/uchida-key-hotel-safe/   301
+/ar/products/uchida-ivory-hotel-safe/*   /ar/products/uchida-key-hotel-safe/   301
+/en/products/uchida-ivory-hotel-safe/*   /en/products/uchida-key-hotel-safe/   301
+/ar/products/uchida-fluted-safe/*   /ar/products/uchida-designer-fire-resistant-safe/   301
+/en/products/uchida-fluted-safe/*   /en/products/uchida-designer-fire-resistant-safe/   301
+/ar/products/uchida-walnut-finish-safe/*   /ar/products/uchida-designer-fire-resistant-safe/   301
+/en/products/uchida-walnut-finish-safe/*   /en/products/uchida-designer-fire-resistant-safe/   301
+/ar/products/uchida-black-and-gold-marble-safe/*   /ar/products/uchida-designer-fire-resistant-safe/   301
+/en/products/uchida-black-and-gold-marble-safe/*   /en/products/uchida-designer-fire-resistant-safe/   301
+/ar/products/uchida-white-marble-safe/*   /ar/products/uchida-designer-fire-resistant-safe/   301
+/en/products/uchida-white-marble-safe/*   /en/products/uchida-designer-fire-resistant-safe/   301
+/ar/products/uchida-cream-and-navy-fluted-safe/*   /ar/products/uchida-designer-fire-resistant-safe/   301
+/en/products/uchida-cream-and-navy-fluted-safe/*   /en/products/uchida-designer-fire-resistant-safe/   301

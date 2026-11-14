@@ -239,7 +239,7 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
-    products: ['uchida-full-height-fire-resistant-safe', 'uchida-fluted-safe', 'uchida-walnut-finish-safe'],
+    products: ['uchida-full-height-fire-resistant-safe', 'uchida-designer-fire-resistant-safe'],
     links: [{ category: 'fire-resistant-safes' }, { category: 'filing-cabinets' }],
   },
   {
@@ -631,7 +631,7 @@ export const articleSources: ArticleSource[] = [
       ],
     },
     products: [
-      'uchida-four-drawer-filing-cabinet',
+      'sakura-four-drawer-filing-cabinet',
       'godrej-two-drawer-filing-cabinet',
       'godrej-three-drawer-filing-cabinet',
       'godrej-five-drawer-filing-cabinet',
@@ -1167,8 +1167,7 @@ export const articleSources: ArticleSource[] = [
     products: [
       'sakura-digital-hotel-safe',
       'sakura-compact-digital-hotel-safe',
-      'uchida-black-hotel-safe',
-      'uchida-ivory-hotel-safe',
+      'uchida-key-hotel-safe',
     ],
     links: [
       {
@@ -2434,8 +2433,7 @@ export const articleSources: ArticleSource[] = [
       ],
     },
     products: [
-      'uchida-walnut-finish-safe',
-      'uchida-fluted-safe',
+      'uchida-designer-fire-resistant-safe',
       'uchida-red-safe-with-leather-drawers',
       'sakura-floral-safe',
     ],

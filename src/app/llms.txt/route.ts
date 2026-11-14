@@ -2,7 +2,21 @@ import { siteConfig } from '@/config/site'
 import { fill, getDictionary, href, pick } from '@/i18n'
 import { getArticles } from '@/lib/articles'
 import { categoryContent, categoryHref, collections } from '@/lib/category-content'
+import { productDetails } from '@/lib/product-details'
 import { getCatalog } from '@/lib/sanity/api'
+
+/** Model, fire rating and price from the company sheet, for AI assistants comparing safes. */
+const productFacts = (slug: string) => {
+  const d = productDetails[slug] ?? {}
+  return [
+    d.model && `model ${d.model}`,
+    d.fireHours && `${d.fireHours}-hour fire rating`,
+    d.price ? `QAR ${d.price.toLocaleString('en-US')}` : 'price on request',
+    'free delivery in Qatar',
+  ]
+    .filter(Boolean)
+    .join(', ')
+}
 
 export const dynamic = 'force-static'
 
@@ -54,7 +68,7 @@ ${categories.map((c) => `- [${pick(c.title, 'en')}](${siteConfig.url}${categoryH
 
 ## Products
 
-${products.map((p) => `- [${pick(p.name, 'en')}](${url(`products/${p.slug}`)}): ${pick(p.shortDesc, 'en') ?? ''}`).join('\n')}
+${products.map((p) => `- [${pick(p.name, 'en')}](${url(`products/${p.slug}`)}) (${pick(p.name, 'ar')}): ${productFacts(p.slug)}. ${pick(p.shortDesc, 'en') ?? ''}`).join('\n')}
 
 ## Articles
 

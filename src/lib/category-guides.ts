@@ -516,8 +516,8 @@ export const categoryGuides: Record<string, Record<Locale, CategoryGuide>> = {
 export const categoryHighlights: Record<string, string[]> = {
   'fire-resistant-safes': ['uchida-full-height-fire-resistant-safe', 'sakura-multi-lock-safe', 'uchida-fingerprint-safe', 'kurogane-wing-safe'],
   'deposit-safes': ['uchida-deposit-safe', 'uchida-night-deposit-safe'],
-  'hotel-safes': ['sakura-digital-hotel-safe', 'sakura-compact-digital-hotel-safe', 'uchida-black-hotel-safe'],
-  'luxury-safes': ['uchida-walnut-finish-safe', 'uchida-black-and-gold-marble-safe', 'watch-winder-safe', 'sakura-floral-safe'],
+  'hotel-safes': ['sakura-digital-hotel-safe', 'sakura-compact-digital-hotel-safe', 'uchida-key-hotel-safe'],
+  'luxury-safes': ['uchida-designer-fire-resistant-safe', 'watch-winder-safe', 'sakura-floral-safe'],
   'jewellery-watch-interiors': ['uchida-fire-resistant-jewellery-and-watch-safe', 'jewellery-display-drawers', 'watch-drawers', 'travel-jewellery-cases'],
   'filing-cabinets': ['uchida-fire-resistant-records-cabinet', 'sakura-fire-resistant-filing-cabinet', 'godrej-five-drawer-filing-cabinet'],
   'key-cabinets': ['uchida-key-cabinet', 'uchida-tall-key-cabinet'],

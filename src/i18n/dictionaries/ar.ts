@@ -277,6 +277,9 @@ const ar: Dictionary = {
     all: 'كل المنتجات',
     faq: 'أسئلة شائعة',
     highlights: 'من أبرز منتجات هذا القسم:',
+    compareTitle: 'مقارنة سريعة: {label}',
+    priceRange: 'الأسعار من {min} إلى {max} ريال قطري، والتوصيل مجاني داخل قطر.',
+    compareCols: ['المنتج', 'الموديل', 'مقاومة الحريق', 'الأبعاد الخارجية (ع × ط × ع)', 'الوزن', 'السعر'],
   },
   ctaBand: {
     title: 'احفظوا ما تعتزّون به',
@@ -354,6 +357,8 @@ const ar: Dictionary = {
     price: 'السعر',
     priceValue: '{price} ريال قطري',
     priceOnRequest: 'حسب الطلب',
+    atAGlance: 'المواصفات باختصار',
+    similar: 'عمليات بحث مشابهة',
     idealFor: 'مناسبة لـ',
     faq: 'أسئلة شائعة',
     orderFaq: {

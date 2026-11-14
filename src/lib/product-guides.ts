@@ -155,26 +155,18 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
       faq: { q: 'How does it differ from the SAKURA Digital Hotel Safe?', a: 'It is the smaller version, with the same CE-approved digital lock and display.' },
     },
   },
-  'uchida-black-hotel-safe': {
+  'uchida-key-hotel-safe': {
     ar: {
-      idealFor: ['سكن الموظفين والعمال', 'الغرف التي تفضّل قفلًا بسيطًا بالمفتاح', 'المكاتب التي تحتاج خزنة صغيرة منخفضة'],
-      faq: { q: 'لماذا أختار خزنة فندقية بمفتاح؟', a: 'القفل بالمفتاح بسيط ولا يحتاج إلى بطارية أو برمجة، ويناسب الأماكن التي تُسلَّم فيها المفاتيح للنزلاء أو الموظفين.' },
+      idealFor: ['غرف الفنادق والشقق المفروشة', 'سكن الموظفين والعمال', 'الغرف التي تفضّل قفلًا بسيطًا بالمفتاح'],
+      faq: { q: 'لماذا أختار خزنة فندقية بمفتاح؟', a: 'القفل بالمفتاح بسيط ولا يحتاج إلى بطارية أو برمجة، ويناسب الأماكن التي تُسلَّم فيها المفاتيح للنزلاء أو الموظفين. وتتوفر باللونين الأسود والبيج.' },
     },
     en: {
-      idealFor: ['Staff and worker housing', 'Rooms that prefer a simple key lock', 'Offices that need a small, low safe'],
-      faq: { q: 'Why choose a key-lock hotel safe?', a: 'A key lock is simple and needs no battery or programming, which suits places where keys are handed to guests or staff.' },
+      idealFor: ['Hotel rooms and furnished apartments', 'Staff and worker housing', 'Rooms that prefer a simple key lock'],
+      faq: { q: 'Why choose a key-lock hotel safe?', a: 'A key lock is simple and needs no battery or programming, which suits places where keys are handed to guests or staff. It comes in black and beige.' },
     },
   },
-  'uchida-ivory-hotel-safe': {
-    ar: {
-      idealFor: ['الغرف والفنادق ذات الأثاث الفاتح', 'سكن الموظفين والشقق المفروشة', 'من يريد خزنة صغيرة بقفل مفتاح بسيط'],
-      faq: { q: 'هل تختلف عن الخزنة الفندقية السوداء؟', a: 'هي الطراز نفسه HS-23K1 بقفل مفتاح ومفصلتين خارجيتين، باللون البيج.' },
-    },
-    en: {
-      idealFor: ['Rooms and hotels with light furniture', 'Staff housing and furnished apartments', 'Anyone who wants a small safe with a simple key lock'],
-      faq: { q: 'Is it different from the black hotel safe?', a: 'It is the same model, HS-23K1, with a key lock and two external hinges, in beige.' },
-    },
-  },
+
+
 
   // ── Luxury safes ───────────────────────────────────────────────────────
   'uchida-red-safe-with-leather-drawers': {
@@ -187,56 +179,21 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
       faq: { q: 'What is inside the safe?', a: 'Four crocodile-texture leather drawers for jewellery, watches and small valuables.' },
     },
   },
-  'uchida-fluted-safe': {
+  'uchida-designer-fire-resistant-safe': {
     ar: {
-      idealFor: ['المجالس ومكاتب الإدارة العليا', 'غرف الملابس الحديثة', 'من يريد خزنة عصرية لا تبدو صناعية'],
-      faq: { q: 'ما لون الخزنة؟', a: 'واجهة مضلّعة بلون فحمي مع لوحة نصر الله النحاسية، ولها نسخة مضلّعة بلونين كريمي وكحلي.' },
+      idealFor: ['المجالس ومكاتب الإدارة العليا', 'غرف الملابس والبيوت ذات الديكور الفاخر', 'من يريد اختيار تصميم الباب الذي يناسب ديكوره'],
+      faq: { q: 'ما تصاميم الباب المتوفرة؟', a: 'خمسة تصاميم: نقشة خشب الجوز، والرخام الأسود والذهبي، والرخام الأبيض، والواجهة المضلّعة الفحمية، والمضلّعة بلونين كريمي وكحلي.' },
     },
     en: {
-      idealFor: ['Majlis and executive offices', 'Modern dressing rooms', 'Anyone who wants a contemporary safe that does not look industrial'],
-      faq: { q: 'What colour is it?', a: 'A fluted charcoal front with the Nasrallah brass plate. There is also a two-tone cream and navy fluted version.' },
+      idealFor: ['Majlis and executive offices', 'Dressing rooms and homes with luxurious décor', 'Anyone who wants to pick the door design that suits their décor'],
+      faq: { q: 'Which door designs are available?', a: 'Five: walnut grain, black and gold marble, white marble, charcoal fluted, and cream and navy fluted.' },
     },
   },
-  'uchida-walnut-finish-safe': {
-    ar: {
-      idealFor: ['المكاتب والمجالس ذات الأثاث الخشبي', 'من يريد خزنة تشبه قطعة أثاث', 'البيوت ذات الطابع الكلاسيكي'],
-      faq: { q: 'هل الباب من الخشب؟', a: 'الباب بنقشة خشب الجوز في إطار من الفولاذ الأسود، فيجمع مظهر الخشب ومتانة الحديد.' },
-    },
-    en: {
-      idealFor: ['Offices and majlis with wooden furniture', 'Anyone who wants a safe that looks like furniture', 'Homes with a classic style'],
-      faq: { q: 'Is the door wooden?', a: 'The door has a walnut wood grain in a black steel frame, combining the look of wood with the strength of steel.' },
-    },
-  },
-  'uchida-black-and-gold-marble-safe': {
-    ar: {
-      idealFor: ['المجالس وغرف الاستقبال ذات الديكور الفاخر', 'من يريد خزنة تلفت النظر', 'من يفضّل الفتح السريع بالبصمة'],
-      faq: { q: 'ما شكل الباب؟', a: 'بنقشة الرخام الأسود بعروق ذهبية وبيضاء، في إطار من الفولاذ الفحمي. اسألونا عن تفاصيل خامة التشطيب.' },
-    },
-    en: {
-      idealFor: ['Majlis and reception rooms with luxurious décor', 'Anyone who wants a safe that stands out', 'Those who prefer quick fingerprint access'],
-      faq: { q: 'What does the door look like?', a: 'Black marble effect with gold and white veins, in a charcoal steel frame. Ask us for details of the finish material.' },
-    },
-  },
-  'uchida-white-marble-safe': {
-    ar: {
-      idealFor: ['غرف الملابس والمجالس الفاتحة', 'الديكور الهادئ بالأبيض والرمادي', 'من يريد الفتح بالبصمة أو الرقم السري'],
-      faq: { q: 'ما الفرق بينها وبين خزنة الرخام الأسود والذهبي؟', a: 'الخزنة نفسها بالقفل ذاته، والفرق في الباب: رخام أبيض بعروق رمادية في إطار أسود.' },
-    },
-    en: {
-      idealFor: ['Light dressing rooms and majlis', 'Calm décor in white and grey', 'Anyone who wants fingerprint or code access'],
-      faq: { q: 'How does it differ from the black and gold marble safe?', a: 'Same safe and lock; the difference is the door: white marble effect with grey veins in a black frame.' },
-    },
-  },
-  'uchida-cream-and-navy-fluted-safe': {
-    ar: {
-      idealFor: ['البيوت ذات الديكور العصري الملوّن', 'غرف الملابس والمجالس الحديثة', 'من يحب الواجهة المضلّعة بلونين'],
-      faq: { q: 'ما الفرق بينها وبين خزنة UCHIDA المضلّعة؟', a: 'التصميم المضلّع نفسه بلونين: كريمي في الأعلى وكحلي في الأسفل، مع قارئ بصمة ولوحة أرقام باللمس.' },
-    },
-    en: {
-      idealFor: ['Homes with modern, colourful décor', 'Modern dressing rooms and majlis', 'Anyone who likes a two-tone fluted front'],
-      faq: { q: 'How does it differ from the UCHIDA Fluted Safe?', a: 'The same fluted design in two tones, cream above and navy below, with a fingerprint reader and touch keypad.' },
-    },
-  },
+
+
+
+
+
   'sakura-floral-safe': {
     ar: {
       idealFor: ['من يريد خزنة مزخرفة تكون جزءًا من الديكور', 'غرف الملابس والمجالس', 'حفظ المجوهرات والنقود في البيت'],
@@ -321,16 +278,7 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
   },
 
   // ── Filing cabinets ────────────────────────────────────────────────────
-  'uchida-four-drawer-filing-cabinet': {
-    ar: {
-      idealFor: ['الوزارات والبنوك والشركات', 'أرشيف الملفات الورقية اليومية', 'الأقسام التي تريد قفلًا مستقلًا لكل درج'],
-      faq: { q: 'هل لكل درج مفتاح؟', a: 'نعم، لكل درج من الأدراج الأربعة قفل مستقل بمفتاح وحامل لبطاقة التعريف.' },
-    },
-    en: {
-      idealFor: ['Ministries, banks and companies', 'Everyday paper files', 'Departments that want a separate lock on every drawer'],
-      faq: { q: 'Does every drawer have a key?', a: 'Yes. Each of the four drawers has its own key lock and a label holder.' },
-    },
-  },
+
   'uchida-fire-resistant-records-cabinet': {
     ar: {
       idealFor: ['حفظ السجلات والعقود الأصلية', 'الجهات الحكومية والشركات والعيادات', 'الأرشيف الذي يجب حمايته من الحريق'],

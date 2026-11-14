@@ -37,6 +37,13 @@ export function ProductCard({ product, locale, cta, priority }: Props) {
         {category && <p className="eyebrow text-[0.65rem] text-gold-600 rtl:text-[0.85rem]">{category}</p>}
         <h3 className="display mt-2 text-[1.35rem] leading-snug text-maroon-900">{name}</h3>
         {product.shortDesc && <p className="mt-3 line-clamp-2 text-[0.95rem] leading-relaxed text-ink-500">{pick(product.shortDesc, locale)}</p>}
+        {product.price ? (
+          <p className="mt-4 font-medium text-maroon-900">
+            {locale === 'ar'
+              ? `${new Intl.NumberFormat('en-US').format(product.price)} ريال قطري`
+              : `QAR ${new Intl.NumberFormat('en-US').format(product.price)}`}
+          </p>
+        ) : null}
         <span className="mt-auto flex items-center justify-between border-t border-pearl-300/80 pt-4 text-sm text-maroon-800 ltr:text-[0.72rem] ltr:tracking-[0.2em] ltr:uppercase">
           {cta}
           <ArrowUpRight

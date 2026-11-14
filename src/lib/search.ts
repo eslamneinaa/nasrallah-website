@@ -55,14 +55,24 @@ const groups: Group[] = [
   { words: ['فندق', 'فنادق', 'hotel'], stems: ['فند', 'hotel'] },
   { words: ['نقود', 'نقد', 'فلوس', 'كاش', 'cash', 'money'], stems: ['نقود', 'نقد', 'cash'] },
   { words: ['منزل', 'بيت', 'بيوت', 'home', 'house'], stems: ['منزل', 'home'] },
+  // Brand names as people type them in Arabic letters
+  { words: ['اوشيدا', 'اوتشيدا', 'uchida'], stems: ['uchida'] },
+  { words: ['ساكورا', 'sakura'], stems: ['sakura'] },
+  { words: ['جودريج', 'غودريج', 'قودريج', 'godrej'], stems: ['godrej'] },
+  { words: ['كوروجاني', 'كوروغاني', 'kurogane'], stems: ['kurogane'] },
+  { words: ['فاخر', 'فخم', 'ديكور', 'luxury', 'designer', 'decorative'], stems: ['فاخر', 'luxury', 'designer'] },
+  { words: ['كاشير', 'cashier'], stems: ['كاشير', 'cashier', 'نقود', 'cash'] },
+  { words: ['ارشيف', 'archive'], stems: ['ملف', 'file', 'سجلات', 'records'] },
+  { words: ['كبت', 'كبتات'], stems: ['دولاب', 'cupboard', 'الخزاين الحديديه'] },
+  { words: ['رقمي', 'الكتروني', 'digital', 'electronic', 'keypad'], stems: ['رقمي', 'digital', 'keypad', 'الكتروني', 'electronic'] },
 ]
 
 /** Words that describe where or how to buy, not what: every product is sold in Qatar. */
 const ignored = new Set(
   [
     'قطر', 'بقطر', 'لقطر', 'دوحه', 'الدوحه', 'بالدوحه', 'للدوحه', 'خليج', 'الخليج', 'بالخليج', 'الخليجي',
-    'في', 'من', 'الي', 'علي', 'عن', 'و', 'ب', 'ل', 'للبيع', 'بيع', 'شراء', 'اشتري', 'سعر', 'اسعار', 'ارخص', 'افضل', 'قريب', 'مني',
-    'qatar', 'doha', 'gulf', 'gcc', 'in', 'the', 'for', 'at', 'of', 'a', 'an', 'and', 'sale', 'buy', 'price', 'prices', 'cheap', 'best', 'near', 'me',
+    'في', 'من', 'الي', 'علي', 'عن', 'و', 'ب', 'ل', 'ضد', 'مع', 'للبيع', 'بيع', 'شراء', 'اشتري', 'سعر', 'اسعار', 'ارخص', 'افضل', 'قريب', 'مني',
+    'qatar', 'doha', 'gulf', 'gcc', 'in', 'the', 'for', 'at', 'of', 'a', 'an', 'and', 'with', 'sale', 'buy', 'price', 'prices', 'cheap', 'best', 'near', 'me',
   ].map(normalize),
 )
 
@@ -89,6 +99,24 @@ export const parseQuery = (query: string): Term[] =>
     .map(toTerm)
 
 export type Indexed<T> = { item: T; text: string; name: string }
+
+type Searchable = {
+  name: { en?: string; ar?: string }
+  shortDesc?: { en?: string; ar?: string } | null
+  category?: { title: { en?: string; ar?: string } } | null
+  specTable: { value: { en?: string; ar?: string } }[]
+}
+
+/** Everything a product can be found by: names, descriptions, category and specs in both languages. */
+export const productText = (p: Searchable, extra = '') =>
+  normalize(
+    [p.name.en, p.name.ar, p.shortDesc?.en, p.shortDesc?.ar, p.category?.title.en, p.category?.title.ar, ...p.specTable.flatMap((row) => [row.value.en, row.value.ar]), extra]
+      .filter(Boolean)
+      .join(' '),
+  )
+
+export const productIndex = <T extends Searchable>(products: T[], extra: (p: T) => string = () => '') =>
+  products.map((p) => ({ item: p, text: productText(p, extra(p)), name: normalize(`${p.name.en} ${p.name.ar}`) }))
 
 /**
  * Items that match every word, those naming it first. When nothing matches

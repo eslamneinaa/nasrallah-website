@@ -135,142 +135,41 @@ const catalogue: Product[] = [
     isFeatured: false,
     order: 13,
   },
-  {
-    _id: 'p2',
-    slug: 'uchida-four-drawer-filing-cabinet',
-    name: { en: 'SAKURA Fire-Resistant Four-Drawer Filing Cabinet, Model UB4-4K2K, Black', ar: 'خزانة ملفات SAKURA مقاومة للحريق بأربعة أدراج موديل UB4-4K2K باللون الأسود' },
-    category: filing,
-    shortDesc: {
-      en: 'Four individually locking drawers in a black steel body, for the secure storage of files and documents.',
-      ar: 'أربعة أدراج بأقفال مستقلة في هيكل فولاذي أسود، لحفظ الملفات والمستندات بأمان.',
-    },
-    fullDesc: desc(
-      'A four-drawer SAKURA filing cabinet for ministries, banks and companies that keep important records on paper. Each drawer has its own key lock and a label holder, so files stay organised and protected.',
-      'خزانة ملفات من SAKURA بأربعة أدراج، للوزارات والبنوك والشركات التي تحتفظ بسجلاتها الورقية المهمة. لكل درج قفل مستقل بمفتاح وحامل لبطاقة التعريف، لتبقى الملفات منظّمة ومحمية.',
-    ),
-    images: [img('uchida-filing-cabinet', 1024, 1536, 'SAKURA four-drawer filing cabinet in black steel', 'خزانة ملفات SAKURA بأربعة أدراج من الفولاذ الأسود')],
-    specTable: [
-      brandSpec('SAKURA'),
-      spec('Drawers', 'الأدراج', '4, each with its own key lock', '4 أدراج، لكل منها قفل مستقل'),
-      spec('Finish', 'اللون', 'Black textured steel', 'فولاذ أسود محبّب'),
-      spec('For', 'الاستخدام', 'Files and documents', 'الملفات والمستندات'),
-    ],
-    isFeatured: true,
-    order: 23,
-  },
+
   {
     _id: 'p3',
-    slug: 'uchida-fluted-safe',
-    name: { en: 'UCHIDA Fire-Resistant Safe with Fluted Front, Model Z/CFP-R', ar: 'خزنة UCHIDA مقاومة للحريق بواجهة مضلّعة موديل Z/CFP-R' },
+    slug: 'uchida-designer-fire-resistant-safe',
+    name: { en: 'UCHIDA Designer Fire-Resistant Safe, Model Z/CFP-R', ar: 'خزنة UCHIDA فاخرة مقاومة للحريق بتصاميم متعددة موديل Z/CFP-R' },
     category: luxury,
     shortDesc: {
-      en: 'A contemporary charcoal safe with a fluted front and the Nasrallah brass plate, made for the home or the executive office.',
-      ar: 'خزنة عصرية بلون فحمي وواجهة مضلّعة تحمل لوحة نصر الله النحاسية، تليق بالمنزل ومكاتب الإدارة العليا.',
+      en: 'One UCHIDA fire-resistant safe, model Z/CFP-R, in five door designs: walnut grain, black and gold marble, white marble, charcoal fluted, and cream and navy fluted.',
+      ar: 'خزنة UCHIDA مقاومة للحريق موديل Z/CFP-R بخمسة تصاميم للباب: نقشة خشب الجوز، والرخام الأسود والذهبي، والرخام الأبيض، والواجهة المضلّعة الفحمية، والمضلّعة بلونين كريمي وكحلي.',
     },
     fullDesc: desc(
-      'Security does not have to look industrial. This UCHIDA safe pairs a fluted charcoal front with the Nasrallah brass plate, so it sits as comfortably in a majlis or an executive office as it does in a dressing room.',
-      'الأمان لا يعني مظهرًا صناعيًا. تجمع هذه الخزنة من UCHIDA بين واجهة مضلّعة بلون فحمي ولوحة نصر الله النحاسية، فتنسجم في المجلس ومكتب الإدارة وغرفة الملابس على حدّ سواء.',
+      'Security that looks like furniture. The same UCHIDA fire-resistant safe comes with a choice of door: a warm walnut grain in a black steel frame; black marble effect veined in gold and white; white marble effect with soft grey veins; a fluted charcoal front; or a two-tone fluted front, cream above and navy below. Each carries the UCHIDA and Nasrallah plates, with a fingerprint reader and a touch keypad in the panel above the door. Choose the design that suits your majlis, dressing room or executive office.',
+      'أمان بمظهر قطعة أثاث. خزنة UCHIDA نفسها المقاومة للحريق، مع اختيار تصميم الباب: نقشة خشب الجوز الدافئة في إطار من الفولاذ الأسود، أو نقشة الرخام الأسود بعروق ذهبية وبيضاء، أو الرخام الأبيض بعروق رمادية ناعمة، أو الواجهة المضلّعة بلون فحمي، أو المضلّعة بلونين: كريمي في الأعلى وكحلي في الأسفل. ويحمل كل تصميم لوحتي UCHIDA ونصر الله، مع قارئ بصمة ولوحة أرقام تعمل باللمس أعلى الباب. اختاروا التصميم الذي يناسب مجلسكم أو غرفة الملابس أو مكتب الإدارة.',
     ),
-    images: [img('uchida-fluted-safe', 1254, 1254, 'UCHIDA safe with a fluted charcoal front and a brass Nasrallah plate', 'خزنة UCHIDA بواجهة مضلّعة بلون فحمي ولوحة نصر الله النحاسية')],
+    images: [
+      img('uchida-black-gold-marble-safe', 1176, 1338, 'UCHIDA safe with a black and gold marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأسود والذهبي، مع قارئ بصمة ولوحة أرقام باللمس'),
+      img('uchida-walnut-safe', 1254, 1254, 'UCHIDA safe with a walnut wood-grain door and black steel frame', 'خزنة UCHIDA بباب بنقشة خشب الجوز وإطار من الفولاذ الأسود'),
+      img('uchida-white-marble-safe', 1122, 1402, 'UCHIDA safe with a white marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأبيض، مع قارئ بصمة ولوحة أرقام باللمس'),
+      img('uchida-fluted-safe', 1254, 1254, 'UCHIDA safe with a fluted charcoal front and a brass Nasrallah plate', 'خزنة UCHIDA بواجهة مضلّعة بلون فحمي ولوحة نصر الله النحاسية'),
+      img('uchida-two-tone-fluted-safe', 1254, 1254, 'UCHIDA safe with a cream and navy fluted front, fingerprint reader and touch keypad', 'خزنة UCHIDA بواجهة مضلّعة بلونين كريمي وكحلي، مع قارئ بصمة ولوحة أرقام باللمس'),
+    ],
     specTable: [
       brand,
-      spec('Front', 'الواجهة', 'Fluted charcoal panel', 'واجهة مضلّعة بلون فحمي'),
-      spec('Detail', 'التفاصيل', 'Nasrallah brass plate', 'لوحة نصر الله النحاسية'),
+      spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
+      spec('Door designs', 'تصاميم الباب', 'Walnut grain, black & gold marble, white marble, charcoal fluted, cream & navy fluted', 'نقشة خشب الجوز، رخام أسود وذهبي، رخام أبيض، مضلّعة فحمي، مضلّعة كريمي وكحلي'),
+      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
     ],
     isFeatured: true,
     order: 14,
   },
-  {
-    _id: 'p4',
-    slug: 'uchida-walnut-finish-safe',
-    name: { en: 'UCHIDA Fire-Resistant Safe with Walnut-Grain Door, Model Z/CFP-R', ar: 'خزنة UCHIDA مقاومة للحريق بنقشة خشب الجوز موديل Z/CFP-R' },
-    category: luxury,
-    shortDesc: {
-      en: 'A black steel safe with a rich walnut-grain door, for homes and offices where the safe is part of the décor.',
-      ar: 'خزنة بهيكل فولاذي أسود وباب بنقشة خشب الجوز، للمنازل والمكاتب التي تكون فيها الخزنة جزءًا من الديكور.',
-    },
-    fullDesc: desc(
-      'Finished in a warm walnut grain and framed in black steel, this UCHIDA safe brings the look of fine furniture to serious protection. The door carries the UCHIDA and Nasrallah plates.',
-      'بباب بنقشة خشب الجوز الدافئة وإطار من الفولاذ الأسود، تمنح هذه الخزنة من UCHIDA الحماية الجادة مظهر الأثاث الراقي، ويحمل بابها لوحتي UCHIDA ونصر الله.',
-    ),
-    images: [img('uchida-walnut-safe', 1254, 1254, 'UCHIDA safe with a walnut wood-grain door and black steel frame', 'خزنة UCHIDA بباب بنقشة خشب الجوز وإطار من الفولاذ الأسود')],
-    specTable: [
-      brand,
-      spec('Door', 'الباب', 'Walnut wood grain', 'نقشة خشب الجوز'),
-      spec('Frame', 'الإطار', 'Black steel', 'فولاذ أسود'),
-    ],
-    isFeatured: true,
-    order: 15,
-  },
-  {
-    _id: 'p52',
-    slug: 'uchida-black-and-gold-marble-safe',
-    name: { en: 'UCHIDA Fire-Resistant Safe with Black & Gold Marble Door, Model Z/CFP-R', ar: 'خزنة UCHIDA مقاومة للحريق بنقشة الرخام الأسود والذهبي موديل Z/CFP-R' },
-    category: luxury,
-    shortDesc: {
-      en: 'An UCHIDA safe with a black marble-effect door veined in gold and white, a fingerprint reader and touch keypad.',
-      ar: 'خزنة UCHIDA بباب بنقشة الرخام الأسود بعروق ذهبية وبيضاء، مع قارئ بصمة ولوحة أرقام تعمل باللمس.',
-    },
-    fullDesc: desc(
-      'A safe that reads as a statement piece: the door is finished in black marble effect with gold and white veins, framed in charcoal steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel above the door.',
-      'خزنة تبدو كقطعة فنية: بابها بنقشة الرخام الأسود بعروق ذهبية وبيضاء، في إطار من الفولاذ الفحمي، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة أعلى الباب.',
-    ),
-    images: [img('uchida-black-gold-marble-safe', 1176, 1338, 'UCHIDA safe with a black and gold marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأسود والذهبي، مع قارئ بصمة ولوحة أرقام باللمس')],
-    specTable: [
-      brand,
-      spec('Door', 'الباب', 'Black marble effect with gold and white veins', 'نقشة رخام أسود بعروق ذهبية وبيضاء'),
-      spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
-      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
-    ],
-    isFeatured: false,
-    order: 15.1,
-  },
-  {
-    _id: 'p53',
-    slug: 'uchida-white-marble-safe',
-    name: { en: 'UCHIDA Fire-Resistant Safe with White Marble Door, Model Z/CFP-R', ar: 'خزنة UCHIDA مقاومة للحريق بنقشة الرخام الأبيض موديل Z/CFP-R' },
-    category: luxury,
-    shortDesc: {
-      en: 'An UCHIDA safe with a white marble-effect door veined in grey, a fingerprint reader and touch keypad.',
-      ar: 'خزنة UCHIDA بباب بنقشة الرخام الأبيض بعروق رمادية، مع قارئ بصمة ولوحة أرقام تعمل باللمس.',
-    },
-    fullDesc: desc(
-      'Light and calm, for bright dressing rooms and majlis: the door is finished in white marble effect with soft grey veins, framed in black steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel above the door.',
-      'هادئة ومشرقة، لغرف الملابس والمجالس الفاتحة: بابها بنقشة الرخام الأبيض بعروق رمادية ناعمة، في إطار من الفولاذ الأسود، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة أعلى الباب.',
-    ),
-    images: [img('uchida-white-marble-safe', 1122, 1402, 'UCHIDA safe with a white marble-effect door, fingerprint reader and touch keypad', 'خزنة UCHIDA بباب بنقشة الرخام الأبيض، مع قارئ بصمة ولوحة أرقام باللمس')],
-    specTable: [
-      brand,
-      spec('Door', 'الباب', 'White marble effect with grey veins', 'نقشة رخام أبيض بعروق رمادية'),
-      spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
-      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
-    ],
-    isFeatured: false,
-    order: 15.2,
-  },
-  {
-    _id: 'p54',
-    slug: 'uchida-cream-and-navy-fluted-safe',
-    name: { en: 'UCHIDA Fire-Resistant Safe with Cream & Navy Fluted Front, Model Z/CFP-R', ar: 'خزنة UCHIDA مقاومة للحريق بواجهة مضلّعة كريمي وكحلي موديل Z/CFP-R' },
-    category: luxury,
-    shortDesc: {
-      en: 'An UCHIDA safe with a fluted front in two tones, cream above and navy below, a fingerprint reader and touch keypad.',
-      ar: 'خزنة UCHIDA بواجهة مضلّعة بلونين، كريمي في الأعلى وكحلي في الأسفل، مع قارئ بصمة ولوحة أرقام تعمل باللمس.',
-    },
-    fullDesc: desc(
-      'The fluted UCHIDA design in two tones: a cream fluted panel with a slim handle above a navy fluted door, framed in charcoal steel and carrying the UCHIDA and Nasrallah plates. A fingerprint reader and touch keypad sit in the panel at the top.',
-      'تصميم UCHIDA المضلّع بلونين: لوحة مضلّعة بلون كريمي بمقبض رفيع فوق باب مضلّع بلون كحلي، في إطار من الفولاذ الفحمي، ويحمل لوحتي UCHIDA ونصر الله. ويقع قارئ البصمة ولوحة الأرقام التي تعمل باللمس في اللوحة العلوية.',
-    ),
-    images: [img('uchida-two-tone-fluted-safe', 1254, 1254, 'UCHIDA safe with a cream and navy fluted front, fingerprint reader and touch keypad', 'خزنة UCHIDA بواجهة مضلّعة بلونين كريمي وكحلي، مع قارئ بصمة ولوحة أرقام باللمس')],
-    specTable: [
-      brand,
-      spec('Front', 'الواجهة', 'Fluted, cream and navy', 'مضلّعة بلونين كريمي وكحلي'),
-      spec('Lock', 'القفل', 'Fingerprint reader and touch keypad', 'قارئ بصمة ولوحة أرقام باللمس'),
-      spec('Detail', 'التفاصيل', 'UCHIDA and Nasrallah plates', 'لوحتا UCHIDA ونصر الله'),
-    ],
-    isFeatured: false,
-    order: 15.3,
-  },
+
+
+
+
+
   {
     _id: 'p27',
     slug: 'watch-winder-safe',
@@ -760,8 +659,8 @@ const catalogue: Product[] = [
     name: { en: 'GODREJ Six-Door Steel Locker, Model LC6', ar: 'لوكر حديدي GODREJ بستة أبواب موديل LC6' },
     category: lockers,
     shortDesc: {
-      en: 'A six-door steel locker column in beige or off-white, for keeping personal belongings apart in busy workplaces.',
-      ar: 'عمود لوكر حديدي بستة أبواب باللون البيج أو الأبيض العاجي، لفصل المتعلقات الشخصية في أماكن العمل المزدحمة.',
+      en: 'A six-door steel locker column in beige or olive, for keeping personal belongings apart in busy workplaces.',
+      ar: 'عمود لوكر حديدي بستة أبواب باللون البيج أو الزيتي، لفصل المتعلقات الشخصية في أماكن العمل المزدحمة.',
     },
     fullDesc: desc(
       'Six compartments, each behind its own door with a pull handle, fit in the footprint of a single cupboard.',
@@ -786,8 +685,8 @@ const catalogue: Product[] = [
     name: { en: 'GODREJ Single-Door Steel Locker, Model LC1', ar: 'لوكر حديدي GODREJ بباب واحد موديل LC1' },
     category: lockers,
     shortDesc: {
-      en: 'A full-height single steel locker with a louvred charcoal door on a cream frame.',
-      ar: 'لوكر حديدي بباب واحد بارتفاع كامل، بباب فحمي بفتحات تهوية على إطار كريمي.',
+      en: 'A full-height single steel locker with a louvred door, in beige or olive.',
+      ar: 'لوكر حديدي بباب واحد بارتفاع كامل وبفتحات تهوية، باللون البيج أو الزيتي.',
     },
     fullDesc: desc(
       'One tall compartment with room for clothes and bags, ventilated through louvres at the top of the door.',
@@ -959,8 +858,8 @@ const catalogue: Product[] = [
     name: { en: 'UCHIDA Fire-Resistant Double-Door Safe, Model E-526', ar: 'خزنة UCHIDA مقاومة للحريق ببابين موديل E-526' },
     category: fire,
     shortDesc: {
-      en: 'A large grey UCHIDA safe with two doors, a combination dial and a key lock, for offices, banks and institutions with a lot to protect.',
-      ar: 'خزنة UCHIDA رمادية كبيرة ببابين، بقفل رقمي دوّار وقفل بمفتاح، للمكاتب والبنوك والمؤسسات التي تحفظ الكثير.',
+      en: 'A large beige UCHIDA safe with two doors, a combination dial and a key lock, for offices, banks and institutions with a lot to protect.',
+      ar: 'خزنة UCHIDA كبيرة باللون البيج ببابين، بقفل رقمي دوّار وقفل بمفتاح، للمكاتب والبنوك والمؤسسات التي تحفظ الكثير.',
     },
     fullDesc: desc(
       'When one door is not enough: this full-size UCHIDA safe opens wide on two doors, each on its own external hinges, with a combination dial and a key lock on a chrome bar. Room for ledgers, files, cash boxes and archives in one place.',
@@ -1034,8 +933,8 @@ const catalogue: Product[] = [
     name: { en: 'UCHIDA Fire-Resistant Deposit Safe, Model PB-ND15', ar: 'خزنة إيداع UCHIDA مقاومة للحريق موديل PB-ND15' },
     category: deposit,
     shortDesc: {
-      en: 'A grey-green UCHIDA FIRESAFE deposit safe: staff drop cash into the top drawer, and only the key holder opens the safe below.',
-      ar: 'خزنة إيداع UCHIDA FIRESAFE بلون رمادي مخضر: يودع الموظفون النقود في الدرج العلوي، ولا يفتح الخزنة السفلية إلا من يملك المفتاح والرقم.',
+      en: 'A beige UCHIDA FIRESAFE deposit safe: staff drop cash into the top drawer, and only the key holder opens the safe below.',
+      ar: 'خزنة إيداع UCHIDA FIRESAFE باللون البيج: يودع الموظفون النقود في الدرج العلوي، ولا يفتح الخزنة السفلية إلا من يملك المفتاح والرقم.',
     },
     fullDesc: desc(
       'Made for shops, restaurants and petrol stations that take cash all day. The top drawer, with its own key, lets takings be deposited without opening the main door, while the safe below is locked by a digital keypad and a key. Nobody on shift needs the code.',
@@ -1085,8 +984,8 @@ const catalogue: Product[] = [
     name: { en: 'SAKURA Digital Hotel Safe, Model UBHS-16', ar: 'خزنة فندقية SAKURA بقفل رقمي موديل UBHS-16' },
     category: hotel,
     shortDesc: {
-      en: 'A light-silver SAKURA hotel safe with a CE-approved digital keypad, a display screen and a turning knob, for hotel rooms, serviced apartments and homes.',
-      ar: 'خزنة فندقية SAKURA بلون فضي فاتح، بقفل رقمي حاصل على شهادة CE مع شاشة ولوحة أرقام ومقبض دوّار، لغرف الفنادق والشقق الفندقية والبيوت.',
+      en: 'A beige SAKURA hotel safe with a CE-approved digital keypad, a display screen and a turning knob, for hotel rooms, serviced apartments and homes.',
+      ar: 'خزنة فندقية SAKURA باللون البيج، بقفل رقمي حاصل على شهادة CE مع شاشة ولوحة أرقام ومقبض دوّار، لغرف الفنادق والشقق الفندقية والبيوت.',
     },
     fullDesc: desc(
       'The safe guests expect to find in the wardrobe: a digital keypad with a display screen and a turning knob, so passports, cash, phones and jewellery stay locked while they are out. The lock carries CE approval, and the textured steel body is sized to sit inside a wardrobe or under a desk.',
@@ -1116,8 +1015,8 @@ const catalogue: Product[] = [
     name: { en: 'SAKURA Compact Digital Hotel Safe, Model UBHS-14', ar: 'خزنة فندقية SAKURA صغيرة بقفل رقمي موديل UBHS-14' },
     category: hotel,
     shortDesc: {
-      en: 'A compact silver SAKURA hotel safe with a CE-approved digital keypad, a display screen and a turning knob, for a wardrobe shelf or a bedside cabinet.',
-      ar: 'خزنة فندقية SAKURA صغيرة بلون فضي، بقفل رقمي حاصل على شهادة CE مع شاشة ولوحة أرقام ومقبض دوّار، لرف خزانة الملابس أو الكومودينو.',
+      en: 'A compact beige SAKURA hotel safe with a CE-approved digital keypad, a display screen and a turning knob, for a wardrobe shelf or a bedside cabinet.',
+      ar: 'خزنة فندقية SAKURA صغيرة باللون البيج، بقفل رقمي حاصل على شهادة CE مع شاشة ولوحة أرقام ومقبض دوّار، لرف خزانة الملابس أو الكومودينو.',
     },
     fullDesc: desc(
       'The smaller of our SAKURA hotel safes, for rooms where space is tight: the same digital keypad with a display screen and a turning knob in a lower, wider body that fits on a wardrobe shelf or in a bedside cabinet. A practical choice for hotel rooms, staff housing and homes.',
@@ -1143,66 +1042,31 @@ const catalogue: Product[] = [
   },
   {
     _id: 'p49',
-    slug: 'uchida-black-hotel-safe',
-    name: { en: 'UCHIDA Fire-Resistant Key Hotel Safe, Model HS-23K1, Black', ar: 'خزنة فندقية UCHIDA مقاومة للحريق بقفل مفتاح موديل HS-23K1 باللون الأسود' },
+    slug: 'uchida-key-hotel-safe',
+    name: { en: 'UCHIDA Fire-Resistant Key Hotel Safe, Model HS-23K1', ar: 'خزنة فندقية UCHIDA مقاومة للحريق بقفل مفتاح موديل HS-23K1' },
     category: hotel,
     shortDesc: {
-      en: 'A low, wide black UCHIDA safe with a chrome key lock on a brushed handle plate and two external hinges, for hotel rooms, wardrobes and desks.',
-      ar: 'خزنة UCHIDA سوداء منخفضة وعريضة، بقفل مفتاح معدني لامع على لوحة مقبض فضية ومفصلتين خارجيتين، لغرف الفنادق وخزائن الملابس والمكاتب.',
+      en: 'A low, wide UCHIDA hotel safe, model HS-23K1, with a chrome key lock and two external hinges, in black or beige, for hotel rooms, wardrobes and desks.',
+      ar: 'خزنة فندقية UCHIDA منخفضة وعريضة موديل HS-23K1، بقفل مفتاح معدني لامع ومفصلتين خارجيتين، باللون الأسود أو البيج، لغرف الفنادق وخزائن الملابس والمكاتب.',
     },
     fullDesc: desc(
-      'No code to forget: this UCHIDA safe locks with a key, set in a chrome keyhole on a brushed silver handle plate. Its low, wide body slides into a wardrobe or under a desk, and the door swings on two sturdy external hinges, for hotel rooms, offices and homes.',
-      'بلا رقم سري يُنسى: تُقفل هذه الخزنة من UCHIDA بمفتاح في قفل معدني لامع على لوحة مقبض فضية. جسمها المنخفض العريض يدخل في خزانة الملابس أو أسفل المكتب، ويدور بابها على مفصلتين خارجيتين متينتين، لغرف الفنادق والمكاتب والبيوت.',
+      'No code to forget: this UCHIDA safe locks with a key, set in a chrome keyhole on a brushed silver handle plate. Its low, wide body slides into a wardrobe or under a desk, and the door swings on two sturdy external hinges. Choose black, or beige to blend with light wardrobes and hotel furniture.',
+      'بلا رقم سري يُنسى: تُقفل هذه الخزنة من UCHIDA بمفتاح في قفل معدني لامع على لوحة مقبض فضية. جسمها المنخفض العريض يدخل في خزانة الملابس أو أسفل المكتب، ويدور بابها على مفصلتين خارجيتين متينتين. اختاروا الأسود، أو البيج لينسجم مع خزائن الملابس والأثاث الفندقي الفاتح.',
     ),
     images: [
-      img(
-        'uchida-hotel-safe-black',
-        1448,
-        1086,
-        'Low black UCHIDA hotel safe with a chrome key lock and two external hinges',
-        'خزنة فندقية UCHIDA سوداء منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين',
-      ),
+      img('uchida-hotel-safe-black', 1448, 1086, 'Low black UCHIDA hotel safe with a chrome key lock and two external hinges', 'خزنة فندقية UCHIDA سوداء منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين'),
+      img('uchida-hotel-safe-ivory', 1586, 992, 'Low ivory UCHIDA hotel safe with a chrome key lock and two external hinges', 'خزنة فندقية UCHIDA عاجية منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين'),
     ],
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Key', 'مفتاح'),
       spec('Hinges', 'المفصلات', 'Two external hinges', 'مفصلتان خارجيتان'),
-      spec('Finish', 'اللون', 'Black', 'أسود'),
     ],
     isFeatured: false,
-    order: 12.3,
+    order: 30,
   },
-  {
-    _id: 'p50',
-    slug: 'uchida-ivory-hotel-safe',
-    name: { en: 'UCHIDA Fire-Resistant Key Hotel Safe, Model HS-23K1, Beige', ar: 'خزنة فندقية UCHIDA مقاومة للحريق بقفل مفتاح موديل HS-23K1 باللون البيج' },
-    category: hotel,
-    shortDesc: {
-      en: 'A low, wide ivory UCHIDA safe with a chrome key lock on a silver handle plate and two external hinges, to blend with light wardrobes and furniture.',
-      ar: 'خزنة UCHIDA بلون عاجي منخفضة وعريضة، بقفل مفتاح معدني لامع على لوحة مقبض فضية ومفصلتين خارجيتين، تنسجم مع خزائن الملابس والأثاث الفاتح.',
-    },
-    fullDesc: desc(
-      'The same key-locked UCHIDA safe in a soft ivory finish that disappears into light wardrobes and hotel furniture. A chrome keyhole on a silver handle plate and two external hinges keep it simple and dependable, for hotel rooms, serviced apartments and homes.',
-      'خزنة UCHIDA نفسها بقفل المفتاح، بلون عاجي هادئ يذوب في خزائن الملابس والأثاث الفندقي الفاتح. قفل معدني لامع على لوحة مقبض فضية ومفصلتان خارجيتان تجعلها بسيطة يُعتمد عليها، لغرف الفنادق والشقق الفندقية والبيوت.',
-    ),
-    images: [
-      img(
-        'uchida-hotel-safe-ivory',
-        1586,
-        992,
-        'Low ivory UCHIDA hotel safe with a chrome key lock and two external hinges',
-        'خزنة فندقية UCHIDA عاجية منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين',
-      ),
-    ],
-    specTable: [
-      brand,
-      spec('Lock', 'القفل', 'Key', 'مفتاح'),
-      spec('Hinges', 'المفصلات', 'Two external hinges', 'مفصلتان خارجيتان'),
-      spec('Finish', 'اللون', 'Ivory', 'عاجي'),
-    ],
-    isFeatured: false,
-    order: 12.4,
-  },
+
+
   {
     _id: 'p37',
     slug: 'sakura-floral-safe',
@@ -1281,28 +1145,30 @@ const catalogue: Product[] = [
   {
     _id: 'p40',
     slug: 'sakura-four-drawer-filing-cabinet',
-    name: { en: 'SAKURA Fire-Resistant Four-Drawer Filing Cabinet, Model UB4-4K2K, Light Grey', ar: 'خزانة ملفات SAKURA مقاومة للحريق بأربعة أدراج موديل UB4-4K2K باللون الرمادي الفاتح' },
+    name: { en: 'SAKURA Fire-Resistant Four-Drawer Filing Cabinet, Model UB4-4K2K', ar: 'خزانة ملفات SAKURA مقاومة للحريق بأربعة أدراج موديل UB4-4K2K' },
     category: filing,
     shortDesc: {
-      en: 'A light-grey SAKURA four-drawer filing cabinet, fire-resistant, with a key lock on every drawer.',
-      ar: 'خزانة ملفات SAKURA بلون رمادي فاتح بأربعة أدراج، مقاومة للحريق، بقفل بمفتاح لكل درج.',
+      en: 'A SAKURA fire-resistant filing cabinet, model UB4-4K2K, with four drawers that each lock with their own key, in white or black.',
+      ar: 'خزانة ملفات SAKURA مقاومة للحريق موديل UB4-4K2K، بأربعة أدراج لكل منها قفل بمفتاح، باللون الأبيض أو الأسود.',
     },
     fullDesc: desc(
-      'A fire-resistant filing cabinet in a light finish that suits any office, with four deep drawers, each with its own key lock.',
-      'خزانة ملفات مقاومة للحريق بلون فاتح يناسب أي مكتب، بأربعة أدراج عميقة لكل منها قفل بمفتاح.',
+      'For ministries, banks, companies and clinics that keep important records on paper. Four deep drawers each have their own key lock and a label holder, so files stay organised, and the body is fire-resistant. Shown here in black and in a light finish.',
+      'للوزارات والبنوك والشركات والعيادات التي تحتفظ بسجلاتها الورقية المهمة. أربعة أدراج عميقة لكل منها قفل مستقل بمفتاح وحامل لبطاقة التعريف، لتبقى الملفات منظّمة، وهيكلها مقاوم للحريق. تظهر هنا باللون الأسود وبلون فاتح.',
     ),
     images: [
+      img('uchida-filing-cabinet', 1024, 1536, 'SAKURA four-drawer filing cabinet in black steel', 'خزانة ملفات SAKURA بأربعة أدراج من الفولاذ الأسود'),
       img('sakura-filing-cabinet-white', 1024, 1536, 'Light-grey SAKURA four-drawer filing cabinet with a key lock on each drawer', 'خزانة ملفات SAKURA رمادية فاتحة بأربعة أدراج وقفل مفتاح لكل درج'),
     ],
     specTable: [
       brandSpec('SAKURA'),
-      spec('Drawers', 'الأدراج', 'Four', 'أربعة'),
-      spec('Lock', 'القفل', 'Key lock on each drawer', 'قفل بمفتاح لكل درج'),
-      spec('Finish', 'اللون', 'Light grey', 'رمادي فاتح'),
+      spec('Drawers', 'الأدراج', 'Four, each with its own key lock', 'أربعة، لكل منها قفل بمفتاح'),
+      spec('Detail', 'التفاصيل', 'A label holder on each drawer', 'حامل لبطاقة التعريف على كل درج'),
+      spec('For', 'الاستخدام', 'Files and documents', 'الملفات والمستندات'),
     ],
-    isFeatured: false,
-    order: 26,
+    isFeatured: true,
+    order: 23,
   },
+
   {
     _id: 'p41',
     slug: 'uchida-key-cabinet',

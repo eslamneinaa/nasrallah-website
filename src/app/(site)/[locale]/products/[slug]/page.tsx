@@ -12,6 +12,7 @@ import { RichText } from '@/components/RichText'
 import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { productGuides } from '@/lib/product-guides'
+import { productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
 import { imageAlt } from '@/lib/types'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     path: `products/${slug}`,
     title,
-    description: pick(product.shortDesc, locale),
+    description: productMetaDescription(product, locale),
     image: shareImage,
   })
 }
@@ -65,6 +66,9 @@ export default async function ProductPage({ params }: Props) {
   const category = pick(product.category?.title, locale)
   const related = await getRelatedProducts(product)
   const guide = productGuides[product.slug]?.[locale]
+  const summary = specSummary(product, locale)
+  const { products: catalogue } = await getCatalog()
+  const similar = similarSearches(product, catalogue, locale)
   const faqs = guide ? [guide.faq, { q: fill(t.orderFaq.q, { product: name }), a: t.orderFaq.a }] : []
   const quoteHref = `${href(locale, 'request-quote')}?product=${encodeURIComponent(name)}`
   const whatsapp = whatsappLink(
@@ -85,6 +89,7 @@ export default async function ProductPage({ params }: Props) {
         image: images,
         category,
         ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
+        ...productSchemaExtras(product, locale),
         url: pageUrl,
         offers: {
           '@type': 'Offer',
@@ -93,6 +98,12 @@ export default async function ProductPage({ params }: Props) {
           availability: 'https://schema.org/InStock',
           url: pageUrl,
           seller: { '@id': `${siteConfig.url}/#business` },
+          // Delivery is free anywhere in Qatar.
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'QAR' },
+            shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'QA' },
+          },
         },
       }
     : {
@@ -184,6 +195,13 @@ export default async function ProductPage({ params }: Props) {
               </Reveal>
             ) : null}
 
+            {summary && (
+              <Reveal className="mt-16">
+                <h2 className="eyebrow">{t.atAGlance}</h2>
+                <p className="mt-6 border-t border-gold-500/30 pt-6 leading-loose text-ink-700">{summary}</p>
+              </Reveal>
+            )}
+
             {guide && (
               <Reveal className="mt-16 grid gap-12 sm:grid-cols-2 sm:gap-10">
                 <div>
@@ -211,6 +229,24 @@ export default async function ProductPage({ params }: Props) {
                     ))}
                   </div>
                 </div>
+              </Reveal>
+            )}
+
+            {similar.length > 0 && (
+              <Reveal className="mt-16">
+                <h2 className="eyebrow">{t.similar}</h2>
+                <ul className="mt-6 flex flex-wrap gap-2 border-t border-gold-500/30 pt-6">
+                  {similar.map((q) => (
+                    <li key={q}>
+                      <Link
+                        href={`${href(locale, 'products')}?q=${encodeURIComponent(q)}`}
+                        className="inline-block border border-gold-500/40 bg-pearl-50 px-3 py-1.5 text-sm text-maroon-900 transition hover:border-gold-500 hover:bg-pearl-100"
+                      >
+                        {q}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </Reveal>
             )}
           </div>

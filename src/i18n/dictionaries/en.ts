@@ -275,6 +275,9 @@ const en = {
     all: 'All products',
     faq: 'Frequently asked questions',
     highlights: 'Highlights in this range:',
+    compareTitle: 'Quick comparison: {label}',
+    priceRange: 'Prices from QAR {min} to QAR {max}, with free delivery within Qatar.',
+    compareCols: ['Product', 'Model', 'Fire rating', 'Outside (W × H × D)', 'Weight', 'Price'],
   },
   ctaBand: {
     title: 'Protect what matters most',
@@ -352,6 +355,8 @@ const en = {
     price: 'Price',
     priceValue: 'QAR {price}',
     priceOnRequest: 'On request',
+    atAGlance: 'At a glance',
+    similar: 'Similar searches',
     idealFor: 'Ideal for',
     faq: 'Frequently asked questions',
     orderFaq: {

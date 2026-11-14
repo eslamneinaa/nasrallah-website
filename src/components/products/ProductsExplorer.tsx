@@ -8,7 +8,7 @@ import { fill, href, pick } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
 import type { Category, Locale, Product } from '@/lib/types'
 import { track } from '@/lib/analytics'
-import { normalize, parseQuery, search } from '@/lib/search'
+import { parseQuery, productIndex, search } from '@/lib/search'
 import { ProductCard } from '../ProductCard'
 
 type Props = {
@@ -23,30 +23,18 @@ type Props = {
 
 const noTags: Record<string, string> = {}
 
-const haystack = (p: Product, extra = '') =>
-  normalize(
-    [
-      p.name.en,
-      p.name.ar,
-      p.shortDesc?.en,
-      p.shortDesc?.ar,
-      p.category?.title.en,
-      p.category?.title.ar,
-      ...p.specTable.flatMap((row) => [row.value.en, row.value.ar]),
-      extra,
-    ]
-      .filter(Boolean)
-      .join(' '),
-  )
-
 export function ProductsExplorer({ locale, products, categories, dict, cardCta, tags = noTags }: Props) {
   const [query, setQuery] = useState('')
   const [category, setCategory] = useState('all')
 
   // Support deep links such as /en/products/?category=building-materials
   useEffect(() => {
-    const initial = new URLSearchParams(window.location.search).get('category')
+    const params = new URLSearchParams(window.location.search)
+    const initial = params.get('category')
     if (initial && categories.some((c) => c.slug === initial)) setCategory(initial)
+    // Deep links from the "similar searches" on product pages: /products/?q=…
+    const q = params.get('q')
+    if (q) setQuery(q.slice(0, 80))
   }, [categories])
 
   const selectCategory = (slug: string) => {
@@ -57,10 +45,7 @@ export function ProductsExplorer({ locale, products, categories, dict, cardCta, 
     window.history.replaceState(null, '', url)
   }
 
-  const index = useMemo(
-    () => products.map((p) => ({ item: p, text: haystack(p, tags[p.slug]), name: normalize(`${p.name.en} ${p.name.ar}`) })),
-    [products, tags],
-  )
+  const index = useMemo(() => productIndex(products, (p) => tags[p.slug] ?? ''), [products, tags])
 
   const { results, suggestions } = useMemo(() => {
     const terms = parseQuery(query)

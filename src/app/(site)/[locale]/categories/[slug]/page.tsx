@@ -8,10 +8,11 @@ import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
 import { PageHero } from '@/components/PageHero'
 import { ProductCard } from '@/components/ProductCard'
 import { siteConfig } from '@/config/site'
-import { getDictionary, href, pick } from '@/i18n'
+import { fill, getDictionary, href, pick } from '@/i18n'
 import { getArticle } from '@/lib/articles'
 import { categoryContent, collections } from '@/lib/category-content'
 import { categoryGuides, categoryHighlights } from '@/lib/category-guides'
+import { productDetails } from '@/lib/product-details'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 
@@ -55,6 +56,13 @@ export default async function CategoryPage({ params }: Props) {
   ].filter((c) => c.slug !== slug)
   const pageUrl = siteConfig.url + href(locale, `categories/${slug}`)
   const guide = categoryGuides[slug]?.[locale]
+  // Side-by-side figures from the company sheet (only rows that have a model or a price).
+  const compared = items.flatMap((p) => {
+    const d = productDetails[p.slug]
+    return d && (d.model || d.price) ? [{ p, d }] : []
+  })
+  const prices = compared.flatMap(({ d }) => (d.price ? [d.price] : []))
+  const fmt = (n: number) => new Intl.NumberFormat('en-US').format(n)
   const highlights = (categoryHighlights[slug] ?? []).flatMap((s) => products.find((p) => p.slug === s) ?? [])
   const join = (i: number) => (i === 0 ? '' : i === highlights.length - 1 ? (locale === 'ar' ? ' و' : ' and ') : locale === 'ar' ? '، ' : ', ')
 
@@ -149,6 +157,50 @@ export default async function CategoryPage({ params }: Props) {
               </StaggerItem>
             ))}
           </Stagger>
+
+          {compared.length > 1 && (
+            <section className="mx-auto mt-20 max-w-5xl">
+              <h2 className="display text-[1.75rem] leading-snug text-maroon-900 sm:text-3xl">{fill(dict.categoryPage.compareTitle, { label })}</h2>
+              {prices.length > 1 && (
+                <p className="mt-3 text-ink-500">
+                  {fill(dict.categoryPage.priceRange, { min: fmt(Math.min(...prices)), max: fmt(Math.max(...prices)) })}
+                </p>
+              )}
+              <div className="mt-6 overflow-x-auto border border-gold-500/30 bg-pearl-50">
+                <table className="w-full min-w-[40rem] text-start text-sm">
+                  <thead className="bg-pearl-100 text-ink-500">
+                    <tr>
+                      {dict.categoryPage.compareCols.map((c) => (
+                        <th key={c} scope="col" className="px-4 py-3 text-start font-medium">
+                          {c}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {compared.map(({ p, d }) => (
+                      <tr key={p.slug} className="border-t border-pearl-300">
+                        <th scope="row" className="px-4 py-3 text-start font-normal">
+                          <Link href={href(locale, `products/${p.slug}`)} className="text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800">
+                            {pick(p.name, locale)}
+                          </Link>
+                        </th>
+                        <td className="px-4 py-3 whitespace-nowrap" dir="ltr">{d.model ?? '—'}</td>
+                        <td className="px-4 py-3 whitespace-nowrap">
+                          {d.fireHours ? (locale === 'ar' ? (d.fireHours === 2 ? 'ساعتان' : 'ساعة') : `${d.fireHours} h`) : '—'}
+                        </td>
+                        <td className="px-4 py-3 whitespace-nowrap" dir="ltr">{d.outside ? `${d.outside.join(' × ')} cm` : '—'}</td>
+                        <td className="px-4 py-3 whitespace-nowrap">{d.weightKg ? `${d.weightKg} ${locale === 'ar' ? 'كجم' : 'kg'}` : '—'}</td>
+                        <td className="px-4 py-3 whitespace-nowrap font-medium text-maroon-900">
+                          {d.price ? (locale === 'ar' ? `${fmt(d.price)} ر.ق` : `QAR ${fmt(d.price)}`) : dict.product.priceOnRequest}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
 
           {/* Buying advice and FAQs: plain text and <details>, so every answer is in the HTML. */}
           {guide && (

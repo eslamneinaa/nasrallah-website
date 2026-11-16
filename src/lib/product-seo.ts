@@ -140,3 +140,26 @@ export function productSchemaExtras(p: Product, locale: Locale) {
     keywords: [...k, brand, brand && brandsAr[brand], d.model].filter(Boolean).join(', '),
   }
 }
+
+/**
+ * Google product taxonomy for the Product "category" field, in English as
+ * Google expects. Paths checked against Google's taxonomy-with-ids.en-US.txt.
+ */
+const SAFES = 'Home & Garden > Business & Home Security > Security Safes'
+const googleCategories: Record<string, string> = {
+  'fire-resistant-safes': SAFES,
+  'deposit-safes': SAFES,
+  'hotel-safes': SAFES,
+  'luxury-safes': SAFES,
+  'jewellery-watch-interiors': SAFES,
+  'filing-cabinets': 'Furniture > Cabinets & Storage > File Cabinets',
+  'steel-cupboards': 'Furniture > Cabinets & Storage > Storage Cabinets & Lockers',
+  'steel-lockers': 'Furniture > Cabinets & Storage > Storage Cabinets & Lockers',
+  'key-cabinets': 'Furniture > Cabinets & Storage',
+  'cash-boxes': 'Office Supplies > Filing & Organization > Cash Boxes',
+}
+const googleProductCategories: Record<string, string> = {
+  'travel-jewellery-cases': 'Health & Beauty > Jewelry Cleaning & Care > Jewelry Holders',
+  'bsm-digital-auto-cash-box': 'Business & Industrial > Retail > Money Handling > Cash Register & POS Terminal Accessories > Cash Drawers & Trays',
+}
+export const googleCategory = (p: Product) => googleProductCategories[p.slug] ?? googleCategories[p.category?.slug ?? '']

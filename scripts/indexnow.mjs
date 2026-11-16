@@ -6,6 +6,10 @@
  *   node scripts/indexnow.mjs --all      every URL in out/sitemap.xml
  *   node scripts/indexnow.mjs <url>...   just these URLs
  *
+ * Only pages listed in out/sitemap.xml are ever sent: anything else (Next.js's
+ * internal __next.*.txt files, folders, typos) is dropped with a warning, so
+ * Bing is never handed URLs that answer 404.
+ *
  * The key is the public/<key>.txt file served at the site root.
  */
 import { readdirSync, readFileSync } from 'node:fs'
@@ -16,12 +20,15 @@ const key = readdirSync('public')
   ?.replace('.txt', '')
 if (!key) throw new Error('No IndexNow key file in public/')
 
+const sitemap = [...readFileSync('out/sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
+const listed = new Set(sitemap)
+
 const args = process.argv.slice(2)
 let urls
 if (args[0] === '--all') {
-  urls = [...readFileSync('out/sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
+  urls = sitemap
 } else if (args.length) {
-  urls = args
+  urls = [...new Set(args)]
 } else {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Qatar' })
   const source = readFileSync('src/lib/articles-data.ts', 'utf8')
@@ -29,6 +36,12 @@ if (args[0] === '--all') {
   urls = due.length
     ? ['ar', 'en'].flatMap((l) => [`${SITE}/${l}/articles/`, ...due.map((slug) => `${SITE}/${l}/articles/${slug}/`)])
     : []
+}
+
+const dropped = urls.filter((u) => !listed.has(u))
+if (dropped.length) {
+  console.log(`IndexNow: skipped ${dropped.length} URL(s) not in the sitemap, e.g. ${dropped.slice(0, 3).join(', ')}`)
+  urls = urls.filter((u) => listed.has(u))
 }
 
 if (!urls.length) {

@@ -13,6 +13,7 @@ import { siteConfig } from '@/config/site'
 import { fill, getDictionary, href, pick } from '@/i18n'
 import { categoryHref } from '@/lib/category-content'
 import { popularProducts } from '@/lib/category-guides'
+import { imageAlt } from '@/lib/types'
 import { getCatalog, getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
 import { resolveLocale, type LocaleParams } from '@/lib/seo'
 
@@ -140,7 +141,7 @@ export default async function HomePage({ params }: LocaleParams) {
                 >
                   <span className="relative h-20 w-20 shrink-0 bg-white">
                     {p.images[0] && (
-                      <Image src={p.images[0].url} alt="" fill sizes="80px" className="object-contain p-1.5" />
+                      <Image src={p.images[0].url} alt={imageAlt(p.images[0], locale) || pick(p.name, locale) || ''} fill sizes="80px" className="object-contain p-1.5" />
                     )}
                   </span>
                   <span className="min-w-0">

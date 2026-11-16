@@ -13,7 +13,7 @@ import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { isHeavy } from '@/lib/product-details'
 import { productGuides } from '@/lib/product-guides'
-import { productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
+import { googleCategory, productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
 import { imageAlt } from '@/lib/types'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
@@ -82,14 +82,15 @@ export default async function ProductPage({ params }: Props) {
   const pageUrl = siteConfig.url + href(locale, `products/${slug}`)
   const images = product.images.map((i) => (i.url.startsWith('http') ? i.url : siteConfig.url + i.url))
   // Google's product snippets need a price (or reviews), so only priced products
-  // are marked up as Product; the rest are described as a plain item page.
+  // are marked up as Product; "price on request" pages carry only the breadcrumb
+  // and FAQ markup, which Search Console does not flag.
   const item = product.price
     ? {
         '@type': 'Product',
         name,
         description: pick(product.shortDesc, locale),
         image: images,
-        category,
+        category: googleCategory(product) ?? category,
         ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
         ...productSchemaExtras(product, locale),
         url: pageUrl,
@@ -108,25 +109,11 @@ export default async function ProductPage({ params }: Props) {
           },
         },
       }
-    : {
-        '@type': 'ItemPage',
-        name,
-        description: pick(product.shortDesc, locale),
-        primaryImageOfPage: images[0],
-        image: images,
-        url: pageUrl,
-        inLanguage: locale,
-        isPartOf: { '@id': `${siteConfig.url}/#website` },
-        // Ties the item to its maker and to the showroom that sells it, without the
-        // Product type (which Google flags as an error when there is no price).
-        sourceOrganization: { '@id': `${siteConfig.url}/#business` },
-        keywords: [category, brandName].filter(Boolean).join(', '),
-        ...(brandName ? { mentions: { '@type': 'Brand', name: brandName } } : {}),
-      }
+    : null
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      item,
+      ...(item ? [item] : []),
       {
         '@type': 'BreadcrumbList',
         itemListElement: [

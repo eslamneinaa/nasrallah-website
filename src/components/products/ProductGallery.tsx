@@ -107,7 +107,7 @@ export function ProductGallery({ images, name, labels, rtl }: Props) {
                   i === active ? 'border-gold-500' : 'border-transparent opacity-60 hover:opacity-100'
                 }`}
               >
-                <Image src={image.url} alt="" fill sizes="120px" className="object-contain p-1" />
+                <Image src={image.url} alt={image.alt || name} fill sizes="120px" className="object-contain p-1" />
               </button>
             </li>
           ))}

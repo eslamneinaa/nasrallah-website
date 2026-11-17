@@ -37,5 +37,17 @@
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "@vercel/frameworks": {
+      "js-yaml": "3.15.2",
+      "smol-toml": "1.9.1"
+    },
+    "@oclif/core": {
+      "minimatch": "11.0.1"
+    },
+    "@module-federation/dts-plugin": {
+      "undici": "7.30.1"
+    }
   }
 }

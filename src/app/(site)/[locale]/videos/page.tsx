@@ -90,7 +90,7 @@ export default async function VideosPage({ params }: LocaleParams) {
             </Reveal>
           ))}
 
-          <div className="mx-auto grid max-w-5xl gap-14 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-6xl gap-14 sm:grid-cols-2 xl:grid-cols-4">
             {portrait.map((v) => (
               <Reveal key={v.id} className="grid content-start gap-8">
                 <div className="px-3">

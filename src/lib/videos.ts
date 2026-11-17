@@ -56,6 +56,24 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
     link: { path: 'products', label: { ar: 'تصفّح كل المنتجات', en: 'Browse all products' } },
   },
   {
+    id: 'travel-jewellery-case',
+    url: '/videos/travel-jewellery-case.mp4',
+    poster: '/videos/travel-jewellery-case.webp',
+    orientation: 'portrait',
+    duration: 'PT30S',
+    uploadDate: '2026-11-17',
+    title: { ar: 'شنطة مجوهرات للسفر', en: 'Travel jewellery case' },
+    description: {
+      ar: 'شنطة سوداء بملمس جلد التمساح وأقفال ذهبية، مقسّمة من الداخل بخانات مبطّنة بالمخمل للعقود والأساور والأقراط والخواتم.',
+      en: 'A black crocodile-texture case with gold-tone clasps, divided inside into velvet-lined compartments for necklaces, bangles, earrings and rings.',
+    },
+    label: {
+      ar: 'فيديو: فتح شنطة مجوهرات سوداء بملمس جلد التمساح وأقفال ذهبية، ثم وضع عقدين من الذهب وأساور وأقراط في خاناتها المبطّنة بالمخمل البني',
+      en: 'Video: a black crocodile-texture jewellery case with gold-tone clasps opened, then two gold necklaces, bangles and earrings placed in its brown velvet compartments',
+    },
+    link: { path: 'products/travel-jewellery-cases', label: { ar: 'تفاصيل الشنطة', en: 'See the case' } },
+  },
+  {
     id: 'uchida-jewellery-safe',
     url: '/videos/uchida-jewellery-safe.mp4',
     poster: '/videos/uchida-jewellery-safe.webp',

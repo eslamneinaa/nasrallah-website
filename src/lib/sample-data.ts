@@ -373,6 +373,14 @@ const catalogue: Product[] = [
       img('travel-jewellery-case-black', 1448, 1086, 'Open black crocodile-texture travel case with compartments holding a necklace, bangles and earrings', 'شنطة مجوهرات للسفر سوداء بملمس جلد التمساح مفتوحة، بخانات فيها عقد وأساور وأقراط'),
       img('travel-jewellery-case-grey', 1086, 1448, 'Open light-grey travel case with watch cushions and ring drawers', 'شنطة مجوهرات للسفر رمادية فاتحة مفتوحة، بوسائد للساعات وأدراج للخواتم'),
     ],
+    video: {
+      url: '/videos/travel-jewellery-case.mp4',
+      poster: '/videos/travel-jewellery-case.webp',
+      label: {
+        en: 'Video: a black crocodile-texture jewellery case with gold-tone clasps opened, then two gold necklaces, bangles and earrings placed in its brown velvet compartments',
+        ar: 'فيديو: فتح شنطة مجوهرات سوداء بملمس جلد التمساح وأقفال ذهبية، ثم وضع عقدين من الذهب وأساور وأقراط في خاناتها المبطّنة بالمخمل البني',
+      },
+    },
     specTable: [
       spec('Use', 'الاستخدام', 'Travel, hotels, parties and weddings', 'السفر والفنادق والحفلات والأعراس'),
       spec('Compartments', 'الخانات', 'Necklaces, bangles, rings, earrings and watches', 'العقود والأساور والخواتم والأقراط والساعات'),

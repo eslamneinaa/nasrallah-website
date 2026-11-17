@@ -102,7 +102,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   'jewellery-watch-interiors': {
     ar: {
       heading: 'خزائن المجوهرات والساعات في قطر',
-      metaTitle: 'خزائن مجوهرات للبيع في قطر — خزنة مجوهرات بأدراج مخملية',
+      metaTitle: 'خزائن وتجوري مجوهرات للبيع في قطر — أدراج مخملية وشنط سفر',
       description:
         'خزائن مجوهرات للبيع في قطر بتجهيز داخلي حسب الطلب: أدراج مبطّنة بالمخمل للعقود والخواتم والساعات، وشنط مجوهرات للسفر، مع توصيل مجاني لكل قطر.',
       intro: [
@@ -202,7 +202,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
     },
     en: {
       heading: 'Steel and Office Cupboards in Qatar',
-      metaTitle: 'Steel Cupboards and Office Cabinets in Qatar — GODREJ',
+      metaTitle: 'Steel & Metal Cupboards in Qatar — GODREJ Office Cabinets',
       description:
         'GODREJ steel cupboards and office cabinets in Qatar: one door, two doors or glass doors, for offices, schools and institutions, with free delivery.',
       intro: [
@@ -224,7 +224,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
     },
     en: {
       heading: 'Steel Lockers in Qatar',
-      metaTitle: 'Steel Lockers in Qatar — Staff & School Lockers by GODREJ',
+      metaTitle: 'Steel Lockers in Qatar — Rust-Resistant Staff & School Lockers',
       description:
         'GODREJ steel lockers in Qatar: one to six doors per column, for staff, schools, clubs and factories, in beige and olive, with free delivery.',
       intro: [
@@ -236,7 +236,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   'home-safes': {
     ar: {
       heading: 'خزائن منزلية في قطر',
-      metaTitle: 'خزنة منزلية في قطر — خزائن صغيرة وخزائن نقود ومجوهرات للبيت',
+      metaTitle: 'خزنة منزلية وتجوري للبيت في قطر — خزائن صغيرة ونقود ومجوهرات',
       description:
         'خزائن منزلية في قطر: خزنة منزلية صغيرة لخزانة الملابس، وخزائن نقود منزلية بالبصمة والأرقام، وخزائن مجوهرات للبيت، من UCHIDA وSAKURA وKUROGANE، مع توصيل مجاني.',
       intro: [

@@ -22,6 +22,7 @@ const en = {
   },
   hero: {
     eyebrow: 'Since 1906 · Doha, Qatar',
+    heading: 'Safes for Sale in Qatar',
     titleLead: 'For over a century, safeguarding',
     rotating: ['what you treasure', 'vital documents', 'jewellery & watches', 'institutional records'],
     subtitle:
@@ -286,7 +287,7 @@ const en = {
     secondary: 'Talk to our team',
   },
   about: {
-    metaTitle: 'About Us',
+    metaTitle: 'About Nasrallah Trading Est — Safe Dealer in Doha, Qatar since 1906',
     metaDescription: 'The story of Nasrallah Trading Est: safes and secure storage since 1906, from Souq Al Ein, Salwa Road, Doha.',
     title: 'About Nasrallah Trading Est',
     subtitle: 'More than a century of safekeeping.',

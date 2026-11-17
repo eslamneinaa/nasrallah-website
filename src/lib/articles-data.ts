@@ -243,6 +243,152 @@ export const articleSources: ArticleSource[] = [
     links: [{ category: 'fire-resistant-safes' }, { category: 'filing-cabinets' }],
   },
   {
+    slug: 'safe-prices-in-qatar',
+    date: '2026-11-17',
+    title: {
+      ar: 'أسعار الخزائن والتجوري في قطر: ما الذي يحدد سعر الخزنة؟',
+      en: 'Safe Prices in Qatar: What Decides the Price of a Safe?',
+    },
+    description: {
+      ar: 'لماذا تختلف أسعار الخزائن والتجوري في قطر من خزنة إلى أخرى؟ المقاس، ومقاومة الحريق، ونوع القفل، والماركة وبلد الصنع، والتجهيز الداخلي والتشطيب. دليل من مؤسسة نصر الله التجارية.',
+      en: 'Why do safe prices in Qatar vary so much? Size, fire rating, lock type, brand and country of origin, interior fit-out and finish. A guide from Nasrallah Trading Est.',
+    },
+    keywords: {
+      ar: 'أسعار الخزائن في قطر، سعر التجوري، سعر خزنة حديد، أسعار خزنة ضد الحريق، كم سعر الخزنة',
+      en: 'safe prices Qatar, safe price Doha, how much is a safe, fireproof safe price, steel safe cost',
+    },
+    body: {
+      ar: [
+        {
+          p: 'أول سؤال يصلنا من كثير من العملاء: كم سعر الخزنة؟ والإجابة الصادقة أن سعر الخزنة أو التجوري في قطر لا يُحدَّد بكلمة «خزنة» وحدها، بل بمجموعة من العوامل التي تجعل خزنتين متشابهتين في الشكل مختلفتين كثيرًا في السعر. في هذا المقال نشرح هذه العوامل واحدًا واحدًا، حتى تعرفوا ما الذي تدفعون مقابله، وتختاروا الخزنة التي تستحق ميزانيتكم.',
+        },
+        { h: '1. المقاس والسعة الداخلية' },
+        {
+          p: 'كلما كبرت الخزنة زادت كمية الحديد والمواد العازلة فيها، وزاد وزنها وتكلفة تصنيعها ونقلها. ولهذا تبدأ الأسعار بالخزائن الصغيرة التي توضع داخل خزانة الملابس، وترتفع مع الخزائن الكبيرة بارتفاع كامل والخزائن ببابين. انتبهوا إلى السعة الداخلية لا إلى المقاس الخارجي فقط: جدار الخزنة المقاومة للحريق سميك، فتكون المساحة الداخلية أصغر بوضوح من الأبعاد الخارجية. لهذا نذكر في صفحة كل منتج الأبعاد الخارجية والداخلية معًا.',
+        },
+        { h: '2. مقاومة الحريق: ساعة أم ساعتان؟' },
+        {
+          p: 'الخزنة المقاومة للحريق تحتاج إلى طبقة عازلة بين جدارين من الحديد، تحمي ما بداخلها من حرارة الحريق. وكلما طالت مدة الحماية زادت هذه الطبقة، فزاد الوزن والسعر. في تشكيلتنا خزائن مقاومة للحريق لمدة ساعة، وأخرى لمدة ساعتين. إن كنتم ستحفظون عقودًا وصكوكًا وجوازات سفر ومستندات لا يمكن تعويضها، فمقاومة الحريق تستحق ما تضيفه إلى السعر. أما إن كانت الخزنة لنقود قليلة تُفتح يوميًا في محل، فقد تكفيكم خزنة أصغر.',
+        },
+        { h: '3. نوع القفل' },
+        {
+          p: 'القفل جزء مهم من سعر الخزنة. القفل بالمفتاح هو الأبسط، ثم القفل الرقمي بلوحة أرقام، ثم القفل الدوّار ذو الأرقام، ثم قارئ البصمة. وبعض الخزائن تجمع أكثر من قفل في باب واحد، مثل البصمة مع لوحة الأرقام والمفتاح، وهي أعلى سعرًا لأنها تمنحكم أكثر من طريقة لفتح الخزنة وأكثر من طبقة حماية. اختاروا القفل بحسب من سيفتح الخزنة وكم مرة يفتحها في اليوم، لا بحسب السعر وحده.',
+        },
+        { h: '4. الماركة وبلد الصنع' },
+        {
+          p: 'نبيع في قطر خزائن من UCHIDA وSAKURA وKUROGANE، وخزائن حديدية ولوكرات وخزائن ملفات من GODREJ. تختلف الماركات في بلد الصنع وطريقة التصنيع والتشطيب، وهذا ينعكس على السعر. ونذكر بلد الصنع في صفحة المنتج متى كان معروفًا لدينا، حتى تقارنوا بوضوح.',
+        },
+        { h: '5. التجهيز الداخلي' },
+        {
+          p: 'الخزنة الفارغة من الداخل أرخص من خزنة مجهزة بأدراج مبطّنة بالمخمل للمجوهرات، أو وسائد للساعات، أو دوّار للساعات الأوتوماتيكية، أو أدراج خشبية بمقابض نحاسية. هذا التجهيز يُصنع ويُركّب بحسب الطلب، ولهذا نعرض سعر الخزائن بالأدراج والأدراج المنفردة حسب الطلب، بعد أن نعرف ما الذي ستحفظونه.',
+        },
+        { h: '6. التصميم والتشطيب الخارجي' },
+        {
+          p: 'الخزائن الفاخرة بأبواب مزخرفة أو بتصاميم متعددة تُعامل كقطعة أثاث في البيت، لا كصندوق حديدي فقط. هذا التشطيب يضيف إلى السعر، لكنه يسمح بوضع الخزنة في غرفة الملابس أو المكتب دون أن تبدو غريبة عن المكان.',
+        },
+        { h: '7. الوزن والتوصيل' },
+        {
+          p: 'التوصيل مجاني داخل قطر. لكن الخزائن الثقيلة تحتاج إلى فريق ومعدات لنقلها، والخزائن التي يزيد وزنها على 50 كجم يخضع توصيلها للتقييد طبقًا للموقع الداخلي للعميل: الدرج، والمصعد، وعرض الأبواب والممرات. لهذا نسألكم عن المكان قبل التوصيل.',
+        },
+        { h: 'ما الخزنة المناسبة لكل استخدام؟' },
+        {
+          ul: [
+            'للبيت: خزنة صغيرة أو متوسطة مقاومة للحريق بقفل رقمي أو بالبصمة، توضع في غرفة النوم أو خزانة الملابس.',
+            'للمجوهرات والساعات: خزنة مقاومة للحريق بأدراج مبطّنة، ويُحدَّد سعرها بعد اختيار التجهيز الداخلي.',
+            'للمحلات والكاشير: خزنة إيداع يُسقط فيها الموظف النقود دون أن يفتح الخزنة، أو صندوق نقود للدرج اليومي.',
+            'للشركات والمؤسسات: خزانة ملفات مقاومة للحريق للعقود والسجلات، وخزائن حديدية ولوكرات للموظفين.',
+          ],
+        },
+        { h: 'كيف تقارنون بين سعرين؟' },
+        {
+          ul: [
+            'قارنوا السعة الداخلية لا المقاس الخارجي.',
+            'اسألوا عن مدة مقاومة الحريق، وهل هي ساعة أم ساعتان.',
+            'انظروا إلى نوع القفل، وهل يوجد مفتاح احتياطي.',
+            'تأكدوا من بلد الصنع والماركة.',
+            'اسألوا هل التوصيل مشمول، وما شروطه للخزائن الثقيلة.',
+          ],
+        },
+        { h: 'الخزنة الرخيصة قد تكون الأغلى' },
+        {
+          p: 'خزنة لا تصمد أمام الحريق، أو قفل يتعطل بعد سنة، قد يكلّفكم أكثر بكثير مما وفّرتموه عند الشراء. الخزنة تبقى معكم سنوات طويلة، ولهذا ننصح بأن تبدؤوا بما تريدون حفظه، ثم تختاروا أصغر خزنة تحميه جيدًا، بدل أن تبدؤوا بالسعر.',
+        },
+        {
+          p: 'وتذكّروا أن المقارنة العادلة تكون بين خزنتين متقاربتين في المقاس ومقاومة الحريق ونوع القفل. أما مقارنة خزنة صغيرة بقفل مفتاح بخزنة كبيرة مقاومة للحريق لمدة ساعتين بقفل بصمة، فهي مقارنة بين منتجين مختلفين تمامًا وإن حمل كلاهما اسم خزنة أو تجوري.',
+        },
+        { h: 'اعرفوا السعر الدقيق' },
+        {
+          p: 'تجدون السعر في صفحة كل منتج على موقعنا، وبعض المنتجات سعرها حسب الطلب لأنها تُجهّز بحسب ما تحفظونه. أرسلوا لنا على واتساب ما تريدون حفظه ومكان الخزنة، أو اطلبوا عرض سعر من الموقع، وسنرشّح لكم خزنتين أو ثلاثًا تناسب ميزانيتكم.',
+        },
+      ],
+      en: [
+        {
+          p: 'One of the first questions we hear is: how much does a safe cost? The honest answer is that the price of a safe in Qatar is not set by the word “safe” alone. A handful of factors can make two safes that look alike very different in price. This article walks through those factors one by one, so you know what you are paying for and can choose the safe that deserves your budget.',
+        },
+        { h: '1. Size and internal capacity' },
+        {
+          p: 'The bigger the safe, the more steel and insulation it contains, and the more it weighs and costs to make and move. Prices therefore start with compact safes that fit inside a wardrobe and rise through full-height safes and double-door safes. Look at the internal capacity, not just the outside size: the walls of a fire-resistant safe are thick, so the space inside is clearly smaller than the outside dimensions. That is why every product page on our site lists both the outside and inside dimensions.',
+        },
+        { h: '2. Fire rating: one hour or two?' },
+        {
+          p: 'A fire-resistant safe needs a layer of insulation between two steel walls to protect what is inside from the heat of a fire. The longer the protection, the thicker that layer, and the heavier and dearer the safe. Our range includes safes rated for one hour and safes rated for two hours. If you will keep contracts, title deeds, passports and papers that cannot be replaced, the fire rating is worth what it adds to the price. If the safe is for a small amount of cash opened every day in a shop, a smaller safe may be enough.',
+        },
+        { h: '3. Lock type' },
+        {
+          p: 'The lock is a large part of a safe’s price. A key lock is the simplest, then a digital keypad, then a combination dial, then a fingerprint reader. Some safes combine several locks in one door, such as a fingerprint reader with a keypad and a key. These cost more because they give you more than one way in and more than one layer of protection. Choose the lock for who will open the safe and how often, not for the price alone.',
+        },
+        { h: '4. Brand and country of origin' },
+        {
+          p: 'In Qatar we sell safes from UCHIDA, SAKURA and KUROGANE, and steel cupboards, lockers and filing cabinets from GODREJ. Brands differ in where and how they are made and in their finish, and this shows in the price. We list the country of origin on the product page whenever we know it, so you can compare clearly.',
+        },
+        { h: '5. Interior fit-out' },
+        {
+          p: 'An empty safe costs less than one fitted with velvet-lined jewellery drawers, watch cushions, a winder for automatic watches, or wooden drawers with brass handles. This fit-out is made and installed to order, which is why safes with drawers, and drawers sold on their own, are priced on request once we know what you will keep in them.',
+        },
+        { h: '6. Design and exterior finish' },
+        {
+          p: 'Luxury safes with decorated doors or a choice of designs are treated as furniture in the home, not just a steel box. That finish adds to the price, but it lets the safe sit in a dressing room or study without looking out of place.',
+        },
+        { h: '7. Weight and delivery' },
+        {
+          p: 'Delivery is free within Qatar. Heavy safes, however, need a team and equipment to move them, and for safes over 50 kg delivery is subject to restrictions depending on access at the customer’s site: stairs, lifts, and the width of doors and corridors. That is why we ask about the location before delivery.',
+        },
+        { h: 'Which safe suits which use?' },
+        {
+          ul: [
+            'For the home: a small or medium fire-resistant safe with a digital or fingerprint lock, in the bedroom or a wardrobe.',
+            'For jewellery and watches: a fire-resistant safe with lined drawers, priced once the interior fit-out is chosen.',
+            'For shops and cashiers: a deposit safe that staff can drop cash into without opening it, or a cash box for the daily float.',
+            'For companies and institutions: a fire-resistant filing cabinet for contracts and records, and steel cupboards and lockers for staff.',
+          ],
+        },
+        { h: 'How to compare two prices' },
+        {
+          ul: [
+            'Compare the internal capacity, not the outside size.',
+            'Ask about the fire rating: one hour or two.',
+            'Look at the lock type and whether there is a backup key.',
+            'Check the brand and the country of origin.',
+            'Ask whether delivery is included, and on what terms for heavy safes.',
+          ],
+        },
+        { h: 'The cheapest safe can cost the most' },
+        {
+          p: 'A safe that does not survive a fire, or a lock that fails after a year, can cost far more than you saved at the till. A safe stays with you for many years, so we suggest starting with what you want to protect, then choosing the smallest safe that protects it well, rather than starting with the price.',
+        },
+        {
+          p: 'Remember that a fair comparison is between two safes of similar size, fire rating and lock. Comparing a small key-lock safe with a large two-hour fire-resistant safe with a fingerprint lock is comparing two quite different products, even if both are called a safe.',
+        },
+        { h: 'Get the exact price' },
+        {
+          p: 'You will find the price on each product page on our site, and some products are priced on request because they are fitted out for what you keep. Send us on WhatsApp what you want to store and where the safe will go, or request a quotation through the site, and we will recommend two or three safes that suit your budget.',
+        },
+      ],
+    },
+    products: ['uchida-compact-digital-safe', 'uchida-fingerprint-safe', 'sakura-multi-lock-safe', 'uchida-double-door-safe'],
+    links: [{ category: 'fire-resistant-safes' }, { category: 'luxury-safes' }, { page: 'request-quote' }, { article: 'choosing-a-home-safe' }],
+  },
+  {
     slug: 'opening-a-locked-safe-in-qatar',
     date: '2026-11-16',
     title: {
@@ -324,7 +470,7 @@ export const articleSources: ArticleSource[] = [
       ],
     },
     products: [],
-    links: [{ page: 'contact' }, { article: 'safe-placement-and-care' }],
+    links: [{ page: 'contact' }, { article: 'home-safe-for-the-bedroom' }],
   },
   {
     slug: 'jewellery-and-watch-safes',
@@ -639,160 +785,356 @@ export const articleSources: ArticleSource[] = [
     links: [{ category: 'filing-cabinets' }, { article: 'fire-resistant-safe-for-documents' }],
   },
   {
-    slug: 'steel-lockers-for-staff-and-schools',
-    date: '2026-12-06',
+    slug: 'rust-resistant-steel-lockers-in-qatar',
+    date: '2026-11-17',
     title: {
-      ar: 'اللوكرات الحديدية للموظفين والمدارس والأندية: كيف تختارون عدد الأبواب؟',
-      en: 'Steel Lockers for Staff, Schools and Clubs: How Many Doors Do You Need?',
+      ar: 'اللوكرات الحديد في قطر: كيف تختارون لوكرات مقاومة للصدأ والرطوبة؟',
+      en: 'Steel Lockers in Qatar: How to Choose Lockers That Stand Up to Rust and Humidity',
     },
     description: {
-      ar: 'دليل اختيار اللوكرات الحديدية في قطر للشركات والمدارس والأندية والمصانع: من باب واحد إلى ستة أبواب، وكيف تحسبون العدد المطلوب. لوكرات GODREJ من مؤسسة نصر الله التجارية.',
-      en: 'A guide to choosing steel lockers in Qatar for companies, schools, clubs and factories: from one to six doors, and how to work out how many you need. GODREJ lockers from Nasrallah Trading Est.',
+      ar: 'كيف تختارون لوكرات حديد في قطر تصمد أمام الرطوبة والصدأ، وأين تضعونها، وكيف تعتنون بها، وكم بابًا تحتاجون. لوكرات GODREJ للموظفين والمدارس والأندية من مؤسسة نصر الله التجارية.',
+      en: 'How to choose steel lockers in Qatar that stand up to humidity and rust, where to put them, how to care for them and how many doors you need. GODREJ lockers for staff, schools and clubs from Nasrallah Trading Est.',
     },
     keywords: {
-      ar: 'لوكرات حديد في قطر، لوكر موظفين، لوكرات مدارس، خزائن حديدية للموظفين',
-      en: 'steel lockers Qatar, staff lockers, school lockers, employee lockers',
+      ar: 'لوكرات حديد في قطر، لوكر مقاوم للصدأ، لوكرات موظفين، لوكرات مدارس، لوكرات أندية، خزائن حديدية للموظفين',
+      en: 'steel lockers Qatar, rust proof lockers, rust resistant lockers, staff lockers, school lockers, gym lockers Doha',
     },
     body: {
       ar: [
         {
-          p: 'اللوكر الحديدي يمنح كل موظف أو طالب مكانًا خاصًا بقفل لحفظ أغراضه الشخصية. ويقلّل ذلك الفوضى في أماكن العمل، ويحفظ المتعلقات، ويعطي كل شخص شعورًا بالخصوصية.',
+          p: 'اللوكر الحديدي يمنح كل موظف أو طالب مكانًا خاصًا بقفل لحفظ أغراضه الشخصية، ويقلّل الفوضى في أماكن العمل. لكن في قطر هناك سؤال يسبق عدد الأبواب: هل سيصمد اللوكر أمام الرطوبة؟ الرطوبة في الصيف، والقرب من البحر، وغرف تبديل الملابس قرب المسابح والحمّامات، كلها تجعل الصدأ أكبر عدو للّوكرات الحديدية. في هذا المقال نشرح كيف تختارون لوكرات تبقى سليمة سنوات، وأين تضعونها، وكيف تعتنون بها.',
+        },
+        { h: 'لماذا يصدأ اللوكر؟' },
+        {
+          p: 'الحديد يصدأ حين يلتقي بالماء والهواء دون طبقة تحميه. وأكثر ما يسبّب الصدأ في اللوكرات: خدش في الدهان يكشف الحديد، وأغراض مبللة تُترك مغلقة داخل الخانة، وأرضية تُغسل بالماء فتبقى قاعدة اللوكر مبللة، وغياب التهوية داخل الخانة.',
+        },
+        { h: 'ماذا تفحصون قبل الشراء؟' },
+        {
+          ul: [
+            'التشطيب: دهان متساوٍ يغطي الحديد من الداخل والخارج، دون خدوش أو مناطق مكشوفة.',
+            'التهوية: فتحات في الأبواب تسمح بمرور الهواء، فلا تحتبس الرطوبة والروائح داخل الخانة. لوكرات GODREJ التي نبيعها مزوّدة بفتحات تهوية في الأبواب.',
+            'جودة الحديد والتصنيع: أبواب مستقيمة تُغلق بإحكام، ومفصلات ثابتة لا تتأرجح.',
+            'الأقفال: قفل لكل خانة، فلا يضطر أحد إلى ترك أغراضه مكشوفة.',
+            'الماركة: اختاروا ماركة معروفة يسهل الحصول على خدمتها في قطر.',
+          ],
+        },
+        { h: 'أين تضعون اللوكرات؟' },
+        {
+          ul: [
+            'في مكان جاف، بعيدًا عن مصبّ المياه ورذاذ الحمّامات والمسابح.',
+            'على أرضية جافة أو قاعدة مرتفعة قليلًا، حتى لا تبقى قاعدة اللوكر في الماء عند غسل الأرضية.',
+            'مع ترك مسافة صغيرة عن الجدار إن كان الجدار رطبًا.',
+            'في مكان مكيّف أو جيد التهوية متى أمكن، فالحرارة مع الرطوبة تسرّع الصدأ.',
+          ],
+        },
+        { h: 'العناية اليومية بالّلوكرات' },
+        {
+          ul: [
+            'لا تتركوا المناشف والملابس المبللة داخل الخانة، خصوصًا في الأندية والمسابح.',
+            'امسحوا اللوكر بقطعة قماش مع ماء وصابون خفيف، ثم جففوه جيدًا.',
+            'تجنّبوا المنظفات القوية والكلور على الدهان، فهي تضعفه مع الوقت.',
+            'إن ظهر خدش يكشف الحديد، عالجوه بدهان مناسب فورًا قبل أن يبدأ الصدأ.',
+            'افحصوا الأقفال والمفصلات كل فترة، فالمشكلة الصغيرة أسهل علاجًا.',
+          ],
         },
         { h: 'كم بابًا في العمود الواحد؟' },
         {
+          p: 'كل لوكرات GODREJ لدينا بمقاس خارجي واحد تقريبًا: 38 × 183 × 45.7 سم (عرض × ارتفاع × عمق)، ويختلف عدد الأبواب داخل العمود:',
+        },
+        {
           ul: [
-            'باب واحد: مساحة كاملة لشخص واحد، مناسب لتعليق الملابس وزيّ العمل.',
-            'بابان (طابقان): لشخصين في نفس المساحة، مع مكان معقول للملابس.',
-            'ثلاثة أو أربعة أبواب: للأغراض الشخصية والحقائب الصغيرة.',
-            'ستة أبواب: أكبر عدد من الخانات في أقل مساحة، للهواتف والمحافظ والأغراض الصغيرة.',
+            'باب واحد (LC1): مساحة كاملة لشخص واحد، مناسب لتعليق الملابس وزيّ العمل.',
+            'بابان (LC2): لشخصين في نفس المساحة، مع مكان معقول للملابس.',
+            'ثلاثة أبواب (LC3) أو أربعة (LC4): للأغراض الشخصية والحقائب الصغيرة.',
+            'ستة أبواب (LC6): أكبر عدد من الخانات في أقل مساحة، للهواتف والمحافظ والأغراض الصغيرة.',
           ],
+        },
+        {
+          p: 'وإن كنتم تتوقعون زيادة عدد الموظفين أو الطلاب، فاحسبوا ذلك من البداية واتركوا مكانًا لأعمدة إضافية بجوار الأعمدة الحالية. بما أن المقاس الخارجي واحد في كل الأنواع، يمكن أن تقف الأعمدة الجديدة بجوار القديمة في صف واحد مرتب، حتى لو اختلف عدد الأبواب فيها.',
         },
         { h: 'كيف تحسبون العدد المطلوب؟' },
         {
           p: 'ابدؤوا بعدد الأشخاص في أكثر الورديات ازدحامًا، ثم قرّروا ما يحتاج كل شخص إلى حفظه. مثال: 30 موظفًا يحتاجون إلى حفظ هواتفهم وحقائبهم فقط، يكفيهم خمسة أعمدة بستة أبواب. أما إن احتاجوا إلى تعليق زيّ العمل فالأنسب لوكرات بباب أو بابين.',
         },
+        { h: 'لوكرات أم خزانة حديدية؟' },
+        {
+          p: 'اللوكرات تناسب الأماكن التي يحتاج فيها كل شخص إلى خانة خاصة بقفل. أما إن كان الهدف حفظ ملفات القسم أو أدوات مشتركة، فالخزانة الحديدية ببابين أو بباب واحد أنسب، لأن فيها أرففًا واسعة يستعملها الفريق كله. وكثير من المكاتب يجمع بين الاثنين: لوكرات لأغراض الموظفين الشخصية، وخزائن حديدية للملفات والأدوات.',
+        },
+        { h: 'التركيب والسلامة' },
+        {
+          p: 'اللوكر عمود طويل وضيق، ولهذا ننصح بتثبيت الأعمدة ببعضها أو بالجدار، خصوصًا في المدارس والأندية حيث يكثر الأطفال والحركة. وضعوا الأعمدة على أرضية مستوية حتى تُغلق الأبواب بإحكام، واتركوا أمامها مساحة كافية لفتح الأبواب دون أن تعيق الممر.',
+        },
+        { h: 'مفاتيح اللوكرات' },
+        {
+          p: 'مع عشرات الخانات تتراكم المفاتيح الاحتياطية بسرعة، وتضيع حين يغادر موظف أو ينتهي العام الدراسي. احفظوا المفاتيح الاحتياطية مرقّمة في خزانة مفاتيح مقفلة، وسجّلوا رقم كل خانة واسم صاحبها، فيسهل تسليم الخانة واستلامها دون كسر قفل أو تغييره.',
+        },
         { h: 'الألوان' },
-        { p: 'نوفّر لوكرات GODREJ بألوان منها الأسود والبيج والأبيض العاجي.' },
+        {
+          p: 'نوفّر لوكرات GODREJ باللون البيج أو الزيتي.',
+        },
         { h: 'لمن تناسب اللوكرات؟' },
         {
-          p: 'الشركات والمصانع ومواقع العمل، والمدارس والجامعات، والأندية الرياضية وصالات الألعاب، والمستشفيات وغرف الموظفين.',
+          p: 'الشركات والمصانع ومواقع العمل، والمدارس والجامعات، والأندية الرياضية وصالات الألعاب، والمستشفيات وغرف الموظفين. وفي الأماكن الأكثر رطوبة مثل الأندية والمسابح، اهتموا بالمكان والتهوية والعناية اليومية أكثر من غيرها.',
         },
-        { p: 'أرسلوا لنا عدد الأشخاص ونوع الاستخدام، ونرشّح لكم التوزيع المناسب مع عرض سعر.' },
+        {
+          p: 'أرسلوا لنا عدد الأشخاص ونوع الاستخدام ومكان التركيب، ونرشّح لكم التوزيع المناسب مع عرض سعر.',
+        },
       ],
       en: [
         {
-          p: 'A steel locker gives every employee or student a private, lockable place for their belongings. It cuts clutter in the workplace, keeps belongings safe, and gives everyone a sense of privacy.',
+          p: 'A steel locker gives every employee or student a private, lockable place for their belongings and cuts clutter in the workplace. In Qatar, though, one question comes before the number of doors: will the locker stand up to humidity? Summer humidity, the nearby sea, and changing rooms beside pools and showers all make rust the biggest enemy of steel lockers. This article explains how to choose lockers that stay sound for years, where to put them and how to look after them.',
+        },
+        { h: 'Why do lockers rust?' },
+        {
+          p: 'Steel rusts when water and air reach it without a protective layer. The usual causes in lockers are a scratch in the paint that exposes the steel, wet items shut inside a compartment, floors washed with water that leave the locker’s base wet, and no airflow inside the compartment.',
+        },
+        { h: 'What to check before you buy' },
+        {
+          ul: [
+            'Finish: an even coat of paint covering the steel inside and out, with no scratches or bare patches.',
+            'Ventilation: openings in the doors that let air through, so moisture and odours do not build up inside. The GODREJ lockers we sell have ventilation louvres in their doors.',
+            'Steel and build quality: straight doors that close firmly, and hinges that do not wobble.',
+            'Locks: a lock on every compartment, so nobody has to leave their things exposed.',
+            'Brand: choose a known brand that is easy to get serviced in Qatar.',
+          ],
+        },
+        { h: 'Where to put lockers' },
+        {
+          ul: [
+            'Somewhere dry, away from drains and the spray of showers and pools.',
+            'On a dry floor or a slightly raised base, so the bottom of the locker does not sit in water when the floor is washed.',
+            'With a small gap from the wall if the wall is damp.',
+            'In an air-conditioned or well-ventilated space where possible, since heat together with humidity speeds up rust.',
+          ],
+        },
+        { h: 'Everyday care' },
+        {
+          ul: [
+            'Do not leave wet towels or clothes inside a compartment, especially in clubs and pools.',
+            'Wipe the locker with a cloth, water and mild soap, then dry it well.',
+            'Avoid harsh cleaners and chlorine on the paint, as they weaken it over time.',
+            'If a scratch exposes the steel, treat it with suitable paint straight away, before rust sets in.',
+            'Check the locks and hinges from time to time; small problems are easier to fix.',
+          ],
         },
         { h: 'How many doors per column?' },
         {
+          p: 'All our GODREJ lockers share roughly the same outside size, 38 × 183 × 45.7 cm (W × H × D), with a different number of doors in the column:',
+        },
+        {
           ul: [
-            'One door: a full-height space for one person, suited to hanging clothes and uniforms.',
-            'Two doors (two tiers): for two people in the same footprint, with reasonable room for clothes.',
-            'Three or four doors: for personal items and small bags.',
-            'Six doors: the most compartments in the least space, for phones, wallets and small items.',
+            'One door (LC1): a full-height space for one person, suited to hanging clothes and uniforms.',
+            'Two doors (LC2): for two people in the same footprint, with reasonable room for clothes.',
+            'Three doors (LC3) or four (LC4): for personal items and small bags.',
+            'Six doors (LC6): the most compartments in the least space, for phones, wallets and small items.',
           ],
+        },
+        {
+          p: 'If you expect more staff or students, plan for it from the start and leave room for extra columns beside the current ones. Since every type shares the same outside size, new columns can stand beside the old ones in one tidy row, even with a different number of doors.',
         },
         { h: 'How to work out how many you need' },
         {
           p: 'Start with the number of people on your busiest shift, then decide what each person needs to store. For example, 30 employees who only need to store their phones and bags are well served by five six-door columns. If they need to hang uniforms, lockers with one or two doors suit better.',
         },
+        { h: 'Lockers or a steel cupboard?' },
+        {
+          p: 'Lockers suit places where each person needs a private compartment with its own lock. If the aim is to store a department’s files or shared equipment, a one-door or two-door steel cupboard suits better, since its wide shelves serve the whole team. Many offices combine the two: lockers for staff belongings, and steel cupboards for files and equipment.',
+        },
+        { h: 'Installation and safety' },
+        {
+          p: 'A locker is a tall, narrow column, so we recommend fixing columns to each other or to the wall, especially in schools and clubs with children and lots of movement. Stand the columns on a level floor so the doors close firmly, and leave enough space in front to open the doors without blocking the walkway.',
+        },
+        { h: 'Locker keys' },
+        {
+          p: 'With dozens of compartments, spare keys pile up quickly and go missing when an employee leaves or the school year ends. Keep the spare keys numbered in a locked key cabinet, and record each compartment’s number and its owner, so handing a locker over and taking it back never means breaking or changing a lock.',
+        },
         { h: 'Colours' },
-        { p: 'We offer GODREJ lockers in colours including black, beige and off-white.' },
+        {
+          p: 'We offer GODREJ lockers in beige or olive.',
+        },
         { h: 'Who are lockers for?' },
         {
-          p: 'Companies, factories and work sites; schools and universities; sports clubs and gyms; hospitals and staff rooms.',
+          p: 'Companies, factories and work sites; schools and universities; sports clubs and gyms; hospitals and staff rooms. In the dampest places, such as clubs and pools, pay extra attention to placement, ventilation and daily care.',
         },
         {
-          p: 'Send us the number of people and the type of use, and we will recommend the right layout with a quotation.',
+          p: 'Send us the number of people, the type of use and where the lockers will go, and we will recommend the right layout with a quotation.',
         },
       ],
     },
-    products: ['godrej-single-steel-locker', 'godrej-two-tier-steel-locker', 'godrej-six-door-steel-locker'],
-    links: [{ category: 'steel-lockers' }, { page: 'request-quote' }],
+    products: ['godrej-single-steel-locker', 'godrej-two-tier-steel-locker', 'godrej-three-door-steel-locker', 'godrej-six-door-steel-locker'],
+    links: [{ category: 'steel-lockers' }, { category: 'steel-cupboards' }, { category: 'key-cabinets' }, { page: 'request-quote' }],
   },
   {
-    slug: 'safe-placement-and-care',
-    date: '2026-12-10',
+    slug: 'home-safe-for-the-bedroom',
+    date: '2026-11-17',
     title: {
-      ar: 'أين تضعون الخزنة في البيت؟ ونصائح للعناية بها لسنوات طويلة',
-      en: 'Where Should You Put Your Safe at Home? And How to Care for It for Years',
+      ar: 'خزنة غرفة النوم: أفضل مكان وحجم لخزنة البيت',
+      en: 'Home Safe for the Bedroom: The Best Place and Size',
     },
     description: {
-      ar: 'أفضل أماكن وضع الخزنة في البيت، وأخطاء شائعة يجب تجنّبها، ونصائح للعناية بالخزنة وأقفالها الإلكترونية. من خبرة مؤسسة نصر الله التجارية في قطر منذ 1906.',
-      en: 'The best places for a safe at home, common mistakes to avoid, and tips for caring for the safe and its electronic lock. From the experience of Nasrallah Trading Est in Qatar since 1906.',
+      ar: 'أين تضعون خزنة البيت في غرفة النوم، وما الحجم المناسب لخزانة الملابس، وكيف تثبتونها وتعتنون بها. نصائح من مؤسسة نصر الله التجارية في قطر منذ 1906.',
+      en: 'Where to put a home safe in the bedroom, what size fits a wardrobe, and how to anchor and care for it. Advice from Nasrallah Trading Est in Qatar since 1906.',
     },
     keywords: {
-      ar: 'أين أضع الخزنة، تثبيت الخزنة، صيانة الخزنة، بطارية الخزنة الإلكترونية',
-      en: 'where to put a safe, anchoring a safe, safe maintenance, electronic safe battery',
+      ar: 'خزنة غرفة النوم، خزنة للبيت، خزنة داخل الدولاب، أين أضع الخزنة، تجوري للبيت في قطر، مقاس خزنة البيت',
+      en: 'home safe for bedroom, bedroom safe, wardrobe safe, where to put a safe at home, home safe Qatar, home safe size',
     },
     body: {
       ar: [
         {
-          p: 'شراء خزنة جيدة نصف الطريق، والنصف الآخر هو المكان الذي تضعونها فيه وطريقة العناية بها. هذه خلاصة ما نقوله لعملائنا عند كل توصيل.',
+          p: 'غرفة النوم هي المكان الذي يختاره أغلب عملائنا لخزنة البيت، وهذا اختيار في محله: هي أكثر غرف البيت خصوصية، وبعيدة عن الضيوف والعمال، وقريبة منكم حين تحتاجون إلى ما في الخزنة. لكن نجاح هذا الاختيار يعتمد على أمرين: المكان الصحيح داخل الغرفة، والحجم الذي يناسب هذا المكان. هذه خلاصة ما نقوله لعملائنا عند كل توصيل.',
         },
-        { h: 'أماكن مناسبة للخزنة' },
+        { h: 'لماذا غرفة النوم؟' },
         {
           ul: [
-            'داخل خزانة الملابس: مخفية عن النظر وسهلة الوصول.',
-            'في غرفة النوم الرئيسية أو مكتب البيت، بعيدًا عن غرف الضيوف.',
-            'في زاوية يمكن فيها تثبيت الخزنة في الأرض أو الجدار.',
+            'خصوصية: لا يدخلها الزوار، ولا يراها من يأتي للصيانة أو التنظيف عادة.',
+            'سهولة الوصول: تفتحون الخزنة صباحًا ومساءً دون أن تمرّوا بغرف البيت.',
+            'المجوهرات والساعات قريبة من غرفة الملابس حيث تلبسونها.',
           ],
+        },
+        { h: 'أفضل الأماكن داخل غرفة النوم' },
+        {
+          ul: [
+            'داخل خزانة الملابس: مخفية عن النظر وسهلة الوصول، وهو المكان الأكثر شيوعًا.',
+            'في غرفة الملابس الملحقة بغرفة النوم، حيث تتسع لخزنة أكبر.',
+            'في زاوية يمكن فيها تثبيت الخزنة في الأرض أو الجدار.',
+            'بعيدًا عن النافذة، حتى لا تُرى من الخارج.',
+          ],
+        },
+        { h: 'ما الحجم المناسب لخزانة الملابس؟' },
+        {
+          p: 'قبل أن تختاروا الخزنة، قيسوا المكان: العرض، والارتفاع، والعمق من الداخل، مع ترك مسافة كافية لفتح باب الخزنة بالكامل. ثم قارنوا ذلك بالأبعاد الخارجية للخزنة، فهي المقاس الذي يدخل المكان، بينما الأبعاد الداخلية هي ما يتسع لأغراضكم. بعض الأمثلة من تشكيلتنا (عرض × ارتفاع × عمق):',
+        },
+        {
+          ul: [
+            'خزنة UCHIDA الصغيرة بقفل رقمي موديل HS-23KE: نحو 44.4 × 24.9 × 35.2 سم ووزنها 29 كجم، منخفضة الارتفاع فتناسب رفًا سفليًا في الدولاب.',
+            'خزنة UCHIDA بالبصمة موديل ZE-SS: نحو 43.3 × 35.6 × 37.2 سم ووزنها 33 كجم، لمن يريد فتحًا سريعًا بالبصمة.',
+            'خزنة SAKURA بالبصمة موديل ONS-FE: نحو 33 × 60.3 × 51.1 سم ووزنها 67 كجم، ضيقة وطويلة تناسب جانب الدولاب أو غرفة الملابس.',
+          ],
+        },
+        {
+          p: 'إن كنتم ستحفظون أوراقًا مهمة مع الذهب، فاختاروا خزنة مقاومة للحريق، وكلها مقاومة للحريق في الأمثلة السابقة. وإن كانت المجوهرات كثيرة، ففكّروا في خزنة مجوهرات بأدراج مبطّنة في غرفة الملابس بدل خزنة صغيرة في الدولاب.',
+        },
+        { h: 'اختاروا أكبر قليلًا مما تحتاجون' },
+        {
+          p: 'الخطأ الأكثر شيوعًا شراء خزنة على قدر الحاجة الحالية تمامًا، ثم امتلاؤها بعد عام. ضعوا ما تريدون حفظه على السرير وقيسوا المساحة التي يشغلها، ثم اختاروا خزنة أكبر منها قليلًا، بشرط أن تدخل المكان الذي قستموه.',
+        },
+        { h: 'خزنة واحدة أم اثنتان؟' },
+        {
+          p: 'بعض العائلات تفضّل خزنتين بدل خزنة كبيرة واحدة: خزنة صغيرة في غرفة النوم لما يُستعمل يوميًا مثل النقود والساعات التي تُلبس كثيرًا، وخزنة أكبر مقاومة للحريق في غرفة الملابس أو مكتب البيت للأوراق المهمة والذهب الذي لا يُلبس إلا في المناسبات. بهذا لا تُفتح الخزنة الكبيرة كل يوم، ولا يعرف كل من في البيت مكانها.',
+        },
+        { h: 'الأطفال والخزنة' },
+        {
+          p: 'إن كان في البيت أطفال، فاختاروا مكانًا لا يصلون إليه بسهولة، ولا تفتحوا الخزنة أمامهم. القفل الرقمي أو البصمة أفضل من المفتاح في هذه الحالة، لأن المفتاح قد يُعثر عليه ويُلعب به، أما الرقم السري والبصمة فيبقيان معكم وحدكم.',
+        },
+        { h: 'الوزن والأرضية والتوصيل' },
+        {
+          p: 'الخزائن الحديدية ثقيلة بطبيعتها، فتأكدوا أن رف الدولاب أو أرضيته يتحمل وزن الخزنة، والأفضل وضعها على الأرض مباشرة. وقيسوا الأبواب والممرات والدرج الذي ستمر منه عند التوصيل. التوصيل مجاني داخل قطر، والخزائن التي يزيد وزنها على 50 كجم يخضع توصيلها للتقييد طبقًا للموقع الداخلي للعميل.',
+        },
+        {
+          p: 'وإن كانت غرفة النوم في الطابق العلوي، فأخبرونا بذلك عند الطلب، وأخبرونا هل يوجد مصعد، وما عرض الدرج والأبواب. هذه المعلومات تساعد فريق التوصيل على تجهيز المعدات المناسبة، وتساعدنا على ترشيح خزنة يمكن إيصالها إلى المكان الذي اخترتموه بأمان.',
+        },
+        { h: 'تثبيت الخزنة' },
+        {
+          p: 'الخزنة الصغيرة يمكن حملها كاملة، ولهذا ننصح بتثبيتها في الأرض أو الجدار متى كان ذلك ممكنًا. التثبيت يجعل حملها صعبًا، ويحوّل الخزنة الصغيرة من غرض يمكن أخذه إلى جزء ثابت من البيت.',
         },
         { h: 'أخطاء شائعة' },
         {
           ul: [
             'وضع الخزنة في مجلس الضيوف أو مكان ظاهر للزوار والعمال.',
-            'وضعها في مكان رطب، فالرطوبة تضرّ المستندات والقفل الإلكتروني.',
+            'وضعها في مكان رطب، مثل جدار مشترك مع الحمّام، فالرطوبة تضرّ المستندات والقفل الإلكتروني.',
             'ترك المفتاح الاحتياطي فوق الخزنة أو في درج بجوارها.',
             'كتابة الرقم السري على ورقة ملصقة بالخزنة.',
           ],
         },
-        { h: 'العناية بالقفل الإلكتروني' },
+        { h: 'العناية بالخزنة وقفلها' },
         {
-          p: 'غيّروا البطاريات بانتظام، ولا تنتظروا حتى تضعف تمامًا، واتّبعوا إرشادات الشركة المصنّعة بحسب نوع البطارية. ونظّفوا قارئ البصمة بقطعة قماش ناعمة جافة.',
-        },
-        { h: 'العناية بالخزنة نفسها' },
-        {
-          p: 'امسحوا الخزنة من الغبار بقماش ناعم، وتجنّبوا المنظفات القوية على التشطيبات الخشبية والنحاسية. وإن لاحظتم أن الباب أصبح ثقيلًا أو أن القفل لا يستجيب كالمعتاد، تواصلوا معنا قبل أن تتفاقم المشكلة.',
+          p: 'غيّروا بطاريات القفل الإلكتروني بانتظام، ولا تنتظروا حتى تضعف تمامًا، ونظّفوا قارئ البصمة بقطعة قماش ناعمة جافة. امسحوا الخزنة من الغبار، وتجنّبوا المنظفات القوية على التشطيبات الخشبية والنحاسية. وإن لاحظتم أن الباب أصبح ثقيلًا أو أن القفل لا يستجيب كالمعتاد، تواصلوا معنا قبل أن تتفاقم المشكلة.',
         },
         { h: 'هل تحتاجون إلى نصيحة؟' },
-        { p: 'أرسلوا لنا صورة المكان الذي تفكّرون فيه على واتساب، ونخبركم بالمقاس المناسب له.' },
+        {
+          p: 'أرسلوا لنا صورة المكان ومقاساته على واتساب، ونخبركم بالخزنة التي تناسبه.',
+        },
       ],
       en: [
         {
-          p: 'Buying a good safe is half the job; the other half is where you put it and how you look after it. Here is what we tell our customers at every delivery.',
+          p: 'The bedroom is where most of our customers choose to keep their home safe, and with good reason: it is the most private room in the house, away from guests and workers, and close at hand when you need what is inside. But the choice only works if you get two things right: the right spot in the room, and a size that fits that spot. Here is what we tell our customers at every delivery.',
         },
-        { h: 'Good places for a safe' },
+        { h: 'Why the bedroom?' },
         {
           ul: [
-            'Inside a wardrobe: out of sight and easy to reach.',
-            'In the main bedroom or a home office, away from guest rooms.',
-            'In a corner where the safe can be anchored to the floor or wall.',
+            'Privacy: visitors do not go in, and people who come to clean or repair usually do not see it.',
+            'Easy access: you open the safe morning and evening without crossing the house.',
+            'Jewellery and watches stay close to the dressing room where you put them on.',
           ],
+        },
+        { h: 'The best places in the bedroom' },
+        {
+          ul: [
+            'Inside the wardrobe: out of sight and easy to reach, and the most common choice.',
+            'In a dressing room off the bedroom, where there is room for a larger safe.',
+            'In a corner where the safe can be anchored to the floor or wall.',
+            'Away from the window, so it cannot be seen from outside.',
+          ],
+        },
+        { h: 'What size fits a wardrobe?' },
+        {
+          p: 'Before choosing the safe, measure the spot: the inside width, height and depth, leaving enough room to open the safe’s door fully. Compare that with the safe’s outside dimensions, which are what must fit the space, while the inside dimensions are what holds your things. A few examples from our range (W × H × D):',
+        },
+        {
+          ul: [
+            'UCHIDA compact digital safe, model HS-23KE: about 44.4 × 24.9 × 35.2 cm and 29 kg. It is low, so it suits a bottom shelf in the wardrobe.',
+            'UCHIDA fingerprint safe, model ZE-SS: about 43.3 × 35.6 × 37.2 cm and 33 kg, for quick opening with a fingerprint.',
+            'SAKURA fingerprint safe, model ONS-FE: about 33 × 60.3 × 51.1 cm and 67 kg. It is narrow and tall, suited to the side of a wardrobe or a dressing room.',
+          ],
+        },
+        {
+          p: 'If you will keep important papers alongside your gold, choose a fire-resistant safe; all three examples above are fire-resistant. If you have a lot of jewellery, consider a jewellery safe with lined drawers in the dressing room rather than a small safe in the wardrobe.',
+        },
+        { h: 'Choose a little bigger than you need' },
+        {
+          p: 'The most common mistake is buying a safe that fits exactly what you have now, then filling it within a year. Lay what you want to keep on the bed, measure the space it takes, and choose a safe a little larger, as long as it still fits the spot you measured.',
+        },
+        { h: 'One safe or two?' },
+        {
+          p: 'Some families prefer two safes to one large one: a small safe in the bedroom for everyday things such as cash and the watches worn most, and a larger fire-resistant safe in the dressing room or home office for important papers and the gold worn only on occasions. That way the larger safe is not opened every day, and not everyone in the house needs to know where it is.',
+        },
+        { h: 'Children and the safe' },
+        {
+          p: 'If there are children in the house, choose a spot they cannot easily reach, and do not open the safe in front of them. A keypad or fingerprint lock is better than a key here, because a key can be found and played with, while a code and a fingerprint stay with you alone.',
+        },
+        { h: 'Weight, floor and delivery' },
+        {
+          p: 'Steel safes are heavy by nature, so make sure the wardrobe shelf or floor can carry the safe’s weight; it is best to stand it directly on the floor. Measure the doors, corridors and stairs it will pass through on delivery. Delivery is free within Qatar, and for safes over 50 kg it is subject to restrictions depending on access at the customer’s site.',
+        },
+        {
+          p: 'If the bedroom is upstairs, tell us when you order, and let us know whether there is a lift and how wide the stairs and doors are. This helps the delivery team bring the right equipment, and helps us recommend a safe that can reach the spot you chose safely.',
+        },
+        { h: 'Anchoring the safe' },
+        {
+          p: 'A small safe can be carried away whole, so we recommend anchoring it to the floor or wall whenever possible. Anchoring makes it hard to lift and turns a small safe from something that can be taken into a fixed part of the house.',
         },
         { h: 'Common mistakes' },
         {
           ul: [
             'Putting the safe in the majlis or anywhere visible to visitors and workers.',
-            'Placing it somewhere damp: humidity harms documents and the electronic lock.',
+            'Placing it somewhere damp, such as a wall shared with a bathroom: humidity harms documents and the electronic lock.',
             'Leaving the backup key on top of the safe or in a drawer next to it.',
             'Writing the code on a note stuck to the safe.',
           ],
         },
-        { h: 'Caring for the electronic lock' },
+        { h: 'Caring for the safe and its lock' },
         {
-          p: 'Change the batteries regularly and do not wait until they run completely flat, following the manufacturer’s instructions for the type of battery. Clean the fingerprint reader with a soft, dry cloth.',
-        },
-        { h: 'Caring for the safe itself' },
-        {
-          p: 'Dust the safe with a soft cloth and avoid harsh cleaners on wood and brass finishes. If you notice the door has become heavy or the lock does not respond as usual, contact us before the problem grows.',
+          p: 'Change the electronic lock’s batteries regularly and do not wait until they run completely flat, and clean the fingerprint reader with a soft, dry cloth. Dust the safe and avoid harsh cleaners on wood and brass finishes. If you notice the door has become heavy or the lock does not respond as usual, contact us before the problem grows.',
         },
         { h: 'Need advice?' },
-        { p: 'Send us a photo of the spot you have in mind on WhatsApp, and we will tell you the right size for it.' },
+        {
+          p: 'Send us a photo of the spot and its measurements on WhatsApp, and we will tell you which safe fits it.',
+        },
       ],
     },
-    products: [],
-    links: [{ page: 'safe-buying-guide' }, { article: 'opening-a-locked-safe-in-qatar' }],
+    products: ['uchida-compact-digital-safe', 'uchida-fingerprint-safe', 'sakura-fingerprint-safe', 'uchida-fire-resistant-jewellery-and-watch-safe'],
+    links: [{ category: 'home-safes' }, { page: 'safe-buying-guide' }, { article: 'choosing-a-home-safe' }],
   },
   {
     slug: 'upper-floor-safe-delivery',
@@ -960,23 +1302,23 @@ export const articleSources: ArticleSource[] = [
   },
   {
     slug: 'travel-jewellery-cases-for-weddings-and-travel',
-    date: '2026-12-22',
+    date: '2026-11-17',
     title: {
-      ar: 'شنط المجوهرات للسفر والأعراس: كيف تحملون مجوهراتكم بأمان خارج البيت؟',
-      en: 'Travel Jewellery Cases: How to Carry Your Jewellery Safely to Weddings and Abroad',
+      ar: 'شنطة مجوهرات للسفر: كيف تختارونها وتحمون مجوهراتكم في السفر والأعراس؟',
+      en: 'Travel Jewellery Case: How to Choose One and Protect Your Jewellery on the Move',
     },
     description: {
-      ar: 'كيف تحملون مجوهراتكم وساعاتكم بأمان في السفر والفنادق والحفلات والأعراس؟ شنط المجوهرات المقسّمة من الداخل من مؤسسة نصر الله التجارية، تصميم خاص لا تجدونه في مكان آخر في قطر.',
-      en: 'How to carry your jewellery and watches safely when travelling, in hotels, to parties and to weddings, with the divided travel jewellery cases from Nasrallah Trading Est, a special design you will not find anywhere else in Qatar.',
+      ar: 'كيف تختارون شنطة مجوهرات للسفر، وكيف تحمون الذهب والألماس والساعات في الطائرة والفندق والأعراس. شنط مجوهرات مقسّمة من الداخل من مؤسسة نصر الله التجارية في قطر.',
+      en: 'How to choose a travel jewellery case, and how to protect gold, diamonds and watches on the plane, in the hotel and at weddings. Divided jewellery cases from Nasrallah Trading Est in Qatar.',
     },
     keywords: {
-      ar: 'شنطة مجوهرات للسفر، حقيبة مجوهرات، شنطة ذهب للأعراس، حفظ المجوهرات في الفندق',
-      en: 'travel jewellery case, jewellery case Qatar, wedding jewellery case, jewellery storage for travel',
+      ar: 'شنطة مجوهرات للسفر، حقيبة مجوهرات للسفر، شنطة ذهب للأعراس، شنطة مجوهرات في قطر، حفظ المجوهرات في الفندق',
+      en: 'travel jewellery case, travel jewelry case, jewellery case Qatar, wedding jewellery case, jewellery storage for travel',
     },
     body: {
       ar: [
         {
-          p: 'الخزنة تحمي مجوهراتكم في البيت، لكن ماذا عن الأيام التي تخرج فيها المجوهرات معكم؟ السفر، والإقامة في فندق، وحفلات الأعراس والمناسبات، كلها مواقف تُحمل فيها أثمن القطع في علب متفرقة أو أكياس صغيرة، فتتلامس وتُخدش وتتشابك، ويسهل أن تضيع قطعة دون أن تنتبهوا.',
+          p: 'الخزنة تحمي مجوهراتكم في البيت، لكن ماذا عن الأيام التي تخرج فيها المجوهرات معكم؟ السفر، والإقامة في فندق، وحفلات الأعراس والمناسبات، كلها مواقف تُحمل فيها أثمن القطع في علب متفرقة أو أكياس صغيرة، فتتلامس وتُخدش وتتشابك، ويسهل أن تضيع قطعة دون أن تنتبهوا. شنطة المجوهرات للسفر تحل هذه المشكلة، بشرط أن تختاروها جيدًا.',
         },
         { h: 'لماذا لا تكفي علبة المجوهرات العادية؟' },
         {
@@ -984,6 +1326,19 @@ export const articleSources: ArticleSource[] = [
             'العلب الصغيرة المتفرقة يصعب تتبّعها، وتضيع بسهولة بين الأغراض.',
             'الأكياس القماشية لا تفصل القطع، فتتشابك السلاسل وتُخدش الأحجار.',
             'الساعات تحتاج إلى وسائد تحفظ شكل السوار، لا إلى درج مزدحم.',
+          ],
+        },
+        { h: 'كيف تختارون شنطة المجوهرات للسفر؟' },
+        {
+          p: 'قبل الشراء، فكّروا في هذه النقاط الخمس:',
+        },
+        {
+          ul: [
+            'الحجم: احسبوا عدد الأطقم التي تسافرون بها عادة. شنطة تحمل طقمًا كاملًا أو أكثر في مكان واحد أفضل من عدة علب صغيرة.',
+            'التقسيم الداخلي: ابحثوا عن خانات منفصلة للعقود والأساور والخواتم والأقراط، حتى لا تتلامس القطع.',
+            'الساعات: إن كنتم تسافرون بساعات، فاختاروا شنطة فيها وسائد تحفظ كل ساعة في مكانها.',
+            'البطانة: البطانة الناعمة تمنع الخدوش، وتحمي الذهب والأحجار من الاحتكاك أثناء الحركة.',
+            'الإغلاق والحمل: أقفال محكمة لا تنفتح بالخطأ، ومقبض متين يسهل حمله في اليد.',
           ],
         },
         { h: 'ما الذي يميّز شنط المجوهرات لدينا؟' },
@@ -1008,20 +1363,52 @@ export const articleSources: ArticleSource[] = [
             'الهدايا: شنطة مجوهرات مرتّبة هدية تليق بالعروس أو بمن يحب المجوهرات.',
           ],
         },
-        { h: 'نصائح لحمل المجوهرات خارج البيت' },
+        { h: 'ماذا تضعون في الشنطة؟' },
+        {
+          p: 'اكتبوا قائمة قصيرة بالقطع التي ستأخذونها، وضعوها داخل الشنطة نفسها أو صوّروها على الهاتف. عند كل انتقال، من البيت إلى المطار ومن الفندق إلى الحفل، راجعوا القائمة سريعًا. هذه العادة البسيطة تأخذ دقيقة واحدة، لكنها تكشف فورًا أي قطعة نُسيت في غرفة الفندق أو في صالون التجميل.',
+        },
+        { h: 'شنطة مجوهرات العروس' },
+        {
+          p: 'في الأعراس تتنقل أطقم الذهب والألماس بين البيت وصالون التجميل وقاعة الحفل، وغالبًا في ساعات مزدحمة يكثر فيها الناس والهدايا والحقائب. شنطة واحدة مقسّمة يحملها شخص واحد موثوق من أهل العروس، ويعرف ما فيها قطعة قطعة، أفضل بكثير من علب متفرقة تتوزع بين أكثر من يد. وبعد الحفل، تعود كل قطعة إلى خانتها قبل مغادرة القاعة، فيُعرف فورًا إن كان شيء ناقصًا.',
+        },
+        { h: 'كيف تحمون مجوهراتكم في السفر؟' },
         {
           ul: [
             'احملوا شنطة المجوهرات معكم في حقيبة اليد، ولا تضعوها في الحقائب المشحونة.',
-            'في الفندق، احفظوها في خزنة الغرفة أو خزنة الاستقبال حين تخرجون.',
+            'خذوا ما ستلبسونه فعلًا فقط، واتركوا باقي القطع في خزنة البيت.',
             'صوّروا الأطقم قبل السفر، ليسهل التأكد من وجود كل قطعة عند العودة.',
-            'أعيدوا كل قطعة إلى خانتها فور خلعها.',
+            'في الفندق، احفظوا الشنطة في خزنة الغرفة أو خزنة الاستقبال حين تخرجون، ولا تتركوها على الطاولة.',
+            'أعيدوا كل قطعة إلى خانتها فور خلعها، خصوصًا في آخر الليل بعد الحفلات.',
+            'لا تفتحوا الشنطة في الأماكن العامة أو أمام الغرباء.',
           ],
         },
-        { p: 'شاهدوا شنط المجوهرات في معرضنا، أو اسألونا عنها على واتساب.' },
+        { h: 'أخطاء شائعة في السفر بالمجوهرات' },
+        {
+          ul: [
+            'وضع المجوهرات في الحقيبة المشحونة لتوفير المساحة في حقيبة اليد.',
+            'لبس كل الأطقم في الطريق بدل حفظها في الشنطة.',
+            'ترك الشنطة في غرفة الفندق مفتوحة أو على السرير أثناء الخروج.',
+            'خلط الساعات مع الأساور في خانة واحدة، فتُخدش زجاجة الساعة.',
+          ],
+        },
+        {
+          p: 'وإن كانت الرحلة طويلة أو فيها أكثر من مناسبة، فرتّبوا الأطقم داخل الشنطة بحسب المناسبة: طقم لكل يوم أو لكل حفلة في خانات متجاورة. بهذا لا تُخرجون كل القطع كلما احتجتم إلى قطعة واحدة، ويقل احتمال أن تسقط قطعة صغيرة كالقرط أو الخاتم دون أن تنتبهوا لها.',
+        },
+        { h: 'العناية بالمجوهرات داخل الشنطة' },
+        {
+          p: 'ضعوا العطر ومستحضرات التجميل قبل لبس المجوهرات لا بعدها، وامسحوا القطع بقطعة قماش ناعمة قبل إعادتها إلى الشنطة. افصلوا اللؤلؤ والأحجار الرقيقة عن القطع الصلبة، واتركوا الشنطة في مكان جاف بعيدًا عن الحرارة والرطوبة.',
+        },
+        { h: 'وعند العودة إلى البيت' },
+        {
+          p: 'شنطة السفر ليست بديلًا عن الخزنة. عند العودة أعيدوا المجوهرات إلى خزنة المجوهرات في البيت، والأفضل خزنة مقاومة للحريق بأدراج مبطّنة تحفظ كل قطعة في مكانها. تعرّفوا على خزائن المجوهرات والساعات وأدراجها في القسم الخاص بها على موقعنا.',
+        },
+        {
+          p: 'شاهدوا شنط المجوهرات في معرضنا في الدوحة، أو اسألونا عنها على واتساب.',
+        },
       ],
       en: [
         {
-          p: 'A safe protects your jewellery at home, but what about the days your jewellery goes out with you? Travelling, staying in a hotel, weddings and celebrations are all times when the most precious pieces are carried in assorted boxes or small pouches, where they touch, scratch and tangle, and a piece can go missing without you noticing.',
+          p: 'A safe protects your jewellery at home, but what about the days your jewellery goes out with you? Travelling, staying in a hotel, weddings and celebrations are all times when the most precious pieces are carried in assorted boxes or small pouches, where they touch, scratch and tangle, and a piece can go missing without you noticing. A travel jewellery case solves this, provided you choose it well.',
         },
         { h: 'Why is an ordinary jewellery box not enough?' },
         {
@@ -1029,6 +1416,19 @@ export const articleSources: ArticleSource[] = [
             'Small separate boxes are hard to keep track of and easily lost among your things.',
             'Fabric pouches do not keep pieces apart, so chains tangle and stones get scratched.',
             'Watches need cushions that keep the strap’s shape, not a crowded drawer.',
+          ],
+        },
+        { h: 'How to choose a travel jewellery case' },
+        {
+          p: 'Before you buy, think about these five points:',
+        },
+        {
+          ul: [
+            'Size: count the sets you usually travel with. One case that carries a full set or more in one place beats several small boxes.',
+            'Inside layout: look for separate compartments for necklaces, bangles, rings and earrings, so pieces never touch.',
+            'Watches: if you travel with watches, choose a case with cushions that hold each watch in place.',
+            'Lining: a soft lining prevents scratches and protects gold and stones from rubbing as you move.',
+            'Closing and carrying: secure clasps that will not open by accident, and a sturdy handle that is easy to carry.',
           ],
         },
         { h: 'What makes our jewellery cases different?' },
@@ -1053,25 +1453,52 @@ export const articleSources: ArticleSource[] = [
             'Gifts: a well-arranged jewellery case is a gift worthy of a bride or anyone who loves jewellery.',
           ],
         },
-        { h: 'Tips for carrying jewellery away from home' },
+        { h: 'What goes in the case?' },
+        {
+          p: 'Write a short list of the pieces you are taking, and keep it inside the case or as a photo on your phone. At every move, from home to the airport and from the hotel to the party, check the list quickly. This simple habit takes a minute, but it shows at once if a piece was left in the hotel room or at the salon.',
+        },
+        { h: 'A jewellery case for the bride' },
+        {
+          p: 'At weddings, gold and diamond sets travel between the home, the salon and the wedding hall, often in busy hours full of people, gifts and bags. One divided case, carried by one trusted person from the bride’s family who knows every piece in it, is far better than separate boxes spread across several hands. After the party, every piece goes back in its compartment before leaving the hall, so you know at once if anything is missing.',
+        },
+        { h: 'How to protect your jewellery when travelling' },
         {
           ul: [
             'Keep the jewellery case with you in your hand luggage, never in checked bags.',
-            'At the hotel, lock it in the room safe or the front-desk safe when you go out.',
+            'Take only what you will actually wear, and leave the rest in the safe at home.',
             'Photograph your sets before you travel, so it is easy to check every piece on your return.',
-            'Put each piece back in its compartment as soon as you take it off.',
+            'At the hotel, lock the case in the room safe or the front-desk safe when you go out, and never leave it on the table.',
+            'Put each piece back in its compartment as soon as you take it off, especially late at night after a party.',
+            'Do not open the case in public places or in front of strangers.',
           ],
         },
-        { p: 'See the jewellery cases in our showroom, or ask us about them on WhatsApp.' },
+        { h: 'Common mistakes when travelling with jewellery' },
+        {
+          ul: [
+            'Packing jewellery in checked luggage to save room in your hand luggage.',
+            'Wearing every set on the journey instead of keeping them in the case.',
+            'Leaving the case open, or on the bed, in the hotel room while you are out.',
+            'Mixing watches with bangles in one compartment, so the watch glass gets scratched.',
+          ],
+        },
+        {
+          p: 'If the trip is long or has more than one occasion, arrange the sets in the case by occasion: a set for each day or each party in neighbouring compartments. That way you do not take everything out each time you need one piece, and a small earring or ring is less likely to fall without you noticing.',
+        },
+        { h: 'Caring for jewellery inside the case' },
+        {
+          p: 'Put on perfume and make-up before your jewellery, not after, and wipe each piece with a soft cloth before it goes back in the case. Keep pearls and delicate stones apart from harder pieces, and store the case somewhere dry, away from heat and humidity.',
+        },
+        { h: 'When you are back home' },
+        {
+          p: 'A travel case is not a substitute for a safe. When you get home, return your jewellery to the jewellery safe, ideally a fire-resistant safe with lined drawers that keep every piece in its place. See our jewellery and watch safes and their drawers in their own section of the site.',
+        },
+        {
+          p: 'See the jewellery cases in our showroom in Doha, or ask us about them on WhatsApp.',
+        },
       ],
     },
-    products: [
-      'travel-jewellery-cases',
-      'jewellery-display-drawers',
-      'watch-winder-safe',
-      'marble-interior-jewellery-safe',
-    ],
-    links: [{ category: 'jewellery-watch-interiors' }, { article: 'jewellery-and-watch-safes' }],
+    products: ['travel-jewellery-cases', 'jewellery-display-drawers', 'uchida-fire-resistant-jewellery-and-watch-safe', 'marble-interior-jewellery-safe'],
+    links: [{ category: 'jewellery-watch-interiors' }, { category: 'hotel-safes' }, { article: 'jewellery-and-watch-safes' }],
   },
   {
     slug: 'hotel-safes-for-rooms-and-serviced-apartments',

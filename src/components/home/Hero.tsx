@@ -44,12 +44,14 @@ export function Hero({ locale, dict, image }: Props) {
             {dict.eyebrow}
           </p>
 
-          <div className="display animate-settle mt-8 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
-            {/* The heading search engines and screen readers get is fixed: the lead and the first phrase. */}
-            <h1>
+          <h1 className="animate-settle mt-6 text-xl font-semibold text-pearl-50 sm:text-2xl">{dict.heading}</h1>
+
+          <div className="display animate-settle mt-5 text-[2.6rem] leading-[1.12] sm:text-6xl lg:text-[4.4rem]">
+            {/* The page heading is what people search for; the lead and first phrase follow it as a line. */}
+            <p>
               <span className="block">{dict.titleLead}</span>
               <span className="sr-only"> {dict.rotating[0]}</span>
-            </h1>
+            </p>
             {/* The rotating phrase is decoration only. Every phrase is stacked invisibly in one grid
                 cell so the box always fits the longest one; the trailing spaces keep their text apart. */}
             <span className="relative mt-1 grid" aria-hidden="true">

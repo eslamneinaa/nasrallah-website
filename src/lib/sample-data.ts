@@ -61,21 +61,21 @@ const catalogue: Product[] = [
   {
     _id: 'p1',
     slug: 'uchida-full-height-fire-resistant-safe',
-    name: { en: 'SAKURA Full-Height Fire-Resistant Safe, Model UBO-335E', ar: 'خزنة SAKURA مقاومة للحريق بارتفاع كامل موديل UBO-335E' },
+    name: { en: 'UCHIDA Full-Height Fire-Resistant Safe, Model UBO-335E', ar: 'خزنة UCHIDA مقاومة للحريق بارتفاع كامل موديل UBO-335E' },
     category: fire,
     shortDesc: {
-      en: 'A full-height SAKURA safe with an electronic keypad, key override and three heavy-duty hinges, for offices, banks and institutions.',
-      ar: 'خزنة SAKURA بارتفاع كامل، بقفل إلكتروني رقمي مع مفتاح احتياطي وثلاث مفصلات متينة، للمكاتب والبنوك والمؤسسات.',
+      en: 'A full-height UCHIDA safe with an electronic keypad, key override and three heavy-duty hinges, for offices, banks and institutions.',
+      ar: 'خزنة UCHIDA بارتفاع كامل، بقفل إلكتروني رقمي مع مفتاح احتياطي وثلاث مفصلات متينة، للمكاتب والبنوك والمؤسسات.',
     },
     fullDesc: desc(
-      'This full-height SAKURA safe is built to protect cash, records and valuables against fire and unauthorised access. Its electronic keypad is backed by a mechanical key, and the door is carried on three heavy-duty external hinges.',
-      'خزنة من SAKURA بارتفاع كامل، صُمّمت لحماية النقد والسجلات والمقتنيات الثمينة من الحريق والوصول غير المصرّح به. يعمل قفلها الإلكتروني الرقمي مع مفتاح ميكانيكي احتياطي، ويُحمل بابها على ثلاث مفصلات خارجية متينة.',
+      'This full-height UCHIDA safe is built to protect cash, records and valuables against fire and unauthorised access. Its electronic keypad is backed by a mechanical key, and the door is carried on three heavy-duty external hinges.',
+      'خزنة من UCHIDA بارتفاع كامل، صُمّمت لحماية النقد والسجلات والمقتنيات الثمينة من الحريق والوصول غير المصرّح به. يعمل قفلها الإلكتروني الرقمي مع مفتاح ميكانيكي احتياطي، ويُحمل بابها على ثلاث مفصلات خارجية متينة.',
     ),
     images: [
-      img('uchida-digital-safe', 1086, 1448, 'Full-height SAKURA fire-resistant safe in light grey with an electronic keypad', 'خزنة SAKURA مقاومة للحريق بارتفاع كامل بلون رمادي فاتح وقفل رقمي إلكتروني'),
+      img('uchida-digital-safe', 1086, 1448, 'Full-height UCHIDA fire-resistant safe in light grey with an electronic keypad', 'خزنة UCHIDA مقاومة للحريق بارتفاع كامل بلون رمادي فاتح وقفل رقمي إلكتروني'),
     ],
     specTable: [
-      brandSpec('SAKURA'),
+      brandSpec('UCHIDA'),
       spec('Lock', 'القفل', 'Electronic keypad with key override', 'قفل إلكتروني رقمي مع مفتاح احتياطي'),
       spec('Hinges', 'المفصلات', '3 heavy-duty external hinges', '3 مفصلات خارجية متينة'),
       spec('Finish', 'اللون', 'Light grey', 'رمادي فاتح'),

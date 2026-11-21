@@ -56,6 +56,24 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
     link: { path: 'products', label: { ar: 'تصفّح كل المنتجات', en: 'Browse all products' } },
   },
   {
+    id: 'uchida-pb-103-black',
+    url: '/videos/uchida-pb-103-black.mp4',
+    poster: '/videos/uchida-pb-103-black.webp',
+    orientation: 'portrait',
+    duration: 'PT30S',
+    uploadDate: '2026-11-21',
+    title: { ar: 'خزنة UCHIDA موديل PB-103 باللون الأسود', en: 'UCHIDA PB-103 safe in black' },
+    description: {
+      ar: 'خزنة مقاومة للحريق لمدة ساعتين بقفل رقمي ومفتاح، ونظرة داخل آلية القفل، ثم ثلاثة أرفف ودرج سفلي بقفل.',
+      en: 'A two-hour fire-resistant safe with keypad and key, a look inside the locking mechanism, then three shelves and a lockable bottom drawer.',
+    },
+    label: {
+      ar: 'فيديو: خزنة UCHIDA موديل PB-103 باللون الأسود، بقفل رقمي ومقبض وقفل مفتاح، ونظرة داخل آلية القفل، ثم تُفتح على ثلاثة أرفف ودرج سفلي بقفل',
+      en: 'Video: the UCHIDA PB-103 safe in black, with its keypad, handle and key lock, a look inside the locking mechanism, then the door opening onto three shelves and a lockable bottom drawer',
+    },
+    link: { path: 'products/uchida-white-safe-with-steel-shelves', label: { ar: 'تفاصيل الخزنة', en: 'See the safe' } },
+  },
+  {
     id: 'travel-jewellery-case',
     url: '/videos/travel-jewellery-case.mp4',
     poster: '/videos/travel-jewellery-case.webp',

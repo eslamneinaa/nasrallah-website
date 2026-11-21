@@ -90,9 +90,13 @@ export default async function VideosPage({ params }: LocaleParams) {
             </Reveal>
           ))}
 
-          <div className="mx-auto grid max-w-6xl gap-14 sm:grid-cols-2 xl:grid-cols-4">
+          {/* Rows of three with the last row centred: each clip is (100% − two 3.5rem gaps) / 3 wide. */}
+          <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-14">
             {portrait.map((v) => (
-              <Reveal key={v.id} className="grid content-start gap-8">
+              <Reveal
+                key={v.id}
+                className="grid w-full content-start gap-8 sm:w-[calc(50%-1.75rem)] lg:w-[calc(33.333%-2.334rem)]"
+              >
                 <div className="px-3">
                   <ShowcaseVideo
                     src={v.url}

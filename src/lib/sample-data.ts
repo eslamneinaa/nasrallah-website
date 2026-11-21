@@ -100,6 +100,18 @@ const catalogue: Product[] = [
       img('uchida-white-safe', 1086, 1448, 'White UCHIDA steel safe with a digital keypad and handle', 'خزنة UCHIDA فولاذية بيضاء بقفل رقمي ومقبض'),
       img('uchida-white-safe-open', 1312, 1199, 'The white UCHIDA safe open, with three steel shelves and a drawer', 'خزنة UCHIDA البيضاء مفتوحة، بثلاثة أرفف حديدية ودرج'),
     ],
+    video: {
+      url: '/videos/uchida-pb-103-black.mp4',
+      poster: '/videos/uchida-pb-103-black.webp',
+      label: {
+        en: 'Video: the UCHIDA PB-103 safe in black, with its keypad, handle and key lock, a look inside the locking mechanism, then the door opening onto three shelves and a lockable bottom drawer',
+        ar: 'فيديو: خزنة UCHIDA موديل PB-103 باللون الأسود، بقفل رقمي ومقبض وقفل مفتاح، ونظرة داخل آلية القفل، ثم تُفتح على ثلاثة أرفف ودرج سفلي بقفل',
+      },
+      body: {
+        en: 'The film shows this same safe in black: the keypad and key, a look inside the locking mechanism, then the shelves and bottom drawer. The safe comes in white, beige and black.',
+        ar: 'الفيديو للخزنة نفسها باللون الأسود: القفل الرقمي والمفتاح، ونظرة داخل آلية القفل، ثم الأرفف والدرج السفلي. والخزنة متوفرة بالأبيض والبيج والأسود.',
+      },
+    },
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Digital keypad with handle', 'قفل رقمي بلوحة أرقام ومقبض'),

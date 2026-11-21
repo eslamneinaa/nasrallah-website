@@ -123,13 +123,13 @@ const catalogue: Product[] = [
       'خزنة UCHIDA باللون الأسود، تُفتح بقفل رقمي وقفل مفتاح ومقبض على ثلاثة أرفف حديدية للملفات والنقود والعلب، ودرج سفلي بقفل للمقتنيات الصغيرة، ويُحمل بابها المتين على مفصلات خارجية.',
     ),
     images: [
-      img('uchida-black-safe', 480, 854, 'Black UCHIDA fire-resistant safe, model PB-104, closed, with a digital keypad and handle', 'خزنة UCHIDA سوداء مقاومة للحريق موديل PB-104 مغلقة، بقفل رقمي ومقبض'),
-      img('uchida-black-safe-open', 480, 854, 'The black UCHIDA PB-104 safe open, with three shelves and a lockable drawer below', 'خزنة UCHIDA السوداء موديل PB-104 مفتوحة، بثلاثة أرفف ودرج سفلي بقفل'),
-      img('uchida-black-safe-keypad', 480, 854, 'Digital keypad, key lock and handle on the black UCHIDA PB-104 safe', 'القفل الرقمي وقفل المفتاح والمقبض على خزنة UCHIDA السوداء موديل PB-104'),
+      img('uchida-pb-104-black-front', 480, 854, 'Black UCHIDA fire-resistant safe, model PB-104, closed, with a digital keypad and handle', 'خزنة UCHIDA سوداء مقاومة للحريق موديل PB-104 مغلقة، بقفل رقمي ومقبض'),
+      img('uchida-pb-104-black-open', 480, 854, 'The black UCHIDA PB-104 safe open, with three shelves and a lockable drawer below', 'خزنة UCHIDA السوداء موديل PB-104 مفتوحة، بثلاثة أرفف ودرج سفلي بقفل'),
+      img('uchida-pb-104-black-keypad', 480, 854, 'Digital keypad, key lock and handle on the black UCHIDA PB-104 safe', 'القفل الرقمي وقفل المفتاح والمقبض على خزنة UCHIDA السوداء موديل PB-104'),
     ],
     video: {
-      url: '/videos/uchida-pb-104-black.mp4',
-      poster: '/videos/uchida-pb-104-black.webp',
+      url: '/videos/uchida-pb-104-black-safe.mp4',
+      poster: '/videos/uchida-pb-104-black-safe.webp',
       label: {
         en: 'Video: the black UCHIDA PB-104 safe, with its keypad, handle and key lock, a look inside the locking mechanism, then the door opening onto three shelves and a lockable bottom drawer',
         ar: 'فيديو: خزنة UCHIDA موديل PB-104 باللون الأسود، بقفل رقمي ومقبض وقفل مفتاح، ونظرة داخل آلية القفل، ثم تُفتح على ثلاثة أرفف ودرج سفلي بقفل',

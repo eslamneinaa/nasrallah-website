@@ -57,8 +57,8 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
   },
   {
     id: 'uchida-pb-104-black',
-    url: '/videos/uchida-pb-104-black.mp4',
-    poster: '/videos/uchida-pb-104-black.webp',
+    url: '/videos/uchida-pb-104-black-safe.mp4',
+    poster: '/videos/uchida-pb-104-black-safe.webp',
     orientation: 'portrait',
     duration: 'PT30S',
     uploadDate: '2026-11-21',

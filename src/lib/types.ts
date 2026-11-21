@@ -32,8 +32,6 @@ export type ProductVideo = {
   url: string
   poster: string
   label: Localized
-  /** Text beside the video, in place of the general showroom line (e.g. when it shows another colour). */
-  body?: Localized
 }
 
 export type Product = {

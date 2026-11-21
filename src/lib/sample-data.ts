@@ -100,23 +100,46 @@ const catalogue: Product[] = [
       img('uchida-white-safe', 1086, 1448, 'White UCHIDA steel safe with a digital keypad and handle', 'خزنة UCHIDA فولاذية بيضاء بقفل رقمي ومقبض'),
       img('uchida-white-safe-open', 1312, 1199, 'The white UCHIDA safe open, with three steel shelves and a drawer', 'خزنة UCHIDA البيضاء مفتوحة، بثلاثة أرفف حديدية ودرج'),
     ],
-    video: {
-      url: '/videos/uchida-pb-103-black.mp4',
-      poster: '/videos/uchida-pb-103-black.webp',
-      label: {
-        en: 'Video: the UCHIDA PB-103 safe in black, with its keypad, handle and key lock, a look inside the locking mechanism, then the door opening onto three shelves and a lockable bottom drawer',
-        ar: 'فيديو: خزنة UCHIDA موديل PB-103 باللون الأسود، بقفل رقمي ومقبض وقفل مفتاح، ونظرة داخل آلية القفل، ثم تُفتح على ثلاثة أرفف ودرج سفلي بقفل',
-      },
-      body: {
-        en: 'The film shows this same safe in black: the keypad and key, a look inside the locking mechanism, then the shelves and bottom drawer. The safe comes in white, beige and black.',
-        ar: 'الفيديو للخزنة نفسها باللون الأسود: القفل الرقمي والمفتاح، ونظرة داخل آلية القفل، ثم الأرفف والدرج السفلي. والخزنة متوفرة بالأبيض والبيج والأسود.',
-      },
-    },
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Digital keypad with handle', 'قفل رقمي بلوحة أرقام ومقبض'),
       spec('Interior', 'التجهيز الداخلي', 'Three steel shelves and a drawer', 'ثلاثة أرفف حديدية ودرج'),
       spec('Finish', 'اللون', 'White', 'أبيض'),
+    ],
+    isFeatured: false,
+    order: 2,
+  },
+  {
+    _id: 'p52',
+    slug: 'uchida-black-safe-with-steel-shelves',
+    name: { en: 'UCHIDA Fire-Resistant Safe with Steel Shelves, Model PB-104', ar: 'خزنة UCHIDA مقاومة للحريق بأرفف حديدية موديل PB-104' },
+    category: fire,
+    shortDesc: {
+      en: 'A black UCHIDA fire-resistant safe with a digital keypad, key and handle, opening onto three steel shelves and a lockable drawer below.',
+      ar: 'خزنة UCHIDA سوداء مقاومة للحريق، بقفل رقمي ومفتاح ومقبض، تنفتح على ثلاثة أرفف حديدية ودرج سفلي بقفل.',
+    },
+    fullDesc: desc(
+      'A black UCHIDA safe that opens with a digital keypad, a key lock and a handle onto three steel shelves for files, cash and boxes, with a lockable drawer below for smaller valuables. Its heavy door is carried on external hinges.',
+      'خزنة UCHIDA باللون الأسود، تُفتح بقفل رقمي وقفل مفتاح ومقبض على ثلاثة أرفف حديدية للملفات والنقود والعلب، ودرج سفلي بقفل للمقتنيات الصغيرة، ويُحمل بابها المتين على مفصلات خارجية.',
+    ),
+    images: [
+      img('uchida-black-safe', 480, 854, 'Black UCHIDA fire-resistant safe, model PB-104, closed, with a digital keypad and handle', 'خزنة UCHIDA سوداء مقاومة للحريق موديل PB-104 مغلقة، بقفل رقمي ومقبض'),
+      img('uchida-black-safe-open', 480, 854, 'The black UCHIDA PB-104 safe open, with three shelves and a lockable drawer below', 'خزنة UCHIDA السوداء موديل PB-104 مفتوحة، بثلاثة أرفف ودرج سفلي بقفل'),
+      img('uchida-black-safe-keypad', 480, 854, 'Digital keypad, key lock and handle on the black UCHIDA PB-104 safe', 'القفل الرقمي وقفل المفتاح والمقبض على خزنة UCHIDA السوداء موديل PB-104'),
+    ],
+    video: {
+      url: '/videos/uchida-pb-104-black.mp4',
+      poster: '/videos/uchida-pb-104-black.webp',
+      label: {
+        en: 'Video: the black UCHIDA PB-104 safe, with its keypad, handle and key lock, a look inside the locking mechanism, then the door opening onto three shelves and a lockable bottom drawer',
+        ar: 'فيديو: خزنة UCHIDA موديل PB-104 باللون الأسود، بقفل رقمي ومقبض وقفل مفتاح، ونظرة داخل آلية القفل، ثم تُفتح على ثلاثة أرفف ودرج سفلي بقفل',
+      },
+    },
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Digital keypad, key and handle', 'قفل رقمي بلوحة أرقام، ومفتاح ومقبض'),
+      spec('Interior', 'التجهيز الداخلي', 'Three steel shelves and a lockable drawer', 'ثلاثة أرفف حديدية ودرج بقفل'),
+      spec('Finish', 'اللون', 'Black', 'أسود'),
     ],
     isFeatured: false,
     order: 2,

@@ -170,7 +170,7 @@ export default async function ProductPage({ params }: Props) {
                 <div>
                   <p className="eyebrow">{t.videoEyebrow}</p>
                   <h2 className="display mt-4 text-3xl text-maroon-900">{t.videoTitle}</h2>
-                  <p className="mt-4 leading-relaxed text-ink-500">{pick(product.video.body, locale) || t.videoBody}</p>
+                  <p className="mt-4 leading-relaxed text-ink-500">{t.videoBody}</p>
                 </div>
               </Reveal>
             )}

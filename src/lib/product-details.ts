@@ -45,6 +45,7 @@ export const productDetails: Record<string, ProductDetails> = {
   'uchida-designer-fire-resistant-safe': safeZ,
   'watch-winder-safe': { model: 'ZC-50', inside: [31.5, 38.6, 32.5], outside: [43.5, 52.9, 46.5], weightKg: 62, country: 'KOREA', fireHours: 1, colours: ['WHITE', 'BLACK', 'RED'] },
   'marble-interior-jewellery-safe': { model: 'PB-105', inside: [57.4, 149.9, 46], outside: [75, 175, 69.2], weightKg: 493, country: 'THAILAND', fireHours: 2, colours: ['BEIGE', 'WHITE', 'BLACK'] },
+  'uchida-black-safe-with-steel-shelves': { model: 'PB-104', price: 17990, inside: [57.4, 119.7, 46], outside: [75, 144.8, 63.2], weightKg: 407, country: 'THAILAND', fireHours: 2, colours: ['BLACK'] },
   'uchida-fire-resistant-jewellery-and-watch-safe': { model: 'PB-104', inside: [57.4, 119.7, 46], outside: [75, 144.8, 63.2], weightKg: 407, country: 'THAILAND', fireHours: 2, colours: ['BEIGE', 'WHITE', 'BLACK'] },
   // Drawer interiors: no sheet figures, price on request.
   'jewellery-display-drawers': {},

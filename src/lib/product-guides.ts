@@ -31,6 +31,16 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
       faq: { q: 'How is the inside arranged?', a: 'Three steel shelves for files, cash and boxes, with a drawer below for smaller valuables.' },
     },
   },
+  'uchida-black-safe-with-steel-shelves': {
+    ar: {
+      idealFor: ['المكاتب والشركات التي تحفظ الملفات والنقود في خزنة واحدة', 'البيوت التي تفضّل خزنة كبيرة بلون داكن', 'من يحتاج إلى درج بقفل منفصل داخل الخزنة'],
+      faq: { q: 'ما الفرق بينها وبين موديل PB-103؟', a: 'موديل PB-104 أطول: ارتفاعه الخارجي 144.8 سم مقابل 130 سم، وارتفاعه الداخلي 119.7 سم مقابل 104.9 سم، وكلاهما مقاوم للحريق لمدة ساعتين.' },
+    },
+    en: {
+      idealFor: ['Offices and companies keeping files and cash in one safe', 'Homes that prefer a large safe in a dark finish', 'Anyone who needs a separate lockable drawer inside the safe'],
+      faq: { q: 'How does it differ from model PB-103?', a: 'PB-104 is taller: 144.8 cm outside against 130 cm, and 119.7 cm inside against 104.9 cm. Both are rated for two hours of fire.' },
+    },
+  },
   'uchida-fingerprint-safe': {
     ar: {
       idealFor: ['من يريد فتح الخزنة بسرعة دون تذكّر رقم سري', 'البيوت التي يستخدم الخزنة فيها شخص أو شخصان', 'المكاتب الخاصة لحفظ النقود والأوراق المهمة'],

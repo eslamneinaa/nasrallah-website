@@ -58,15 +58,27 @@ export default async function VideosPage({ params }: LocaleParams) {
 
   const caption = (v: ShowcaseVideoItem) => (
     <div>
-      <h2 className="display text-2xl leading-snug text-maroon-900">{v.title[locale]}</h2>
+      <h2 className="display text-2xl leading-snug text-maroon-900">
+        <Link href={href(locale, `videos/${v.id}`)} className="hover:underline">
+          {v.title[locale]}
+        </Link>
+      </h2>
       <p className="mt-3 leading-relaxed text-ink-500">{v.description[locale]}</p>
-      <Link
-        href={href(locale, v.link.path)}
-        className="mt-4 inline-flex items-center gap-2 text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800"
-      >
-        {v.link.label[locale]}
-        <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
-      </Link>
+      <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+        <Link
+          href={href(locale, `videos/${v.id}`)}
+          className="inline-flex items-center gap-2 text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800"
+        >
+          {t.watch}
+        </Link>
+        <Link
+          href={href(locale, v.link.path)}
+          className="inline-flex items-center gap-2 text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800"
+        >
+          {v.link.label[locale]}
+          <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+        </Link>
+      </div>
     </div>
   )
 

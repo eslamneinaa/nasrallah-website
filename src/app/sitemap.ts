@@ -5,6 +5,7 @@ import { getArticles } from '@/lib/articles'
 import { categoryContent, collections } from '@/lib/category-content'
 import { categoryLastmod, pageLastmod, productLastmod } from '@/lib/lastmod'
 import { getCatalog } from '@/lib/sanity/api'
+import { durationSeconds, showcaseVideos } from '@/lib/videos'
 
 export const dynamic = 'force-static'
 
@@ -19,8 +20,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...Object.keys(collections).map((slug) => `categories/${slug}`),
     ...products.map((p) => `products/${p.slug}`),
     ...articles.map((a) => `articles/${a.slug}`),
+    ...showcaseVideos.map((v) => `videos/${v.id}`),
   ]
-  const published = new Map(articles.map((a) => [`articles/${a.slug}`, new Date(`${a.date}T00:00:00+03:00`)]))
+  const published = new Map<string, Date>([
+    ...articles.map((a) => [`articles/${a.slug}`, new Date(`${a.date}T00:00:00+03:00`)] as const),
+    ...showcaseVideos.map((v) => [`videos/${v.id}`, new Date(`${v.uploadDate}T00:00:00+03:00`)] as const),
+  ])
+  // Each video's own page carries its video sitemap entry.
+  const videoOf = new Map(showcaseVideos.map((v) => [`videos/${v.id}`, v]))
   // The real last change of each page (see lib/lastmod): articles by their date,
   // products and categories by their own data, the rest by their page file.
   const lastModified = (path: string) =>
@@ -40,6 +47,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: {
         languages: Object.fromEntries(locales.map((l) => [l, siteConfig.url + href(l, path)])),
       },
+      ...(videoOf.has(path)
+        ? (({ title, description, poster, url, duration, uploadDate }) => ({
+            videos: [
+              {
+                title: title[locale],
+                description: description[locale],
+                thumbnail_loc: siteConfig.url + poster,
+                content_loc: siteConfig.url + url,
+                duration: durationSeconds(duration),
+                publication_date: uploadDate,
+              },
+            ],
+          }))(videoOf.get(path)!)
+        : {}),
     })),
   )
 }

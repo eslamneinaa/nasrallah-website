@@ -82,6 +82,9 @@ const en = {
     metaDescription: 'Videos from the Nasrallah Trading Est showroom in Souq Al Ein, Doha: a showroom tour, jewellery and watch safes, and fire-resistant, luxury and deposit safes.',
     title: 'Explore Our Collection',
     subtitle: 'Tours and short videos from our Souq Al Ein showroom, so you can see the safes and drawers as they really are.',
+    watch: 'Watch the video',
+    all: 'All videos',
+    more: 'More videos',
   },
   popular: {
     eyebrow: 'Across the range',

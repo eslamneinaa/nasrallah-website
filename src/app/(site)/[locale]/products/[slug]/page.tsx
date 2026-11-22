@@ -20,6 +20,7 @@ import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
 import { categoryHref } from '@/lib/category-content'
 import { getCatalog, getProduct, getRelatedProducts } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
+import { showcaseVideos } from '@/lib/videos'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -64,6 +65,8 @@ export default async function ProductPage({ params }: Props) {
   const dict = getDictionary(locale)
   const t = dict.product
   const name = pick(product.name, locale) ?? ''
+  // The product's video also has a page of its own (videos/<id>).
+  const watchId = showcaseVideos.find((v) => v.url === product.video?.url)?.id
   const category = pick(product.category?.title, locale)
   const related = await getRelatedProducts(product)
   const guide = productGuides[product.slug]?.[locale]
@@ -171,6 +174,14 @@ export default async function ProductPage({ params }: Props) {
                   <p className="eyebrow">{t.videoEyebrow}</p>
                   <h2 className="display mt-4 text-3xl text-maroon-900">{t.videoTitle}</h2>
                   <p className="mt-4 leading-relaxed text-ink-500">{t.videoBody}</p>
+                  {watchId && (
+                    <Link
+                      href={href(locale, `videos/${watchId}`)}
+                      className="mt-4 inline-block text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800"
+                    >
+                      {dict.videos.watch}
+                    </Link>
+                  )}
                 </div>
               </Reveal>
             )}

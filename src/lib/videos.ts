@@ -17,6 +17,12 @@ export type ShowcaseVideoItem = {
   link: { path: string; label: Record<Locale, string> }
 }
 
+/** ISO 8601 duration (PT1M18S) in seconds, for the video sitemap. */
+export const durationSeconds = (iso: string) => {
+  const [, m = '0', s = '0'] = iso.match(/^PT(?:(\d+)M)?(?:(\d+)S)?$/) ?? []
+  return Number(m) * 60 + Number(s)
+}
+
 /** Every showroom video, newest and widest first. Source files live in /video (not in git). */
 export const showcaseVideos: ShowcaseVideoItem[] = [
   {

@@ -1099,6 +1099,14 @@ const catalogue: Product[] = [
       img('uchida-hotel-safe-black', 1448, 1086, 'Low black UCHIDA hotel safe with a chrome key lock and two external hinges', 'خزنة فندقية UCHIDA سوداء منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين'),
       img('uchida-hotel-safe-ivory', 1586, 992, 'Low ivory UCHIDA hotel safe with a chrome key lock and two external hinges', 'خزنة فندقية UCHIDA عاجية منخفضة بقفل مفتاح من الكروم ومفصلتين خارجيتين'),
     ],
+    video: {
+      url: '/videos/uchida-key-hotel-safe.mp4',
+      poster: '/videos/uchida-key-hotel-safe.webp',
+      label: {
+        en: 'Video: a hotel corridor and a room overlooking the city at night, then the beige UCHIDA hotel safe in the room’s wardrobe, its key lock up close, and the safe opened to show a wallet, a gold necklace and a phone',
+        ar: 'فيديو: ممر فندق وغرفة تطل على المدينة ليلًا، ثم خزنة UCHIDA الفندقية بلون البيج داخل خزانة الغرفة، وقفل المفتاح عن قرب، ثم تُفتح وبداخلها محفظة وعقد ذهبي وهاتف',
+      },
+    },
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Key', 'مفتاح'),

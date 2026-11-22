@@ -369,9 +369,9 @@ const en = {
     imageOf: 'Image {n} of {total}',
     prev: 'Previous image',
     next: 'Next image',
-    videoEyebrow: 'In the showroom',
+    videoEyebrow: 'On video',
     videoTitle: 'See it up close',
-    videoBody: 'A short film from our showroom. Visit us in Souq Al Ein to open the drawers yourself.',
+    videoBody: 'A short film showing it up close. Visit our showroom in Souq Al Ein to see it in person.',
     assurances: ['Original UCHIDA, SAKURA, GODREJ & KUROGANE', 'Trusted since 1906', 'Personal showroom advice'],
   },
   quote: {

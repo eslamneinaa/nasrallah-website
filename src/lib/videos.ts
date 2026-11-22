@@ -56,6 +56,24 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
     link: { path: 'products', label: { ar: 'تصفّح كل المنتجات', en: 'Browse all products' } },
   },
   {
+    id: 'uchida-key-hotel-safe',
+    url: '/videos/uchida-key-hotel-safe.mp4',
+    poster: '/videos/uchida-key-hotel-safe.webp',
+    orientation: 'portrait',
+    duration: 'PT30S',
+    uploadDate: '2026-11-22',
+    title: { ar: 'خزنة UCHIDA الفندقية في غرفة الفندق', en: 'UCHIDA hotel safe in a hotel room' },
+    description: {
+      ar: 'خزنة فندقية مقاومة للحريق بقفل مفتاح، تدخل في خزانة الغرفة وتتسع للمحفظة والهاتف والمجوهرات.',
+      en: 'A fire-resistant hotel safe with a key lock that fits in the room’s wardrobe and holds a wallet, a phone and jewellery.',
+    },
+    label: {
+      ar: 'فيديو: ممر فندق وغرفة تطل على المدينة ليلًا، ثم خزنة UCHIDA الفندقية بلون البيج داخل خزانة الغرفة، وقفل المفتاح عن قرب، ثم تُفتح وبداخلها محفظة وعقد ذهبي وهاتف',
+      en: 'Video: a hotel corridor and a room overlooking the city at night, then the beige UCHIDA hotel safe in the room’s wardrobe, its key lock up close, and the safe opened to show a wallet, a gold necklace and a phone',
+    },
+    link: { path: 'products/uchida-key-hotel-safe', label: { ar: 'تفاصيل الخزنة', en: 'See the safe' } },
+  },
+  {
     id: 'uchida-pb-104-black',
     url: '/videos/uchida-pb-104-black-safe.mp4',
     poster: '/videos/uchida-pb-104-black-safe.webp',

@@ -46,6 +46,17 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: a walk through the Nasrallah Trading Est showroom, past fire-resistant, deposit, luxury and filing safes, steel cabinets and lockers',
     },
     link: { path: 'contact', label: { ar: 'موقع المعرض وساعات العمل', en: 'Showroom location and hours' } },
+    about: {
+      ar: [
+        'تبدأ الجولة من واجهة معرض مؤسسة نصر الله التجارية في سوق العين على طريق سلوى بالدوحة، ثم تدخل المعرض بين صفوف الخزائن كما هي على الطبيعة. أول ما تمرّ عليه قسم الخزائن المقاومة للحريق بأحجام وألوان وأقفال مختلفة، ثم خزائن الإيداع والمكاتب، والخزائن بتصاميم فاخرة.',
+        'بعدها تعرض خزائن الملفات المقاومة للحريق، وخزائن الملفات المعدنية، والكبائن المعدنية واللوكرات، ومنها كبائن بأبواب زجاجية، ثم تعود إلى واجهة المعرض. كل ما يظهر في الفيديو تجدونه في أقسام الموقع أدناه، ويمكنكم زيارة المعرض لمشاهدته على الطبيعة.',
+      ],
+      en: [
+        'The tour starts at the front of the Nasrallah Trading Est showroom in Souq Al Ein on Salwa Road, Doha, then goes inside among the rows of safes as they really are. First comes the fire-resistant safe section, in different sizes, colours and locks, then deposit and office safes, and safes with luxury designs.',
+        'It goes on to fire-resistant filing cabinets, steel filing cabinets, and steel cabinets and lockers, including glass-door cabinets, then returns to the showroom front. Everything in the video is in the sections of the site below, and you can visit the showroom to see it in person.',
+      ],
+    },
+    sections: ['fire-resistant-safes', 'deposit-safes', 'luxury-safes', 'filing-cabinets', 'steel-cupboards', 'steel-lockers'],
   },
   {
     id: 'collection-tour',

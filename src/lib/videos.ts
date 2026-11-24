@@ -15,6 +15,10 @@ export type ShowcaseVideoItem = {
   label: Record<Locale, string>
   /** Where to go next: a product or category path, without the locale. */
   link: { path: string; label: Record<Locale, string> }
+  /** Optional paragraphs on the video's own page, describing only what the video shows. */
+  about?: Record<Locale, string[]>
+  /** Category slugs the video shows, linked under those paragraphs. */
+  sections?: string[]
 }
 
 /** ISO 8601 duration (PT1M18S) in seconds, for the video sitemap. */
@@ -60,6 +64,17 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: a tour of the Nasrallah Trading Est range, from the showroom front to jewellery and watch safes and cases, luxury and fire-resistant safes, deposit and filing safes, and steel cupboards',
     },
     link: { path: 'products', label: { ar: 'تصفّح كل المنتجات', en: 'Browse all products' } },
+    about: {
+      ar: [
+        'تبدأ الجولة من واجهة معرض مؤسسة نصر الله التجارية في سوق العين على طريق سلوى بالدوحة، ثم تمرّ على أقسام التشكيلة قسمًا بعد قسم: خزائن المجوهرات والساعات بأدراجها المبطّنة، وشنط المجوهرات، والخزائن بتصاميم فاخرة، ثم الخزائن المقاومة للحريق بأحجام وألوان وأقفال مختلفة.',
+        'بعدها تعرض خزائن الإيداع وصناديق النقود، وخزائن الملفات المقاومة للحريق، والكبائن المعدنية من خزائن ملفات حديدية ولوكرات ودواليب، وتنتهي عند واجهة المعرض. كل ما يظهر في الفيديو تجدونه في أقسام الموقع أدناه، ويمكنكم مشاهدته على الطبيعة في المعرض.',
+      ],
+      en: [
+        'The tour starts at the front of the Nasrallah Trading Est showroom in Souq Al Ein on Salwa Road, Doha, then moves through the range section by section: jewellery and watch safes with their lined drawers, jewellery cases, safes with luxury designs, then fire-resistant safes in different sizes, colours and locks.',
+        'It goes on to deposit safes and cash boxes, fire-resistant filing cabinets, and steel cabinets, from steel filing cabinets to lockers and cupboards, and ends back at the showroom front. Everything in the video is in the sections of the site below, and you can see it in person at the showroom.',
+      ],
+    },
+    sections: ['jewellery-watch-interiors', 'luxury-safes', 'fire-resistant-safes', 'deposit-safes', 'cash-boxes', 'filing-cabinets', 'steel-cupboards', 'steel-lockers'],
   },
   {
     id: 'uchida-key-hotel-safe',

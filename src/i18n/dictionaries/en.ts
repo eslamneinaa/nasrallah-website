@@ -85,6 +85,8 @@ const en = {
     watch: 'Watch the video',
     all: 'All videos',
     more: 'More videos',
+    about: 'About this video',
+    sections: 'Sections shown in the video',
   },
   popular: {
     eyebrow: 'Across the range',

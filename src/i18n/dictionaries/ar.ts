@@ -87,6 +87,8 @@ const ar: Dictionary = {
     watch: 'شاهد الفيديو',
     all: 'كل الفيديوهات',
     more: 'فيديوهات أخرى',
+    about: 'عن الفيديو',
+    sections: 'الأقسام التي يعرضها الفيديو',
   },
   popular: {
     eyebrow: 'من كل الأقسام',

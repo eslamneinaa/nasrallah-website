@@ -8,6 +8,8 @@ import { PageHero } from '@/components/PageHero'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { siteConfig } from '@/config/site'
 import { getDictionary, href } from '@/i18n'
+import { categoryHref } from '@/lib/category-content'
+import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
 import { durationSeconds, showcaseVideos } from '@/lib/videos'
 
@@ -41,6 +43,8 @@ export default async function VideoPage({ params }: Props) {
   const pageUrl = siteConfig.url + href(locale, `videos/${video.id}`)
   const others = showcaseVideos.filter((v) => v.id !== video.id)
   const landscape = video.orientation === 'landscape'
+  const { categories } = await getCatalog()
+  const sections = (video.sections ?? []).flatMap((slug) => categories.filter((c) => c.slug === slug))
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -106,6 +110,31 @@ export default async function VideoPage({ params }: Props) {
               </div>
             </div>
           </Reveal>
+
+          {video.about && (
+            <div className="mx-auto mt-20 max-w-2xl">
+              <h2 className="display text-3xl text-maroon-900">{t.about}</h2>
+              <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink-600">
+                {video.about[locale].map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              {sections.length > 0 && (
+                <>
+                  <h2 className="display mt-12 text-2xl text-maroon-900">{t.sections}</h2>
+                  <ul className="mt-5 flex flex-wrap gap-3">
+                    {sections.map((c) => (
+                      <li key={c.slug}>
+                        <Link href={categoryHref(locale, c.slug)} className="btn-outline">
+                          {c.title[locale]}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
+          )}
 
           <div className="mx-auto mt-24 max-w-5xl border-t border-gold-500/30 pt-14">
             <h2 className="display text-center text-3xl text-maroon-900">{t.more}</h2>

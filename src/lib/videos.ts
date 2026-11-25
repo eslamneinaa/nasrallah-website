@@ -133,6 +133,17 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: a hotel corridor and a room overlooking the city at night, then the beige UCHIDA hotel safe in the room’s wardrobe, its key lock up close, and the safe opened to show a wallet, a gold necklace and a phone',
     },
     link: { path: 'products/uchida-key-hotel-safe', label: { ar: 'تفاصيل الخزنة', en: 'See the safe' } },
+    about: {
+      ar: [
+        'يبدأ الفيديو في ممر فندق مفروش بسجاد أحمر، ثم يقف عند باب غرفة ويدخلها: غرفة نوم واسعة بنافذة كبيرة تطل على أبراج المدينة ليلًا.',
+        'داخل خزانة الغرفة تظهر خزنة UCHIDA الفندقية بلون البيج، ثم قفل المفتاح عن قرب، ثم تُفتح الخزنة وبداخلها محفظة وعقد ذهبي وهاتف، ويُغلق بابها من جديد. تفاصيل الخزنة في صفحة المنتج، ويمكنكم مشاهدتها على الطبيعة في معرضنا بسوق العين.',
+      ],
+      en: [
+        'The video opens in a hotel corridor laid with red carpet, then stops at a room door and goes in: a large bedroom with a wide window overlooking the city towers at night.',
+        'Inside the room’s wardrobe stands the beige UCHIDA hotel safe. Its key lock is shown up close, then the safe opens to show a wallet, a gold necklace and a phone, and its door closes again. The safe’s details are on the product page, and you can see it in person at our showroom in Souq Al Ein.',
+      ],
+    },
+    sections: ['hotel-safes'],
   },
   {
     id: 'uchida-pb-104-black',
@@ -151,6 +162,17 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: the black UCHIDA PB-104 safe, with its keypad, handle and key lock, a look inside the locking mechanism, then the door opening onto three shelves and a lockable bottom drawer',
     },
     link: { path: 'products/uchida-black-safe-with-steel-shelves', label: { ar: 'تفاصيل الخزنة', en: 'See the safe' } },
+    about: {
+      ar: [
+        'يعرض الفيديو خزنة UCHIDA موديل PB-104 باللون الأسود: تظهر أولًا مغلقة، ثم عن قرب المقبض وقفل المفتاح ولوحة القفل الرقمي، ثم مقطع يكشف آلية القفل من الداخل.',
+        'بعدها يُفتح الباب على ثلاثة أرفف ودرج سفلي بقفل، ثم يُغلق من جديد. تفاصيل الخزنة في صفحة المنتج، ويمكنكم مشاهدتها على الطبيعة في معرضنا بسوق العين.',
+      ],
+      en: [
+        'The video shows the UCHIDA PB-104 safe in black: first closed, then up close its handle, key lock and digital keypad, then a cutaway that reveals the locking mechanism inside.',
+        'The door then opens onto three shelves and a lockable bottom drawer, and closes again. The safe’s details are on the product page, and you can see it in person at our showroom in Souq Al Ein.',
+      ],
+    },
+    sections: ['fire-resistant-safes'],
   },
   {
     id: 'travel-jewellery-case',
@@ -169,6 +191,17 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: a black crocodile-texture jewellery case with gold-tone clasps opened, then two gold necklaces, bangles and earrings placed in its brown velvet compartments',
     },
     link: { path: 'products/travel-jewellery-cases', label: { ar: 'تفاصيل الشنطة', en: 'See the case' } },
+    about: {
+      ar: [
+        'يبدأ الفيديو بشنطة مجوهرات سوداء بملمس جلد التمساح وأقفال ذهبية، تفتح يدٌ أقفالها ثم ترفع غطاءها، فتظهر من الداخل خانات مبطّنة بالمخمل البني.',
+        'توضع في الخانات قطعة بعد قطعة: عقدان من الذهب، وأساور، وأقراط، ثم تُغلق الشنطة بأقفالها. تفاصيل الشنطة في صفحة المنتج، ويمكنكم مشاهدتها على الطبيعة في معرضنا بسوق العين.',
+      ],
+      en: [
+        'The video opens on a black crocodile-texture jewellery case with gold-tone clasps. A hand opens the clasps and lifts the lid to show compartments lined in brown velvet.',
+        'Piece by piece, two gold necklaces, bangles and earrings go into the compartments, then the case is closed with its clasps. The case’s details are on the product page, and you can see it in person at our showroom in Souq Al Ein.',
+      ],
+    },
+    sections: ['jewellery-watch-interiors'],
   },
   {
     id: 'uchida-jewellery-safe',
@@ -187,6 +220,17 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: the off-white UCHIDA safe opened by keypad, then its beige velvet drawers pulled out to show necklaces, bracelets, rings, earrings and watches',
     },
     link: { path: 'products/uchida-fire-resistant-jewellery-and-watch-safe', label: { ar: 'تفاصيل الخزنة', en: 'See the safe' } },
+    about: {
+      ar: [
+        'يبدأ الفيديو بسيدة ورجل يتجهان إلى خزنة UCHIDA بلون أبيض عاجي، ثم تُفتح بالقفل الرقمي ولوحة الأرقام والمفتاح.',
+        'في الداخل أدراج بلون الخشب مبطّنة بالمخمل البيج، تُسحب درجًا بعد درج: عقود على مجسّمات، وأساور، وخواتم وأقراط في خانات صغيرة، ثم درج كامل للساعات، ثم يُغلق باب الخزنة. تفاصيل الخزنة في صفحة المنتج، ويمكنكم مشاهدتها على الطبيعة في معرضنا بسوق العين.',
+      ],
+      en: [
+        'The video opens with a woman and a man walking up to an off-white UCHIDA safe, which is opened with its digital keypad and key.',
+        'Inside are wood-coloured drawers lined in beige velvet, pulled out one by one: necklaces on busts, bracelets, rings and earrings in small compartments, then a whole drawer of watches, before the safe’s door is closed. The safe’s details are on the product page, and you can see it in person at our showroom in Souq Al Ein.',
+      ],
+    },
+    sections: ['jewellery-watch-interiors'],
   },
   {
     id: 'jewellery-safe-oak',
@@ -205,6 +249,17 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: a grey-oak jewellery safe in our showroom, its blue velvet drawers holding bangles, watches, rings and a diamond set',
     },
     link: { path: 'products/wood-and-brass-drawer-interior', label: { ar: 'تفاصيل الأدراج', en: 'See the drawers' } },
+    about: {
+      ar: [
+        'يعرض الفيديو خزنة مجوهرات سوداء بابها مفتوح على أدراج بلون البلوط الرمادي ومقابض نحاسية، وأمامها سيدة ورجل يتصفحان الأدراج.',
+        'تُسحب الأدراج المبطّنة بالمخمل الأزرق واحدًا بعد الآخر: أساور، وساعات على وسائد، وخواتم وأقراط، وطقم من عقد وأقراط وسوار، ثم تظهر الخزنة مغلقة بقفلها الرقمي. تفاصيل الأدراج في صفحة المنتج، ويمكنكم مشاهدتها على الطبيعة في معرضنا بسوق العين.',
+      ],
+      en: [
+        'The video shows a black jewellery safe with its door open on grey-oak drawers with brass handles, as a woman and a man look through them.',
+        'The blue velvet drawers are pulled out one after another: bangles, watches on cushions, rings and earrings, and a set of necklace, earrings and bracelet, before the safe is shown closed with its digital lock. The drawers’ details are on the product page, and you can see it in person at our showroom in Souq Al Ein.',
+      ],
+    },
+    sections: ['jewellery-watch-interiors'],
   },
   {
     id: 'jewellery-safe-green',
@@ -223,5 +278,16 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       en: 'Video: an UCHIDA safe opened with key and code, revealing green leather drawers with a necklace bust, watches, bangles and rings',
     },
     link: { path: 'categories/jewellery-watch-interiors', label: { ar: 'خزائن المجوهرات والساعات', en: 'Jewellery and watch safes' } },
+    about: {
+      ar: [
+        'يبدأ الفيديو بسيدة تتجه إلى خزنة UCHIDA سوداء، ثم تفتحها بالمفتاح والرقم السري.',
+        'في الداخل أدراج من الجلد الأخضر بمقابض ذهبية، تُسحب واحدًا بعد الآخر: مجسّم عليه عقد وسوار، وساعات، وأساور، وخواتم، ثم تظهر الخزنة كاملة بأدراجها الخضراء ثم مغلقة. تفاصيل خزائن المجوهرات في قسمها على الموقع، ويمكنكم مشاهدتها على الطبيعة في معرضنا بسوق العين.',
+      ],
+      en: [
+        'The video opens with a woman walking up to a black UCHIDA safe and opening it with its key and code.',
+        'Inside are green leather drawers with gold handles, pulled out one after another: a bust with a necklace and bracelet, watches, bangles and rings. The safe is then shown whole with its green drawers, and closed. Jewellery safes are in their section of the site, and you can see it in person at our showroom in Souq Al Ein.',
+      ],
+    },
+    sections: ['jewellery-watch-interiors'],
   },
 ]

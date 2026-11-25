@@ -69,6 +69,7 @@ export const productDetails: Record<string, ProductDetails> = {
   'godrej-three-drawer-filing-cabinet': { model: 'VFC3', price: 725, outside: [41.5, 101, 62], weightKg: 28, country: 'OMAN', colours: ['BEIGE', 'GREY', 'WHITE'], extra: [hanging] },
   'godrej-five-drawer-filing-cabinet': { model: 'VFC5', price: 960, outside: [41.5, 162.5, 62], weightKg: 38, country: 'OMAN', colours: ['GREY', 'BLACK'], extra: [hanging] },
   'uchida-fingerprint-safe': { model: 'ZE-SS', price: 2250, inside: [33.7, 23.7, 24.2], outside: [43.3, 35.6, 37.2], weightKg: 33, country: 'KOREA', fireHours: 1, colours: ['WHITE', 'BLACK'] },
+  'uchida-beige-digital-safe': { model: 'BK-172KE', price: 7150, outside: [58, 85, 51.6], weightKg: 144, country: 'KOREA', colours: ['BEIGE'] },
   'uchida-black-digital-safe': { model: 'BK-265KE', price: 9950, inside: [49.3, 99.3, 41.9], outside: [64, 122, 60], weightKg: 245, country: 'KOREA', fireHours: 2, colours: ['BEIGE', 'BLACK'] },
   'uchida-compact-digital-safe': { model: 'HS-23KE', price: 1390, inside: [32.9, 14.4, 22.4], outside: [44.4, 24.9, 35.2], weightKg: 29, country: 'KOREA', fireHours: 1, colours: ['BEIGE', 'BLACK'] },
   'uchida-double-door-safe': { model: 'E-526', price: 27450, inside: [88.6, 135, 44], outside: [104, 157, 68.7], weightKg: 550, country: 'THAILAND', fireHours: 2, colours: ['BEIGE'] },

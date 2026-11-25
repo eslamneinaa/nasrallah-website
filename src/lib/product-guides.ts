@@ -51,6 +51,16 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
       faq: { q: 'Can the safe be opened without a fingerprint?', a: 'Yes. It has a touch keypad alongside the fingerprint reader.' },
     },
   },
+  'uchida-beige-digital-safe': {
+    ar: {
+      idealFor: ['البيوت التي تحفظ النقود والمستندات في خزنة متوسطة الحجم', 'المكاتب والمحلات التي تحتاج قفلًا رقميًا مع قفل مفتاح', 'من يريد درجًا بقفل منفصل داخل الخزنة'],
+      faq: { q: 'كيف تُرتّب الخزنة من الداخل؟', a: 'برف ودرج سفلي بقفل مفتاح للمقتنيات الصغيرة.' },
+    },
+    en: {
+      idealFor: ['Homes keeping cash and documents in a mid-sized safe', 'Offices and shops that need a digital lock backed by a key lock', 'Anyone who wants a separate lockable drawer inside the safe'],
+      faq: { q: 'How is the inside arranged?', a: 'A shelf, and a drawer below with its own key lock for smaller valuables.' },
+    },
+  },
   'uchida-black-digital-safe': {
     ar: {
       idealFor: ['المكاتب والمحلات التي تحتاج خزنة طويلة بقفل رقمي', 'من يريد قفلًا رقميًا مع قفل مفتاح', 'البيوت التي تحفظ النقود والمستندات في مكان واحد'],

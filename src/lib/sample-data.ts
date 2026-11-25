@@ -878,6 +878,33 @@ const catalogue: Product[] = [
     order: 4,
   },
   {
+    _id: 'p53',
+    slug: 'uchida-beige-digital-safe',
+    name: { en: 'UCHIDA Digital Safe, Model BK-172KE', ar: 'خزنة UCHIDA بقفل رقمي موديل BK-172KE' },
+    category: fire,
+    shortDesc: {
+      en: 'A beige UCHIDA steel safe with a digital keypad, a key lock and a handle, opening onto a shelf and a lockable drawer below.',
+      ar: 'خزنة UCHIDA حديدية بلون البيج، بلوحة أرقام رقمية وقفل بمفتاح ومقبض، تنفتح على رف ودرج سفلي بقفل.',
+    },
+    fullDesc: desc(
+      'A beige UCHIDA safe for the home, the office or the shop: a digital keypad and a key lock sit beside the handle on one panel, and the door swings on two external hinges. Inside, a shelf and a lockable drawer below keep cash, documents and smaller valuables in order.',
+      'خزنة UCHIDA بلون البيج للبيت أو المكتب أو المحل: لوحة أرقام رقمية وقفل بمفتاح بجوار المقبض على لوحة واحدة، ويدور بابها على مفصلتين خارجيتين. وفي الداخل رف ودرج سفلي بقفل لترتيب النقود والمستندات والمقتنيات الصغيرة.',
+    ),
+    images: [
+      img('uchida-beige-digital-safe', 1086, 1448, 'Beige UCHIDA safe, model BK-172KE, with a digital keypad, key lock and handle', 'خزنة UCHIDA بلون البيج موديل BK-172KE بقفل رقمي وقفل مفتاح ومقبض'),
+      img('uchida-beige-digital-safe-open', 1086, 1448, 'The beige UCHIDA BK-172KE safe open, with a shelf and a lockable drawer below', 'خزنة UCHIDA البيج موديل BK-172KE مفتوحة، برف ودرج سفلي بقفل'),
+    ],
+    specTable: [
+      brand,
+      spec('Lock', 'القفل', 'Digital keypad, key and handle', 'لوحة أرقام رقمية ومفتاح ومقبض'),
+      spec('Interior', 'التجهيز الداخلي', 'A shelf and a lockable drawer', 'رف ودرج بقفل'),
+      spec('Hinges', 'المفصلات', 'Two external hinges', 'مفصلتان خارجيتان'),
+      spec('Finish', 'اللون', 'Beige', 'بيج'),
+    ],
+    isFeatured: false,
+    order: 4,
+  },
+  {
     _id: 'p31',
     slug: 'uchida-compact-digital-safe',
     name: { en: 'UCHIDA Compact Fire-Resistant Digital Safe, Model HS-23KE', ar: 'خزنة UCHIDA صغيرة مقاومة للحريق بقفل رقمي موديل HS-23KE' },

@@ -24,6 +24,12 @@ const kinds: Record<string, Record<Locale, string[]>> = {
   'steel-lockers': { ar: ['لوكر حديد', 'لوكرات موظفين', 'لوكر حديدي'], en: ['steel locker', 'staff locker', 'metal locker'] },
 }
 
+/** Category wording for a product, without fire phrases when the product has no fire rating. */
+const kindsFor = (p: Product, locale: Locale) => {
+  const k = kinds[p.category?.slug ?? '']?.[locale] ?? []
+  return productDetails[p.slug]?.fireHours ? k : k.filter((w) => !/حريق|fire/i.test(w))
+}
+
 const brandOf = (p: Product) => p.specTable.find((r) => r.label.en === 'Brand')?.value.en
 const specEn = (p: Product, label: string) => p.specTable.find((r) => r.label.en === label)?.value.en ?? ''
 
@@ -31,7 +37,7 @@ const specEn = (p: Product, label: string) => p.specTable.find((r) => r.label.en
 function candidates(p: Product, locale: Locale): string[] {
   const d = productDetails[p.slug] ?? {}
   const brand = brandOf(p)
-  const k = kinds[p.category?.slug ?? '']?.[locale] ?? []
+  const k = kindsFor(p, locale)
   const lock = specEn(p, 'Lock').toLowerCase()
   const ar = locale === 'ar'
   const brandWord = brand ? (ar ? brandsAr[brand] ?? brand : brand) : ''
@@ -128,7 +134,7 @@ export function productSchemaExtras(p: Product, locale: Locale) {
   const d = productDetails[p.slug] ?? {}
   const brand = brandOf(p)
   const colours = p.specTable.find((r) => r.label.en === 'Colours available')?.value[locale]
-  const k = kinds[p.category?.slug ?? '']?.[locale] ?? []
+  const k = kindsFor(p, locale)
   return {
     ...(d.model ? { model: d.model, mpn: d.model } : {}),
     ...(colours ? { color: colours } : {}),

@@ -880,7 +880,7 @@ const catalogue: Product[] = [
   {
     _id: 'p53',
     slug: 'uchida-beige-digital-safe',
-    name: { en: 'UCHIDA Digital Safe, Model BK-172KE', ar: 'خزنة UCHIDA بقفل رقمي موديل BK-172KE' },
+    name: { en: 'UCHIDA Fire-Resistant Digital Safe, Model BK-172KE', ar: 'خزنة UCHIDA مقاومة للحريق بقفل رقمي موديل BK-172KE' },
     category: fire,
     shortDesc: {
       en: 'A beige UCHIDA steel safe with a digital keypad, a key lock and a handle, opening onto a shelf and a lockable drawer below.',

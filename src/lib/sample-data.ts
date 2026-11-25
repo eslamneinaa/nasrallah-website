@@ -161,6 +161,14 @@ const catalogue: Product[] = [
       img('uchida-red-safe-front', 1145, 1373, 'Red UCHIDA safe with a digital keypad and round chrome handle', 'خزنة UCHIDA حمراء بقفل رقمي ومقبض دائري من الكروم'),
       img('uchida-red-safe-drawers', 1312, 1199, 'The red UCHIDA safe open, with four crocodile-texture leather drawers', 'خزنة UCHIDA الحمراء مفتوحة، بأربعة أدراج جلدية بملمس جلد التمساح'),
     ],
+    video: {
+      url: '/videos/uchida-red-safe-fathers-watch.mp4',
+      poster: '/videos/uchida-red-safe-fathers-watch.webp',
+      label: {
+        en: 'Video: a falcon in the desert and a father placing a watch in his son’s hand at sunset, then years later the son puts the watch and their photo in the red UCHIDA safe with a digital keypad and round handle, and closes it',
+        ar: 'فيديو: صقر في الصحراء وأب يضع ساعة في يد ابنه عند الغروب، ثم بعد سنوات يضع الابن الساعة وصورتهما في خزنة UCHIDA الحمراء بقفل رقمي ومقبض دائري ويغلقها',
+      },
+    },
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Digital keypad with round handle', 'قفل رقمي بلوحة أرقام ومقبض دائري'),

@@ -88,6 +88,35 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
     sections: ['jewellery-watch-interiors', 'luxury-safes', 'fire-resistant-safes', 'deposit-safes', 'cash-boxes', 'filing-cabinets', 'steel-cupboards', 'steel-lockers'],
   },
   {
+    id: 'uchida-red-safe-fathers-watch',
+    url: '/videos/uchida-red-safe-fathers-watch.mp4',
+    poster: '/videos/uchida-red-safe-fathers-watch.webp',
+    orientation: 'portrait',
+    duration: 'PT46S',
+    uploadDate: '2026-11-25',
+    title: { ar: 'ساعة الأب في خزنة UCHIDA الحمراء', en: 'A father’s watch in the red UCHIDA safe' },
+    description: {
+      ar: 'ساعة أهداها أب لابنه في الصحراء، يحفظها الابن بعد سنوات مع صورتهما في خزنة UCHIDA الحمراء بقفل رقمي.',
+      en: 'A watch a father gave his son in the desert, kept years later with their photo in the red UCHIDA safe with a digital lock.',
+    },
+    label: {
+      ar: 'فيديو: صقر في الصحراء وأب يضع ساعة في يد ابنه عند الغروب، ثم بعد سنوات يضع الابن الساعة وصورتهما في خزنة UCHIDA الحمراء بقفل رقمي ومقبض دائري ويغلقها',
+      en: 'Video: a falcon in the desert and a father placing a watch in his son’s hand at sunset, then years later the son puts the watch and their photo in the red UCHIDA safe with a digital keypad and round handle, and closes it',
+    },
+    link: { path: 'products/uchida-red-safe-with-leather-drawers', label: { ar: 'تفاصيل الخزنة', en: 'See the safe' } },
+    about: {
+      ar: [
+        'يبدأ الفيديو في الصحراء عند الغروب: صقر على وكره، وأب يجلس مع ابنه على السجاد أمام موقد الجمر ودلّة القهوة، ثم يضع الأب في يد ابنه ساعة، وتظهر صورة تجمعهما في تلك اللحظة.',
+        'بعد سنوات، في غرفة تطل على المدينة ليلًا، يمسك الابن الصورة والساعة نفسها، ثم يضعهما في خزنة UCHIDA الحمراء بقفل رقمي ومقبض دائري ويغلق بابها. تفاصيل الخزنة في صفحة المنتج، ويمكنكم مشاهدتها على الطبيعة في معرضنا بسوق العين.',
+      ],
+      en: [
+        'The video opens in the desert at sunset: a falcon on its perch, and a father sitting with his son on a rug by the coal burner and coffee pot. The father places a watch in his son’s hand, and a photo of the two of them captures the moment.',
+        'Years later, in a room overlooking the city at night, the son holds the same photo and watch, then puts them in the red UCHIDA safe with a digital keypad and round handle, and closes its door. The safe’s details are on the product page, and you can see it in person at our showroom in Souq Al Ein.',
+      ],
+    },
+    sections: ['luxury-safes'],
+  },
+  {
     id: 'uchida-key-hotel-safe',
     url: '/videos/uchida-key-hotel-safe.mp4',
     poster: '/videos/uchida-key-hotel-safe.webp',

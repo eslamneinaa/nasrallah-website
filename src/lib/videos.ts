@@ -96,8 +96,8 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
     uploadDate: '2026-11-25',
     title: { ar: 'ساعة الأب في خزنة UCHIDA الحمراء', en: 'A father’s watch in the red UCHIDA safe' },
     description: {
-      ar: 'ساعة أهداها أب لابنه في الصحراء، يحفظها الابن بعد سنوات مع صورتهما في خزنة UCHIDA الحمراء بقفل رقمي.',
-      en: 'A watch a father gave his son in the desert, kept years later with their photo in the red UCHIDA safe with a digital lock.',
+      ar: 'خزنة UCHIDA لدى نصر الله، احفظ ذكرياتك لتتوارثها الأجيال.',
+      en: 'An UCHIDA safe at Nasrallah: keep your memories to pass down through the generations.',
     },
     label: {
       ar: 'فيديو: صقر في الصحراء وأب يضع ساعة في يد ابنه عند الغروب، ثم بعد سنوات يضع الابن الساعة وصورتهما في خزنة UCHIDA الحمراء بقفل رقمي ومقبض دائري ويغلقها',

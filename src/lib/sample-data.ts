@@ -894,6 +894,14 @@ const catalogue: Product[] = [
       img('uchida-beige-digital-safe', 1086, 1448, 'Beige UCHIDA safe, model BK-172KE, with a digital keypad, key lock and handle', 'خزنة UCHIDA بلون البيج موديل BK-172KE بقفل رقمي وقفل مفتاح ومقبض'),
       img('uchida-beige-digital-safe-open', 1086, 1448, 'The beige UCHIDA BK-172KE safe open, with a shelf and a lockable drawer below', 'خزنة UCHIDA البيج موديل BK-172KE مفتوحة، برف ودرج سفلي بقفل'),
     ],
+    video: {
+      url: '/videos/uchida-strength-builds.mp4',
+      poster: '/videos/uchida-strength-builds.webp',
+      label: {
+        en: 'Video: an old steel safe eaten by rust, a modern black safe opened by touch panel, then sparks, the safe built layer by layer and glowing as if in a fire, before the beige UCHIDA safe with keypad, key and handle appears in a living room',
+        ar: 'فيديو: خزنة حديدية قديمة يأكلها الصدأ، ثم خزنة سوداء حديثة تُفتح بلوحة لمس، ثم شرارات وبناء الخزنة طبقة بعد طبقة وتوهّجها كأنها في النار، قبل أن تظهر خزنة UCHIDA بلون البيج بقفل رقمي ومفتاح ومقبض في غرفة جلوس',
+      },
+    },
     specTable: [
       brand,
       spec('Lock', 'القفل', 'Digital keypad, key and handle', 'لوحة أرقام رقمية ومفتاح ومقبض'),

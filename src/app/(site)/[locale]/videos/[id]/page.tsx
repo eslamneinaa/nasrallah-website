@@ -27,7 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const video = findVideo((await params).id)
   if (!video) return {}
-  return pageMetadata({ locale, path: `videos/${video.id}`, title: video.title[locale], description: video.description[locale] })
+  return {
+    ...pageMetadata({ locale, path: `videos/${video.id}`, title: video.title[locale], description: video.description[locale] }),
+    ...(video.keywords ? { keywords: video.keywords[locale] } : {}),
+  }
 }
 
 /**
@@ -58,6 +61,7 @@ export default async function VideoPage({ params }: Props) {
         uploadDate: video.uploadDate,
         duration: video.duration,
         inLanguage: locale,
+        ...(video.keywords ? { keywords: video.keywords[locale] } : {}),
         url: pageUrl,
         publisher: { '@id': `${siteConfig.url}/#business` },
       },

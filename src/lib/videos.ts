@@ -19,6 +19,8 @@ export type ShowcaseVideoItem = {
   about?: Record<Locale, string[]>
   /** Category slugs the video shows, linked under those paragraphs. */
   sections?: string[]
+  /** Search phrases for the page's keywords and its VideoObject. */
+  keywords?: Record<Locale, string>
 }
 
 /** ISO 8601 duration (PT1M18S) in seconds, for the video sitemap. */
@@ -86,6 +88,43 @@ export const showcaseVideos: ShowcaseVideoItem[] = [
       ],
     },
     sections: ['jewellery-watch-interiors', 'luxury-safes', 'fire-resistant-safes', 'deposit-safes', 'cash-boxes', 'filing-cabinets', 'steel-cupboards', 'steel-lockers'],
+  },
+  {
+    id: 'uchida-strength-builds',
+    url: '/videos/uchida-strength-builds.mp4',
+    poster: '/videos/uchida-strength-builds.webp',
+    orientation: 'portrait',
+    duration: 'PT31S',
+    uploadDate: '2026-11-26',
+    title: { ar: 'القوة تبني', en: 'Strength Builds' },
+    description: {
+      ar: 'خزنة UCHIDA مقاومة للحريق لمدة ساعتين موديل BK-172KE: تجوري حديد بقفل رقمي ومفتاح لحفظ النقود والذهب والمستندات في البيت والمكتب في قطر.',
+      en: 'The UCHIDA BK-172KE fire-resistant safe, rated for two hours: a steel safe with keypad and key for cash, gold and documents at home or in the office in Qatar.',
+    },
+    label: {
+      ar: 'فيديو: خزنة حديدية قديمة يأكلها الصدأ، ثم خزنة سوداء حديثة تُفتح بلوحة لمس، ثم شرارات وبناء الخزنة طبقة بعد طبقة وتوهّجها كأنها في النار، قبل أن تظهر خزنة UCHIDA بلون البيج بقفل رقمي ومفتاح ومقبض في غرفة جلوس',
+      en: 'Video: an old steel safe eaten by rust, a modern black safe opened by touch panel, then sparks, the safe built layer by layer and glowing as if in a fire, before the beige UCHIDA safe with keypad, key and handle appears in a living room',
+    },
+    link: { path: 'products/uchida-beige-digital-safe', label: { ar: 'تفاصيل الخزنة', en: 'See the safe' } },
+    about: {
+      ar: [
+        '«القوة تبني»: يبدأ الفيديو بخزنة حديدية قديمة يأكلها الصدأ مع الوقت، ثم يد تفتح خزنة سوداء حديثة بلوحة لمس ومقبض. بعدها تتطاير شرارات الحديد المنصهر، ويظهر بناء الخزنة طبقة بعد طبقة، ثم تتوهّج الخزنة كلها كأنها وسط النار، قبل أن تهدأ وتظهر خزنة UCHIDA بلون البيج، ثم حافة بابها عن قرب، ثم في غرفة جلوس.',
+        'الخزنة في الفيديو هي خزنة UCHIDA مقاومة للحريق لمدة ساعتين موديل BK-172KE، صنع كوريا، بلون البيج، تُفتح بقفل رقمي بلوحة أرقام وقفل مفتاح ومقبض، وفي داخلها رف ودرج سفلي بقفل. مقاسها الخارجي 58 × 85 × 51.6 سم، ووزنها 144 كجم.',
+        'هذه الخزنة لمن يبحث عن خزنة مقاومة للحريق في قطر لحفظ النقود والذهب والمجوهرات والساعات وجوازات السفر والعقود والصكوك والمستندات المهمة، في البيت أو المكتب أو المحل أو الشركة. ويسمّيها الناس في قطر والخليج بأسماء كثيرة: تجوري، تجوري حديد، خزنة حديد، خزنة نقود، خزنة فلوس، خزانة حديدية، خزنة ضد الحريق، خزنة مقاومة للنار، خزنة رقمية، خزنة بيت، خزنة مكتب، وخزنة أوشيدا.',
+        'تجدون خزائن UCHIDA المقاومة للحريق، مع خزائن SAKURA وKUROGANE، في معرض مؤسسة نصر الله التجارية في سوق العين على طريق سلوى بالدوحة، الاسم الموثوق في الخزائن منذ عام 1906، والتوصيل مجاني داخل دولة قطر (يخضع للتقييد طبقاً للموقع الداخلي للعميل).',
+      ],
+      en: [
+        '“Strength Builds”: the video opens on an old steel safe eaten by rust over time, then a hand opening a modern black safe with a touch panel and handle. Sparks of molten steel fly, the safe is built layer by layer, then the whole safe glows as if in the heart of a fire, before it cools and the beige UCHIDA safe appears, then its door edge up close, then the safe in a living room.',
+        'The safe in the video is the UCHIDA BK-172KE fire-resistant safe, rated for two hours, made in Korea, in beige. It opens with a digital keypad, a key lock and a handle, and inside has a shelf and a lockable bottom drawer. It measures 58 × 85 × 51.6 cm outside and weighs 144 kg.',
+        'It is for anyone looking for a fireproof safe in Qatar to keep cash, gold, jewellery, watches, passports, contracts, title deeds and important documents at home, in the office, the shop or the company. People search for it in many ways: fire resistant safe, fireproof safe, fire safe, steel safe, cash safe, money safe, digital safe, home safe, office safe, safe for documents, UCHIDA safe, and in Arabic tajouri.',
+        'You will find UCHIDA fire-resistant safes, alongside SAKURA and KUROGANE safes, at the Nasrallah Trading Est showroom in Souq Al Ein on Salwa Road, Doha, a trusted name in safes since 1906, with free delivery within the State of Qatar (subject to restrictions depending on access at the customer’s site).',
+      ],
+    },
+    sections: ['fire-resistant-safes'],
+    keywords: {
+      ar: 'القوة تبني، خزنة مقاومة للحريق، خزنة ضد الحريق، خزنة مقاومة للنار، تجوري، تجوري حديد، خزنة حديد، خزنة نقود، خزنة فلوس، خزنة رقمية، خزنة بيت، خزنة مكتب، خزنة أوشيدا، UCHIDA، BK-172KE، خزائن في قطر، خزنة الدوحة',
+      en: 'Strength Builds, fire resistant safe, fireproof safe, fire safe Qatar, fireproof safe Doha, steel safe, cash safe, money safe, digital safe, home safe, office safe, safe for documents, UCHIDA safe, BK-172KE, safes in Qatar, tajouri',
+    },
   },
   {
     id: 'uchida-red-safe-fathers-watch',

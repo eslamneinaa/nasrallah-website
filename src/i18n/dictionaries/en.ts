@@ -13,6 +13,7 @@ const en = {
     guide: 'Safe buying guide',
     articles: 'Articles',
     videos: 'Our Collection',
+    supply: 'Business supply',
     menu: 'Open menu',
     close: 'Close menu',
     switchLabel: 'العربية',
@@ -174,8 +175,8 @@ const en = {
         a: 'Yes. Our travel jewellery cases are divided inside, with compartments for necklaces, bangles, rings and earrings and cushions for watches, so you can carry your jewellery safely when travelling, in hotels, to parties and to weddings. They are a special design you will not find anywhere else in Qatar.',
       },
       {
-        q: 'Is delivery free?',
-        a: 'Yes, delivery is free anywhere in Qatar. Contact us to arrange a delivery time.',
+        q: 'Do you deliver safes to homes? What is the delivery fee?',
+        a: 'Yes, delivery is free anywhere in Qatar. For safes over 50 kg, delivery is subject to restrictions depending on access at the customer’s site, so tell us the floor and entrance when you order. Contact us to arrange a delivery time.',
       },
       {
         q: 'Do you open locked safes?',
@@ -189,13 +190,39 @@ const en = {
         q: 'How long has Nasrallah Trading Est been in business?',
         a: 'Nasrallah Trading Est was founded in 1906. For more than a century, our name has stood for keeping what people value safe.',
       },
+      {
+        q: 'Where can I find an original Japanese safe in Doha?',
+        a: 'Our KUROGANE safes are made in Japan by Kurogane Kosakusho, founded in Osaka in 1927, including the compact SK-12 Wing Safe with a 1-hour fire rating. For UCHIDA and SAKURA, the country of manufacture, such as Korea or Thailand, is shown on each model’s page. You will find them all at our showroom in Souq Al Ein on Salwa Road.',
+      },
+      {
+        q: 'Is there a safe showroom where I can see the safe before buying?',
+        a: 'Yes. Our showroom is at {address}, open {hours}, closed on Friday. You can see the safes and try their locks before you buy, and watch a video tour of the showroom on our “Explore our collection” page before you visit.',
+      },
+      {
+        q: 'How heavy is the safe and will it fit through my door or lift?',
+        a: 'Weight varies widely by model: from 14 kg for a small hotel safe to 550 kg for the double-door safe. Each product page lists the weight and outside dimensions, so compare them with your door and lift, and tell us the floor and entrance before ordering.',
+      },
+      {
+        q: 'What is the difference between a standard safe and a fire-resistant safe?',
+        a: 'A fire-resistant safe has an insulating layer between two steel walls that protects its contents from the heat of a fire for a set time, one or two hours depending on the model, as shown on each product page. A safe without a fire rating protects against theft only, which is why a fire-resistant safe is heavier and dearer at the same size.',
+      },
     ],
   },
   guide: {
-    metaTitle: 'Safe Buying Guide for Qatar: How to Choose the Best Safe',
+    metaTitle: 'How to Choose a Safe: Safe Buying Guide for Qatar',
     metaDescription:
       'A practical guide to buying a safe in Qatar: cash, jewellery and document safes, what sets the price, and how to choose where to buy.',
-    title: 'Safe buying guide for Qatar',
+    faq: [
+      {
+        q: 'How do I choose the right safe?',
+        a: 'Start with what you will keep: cash and gold need a steel safe with a reliable lock, original documents need a fire-resistant safe. Then choose a size a little larger than you need today and a lock that suits whoever will open it, and check the weight and where the safe will go before ordering.',
+      },
+      {
+        q: 'What is the best safe brand in Qatar?',
+        a: 'No single brand is best for every use: UCHIDA is our widest range of fire-resistant, deposit and hotel safes, SAKURA offers modern locks and striking designs, KUROGANE Japanese manufacture and combination dials, and GODREJ steel cupboards, lockers and filing cabinets.',
+      },
+    ],
+    title: 'How to choose a safe: buying guide for Qatar',
     subtitle: 'How to choose the right safe, and where to buy it.',
     intro:
       'Whether you need a cash safe for a shop, a jewellery safe at home or document safes for an organisation, choosing the right safe starts with one question: what do you want to keep? This guide brings together more than a century of selling safes in Qatar.',
@@ -277,6 +304,12 @@ const en = {
     whatsapp: 'Ask on WhatsApp',
     whatsappText: 'Hello, I read your article “{article}” and would like to ask about it.',
   },
+  brandPage: {
+    models: 'Our {brand} models',
+    sections: 'Find them by category',
+    others: 'Other brands',
+    footer: 'Brands',
+  },
   categoryPage: {
     other: 'Other categories',
     all: 'All products',
@@ -296,6 +329,12 @@ const en = {
   about: {
     metaTitle: 'About Nasrallah Trading Est — Safe Dealer in Doha, Qatar since 1906',
     metaDescription: 'The story of Nasrallah Trading Est: safes and secure storage since 1906, from Souq Al Ein, Salwa Road, Doha.',
+    faq: [
+      {
+        q: 'Who is Nasrallah Trading Est?',
+        a: 'A business selling safes and secure storage since 1906, from its showroom in Souq Al Ein on Salwa Road, Doha: UCHIDA, SAKURA and KUROGANE safes, GODREJ cupboards, lockers and filing cabinets, and jewellery and watch interiors. More than 1,000 clients have put their trust in it, from ministries and banks to companies and individuals.',
+      },
+    ],
     title: 'About Nasrallah Trading Est',
     subtitle: 'More than a century of safekeeping.',
     story: {
@@ -366,6 +405,7 @@ const en = {
     heavyDelivery: "As this product weighs over 50 kg, delivery is subject to restrictions depending on access at the customer's site.",
     atAGlance: 'At a glance',
     similar: 'Similar searches',
+    moreFromBrand: 'All our {brand} products',
     idealFor: 'Ideal for',
     faq: 'Frequently asked questions',
     orderFaq: {
@@ -382,8 +422,18 @@ const en = {
     assurances: ['Original UCHIDA, SAKURA, GODREJ & KUROGANE', 'Trusted since 1906', 'Personal showroom advice'],
   },
   quote: {
-    metaTitle: 'Request a Quote',
-    metaDescription: 'Tell us what you need to protect and receive a tailored quotation from Nasrallah Trading Est.',
+    metaTitle: 'Request a Safe Quote in Qatar',
+    metaDescription: 'Request a quote for safes, lockers or filing cabinets in Qatar: tell us what you need to protect and how many, and we will reply with a tailored quotation.',
+    faq: [
+      {
+        q: 'I need a safe for company documents and cash with a formal quotation',
+        a: 'Fill in the quote form on this page with what you will store, how many and where the safe will go, and our team will reply with a quotation prepared for your needs. For documents and cash together we recommend a fire-resistant safe.',
+      },
+      {
+        q: 'Do you offer special prices for bulk or project orders?',
+        a: 'We prepare quotations for quantities to equip a hotel, a building, a whole archive or several branches. Send us the types and numbers you need and we will reply with a full quotation.',
+      },
+    ],
     title: 'Request a quote',
     subtitle: 'Tell us what you need to protect and our team will reply with a tailored quotation.',
     formTitle: 'Quotation details',
@@ -396,10 +446,24 @@ const en = {
     preferDirect: 'Prefer to talk directly?',
   },
   contact: {
-    metaTitle: 'Contact Us',
-    metaDescription: 'Contact Nasrallah Trading Est by telephone, fax or email, or visit our showroom in Souq Al Ein, Salwa Road, Doha.',
-    title: 'Contact us',
-    subtitle: 'Our team is here to help with product questions, orders and showroom visits.',
+    metaTitle: 'Safe Shop in Doha — Contact Nasrallah Trading Est',
+    metaDescription: 'Safe shop in Doha: contact Nasrallah Trading Est by telephone, fax or email, or visit our showroom in Souq Al Ein, Salwa Road, Doha.',
+    faq: [
+      {
+        q: 'What is the Nasrallah safes showroom phone number?',
+        a: 'The showroom phone is {phone} and WhatsApp is {whatsapp}; all our numbers, our email and a message form are on this page.',
+      },
+      {
+        q: 'What time does the safe showroom in Souq Al Ein open?',
+        a: 'We are open {hours}, closed on Friday.',
+      },
+      {
+        q: 'Where is the safe shop in Doha?',
+        a: 'The Nasrallah Trading Est showroom is at {address}; you will find it on the map on this page.',
+      },
+    ],
+    title: 'Contact Nasrallah Trading Est',
+    subtitle: 'A safe shop in Doha, at Souq Al Ein on Salwa Road. Our team is here to help with product questions, orders and showroom visits.',
     directoryTitle: 'Showroom directory',
     phone: 'Telephone',
     fax: 'Fax',
@@ -514,6 +578,7 @@ const en = {
     categories: 'Categories',
   },
   common: {
+    faq: 'Frequently asked questions',
     viewDetails: 'View details',
     learnMore: 'Learn more',
     whatsappFloat: 'Chat with us on WhatsApp',

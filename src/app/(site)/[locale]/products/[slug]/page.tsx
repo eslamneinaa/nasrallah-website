@@ -17,6 +17,7 @@ import { googleCategory, productKeywords, productMetaDescription, productSchemaE
 import { imageAlt } from '@/lib/types'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
+import { brandPageOf } from '@/lib/brands'
 import { categoryHref } from '@/lib/category-content'
 import { getCatalog, getProduct, getRelatedProducts } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
@@ -74,8 +75,9 @@ export default async function ProductPage({ params }: Props) {
   const summary = specSummary(product, locale)
   const { products: catalogue } = await getCatalog()
   const similar = similarSearches(product, catalogue, locale)
+  const brandPage = brandPageOf(product)
   const orderAnswer = isHeavy(product.slug) ? `${t.orderFaq.a} ${t.heavyDelivery}` : t.orderFaq.a
-  const faqs = guide ? [guide.faq, { q: fill(t.orderFaq.q, { product: name }), a: orderAnswer }] : []
+  const faqs = guide ? [guide.faq, ...(guide.more ?? []), { q: fill(t.orderFaq.q, { product: name }), a: orderAnswer }] : []
   const quoteHref = `${href(locale, 'request-quote')}?product=${encodeURIComponent(name)}`
   const whatsapp = whatsappLink(
     inBothLanguages(locale, (d, lang) => fill(d.product.whatsappText, { product: pick(product.name, lang) || name })),
@@ -249,6 +251,18 @@ export default async function ProductPage({ params }: Props) {
                   ))}
                 </ul>
               </Reveal>
+            )}
+
+            {brandPage && (
+              <p className="mt-10">
+                <Link
+                  href={href(locale, `brands/${brandPage.slug}`)}
+                  className="inline-flex items-center gap-2 text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800"
+                >
+                  {fill(t.moreFromBrand, { brand: brandPage.name })}
+                  <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+                </Link>
+              </p>
             )}
           </div>
 

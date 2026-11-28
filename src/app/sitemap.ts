@@ -2,14 +2,15 @@ import type { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 import { href, locales } from '@/i18n/config'
 import { getArticles } from '@/lib/articles'
+import { brandPages } from '@/lib/brands'
 import { categoryContent, collections } from '@/lib/category-content'
-import { categoryLastmod, pageLastmod, productLastmod } from '@/lib/lastmod'
+import { categoryLastmod, fileDate, pageLastmod, productLastmod } from '@/lib/lastmod'
 import { getCatalog } from '@/lib/sanity/api'
 import { durationSeconds, showcaseVideos } from '@/lib/videos'
 
 export const dynamic = 'force-static'
 
-const staticPaths = ['/', 'about', 'products', 'videos', 'request-quote', 'contact', 'safe-buying-guide', 'articles', 'privacy-policy']
+const staticPaths = ['/', 'about', 'products', 'videos', 'business-supply', 'request-quote', 'contact', 'safe-buying-guide', 'articles', 'privacy-policy']
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { products, categories } = await getCatalog()
@@ -18,6 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticPaths,
     ...categories.filter((c) => categoryContent[c.slug]).map((c) => `categories/${c.slug}`),
     ...Object.keys(collections).map((slug) => `categories/${slug}`),
+    ...brandPages.map((b) => `brands/${b.slug}`),
     ...products.map((p) => `products/${p.slug}`),
     ...articles.map((a) => `articles/${a.slug}`),
     ...showcaseVideos.map((v) => `videos/${v.id}`),
@@ -36,14 +38,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ? productLastmod(path.slice(9))
       : path.startsWith('categories/')
         ? categoryLastmod(path.slice(11))
-        : pageLastmod(path))
+        : path.startsWith('brands/')
+          ? (fileDate('src/lib/brands.ts') ?? pageLastmod('brands/[slug]'))
+          : path === 'business-supply'
+            ? (fileDate('src/lib/business-supply.ts') ?? pageLastmod(path))
+            : pageLastmod(path))
 
   return paths.flatMap((path) =>
     locales.map((locale) => ({
       url: siteConfig.url + href(locale, path),
       lastModified: lastModified(path),
       changeFrequency: path.startsWith('products/') ? ('weekly' as const) : ('monthly' as const),
-      priority: path === '/' ? 1 : path.startsWith('categories') ? 0.9 : path.startsWith('products') ? 0.8 : 0.6,
+      priority: path === '/' ? 1 : path.startsWith('categories') || path.startsWith('brands') ? 0.9 : path.startsWith('products') ? 0.8 : 0.6,
       alternates: {
         languages: Object.fromEntries(locales.map((l) => [l, siteConfig.url + href(l, path)])),
       },

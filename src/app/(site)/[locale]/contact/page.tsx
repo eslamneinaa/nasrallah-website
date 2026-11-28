@@ -4,9 +4,10 @@ import type { ReactNode } from 'react'
 import { ContactForm } from '@/components/forms/ContactForm'
 import { Reveal } from '@/components/motion/Reveal'
 import { Khatam } from '@/components/ornaments'
+import { PageFaq, faqJsonLd } from '@/components/PageFaq'
 import { PageHero } from '@/components/PageHero'
 import { mapEmbedSrc, siteConfig, telHref, whatsappLink } from '@/config/site'
-import { getDictionary, href, inBothLanguages } from '@/i18n'
+import { fill, getDictionary, href, inBothLanguages } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
 import { pageTerms } from '@/lib/search-terms'
 
@@ -20,6 +21,15 @@ export default async function ContactPage({ params }: LocaleParams) {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale)
   const t = dict.contact
+  const faq = t.faq.map(({ q, a }) => ({
+    q,
+    a: fill(a, {
+      phone: `${siteConfig.dialCode} ${siteConfig.phones[0].display}`,
+      whatsapp: `${siteConfig.dialCode} ${siteConfig.whatsappDisplay}`,
+      hours: siteConfig.hours.compact[locale],
+      address: siteConfig.address[locale],
+    }),
+  }))
   const whatsapp = whatsappLink(inBothLanguages(locale, (d) => d.common.whatsappText))
   const linkClass = 'transition hover:text-gold-300'
 
@@ -145,6 +155,12 @@ export default async function ContactPage({ params }: LocaleParams) {
           </Reveal>
         </div>
       </section>
+      <section className="py-16 sm:py-20">
+        <div className="container-page max-w-3xl">
+          <PageFaq title={dict.common.faq} items={faq} />
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', ...faqJsonLd(faq) }) }} />
     </>
   )
 }

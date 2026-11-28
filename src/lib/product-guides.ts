@@ -1,7 +1,7 @@
 import type { Locale } from './types'
 
 type Faq = { q: string; a: string }
-type Guide = { idealFor: string[]; faq: Faq }
+type Guide = { idealFor: string[]; faq: Faq; /** Further questions people ask about this product. */ more?: Faq[] }
 
 /**
  * "Ideal for" use cases and one product-specific FAQ per product, keyed by slug.
@@ -228,10 +228,30 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
     ar: {
       idealFor: ['هواة الساعات الأوتوماتيكية', 'من يريد أن تبقى ساعاته تعمل وهي في الخزنة', 'غرف الملابس الفاخرة'],
       faq: { q: 'كم ساعة يتسع الدوّار؟', a: 'يتسع الدوّار لأربع ساعات، وفوقه درج جلدي لساعات أو مقتنيات أخرى.' },
+      more: [
+        {
+          q: 'هل فيه خزنة فيها دوار ساعات أوتوماتيك؟',
+          a: 'نعم، هذه الخزنة: دوّار مدمج لأربع ساعات أوتوماتيكية في إطار خشبي بلمسات جلدية يُبقيها تعمل وهي داخل الخزنة، وفوقه درج جلدي، وتصنيف مقاومتها للحريق ساعة واحدة.',
+        },
+        {
+          q: 'هدية فخمة لرجل يحب الساعات؟',
+          a: 'خزنة بدوّار ساعات تجمع الحماية والعناية بالساعات الأوتوماتيكية في قطعة واحدة، وتبقى معه سنوات. سعرها حسب الطلب؛ راسلونا على واتساب أو زورونا في المعرض لمشاهدتها.',
+        },
+      ],
     },
     en: {
       idealFor: ['Automatic watch collectors', 'Anyone who wants watches kept running while locked away', 'Luxury dressing rooms'],
       faq: { q: 'How many watches does the winder hold?', a: 'Four, with a leather drawer above the winder for other watches or valuables.' },
+      more: [
+        {
+          q: 'Is there a safe with a built-in automatic watch winder?',
+          a: 'Yes, this one: a built-in winder for four automatic watches in a wooden frame with leather trim keeps them running inside the safe, with a leather drawer above, and a 1-hour fire rating.',
+        },
+        {
+          q: 'Luxury gift for a man who loves watches?',
+          a: 'A watch winder safe brings protection and care for automatic watches together in one piece that he will keep for years. Its price is on request; message us on WhatsApp or visit the showroom to see it.',
+        },
+      ],
     },
   },
   'marble-interior-jewellery-safe': {
@@ -290,10 +310,30 @@ export const productGuides: Record<string, Record<Locale, Guide>> = {
     ar: {
       idealFor: ['السفر والإقامة في الفنادق', 'الحفلات والأعراس', 'حمل العقود والأساور والخواتم والأقراط والساعات معًا'],
       faq: { q: 'ما الألوان المتوفرة؟', a: 'أسود بملمس جلد التمساح، ورمادي فاتح.' },
+      more: [
+        {
+          q: 'وش أفضل شنطة مجوهرات للسفر؟',
+          a: 'الأفضل شنطة تحمل الطقم كاملًا دون أن تتلامس القطع وتُغلق بإحكام. شنطنا مقسّمة من الداخل بخانات للعقود والأساور والخواتم والأقراط ووسائد للساعات، ببطانة ناعمة وأقفال ذهبية، بتشطيب أسود بملمس جلد التمساح أو رمادي فاتح.',
+        },
+        {
+          q: 'هل شنطة المجوهرات تنفع هدية للعروس؟',
+          a: 'نعم، وهي من الهدايا التي تُستعمل بعد الزفاف في كل سفر ومناسبة، تحمل فيها العروس أطقمها إلى الفنادق والحفلات. سعرها 2,700 ريال قطري مع توصيل مجاني داخل قطر.',
+        },
+      ],
     },
     en: {
       idealFor: ['Travel and hotel stays', 'Parties and weddings', 'Carrying necklaces, bangles, rings, earrings and watches together'],
       faq: { q: 'Which colours are available?', a: 'Black crocodile texture and light grey.' },
+      more: [
+        {
+          q: 'What is the best travel jewellery case?',
+          a: 'One that carries a whole set without the pieces touching and closes securely. Our cases are divided inside with compartments for necklaces, bangles, rings and earrings and cushions for watches, with a soft lining and gold-tone clasps, in black crocodile texture or light grey.',
+        },
+        {
+          q: 'Is a jewellery case a good gift for a bride?',
+          a: 'Yes, it is a gift she will use on every trip and occasion after the wedding, carrying her sets to hotels and parties. It costs QAR 2,700, with free delivery within Qatar.',
+        },
+      ],
     },
   },
 

@@ -1,10 +1,12 @@
 import { Mail, Phone, Printer } from 'lucide-react'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Suspense } from 'react'
 import { QuoteForm, QuoteFormWithParams } from '@/components/forms/QuoteForm'
 import { WhatsAppIcon } from '@/components/icons'
 import { Reveal } from '@/components/motion/Reveal'
 import { Khatam } from '@/components/ornaments'
+import { PageFaq, faqJsonLd } from '@/components/PageFaq'
 import { PageHero } from '@/components/PageHero'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { getDictionary, href, inBothLanguages } from '@/i18n'
@@ -98,6 +100,17 @@ export default async function RequestQuotePage({ params }: LocaleParams) {
           </Reveal>
         </div>
       </section>
+      <section className="py-16 sm:py-20">
+        <div className="container-page max-w-3xl">
+          <PageFaq title={dict.common.faq} items={t.faq} />
+          <p className="mt-8">
+            <Link href={href(locale, 'business-supply')} className="text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800">
+              {dict.nav.supply}
+            </Link>
+          </p>
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', ...faqJsonLd(t.faq) }) }} />
     </>
   )
 }

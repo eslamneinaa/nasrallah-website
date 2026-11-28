@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Reveal } from '@/components/motion/Reveal'
+import { PageFaq, faqJsonLd } from '@/components/PageFaq'
 import { PageHero } from '@/components/PageHero'
 import { siteConfig } from '@/config/site'
 import { getDictionary, href, pick } from '@/i18n'
@@ -29,14 +30,19 @@ export default async function SafeBuyingGuidePage({ params }: LocaleParams) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: t.metaTitle,
-    description: t.metaDescription,
-    inLanguage: locale,
-    url: siteConfig.url + href(locale, 'safe-buying-guide'),
-    image: `${siteConfig.url}/og.jpg`,
-    author: { '@id': `${siteConfig.url}/#business` },
-    publisher: { '@id': `${siteConfig.url}/#business` },
+    '@graph': [
+      {
+        '@type': 'Article',
+        headline: t.metaTitle,
+        description: t.metaDescription,
+        inLanguage: locale,
+        url: siteConfig.url + href(locale, 'safe-buying-guide'),
+        image: `${siteConfig.url}/og.jpg`,
+        author: { '@id': `${siteConfig.url}/#business` },
+        publisher: { '@id': `${siteConfig.url}/#business` },
+      },
+      faqJsonLd(t.faq),
+    ],
   }
 
   return (
@@ -88,6 +94,8 @@ export default async function SafeBuyingGuidePage({ params }: LocaleParams) {
               ))}
             </div>
           </section>
+
+          <PageFaq title={dict.common.faq} items={t.faq} className="mt-14" />
 
           <div className="mt-14 border border-gold-500/40 bg-pearl-50 p-8 text-center shadow-card sm:p-10">
             <h2 className="display text-2xl text-maroon-900 sm:text-3xl">{t.ctaTitle}</h2>

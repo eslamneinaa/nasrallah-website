@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { WhatsAppIcon } from '@/components/icons'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
 import { Diamond } from '@/components/ornaments'
+import { PageFaq, faqJsonLd } from '@/components/PageFaq'
 import { PageHero } from '@/components/PageHero'
 import { ProductCard } from '@/components/ProductCard'
 import { SectionHeading } from '@/components/SectionHeading'
@@ -70,6 +71,7 @@ export default async function ArticlePage({ params }: Props) {
   }
 
   const pageUrl = siteConfig.url + href(locale, `articles/${slug}`)
+  const faq = article.faq?.[locale] ?? []
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -95,6 +97,7 @@ export default async function ArticlePage({ params }: Props) {
           { name: title, item: pageUrl },
         ].map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, ...crumb })),
       },
+      ...(faq.length ? [faqJsonLd(faq)] : []),
     ],
   }
 
@@ -132,6 +135,8 @@ export default async function ArticlePage({ params }: Props) {
               ),
             )}
           </article>
+
+          <PageFaq title={dict.common.faq} items={faq} className="mt-14" />
 
           <div className="mt-14 border border-gold-500/40 bg-pearl-50 p-8 text-center shadow-card sm:p-10">
             <h2 className="display text-2xl text-maroon-900 sm:text-3xl">{t.ctaTitle}</h2>

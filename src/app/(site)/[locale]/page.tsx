@@ -234,7 +234,9 @@ export default async function HomePage({ params }: LocaleParams) {
             {dict.brands.items.map((item) => (
               <StaggerItem key={item.name} className="bg-pearl-50 px-6 py-14 text-center">
                 <p dir="ltr" className="font-[family-name:var(--font-bodoni)] text-3xl tracking-[0.2em] text-maroon-900 lg:text-[1.6rem] lg:tracking-[0.14em] xl:text-[1.85rem]">
-                  {item.name}
+                  <Link href={href(locale, `brands/${item.name.toLowerCase()}`)} className="hover:underline decoration-gold-500/60 underline-offset-8">
+                    {item.name}
+                  </Link>
                 </p>
                 <Khatam className="mx-auto mt-6 h-4 w-4 text-gold-500" />
                 <p className="mx-auto mt-6 max-w-sm leading-relaxed text-ink-500">{item.desc}</p>
@@ -281,6 +283,12 @@ export default async function HomePage({ params }: LocaleParams) {
               ))}
             </ul>
           </Reveal>
+          <p className="mt-8 text-center">
+            <Link href={href(locale, 'business-supply')} className="inline-flex items-center gap-2 text-maroon-800 underline decoration-gold-500/60 underline-offset-4 hover:decoration-maroon-800">
+              {dict.nav.supply}
+              <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" strokeWidth={1.5} aria-hidden="true" />
+            </Link>
+          </p>
         </div>
         {clients.length > 0 && (
           <>

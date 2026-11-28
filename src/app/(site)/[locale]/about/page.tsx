@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { CtaBand } from '@/components/CtaBand'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
 import { Frame, Khatam } from '@/components/ornaments'
+import { PageFaq, faqJsonLd } from '@/components/PageFaq'
 import { PageHero } from '@/components/PageHero'
 import { SectionHeading } from '@/components/SectionHeading'
 import { YearsValue } from '@/components/YearsValue'
@@ -116,6 +117,12 @@ export default async function AboutPage({ params }: LocaleParams) {
         </div>
       </section>
 
+      <section className="py-16 sm:py-20">
+        <div className="container-page max-w-3xl">
+          <PageFaq title={dict.common.faq} items={t.faq} />
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', ...faqJsonLd(t.faq) }) }} />
       <CtaBand locale={locale} dict={dict.ctaBand} />
     </>
   )

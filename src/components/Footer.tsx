@@ -4,6 +4,7 @@ import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { inBothLanguages } from '@/i18n'
 import { href, pick } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/dictionaries/en'
+import { brandPages } from '@/lib/brands'
 import { categoryHref, collections } from '@/lib/category-content'
 import type { Category, Locale } from '@/lib/types'
 import { Logo } from './Logo'
@@ -22,6 +23,7 @@ export function Footer({ locale, dict, categories }: Props) {
     { href: href(locale, 'safe-buying-guide'), label: dict.nav.guide },
     { href: href(locale, 'articles'), label: dict.nav.articles },
     { href: href(locale, 'videos'), label: dict.nav.videos },
+    { href: href(locale, 'business-supply'), label: dict.nav.supply },
     { href: href(locale, 'request-quote'), label: dict.nav.quote },
     { href: href(locale, 'contact'), label: dict.nav.contact },
   ]
@@ -68,6 +70,16 @@ export function Footer({ locale, dict, categories }: Props) {
                 <li key={category._id}>
                   <Link href={categoryHref(locale, category.slug)} className={link}>
                     {pick(category.title, locale)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h2 className={`${heading} mt-10`}>{dict.brandPage.footer}</h2>
+            <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-3">
+              {brandPages.map((brand) => (
+                <li key={brand.slug}>
+                  <Link href={href(locale, `brands/${brand.slug}`)} className={link} dir="ltr">
+                    {brand.name}
                   </Link>
                 </li>
               ))}

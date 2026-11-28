@@ -20,6 +20,8 @@ export type ArticleSource = {
   /** Product slugs shown as cards under the article. */
   products: string[]
   links: ArticleLink[]
+  /** Questions people ask on the article's topic, shown after it and marked up as FAQPage. */
+  faq?: Record<Locale, { q: string; a: string }[]>
 }
 
 /** Today's date in Qatar as YYYY-MM-DD (the site is built ahead of time, so this is the build day). */

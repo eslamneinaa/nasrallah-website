@@ -94,11 +94,11 @@ export const articleSources: ArticleSource[] = [
     slug: 'fingerprint-vs-keypad-vs-key-safe-lock',
     date: '2026-11-08',
     title: {
-      ar: 'قفل البصمة أم الأرقام أم المفتاح: أيّها أفضل لخزنتكم؟',
+      ar: 'خزنة بصمة أم أرقام أم مفتاح: أيّ قفل أفضل لخزنتكم؟',
       en: 'Fingerprint, Keypad or Key: Which Lock Is Best for Your Safe?',
     },
     description: {
-      ar: 'مقارنة بين أقفال الخزائن: البصمة، والقفل الرقمي، والمفتاح الميكانيكي، ومتى تختارون الجمع بينها. نصائح من مؤسسة نصر الله التجارية لبيع الخزائن في قطر.',
+      ar: 'خزنة بصمة أم بقفل رقمي أم بمفتاح؟ مقارنة بين أقفال الخزائن ومتى تجمعون بينها، مع نصائح من مؤسسة نصر الله التجارية لبيع الخزائن في قطر.',
       en: 'Safe locks compared: fingerprint, digital keypad and mechanical key, and when to combine them. Advice from Nasrallah Trading Est, safe sellers in Qatar.',
     },
     keywords: {
@@ -157,6 +157,28 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
+    faq: {
+      ar: [
+        {
+          q: 'خزنة بصمة ولا رقم سري؟ أيهم أحسن؟',
+          a: 'البصمة أسرع لمن يفتح الخزنة وحده وكثيرًا، والرقم السري أنسب إذا تشارك الخزنة أكثر من شخص لأنه يُغيَّر بسهولة. وبعض خزائننا تجمع الاثنين مع مفتاح احتياطي، مثل SAKURA موديل EFI703 بالبصمة والأرقام والمفتاح.',
+        },
+        {
+          q: 'وش يصير لو خلصت بطارية الخزنة الرقمية؟',
+          a: 'في الموديلات التي تأتي بمفتاح احتياطي تُفتح الخزنة بالمفتاح ثم تُغيَّر البطاريات. لذلك احفظوا المفتاح الاحتياطي بعيدًا عن الخزنة، وغيّروا البطاريات بانتظام قبل أن تضعف تمامًا، واسألونا عن طريقة الفتح الاحتياطية لموديلكم.',
+        },
+      ],
+      en: [
+        {
+          q: 'Fingerprint or keypad safe — which is better?',
+          a: 'A fingerprint lock is quicker for one person who opens the safe often; a keypad suits a safe shared by several people because the code is easy to change. Some of our safes combine both with a backup key, such as the SAKURA EFI703 with fingerprint, keypad and key.',
+        },
+        {
+          q: 'What happens if the digital safe battery dies?',
+          a: 'On models with a backup key, open the safe with the key and change the batteries. So keep the backup key away from the safe, replace the batteries regularly before they run flat, and ask us how your model opens in an emergency.',
+        },
+      ],
+    },
     products: ['sakura-fingerprint-safe', 'sakura-multi-lock-safe', 'uchida-full-height-fire-resistant-safe'],
     links: [{ article: 'choosing-a-home-safe' }],
   },
@@ -164,12 +186,12 @@ export const articleSources: ArticleSource[] = [
     slug: 'fire-resistant-safe-for-documents',
     date: '2026-11-12',
     title: {
-      ar: 'الخزنة المقاومة للحريق: كيف تحمي مستنداتكم ووثائقكم المهمة؟',
-      en: 'Fire-Resistant Safes: How to Protect Your Important Documents',
+      ar: 'خزنة مستندات ضد الحريق: كيف تحمون وثائقكم المهمة؟',
+      en: 'Fireproof Document Safe: How to Protect Your Important Documents',
     },
     description: {
-      ar: 'لماذا تحتاج المستندات والوثائق والعقود إلى خزنة مقاومة للحريق، وكيف تختارونها، وما الذي يُحفظ فيها. دليل من مؤسسة نصر الله التجارية في قطر.',
-      en: 'Why documents, papers and contracts need a fire-resistant safe, how to choose one, and what to keep in it. A guide from Nasrallah Trading Est in Qatar.',
+      ar: 'خزنة مستندات ضد الحريق: لماذا تحتاج الوثائق والعقود إلى خزنة مقاومة للحريق، وكيف تختارونها، وما الذي يُحفظ فيها. دليل من مؤسسة نصر الله التجارية.',
+      en: 'A fireproof document safe: why papers and contracts need a fire-resistant safe, how to choose one and what to keep in it. From Nasrallah Trading Est.',
     },
     keywords: {
       ar: 'خزنة مقاومة للحريق في قطر، خزنة حفظ مستندات، خزنة حفظ وثائق، تجوري ضد الحريق',
@@ -236,6 +258,28 @@ export const articleSources: ArticleSource[] = [
             'Keep a digital copy of every important document somewhere else.',
             'Do not fill the safe to the top; leave room for what is to come.',
           ],
+        },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'كيف أحمي الأوراق الأصلية والعقود من الحريق؟',
+          a: 'بخزنة مقاومة للحريق لا بأي خزنة حديدية، لأن الحديد وحده يوصل الحرارة والورق يتلف عند حرارة أقل بكثير من حرارة الحريق. اختاروا مدة المقاومة المناسبة، ساعة أو ساعتين، ورتّبوا الأوراق في أظرف أو ملفات داخلها.',
+        },
+        {
+          q: 'وين أحفظ جوازات العائلة في البيت؟',
+          a: 'في خزنة منزلية مقاومة للحريق تجمعها مع شهادات الميلاد والعقود في مكان واحد، فتحميها من السرقة والحريق معًا ويسهل الوصول إليها عند السفر. خزنة صغيرة بتصنيف ساعة تكفي غالبًا، مثل UCHIDA موديل HS-23KE أو ZE-SS.',
+        },
+      ],
+      en: [
+        {
+          q: 'How do I protect original documents and contracts from fire?',
+          a: 'With a fire-resistant safe, not just any steel safe: steel alone conducts heat, and paper is damaged at temperatures far below those of the fire itself. Choose the right rating, one or two hours, and keep the papers in envelopes or folders inside.',
+        },
+        {
+          q: 'Where should I keep family passports at home?',
+          a: 'In a fire-resistant home safe that keeps them together with birth certificates and contracts, protected from theft and fire and easy to reach when you travel. A small 1-hour safe is usually enough, such as the UCHIDA HS-23KE or ZE-SS.',
         },
       ],
     },
@@ -385,6 +429,28 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
+    faq: {
+      ar: [
+        {
+          q: 'كم أسعار الخزائن في قطر؟',
+          a: 'تختلف كثيرًا بحسب النوع والمقاس: صناديق النقود تبدأ من 590 ريال قطري، والخزائن الفندقية الصغيرة من 1,150 ريال، وتصل الخزائن الكبيرة المقاومة للحريق إلى 27,450 ريال للخزنة ذات البابين. والسعر معلن في صفحة كل منتج.',
+        },
+        {
+          q: 'ليش في خزائن رخيصة وخزائن غالية بنفس الحجم؟',
+          a: 'لأن الحجم وحده لا يحدد السعر: مقاومة الحريق ومدتها، ونوع القفل، والماركة وبلد الصنع، والتجهيز الداخلي والتشطيب كلها ترفعه أو تخفضه. ولهذا قارنوا بين خزنتين متقاربتين في مقاومة الحريق ونوع القفل، لا في الحجم فقط.',
+        },
+      ],
+      en: [
+        {
+          q: 'How much do safes cost in Qatar?',
+          a: 'It varies widely by type and size: cash boxes start at QAR 590, small hotel safes at QAR 1,150, and large fire-resistant safes reach QAR 27,450 for the double-door safe. Every product page shows its price.',
+        },
+        {
+          q: 'Why do safes of the same size differ so much in price?',
+          a: 'Because size alone does not set the price: the fire rating, the lock, the brand and country of manufacture, and the interior and finish all raise or lower it. So compare two safes with a similar fire rating and lock, not just a similar size.',
+        },
+      ],
+    },
     products: ['uchida-compact-digital-safe', 'uchida-fingerprint-safe', 'sakura-multi-lock-safe', 'uchida-double-door-safe'],
     links: [{ category: 'fire-resistant-safes' }, { category: 'luxury-safes' }, { page: 'request-quote' }, { article: 'choosing-a-home-safe' }],
   },
@@ -396,7 +462,7 @@ export const articleSources: ArticleSource[] = [
       en: 'Forgot the Code or Lost the Key? How a Locked Safe Is Opened in Qatar',
     },
     description: {
-      ar: 'ماذا تفعلون إذا نسيتم الرقم السري لخزنتكم أو ضاع المفتاح؟ خدمة فتح الخزائن المقفولة في قطر بعد استيفاء اشتراطات وزارة الداخلية، من مؤسسة نصر الله التجارية.',
+      ar: 'نسيتم الرقم السري أو ضاع المفتاح؟ فتح خزنة مقفولة في قطر بعد استيفاء اشتراطات وزارة الداخلية: ماذا تفعلون، وكيف تتم الخدمة لدى مؤسسة نصر الله التجارية.',
       en: 'What to do if you forget your safe’s code or lose its key. Locked-safe opening in Qatar once the Ministry of Interior’s requirements are met, from Nasrallah Trading Est.',
     },
     keywords: {
@@ -467,6 +533,28 @@ export const articleSources: ArticleSource[] = [
           ],
         },
         { p: 'To request locked-safe opening, contact us on WhatsApp at 5562 3268 or by phone at 4458 3211.' },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'نسيت الرقم السري للخزنة، وش أسوي؟',
+          a: 'إن كان لخزنتكم مفتاح احتياطي فجرّبوه أولًا. وإن بقيت مقفلة، توجّهوا إلى مركز الشرطة التابع لمحل إقامتكم لاستخراج أمر فتح الخزنة، ثم تواصلوا معنا لتحديد الموعد، ويتولّى فريقنا الفني الفتح بحضور المختصين.',
+        },
+        {
+          q: 'ضاع مفتاح الخزنة، تقدرون تفتحونها؟',
+          a: 'نعم، بعد استيفاء اشتراطات وزارة الداخلية: استخراج أمر فتح الخزنة من مركز الشرطة التابع لمحل إقامتكم، ثم نحدّد موعد الفتح ويتولّى فريقنا الفني تنفيذه.',
+        },
+      ],
+      en: [
+        {
+          q: 'I forgot my safe code — what should I do?',
+          a: 'If your safe has a backup key, try it first. If it stays locked, go to the police station for your area of residence to obtain an order to open the safe, then contact us to set a time; our technical team opens it in the presence of the officials.',
+        },
+        {
+          q: 'I lost my safe key — can you open it?',
+          a: 'Yes, once the Ministry of Interior’s requirements are met: obtain an order to open the safe from the police station for your area of residence, then we set a time and our technical team carries it out.',
+        },
       ],
     },
     products: [],
@@ -554,12 +642,12 @@ export const articleSources: ArticleSource[] = [
     slug: 'cash-safe-for-shops-and-offices',
     date: '2026-11-24',
     title: {
-      ar: 'خزنة النقود للمحلات والشركات: دليل أصحاب الأعمال في قطر',
+      ar: 'خزنة فلوس للمحل والشركة: دليل أصحاب الأعمال في قطر',
       en: 'Cash Safes for Shops and Companies: A Guide for Business Owners in Qatar',
     },
     description: {
-      ar: 'كيف يختار أصحاب المحلات والشركات في قطر خزنة النقود المناسبة: المقاس، والقفل، ومقاومة الحريق، والتثبيت، ومن يملك الرقم السري. من مؤسسة نصر الله التجارية.',
-      en: 'How shop and company owners in Qatar choose the right cash safe: size, lock, fire resistance, anchoring and who holds the code. From Nasrallah Trading Est.',
+      ar: 'خزنة فلوس للمحل: كيف يختار أصحاب المحلات والشركات في قطر خزنة النقود المناسبة، من المقاس والقفل ومقاومة الحريق إلى من يملك الرقم السري.',
+      en: 'A cash safe for a shop: how business owners in Qatar choose the right one, from size, lock and fire resistance to anchoring and who holds the code.',
     },
     keywords: {
       ar: 'خزنة نقود في قطر، خزنة كاش للمحل، خزنة للشركات، تجوري للمحلات',
@@ -612,6 +700,36 @@ export const articleSources: ArticleSource[] = [
         { h: 'For large companies and institutions' },
         {
           p: 'We work with ministries, banks and companies, and more than 1,000 clients have placed their trust in us. Tell us how many branches you have and what is kept at each, and we will prepare a quotation covering every safe you need, with free delivery.',
+        },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'ما أفضل خزنة لمحل يتعامل بالكاش؟',
+          a: 'المحل الذي تمر فيه النقود طوال اليوم تناسبه خزنة إيداع: يودع الموظف النقود دون أن يفتحها، ولا يفتحها إلا صاحب المحل. ويُفضَّل أن تجمع بين قفل رقمي ومفتاح، وأن توضع بعيدًا عن نظر الزبائن.',
+        },
+        {
+          q: 'كيف أحمي فلوس المحل آخر الدوام؟',
+          a: 'أودعوا إيراد اليوم في خزنة إيداع ليلي، مثل UCHIDA موديل UFLC-360E بدرجها الذي يُسحب للخارج، فيضع الموظف النقود دون أن يعرف الرقم السري. ولا تتركوا النقود في درج الكاشير بعد الإغلاق.',
+        },
+        {
+          q: 'أبي خزنة فلوس للمطعم، شنو تنصحون؟',
+          a: 'للمطعم نرشّح خزنة الإيداع الليلي UCHIDA موديل UFLC-360E لإيراد آخر اليوم، أو خزنة الإيداع UCHIDA موديل PB-ND15 المقاومة للحريق لمدة ساعتين لمن يريد حماية النقود والأوراق من الحريق أيضًا.',
+        },
+      ],
+      en: [
+        {
+          q: 'What is the best safe for a shop that handles cash?',
+          a: 'A shop that takes cash all day is best served by a deposit safe: staff drop the cash without opening it, and only the owner opens it. Ideally it combines a digital lock with a key and stands out of customers’ sight.',
+        },
+        {
+          q: 'How do I protect shop cash at the end of the day?',
+          a: 'Drop the day’s takings into a night deposit safe, such as the UCHIDA UFLC-360E with its pull-out drawer, so staff can deposit cash without knowing the code. Never leave cash in the till drawer after closing.',
+        },
+        {
+          q: 'Which cash safe do you recommend for a restaurant?',
+          a: 'For a restaurant we recommend the UCHIDA UFLC-360E night deposit safe for end-of-day takings, or the UCHIDA PB-ND15 deposit safe with a 2-hour fire rating if you also want to protect cash and papers from fire.',
         },
       ],
     },
@@ -696,6 +814,20 @@ export const articleSources: ArticleSource[] = [
         },
         {
           p: 'In the showroom you will find all four brands side by side, so you can compare for yourself before you buy.',
+        },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'قارن بين UCHIDA وSAKURA وGODREJ حسب الاستخدام',
+          a: 'UCHIDA أوسع تشكيلة لدينا: خزائن مقاومة للحريق وإيداع وفنادق وملفات ومفاتيح وتصاميم فاخرة. وSAKURA للأقفال الحديثة بالبصمة والأرقام والخزائن الفندقية الرقمية والتصاميم المزخرفة. أما GODREJ فللدواليب الحديدية واللوكرات وخزائن الملفات في المكاتب والمدارس.',
+        },
+      ],
+      en: [
+        {
+          q: 'Compare UCHIDA, SAKURA and GODREJ by use case',
+          a: 'UCHIDA is our widest range: fire-resistant, deposit, hotel, filing and key safes and luxury designs. SAKURA covers modern fingerprint and keypad locks, digital hotel safes and decorative designs. GODREJ is for steel cupboards, lockers and filing cabinets in offices and schools.',
         },
       ],
     },
@@ -961,6 +1093,20 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
+    faq: {
+      ar: [
+        {
+          q: 'كيف أختار لوكرات ما تصدي من الرطوبة؟',
+          a: 'افحصوا الدهان والحواف قبل الشراء، وضعوا اللوكرات على أرضية جافة بعيدًا عن الماء المباشر، ولا تتركوا أغراضًا مبللة مغلقة داخل الخانات، وعالجوا أي خدش في الدهان مبكرًا. ولوكرات GODREJ لدينا متوفرة باللون البيج والزيتي.',
+        },
+      ],
+      en: [
+        {
+          q: 'How do I choose lockers that resist rust and humidity?',
+          a: 'Check the paint and edges before buying, stand the lockers on a dry floor away from direct water, never leave wet things shut inside, and touch up any scratch in the paint early. Our GODREJ lockers come in beige and olive.',
+        },
+      ],
+    },
     products: ['godrej-single-steel-locker', 'godrej-two-tier-steel-locker', 'godrej-three-door-steel-locker', 'godrej-six-door-steel-locker'],
     links: [{ category: 'steel-lockers' }, { category: 'steel-cupboards' }, { category: 'key-cabinets' }, { page: 'request-quote' }],
   },
@@ -1133,8 +1279,378 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
+    faq: {
+      ar: [
+        {
+          q: 'وين أحط الخزنة في البيت؟',
+          a: 'يختار أغلب عملائنا غرفة النوم لأنها أكثر غرف البيت خصوصية: داخل خزانة الملابس أو في ركن غير ظاهر، على الأرض مباشرة أو على رف يتحمل وزنها، مع مسافة كافية لفتح بابها. وقيسوا المكان من الداخل قبل اختيار المقاس.',
+        },
+      ],
+      en: [
+        {
+          q: 'Where should I put a safe in my house?',
+          a: 'Most of our customers choose the bedroom, the most private room in the house: inside the wardrobe or in a corner out of sight, on the floor or on a shelf that can bear its weight, with room for the door to open fully. Measure the space inside before choosing the size.',
+        },
+      ],
+    },
     products: ['uchida-compact-digital-safe', 'uchida-fingerprint-safe', 'sakura-fingerprint-safe', 'uchida-fire-resistant-jewellery-and-watch-safe'],
     links: [{ category: 'home-safes' }, { page: 'safe-buying-guide' }, { article: 'choosing-a-home-safe' }],
+  },
+  {
+    slug: 'one-hour-or-two-hour-fire-safe',
+    date: '2026-12-06',
+    title: {
+      ar: 'خزنة ضد الحريق ساعة أم ساعتين؟ كيف تختارون مدة الحماية المناسبة',
+      en: 'A 1-Hour or 2-Hour Fire Safe? Choosing the Right Fire Rating',
+    },
+    description: {
+      ar: 'ماذا يعني تصنيف الخزنة المقاومة للحريق لمدة ساعة أو ساعتين، ومتى تكفي الساعة ومتى تحتاجون ساعتين، مع الأوزان والأسعار والموديلات المتوفرة في قطر.',
+      en: 'What a 1-hour or 2-hour fire rating means, when one hour is enough and when you need two, with the weights, prices and models available in Qatar.',
+    },
+    keywords: {
+      ar: 'خزنة مقاومة للحريق ساعتين، خزنة ضد الحريق ساعة، تصنيف الحريق للخزائن، خزنة حريق 120 دقيقة، خزنة ضد الحريق قطر',
+      en: '2-hour fire safe, 1-hour fire safe, safe fire rating, 120 minute fire safe, fireproof safe Qatar',
+    },
+    body: {
+      ar: [
+        {
+          p: 'حين تقرؤون «مقاومة للحريق» في وصف خزنة، تجدون بجانبها رقمًا: ساعة أو ساعتان. هذا الرقم هو أهم ما في الخزنة المقاومة للحريق، وهو ما يفرّقها عن أي صندوق حديدي آخر. وفي هذا المقال نشرح ماذا يعني، ومتى تكفي الساعة، ومتى يستحق الأمر خزنة بتصنيف ساعتين، وما الذي يتغيّر في الوزن والسعر بينهما.',
+        },
+        { h: 'ماذا يعني تصنيف الحريق؟' },
+        {
+          p: 'الحديد وحده لا يحمي من الحريق، لأنه يوصل الحرارة إلى الداخل، والورق يبدأ بالتلف عند درجات حرارة أقل بكثير من حرارة الحريق نفسه. لهذا تُصنع الخزنة المقاومة للحريق بطبقة عازلة بين جدارين من الحديد، تبطئ وصول الحرارة إلى ما بداخلها. وتصنيف الساعة أو الساعتين هو المدة التي اختُبرت الخزنة على حماية ما بداخلها خلالها، أي 60 دقيقة أو 120 دقيقة.',
+        },
+        {
+          p: 'معنى ذلك أن الخزنة تمنحكم وقتًا، لا حماية بلا حدود. فكلما طالت مدة التصنيف زاد هامش الأمان إن طال الحريق أو تأخر إطفاؤه.',
+        },
+        { h: 'متى تكفي خزنة بتصنيف ساعة؟' },
+        {
+          p: 'في أغلب البيوت تكون الخزنة لجوازات السفر والذهب والنقود وبعض العقود، وكميتها صغيرة. هنا تكفي غالبًا خزنة صغيرة أو متوسطة بتصنيف ساعة، وهي أخف وزنًا وأسهل في التوصيل والوضع داخل خزانة الملابس. ومن الخزائن بتصنيف ساعة لدينا:',
+        },
+        {
+          ul: [
+            'خزنة UCHIDA بالبصمة موديل ZE-SS، بوزن 33 كجم وسعر 2,250 ريال قطري.',
+            'خزنة UCHIDA الصغيرة بقفل رقمي موديل HS-23KE، بوزن 29 كجم وسعر 1,390 ريال.',
+            'خزنة SAKURA بالبصمة والأرقام موديل ONS-FE، بوزن 67 كجم وسعر 4,794 ريال.',
+            'خزنة KUROGANE اليابانية الصغيرة موديل SK-12، بوزن 55 كجم وسعر 1,836 ريال.',
+          ],
+        },
+        { h: 'متى تحتاجون تصنيف ساعتين؟' },
+        {
+          p: 'حين تكون الخزنة لأوراق لا يمكن تعويضها: العقود الأصلية، والصكوك، وسجلات الشركة، والمستندات الرسمية، أو حين تجمع النقود والمستندات بكميات كبيرة في مكتب أو مؤسسة. في هذه الحالات تستحق الحماية الأطول وزنها وسعرها. ومن الخزائن بتصنيف ساعتين لدينا:',
+        },
+        {
+          ul: [
+            'خزنة UCHIDA البيج بقفل رقمي موديل BK-172KE، بوزن 144 كجم وسعر 7,150 ريال.',
+            'خزنة UCHIDA السوداء بقفل رقمي موديل BK-265KE، بوزن 245 كجم وسعر 9,950 ريال.',
+            'خزنة SAKURA متعددة الأقفال موديل EFI703 بالبصمة والأرقام والمفتاح، بوزن 375 كجم.',
+            'خزنة UCHIDA ببابين موديل E-526، بوزن 550 كجم، للبنوك والمؤسسات.',
+            'وخزنة الإيداع UCHIDA موديل PB-ND15 بوزن 136 كجم وسعر 3,990 ريال، وخزانة السجلات UCHIDA موديل UMB4-4K بأربعة أدراج.',
+          ],
+        },
+        { h: 'الفرق في الوزن والسعر' },
+        {
+          p: 'الطبقة العازلة الأسمك تعني خزنة أثقل وأغلى. في تشكيلتنا تبدأ الخزائن بتصنيف ساعة من 1,150 ريال قطري للخزنة الفندقية الصغيرة موديل HS-23K1، وتبدأ الخزائن بتصنيف ساعتين من 3,990 ريال لخزنة الإيداع موديل PB-ND15. وكل الخزائن بتصنيف ساعتين لدينا يزيد وزنها على 50 كجم، ولذلك يخضع توصيلها، وهو مجاني داخل قطر، للتقييد طبقًا للموقع الداخلي للعميل.',
+        },
+        {
+          p: 'لهذا لا تقارنوا السعر وحده: قارنوا خزنتين متقاربتين في المقاس وتصنيف الحريق ونوع القفل، ثم اسألوا أنفسكم كم تساوي الأوراق التي ستحفظونها لو ضاعت.',
+        },
+        { h: 'ماذا عن الفلاشات والأقراص الصلبة؟' },
+        {
+          p: 'الوسائط الرقمية تتأثر بالحرارة أسرع بكثير من الورق، ومدة مقاومة الحريق المذكورة للخزنة لا تعني بالضرورة أنها تحميها. احتفظوا بنسخة احتياطية في مكان آخر، واسألونا قبل الاعتماد على الخزنة لحفظ وسائط رقمية مهمة.',
+        },
+        { h: 'نصائح قبل الشراء' },
+        {
+          ul: [
+            'اكتبوا ما ستحفظونه اليوم وما ستضيفونه خلال السنوات القادمة، واختاروا مقاسًا أكبر قليلًا.',
+            'اقرؤوا الأبعاد الداخلية لا الخارجية فقط، فالجدران العازلة تأخذ جزءًا من المساحة.',
+            'أخبرونا بالطابق والمدخل والمصعد قبل الطلب إن كانت الخزنة ثقيلة.',
+            'رتّبوا الأوراق في أظرف أو ملفات داخل الخزنة، وأغلقوا الباب جيدًا في كل مرة.',
+          ],
+        },
+        { h: 'سؤالان يحسمان الاختيار' },
+        {
+          p: 'السؤال الأول: هل يمكن تعويض ما ستحفظونه؟ إن كانت للورقة نسخة في مكان آخر، فتصنيف ساعة يكفي غالبًا. وإن كانت أصلًا وحيدًا، كالعقود والصكوك الموقّعة، فالساعتان أولى. والسؤال الثاني: أين ستوضع الخزنة؟ الخزنة الثقيلة بتصنيف ساعتين تحتاج أرضية متينة ومدخلًا يسمح بإدخالها، أما خزنة الساعة الصغيرة فتوضع في خزانة الملابس أو تحت المكتب.',
+        },
+        {
+          p: 'وإن تعذّر الاختيار، فخزنتان أفضل من واحدة: خزنة صغيرة بتصنيف ساعة لما يُستعمل كل يوم من نقود وساعات، وخزنة أكبر بتصنيف ساعتين للأوراق الأصلية التي لا تُفتح إلا نادرًا.',
+        },
+        { h: 'شاهدوا الفرق بأنفسكم' },
+        {
+          p: 'في معرضنا بسوق العين على طريق سلوى تستطيعون رؤية الخزائن بتصنيف ساعة وساعتين جنبًا إلى جنب، وتجربة أقفالها، والمقارنة بين أحجامها. وتجدون مقاسات كل الموديلات وأسعارها في جدول المقارنة بقسم الخزائن المقاومة للحريق على موقعنا.',
+        },
+      ],
+      en: [
+        {
+          p: 'When a safe is described as fire-resistant, a number comes with it: one hour or two. That number is the most important thing about a fire-resistant safe, and what sets it apart from any other steel box. This article explains what it means, when one hour is enough, when a 2-hour safe is worth it, and what changes in weight and price between them.',
+        },
+        { h: 'What does a fire rating mean?' },
+        {
+          p: 'Steel alone does not protect against fire, because it conducts heat inwards, and paper is damaged at temperatures far below those of the fire itself. So a fire-resistant safe is built with an insulating layer between two steel walls that slows the heat reaching its contents. The 1-hour or 2-hour rating is the time the safe was tested to protect its contents: 60 or 120 minutes.',
+        },
+        {
+          p: 'In other words, the safe buys you time; it is not unlimited protection. The longer the rating, the wider the safety margin if a fire lasts longer or takes time to put out.',
+        },
+        { h: 'When is a 1-hour safe enough?' },
+        {
+          p: 'In most homes the safe holds passports, gold, cash and a few contracts, in small quantities. A compact or medium 1-hour safe is usually enough here, and it is lighter and easier to deliver and fit inside a wardrobe. Our 1-hour safes include:',
+        },
+        {
+          ul: [
+            'The UCHIDA ZE-SS fingerprint safe, 33 kg, QAR 2,250.',
+            'The compact UCHIDA HS-23KE with a digital lock, 29 kg, QAR 1,390.',
+            'The SAKURA ONS-FE with fingerprint and keypad, 67 kg, QAR 4,794.',
+            'The compact Japanese KUROGANE SK-12, 55 kg, QAR 1,836.',
+          ],
+        },
+        { h: 'When do you need a 2-hour rating?' },
+        {
+          p: 'When the safe holds papers that cannot be replaced: original contracts, title deeds, company records and official documents, or when cash and documents are kept in quantity in an office or institution. Here the longer protection is worth its weight and price. Our 2-hour safes include:',
+        },
+        {
+          ul: [
+            'The beige UCHIDA BK-172KE with a digital lock, 144 kg, QAR 7,150.',
+            'The black UCHIDA BK-265KE with a digital lock, 245 kg, QAR 9,950.',
+            'The SAKURA EFI703 multi-lock safe with fingerprint, keypad and key, 375 kg.',
+            'The UCHIDA E-526 double-door safe, 550 kg, for banks and institutions.',
+            'And the UCHIDA PB-ND15 deposit safe, 136 kg, QAR 3,990, and the four-drawer UCHIDA UMB4-4K records cabinet.',
+          ],
+        },
+        { h: 'The difference in weight and price' },
+        {
+          p: 'Thicker insulation means a heavier, dearer safe. In our range, 1-hour safes start at QAR 1,150 for the small HS-23K1 hotel safe, and 2-hour safes at QAR 3,990 for the PB-ND15 deposit safe. Every 2-hour safe we carry weighs more than 50 kg, so its delivery, free within Qatar, is subject to restrictions depending on access at the customer’s site.',
+        },
+        {
+          p: 'So do not compare price alone: compare two safes close in size, fire rating and lock, then ask yourself what the papers inside would be worth if they were lost.',
+        },
+        { h: 'What about USB drives and hard disks?' },
+        {
+          p: 'Digital media are damaged by heat far sooner than paper, and a safe’s fire rating does not necessarily cover them. Keep a backup somewhere else, and ask us before relying on a safe for important digital media.',
+        },
+        { h: 'Tips before you buy' },
+        {
+          ul: [
+            'List what you will keep today and what you will add over the coming years, and choose a slightly larger size.',
+            'Read the inside dimensions, not just the outside ones: the insulated walls take up part of the space.',
+            'Tell us the floor, entrance and lift before ordering a heavy safe.',
+            'Keep papers in envelopes or folders inside the safe, and close the door firmly every time.',
+          ],
+        },
+        { h: 'Two questions that settle it' },
+        {
+          p: 'First: can what you keep be replaced? If a paper has a copy elsewhere, a 1-hour rating is usually enough. If it is a one-off original, such as signed contracts and title deeds, two hours is the better choice. Second: where will the safe go? A heavy 2-hour safe needs a solid floor and an entrance it can pass through, while a small 1-hour safe fits in a wardrobe or under a desk.',
+        },
+        {
+          p: 'If you cannot decide, two safes are better than one: a small 1-hour safe for the cash and watches you use every day, and a larger 2-hour safe for original papers that are rarely opened.',
+        },
+        { h: 'See the difference for yourself' },
+        {
+          p: 'At our showroom in Souq Al Ein on Salwa Road you can see 1-hour and 2-hour safes side by side, try their locks and compare their sizes. The sizes and prices of every model are in the comparison table in the fire-resistant safes section of our site.',
+        },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'هل تصنيف ساعتين يعني أن الخزنة لا تتأثر بالحريق أبدًا؟',
+          a: 'لا. يعني أنها اختُبرت على حماية ما بداخلها لمدة 120 دقيقة. هي أطول حماية في تشكيلتنا، لكنها ليست بلا حدود.',
+        },
+        {
+          q: 'هل يمكن توصيل خزنة بتصنيف ساعتين إلى شقة في طابق علوي؟',
+          a: 'أخبرونا بالطابق وعرض الدرج والأبواب ووجود المصعد قبل الطلب. التوصيل مجاني داخل قطر، والخزائن التي يزيد وزنها على 50 كجم يخضع توصيلها للتقييد طبقًا للموقع الداخلي للعميل.',
+        },
+      ],
+      en: [
+        {
+          q: 'Does a 2-hour rating mean the safe is never affected by fire?',
+          a: 'No. It means it was tested to protect its contents for 120 minutes. It is the longest protection in our range, but it is not unlimited.',
+        },
+        {
+          q: 'Can a 2-hour safe be delivered to a flat on an upper floor?',
+          a: 'Tell us the floor, the width of the stairs and doors and whether there is a lift before ordering. Delivery within Qatar is free; for safes over 50 kg it is subject to restrictions depending on access at the customer’s site.',
+        },
+      ],
+    },
+    products: ['uchida-compact-digital-safe', 'uchida-fingerprint-safe', 'uchida-beige-digital-safe', 'sakura-multi-lock-safe'],
+    links: [{ category: 'fire-resistant-safes' }, { article: 'fire-resistant-safe-for-documents' }, { article: 'safe-prices-in-qatar' }, { page: 'request-quote' }],
+  },
+  {
+    slug: 'luxury-gifts-that-last',
+    date: '2026-12-10',
+    title: {
+      ar: 'هدية فخمة تدوم: أفكار هدايا للعروس والزوجة ومحبي الساعات في قطر',
+      en: 'A Luxury Gift That Lasts: Ideas for a Bride, a Wife and a Watch Lover in Qatar',
+    },
+    description: {
+      ar: 'أفكار هدية فخمة تبقى سنوات: شنطة مجوهرات للسفر للعروس، وخزنة مجوهرات بأدراج مخملية للزوجة، وخزنة بدوّار ساعات لمحب الساعات، مع الأسعار.',
+      en: 'Luxury gifts that last for years: a travel jewellery case for a bride, a velvet-drawer jewellery safe for a wife, and a watch winder safe for a watch lover.',
+    },
+    keywords: {
+      ar: 'هدية فخمة للعروس، هدية للزوجة، هدية رجالية فخمة، هدية لمحب الساعات، هدية زواج فخمة، هدية ملكة، خزنة هدية',
+      en: 'luxury gift for bride, gift for wife Qatar, luxury gift for him, gift for watch lover, wedding gift idea Qatar, gift safe',
+    },
+    body: {
+      ar: [
+        {
+          p: 'أجمل الهدايا هي التي تبقى وتُستعمل، لا التي تُفتح مرة ثم تُنسى في درج. ومع مواسم الأعراس والملكة، واليوم الوطني والأعياد، يبحث كثيرون في قطر عن هدية فخمة تليق بمن يحبون وتدوم معهم سنوات. وهنا أفكار من معرضنا لهدايا تجمع الفخامة والفائدة: تحفظ أثمن ما يملكه من تُهدى إليه، وتبقى أمام عينيه كل يوم.',
+        },
+        { h: 'هدية للعروس: شنطة مجوهرات للسفر' },
+        {
+          p: 'في الأشهر الأولى بعد الزواج تكثر الأسفار والحفلات والإقامة في الفنادق، وتتنقل أطقم الذهب والألماس معها. شنطة المجوهرات المقسّمة من الداخل تحمل الطقم كاملًا في مكان واحد: خانات للعقود والأساور والخواتم والأقراط، ووسائد للساعات، وبطانة ناعمة تمنع تلامس القطع، وأقفال ذهبية محكمة. وهي تصميم خاص من مؤسسة نصر الله التجارية لا تجدونه في مكان آخر في قطر، بتشطيب أسود بملمس جلد التمساح أو رمادي فاتح، وسعرها 2,700 ريال قطري.',
+        },
+        {
+          p: 'ولهذا تصلح هدية للملكة أو للعرس، أو هدية من العروس لنفسها، لأنها تُستعمل في كل سفر ومناسبة بعد الزفاف.',
+        },
+        { h: 'هدية للزوجة: خزنة مجوهرات بأدراج مخملية' },
+        {
+          p: 'إن كانت الهدية للبيت، فخزنة المجوهرات بتجهيز داخلي هي الهدية التي تبقى معها العمر كله. نصمّم الأدراج بحسب المقتنيات: أدراج مبطّنة بالمخمل، ومجسّمات للعقود، وبكرات للخواتم، ووسائد للساعات، بتشطيبات خشبية ومقابض نحاسية، ولا نبدأ العمل إلا بعد الموافقة على التصميم. لذلك تُسعّر خزائن المجوهرات المجهّزة حسب الطلب.',
+        },
+        {
+          p: 'ومن الخزائن التي تناسب هذه الهدية خزنة UCHIDA الحمراء موديل ZC-50 بأدراجها الجلدية وتصنيف حريق ساعة، وخزنة UCHIDA موديل PB-104 للمجوهرات والساعات بتصنيف ساعتين لمن يريد مساحة أكبر. وإن كانت المفاجأة مهمة، فاختاروا الخزنة الآن، واتركوا تصميم الأدراج لتختاره صاحبة الهدية بنفسها بحسب مجوهراتها.',
+        },
+        { h: 'هدية رجالية فخمة: خزنة بدوّار ساعات' },
+        {
+          p: 'لمحب الساعات الأوتوماتيكية لا شيء يضاهي خزنة بدوّار ساعات مدمج. الساعة الأوتوماتيكية تتوقف إذا تُركت دون حركة، والدوّار يُبقي أربع ساعات في دوران مستمر داخل إطار خشبي بلمسات جلدية وبكرات مضيئة، فتبقى الساعات تعمل ومحمية وجاهزة للبس. وفوق الدوّار درج جلدي للأحزمة والقطع الصغيرة، وتصنيف مقاومة الخزنة للحريق ساعة. سعرها حسب الطلب.',
+        },
+        { h: 'لهواة الساعات: أدراج الساعات' },
+        {
+          p: 'ولمن يملك مجموعة ساعات كبيرة، أدراج الساعات المجهّزة هدية تليق بالمجموعة: تحمل كل ساعة على بكرة أو وسادة مخملية خاصة بها، ببطانة زرقاء أو سوداء، خلف واجهات بنقشة خشبية ومقابض نحاسية، فتبقى الساعات محمية ومعروضة بأناقة داخل الخزنة. وسعرها حسب الطلب لأنها تُجهّز بحسب عدد الساعات.',
+        },
+        { h: 'هدية للعائلة: خزنة صغيرة للبيت الجديد' },
+        {
+          p: 'لمن ينتقل إلى بيت جديد، خزنة صغيرة مقاومة للحريق هدية عملية وفخمة في الوقت نفسه: تجمع الجوازات والذهب والعقود في مكان واحد. خزنة UCHIDA بالبصمة موديل ZE-SS سعرها 2,250 ريال قطري، وتُفتح بلمسة إصبع، وتصنيف مقاومتها للحريق ساعة.',
+        },
+        { h: 'لماذا تُعد الخزنة هدية فخمة؟' },
+        {
+          p: 'الهدية الفخمة ليست الأغلى ثمنًا، بل التي تشعر صاحبها بقيمة ما يملك. الخزنة أو الشنطة المجهّزة تقول لمن تُهدى إليه إن مجوهراته وساعاته وأوراقه تستحق مكانًا خاصًا بها، وتذكّره بمن أهداها كلما فتحها. ولأنها مصنوعة لتدوم، فهي هدية تبقى بعد أن تُنسى هدايا المناسبة الأخرى.',
+        },
+        { h: 'مناسبات تليق بها هذه الهدايا' },
+        {
+          ul: [
+            'الملكة والعرس والشبكة، وذكرى الزواج.',
+            'اليوم الوطني في 18 ديسمبر، والأعياد.',
+            'الانتقال إلى بيت جديد أو افتتاح مكتب جديد.',
+            'هدية التخرج أو الترقية لمن يحب الساعات.',
+          ],
+        },
+        { h: 'كيف تختارون الهدية المناسبة؟' },
+        {
+          ul: [
+            'فكّروا في ما يملكه من تُهدى إليه: مجوهرات كثيرة، أم ساعات، أم أوراق ومستندات.',
+            'اسألوا عن المكان: الشنطة تُحمل، والخزنة الصغيرة توضع في خزانة الملابس، والخزنة الكبيرة تحتاج مكانًا ثابتًا.',
+            'للخزائن الثقيلة أخبرونا بالطابق والمدخل قبل التوصيل.',
+            'اختاروا الهدية قبل المناسبة بوقت كافٍ، خصوصًا إن كانت بتجهيز داخلي حسب الطلب.',
+          ],
+        },
+        { h: 'لمسات تكمّل الهدية' },
+        {
+          ul: [
+            'إن كانت الهدية شنطة لعروس، فاختاروا اللون الذي تفضّله: الأسود بملمس جلد التمساح أو الرمادي الفاتح.',
+            'سلّموا المفتاح الاحتياطي للخزنة مع الهدية في ظرف مستقل، ونبّهوا صاحبها أن يحفظه بعيدًا عنها.',
+            'إن كانت الخزنة بقفل بصمة، فاتركوا لصاحب الهدية تسجيل بصمته بنفسه عند استلامها.',
+          ],
+        },
+        {
+          p: 'وإن كنتم خارج الدوحة، فالتوصيل مجاني إلى كل مناطق قطر، ومنها الريان والوكرة ولوسيل والخور وأم صلال.',
+        },
+        { h: 'شاهدوا الهدايا في المعرض' },
+        {
+          p: 'تجدون شنط المجوهرات وخزائن المجوهرات وخزنة دوّار الساعات في معرضنا بسوق العين على طريق سلوى بالدوحة، ويمكنكم مشاهدتها بالفيديو على صفحة «استعرض تشكيلتنا». والتوصيل مجاني داخل قطر، وللمزيد راسلونا على واتساب.',
+        },
+      ],
+      en: [
+        {
+          p: 'The best gifts are the ones that stay and get used, not the ones opened once and forgotten in a drawer. With the seasons of weddings and engagements, National Day and Eid, many people in Qatar look for a luxury gift worthy of someone they love that will last for years. Here are ideas from our showroom for gifts that bring luxury and use together: they keep the recipient’s most precious things, and stay in sight every day.',
+        },
+        { h: 'For a bride: a travel jewellery case' },
+        {
+          p: 'The first months of marriage bring trips, parties and hotel stays, and the gold and diamond sets travel too. A jewellery case divided inside carries a whole set in one place: compartments for necklaces, bangles, rings and earrings, cushions for watches, a soft lining that keeps pieces from touching, and secure gold-tone clasps. It is a design of our own you will not find anywhere else in Qatar, in black crocodile texture or light grey, and costs QAR 2,700.',
+        },
+        {
+          p: 'That is why it suits an engagement or a wedding, or a bride treating herself, because it is used on every trip and occasion after the wedding.',
+        },
+        { h: 'For a wife: a jewellery safe with velvet drawers' },
+        {
+          p: 'If the gift is for the home, a jewellery safe with a fitted interior is a gift that lasts a lifetime. We design the drawers around the collection: velvet-lined drawers, necklace busts, ring rolls and watch cushions, in wood finishes with brass handles, and we start work only once the design is approved. That is why fitted jewellery safes are priced on request.',
+        },
+        {
+          p: 'Safes that suit this gift include the red UCHIDA ZC-50 with leather drawers and a 1-hour fire rating, and the UCHIDA PB-104 jewellery and watch safe with a 2-hour rating for more space. If the surprise matters, choose the safe now and leave the drawer design for her to choose around her own jewellery.',
+        },
+        { h: 'A luxury gift for him: a watch winder safe' },
+        {
+          p: 'For a lover of automatic watches nothing compares with a safe with a built-in watch winder. An automatic watch stops when it sits still; the winder keeps four watches turning in a wooden frame with leather trim and softly lit rotors, so they stay running, protected and ready to wear. Above the winder is a leather drawer for straps and smaller pieces, and the safe has a 1-hour fire rating. Its price is on request.',
+        },
+        { h: 'For collectors: watch drawers' },
+        {
+          p: 'For someone with a large watch collection, fitted watch drawers make a gift worthy of it: each watch sits on its own velvet roll or cushion, lined in blue or black, behind wood-finish fronts with brass handles, protected and on display inside the safe. They are priced on request, because they are fitted to the number of watches.',
+        },
+        { h: 'For the family: a small safe for a new home' },
+        {
+          p: 'For a family moving into a new home, a small fire-resistant safe is a gift that is both practical and fine: it keeps passports, gold and contracts together. The UCHIDA ZE-SS fingerprint safe costs QAR 2,250, opens with a touch of a finger and has a 1-hour fire rating.',
+        },
+        { h: 'Why a safe makes a luxury gift' },
+        {
+          p: 'A luxury gift is not the most expensive one but the one that makes its owner feel the value of what they have. A fitted safe or case tells the recipient that their jewellery, watches and papers deserve a place of their own, and reminds them of the giver every time they open it. Made to last, it stays long after other gifts of the season are forgotten.',
+        },
+        { h: 'Occasions that suit these gifts' },
+        {
+          ul: [
+            'Engagements, weddings and wedding anniversaries.',
+            'National Day on 18 December, and Eid.',
+            'Moving into a new home or opening a new office.',
+            'A graduation or promotion gift for someone who loves watches.',
+          ],
+        },
+        { h: 'How to choose the right gift' },
+        {
+          ul: [
+            'Think about what the recipient owns: lots of jewellery, watches, or papers and documents.',
+            'Think about the place: a case is carried, a small safe sits in a wardrobe, a large safe needs a fixed spot.',
+            'For heavy safes, tell us the floor and entrance before delivery.',
+            'Choose the gift well before the occasion, especially if it has a made-to-order interior.',
+          ],
+        },
+        { h: 'Finishing touches' },
+        {
+          ul: [
+            'If the gift is a case for a bride, choose the colour she prefers: black crocodile texture or light grey.',
+            'Hand over the safe’s backup key with the gift in a separate envelope, and remind the owner to keep it away from the safe.',
+            'If the safe has a fingerprint lock, let the recipient enrol their own fingerprint when it arrives.',
+          ],
+        },
+        {
+          p: 'If you are outside Doha, delivery is free anywhere in Qatar, including Al Rayyan, Al Wakrah, Lusail, Al Khor and Umm Salal.',
+        },
+        { h: 'See the gifts at the showroom' },
+        {
+          p: 'You will find our jewellery cases, jewellery safes and the watch winder safe at our showroom in Souq Al Ein on Salwa Road, Doha, and you can watch them on video on our “Explore our collection” page. Delivery within Qatar is free; message us on WhatsApp for more.',
+        },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'هل تنفع خزنة المجوهرات هدية مفاجئة؟',
+          a: 'نعم. اختاروا الخزنة الآن، واتركوا تصميم الأدراج لصاحبة الهدية بحسب مجوهراتها، فنحن لا نبدأ التجهيز الداخلي إلا بعد الموافقة على التصميم.',
+        },
+        {
+          q: 'كم سعر شنطة المجوهرات للسفر؟',
+          a: '2,700 ريال قطري، مع توصيل مجاني داخل قطر.',
+        },
+      ],
+      en: [
+        {
+          q: 'Can a jewellery safe be a surprise gift?',
+          a: 'Yes. Choose the safe now and leave the drawer design to her, around her own jewellery; we start the interior only once the design is approved.',
+        },
+        {
+          q: 'How much is the travel jewellery case?',
+          a: 'QAR 2,700, with free delivery within Qatar.',
+        },
+      ],
+    },
+    products: ['travel-jewellery-cases', 'uchida-red-safe-with-leather-drawers', 'watch-winder-safe', 'uchida-fingerprint-safe'],
+    links: [{ category: 'jewellery-watch-interiors' }, { category: 'luxury-safes' }, { article: 'travel-jewellery-cases-for-weddings-and-travel' }, { page: 'contact' }],
   },
   {
     slug: 'upper-floor-safe-delivery',
@@ -1497,8 +2013,204 @@ export const articleSources: ArticleSource[] = [
         },
       ],
     },
+    faq: {
+      ar: [
+        {
+          q: 'كيف أحمي ذهبي وأنا مسافرة أو في عرس؟',
+          a: 'احملوا الأطقم في شنطة مجوهرات مقسّمة تُغلق بإحكام ويحملها شخص واحد طوال الوقت، ولا تضعوها في الحقائب المشحونة. اكتبوا قائمة بالقطع وراجعوها عند كل انتقال، وأعيدوها إلى خزنة البيت فور العودة.',
+        },
+      ],
+      en: [
+        {
+          q: 'How do I protect my gold when travelling or at a wedding?',
+          a: 'Carry your sets in a divided jewellery case that closes securely and stays with one person the whole time, and never put it in checked luggage. List the pieces and check them at every move, and return them to your safe at home as soon as you are back.',
+        },
+      ],
+    },
     products: ['travel-jewellery-cases', 'jewellery-display-drawers', 'uchida-fire-resistant-jewellery-and-watch-safe', 'marble-interior-jewellery-safe'],
     links: [{ category: 'jewellery-watch-interiors' }, { category: 'hotel-safes' }, { article: 'jewellery-and-watch-safes' }],
+  },
+  {
+    slug: 'steel-cupboard-or-safe',
+    date: '2026-12-24',
+    title: {
+      ar: 'دولاب حديد أم خزنة؟ الفرق بينهما ومتى تحتاجون كلًّا منهما',
+      en: 'Steel Cupboard or Safe? The Difference and When You Need Each',
+    },
+    description: {
+      ar: 'ما الفرق بين الدولاب الحديد والخزنة: البناء والقفل ومقاومة الحريق والوزن والسعر، ومتى يكفي دولاب GODREJ ومتى تحتاجون خزنة أو خزانة ملفات مقاومة للحريق.',
+      en: 'Steel cupboard or safe: build, lock, fire rating, weight and price, and when a GODREJ almirah is enough or a safe or fire-resistant filing cabinet is needed.',
+    },
+    keywords: {
+      ar: 'الفرق بين دولاب حديد وخزنة، دولاب حديد قطر، خزنة أمان، دولاب جودريج، خزانة حديد للمكتب',
+      en: 'steel cupboard vs safe, steel almirah Qatar, GODREJ almirah, security safe, office steel cupboard',
+    },
+    body: {
+      ar: [
+        {
+          p: 'يسألنا كثير من أصحاب المكاتب والمدارس والبيوت: هل يكفيني دولاب حديد بقفل، أم أحتاج خزنة؟ الاثنان من الحديد، والاثنان يُقفلان، لكنهما صُنعا لغرضين مختلفين. الدولاب الحديد ينظّم الملفات والأدوات والمستلزمات خلف باب متين، أما الخزنة فمصمّمة لحماية النقود والمقتنيات الثمينة والمستندات من السرقة، والمقاومة للحريق منها تحميها من الحرارة أيضًا.',
+        },
+        { h: 'البناء: ألواح حديد أم جسم مصمت؟' },
+        {
+          p: 'الدولاب الحديد مصنوع من ألواح حديد بأرفف أو أدراج، وهو خفيف نسبيًا: دولاب GODREJ ببابين موديل FHC4 يزن 45 كجم بارتفاع 183 سم. أما الخزنة فجسمها أثقل بكثير؛ خزنة UCHIDA السوداء موديل BK-265KE تزن 245 كجم مع أنها أقصر، لأن جدرانها وأبوابها مصنوعة لمقاومة الكسر، وفيها طبقة عازلة تحمي من الحريق.',
+        },
+        { h: 'القفل' },
+        {
+          p: 'في الدواليب الحديدية قفل بمفتاح، ومنها موديلات بقفل غاطس مثل LC1ES4 وFHC4، وهو كافٍ لمنع العبث اليومي. أما الخزائن فأقفالها أكثر إحكامًا: قفل رقمي، أو بصمة، أو قفل دوّار ميكانيكي، وكثير منها يجمع أكثر من قفل مع مفتاح احتياطي.',
+        },
+        { h: 'مقاومة الحريق' },
+        {
+          p: 'الدواليب الحديدية من GODREJ لدينا غير مصنّفة لمقاومة الحريق، وكذلك خزائن الملفات الحديدية العادية. فإن كانت الأوراق أصلية لا يمكن تعويضها، فالحل خزنة مقاومة للحريق بتصنيف ساعة أو ساعتين، أو خزانة ملفات مقاومة للحريق مثل UCHIDA موديل UMB4-4K أو SAKURA موديل UB4-4DLK.',
+        },
+        { h: 'السعر' },
+        {
+          p: 'الدواليب الحديدية أوفر بكثير: من 690 ريال قطري لدولاب GODREJ بباب واحد موديل LC1ES4 إلى 1,490 ريال للدولاب ببابين ومقبض. أما الخزائن فتبدأ من 1,150 ريال للخزنة الفندقية الصغيرة، وتصل إلى 27,450 ريال للخزنة ذات البابين. والفرق في السعر هو فرق في الحماية، ولذلك لا معنى للمقارنة بين السعرين إلا بعد أن تحددوا ما ستحفظونه.',
+        },
+        { h: 'متى يكفي الدولاب الحديد؟' },
+        {
+          ul: [
+            'لملفات العمل اليومية والأدوات والمستلزمات المكتبية.',
+            'لتنظيم المستودع وغرف المعلمين والموظفين.',
+            'حين يكون الهدف الترتيب ومنع العبث، لا حماية النقود.',
+          ],
+        },
+        { h: 'متى تحتاجون خزنة؟' },
+        {
+          ul: [
+            'للنقود والذهب والمجوهرات والساعات.',
+            'للعقود الأصلية والصكوك والمستندات الرسمية، ويُفضَّل أن تكون مقاومة للحريق.',
+            'حين يمكن أن تكون السرقة أو الحريق خسارة لا تعوَّض.',
+          ],
+        },
+        { h: 'خزانة الملفات: حل في المنتصف' },
+        {
+          p: 'بين الدولاب والخزنة تقع خزانة الملفات. خزائن GODREJ الحديدية بدرجين أو ثلاثة أو خمسة أدراج، بقفل علوي، وأسعارها من 590 إلى 960 ريال قطري، تناسب ملفات العمل اليومية وتحفظها مرتبة. أما خزائن الملفات المقاومة للحريق بأربعة أدراج من UCHIDA وSAKURA فأسعارها من 6,000 إلى 7,099 ريال، وأوزانها بين 320 و400 كجم، وهي للسجلات والأرشيف الذي لا يمكن تعويضه.',
+        },
+        { h: 'الأبواب الزجاجية: للعرض لا للحماية' },
+        {
+          p: 'دولاب GODREJ بأبواب زجاجية موديل FHC4 FG SWD يناسب المكتبات وعرض الملفات والكتب والدروع، لكنه للعرض والتنظيم. أما ما تريدون إخفاءه وحمايته فمكانه خلف باب فولاذي مصمت.',
+        },
+        { h: 'خزنة صغيرة داخل الدولاب' },
+        {
+          p: 'يجمع بعض العملاء الترتيب والحماية معًا: دولاب حديد للملفات والمستلزمات، وفي داخله خزنة صغيرة للنقود والمفاتيح المهمة، مثل خزنة UCHIDA موديل HS-23KE بعرض 44.4 سم ووزن 29 كجم. قيسوا الرف من الداخل قبل الطلب، وتأكدوا أنه يتحمل وزن الخزنة.',
+        },
+        { h: 'وماذا عن اللوكرات؟' },
+        {
+          p: 'اللوكر ليس دولابًا صغيرًا: كل خانة فيه بقفل مستقل لشخص واحد. لوكرات GODREJ من باب واحد إلى ستة أبواب بأسعار من 540 إلى 749 ريال قطري، وهي الحل حين يحتاج كل موظف أو طالب إلى مكان خاص به، بينما يبقى الدولاب للأغراض المشتركة.',
+        },
+        { h: 'أخطاء شائعة' },
+        {
+          ul: [
+            'حفظ نقود المحل أو المكتب في درج الدولاب الحديد بدل خزنة.',
+            'وضع العقود والصكوك الأصلية في خزانة ملفات غير مقاومة للحريق.',
+            'ترك مفتاح الدولاب أو الخزنة فوقه أو في درج قريب منه.',
+            'شراء خزنة كبيرة لحفظ ملفات يومية يكفيها دولاب أو خزانة ملفات.',
+          ],
+        },
+        { h: 'الحل الذي تختاره أغلب المكاتب' },
+        {
+          p: 'أغلب المكاتب والمدارس لا تختار بينهما، بل تجمع الاثنين: دواليب حديد وخزائن ملفات للعمل اليومي، وخزنة واحدة مقاومة للحريق للنقود والأوراق الأصلية. ولحفظ أغراض الموظفين الشخصية هناك اللوكرات الحديدية بخانات مستقلة.',
+        },
+        { h: 'اطلبوا الحل المناسب' },
+        {
+          p: 'أخبرونا بما ستحفظونه وبعدد الموظفين والمكاتب، ونرشّح لكم المزيج المناسب من الدواليب والخزائن وخزائن الملفات في عرض سعر واحد، مع توصيل مجاني داخل قطر. أو زورونا في معرضنا بسوق العين على طريق سلوى، حيث تُعرض الدواليب والخزائن وخزائن الملفات جنبًا إلى جنب، لتشاهدوا الفرق بأنفسكم.',
+        },
+      ],
+      en: [
+        {
+          p: 'Many office, school and home owners ask us: is a lockable steel cupboard enough, or do I need a safe? Both are steel and both lock, but they are made for different jobs. A steel cupboard organises files, tools and supplies behind a sturdy door; a safe is designed to protect cash, valuables and documents from theft, and a fire-resistant safe protects them from heat as well.',
+        },
+        { h: 'The build: steel panels or a solid body?' },
+        {
+          p: 'A steel cupboard is made of steel panels with shelves or drawers, and is relatively light: the GODREJ FHC4 double-door cupboard weighs 45 kg and stands 183 cm high. A safe is far heavier; the black UCHIDA BK-265KE weighs 245 kg although it is shorter, because its walls and door are built to resist forcing, with an insulating layer against fire.',
+        },
+        { h: 'The lock' },
+        {
+          p: 'Steel cupboards have a key lock, some models a recessed one, such as the LC1ES4 and FHC4, which is enough to stop everyday tampering. Safes have much more secure locks: a digital keypad, a fingerprint reader or a mechanical combination dial, and many combine more than one lock with a backup key.',
+        },
+        { h: 'Fire resistance' },
+        {
+          p: 'Our GODREJ steel cupboards are not fire rated, and neither are standard steel filing cabinets. If the papers are originals that cannot be replaced, the answer is a fire-resistant safe rated for one or two hours, or a fire-resistant filing cabinet such as the UCHIDA UMB4-4K or the SAKURA UB4-4DLK.',
+        },
+        { h: 'Price' },
+        {
+          p: 'Steel cupboards cost far less: from QAR 690 for the single-door GODREJ LC1ES4 to QAR 1,490 for the double-door model with a handle. Safes start at QAR 1,150 for a small hotel safe and reach QAR 27,450 for the double-door safe. The difference in price is a difference in protection.',
+        },
+        { h: 'When a steel cupboard is enough' },
+        {
+          ul: [
+            'For everyday work files, tools and office supplies.',
+            'For organising store rooms and staff or teachers’ rooms.',
+            'When the aim is order and stopping tampering, not protecting cash.',
+          ],
+        },
+        { h: 'When you need a safe' },
+        {
+          ul: [
+            'For cash, gold, jewellery and watches.',
+            'For original contracts, title deeds and official documents, ideally in a fire-resistant safe.',
+            'When theft or fire would be a loss that cannot be made good.',
+          ],
+        },
+        { h: 'The filing cabinet: the middle ground' },
+        {
+          p: 'Between the cupboard and the safe sits the filing cabinet. GODREJ steel filing cabinets with two, three or five drawers and a top lock, from QAR 590 to QAR 960, keep daily work files in order. The four-drawer fire-resistant filing cabinets from UCHIDA and SAKURA, from QAR 6,000 to QAR 7,099 and weighing 320 to 400 kg, are for records and archives that cannot be replaced.',
+        },
+        { h: 'Glass doors: for display, not protection' },
+        {
+          p: 'The GODREJ FHC4 FG SWD with glass doors suits libraries and displaying files, books and awards, but it is for display and order. What you want hidden and protected belongs behind a solid steel door.',
+        },
+        { h: 'A small safe inside the cupboard' },
+        {
+          p: 'Some customers combine order and protection: a steel cupboard for files and supplies, with a small safe inside it for cash and important keys, such as the UCHIDA HS-23KE, 44.4 cm wide and 29 kg. Measure the shelf inside before ordering, and make sure it can bear the safe’s weight.',
+        },
+        { h: 'And lockers?' },
+        {
+          p: 'A locker is not a small cupboard: each compartment has its own lock for one person. GODREJ lockers with one to six doors cost QAR 540 to QAR 749, and are the answer when every employee or student needs a place of their own, while the cupboard stays for shared things.',
+        },
+        { h: 'Common mistakes' },
+        {
+          ul: [
+            'Keeping shop or office cash in a steel cupboard drawer instead of a safe.',
+            'Putting original contracts and deeds in a filing cabinet that is not fire-resistant.',
+            'Leaving the cupboard or safe key on top of it or in a drawer nearby.',
+            'Buying a large safe for daily files that a cupboard or filing cabinet would hold.',
+          ],
+        },
+        { h: 'What most offices choose' },
+        {
+          p: 'Most offices and schools do not choose between them; they use both: steel cupboards and filing cabinets for daily work, and one fire-resistant safe for cash and original papers. For staff belongings there are steel lockers with separate compartments. Many of our customers from India and Pakistan know the GODREJ steel cupboard as an almirah; it is the same product.',
+        },
+        { h: 'Ask for the right mix' },
+        {
+          p: 'Tell us what you will store and how many staff and offices you have, and we will recommend the right mix of cupboards, safes and filing cabinets in one quotation, with free delivery within Qatar. Or visit our showroom in Souq Al Ein to see the difference for yourself.',
+        },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'هل الدولاب الحديد مقاوم للحريق؟',
+          a: 'الدواليب الحديدية من GODREJ لدينا غير مصنّفة لمقاومة الحريق. للحماية من الحريق اختاروا خزنة أو خزانة ملفات مقاومة للحريق.',
+        },
+        {
+          q: 'هل الدولاب الحديد يُقفل؟',
+          a: 'نعم، بقفل بمفتاح، ومنها موديلات بقفل غاطس مثل LC1ES4 وFHC4.',
+        },
+      ],
+      en: [
+        {
+          q: 'Is a steel cupboard fire-resistant?',
+          a: 'Our GODREJ steel cupboards are not fire rated. For protection from fire, choose a fire-resistant safe or filing cabinet.',
+        },
+        {
+          q: 'Does a steel cupboard lock?',
+          a: 'Yes, with a key lock; some models, such as the LC1ES4 and FHC4, have a recessed lock.',
+        },
+      ],
+    },
+    products: ['godrej-two-door-steel-cupboard', 'godrej-single-door-steel-cupboard', 'uchida-black-digital-safe', 'uchida-fire-resistant-records-cabinet'],
+    links: [{ category: 'steel-cupboards' }, { category: 'fire-resistant-safes' }, { category: 'filing-cabinets' }, { page: 'request-quote' }],
   },
   {
     slug: 'hotel-safes-for-rooms-and-serviced-apartments',
@@ -1715,6 +2427,192 @@ export const articleSources: ArticleSource[] = [
         category: 'cash-boxes',
       },
     ],
+  },
+  {
+    slug: 'safes-and-lockers-by-sector',
+    date: '2027-01-16',
+    title: {
+      ar: 'خزائن ولوكرات حسب القطاع: ماذا تحتاج المدارس والمستشفيات والبنوك والمطاعم في قطر؟',
+      en: 'Safes and Lockers by Sector: What Schools, Hospitals, Banks and Restaurants in Qatar Need',
+    },
+    description: {
+      ar: 'دليل توريد الخزائن واللوكرات للمؤسسات في قطر: ما يناسب المدارس والمستشفيات والبنوك والمطاعم والفنادق والمصانع ومعارض السيارات، وكيف تحسبون الكميات.',
+      en: 'A guide to supplying safes and lockers to organisations in Qatar: what suits schools, hospitals, banks, restaurants, hotels, factories and car showrooms.',
+    },
+    keywords: {
+      ar: 'توريد خزائن مدارس، توريد خزائن مستشفيات، توريد خزائن البنوك، خزائن المطاعم، لوكرات سكن العمال، خزائن معارض السيارات',
+      en: 'lockers and cabinets for schools qatar, safes for hospitals, bank safe supplier qatar, restaurant safes, labour camp lockers, car showroom key cabinet',
+    },
+    body: {
+      ar: [
+        {
+          p: 'حين تجهّز مؤسسة مقرًّا جديدًا أو فرعًا إضافيًا، تكون الخزائن واللوكرات جزءًا من قائمة طويلة، وكثيرًا ما تُشترى متأخرة أو بغير المقاس المناسب. ولكل قطاع احتياجاته: المدرسة تحتاج لوكرات قبل أي شيء، والبنك يحتاج خزائن مقاومة للحريق، والمطعم يحتاج خزنة إيداع. في هذا الدليل نجمع ما يناسب كل قطاع من تشكيلتنا، لتبدؤوا بقائمة صحيحة.',
+        },
+        { h: 'المدارس والجامعات' },
+        {
+          p: 'اللوكرات الحديدية أول ما تحتاجه المدارس للطلاب والمعلمين: لوكرات GODREJ من باب واحد إلى ستة أبواب بالمقاس الخارجي نفسه، فتُصفّ أعمدة مختلفة جنبًا إلى جنب. وللسجلات وملفات الطلاب خزائن ملفات حديدية بدرجين أو ثلاثة أو خمسة أدراج، ولأوراق الامتحانات والشهادات الأصلية خزانة ملفات أو خزنة مقاومة للحريق.',
+        },
+        { h: 'المستشفيات والعيادات' },
+        {
+          p: 'لوكرات لغرف الموظفين والطاقم، وخزائن ملفات لسجلات المرضى، ودواليب حديد للمستلزمات. وفي الاستقبال صندوق نقود بقفل للمبالغ اليومية، أو خزنة صغيرة بقفل رقمي حين تتشارك المناوبات الخزنة نفسها.',
+        },
+        {
+          p: 'وفي الصيدليات يكفي غالبًا صندوق نقود بقفل للكاشير، مع خزانة ملفات للفواتير والأوراق.',
+        },
+        { h: 'البنوك ومحلات الصرافة والذهب' },
+        {
+          p: 'هنا تكون الحماية من السرقة والحريق معًا أولوية: خزائن مقاومة للحريق بتصنيف ساعتين، منها خزنة UCHIDA ببابين موديل E-526 بوزن 550 كجم، وخزنة UCHIDA بارتفاع كامل موديل UBO-335E، وخزنة SAKURA متعددة الأقفال موديل EFI703 بالبصمة والأرقام والمفتاح. ولإيداعات اليوم خزائن الإيداع التي لا تُفتح عند الإيداع.',
+        },
+        { h: 'المطاعم والسوبرماركت ومحطات الوقود' },
+        {
+          p: 'النقود تُستلم طوال اليوم، ولا ينبغي أن يعرف كل موظف الرقم السري. خزنة الإيداع UCHIDA موديل PB-ND15 بتصنيف حريق ساعتين، أو خزنة الإيداع الليلي موديل UFLC-360E بدرج يُسحب للخارج، يودع فيهما الكاشير الإيراد دون فتح الخزنة. وصناديق النقود من UCHIDA للكاشير ونقل النقود.',
+        },
+        { h: 'الفنادق والشقق الفندقية والمجمعات السكنية' },
+        {
+          p: 'خزائن فندقية للغرف: SAKURA بقفل رقمي وشاشة حاصلة على شهادة CE يضع فيها النزيل رمزه الخاص، أو UCHIDA بقفل مفتاح. ولإدارة المفاتيح خزائن مفاتيح تُعلّق على الجدار بخطافات مرقّمة وميداليات ملوّنة، لـ 60 أو 100 مفتاح.',
+        },
+        { h: 'الوزارات والجهات الحكومية والسفارات' },
+        {
+          p: 'الأرشيف الرسمي يحتاج خزائن سجلات مقاومة للحريق: UCHIDA موديل UMB4-4K بأربعة أدراج وتصنيف ساعتين، وSAKURA موديل UB4-4DLK بقفل رقمي. وللوثائق والنقد خزائن مقاومة للحريق بأحجام مختلفة، وللمكاتب دواليب حديد بباب أو بابين أو بأبواب زجاجية.',
+        },
+        { h: 'المصانع والمستودعات وسكن العمال' },
+        {
+          p: 'لوكرات حديد لكل عامل، ودواليب حديد للأدوات والمستلزمات، وخزائن مفاتيح للمعدات والمركبات. وفي الأماكن الرطبة اهتموا بتهوية المكان وبعدم ترك أغراض مبللة داخل اللوكرات حتى لا يصدأ الحديد.',
+        },
+        { h: 'معارض السيارات وشركات التأجير' },
+        {
+          p: 'خزانة مفاتيح UCHIDA لـ 60 مفتاحًا أو 100 مفتاح، تُقفل بمفتاح، ويمكن تعليق أكثر من خزانة جنبًا إلى جنب كلما زاد عدد السيارات. وللإيرادات اليومية خزنة نقود بقفل رقمي ومفتاح احتياطي.',
+        },
+        { h: 'الأندية الرياضية' },
+        {
+          p: 'لوكرات لغرف تبديل الملابس، يُختار عدد أبوابها حسب ما يحفظه كل مشترك: باب واحد لتعليق الملابس، أو ستة أبواب للهواتف والمحافظ.',
+        },
+        { h: 'مكاتب المحاماة والمحاسبة' },
+        {
+          p: 'العقود الأصلية والوكالات وملفات العملاء أوراق لا تعوَّض، فتحتاج خزانة ملفات أو خزنة مقاومة للحريق، مع دواليب حديد للملفات الجارية. ولأن أكثر من موظف يفتح الخزنة، فالقفل الرقمي مناسب لأنه يسمح بتغيير الرقم السري عند تغيّر الموظفين.',
+        },
+        { h: 'قبل الطلب: معلومات تساعدنا' },
+        {
+          ul: [
+            'نوع النشاط وعدد الفروع ومواقعها.',
+            'ما سيُحفظ في كل خزنة أو خزانة: نقود، أوراق أصلية، ملفات يومية، أغراض شخصية.',
+            'الطوابق والمصاعد وعرض الأبواب في كل موقع.',
+            'موعد التشغيل المطلوب، لترتيب التوصيل قبله.',
+            'هل تحتاجون خزائن مقاومة للحريق، وما مدة الحماية المطلوبة: ساعة أم ساعتان.',
+            'الألوان المطلوبة للوكرات والدواليب إن كانت مهمة لتصميم المكان.',
+          ],
+        },
+        { h: 'كيف تحسبون الكميات؟' },
+        {
+          ul: [
+            'اللوكرات: عدد الأشخاص في أكثر الورديات ازدحامًا، ثم عدد الأبواب الذي يحتاجه كل شخص.',
+            'خزائن الملفات: حجم الأرشيف اليوم مع زيادة السنوات القادمة.',
+            'الخزائن: ما يُحفظ في كل فرع أو مكتب، والأوراق التي لا يمكن تعويضها.',
+            'المواقع: عدد الفروع والطوابق والمداخل، لتجهيز التوصيل.',
+          ],
+        },
+        { h: 'عرض سعر واحد للمؤسسة كلها' },
+        {
+          p: 'نتعامل مع الوزارات والهيئات الخاصة والبنوك والشركات، ووضع أكثر من 1000 عميل ثقتهم بنا. أرسلوا لنا القائمة، ونرشّح لكم الموديلات المناسبة ونجهّز عرض سعر واحدًا يجمع الخزائن واللوكرات والدواليب وخزائن الملفات والمفاتيح. والتوصيل مجاني داخل قطر، والخزائن التي يزيد وزنها على 50 كجم يخضع توصيلها للتقييد طبقًا للموقع الداخلي للعميل.',
+        },
+      ],
+      en: [
+        {
+          p: 'When an organisation fits out new premises or another branch, safes and lockers are part of a long list, and are often bought late or in the wrong size. Each sector has its own needs: a school needs lockers before anything else, a bank needs fire-resistant safes, a restaurant needs a deposit safe. This guide gathers what suits each sector from our range, so you start with the right list.',
+        },
+        { h: 'Schools and universities' },
+        {
+          p: 'Steel lockers come first for students and teachers: GODREJ lockers with one to six doors in the same outside size, so different columns line up side by side. For records and student files there are steel filing cabinets with two, three or five drawers, and for exam papers and original certificates a fire-resistant filing cabinet or safe.',
+        },
+        { h: 'Hospitals and clinics' },
+        {
+          p: 'Lockers for staff rooms, filing cabinets for patient records, and steel cupboards for supplies. At reception, a lockable cash box for daily takings, or a small safe with a digital lock when several shifts share it.',
+        },
+        {
+          p: 'In pharmacies, a lockable cash box at the till is usually enough, with a filing cabinet for invoices and papers.',
+        },
+        { h: 'Banks, exchange houses and gold shops' },
+        {
+          p: 'Here protection from theft and fire together comes first: 2-hour fire-resistant safes, including the 550 kg UCHIDA E-526 double-door safe, the full-height UCHIDA UBO-335E and the SAKURA EFI703 multi-lock safe with fingerprint, keypad and key. For the day’s deposits there are deposit safes that never open to take a deposit.',
+        },
+        { h: 'Restaurants, supermarkets and fuel stations' },
+        {
+          p: 'Cash comes in all day, and not every member of staff should know the code. The UCHIDA PB-ND15 deposit safe with a 2-hour fire rating, or the UFLC-360E night deposit safe with a pull-out drawer, let the cashier drop takings without opening the safe. UCHIDA cash boxes serve the till and carrying cash.',
+        },
+        { h: 'Hotels, serviced apartments and compounds' },
+        {
+          p: 'In-room hotel safes: SAKURA with a CE-approved digital lock and display on which each guest sets a code, or UCHIDA with a key lock. For managing keys, wall-mounted key cabinets with numbered hooks and colour tags, for 60 or 100 keys.',
+        },
+        { h: 'Ministries, government bodies and embassies' },
+        {
+          p: 'Official archives need fire-resistant records cabinets: the four-drawer UCHIDA UMB4-4K with a 2-hour rating and the SAKURA UB4-4DLK with a digital lock. For documents and cash there are fire-resistant safes in several sizes, and for offices steel cupboards with one, two or glass doors.',
+        },
+        { h: 'Factories, warehouses and labour accommodation' },
+        {
+          p: 'Steel lockers for every worker, steel cupboards for tools and supplies, and key cabinets for equipment and vehicles. In humid places keep the room ventilated and never leave wet things inside the lockers, so the steel does not rust.',
+        },
+        { h: 'Car showrooms and rental companies' },
+        {
+          p: 'UCHIDA key cabinets for 60 or 100 keys with a key lock; several can hang side by side as the fleet grows. For daily takings, a cash safe with a digital lock and backup key.',
+        },
+        { h: 'Gyms and sports clubs' },
+        {
+          p: 'Lockers for changing rooms, with the number of doors chosen by what each member keeps: one door for hanging clothes, or six doors for phones and wallets.',
+        },
+        { h: 'Law firms and accountants' },
+        {
+          p: 'Original contracts, powers of attorney and client files cannot be replaced, so they need a fire-resistant filing cabinet or safe, with steel cupboards for current files. Because several staff open the safe, a digital lock suits it: the code can be changed when staff change.',
+        },
+        { h: 'Before ordering: information that helps us' },
+        {
+          ul: [
+            'Your type of business and the number and locations of your branches.',
+            'What each safe or cabinet will hold: cash, original papers, daily files or personal belongings.',
+            'Floors, lifts and door widths at each site.',
+            'When you need everything in place, so delivery is arranged before then.',
+            'Whether you need fire-resistant safes, and for how long: one hour or two.',
+            'The colours you want for lockers and cupboards, if they matter to the design of the space.',
+          ],
+        },
+        { h: 'How to work out quantities' },
+        {
+          ul: [
+            'Lockers: the number of people on the busiest shift, then the doors each person needs.',
+            'Filing cabinets: today’s archive plus the growth of the coming years.',
+            'Safes: what each branch or office keeps, and the papers that cannot be replaced.',
+            'Sites: the number of branches, floors and entrances, to plan delivery.',
+          ],
+        },
+        { h: 'One quotation for the whole organisation' },
+        {
+          p: 'We work with ministries, private bodies, banks and companies, and more than 1,000 clients have put their trust in us. Send us your list, and we will recommend suitable models and prepare one quotation covering safes, lockers, cupboards, filing cabinets and key cabinets. Delivery within Qatar is free; for safes over 50 kg it is subject to restrictions depending on access at the customer’s site.',
+        },
+      ],
+    },
+    faq: {
+      ar: [
+        {
+          q: 'هل تجهزون عرض سعر واحدًا لعدة أنواع ومواقع؟',
+          a: 'نعم، نجهّز عرض سعر واحدًا يجمع كل الأنواع والكميات لكل الفروع.',
+        },
+        {
+          q: 'هل تناسب اللوكرات الحديدية سكن العمال؟',
+          a: 'نعم، لوكرات GODREJ من باب واحد إلى ستة أبواب تناسب سكن العمال والمصانع، مع الاهتمام بتهوية المكان لتجنّب الصدأ.',
+        },
+      ],
+      en: [
+        {
+          q: 'Can you prepare one quotation for several types and sites?',
+          a: 'Yes, we prepare one quotation covering every type and quantity for all your branches.',
+        },
+        {
+          q: 'Do steel lockers suit labour accommodation?',
+          a: 'Yes, GODREJ lockers with one to six doors suit labour accommodation and factories; keep the room ventilated to avoid rust.',
+        },
+      ],
+    },
+    products: ['godrej-six-door-steel-locker', 'uchida-deposit-safe', 'uchida-double-door-safe', 'uchida-tall-key-cabinet'],
+    links: [{ category: 'steel-lockers' }, { category: 'deposit-safes' }, { category: 'hotel-safes' }, { page: 'request-quote' }],
   },
   {
     slug: 'organising-keys-with-a-key-cabinet',

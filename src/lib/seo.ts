@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { siteConfig } from '@/config/site'
 import { href, isLocale, locales } from '@/i18n/config'
+import { bankTerms } from './keyword-bank'
 import { withSiteTerms } from './search-terms'
 import type { Locale } from './types'
 
@@ -42,7 +43,8 @@ export function pageMetadata({ locale, path = '/', title, description, image = '
     // A string goes through the layout's "%s | site name" template; `absolute` skips it.
     title: title && (fits ? title : { absolute: full ?? title }),
     description,
-    keywords: withSiteTerms(locale, keywords),
+    // The page's own terms, then the keyword bank's for this path, then the shop's.
+    keywords: withSiteTerms(locale, [...(keywords ?? []), ...(bankTerms[path === '/' ? '' : path.replace(/^\/|\/$/g, '')]?.[locale] ?? [])]).slice(0, 40),
     alternates: {
       canonical: href(locale, path),
       languages: { ...languages, 'x-default': href('ar', path) },

@@ -13,20 +13,20 @@ type CategoryCopy = {
 export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   'fire-resistant-safes': {
     ar: {
-      heading: 'خزائن نقود وخزائن مقاومة للحريق في قطر',
-      metaTitle: 'خزائن نقود ومقاومة للحريق في قطر — تجوري بالبصمة والأرقام',
+      heading: 'خزنة مقاومة للحريق وخزائن نقود في قطر',
+      metaTitle: 'خزنة مقاومة للحريق في قطر — خزائن نقود وتجوري بالبصمة',
       description:
-        'خزائن نقود وخزائن حديدية مقاومة للحريق في قطر من UCHIDA وSAKURA وKUROGANE: أقفال بالبصمة والأرقام والمفتاح، بمقاسات للبيت والمحل والمؤسسة، مع توصيل مجاني.',
+        'خزنة مقاومة للحريق وخزائن نقود حديدية في قطر من UCHIDA وSAKURA وKUROGANE: أقفال بالبصمة والأرقام والمفتاح، بمقاسات للبيت والمحل والمؤسسة، مع توصيل مجاني.',
       intro: [
         'لحفظ النقود والمستندات والمقتنيات الثمينة من السرقة والحريق معًا. نوفّر خزائن حديدية بأقفال رقمية وبالبصمة ومفاتيح احتياطية، من الخزنة الصغيرة التي توضع في خزانة الملابس إلى الخزائن ببابين للبنوك والمؤسسات.',
         'من علامات UCHIDA وSAKURA، ومن KUROGANE اليابانية بخزائن Wing Safe ذات القفل الرقمي الدوّار. زورونا في معرضنا بسوق العين لتجربة الأقفال بأنفسكم، والتوصيل مجاني.',
       ],
     },
     en: {
-      heading: 'Cash Safes and Fire-Resistant Safes in Qatar',
-      metaTitle: 'Cash & Fire-Resistant Safes in Qatar — Fingerprint & Keypad',
+      heading: 'Fireproof Safes and Cash Safes in Qatar',
+      metaTitle: 'Fireproof Safes in Qatar — Cash Safes, Fingerprint & Keypad',
       description:
-        'Cash safes and fire-resistant steel safes in Qatar from UCHIDA, SAKURA and KUROGANE: fingerprint, keypad and key locks for homes and shops. Free delivery.',
+        'Fireproof and cash safes in Qatar from UCHIDA, SAKURA and KUROGANE: fire-rated steel safes with fingerprint, keypad and key locks. Free delivery.',
       intro: [
         'For keeping cash, documents and valuables safe from both theft and fire. We carry steel safes with digital and fingerprint locks and backup keys, from compact safes that fit in a wardrobe to double-door safes for banks and institutions.',
         'Choose from UCHIDA and SAKURA, and from KUROGANE of Japan with its Wing Safe range and combination dials. Visit our Souq Al Ein showroom to try the locks yourself; delivery is free.',
@@ -35,8 +35,8 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'deposit-safes': {
     ar: {
-      heading: 'خزائن الإيداع والإيداع الليلي في قطر',
-      metaTitle: 'خزائن إيداع وإيداع ليلي في قطر للمحلات والمطاعم والمحطات',
+      heading: 'خزنة إيداع وخزائن الإيداع الليلي في قطر',
+      metaTitle: 'خزنة إيداع وإيداع ليلي في قطر للمحلات والمطاعم والمحطات',
       description:
         'خزائن إيداع UCHIDA في قطر: يودع الموظفون النقود عبر درج علوي دون فتح الخزنة، وتبقى الخزنة مقفلة بالرقم السري والمفتاح. للمحلات والمطاعم والفروع، مع توصيل مجاني.',
       intro: [
@@ -57,10 +57,10 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'hotel-safes': {
     ar: {
-      heading: 'خزائن الفنادق في قطر',
-      metaTitle: 'خزائن فندقية في قطر — خزنة غرف الفنادق بقفل رقمي أو مفتاح',
+      heading: 'خزنة فندقية وخزائن غرف الفنادق في قطر',
+      metaTitle: 'خزنة فندقية في قطر — خزائن غرف الفنادق بقفل رقمي أو مفتاح',
       description:
-        'خزائن فندقية في قطر من SAKURA وUCHIDA لغرف الفنادق والشقق الفندقية وسكن الموظفين: بقفل رقمي بشاشة أو بمفتاح، مع توصيل مجاني وعروض أسعار للكميات.',
+        'خزنة فندقية في قطر من SAKURA وUCHIDA لغرف الفنادق والشقق الفندقية وسكن الموظفين: بقفل رقمي بشاشة أو بمفتاح، مع توصيل مجاني وعروض أسعار للكميات.',
       intro: [
         'خزنة الغرفة من أول ما يبحث عنه النزيل: مكان صغير آمن لجواز السفر والنقود والهاتف والمجوهرات. نوفّر خزائن فندقية صغيرة توضع داخل خزانة الملابس أو أسفل المكتب، بقفل رقمي بشاشة من SAKURA حاصل على شهادة CE، أو بقفل مفتاح بسيط من UCHIDA باللون الأسود أو البيج.',
         'وتناسب أيضًا الشقق الفندقية والمجمعات السكنية وسكن الموظفين، والبيوت لمن يريد خزنة صغيرة. نجهّز عروض أسعار للكميات لتجهيز فندق أو مبنى كامل، والتوصيل مجاني داخل قطر.',
@@ -79,10 +79,10 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'luxury-safes': {
     ar: {
-      heading: 'الخزائن الفاخرة في قطر',
-      metaTitle: 'خزائن وتجوري فاخر في قطر — تصاميم خشبية ودوّار ساعات',
+      heading: 'خزنة فاخرة وتجوري فخم في قطر',
+      metaTitle: 'خزنة فاخرة وتجوري فخم في قطر — تصاميم خشبية ودوّار ساعات',
       description:
-        'خزائن وتجوري فاخر في قطر للبيت والمجلس ومكاتب الإدارة: تشطيبات خشب الجوز وواجهات مضلّعة ومزخرفة، وخزائن مجوهرات بنقشة الرخام، وخزائن بدوّار ساعات.',
+        'خزنة فاخرة وتجوري فخم في قطر للبيت والمجلس ومكاتب الإدارة: تشطيبات خشب الجوز وواجهات مضلّعة ومزخرفة، وخزائن مجوهرات بنقشة الرخام، وخزائن بدوّار ساعات.',
       intro: [
         'خزائن صُمّمت لتبقى ظاهرة: تشطيبات خشب الجوز، وأبواب بنقشة الرخام الأسود والأبيض، وواجهات مضلّعة، وأبواب مزخرفة بالزهور من SAKURA، وخزنة UCHIDA الحمراء بأدراج جلدية. حماية جادة بمظهر قطعة أثاث راقية.',
         'ومنها خزائن المجوهرات بتجهيز داخلي بنقشة الرخام، وخزائن بدوّار ساعات مدمج يُبقي الساعات الأوتوماتيكية تعمل وهي في أمان.',
@@ -101,10 +101,10 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'jewellery-watch-interiors': {
     ar: {
-      heading: 'خزائن المجوهرات والساعات في قطر',
+      heading: 'خزنة مجوهرات وساعات في قطر',
       metaTitle: 'خزائن وتجوري مجوهرات للبيع في قطر — أدراج مخملية وشنط سفر',
       description:
-        'خزائن مجوهرات للبيع في قطر بتجهيز داخلي حسب الطلب: أدراج مبطّنة بالمخمل للعقود والخواتم والساعات، وشنط مجوهرات للسفر، مع توصيل مجاني لكل قطر.',
+        'خزنة مجوهرات للبيع في قطر بتجهيز داخلي حسب الطلب: أدراج مبطّنة بالمخمل للعقود والخواتم والساعات، وشنط مجوهرات للسفر، مع توصيل مجاني لكل قطر.',
       intro: [
         'المجوهرات تحتاج إلى أكثر من الحماية: أدراج مبطّنة بالمخمل، ومجسّمات للعقود، وبكرات للخواتم، ووسائد للساعات، حتى لا تتلامس القطع أو تُخدش. نصمّم التجهيز الداخلي لكل عميل بحسب مقتنياته، ولا نبدأ العمل إلا بعد موافقته على التصميم.',
         'ولحمل المجوهرات خارج البيت نقدّم شنط مجوهرات مقسّمة من الداخل للسفر والفنادق والحفلات والأعراس، بتصميم خاص لا تجدونه في مكان آخر في قطر.',
@@ -125,10 +125,10 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'filing-cabinets': {
     ar: {
-      heading: 'خزائن الملفات وخزائن السجلات المقاومة للحريق في قطر',
-      metaTitle: 'خزائن ملفات في قطر — خزائن أرشيف حديد ومقاومة للحريق بأدراج',
+      heading: 'خزانة ملفات حديد وخزائن سجلات مقاومة للحريق في قطر',
+      metaTitle: 'خزانة ملفات حديد في قطر — خزائن أرشيف ومقاومة للحريق بأدراج',
       description:
-        'خزائن ملفات وأرشيف في قطر من UCHIDA وSAKURA وGODREJ: بدرجين أو ثلاثة أو أربعة أو خمسة أدراج، منها خزائن سجلات مقاومة للحريق، للمكاتب والشركات والجهات الحكومية.',
+        'خزانة ملفات حديد وخزائن أرشيف في قطر من UCHIDA وSAKURA وGODREJ: من درجين إلى خمسة أدراج، منها خزائن سجلات مقاومة للحريق، للمكاتب والشركات والجهات الحكومية.',
       intro: [
         'لحفظ الملفات والعقود والسجلات بترتيب وأمان. نوفّر خزائن ملفات حديدية من GODREJ بدرجين وثلاثة وخمسة أدراج للعمل اليومي، وخزائن سجلات مقاومة للحريق من UCHIDA وSAKURA للمستندات الأصلية التي لا يمكن تعويضها.',
         'أقفال بمفتاح لكل درج أو بلوحة أرقام رقمية، بألوان تناسب أي مكتب. ونجهّز عروض أسعار شاملة لتجهيز الأرشيف الكامل مع التوصيل المجاني.',
@@ -147,10 +147,10 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'key-cabinets': {
     ar: {
-      heading: 'خزائن المفاتيح في قطر',
-      metaTitle: 'خزائن مفاتيح في قطر للفنادق والشركات والمجمعات السكنية',
+      heading: 'خزانة مفاتيح في قطر للفنادق والشركات',
+      metaTitle: 'خزانة مفاتيح في قطر للفنادق والشركات والمجمعات السكنية',
       description:
-        'خزائن مفاتيح UCHIDA في قطر تُعلّق على الجدار، بخطافات مرقّمة وميداليات ملوّنة وقفل بمفتاح، للفنادق والمجمعات السكنية والشركات ومعارض السيارات.',
+        'خزانة مفاتيح UCHIDA في قطر تُعلّق على الجدار، بخطافات مرقّمة وميداليات ملوّنة وقفل بمفتاح، للفنادق والمجمعات السكنية والشركات ومعارض السيارات.',
       intro: [
         'حين تكثر المفاتيح يصبح ترتيبها ضرورة: خزانة المفاتيح تمنح كل مفتاح خطافًا مرقّمًا، وتُقفل بمفتاح حتى لا يصل إليها إلا المسؤول.',
         'نوفّر خزائن مفاتيح UCHIDA بخطافات مرقّمة وميداليات صفراء وزرقاء لتصنيف المفاتيح حسب المبنى أو الطابق أو السيارة، مناسبة للفنادق والمجمعات السكنية والشركات ومعارض السيارات وفرق الصيانة.',
@@ -169,20 +169,20 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'cash-boxes': {
     ar: {
-      heading: 'صناديق النقود في قطر',
-      metaTitle: 'صناديق نقود في قطر — صندوق كاش للمحلات والكاشير بقفل رقمي',
+      heading: 'صندوق نقود بقفل في قطر',
+      metaTitle: 'صندوق نقود بقفل في قطر — صندوق كاش للمحلات والكاشير',
       description:
-        'صناديق نقود UCHIDA في قطر للمحلات والكاشير: بأقفال رقمية دوّارة أو بلوحة أرقام، ودرج نقود أمامي، ومنها صندوق محمول بمقبض لنقل النقود.',
+        'صندوق نقود بقفل من UCHIDA في قطر للمحلات والكاشير: أقفال رقمية دوّارة أو لوحة أرقام، ودرج نقود أمامي، ومنها صندوق محمول بمقبض لنقل النقود.',
       intro: [
         'لحفظ نقود اليوم عند الكاونتر أو نقلها بأمان. صناديق النقود أصغر من الخزنة وأسرع في الاستخدام، وتُقفل بأقفال رقمية دوّارة أو بلوحة أرقام مع مفتاح احتياطي.',
         'نوفّر صناديق UCHIDA بدرج أمامي للكاشير، وصندوقًا رقميًا يُفتح درجه بزر، وصندوقًا محمولًا بمقبض لنقل النقود بين المحل والمكتب والبنك.',
       ],
     },
     en: {
-      heading: 'Cash Boxes in Qatar',
-      metaTitle: 'Cash Boxes in Qatar — Cashier Boxes, Dial & Digital Locks',
+      heading: 'Cash Boxes with Locks in Qatar',
+      metaTitle: 'Cash Box with Lock in Qatar — Cashier Boxes, Dial & Keypad',
       description:
-        'UCHIDA cash boxes in Qatar for shops and cashiers: combination dials or a digital keypad, a front cash drawer, and a portable box with a handle.',
+        'UCHIDA cash boxes with locks in Qatar for shops and cashiers: combination dials or a keypad, a front cash drawer, and a portable box with a handle.',
       intro: [
         'For keeping the day’s cash at the counter or moving it safely. Cash boxes are smaller and quicker to use than a safe, locked by combination dials or a keypad with a backup key.',
         'We carry UCHIDA cash boxes with a front cashier drawer, a digital box whose drawer opens at the push of a button, and a portable box with a handle for carrying cash between the shop, the office and the bank.',
@@ -191,10 +191,10 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'steel-cupboards': {
     ar: {
-      heading: 'الخزائن الحديدية والمكتبية في قطر',
-      metaTitle: 'خزائن حديدية ودواليب مكتبية في قطر — خزانة حديد GODREJ',
+      heading: 'دولاب حديد وخزائن حديدية مكتبية في قطر',
+      metaTitle: 'دولاب حديد وخزائن حديدية مكتبية في قطر — GODREJ',
       description:
-        'خزائن حديدية ودواليب مكتبية من GODREJ في قطر: بباب واحد أو بابين أو بأبواب زجاجية، لحفظ الملفات والأدوات في المكاتب والمدارس والمؤسسات، مع توصيل مجاني.',
+        'دولاب حديد وخزائن حديدية مكتبية من GODREJ في قطر: بباب واحد أو بابين أو بأبواب زجاجية، لحفظ الملفات والأدوات في المكاتب والمدارس والمؤسسات، مع توصيل مجاني.',
       intro: [
         'الخزانة الحديدية أساس كل مكتب منظّم: تحفظ الملفات والأدوات والمستلزمات خلف باب متين يُقفل. نوفّرها من GODREJ، الاسم الذي يصنع الخزائن في الهند منذ عام 1902.',
         'بباب واحد أو بابين، وبأبواب زجاجية لعرض المحتوى، وخزانة مكتبية خشبية بواجهة زجاجية، بألوان الرمادي والبيج والأبيض.',
@@ -213,7 +213,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'steel-lockers': {
     ar: {
-      heading: 'اللوكرات الحديدية في قطر',
+      heading: 'لوكرات حديد في قطر للموظفين والمدارس',
       metaTitle: 'لوكرات حديد في قطر — لوكرات موظفين ومدارس وأندية GODREJ',
       description:
         'لوكرات حديدية من GODREJ في قطر: من باب واحد إلى ستة أبواب في العمود، للموظفين والمدارس والأندية والمصانع، بلونَي البيج والزيتي، مع توصيل مجاني.',
@@ -235,7 +235,7 @@ export const categoryContent: Record<string, Record<Locale, CategoryCopy>> = {
   },
   'home-safes': {
     ar: {
-      heading: 'خزائن منزلية في قطر',
+      heading: 'خزنة منزلية وخزائن للبيت في قطر',
       metaTitle: 'خزنة منزلية وتجوري للبيت في قطر — خزائن صغيرة ونقود ومجوهرات',
       description:
         'خزائن منزلية في قطر: خزنة منزلية صغيرة لخزانة الملابس، وخزائن نقود منزلية بالبصمة والأرقام، وخزائن مجوهرات للبيت، من UCHIDA وSAKURA وKUROGANE، مع توصيل مجاني.',

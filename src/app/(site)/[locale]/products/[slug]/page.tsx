@@ -13,7 +13,7 @@ import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { isHeavy } from '@/lib/product-details'
 import { productGuides } from '@/lib/product-guides'
-import { googleCategory, productKeywords, productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
+import { googleCategory, productKeywords, shortTitles, productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
 import { imageAlt } from '@/lib/types'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
@@ -47,7 +47,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : undefined
   // Local searches name the country, so the title does too unless it already does.
   const base = pick(product.seoTitle, locale) ?? pick(product.name, locale)
-  const title = base && !/قطر|Qatar/.test(base) ? `${base} ${locale === 'ar' ? 'في قطر' : 'in Qatar'}` : base
+  // Kept within 65 characters: "in Qatar" is dropped first, then a shorter name is used.
+  const withCountry = base && !/قطر|Qatar/.test(base) ? `${base} ${locale === 'ar' ? 'في قطر' : 'in Qatar'}` : base
+  const title = [withCountry, base].find((t) => t && t.length <= 65) ?? shortTitles[slug]?.[locale] ?? base
   return pageMetadata({
     locale,
     path: `products/${slug}`,

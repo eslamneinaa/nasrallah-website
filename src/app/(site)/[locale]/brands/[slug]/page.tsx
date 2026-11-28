@@ -109,6 +109,21 @@ export default async function BrandPage({ params }: Props) {
             ))}
           </Stagger>
 
+          {brand.sections && (
+            <div className="mx-auto mt-20 max-w-3xl space-y-12">
+              {brand.sections[locale].map((section) => (
+                <section key={section.h}>
+                  <h2 className="display text-[1.75rem] leading-snug text-maroon-900 sm:text-3xl">{section.h}</h2>
+                  {section.p.map((p) => (
+                    <p key={p} className="mt-5 leading-loose text-ink-500">
+                      {p}
+                    </p>
+                  ))}
+                </section>
+              ))}
+            </div>
+          )}
+
           <div className="mx-auto mt-20 max-w-3xl">
             <PageFaq title={dict.common.faq} items={faq} />
           </div>

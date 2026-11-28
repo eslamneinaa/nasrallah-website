@@ -315,7 +315,6 @@ const en = {
     all: 'All products',
     faq: 'Frequently asked questions',
     highlights: 'Highlights in this range:',
-    alsoSearched: 'People also search for this range as:',
     compareTitle: 'Quick comparison: {label}',
     priceRange: 'Prices from QAR {min} to QAR {max}, with free delivery within Qatar.',
     compareCols: ['Product', 'Model', 'Fire rating', 'Outside (W × H × D)', 'Weight', 'Price'],
@@ -327,7 +326,7 @@ const en = {
     secondary: 'Talk to our team',
   },
   about: {
-    metaTitle: 'About Nasrallah Trading Est — Safe Dealer in Doha, Qatar since 1906',
+    metaTitle: 'Nasrallah Trading Est — Safe Dealer in Doha, Qatar since 1906',
     metaDescription: 'The story of Nasrallah Trading Est: safes and secure storage since 1906, from Souq Al Ein, Salwa Road, Doha.',
     faq: [
       {

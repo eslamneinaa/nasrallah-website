@@ -294,8 +294,8 @@ export const articleSources: ArticleSource[] = [
       en: 'Safe Prices in Qatar: What Decides the Price of a Safe?',
     },
     description: {
-      ar: 'لماذا تختلف أسعار الخزائن والتجوري في قطر من خزنة إلى أخرى؟ المقاس، ومقاومة الحريق، ونوع القفل، والماركة وبلد الصنع، والتجهيز الداخلي والتشطيب. دليل من مؤسسة نصر الله التجارية.',
-      en: 'Why do safe prices in Qatar vary so much? Size, fire rating, lock type, brand and country of origin, interior fit-out and finish. A guide from Nasrallah Trading Est.',
+      ar: 'لماذا تختلف أسعار الخزائن والتجوري في قطر؟ المقاس، ومقاومة الحريق، ونوع القفل، والماركة وبلد الصنع، والتجهيز الداخلي والتشطيب. دليل من مؤسسة نصر الله.',
+      en: 'Why do safe prices in Qatar vary so much? Size, fire rating, lock type, brand and country of origin, interior fit-out and finish. A guide from Nasrallah.',
     },
     keywords: {
       ar: 'أسعار الخزائن في قطر، سعر التجوري، سعر خزنة حديد، أسعار خزنة ضد الحريق، كم سعر الخزنة',
@@ -461,9 +461,13 @@ export const articleSources: ArticleSource[] = [
       ar: 'نسيتم الرقم السري أو ضاع مفتاح الخزنة؟ هكذا تُفتح الخزنة المقفولة في قطر',
       en: 'Forgot the Code or Lost the Key? How a Locked Safe Is Opened in Qatar',
     },
+    seoTitle: {
+      ar: 'فتح خزنة مقفولة في قطر: نسيتم الرقم السري أو ضاع المفتاح؟',
+      en: 'Open a Locked Safe in Qatar: Forgot the Code or Lost the Key?',
+    },
     description: {
       ar: 'نسيتم الرقم السري أو ضاع المفتاح؟ فتح خزنة مقفولة في قطر بعد استيفاء اشتراطات وزارة الداخلية: ماذا تفعلون، وكيف تتم الخدمة لدى مؤسسة نصر الله التجارية.',
-      en: 'What to do if you forget your safe’s code or lose its key. Locked-safe opening in Qatar once the Ministry of Interior’s requirements are met, from Nasrallah Trading Est.',
+      en: 'Open a locked safe in Qatar: what to do if you forget the code or lose the key, and how opening works once the Ministry of Interior’s requirements are met.',
     },
     keywords: {
       ar: 'فتح خزنة مقفولة في قطر، فتح تجوري، نسيت رقم الخزنة، فني خزائن قطر',
@@ -567,9 +571,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'خزائن المجوهرات والساعات: كيف تحفظون مقتنياتكم دون خدش؟',
       en: 'Jewellery and Watch Safes: How to Keep Your Pieces Free of Scratches',
     },
+    seoTitle: {
+      en: 'Jewellery and Watch Safes: Keep Your Pieces Free of Scratches',
+    },
     description: {
       ar: 'كيف تختارون خزنة المجوهرات والساعات وتجهيزها من الداخل بأدراج مخملية ومجسّمات للعقود ووسائد للساعات. خزائن المجوهرات في قطر من مؤسسة نصر الله التجارية.',
-      en: 'How to choose a jewellery and watch safe and fit it inside with velvet drawers, necklace busts and watch cushions. Jewellery safes in Qatar from Nasrallah Trading Est.',
+      en: 'How to choose a jewellery and watch safe and fit it with velvet drawers, necklace busts and watch cushions. Jewellery safes in Qatar from Nasrallah Trading Est.',
     },
     keywords: {
       ar: 'خزنة مجوهرات في قطر، خزنة ذهب، خزنة ساعات، تجوري مجوهرات',
@@ -644,6 +651,9 @@ export const articleSources: ArticleSource[] = [
     title: {
       ar: 'خزنة فلوس للمحل والشركة: دليل أصحاب الأعمال في قطر',
       en: 'Cash Safes for Shops and Companies: A Guide for Business Owners in Qatar',
+    },
+    seoTitle: {
+      en: 'Cash Safe for Shops and Companies: A Guide for Qatar',
     },
     description: {
       ar: 'خزنة فلوس للمحل: كيف يختار أصحاب المحلات والشركات في قطر خزنة النقود المناسبة، من المقاس والقفل ومقاومة الحريق إلى من يملك الرقم السري.',
@@ -744,8 +754,8 @@ export const articleSources: ArticleSource[] = [
       en: 'Which Safe Brand Suits You: UCHIDA, SAKURA, GODREJ or KUROGANE?',
     },
     description: {
-      ar: 'تعرّفوا على العلامات التجارية للخزائن في مؤسسة نصر الله التجارية: UCHIDA للخزائن المقاومة للحريق والإيداع، وSAKURA للأقفال الحديثة والتصاميم اللافتة، وGODREJ الهندية منذ 1902، وKUROGANE اليابانية.',
-      en: 'Get to know the safe brands at Nasrallah Trading Est: UCHIDA for fire-resistant and deposit safes, SAKURA for modern locks and striking designs, GODREJ of India since 1902, and KUROGANE of Japan.',
+      ar: 'علامات الخزائن لدينا: UCHIDA للخزائن المقاومة للحريق والإيداع، وSAKURA للأقفال الحديثة والتصاميم اللافتة، وGODREJ الهندية منذ 1902، وKUROGANE اليابانية.',
+      en: 'Our safe brands: UCHIDA for fire-resistant and deposit safes, SAKURA for modern locks and striking designs, GODREJ of India since 1902, KUROGANE of Japan.',
     },
     keywords: {
       ar: 'خزائن UCHIDA، خزائن SAKURA، خزائن GODREJ في قطر، خزائن KUROGANE اليابانية، أفضل ماركة خزائن',
@@ -846,9 +856,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'خزائن الملفات للمكاتب والجهات الحكومية: كم درجًا تحتاجون؟',
       en: 'Filing Cabinets for Offices and Government Bodies: How Many Drawers Do You Need?',
     },
+    seoTitle: {
+      en: 'Filing Cabinets for Offices: How Many Drawers Do You Need?',
+    },
     description: {
       ar: 'كيف تختارون خزانة الملفات المناسبة لمكتبكم أو أرشيف شركتكم في قطر: عدد الأدراج، والمساحة، والقفل، والفرق بين خزانة الملفات والخزنة المقاومة للحريق.',
-      en: 'How to choose the right filing cabinet for your office or company archive in Qatar: number of drawers, space, lock, and how a filing cabinet differs from a fire-resistant safe.',
+      en: 'Choosing a filing cabinet for an office or archive in Qatar: number of drawers, space and lock, and how it differs from a fire-resistant safe.',
     },
     keywords: {
       ar: 'خزانة ملفات في قطر، خزائن أرشيف، خزانة ملفات حديد، خزائن حفظ ملفات للمكاتب',
@@ -923,9 +936,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'اللوكرات الحديد في قطر: كيف تختارون لوكرات مقاومة للصدأ والرطوبة؟',
       en: 'Steel Lockers in Qatar: How to Choose Lockers That Stand Up to Rust and Humidity',
     },
+    seoTitle: {
+      en: 'Steel Lockers in Qatar: Choosing Lockers That Resist Rust',
+    },
     description: {
-      ar: 'كيف تختارون لوكرات حديد في قطر تصمد أمام الرطوبة والصدأ، وأين تضعونها، وكيف تعتنون بها، وكم بابًا تحتاجون. لوكرات GODREJ للموظفين والمدارس والأندية من مؤسسة نصر الله التجارية.',
-      en: 'How to choose steel lockers in Qatar that stand up to humidity and rust, where to put them, how to care for them and how many doors you need. GODREJ lockers for staff, schools and clubs from Nasrallah Trading Est.',
+      ar: 'كيف تختارون لوكرات حديد في قطر تصمد أمام الرطوبة والصدأ، وأين تضعونها، وكيف تعتنون بها، وكم بابًا تحتاجون. لوكرات GODREJ للموظفين والمدارس والأندية.',
+      en: 'Steel lockers in Qatar that stand up to humidity and rust: where to put them, how to care for them and how many doors you need. GODREJ lockers.',
     },
     keywords: {
       ar: 'لوكرات حديد في قطر، لوكر مقاوم للصدأ، لوكرات موظفين، لوكرات مدارس، لوكرات أندية، خزائن حديدية للموظفين',
@@ -1481,6 +1497,9 @@ export const articleSources: ArticleSource[] = [
       ar: 'هدية فخمة تدوم: أفكار هدايا للعروس والزوجة ومحبي الساعات في قطر',
       en: 'A Luxury Gift That Lasts: Ideas for a Bride, a Wife and a Watch Lover in Qatar',
     },
+    seoTitle: {
+      en: 'Luxury Gift That Lasts: For a Bride, a Wife or a Watch Lover',
+    },
     description: {
       ar: 'أفكار هدية فخمة تبقى سنوات: شنطة مجوهرات للسفر للعروس، وخزنة مجوهرات بأدراج مخملية للزوجة، وخزنة بدوّار ساعات لمحب الساعات، مع الأسعار.',
       en: 'Luxury gifts that last for years: a travel jewellery case for a bride, a velvet-drawer jewellery safe for a wife, and a watch winder safe for a watch lover.',
@@ -1659,9 +1678,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'توصيل الخزنة إلى الطوابق العليا: ما الذي يجب التأكد منه قبل الشراء؟',
       en: 'Delivering a Safe to an Upper Floor: What to Check Before You Buy',
     },
+    seoTitle: {
+      ar: 'توصيل الخزنة إلى الطوابق العليا: ما الذي تتأكدون منه قبل الشراء؟',
+    },
     description: {
-      ar: 'تخطّطون لوضع خزنة في شقة أو مكتب في طابق علوي؟ نوصل الخزائن إلى الطوابق العليا في الأماكن المناسبة. هذه النقاط تأكدوا منها قبل الشراء لتجنّب أي عوائق أثناء التوصيل.',
-      en: 'Planning a safe for an apartment or office on an upper floor? Where suitable, we deliver safes to upper floors. Check these points before buying to avoid obstacles on delivery day.',
+      ar: 'خزنة لشقة أو مكتب في طابق علوي؟ نوصل الخزائن إلى الطوابق العليا في الأماكن المناسبة. تأكدوا من هذه النقاط قبل الشراء لتجنّب عوائق التوصيل.',
+      en: 'A safe for a flat or office on an upper floor? Where suitable, we deliver to upper floors. Check these points before buying to avoid delivery obstacles.',
     },
     keywords: {
       ar: 'توصيل خزنة في قطر، توصيل تجوري للطابق العلوي، نقل خزنة ثقيلة، توصيل خزائن مجاني',
@@ -1740,8 +1762,8 @@ export const articleSources: ArticleSource[] = [
       en: 'Lost All Your Safe Keys? How We Help Through the Manufacturer',
     },
     description: {
-      ar: 'ضاعت كل مفاتيح خزنتكم، الأصلية والاحتياطية؟ في بعض الحالات تساعدكم مؤسسة نصر الله التجارية بالتواصل مع الشركة المصنّعة لمعرفة إن كان هناك حل. ما الذي تجهّزونه، وكيف تتجنّبون المشكلة.',
-      en: 'Lost every key to your safe, the original and the spare? In some cases Nasrallah Trading Est can help by contacting the manufacturer to see whether there is a solution. What to prepare, and how to avoid it.',
+      ar: 'ضاعت كل مفاتيح خزنتكم، الأصلية والاحتياطية؟ في بعض الحالات نساعدكم بالتواصل مع الشركة المصنّعة لمعرفة الحل. ما الذي تجهّزونه، وكيف تتجنّبون المشكلة.',
+      en: 'Lost every key to your safe? In some cases we can help by contacting the manufacturer to see if there is a solution. What to prepare, and how to avoid it.',
     },
     keywords: {
       ar: 'فقدت مفتاح الخزنة، ضياع مفاتيح التجوري، مفتاح بديل للخزنة في قطر، فتح خزنة بدون مفتاح',
@@ -1823,9 +1845,13 @@ export const articleSources: ArticleSource[] = [
       ar: 'شنطة مجوهرات للسفر: كيف تختارونها وتحمون مجوهراتكم في السفر والأعراس؟',
       en: 'Travel Jewellery Case: How to Choose One and Protect Your Jewellery on the Move',
     },
+    seoTitle: {
+      ar: 'شنطة مجوهرات للسفر: كيف تختارونها وتحمون مجوهراتكم؟',
+      en: 'Travel Jewellery Case: How to Choose One and Travel Safely',
+    },
     description: {
       ar: 'كيف تختارون شنطة مجوهرات للسفر، وكيف تحمون الذهب والألماس والساعات في الطائرة والفندق والأعراس. شنط مجوهرات مقسّمة من الداخل من مؤسسة نصر الله التجارية في قطر.',
-      en: 'How to choose a travel jewellery case, and how to protect gold, diamonds and watches on the plane, in the hotel and at weddings. Divided jewellery cases from Nasrallah Trading Est in Qatar.',
+      en: 'How to choose a travel jewellery case, and protect gold, diamonds and watches on the plane, in the hotel and at weddings. Divided jewellery cases in Qatar.',
     },
     keywords: {
       ar: 'شنطة مجوهرات للسفر، حقيبة مجوهرات للسفر، شنطة ذهب للأعراس، شنطة مجوهرات في قطر، حفظ المجوهرات في الفندق',
@@ -2219,9 +2245,13 @@ export const articleSources: ArticleSource[] = [
       ar: 'خزائن الفنادق: كيف تجهّزون غرف الفندق والشقق الفندقية بالخزنة المناسبة؟',
       en: 'Hotel Safes: How to Equip Hotel Rooms and Serviced Apartments with the Right Safe',
     },
+    seoTitle: {
+      ar: 'خزائن الفنادق: الخزنة المناسبة لغرف الفندق والشقق الفندقية',
+      en: 'Hotel Safes: The Right Safe for Rooms and Serviced Apartments',
+    },
     description: {
       ar: 'دليل اختيار خزائن الغرف للفنادق والشقق الفندقية وسكن الموظفين في قطر: القفل الرقمي أم المفتاح، والمقاس، ومكان التركيب، وتجهيز مبنى كامل بالكميات.',
-      en: 'A guide to in-room safes for hotels, serviced apartments and staff housing in Qatar: digital or key lock, size, where to fit them, and equipping a whole building.',
+      en: 'In-room safes for hotels, serviced apartments and staff housing in Qatar: digital or key lock, size, where to fit them, and equipping a whole building.',
     },
     keywords: {
       ar: 'خزائن فندقية، خزنة فندق، خزنة غرف الفنادق، خزائن الشقق الفندقية في قطر',
@@ -2326,6 +2356,10 @@ export const articleSources: ArticleSource[] = [
     title: {
       ar: 'خزنة الإيداع: كيف تحمون إيراد اليوم دون أن يعرف الموظفون الرقم السري؟',
       en: 'Deposit Safes: How to Protect the Day’s Takings Without Sharing the Code',
+    },
+    seoTitle: {
+      ar: 'خزنة الإيداع: احموا إيراد اليوم دون مشاركة الرقم السري',
+      en: 'Deposit Safes: Protect the Day’s Takings Without Sharing the Code',
     },
     description: {
       ar: 'كيف تعمل خزنة الإيداع والإيداع الليلي، ولماذا تناسب المحلات والمطاعم ومحطات الوقود والفروع في قطر، وكيف تنظّمون الإيداع بين الورديات.',
@@ -2434,6 +2468,10 @@ export const articleSources: ArticleSource[] = [
     title: {
       ar: 'خزائن ولوكرات حسب القطاع: ماذا تحتاج المدارس والمستشفيات والبنوك والمطاعم في قطر؟',
       en: 'Safes and Lockers by Sector: What Schools, Hospitals, Banks and Restaurants in Qatar Need',
+    },
+    seoTitle: {
+      ar: 'خزائن ولوكرات حسب القطاع: المدارس والمستشفيات والبنوك في قطر',
+      en: 'Safes and Lockers by Sector: Schools, Hospitals, Banks in Qatar',
     },
     description: {
       ar: 'دليل توريد الخزائن واللوكرات للمؤسسات في قطر: ما يناسب المدارس والمستشفيات والبنوك والمطاعم والفنادق والمصانع ومعارض السيارات، وكيف تحسبون الكميات.',
@@ -2621,6 +2659,10 @@ export const articleSources: ArticleSource[] = [
       ar: 'خزانة المفاتيح: كيف تنظّمون مفاتيح المبنى أو الفندق أو معرض السيارات؟',
       en: 'Key Cabinets: How to Organise the Keys of a Building, Hotel or Car Showroom',
     },
+    seoTitle: {
+      ar: 'خزانة المفاتيح: تنظيم مفاتيح المبنى أو الفندق أو معرض السيارات',
+      en: 'Key Cabinets: Organising Keys for a Building, Hotel or Showroom',
+    },
     description: {
       ar: 'كيف تختارون خزانة المفاتيح المناسبة لعدد مفاتيحكم، وكيف ترقّمونها وتصنّفونها بالألوان، ومن يحتفظ بمفتاح الخزانة، مع نصائح لتسجيل استلام المفاتيح.',
       en: 'How to choose a key cabinet for the number of keys you hold, number and colour-code them, decide who keeps the cabinet key, and log who takes which key.',
@@ -2733,7 +2775,7 @@ export const articleSources: ArticleSource[] = [
     },
     description: {
       ar: 'الفرق بين صندوق النقود والخزنة الحديدية في الحماية والاستخدام اليومي، ومتى يكفي صندوق النقود للمحل، ومتى تحتاجون إلى خزنة، ولماذا يجمع كثيرون بينهما.',
-      en: 'How a cash box and a steel safe differ in protection and daily use, when a cash box is enough for a shop, when you need a safe, and why many businesses use both.',
+      en: 'How a cash box and a steel safe differ in protection and daily use, when a cash box is enough for a shop, when you need a safe, and why many use both.',
     },
     keywords: {
       ar: 'صندوق نقود، صندوق كاش، الفرق بين صندوق النقود والخزنة، خزنة للمحل',
@@ -2841,6 +2883,9 @@ export const articleSources: ArticleSource[] = [
       ar: 'دوّار الساعات داخل الخزنة: هل تحتاجه ساعتكم الأوتوماتيكية؟',
       en: 'A Watch Winder Inside Your Safe: Does Your Automatic Watch Need One?',
     },
+    seoTitle: {
+      en: 'A Watch Winder Safe: Does Your Automatic Watch Need One?',
+    },
     description: {
       ar: 'لماذا تتوقف الساعة الأوتوماتيكية عند تركها، وما فائدة دوّار الساعات، ولماذا يجمعه كثير من هواة الساعات مع الخزنة في قطعة واحدة.',
       en: 'Why an automatic watch stops when it is left unworn, what a watch winder does, and why many collectors combine it with a safe.',
@@ -2938,6 +2983,9 @@ export const articleSources: ArticleSource[] = [
     title: {
       ar: 'في رمضان والعيد: كيف تحفظون الذهب والنقود والعيديات في البيت بأمان؟',
       en: 'Ramadan and Eid: Keeping Gold, Cash and Eid Gifts Safe at Home',
+    },
+    seoTitle: {
+      ar: 'في رمضان والعيد: حفظ الذهب والنقود والعيديات في البيت بأمان',
     },
     description: {
       ar: 'في رمضان والعيد تكثر الزيارات والنقود والذهب في البيت. نصائح عملية لحفظ المجوهرات والعيديات والزكاة في مكان آمن خلال المناسبات.',
@@ -3057,6 +3105,10 @@ export const articleSources: ArticleSource[] = [
       ar: 'حفظ التبرعات في الجمعيات والمساجد والمراكز: خزنة الإيداع وصندوق النقود',
       en: 'Keeping Donations Safe at Charities, Mosques and Centres: Deposit Safes and Cash Boxes',
     },
+    seoTitle: {
+      ar: 'حفظ التبرعات في الجمعيات والمساجد: خزنة الإيداع وصندوق النقود',
+      en: 'Keeping Donations Safe: Deposit Safes and Cash Boxes',
+    },
     description: {
       ar: 'كيف تحفظ الجمعيات والمساجد والمراكز المجتمعية التبرعات النقدية بأمان وشفافية: خزنة الإيداع، وصندوق النقود المحمول، ونظام بسيط للعدّ والتسجيل.',
       en: 'How charities, mosques and community centres can keep cash donations secure and transparent: deposit safes, portable cash boxes and a simple counting routine.',
@@ -3168,6 +3220,10 @@ export const articleSources: ArticleSource[] = [
     title: {
       ar: 'تجوري أم خزنة أم خزينة؟ أسماء الخزائن في قطر والخليج وما يقصده كل اسم',
       en: 'Tajouri, Khazna or Khazina? What Safes Are Called in Qatar and the Gulf',
+    },
+    seoTitle: {
+      ar: 'تجوري أم خزنة أم خزينة؟ أسماء الخزائن في قطر والخليج',
+      en: 'Tajouri, Khazna or Khazina? What Safes Are Called in Qatar',
     },
     description: {
       ar: 'تجوري، خزنة، خزينة، خزانة حديدية، صندوق أمانات: ماذا يعني كل اسم، وما الذي يقصده الناس في قطر والخليج عند البحث عن خزنة.',
@@ -3417,9 +3473,13 @@ export const articleSources: ArticleSource[] = [
       ar: 'بطارية القفل الرقمي في الخزنة: متى تغيّرونها وماذا تفعلون إن نفدت؟',
       en: 'The Battery in a Digital Safe Lock: When to Change It, and What to Do If It Runs Out',
     },
+    seoTitle: {
+      ar: 'بطارية القفل الرقمي في الخزنة: متى تغيّرونها وماذا لو نفدت؟',
+      en: 'Digital Safe Lock Battery: When to Change It, and If It Runs Out',
+    },
     description: {
       ar: 'علامات ضعف بطارية القفل الرقمي أو قفل البصمة في الخزنة، ومتى تغيّرونها، وماذا تفعلون إن نفدت والخزنة مقفلة، ولماذا يجب حفظ المفتاح الاحتياطي خارجها.',
-      en: 'Signs that a digital or fingerprint safe lock is running low, when to replace the batteries, what to do if they die with the safe locked, and why the backup key belongs outside it.',
+      en: 'Signs a digital or fingerprint safe lock is running low, when to change batteries, what to do if they die with the safe locked, and where the spare key goes.',
     },
     keywords: {
       ar: 'بطارية الخزنة، تغيير بطارية الخزنة، الخزنة لا تفتح، قفل رقمي الخزنة',
@@ -3536,6 +3596,10 @@ export const articleSources: ArticleSource[] = [
     title: {
       ar: 'صندوق الأمانات في البنك أم خزنة في البيت؟ مقارنة تساعدكم على القرار',
       en: 'A Bank Safe Deposit Box or a Safe at Home? A Comparison to Help You Decide',
+    },
+    seoTitle: {
+      ar: 'صندوق الأمانات في البنك أم خزنة في البيت؟ مقارنة للقرار',
+      en: 'Bank Safe Deposit Box or a Safe at Home? A Comparison',
     },
     description: {
       ar: 'مقارنة بين استئجار صندوق أمانات في البنك وشراء خزنة للبيت في قطر: سهولة الوصول، والتكلفة على المدى الطويل، والحماية من الحريق، ومتى يناسب كلٌّ منهما.',
@@ -3659,7 +3723,7 @@ export const articleSources: ArticleSource[] = [
     },
     description: {
       ar: 'خزائن فاخرة بواجهات خشبية ومحزّزة وملوّنة ومزخرفة، تُعرض في غرفة الملابس أو المجلس أو مكتب الإدارة بدل إخفائها. كيف تختارون التصميم المناسب لمكانه.',
-      en: 'Luxury safes with wood-grain, fluted, coloured and floral fronts, made to be seen in a dressing room, majlis or executive office rather than hidden. How to match the design to the room.',
+      en: 'Luxury safes with wood-grain, fluted, coloured and floral fronts, made to be seen in a dressing room, majlis or office. How to match the design to the room.',
     },
     keywords: {
       ar: 'خزائن فاخرة، تجوري فاخر، خزنة ديكور، خزنة خشبية، خزنة ملونة في قطر',
@@ -3781,9 +3845,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'التجهيز الداخلي للخزنة: أدراج المخمل والخشب والجلد وكيف تختارونها',
       en: 'Fitting Out the Inside of a Safe: Velvet, Wood and Leather Drawers, and How to Choose',
     },
+    seoTitle: {
+      en: 'Fitting Out a Safe: Velvet, Wood and Leather Drawers',
+    },
     description: {
       ar: 'كيف يحوّل التجهيز الداخلي الخزنة إلى مكان مرتّب للمجوهرات والساعات والمستندات: أدراج المخمل، ورولات الخواتم، وحوامل العقود، وأدراج الخشب والنحاس.',
-      en: 'How a fitted interior turns a safe into an organised home for jewellery, watches and papers: velvet drawers, ring rolls, necklace busts, and wood-and-brass drawer stacks.',
+      en: 'How a fitted interior organises jewellery, watches and papers inside a safe: velvet drawers, ring rolls, necklace busts and wood-and-brass drawer stacks.',
     },
     keywords: {
       ar: 'تجهيز داخلي للخزنة، أدراج مجوهرات، أدراج مخمل، تنظيم المجوهرات داخل الخزنة',
@@ -3908,9 +3975,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'خزنة لذهب العروس: كيف تحفظون الشبكة وأطقم الزفاف في البيت الجديد؟',
       en: 'A Safe for Bridal Gold: Keeping Wedding Sets Safe in Your New Home',
     },
+    seoTitle: {
+      en: 'A Safe for Bridal Gold: Keeping Wedding Sets Safe at Home',
+    },
     description: {
       ar: 'نصائح للعروسين في قطر لحفظ الشبكة وأطقم الذهب والألماس في البيت الجديد: اختيار الخزنة ومكانها وتجهيزها، وحمل الأطقم يوم الزفاف.',
-      en: 'Tips for newlyweds in Qatar on keeping bridal gold and diamond sets safe in a new home: choosing the safe, where to put it, how to fit it, and carrying sets on the wedding day.',
+      en: 'Tips for newlyweds in Qatar on keeping bridal gold and diamond sets safe at home: choosing the safe, where to put it, fitting it out, and the wedding day.',
     },
     keywords: {
       ar: 'خزنة ذهب العروس، خزنة للعروسين، حفظ الشبكة، خزنة مجوهرات للبيت الجديد',
@@ -4023,9 +4093,13 @@ export const articleSources: ArticleSource[] = [
       ar: 'تجهيز مكتب جديد في قطر: الخزنة والدواليب الحديدية وخزائن الملفات واللوكرات',
       en: 'Setting Up a New Office in Qatar: Safes, Steel Cupboards, Filing Cabinets and Lockers',
     },
+    seoTitle: {
+      ar: 'تجهيز مكتب جديد في قطر: الخزنة والدواليب وخزائن الملفات واللوكرات',
+      en: 'Setting Up a New Office in Qatar: Safes, Cupboards and Lockers',
+    },
     description: {
       ar: 'قائمة عملية لتجهيز مكتب أو فرع جديد بوسائل الحفظ: خزنة للنقود والأختام، وخزائن ملفات، ودواليب حديدية، ولوكرات للموظفين، وخزانة مفاتيح.',
-      en: 'A practical checklist for equipping a new office or branch with storage: a safe for cash and stamps, filing cabinets, steel cupboards, staff lockers and a key cabinet.',
+      en: 'A checklist for equipping a new office or branch: a safe for cash and stamps, filing cabinets, steel cupboards, staff lockers and a key cabinet.',
     },
     keywords: {
       ar: 'تجهيز مكتب، أثاث مكتبي حديد، خزائن مكتبية، دواليب حديد للمكاتب في قطر',
@@ -4162,6 +4236,10 @@ export const articleSources: ArticleSource[] = [
     title: {
       ar: 'من يحمل الرقم السري لخزنة الشركة؟ قواعد بسيطة لإدارة الخزائن في العمل',
       en: 'Who Holds the Company Safe Code? Simple Rules for Managing Safes at Work',
+    },
+    seoTitle: {
+      ar: 'من يحمل الرقم السري لخزنة الشركة؟ قواعد لإدارة الخزائن في العمل',
+      en: 'Who Holds the Company Safe Code? Rules for Managing Safes at Work',
     },
     description: {
       ar: 'قواعد عملية للشركات والمحلات في قطر: من يعرف الرقم السري للخزنة، ومتى يُغيَّر، وأين يُحفظ المفتاح الاحتياطي، وماذا تفعلون عند مغادرة موظف.',
@@ -4415,9 +4493,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'حفظ أوراق الامتحانات وسجلات الطلاب في المدارس والجامعات',
       en: 'Storing Exam Papers and Student Records in Schools and Universities',
     },
+    seoTitle: {
+      en: 'Storing Exam Papers and Student Records in Schools',
+    },
     description: {
       ar: 'كيف تحفظ المدارس والجامعات ومراكز التدريب في قطر أوراق الامتحانات والشهادات وملفات الطلاب: خزائن الملفات المقاومة للحريق، والخزائن، ولوكرات الطلاب.',
-      en: 'How schools, universities and training centres in Qatar can store exam papers, certificates and student files: fire-resistant filing cabinets, safes and student lockers.',
+      en: 'How schools, universities and training centres in Qatar can store exam papers, certificates and student files: fire-resistant cabinets, safes and lockers.',
     },
     keywords: {
       ar: 'خزائن المدارس، حفظ أوراق الامتحانات، خزانة ملفات مقاومة للحريق، لوكرات مدارس في قطر',
@@ -4529,9 +4610,12 @@ export const articleSources: ArticleSource[] = [
       ar: 'ما مقاس الخزنة المناسب لكم؟ طريقة عملية لتقدير المساحة قبل الشراء',
       en: 'What Size Safe Do You Need? A Practical Way to Work It Out Before You Buy',
     },
+    seoTitle: {
+      en: 'What Size Safe Do You Need? Work It Out Before You Buy',
+    },
     description: {
       ar: 'طريقة بسيطة لتقدير مقاس الخزنة المناسب للبيت أو المكتب: جمع ما ستحفظونه وقياسه، وترك مساحة للمستقبل، وقياس مكان الخزنة وطريق توصيلها.',
-      en: 'A simple way to work out the right safe size for a home or office: gather and measure what you will keep, allow room to grow, and measure the spot and the delivery route.',
+      en: 'Work out the right safe size for a home or office: gather and measure what you will keep, allow room to grow, and measure the spot and the delivery route.',
     },
     keywords: {
       ar: 'مقاس الخزنة، حجم الخزنة المناسب، خزنة صغيرة أم كبيرة، اختيار حجم التجوري',

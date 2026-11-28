@@ -12,6 +12,8 @@ export type BrandPage = {
   metaTitle: Record<Locale, string>
   description: Record<Locale, string>
   intro: Record<Locale, string[]>
+  /** Further headed sections shown after the models. */
+  sections?: Record<Locale, { h: string; p: string[] }[]>
   faq: Record<Locale, FaqItem[]>
 }
 
@@ -64,7 +66,7 @@ export const brandPages: BrandPage[] = [
     metaTitle: { ar: 'خزائن ساكورا SAKURA في قطر — بصمة وفنادق وملفات', en: 'SAKURA Safes in Qatar — Fingerprint, Hotel and Filing' },
     description: {
       ar: 'خزائن ساكورا SAKURA في قطر: خزائن بالبصمة والأرقام مقاومة للحريق، وخزائن فندقية رقمية، وخزنة بباب مزخرف، وخزائن ملفات مقاومة للحريق، بأسعار معلنة.',
-      en: 'SAKURA safes in Qatar: fire-resistant fingerprint and keypad safes, digital hotel safes, a floral-door safe and fire-resistant filing cabinets, with listed prices.',
+      en: 'SAKURA safes in Qatar: fire-resistant fingerprint and keypad safes, digital hotel safes, a floral-door safe and fire-resistant filing cabinets.',
     },
     intro: {
       ar: [
@@ -140,14 +142,88 @@ export const brandPages: BrandPage[] = [
         'For anyone looking for a Japanese-made safe in Qatar: the black Wing Safe on raised feet, and the compact beige SK-12 with a 1-hour fire rating. The combination dial is mechanical and needs no battery.',
       ],
     },
+    sections: {
+      ar: [
+        {
+          h: 'من هي KUROGANE؟',
+          p: [
+            'KUROGANE علامة شركة Kurogane Kosakusho اليابانية، التي تأسست في أوساكا عام 1927 وتعمل في صناعة الأثاث المكتبي ومستلزمات المباني، ومن منتجاتها خزائن Wing Safe المقاومة للحريق. وخزائن KUROGANE هي الخزائن اليابانية الصنع الوحيدة في تشكيلتنا؛ أما خزائن UCHIDA وSAKURA لدينا فتُصنع في كوريا أو تايلاند أو ماليزيا حسب الموديل.',
+          ],
+        },
+        {
+          h: 'ما الذي نوفّره من KUROGANE؟',
+          p: [
+            'خزنة Wing Safe السوداء على قاعدة مرتفعة، بقفل رقمي دوّار وقفل بمفتاح ومقبض، صُمّمت لحماية السجلات المهمة والمقتنيات من الحريق والسرقة، وسعرها حسب الطلب.',
+            'والخزنة الصغيرة موديل SK-12 بلون بيج: أبعادها الخارجية 48.4 × 37.2 × 43.3 سم (عرض × ارتفاع × عمق)، والداخلية 35.4 × 21.4 × 26.7 سم، ووزنها 55 كجم، وتصنيف مقاومتها للحريق ساعة، وسعرها 1,836 ريال قطري. ولأن وزنها يزيد على 50 كجم، يخضع توصيلها المجاني داخل قطر للتقييد طبقًا للموقع الداخلي للعميل.',
+          ],
+        },
+        {
+          h: 'لمن تناسب خزائن KUROGANE؟',
+          p: [
+            'لمن يفضّل قفلًا ميكانيكيًا لا يعتمد على بطارية أو إلكترونيات، وللمكاتب والمحلات التي تريد خزنة يابانية الصنع للنقود والمستندات، وللبيوت والمكاتب ذات المساحة المحدودة التي تكفيها خزنة صغيرة بتصنيف حريق ساعة لحفظ الجوازات والعقود والنقود.',
+          ],
+        },
+        {
+          h: 'KUROGANE أم UCHIDA أم SAKURA؟',
+          p: [
+            'الفرق الأوضح في القفل وبلد الصنع. KUROGANE صناعة يابانية بقفل دوّار ميكانيكي ومفتاح. وUCHIDA أوسع تشكيلة لدينا، بأقفال رقمية وبالبصمة ومقاسات تصل إلى الخزنة ذات البابين. وSAKURA للأقفال الحديثة بالبصمة والأرقام والخزائن الفندقية الرقمية.',
+            'وفي الخزائن الصغيرة بتصنيف حريق ساعة: KUROGANE موديل SK-12 بقفل دوّار بسعر 1,836 ريال، وUCHIDA موديل HS-23KE بقفل رقمي ومفتاح بسعر 1,390 ريال، وUCHIDA موديل ZE-SS بالبصمة بسعر 2,250 ريال، وSAKURA موديل ONS-FE بالبصمة والأرقام بسعر 4,794 ريال. اختاروا بحسب القفل الذي يريحكم، ثم المقاس.',
+          ],
+        },
+        {
+          h: 'كيف يعمل القفل الدوّار؟',
+          p: [
+            'يُفتح القفل الدوّار بإدارة القرص إلى سلسلة من الأرقام بالترتيب، يمينًا ويسارًا، ثم يُستعمل المفتاح. لا يحتاج إلى بطارية، لكن احفظوا الأرقام مكتوبة في مكان آمن بعيدًا عن الخزنة. وإن لم تستعملوا هذا النوع من قبل، فنريكم طريقة فتحه في المعرض قبل الشراء.',
+          ],
+        },
+      ],
+      en: [
+        {
+          h: 'Who is KUROGANE?',
+          p: [
+            'KUROGANE is the brand of Kurogane Kosakusho, a Japanese company founded in Osaka in 1927 that makes office furniture and building equipment, including its fire-resistant Wing Safes. KUROGANE safes are the only Japanese-made safes in our range; our UCHIDA and SAKURA safes are made in Korea, Thailand or Malaysia depending on the model.',
+          ],
+        },
+        {
+          h: 'What we carry from KUROGANE',
+          p: [
+            'The black Wing Safe on raised feet, with a combination dial, a key lock and a lever handle, built to protect important records and valuables from fire and theft; its price is on request.',
+            'And the compact beige SK-12: 48.4 × 37.2 × 43.3 cm outside (W × H × D) and 35.4 × 21.4 × 26.7 cm inside, 55 kg, with a 1-hour fire rating, at QAR 1,836. As it weighs more than 50 kg, its free delivery within Qatar is subject to restrictions depending on access at the customer’s site.',
+          ],
+        },
+        {
+          h: 'Who KUROGANE suits',
+          p: [
+            'Anyone who prefers a mechanical lock that needs no battery or electronics; offices and shops that want a Japanese-made safe for cash and documents; and homes and offices with little space, where a compact 1-hour safe is enough for passports, contracts and cash.',
+          ],
+        },
+        {
+          h: 'KUROGANE, UCHIDA or SAKURA?',
+          p: [
+            'The clearest differences are the lock and the country of manufacture. KUROGANE is made in Japan with a mechanical combination dial and key. UCHIDA is our widest range, with digital and fingerprint locks and sizes up to a double-door safe. SAKURA offers modern fingerprint and keypad locks and digital hotel safes.',
+            'Among compact 1-hour safes: the KUROGANE SK-12 with a combination dial at QAR 1,836, the UCHIDA HS-23KE with a keypad and key at QAR 1,390, the UCHIDA ZE-SS fingerprint safe at QAR 2,250, and the SAKURA ONS-FE with fingerprint and keypad at QAR 4,794. Choose the lock you are comfortable with first, then the size.',
+          ],
+        },
+        {
+          h: 'How a combination dial works',
+          p: [
+            'A combination dial opens by turning it to a sequence of numbers in order, right and left, and then using the key. It needs no battery, but keep the numbers written down somewhere safe, away from the safe. If you have not used one before, we will show you how it opens at the showroom.',
+          ],
+        },
+      ],
+    },
     faq: {
       ar: [
         { q: 'هل خزائن كوروجاني يابانية الصنع؟', a: 'نعم، خزائن KUROGANE لدينا صناعة يابانية من شركة Kurogane Kosakusho التي تأسست في أوساكا عام 1927.' },
         { q: 'ما القفل في خزائن كوروجاني؟', a: 'قفل رقمي دوّار ميكانيكي مع قفل بمفتاح، فلا تحتاج الخزنة إلى بطارية.' },
+        { q: 'كم سعر خزنة كوروجاني؟', a: 'خزنة KUROGANE الصغيرة موديل SK-12 سعرها 1,836 ريال قطري، وخزنة Wing Safe سعرها حسب الطلب.' },
+        { q: 'هل خزائن كوروجاني مقاومة للحريق؟', a: 'نعم. موديل SK-12 مصنّف لمقاومة الحريق لمدة ساعة، وخزائن Wing Safe صُمّمت لحماية السجلات والمقتنيات من الحريق والسرقة.' },
       ],
       en: [
         { q: 'Are KUROGANE safes made in Japan?', a: 'Yes, our KUROGANE safes are made in Japan by Kurogane Kosakusho, founded in Osaka in 1927.' },
         { q: 'What lock do KUROGANE safes use?', a: 'A mechanical combination dial with a key lock, so the safe needs no battery.' },
+        { q: 'How much is a KUROGANE safe?', a: 'The compact KUROGANE SK-12 costs QAR 1,836; the Wing Safe is priced on request.' },
+        { q: 'Are KUROGANE safes fire-resistant?', a: 'Yes. The SK-12 has a 1-hour fire rating, and Wing Safes are built to protect records and valuables from fire and theft.' },
       ],
     },
   },

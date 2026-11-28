@@ -71,7 +71,6 @@ export default async function VideoPage({ params }: Props) {
         uploadDate: video.uploadDate,
         duration: video.duration,
         inLanguage: locale,
-        keywords: videoTerms(video, locale).join(', '),
         url: pageUrl,
         publisher: { '@id': `${siteConfig.url}/#business` },
       },

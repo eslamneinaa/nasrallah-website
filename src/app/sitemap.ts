@@ -4,7 +4,7 @@ import { href, locales } from '@/i18n/config'
 import { getArticles } from '@/lib/articles'
 import { brandPages } from '@/lib/brands'
 import { categoryContent, collections } from '@/lib/category-content'
-import { categoryLastmod, fileDate, pageLastmod, productLastmod } from '@/lib/lastmod'
+import { articleLastmod, brandLastmod, categoryLastmod, fileDate, pageLastmod, productLastmod, videoLastmod } from '@/lib/lastmod'
 import { getCatalog } from '@/lib/sanity/api'
 import { durationSeconds, showcaseVideos } from '@/lib/videos'
 
@@ -25,8 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...showcaseVideos.map((v) => `videos/${v.id}`),
   ]
   const published = new Map<string, Date>([
-    ...articles.map((a) => [`articles/${a.slug}`, new Date(`${a.date}T00:00:00+03:00`)] as const),
-    ...showcaseVideos.map((v) => [`videos/${v.id}`, new Date(`${v.uploadDate}T00:00:00+03:00`)] as const),
+    ...articles.map((a) => [`articles/${a.slug}`, articleLastmod(a.slug, new Date(`${a.date}T00:00:00+03:00`))] as const),
+    ...showcaseVideos.map((v) => [`videos/${v.id}`, videoLastmod(v.id, new Date(`${v.uploadDate}T00:00:00+03:00`))] as const),
   ])
   // Each video's own page carries its video sitemap entry.
   const videoOf = new Map(showcaseVideos.map((v) => [`videos/${v.id}`, v]))
@@ -39,7 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       : path.startsWith('categories/')
         ? categoryLastmod(path.slice(11))
         : path.startsWith('brands/')
-          ? (fileDate('src/lib/brands.ts') ?? pageLastmod('brands/[slug]'))
+          ? brandLastmod(path.slice(7))
           : path === 'business-supply'
             ? (fileDate('src/lib/business-supply.ts') ?? pageLastmod(path))
             : pageLastmod(path))

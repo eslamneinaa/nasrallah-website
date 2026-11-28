@@ -15,7 +15,7 @@ import { categoryGuides, categoryHighlights } from '@/lib/category-guides'
 import { productDetails } from '@/lib/product-details'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
-import { categoryTerms } from '@/lib/search-terms'
+import { categoryAliases, categoryTerms } from '@/lib/search-terms'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -124,11 +124,7 @@ export default async function CategoryPage({ params }: Props) {
                 {p}
               </p>
             ))}
-            {categoryTerms[slug] && (
-              <p className="leading-loose text-ink-500">
-                {dict.categoryPage.alsoSearched} {categoryTerms[slug][locale].join(locale === 'ar' ? '، ' : ', ')}.
-              </p>
-            )}
+            {categoryAliases[slug] && <p className="leading-loose text-ink-500">{categoryAliases[slug][locale]}</p>}
             {highlights.length > 0 && (
               <p className="leading-loose text-ink-500">
                 {dict.categoryPage.highlights}{' '}

@@ -76,6 +76,21 @@ export const categoryTerms: Record<string, Terms> = {
   },
 }
 
+/** One natural sentence on a category page with two or three other names for its products. */
+export const categoryAliases: Record<string, Record<Locale, string>> = {
+  'fire-resistant-safes': { ar: 'ويسمّيها كثيرون في قطر «تجوري» أو «خزنة حديد» أو «قاصة».', en: 'Many people also call them fireproof safes, money safes or strong boxes.' },
+  'deposit-safes': { ar: 'وتُعرف أيضًا باسم «خزنة الإسقاط» أو «صندوق الإيداع».', en: 'They are also known as drop safes or depository safes.' },
+  'hotel-safes': { ar: 'ويسمّيها البعض «خزنة الغرفة» أو «صندوق الأمانات».', en: 'They are also called in-room safes or guest room safes.' },
+  'luxury-safes': { ar: 'ويبحث عنها كثيرون باسم «تجوري فخم» أو «خزنة ديكور».', en: 'Many people look for them as designer safes or decorative safes.' },
+  'jewellery-watch-interiors': { ar: 'ويسمّيها كثيرون «خزنة ذهب» أو «تجوري مجوهرات».', en: 'Many people call them gold safes or watch safes.' },
+  'filing-cabinets': { ar: 'وتُعرف أيضًا باسم «خزانة الأرشيف» أو «دولاب الملفات».', en: 'They are also known as archive cabinets or records cabinets.' },
+  'key-cabinets': { ar: 'وتُعرف أيضًا باسم «صندوق المفاتيح» أو «خزنة المفاتيح».', en: 'They are also known as key boxes or key safes.' },
+  'cash-boxes': { ar: 'ويسمّيه البعض «صندوق كاش» أو «درج كاشير».', en: 'Some call it a money box or a cash drawer.' },
+  'steel-cupboards': { ar: 'ويسمّيها كثيرون «كبت حديد» أو «دولاب معدني».', en: 'Many customers know them as steel almirahs or metal cabinets.' },
+  'steel-lockers': { ar: 'وتُعرف أيضًا باسم «خزائن الموظفين» أو «لوكرات المدارس».', en: 'They are also known as staff lockers or school lockers.' },
+  'home-safes': { ar: 'ويبحث عنها كثيرون باسم «خزنة بيت» أو «تجوري للبيت».', en: 'Many people search for them as a house safe or a wardrobe safe.' },
+}
+
 /** Pages that are not a category, keyed by their path. */
 export const pageTerms: Record<string, Terms> = {
   home: {

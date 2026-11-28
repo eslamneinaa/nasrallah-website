@@ -142,6 +142,22 @@ export function productKeywords(p: Product, locale: Locale): string[] {
   return [...new Set([...candidates(p, locale), d.model, brand, brand && brandsAr[brand], ...kindsFor(p, locale), ...cat].filter((x): x is string => !!x))]
 }
 
+/** Page titles for products whose full name is longer than 65 characters; the type comes first. */
+export const shortTitles: Record<string, Record<Locale, string>> = {
+  'sakura-fire-resistant-filing-cabinet': {
+    ar: 'خزانة ملفات SAKURA مقاومة للحريق بقفل رقمي موديل UB4-4DLK',
+    en: 'Fire-Resistant Filing Cabinet with Keypad, SAKURA UB4-4DLK',
+  },
+  'marble-interior-jewellery-safe': {
+    ar: 'خزنة مجوهرات مقاومة للحريق بنقشة الرخام موديل PB-105',
+    en: 'Fire-Resistant Jewellery Safe, Marble-Finish Interior, PB-105',
+  },
+  'godrej-two-door-steel-cupboard-with-handle': {
+    ar: 'خزانة حديدية GODREJ ببابين ومقبض موديل FHC FSB HP1 HL HHR',
+    en: 'GODREJ Two-Door Steel Cupboard with Handle, FHC FSB HP1 HL HHR',
+  },
+}
+
 const cm = (v: number) => ({ '@type': 'QuantitativeValue', value: v, unitCode: 'CMT' })
 
 /** Extra Product properties from the sheet, plus the names people search by. */

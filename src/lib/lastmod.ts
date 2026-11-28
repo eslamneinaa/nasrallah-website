@@ -106,6 +106,29 @@ function spanDate(b: { lines: string[]; times: Date[] }, open: number) {
 
 const keyed = (slug: string) => (line: string) => line.trimStart().startsWith(`'${slug}': {`)
 
+/** An object in a list (its `{` on a line of its own) that contains `marker`, such as `slug: 'x'`. */
+const entryDate = (file: string, marker: string) => {
+  const b = blame(file)
+  if (!b) return undefined
+  const at = b.lines.findIndex((l) => l.includes(marker))
+  if (at < 0) return undefined
+  let open = at
+  while (open > 0 && b.lines[open].trim() !== '{') open--
+  return spanDate(b, open)
+}
+
+/** An article: its publish date, or a later edit of its entry. */
+export const articleLastmod = (slug: string, published: Date) =>
+  latest([published, entryDate('src/lib/articles-data.ts', `slug: '${slug}'`)]) ?? published
+
+/** A video page: its upload date, or a later edit of its entry or of the page itself. */
+export const videoLastmod = (id: string, uploaded: Date) =>
+  latest([uploaded, entryDate('src/lib/videos.ts', `id: '${id}'`), fileDate('src/app/(site)/[locale]/videos/[id]/page.tsx')]) ?? uploaded
+
+/** A brand page: its own entry and the page file. */
+export const brandLastmod = (slug: string) =>
+  latest([entryDate('src/lib/brands.ts', `slug: '${slug}'`), fileDate('src/app/(site)/[locale]/brands/[slug]/page.tsx')]) ?? now
+
 export const productLastmod = (slug: string) =>
   latest([
     productBlockDate(slug),

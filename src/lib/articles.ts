@@ -14,6 +14,8 @@ export type ArticleSource = {
   /** Publish date, YYYY-MM-DD in Qatar time. */
   date: string
   title: Record<Locale, string>
+  /** A shorter page <title> (≤ 65 characters) when the headline is longer. */
+  seoTitle?: Partial<Record<Locale, string>>
   description: Record<Locale, string>
   keywords: Record<Locale, string>
   body: Record<Locale, ArticleBlock[]>

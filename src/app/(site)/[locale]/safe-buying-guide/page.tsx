@@ -8,11 +8,12 @@ import { getDictionary, href, pick } from '@/i18n'
 import { categoryContent, categoryHref } from '@/lib/category-content'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
+import { pageTerms } from '@/lib/search-terms'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale).guide
-  return pageMetadata({ locale, path: 'safe-buying-guide', title: dict.metaTitle, description: dict.metaDescription })
+  return pageMetadata({ locale, path: 'safe-buying-guide', title: dict.metaTitle, description: dict.metaDescription, keywords: pageTerms['safe-buying-guide'][locale] })
 }
 
 /** Long-form buying guide: answers "which safe / where to buy in Qatar" searches. */

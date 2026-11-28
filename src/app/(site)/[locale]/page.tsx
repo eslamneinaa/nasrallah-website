@@ -15,6 +15,7 @@ import { categoryHref } from '@/lib/category-content'
 import { popularProducts } from '@/lib/category-guides'
 import { imageAlt } from '@/lib/types'
 import { getCatalog, getClientLogos, getFeaturedProducts } from '@/lib/sanity/api'
+import { homeSearches } from '@/lib/search-terms'
 import { resolveLocale, type LocaleParams } from '@/lib/seo'
 
 /** Heritage, trust, quality, service — in the order of `dict.why.items`. */
@@ -148,6 +149,19 @@ export default async function HomePage({ params }: LocaleParams) {
                     <span className="block text-xs text-gold-700">{pick(p.category?.title, locale)}</span>
                     <span className="mt-1 block leading-snug text-maroon-900 group-hover:underline">{pick(p.name, locale)}</span>
                   </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h3 className="eyebrow mt-14">{dict.popular.searches}</h3>
+          <ul className="mt-5 flex flex-wrap gap-2">
+            {homeSearches.map(({ slug, term }) => (
+              <li key={term.en}>
+                <Link
+                  href={categoryHref(locale, slug)}
+                  className="inline-block border border-gold-500/40 bg-pearl-50 px-4 py-2 text-sm text-maroon-900 transition hover:border-gold-500 hover:bg-pearl-100"
+                >
+                  {term[locale]}
                 </Link>
               </li>
             ))}

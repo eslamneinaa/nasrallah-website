@@ -91,6 +91,7 @@ const en = {
   popular: {
     eyebrow: 'Across the range',
     title: 'Popular products',
+    searches: 'Popular searches',
   },
   tour: {
     eyebrow: 'Showroom tour',
@@ -281,6 +282,7 @@ const en = {
     all: 'All products',
     faq: 'Frequently asked questions',
     highlights: 'Highlights in this range:',
+    alsoSearched: 'People also search for this range as:',
     compareTitle: 'Quick comparison: {label}',
     priceRange: 'Prices from QAR {min} to QAR {max}, with free delivery within Qatar.',
     compareCols: ['Product', 'Model', 'Fire rating', 'Outside (W × H × D)', 'Weight', 'Price'],

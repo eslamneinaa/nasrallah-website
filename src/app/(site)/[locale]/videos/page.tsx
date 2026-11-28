@@ -8,12 +8,13 @@ import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { siteConfig } from '@/config/site'
 import { getDictionary, href } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
+import { pageTerms } from '@/lib/search-terms'
 import { showcaseVideos, type ShowcaseVideoItem } from '@/lib/videos'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const t = getDictionary(locale).videos
-  return pageMetadata({ locale, path: 'videos', title: t.metaTitle, description: t.metaDescription })
+  return pageMetadata({ locale, path: 'videos', title: t.metaTitle, description: t.metaDescription, keywords: pageTerms['videos'][locale] })
 }
 
 /** "استعرض تشكيلتنا": every showroom video on one page. */

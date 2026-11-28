@@ -13,7 +13,7 @@ import { SectionHeading } from '@/components/SectionHeading'
 import { ShowcaseVideo } from '@/components/ShowcaseVideo'
 import { isHeavy } from '@/lib/product-details'
 import { productGuides } from '@/lib/product-guides'
-import { googleCategory, productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
+import { googleCategory, productKeywords, productMetaDescription, productSchemaExtras, similarSearches, specSummary } from '@/lib/product-seo'
 import { imageAlt } from '@/lib/types'
 import { siteConfig, telHref, whatsappLink } from '@/config/site'
 import { fill, getDictionary, href, inBothLanguages, pick } from '@/i18n'
@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description: productMetaDescription(product, locale),
     image: shareImage,
+    keywords: productKeywords(product, locale),
   })
 }
 

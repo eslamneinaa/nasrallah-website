@@ -7,11 +7,12 @@ import { getDictionary, href } from '@/i18n'
 import { categoryHref, collections } from '@/lib/category-content'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
+import { pageTerms } from '@/lib/search-terms'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale).products
-  return pageMetadata({ locale, path: 'products', title: dict.metaTitle, description: dict.metaDescription })
+  return pageMetadata({ locale, path: 'products', title: dict.metaTitle, description: dict.metaDescription, keywords: pageTerms['products'][locale] })
 }
 
 export default async function ProductsPage({ params }: LocaleParams) {

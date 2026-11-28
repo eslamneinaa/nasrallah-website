@@ -7,11 +7,12 @@ import { siteConfig } from '@/config/site'
 import { getDictionary, href } from '@/i18n'
 import { formatArticleDate, getArticles } from '@/lib/articles'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
+import { pageTerms } from '@/lib/search-terms'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const t = getDictionary(locale).articles
-  return pageMetadata({ locale, path: 'articles', title: t.metaTitle, description: t.metaDescription })
+  return pageMetadata({ locale, path: 'articles', title: t.metaTitle, description: t.metaDescription, keywords: pageTerms['articles'][locale] })
 }
 
 /** Article index: the published articles, newest first. */

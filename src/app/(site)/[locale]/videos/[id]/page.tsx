@@ -11,6 +11,7 @@ import { getDictionary, href } from '@/i18n'
 import { categoryHref } from '@/lib/category-content'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
+import { categoryTerms } from '@/lib/search-terms'
 import { durationSeconds, showcaseVideos } from '@/lib/videos'
 
 type Props = { params: Promise<{ locale: string; id: string }> }
@@ -23,14 +24,23 @@ export async function generateStaticParams() {
 
 const findVideo = (id: string) => showcaseVideos.find((v) => v.id === id)
 
+/** The video's own search phrases, else the names of the sections it shows, each with "video". */
+const videoTerms = (video: (typeof showcaseVideos)[number], locale: 'ar' | 'en') =>
+  video.keywords
+    ? video.keywords[locale].split(/[،,]\s*/)
+    : (video.sections ?? []).flatMap((s) => (categoryTerms[s]?.[locale] ?? []).slice(0, 3)).map((t) => (locale === 'ar' ? `${t} فيديو` : `${t} video`))
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const video = findVideo((await params).id)
   if (!video) return {}
-  return {
-    ...pageMetadata({ locale, path: `videos/${video.id}`, title: video.title[locale], description: video.description[locale] }),
-    ...(video.keywords ? { keywords: video.keywords[locale] } : {}),
-  }
+  return pageMetadata({
+    locale,
+    path: `videos/${video.id}`,
+    title: video.title[locale],
+    description: video.description[locale],
+    keywords: videoTerms(video, locale),
+  })
 }
 
 /**
@@ -61,7 +71,7 @@ export default async function VideoPage({ params }: Props) {
         uploadDate: video.uploadDate,
         duration: video.duration,
         inLanguage: locale,
-        ...(video.keywords ? { keywords: video.keywords[locale] } : {}),
+        keywords: videoTerms(video, locale).join(', '),
         url: pageUrl,
         publisher: { '@id': `${siteConfig.url}/#business` },
       },

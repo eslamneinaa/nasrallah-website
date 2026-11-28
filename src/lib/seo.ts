@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { siteConfig } from '@/config/site'
 import { href, isLocale, locales } from '@/i18n/config'
+import { withSiteTerms } from './search-terms'
 import type { Locale } from './types'
 
 export type LocaleParams = { params: Promise<{ locale: string }> }
@@ -19,6 +20,8 @@ type PageMeta = {
   title?: string
   description?: string
   image?: string
+  /** The page's own search terms; the shop's are added after them. */
+  keywords?: string[]
 }
 
 // Google cuts titles at about 60 characters and shows the site name above each
@@ -27,7 +30,7 @@ type PageMeta = {
 const TITLE_LIMIT = 60
 
 /** Canonical URL, hreflang alternates and Open Graph for a localized page. */
-export function pageMetadata({ locale, path = '/', title, description, image = '/og.jpg' }: PageMeta): Metadata {
+export function pageMetadata({ locale, path = '/', title, description, image = '/og.jpg', keywords }: PageMeta): Metadata {
   const languages = Object.fromEntries(locales.map((l) => [l, href(l, path)]))
   const withName = title ? `${title} | ${siteConfig.name[locale]}` : undefined
   const withShort = title ? `${title} | ${siteConfig.shortName[locale]}` : undefined
@@ -39,6 +42,7 @@ export function pageMetadata({ locale, path = '/', title, description, image = '
     // A string goes through the layout's "%s | site name" template; `absolute` skips it.
     title: title && (fits ? title : { absolute: full ?? title }),
     description,
+    keywords: withSiteTerms(locale, keywords),
     alternates: {
       canonical: href(locale, path),
       languages: { ...languages, 'x-default': href('ar', path) },

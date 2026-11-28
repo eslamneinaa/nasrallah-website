@@ -15,6 +15,7 @@ import { categoryGuides, categoryHighlights } from '@/lib/category-guides'
 import { productDetails } from '@/lib/product-details'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale } from '@/lib/seo'
+import { categoryTerms } from '@/lib/search-terms'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const copy = categoryContent[slug]?.[locale]
   if (!copy) return {}
-  return pageMetadata({ locale, path: `categories/${slug}`, title: copy.metaTitle, description: copy.description })
+  return pageMetadata({ locale, path: `categories/${slug}`, title: copy.metaTitle, description: copy.description, keywords: categoryTerms[slug]?.[locale] })
 }
 
 /** A landing page per product category or collection, so each one can rank for its own searches. */
@@ -123,6 +124,11 @@ export default async function CategoryPage({ params }: Props) {
                 {p}
               </p>
             ))}
+            {categoryTerms[slug] && (
+              <p className="leading-loose text-ink-500">
+                {dict.categoryPage.alsoSearched} {categoryTerms[slug][locale].join(locale === 'ar' ? '، ' : ', ')}.
+              </p>
+            )}
             {highlights.length > 0 && (
               <p className="leading-loose text-ink-500">
                 {dict.categoryPage.highlights}{' '}

@@ -6,6 +6,7 @@
  */
 import { isHeavy, productDetails } from './product-details'
 import { parseQuery, productIndex, search } from './search'
+import { categoryTerms } from './search-terms'
 import type { Locale, Product } from './types'
 
 const brandsAr: Record<string, string> = { UCHIDA: 'أوشيدا', SAKURA: 'ساكورا', GODREJ: 'جودريج', KUROGANE: 'كوروجاني' }
@@ -125,6 +126,20 @@ export function productMetaDescription(p: Product, locale: Locale): string | und
     short,
   ]
   return options.find((o): o is string => !!o && o.length <= 160) ?? short
+}
+
+/**
+ * The product's keywords meta: its own phrases (brand, model, lock, fire rating),
+ * then what people call its category. Fire words only when the product is rated.
+ */
+export function productKeywords(p: Product, locale: Locale): string[] {
+  const d = productDetails[p.slug] ?? {}
+  const brand = brandOf(p)
+  // Category words that name a lock, size or brand are left to the product's own phrases, which are checked against its data.
+  const cat = (categoryTerms[p.category?.slug ?? '']?.[locale] ?? [])
+    .filter((w) => d.fireHours || !/حريق|النار|للنار|fire/i.test(w))
+    .filter((w) => !/بصم|fingerprint|biometric|رقمي|digital|مفتاح|key\b|كبيرة|صغيرة|small|mini|جودريج|godrej|almirah/i.test(w))
+  return [...new Set([...candidates(p, locale), d.model, brand, brand && brandsAr[brand], ...kindsFor(p, locale), ...cat].filter((x): x is string => !!x))]
 }
 
 const cm = (v: number) => ({ '@type': 'QuantitativeValue', value: v, unitCode: 'CMT' })

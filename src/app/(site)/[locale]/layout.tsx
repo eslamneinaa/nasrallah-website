@@ -11,6 +11,7 @@ import { dirOf, getDictionary, inBothLanguages, locales } from '@/i18n'
 import { fontVariables } from '@/lib/fonts'
 import { getCatalog } from '@/lib/sanity/api'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
+import { pageTerms } from '@/lib/search-terms'
 
 export const dynamicParams = false
 
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   // pageMetadata() returns `title: undefined`, so it is spread first and the
   // title (default + template for every child page) set after it.
   return {
-    ...pageMetadata({ locale, description: dict.meta.description }),
+    ...pageMetadata({ locale, description: dict.meta.description, keywords: pageTerms.home[locale] }),
     metadataBase: new URL(siteConfig.url),
     title: { default: dict.meta.title, template: `%s | ${siteConfig.name[locale]}` },
     applicationName: siteConfig.name[locale],

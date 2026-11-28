@@ -30,8 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticle(slug)
   if (!article) return {}
   return {
-    ...pageMetadata({ locale, path: `articles/${slug}`, title: article.title[locale], description: article.description[locale] }),
-    keywords: article.keywords[locale],
+    ...pageMetadata({
+      locale,
+      path: `articles/${slug}`,
+      title: article.title[locale],
+      description: article.description[locale],
+      keywords: article.keywords[locale].split(/[،,]\s*/),
+    }),
   }
 }
 

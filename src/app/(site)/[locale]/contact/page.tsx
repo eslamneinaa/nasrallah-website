@@ -8,11 +8,12 @@ import { PageHero } from '@/components/PageHero'
 import { mapEmbedSrc, siteConfig, telHref, whatsappLink } from '@/config/site'
 import { getDictionary, href, inBothLanguages } from '@/i18n'
 import { pageMetadata, resolveLocale, type LocaleParams } from '@/lib/seo'
+import { pageTerms } from '@/lib/search-terms'
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params)
   const dict = getDictionary(locale).contact
-  return pageMetadata({ locale, path: 'contact', title: dict.metaTitle, description: dict.metaDescription })
+  return pageMetadata({ locale, path: 'contact', title: dict.metaTitle, description: dict.metaDescription, keywords: pageTerms['contact'][locale] })
 }
 
 export default async function ContactPage({ params }: LocaleParams) {
